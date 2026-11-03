@@ -1,0 +1,92 @@
+[
+  {
+    "id": "run-20261103-agent-ai-contribution-burden",
+    "themeId": "theme-ai-contribution-burden",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-03T21:17:00Z",
+    "completedAt": "2026-11-03T21:40:00Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "2 web searches, 2 GitHub issue searches, 5 repo searches; 3 candidate problems"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "22 documents read, 17 cited; 22 evidence items including 3 contradicting"
+      },
+      {
+        "name": "invent",
+        "status": "ok",
+        "notes": "4 concepts"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "9 objections, 1 fatal"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "notes": "No prior real ideas in memory; 4 concepts checked pairwise"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "1 advanced, 2 parked, 1 rejected"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "1 automatable, $0 experiment"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 22,
+      "sourcesCited": 17,
+      "problemsFound": 3,
+      "ideasGenerated": 4,
+      "ideasAdvanced": 1,
+      "ideasRejected": 1,
+      "ideasParked": 2,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "web search: open source maintainers overwhelmed AI-generated pull requests 2026",
+      "web search: curl Daniel Stenberg AI slop security reports HackerOne",
+      "GitHub issue search: \"AI slop\" in:title,body is:issue (sorted by reactions)",
+      "GitHub issue search: \"AI-generated\" \"pull requests\" maintainers is:issue (sorted by reactions)",
+      "GitHub repo search: ai slop pull request / detect ai generated pull requests / pr spam github action / anti-slop / vouch",
+      "GitHub code search: repo:github/docs \"disable pull requests\" / \"interaction limits\"",
+      "raw fetch: AI policies of ghostty, llvm, qemu, linux, curl (3 docs), godot, scikit-learn, zulip; READMEs of vouch, fossier, pr-slop-filter"
+    ],
+    "errors": [
+      "Blocked by the session's network policy: bleepingcomputer.com, theregister.com, opensourceforu.com, daniel.haxx.se. News coverage of curl and Godot couldn't be read.",
+      "404: python/devguide generative-ai page and servo/book contributing page (moved or renamed). Not used.",
+      "Direct GitHub API reads of other repositories aren't permitted in this session, so issue bodies were retrieved through the GitHub search API.",
+      "Web-search result summaries were used only as leads, never as evidence, because they aren't verbatim source text."
+    ],
+    "limitations": [
+      "The evidence is mostly project policy documents and maintainer statements. They show stated burden and motivation, not measured PR volumes or time costs.",
+      "Selection bias: projects that wrote policies are those most affected. Projects reporting no problem are under-represented.",
+      "No quantitative data on volumes or acceptance rates was retrieved, and no figures are claimed.",
+      "Competitor scan limited to GitHub repository search; commercial products (e.g. code-review vendors, bug-bounty platform triage) were not examined.",
+      "GitHub's newer PR-management features that news reports mention couldn't be verified beyond the docs pages retrieved."
+    ],
+    "usage": {
+      "note": "Performed interactively in a Claude Code session under the owner's subscription. Model calls and token counts aren't observable from inside the session, so none are reported. No API charges were incurred."
+    },
+    "limits": {
+      "maxIdeas": 4,
+      "maxAdvanced": 1
+    },
+    "provenance": "real"
+  }
+]

@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { COLLECTIONS, emptyMemory, type Memory } from "../core/schema";
 
-export const ROOT = resolve(import.meta.dirname, "../..");
+export const ROOT = import.meta.dirname ? resolve(import.meta.dirname, "../..") : process.cwd();
 export const REAL_STORE = join(ROOT, "data");
 export const FIXTURE_STORE = join(ROOT, "fixtures/demo");
 

@@ -44,6 +44,8 @@ jobs:
         run: |
           if [ -n "$COLLECTORS" ]; then npm run venture -- scout --theme all --collectors "$COLLECTORS"; else npm run venture -- scout --theme all; fi
       - name: Verify cited sources
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run venture -- verify
       - run: npm run lint:data
       - id: commit

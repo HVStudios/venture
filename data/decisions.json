@@ -1,0 +1,58 @@
+[
+  {
+    "id": "dec-20261103-agent-ai-contribution-burden-ai-authorship-pr-detector",
+    "at": "2026-11-03T21:40:00Z",
+    "runId": "run-20261103-agent-ai-contribution-burden",
+    "subjectType": "idea",
+    "subjectId": "idea-ai-authorship-pr-detector",
+    "action": "create",
+    "toStatus": "rejected",
+    "rationale": "Rejected. It targets AI authorship, while the projects studied explicitly accept AI-assisted work and object to unreviewed, low-understanding work. The space is already crowded with low-adoption detectors.",
+    "actor": "director",
+    "attractiveness": 48,
+    "evidenceStrength": 61,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-agent-ai-contribution-burden-contributor-comprehension-gate",
+    "at": "2026-11-03T21:40:00Z",
+    "runId": "run-20261103-agent-ai-contribution-burden",
+    "subjectType": "idea",
+    "subjectId": "idea-contributor-comprehension-gate",
+    "action": "create",
+    "toStatus": "advanced",
+    "rationale": "Advanced to a cheap retrospective experiment. It addresses the best-evidenced problem, matches what the policies actually ask for (understanding, not abstinence), and its riskiest assumption can be tested with public data before any building.",
+    "actor": "director",
+    "attractiveness": 68,
+    "evidenceStrength": 83,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-agent-ai-contribution-burden-cross-project-contributor-reputation",
+    "at": "2026-11-03T21:40:00Z",
+    "runId": "run-20261103-agent-ai-contribution-burden",
+    "subjectType": "idea",
+    "subjectId": "idea-cross-project-contributor-reputation",
+    "action": "create",
+    "toStatus": "parked",
+    "rationale": "Parked. Plausible, but it depends on network adoption, carries governance and abuse risk, and the incumbent (Vouch) could add federation itself. Revisit if cross-project list sharing emerges.",
+    "actor": "director",
+    "attractiveness": 44,
+    "evidenceStrength": 55,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-agent-ai-contribution-burden-reproduction-first-security-triage",
+    "at": "2026-11-03T21:40:00Z",
+    "runId": "run-20261103-agent-ai-contribution-burden",
+    "subjectType": "idea",
+    "subjectId": "idea-reproduction-first-security-triage",
+    "action": "create",
+    "toStatus": "parked",
+    "rationale": "Parked for insufficient evidence. Only curl's own documents were retrievable, so news coverage and platform alternatives are unexamined. Revisit with broader sources.",
+    "actor": "director",
+    "attractiveness": 46,
+    "evidenceStrength": 19,
+    "provenance": "real"
+  }
+]

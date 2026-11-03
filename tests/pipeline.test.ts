@@ -12,7 +12,7 @@ import { MockProvider } from "../src/engine/providers/mock";
 import { RecordingProvider, ReplayProvider } from "../src/engine/providers/replay";
 import type { CompletionRequest, ModelProvider } from "../src/engine/providers/types";
 import { loadRaw, saveMemory } from "../src/engine/store";
-import { verifySource } from "../src/engine/verify";
+import { verificationTarget, verifySource } from "../src/engine/verify";
 
 const theme: Theme = { id: "theme-t", name: "Test theme", description: "Testing the pipeline", mode: "focused", keywords: ["flaky"], status: "active", createdAt: "2026-11-03", provenance: "fixture" };
 const pool: PoolItem[] = [
@@ -143,5 +143,15 @@ describe("collectors and verification", () => {
   });
 });
 
-
-
+describe("verification targets", () => {
+  it("maps GitHub issues to the API and blobs to raw files", () => {
+    expect(verificationTarget("https://github.com/tldraw/tldraw/issues/7695").url).toBe("https://api.github.com/repos/tldraw/tldraw/issues/7695");
+    expect(verificationTarget("https://github.com/a/b/blob/main/README.md").url).toBe("https://raw.githubusercontent.com/a/b/main/README.md");
+    expect(verificationTarget("https://example.com/x").url).toBe("https://example.com/x");
+  });
+  it("ignores markdown emphasis when matching quotes", async () => {
+    const source = { id: "src-a", url: "https://e.com/a", title: "a", publisher: "e", retrievedAt: "2026-11-03", sourceType: "docs" as const, excerpt: "x", verification: { status: "unchecked" as const }, provenance: "real" as const };
+    const page = async () => ({ ok: true, status: 200, json: async () => ({}), text: async () => "This policy is **not** intended for _x_." });
+    expect((await verifySource(source, ["This policy is not intended for x."], page, new Date())).status).toBe("ok");
+  });
+});

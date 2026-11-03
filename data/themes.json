@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": "theme-ai-contribution-burden",
+    "name": "Maintainer burden from AI-generated contributions",
+    "description": "How AI-generated pull requests, issues and security reports affect open-source maintainers, and what tooling or process could help without excluding genuine contributors.",
+    "mode": "focused",
+    "keywords": [
+      "AI slop pull request",
+      "AI-generated pull requests",
+      "AI contribution policy",
+      "low-effort contributions"
+    ],
+    "status": "active",
+    "createdAt": "2026-11-03",
+    "notes": "First real research theme. Spans developer tools, open source and security.",
+    "provenance": "real"
+  }
+]

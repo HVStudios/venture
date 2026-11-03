@@ -1,0 +1,121 @@
+[
+  {
+    "id": "comp-ai-pr-detectors",
+    "name": "AI-authorship PR detectors (pr-slop-filter, deslop-kitten, TuringMerge, …)",
+    "url": "https://github.com/Noxlie/pr-slop-filter",
+    "kind": "open-source",
+    "description": "GitHub Actions that try to detect AI-generated PRs from textual and diff 'tells' and block or label them. A GitHub repository search found several such projects, each with fewer than 5 stars.",
+    "strengths": [
+      "Cheap to install"
+    ],
+    "weaknesses": [
+      "Target AI authorship, while several major projects explicitly allow AI-assisted work",
+      "False positives on legitimate AI-assisted contributions (inference)",
+      "Low adoption"
+    ],
+    "sourceIds": [
+      "src-pr-slop-filter-readme"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "comp-close-external-prs",
+    "name": "Auto-closing all external pull requests",
+    "kind": "workaround",
+    "description": "tldraw closes PRs from external contributors by default and selectively reopens the ones under consideration.",
+    "strengths": [
+      "Eliminates the review queue"
+    ],
+    "weaknesses": [
+      "Gives up outside contributions entirely; the maintainer calls it temporary and regrettable"
+    ],
+    "sourceIds": [
+      "src-tldraw-contributions-policy"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "comp-fossier",
+    "name": "Fossier",
+    "url": "https://github.com/PThorpe92/fossier",
+    "kind": "open-source",
+    "description": "GitHub Action that scores unknown PR authors on 13 account and content signals (account age, follower ratio, PR description quality…) and auto-allows, flags or closes PRs.",
+    "strengths": [
+      "Vouch-compatible",
+      "Automatic, no contributor action needed"
+    ],
+    "weaknesses": [
+      "Account-reputation signals penalise genuine newcomers (inference)",
+      "Heuristics are gameable (inference)",
+      "Small adoption (~41 stars at retrieval)"
+    ],
+    "sourceIds": [
+      "src-fossier-readme"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "comp-github-pr-access-controls",
+    "name": "GitHub pull-request access settings & interaction limits",
+    "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-pull-requests",
+    "kind": "platform-feature",
+    "description": "Native repository controls: disable pull requests, restrict them to collaborators, or apply interaction limits (existing users, prior contributors, collaborators).",
+    "strengths": [
+      "Built in and free",
+      "Immediate effect"
+    ],
+    "weaknesses": [
+      "Coarse: restricting to collaborators or prior contributors also shuts out legitimate newcomers (inference)",
+      "No assessment of contribution quality"
+    ],
+    "sourceIds": [
+      "src-github-docs-disable-prs",
+      "src-github-docs-interaction-limits"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "comp-vouch",
+    "name": "Vouch (mitchellh/vouch)",
+    "url": "https://github.com/mitchellh/vouch",
+    "kind": "open-source",
+    "description": "Explicit trust lists: trusted people vouch for contributors, bad actors can be denounced. GitHub Actions integration. Used by Ghostty.",
+    "strengths": [
+      "Simple flat-file format",
+      "Adopted by a high-profile project",
+      "~5.2k GitHub stars at retrieval"
+    ],
+    "weaknesses": [
+      "Requires a social path to get vouched (cold start for newcomers, inference)",
+      "Public denouncement lists carry governance and abuse risks (inference)",
+      "Self-described as experimental"
+    ],
+    "sourceIds": [
+      "src-vouch-readme",
+      "src-ghostty-ai-policy"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "comp-written-ai-policies",
+    "name": "Written AI contribution policies + canned responses",
+    "kind": "workaround",
+    "description": "Projects publish AI policies (LLVM, Linux, QEMU, curl, Ghostty, scikit-learn, Zulip, Godot) and close violating PRs with a standard response. LLVM provides a paste-able reply.",
+    "strengths": [
+      "Sets norms and gives maintainers a cheap way to close",
+      "No tooling needed"
+    ],
+    "weaknesses": [
+      "Enforcement still requires a human to read each submission",
+      "Relies on contributors reading the policy"
+    ],
+    "sourceIds": [
+      "src-llvm-ai-tool-policy",
+      "src-linux-generated-content",
+      "src-sklearn-ai-policy",
+      "src-zulip-ai-policy",
+      "src-qemu-code-provenance"
+    ],
+    "provenance": "real"
+  }
+]
