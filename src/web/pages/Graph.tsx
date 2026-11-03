@@ -36,7 +36,7 @@ export function Graph() {
         nodes.push(n);
       }
     };
-    m.themes.forEach((t) => add({ id: t.id, kind: "theme", label: t.name, href: `/ideas?theme=${t.id}` }));
+    m.themes.forEach((t) => add({ id: t.id, kind: "theme", label: t.name, href: `/research/${t.id}` }));
     m.problems.forEach((p) => {
       add({ id: p.id, kind: "problem", label: p.title, href: `/problems/${p.id}`, status: p.status });
       p.themeIds.forEach((t) => links.push({ source: t, target: p.id, kind: "theme" }));

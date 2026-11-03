@@ -1,0 +1,224 @@
+[
+  {
+    "id": "brief-ai-contribution-burden",
+    "themeId": "theme-ai-contribution-burden",
+    "researchQuestion": "AI tools make it nearly free to open pull requests, issues and security reports. How much extra work does that create for open-source maintainers, and what could reduce it without shutting out genuine newcomers?",
+    "whyItMatters": "Widely used open-source software depends on small groups of maintainers whose review time is scarce. Several well-known projects have responded by restricting or closing outside contributions entirely, which also cuts off the path by which new contributors become future maintainers.",
+    "subQuestions": [
+      "How widespread is the burden, and what form does it take (pull requests, issues, security reports)?",
+      "Do projects object to the use of AI itself, or to unreviewed work that contributors don't understand?",
+      "Can a cheap, automatic signal separate low-effort submissions from genuine ones?",
+      "Which interventions reduce the burden without excluding newcomers?"
+    ],
+    "findings": [
+      {
+        "id": "f1",
+        "statement": "The burden is reported across many independent projects. tldraw, Rust, Astropy, LLVM, the Linux kernel, Ghostty, scikit-learn and Zulip all describe AI-generated contributions as consuming scarce review time. tldraw went as far as automatically closing all external pull requests.",
+        "strength": "Strong as a reported problem: the policies and statements of eight independent projects agree. They are maintainers' accounts, not measurements of volume or hours.",
+        "evidenceIds": [
+          "ev-ai-burden-01",
+          "ev-ai-burden-03",
+          "ev-ai-burden-04",
+          "ev-ai-burden-06",
+          "ev-ai-burden-07",
+          "ev-ai-burden-08",
+          "ev-ai-burden-09",
+          "ev-ai-burden-10",
+          "ev-ai-burden-13"
+        ],
+        "epistemic": "fact"
+      },
+      {
+        "id": "f2",
+        "statement": "Projects mostly don't object to AI itself. They object to unreviewed work that the contributor doesn't understand. A study of 281 project AI policies found 83.3% permit AI in code contributions, and 67.3% require a high level of human involvement.",
+        "strength": "Strong: a systematic study of 281 policies, consistent with the individual policies of Ghostty, Zulip and curl.",
+        "evidenceIds": [
+          "ev-ai-burden-23",
+          "ev-ai-burden-24",
+          "ev-ai-burden-14",
+          "ev-ai-burden-15",
+          "ev-ai-burden-16"
+        ],
+        "epistemic": "fact"
+      },
+      {
+        "id": "f3",
+        "statement": "Whether an author replies to maintainers is only a weak signal of a low-effort pull request. Within LLVM, authors of PRs later closed under the AI policy replied 80.9% of the time, against 90.2% for accepted newcomers.",
+        "strength": "Moderate. Measured by VENTURE's own experiment (180 PRs with comments), but the pre-registered verdict was inconclusive, and the within-LLVM comparison was exploratory.",
+        "evidenceIds": [
+          "ev-ai-burden-33",
+          "ev-ai-burden-34"
+        ],
+        "epistemic": "inference"
+      },
+      {
+        "id": "f4",
+        "statement": "Over a quarter of the policy-closed pull requests sampled (33 of 120) were closed without any human comment. Maintainers often dismiss them silently, which suggests much of the cost is in triage rather than in-depth review.",
+        "strength": "Weak to moderate. The count is measured, but the interpretation hasn't been tested.",
+        "evidenceIds": [
+          "ev-ai-burden-35",
+          "ev-ai-burden-04"
+        ],
+        "epistemic": "inference"
+      },
+      {
+        "id": "f5",
+        "statement": "Where repositories adopt AI coding agents, newcomers' share of participation drops by about 3.7 percentage points, while the absolute number of human contributors doesn't change significantly.",
+        "strength": "Moderate. One large study (11,097 repositories), and it measures agent adoption by the repository itself, which only indirectly concerns inbound contributions.",
+        "evidenceIds": [
+          "ev-ai-burden-27",
+          "ev-ai-burden-28"
+        ],
+        "epistemic": "fact"
+      },
+      {
+        "id": "f6",
+        "statement": "Fabricated, AI-generated security reports are a separate and severe drain: curl stopped offering a bug bounty, saying it rewarded made-up problems.",
+        "strength": "Weak. Only curl's own documents could be retrieved, so this is one independent origin.",
+        "evidenceIds": [
+          "ev-ai-burden-17",
+          "ev-ai-burden-19"
+        ],
+        "epistemic": "fact"
+      }
+    ],
+    "uncertainties": [
+      "No direct measurement of how many AI-generated contributions projects receive, or how much time they cost, has been found.",
+      "Selection bias: projects that wrote AI policies are the ones most affected. Projects that see no problem are under-represented.",
+      "Several empirical studies use a dataset of agent-authored PRs that differs from unsolicited contributions to popular projects.",
+      "News coverage and blogs couldn't be read from the research environment, so secondary reporting (e.g. a reported Linux Foundation estimate) remains unverified."
+    ],
+    "conclusion": {
+      "belief": "The burden is real and widespread, but the right lever isn't detecting AI. Projects largely accept AI help and object to unreviewed, low-understanding work. VENTURE's first candidate solution, gating PRs on author follow-up, did not prove to be a useful filter. No idea in this area is currently worth building.",
+      "confidence": "medium",
+      "confidenceReason": "Medium for the problem: many independent primary sources plus a 281-policy study agree. Low for any particular solution: the only solution test was inconclusive, and the triage-cost angle is untested.",
+      "unknowns": [
+        "How much maintainer time triage actually takes, compared with in-depth review",
+        "Which of the ten countermeasures that projects already use work best",
+        "Whether any solution can lower the burden without adding friction for newcomers"
+      ],
+      "continueInvestigation": true,
+      "continueReason": "The silent-closure finding points to a new, testable direction (cheaper triage), and several leads from the signal feed are unexamined."
+    },
+    "nextSteps": [
+      {
+        "text": "Investigate triage cost: why are so many policy-violating PRs closed without comment, and what would make that step cheaper?",
+        "kind": "research",
+        "issue": 17
+      },
+      {
+        "text": "Read the full study of ten anti-slop countermeasures to map existing solutions before inventing new ones.",
+        "kind": "research",
+        "issue": 17
+      },
+      {
+        "text": "Find primary sources for unverified leads, such as the reported Linux Foundation estimate that 25% of new PRs are low-quality AI output.",
+        "kind": "research",
+        "issue": 17
+      }
+    ],
+    "updatedAt": "2026-11-03T23:25:20Z",
+    "author": "research director (Claude Code session)",
+    "provenance": "real"
+  },
+  {
+    "id": "brief-oss-supply-chain-small-maintainers",
+    "themeId": "theme-oss-supply-chain-small-maintainers",
+    "researchQuestion": "When attackers take over a maintainer's account or publishing credentials, they can push malware to everyone who installs the next release. What can volunteer maintainers without a security team realistically do to catch this?",
+    "whyItMatters": "In 2026, compromised releases of very widely used packages (axios on npm, litellm on PyPI, asyncapi and TanStack packages) installed remote-access trojans or stole credentials. The maintainers were victims, not insiders. Most open-source maintainers have no security staff to notice when a release they didn't make appears.",
+    "subQuestions": [
+      "How do these compromises happen, and how long do malicious releases stay live?",
+      "What already protects consumers (release delays, trusted publishing), and what gaps remain?",
+      "Do hijacked releases look structurally different from a maintainer's normal releases, so that a simple alarm could catch them?"
+    ],
+    "findings": [
+      {
+        "id": "f1",
+        "statement": "Compromised maintainer accounts and tokens are a recurring route to malware in popular packages. At least four 2026 incidents were found, including axios (a remote-access trojan via an injected dependency) and litellm (a credential stealer).",
+        "strength": "Moderate. Four independent incident reports, taken from the projects' own issue trackers.",
+        "evidenceIds": [
+          "ev-sc-01",
+          "ev-sc-02",
+          "ev-sc-04",
+          "ev-sc-06",
+          "ev-sc-07"
+        ],
+        "epistemic": "fact"
+      },
+      {
+        "id": "f2",
+        "statement": "Malicious releases are typically live for hours: about 3 hours for axios. Delaying installs of brand-new versions is an effective defence that users actively ask for, and the platforms are already shipping it (pnpm, Dependabot cooldown).",
+        "strength": "Moderate. Feature requests with hundreds of reactions, and a study finding 83 of 92 cooldown adoptions were security-motivated.",
+        "evidenceIds": [
+          "ev-sc-03",
+          "ev-sc-08",
+          "ev-sc-10",
+          "ev-sc-11",
+          "ev-sc-12"
+        ],
+        "epistemic": "fact"
+      },
+      {
+        "id": "f3",
+        "statement": "In the 60 most recent hijacks of legitimate npm packages in the OpenSSF malicious-packages dataset, every classifiable case added an install script. Only 1.3% of the same packages' legitimate releases did so. However, 56 of the 60 cases came from a single worm campaign.",
+        "strength": "Weak in general, though strong for that campaign. It rests on about 5 independent attacks, and mechanisms were classified from report text.",
+        "evidenceIds": [
+          "ev-sc-16",
+          "ev-sc-17"
+        ],
+        "epistemic": "fact"
+      },
+      {
+        "id": "f4",
+        "statement": "Not every hijack would trip such an alarm. The asyncapi attack went through the project's normal release pipeline and only modified an existing file.",
+        "strength": "Known counter-example, single case.",
+        "evidenceIds": [
+          "ev-sc-06",
+          "ev-sc-18"
+        ],
+        "epistemic": "inference"
+      },
+      {
+        "id": "f5",
+        "statement": "Teams that adopt release delays overwhelmingly use one simple default (most often seven days). Fine-grained settings are used by fewer than 10%.",
+        "strength": "Moderate. One study of early adopters.",
+        "evidenceIds": [
+          "ev-sc-13"
+        ],
+        "epistemic": "fact"
+      }
+    ],
+    "uncertainties": [
+      "Commercial scanners (e.g. Socket, StepSecurity) were not examined. They may already offer maintainer-side alerts.",
+      "Whether npm or PyPI already notify maintainers of every new publish wasn't checked.",
+      "The incident sample favours large, well-publicised attacks."
+    ],
+    "conclusion": {
+      "belief": "Account and token compromise of popular packages is a severe and recurring problem. Consumer-side release delays are being solved by the platforms themselves, so a standalone tool isn't worthwhile. A maintainer-side alarm that flags unusual structural changes in a new release is promising for worm-style attacks, but VENTURE hasn't shown that it generalises across attackers, or that it isn't already offered.",
+      "confidence": "low",
+      "confidenceReason": "The supporting experiment rests on roughly five independent campaigns, one counter-example is known, and the competitive landscape is unexamined.",
+      "unknowns": [
+        "Whether structural signals hold across independent campaigns",
+        "Whether existing vendors or registries already alert maintainers",
+        "How quickly maintainers could act on an alert"
+      ],
+      "continueInvestigation": true,
+      "continueReason": "A cheap, pre-registered replication can settle the main uncertainty at no cost."
+    },
+    "nextSteps": [
+      {
+        "text": "Run the campaign-level replication: count one representative per attack campaign (2024–2026) instead of one per package.",
+        "kind": "experiment",
+        "experimentId": "exp-publish-anomaly-campaign-replication",
+        "issue": 27
+      },
+      {
+        "text": "Survey whether security vendors or the registries already send maintainers alerts about unusual new releases.",
+        "kind": "research"
+      }
+    ],
+    "updatedAt": "2026-11-03T23:25:20Z",
+    "author": "research director (Claude Code session)",
+    "provenance": "real"
+  }
+]

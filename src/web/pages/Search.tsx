@@ -41,7 +41,7 @@ export function Search() {
     });
     m.evidence.forEach((e) => add("evidence", e.id, e.claim, e.quote, e.ideaIds[0] ? `/ideas/${e.ideaIds[0]}` : e.problemIds[0] ? `/problems/${e.problemIds[0]}` : "/sources"));
     m.sources.forEach((s) => add("source", s.id, s.title, `${s.publisher} ${s.excerpt}`, s.url, s.verification.status, true));
-    m.themes.forEach((t) => add("theme", t.id, t.name, t.description, "/themes", t.status));
+    m.themes.forEach((t) => add("theme", t.id, t.name, t.description, `/research/${t.id}`, t.status));
   }
   hits.sort((a, b) => b.score - a.score);
   const kinds = [...new Set(hits.map((h) => h.kind))];

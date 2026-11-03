@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { HashRouter, NavLink, Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { HashRouter, Navigate, NavLink, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { FixtureNotice } from "./components/ui";
 import { lastUpdated, timeAgo, useLab } from "./data";
 import { Compare } from "./pages/Compare";
@@ -10,20 +10,19 @@ import { Method } from "./pages/Method";
 import { Overview } from "./pages/Overview";
 import { ProblemDetail, Problems } from "./pages/Problems";
 import { History, RunDetail } from "./pages/Runs";
+import { ResearchArea, ResearchAreas } from "./pages/Research";
 import { Search } from "./pages/Search";
 import { Signals } from "./pages/Signals";
 import { Sources } from "./pages/Sources";
-import { Themes } from "./pages/Themes";
 
 const NAV = [
   ["/", "Lab"],
-  ["/problems", "Problems"],
+  ["/research", "Research"],
   ["/ideas", "Ideas"],
   ["/experiments", "Experiments"],
   ["/sources", "Evidence"],
   ["/graph", "Map"],
   ["/history", "Runs"],
-  ["/themes", "Themes"],
   ["/method", "Method"],
 ] as const;
 
@@ -126,7 +125,9 @@ function Shell() {
           <Route path="/graph" element={<Graph />} />
           <Route path="/history" element={<History />} />
           <Route path="/runs/:id" element={<RunDetail />} />
-          <Route path="/themes" element={<Themes />} />
+          <Route path="/research" element={<ResearchAreas />} />
+          <Route path="/research/:id" element={<ResearchArea />} />
+          <Route path="/themes" element={<Navigate to="/research" replace />} />
           <Route path="/method" element={<Method />} />
           <Route path="*" element={<div className="empty">Nothing here. <NavLink to="/">Back to the lab</NavLink></div>} />
         </Routes>

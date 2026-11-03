@@ -114,6 +114,19 @@ export function validateMemory(input: unknown, expected?: Provenance, now: numbe
   for (const r of m.runs) need("themes", r.themeId, `runs.${r.id}`);
   for (const s of m.signals) need("themes", s.themeId, `signals.${s.id}`);
 
+  for (const b of m.briefs) {
+    const ref = `briefs.${b.id}`;
+    need("themes", b.themeId, ref);
+    need("runs", b.updatedInRun, ref);
+    for (const f of b.findings) f.evidenceIds.forEach((e) => need("evidence", e, `${ref}.findings.${f.id}`));
+    for (const n of b.nextSteps) need("experiments", n.experimentId, `${ref}.nextSteps`);
+    if (m.briefs.filter((x) => x.themeId === b.themeId).length > 1) err(ref, "only one brief per theme is allowed");
+  }
+  for (const t of m.themes) {
+    const researched = m.runs.some((r) => r.themeId === t.id && r.mode !== "collector");
+    if (researched && !m.briefs.some((b) => b.themeId === t.id)) warn(`themes.${t.id}`, "theme has research runs but no research brief");
+  }
+
   // Timestamps must come from a clock: nothing may be dated in the future.
   const horizon = now + 10 * 60_000;
   const stamped: [string, string | undefined][] = [
@@ -121,6 +134,7 @@ export function validateMemory(input: unknown, expected?: Provenance, now: numbe
     ...m.runs.flatMap((r) => [[`runs.${r.id}`, r.startedAt], [`runs.${r.id}`, r.completedAt]] as [string, string | undefined][]),
     ...m.sources.map((x) => [`sources.${x.id}`, x.retrievedAt] as [string, string]),
     ...m.ideas.map((x) => [`ideas.${x.id}`, x.updatedAt] as [string, string]),
+    ...m.briefs.map((x) => [`briefs.${x.id}`, x.updatedAt] as [string, string]),
   ];
   for (const [ref, at] of stamped) if (at && Date.parse(at) > horizon) err(ref, `timestamp ${at} is in the future`);
 

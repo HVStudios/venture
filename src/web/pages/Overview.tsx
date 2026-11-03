@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import type { Idea } from "../../core/schema";
 import { Empty, EvidenceLevel, Section, StatusPill } from "../components/ui";
 import { reconsiderationQueue } from "../../core/actions";
+import { buildAreas } from "../../core/areas";
 import { fmtDate, lastUpdated, timeAgo, useLab } from "../data";
 
 export function Landscape({ ideas, height = 320 }: { ideas: Idea[]; height?: number }) {
@@ -70,7 +71,7 @@ export function Overview() {
     .filter((i) => i.status === "advanced" || i.status === "proposed")
     .flatMap((i) => i.assumptions.filter((a) => a.criticality === "high" && a.status === "untested").map((a) => ({ idea: i, a })))
     .slice(0, 5);
-  const active = m.themes.filter((t) => t.status === "active");
+  const areas = buildAreas(m);
   const reconsider = reconsiderationQueue(m);
 
   return (
@@ -106,6 +107,23 @@ export function Overview() {
           </div>
         </dl>
       </section>
+
+      <Section title="Research areas" kicker="Start here" aside={<Link to="/research">All research areas →</Link>}>
+        <div className="area-mini-list">
+          {areas.map((a) => (
+            <Link key={a.theme.id} to={`/research/${a.theme.id}`} className="area-mini">
+              <span className={`area-status area-${a.status.key}`}>
+                <i /> {a.status.label}
+              </span>
+              <b>{a.theme.name}</b>
+              <span className="muted">{a.brief?.researchQuestion ?? a.theme.description}</span>
+              <span className="area-mini-meta">
+                {a.researchRuns.length} sessions · {a.ideas.length} ideas · {a.experiments.completed.length} experiments done
+              </span>
+            </Link>
+          ))}
+        </div>
+      </Section>
 
       <div className="grid-2">
         <Section title="Idea landscape" kicker="Where things stand">
@@ -184,15 +202,7 @@ export function Overview() {
           ) : (
             <Empty>No untested high-criticality assumptions on live ideas.</Empty>
           )}
-          <div className="themes-mini">
-            <div className="kicker">Active themes</div>
-            {active.map((t) => (
-              <Link key={t.id} to={`/ideas?theme=${t.id}`} className="chip">
-                {t.name}
-              </Link>
-            ))}
-            {!active.length && <span className="muted">none</span>}
-          </div>
+
         </Section>
       </div>
       {reconsider.length > 0 && (
