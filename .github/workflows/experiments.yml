@@ -43,7 +43,10 @@ jobs:
         run: |
           case "$EXPERIMENT" in
             exp-followup-engagement-retrospective) npx tsx src/experiments/followup-engagement.ts --per-group "$PER_GROUP" ;;
-            exp-publish-anomaly-retrospective) npx tsx src/experiments/publish-anomaly.ts --max "$PER_GROUP" ;;
+            exp-publish-anomaly-retrospective)
+              git clone -q --depth 1 --filter=blob:none --sparse https://github.com/ossf/malicious-packages /tmp/malicious-packages
+              git -C /tmp/malicious-packages sparse-checkout set osv/malicious/npm
+              npx tsx src/experiments/publish-anomaly.ts --max "$PER_GROUP" ;;
             *) echo "unknown experiment $EXPERIMENT"; exit 1 ;;
           esac
       - name: Commit raw results
