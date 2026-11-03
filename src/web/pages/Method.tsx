@@ -51,14 +51,14 @@ export function Method() {
         <p>
           The Critic, not the Inventor, scores each criterion from 1 to 5 and writes a rationale. Attractiveness is the weighted mean of (score − 1) / 4. It measures how appealing the idea would be <i>if its assumptions held</i>, which is why it sits on a separate axis from evidence.
         </p>
-        <table className="score-table">
+        <div className="table-wrap"><table className="score-table">
           <thead><tr><th>Criterion</th><th>Weight</th><th>Question</th></tr></thead>
           <tbody>
             {CRITERIA.map((c) => (
               <tr key={c}><td>{CRITERION_INFO[c].label}</td><td className="num">×{CRITERION_INFO[c].weight}</td><td>{CRITERION_INFO[c].question}</td></tr>
             ))}
           </tbody>
-        </table>
+        </table></div>
       </Section>
 
       <Section title="Guarantees enforced in code">

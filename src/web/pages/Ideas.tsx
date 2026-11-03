@@ -126,6 +126,7 @@ export function Ideas() {
 
 export function ScoreTable({ idea }: { idea: Idea }) {
   return (
+    <div className="table-wrap">
     <table className="score-table">
       <thead>
         <tr>
@@ -155,6 +156,7 @@ export function ScoreTable({ idea }: { idea: Idea }) {
         })}
       </tbody>
     </table>
+    </div>
   );
 }
 
