@@ -39,6 +39,7 @@ VENTURE is not an idea generator. Its success measure is **the quality of its de
 - [x] Web UI: overview, idea landscape, problems, ideas, idea detail, evidence library, signals, experiments, compare, relationship map, runs, decision ledger, themes and theme proposals, method
 - [x] CI, deployment to GitHub Pages
 - [x] At least one real research run recorded through the agent-session protocol
+- [x] First validation experiment actually executed (in GitHub Actions on public data) and its outcome recorded
 
 ## Out of scope for the MVP
 Accounts, write access from the website, paid infrastructure, contacting people, executing untrusted code from sources.

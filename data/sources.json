@@ -143,6 +143,38 @@
     "provenance": "real"
   },
   {
+    "id": "src-exp-followup-analysis",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-followup-engagement-retrospective/ANALYSIS.md",
+    "title": "VENTURE experiment: exploratory within-LLVM breakdown (not pre-registered)",
+    "publisher": "VENTURE (own experiment)",
+    "publishedAt": "2026-11-03",
+    "retrievedAt": "2026-11-03T21:50:00Z",
+    "sourceType": "dataset",
+    "originId": "origin-venture-exp-followup",
+    "excerpt": "Within LLVM only (same repository as the control): policy-closed PRs got an author reply in 38 of 47 cases (80.9%), versus 83 of 92 (90.2%) for merged LLVM newcomer PRs. … Outside LLVM: policy-closed PRs got an author reply in 14 of 40 cases (35.0%). There is no same-repository control for these. … 33 of 120 policy-closed PRs received no human comment at all before closing. … Interpretation: in a like-for-like comparison inside one repository, authors of policy-closed PRs reply almost as often as genuine newcomers. Follow-up engagement alone therefore looks like a weak filter. The lower reply rate outside LLVM may reflect differences between repositories rather than between contributors.",
+    "limitations": "Exploratory: computed after seeing the pre-registered result.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-exp-followup-result",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-followup-engagement-retrospective/RESULT.md",
+    "title": "VENTURE experiment result: follow-up engagement (pre-registered analysis)",
+    "publisher": "VENTURE (own experiment, GitHub Actions run 41723793126)",
+    "publishedAt": "2026-11-03",
+    "retrievedAt": "2026-11-03T21:45:00Z",
+    "sourceType": "dataset",
+    "originId": "origin-venture-exp-followup",
+    "excerpt": "policy-closed: 52 of 87 PRs with a human comment got an author reply (reply rate 59.8%, 95% CI 49.3%–69.4%; sampled 120). … newcomer-merged: 83 of 92 PRs with a human comment got an author reply (reply rate 90.2%, 95% CI 82.4%–94.8%; sampled 120). … Verdict (pre-registered rule): inconclusive: difference is between the success and failure thresholds (59.8% vs 90.2%).",
+    "limitations": "Own experiment. Group membership is inferred from comment text via GitHub search. The control group is LLVM-only. Raw rows are in result.json.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-fossier-readme",
     "url": "https://raw.githubusercontent.com/PThorpe92/fossier/main/README.md",
     "title": "Fossier: GitHub spam prevention for open source repositories (README)",

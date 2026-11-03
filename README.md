@@ -2,7 +2,7 @@
 
 **An evidence-first autonomous AI innovation lab.** VENTURE discovers real problems, researches existing solutions, invents candidate products, attacks its own ideas, and proposes cheap validation experiments for the few that survive. Every claim is traced to a verbatim quote from a retrieved source.
 
-**Live site:** https://hvstudios.github.io/venture/
+**Live site:** https://hvstudios.github.io/venture/ (the deploy workflow publishes to the `gh-pages` branch; GitHub Pages must be enabled once in the repository settings, see issue #10)
 
 | | |
 |---|---|
