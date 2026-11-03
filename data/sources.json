@@ -9,7 +9,10 @@
     "sourceType": "issue-tracker",
     "excerpt": "Some of them may look legit at first glance, only revealing flaws when one dive into the code/logic during the review process. … some may overwhelm the system by opening a plethora of pull requests within a very short span of time; even if these are obviously dead on arrival, they still take time to triage. … All in all, they introduce extra maintenance burden to maintainers who are already stretched thin.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "2 quote(s) found"
     },
     "provenance": "real"
   },
@@ -24,7 +27,10 @@
     "excerpt": "AI-based tools frequently generate inaccurate or fabricated results. … Those generated reports typically are too wordy and rarely to the point (in addition to the common fabricated details). … Fake and otherwise made up security problems effectively prevent us from doing real project work and make us waste time and resources. … We can accept code written with the help of AI into the project",
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "3 quote(s) found"
     },
     "provenance": "real"
   },
@@ -39,7 +45,10 @@
     "excerpt": "The curl project does not offer any rewards for reported bugs or vulnerabilities. … A bug bounty gives people too strong incentives to find and make up \"problems\" in bad faith that cause overload and abuse.",
     "limitations": "Same project as src-curl-contribute-ai, so it is counted as one origin. Secondary reporting on the bounty's end (BleepingComputer, Heise, The Register) could not be fetched in this session.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -53,7 +62,10 @@
     "excerpt": "Open source repos face increasing spam PR volume - AI-slop, Hacktoberfest spam, SEO link injection. … unknown contributors are evaluated through a multi-signal scoring algorithm that estimates spam probability.",
     "limitations": "A tool's own README describes the problem it sells a solution to.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -68,7 +80,10 @@
     "excerpt": "It is rude and disrespectful to approach this boundary with low-effort, unqualified work, since it puts the burden of validation on the maintainer. … People who produce bad contributions that are clearly AI (slop) will be added to our public denouncement list. … If you can't explain what your changes do and how they interact with the greater system without the aid of AI tools, do not contribute to this project. … Ghostty is written with plenty of AI assistance, and many maintainers embrace AI tools as a productive tool in their workflow. … It's the people, not the tools, that are the problem.",
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "2 quote(s) found"
     },
     "provenance": "real"
   },
@@ -81,7 +96,10 @@
     "sourceType": "docs",
     "excerpt": "You may wish to modify pull request access for your repository if you want to restrict contributions, or disable them entirely. … To restrict pull requests to collaborators only",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -94,7 +112,10 @@
     "sourceType": "docs",
     "excerpt": "Limits activity for users who have not previously contributed to the default branch of the repository and are not collaborators.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -108,7 +129,10 @@
     "excerpt": "If you are an AI agent, we require you to disclose this when contributing … Agents failing to self-disclose will be banned from contributing to the project.",
     "limitations": "The instruction sits in an HTML comment aimed at autonomous agents. VENTURE recorded it as data and did not act on it.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -122,7 +146,10 @@
     "excerpt": "These tools can increase the volume of contributions. At the same time, reviewer and maintainer bandwidth is a scarce resource. … Understanding which portions of a contribution come from humans versus tools is helpful to maintain those resources and keep kernel development healthy.",
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -136,7 +163,10 @@
     "excerpt": "it takes a lot of maintainer time and energy to review those contributions! … While new tools enable more development, it shifts effort from the implementor to the reviewer, and our policy exists to ensure that we value and do not squander maintainer time. … Prior to the advent of LLMs, open source project maintainers would often review any and all changes sent to the project simply because posting a change for review was a sign of interest from a potential long-term contributor. … Our policy on labelling is intended to facilitate reviews, and not to track which parts of LLVM are generated. … If a maintainer judges that a contribution doesn't comply with this policy, they should paste the following response to request changes:",
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "3 quote(s) found"
     },
     "provenance": "real"
   },
@@ -150,7 +180,10 @@
     "excerpt": "The fastest way to detect and block AI-generated pull requests that waste maintainer time.",
     "limitations": "Marketing copy; its claims about GitHub and curl are unsourced and were not used as evidence.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -164,7 +197,10 @@
     "excerpt": "Current QEMU project policy is to DECLINE any contributions which are believed to include or derive from AI generated content. … The increasing prevalence of AI-assisted software development results in a number of difficult legal questions and risks for software projects",
     "limitations": "QEMU's stated rationale is primarily legal/provenance risk, not review burden.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -179,7 +215,10 @@
     "excerpt": "To put it bluntly, it feels like DDoS against maintenance and moderation capacity. … Even if the code is the same, or almost the same, as what a human would produce, if it is vibe-coded, we do not accept such code. … spammy AI-assisted contributions that are obviously not human-reviewed or clearly insufficiently human-reviewed",
     "limitations": "The issue text says the finalized wording differs from the opening description quoted here.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -193,7 +232,10 @@
     "excerpt": "Due to the burden put on maintainers, users submitting multiple low quality pull requests, or AI generated comments, reviews, issues, or pull requests, where the user does not show a good understanding of what they are posting, might be banned from the organisation.",
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -208,7 +250,10 @@
     "excerpt": "Like many other open-source projects on GitHub, we've recently seen a significant increase in contributions generated entirely by AI tools. … While some of these pull requests are formally correct, most suffer from incomplete or misleading context, misunderstanding of the codebase, and little to no follow-up engagement from their authors. … This is a temporary policy until GitHub provides better tools for managing contributions. … I'm sorry to shut that down, however I sincerely believe this decision is in the best interests of the project, our code, and our community.",
     "limitations": "Single maintainer's account; 290 reactions at retrieval.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "3 quote(s) found"
     },
     "provenance": "real"
   },
@@ -223,7 +268,10 @@
     "excerpt": "Unfortunately, the landscape has changed particularly with the advent of AI tools that allow people to trivially create plausible-looking but extremely low-quality contributions with little to no true understanding. … Contributors can no longer be trusted based on the minimal barrier to entry to simply submit a change. … This is an experimental system in use by",
     "limitations": "Written by Ghostty's creator, so it shares an origin with the Ghostty policy and is not counted as independent.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -237,7 +285,10 @@
     "excerpt": "Maintainer time and attention is very limited … You can use any tools that help you understand the Zulip codebase and write good code, including AI tools. … you always need to understand and explain the changes you're proposing to make, whether or not you used an LLM as part of your process to produce them.",
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "httpStatus": 200,
+      "note": "2 quote(s) found"
     },
     "provenance": "real"
   }
