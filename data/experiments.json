@@ -6,24 +6,25 @@
     "hypothesis": "Authors of PRs that projects closed as low-effort or AI-policy violations rarely reply to maintainer comments, while first-time contributors whose PRs were merged usually do.",
     "uncertainty": "Whether follow-up engagement is a discriminating signal (assumption a1). If it isn't, a comprehension gate adds friction without filtering.",
     "procedure": [
-      "Pick 4–6 public repos with explicit AI or low-effort policies (e.g. llvm/llvm-project, rust-lang/rust, scikit-learn/scikit-learn, astropy/astropy).",
-      "Using the GitHub REST/search API, sample up to 100 closed-unmerged PRs per repo whose closing comment cites the AI or low-effort policy (e.g. LLVM's canned response), plus up to 100 merged PRs from first-time contributors in the same period.",
-      "For each PR, record whether the author replied to a maintainer comment, and the time to first reply.",
-      "Compare reply rates and timing between the two groups. Report effect sizes and confidence intervals, not just p-values."
+      "Pre-registered 2026-11-03, before any outcome data was collected. Revised from the original per-repo design because GitHub search showed only 10 LLVM PRs citing the policy.",
+      "Group A (policy-closed): closed, unmerged PRs created 2025-06-01..2026-11-01 whose text or comments cite an AI policy ('AIToolPolicy', 'policy on tool-generated content', 'AI_POLICY.md', or 'AI slop' in comments), pooled across GitHub, up to 120 PRs.",
+      "Group B (newcomer-merged): merged llvm/llvm-project PRs from the same period that received LLVM's first-time-contributor greeting, up to 120.",
+      "Group C (newcomer-closed, descriptive only): unmerged LLVM newcomer PRs not citing the policy.",
+      "For each PR, fetch issue and review comments via the GitHub REST API. Among PRs with at least one comment by a human other than the author (bots excluded), record whether the author replied afterwards, and the time to reply.",
+      "Compare reply rates (Wilson 95% intervals) and median reply times. Code: src/experiments/followup-engagement.ts; runs in the 'Run experiment' workflow."
     ],
     "successCriteria": [
-      "Reply rate in the policy-closed group is at most half that of the merged first-time group, in at least 3 of the repos",
-      "The difference holds after excluding PRs with zero maintainer comments"
+      "Group A reply rate is at most half of group B's, with at least 30 eligible PRs in each group"
     ],
     "failureCriteria": [
-      "Reply rates differ by less than 15 percentage points overall",
-      "Too few policy-cited closures can be identified (< 30 per repo) to draw conclusions"
+      "Reply rates of A and B differ by less than 15 percentage points (assumption refuted)",
+      "Fewer than 30 eligible PRs in either group (inconclusive)"
     ],
-    "estimatedTime": "1–2 days of automated analysis",
+    "estimatedTime": "< 1 hour of automated analysis",
     "estimatedCostUsd": 0,
     "resources": [
-      "GitHub REST API (within free rate limits)",
-      "A labelled list of policy-citing closing comments"
+      "GitHub REST and search APIs via the Actions GITHUB_TOKEN",
+      "src/experiments/followup-engagement.ts"
     ],
     "expectedLearning": "Whether engagement-based gating is worth prototyping, and how much newcomer friction it would cause (via the reply-time distribution of genuine contributors).",
     "nextSteps": {
@@ -31,7 +32,7 @@
       "ifFailure": "Mark assumption a1 refuted and reject or park the idea. Look for other discriminating signals."
     },
     "executionMode": "automatable",
-    "status": "proposed",
+    "status": "approved",
     "createdInRun": "run-20261103-agent-ai-contribution-burden",
     "provenance": "real"
   }

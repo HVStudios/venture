@@ -1,0 +1,56 @@
+name: Run experiment
+
+# Executes an automatable, pre-registered experiment on public data and
+# commits its raw results. Outcomes are recorded into research memory
+# separately (venture outcome …) after review, never automatically.
+on:
+  workflow_dispatch:
+    inputs:
+      experiment:
+        description: "Experiment id"
+        required: true
+        default: "exp-followup-engagement-retrospective"
+      per_group:
+        description: "Max PRs sampled per group"
+        required: false
+        default: "120"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: experiments
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Execute
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EXPERIMENT: ${{ github.event.inputs.experiment }}
+          PER_GROUP: ${{ github.event.inputs.per_group }}
+        run: |
+          case "$EXPERIMENT" in
+            exp-followup-engagement-retrospective) npx tsx src/experiments/followup-engagement.ts --per-group "$PER_GROUP" ;;
+            *) echo "unknown experiment $EXPERIMENT"; exit 1 ;;
+          esac
+      - name: Commit raw results
+        run: |
+          git config user.name "venture-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/experiments
+          git diff --cached --quiet && exit 0
+          git commit -m "experiment: raw results for ${{ github.event.inputs.experiment }}"
+          git pull --rebase origin main
+          git push origin HEAD:main
