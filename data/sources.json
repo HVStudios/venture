@@ -1,5 +1,95 @@
 [
   {
+    "id": "src-arxiv-2601-21276",
+    "url": "https://arxiv.org/abs/2601.21276v1",
+    "title": "More Code, Less Reuse: Investigating Code Quality and Reviewer Sentiment towards AI-generated Pull Requests",
+    "publisher": "arXiv",
+    "publishedAt": "2026-01-29",
+    "retrievedAt": "2026-11-03T21:28:31.349Z",
+    "sourceType": "paper",
+    "excerpt": "Large Language Model (LLM) Agents are advancing quickly, with the increasing leveraging of LLM Agents to assist in development tasks such as code generation. While LLM Agents accelerate code generation, studies indicate they may introduce adverse effects on development. However, existing metrics solely measure pass rates, failing to reflect impacts on long-term maintainability and readability, and failing to capture human intuitive evaluations of PR. To increase the comprehensiveness of this problem, we investigate and evaluate the characteristics of LLM to know the pull requests' characteristics beyond the pass rate. We observe the code quality and maintainability within PRs based on code metrics to evaluate objective characteristics and developers' reactions to the pull requests from both humans and LLM's generation. Evaluation results indicate that LLM Agents frequently disregard code reuse opportunities, resulting in higher levels of redundancy compared to human developers. In contrast to the quality issues, our emotions analysis reveals that reviewers tend to express more neutral or positive emotions towards AI-generated contributions than human ones. This disconnect suggests …",
+    "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Uses the AIDev dataset of agent-authored PRs, many of them likely initiated by repository owners themselves, so findings may not transfer to unsolicited drive-by contributions.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-arxiv-2604-19965",
+    "url": "https://arxiv.org/abs/2604.19965v1",
+    "title": "Insights into Security-Related AI-Generated Pull Requests",
+    "publisher": "arXiv",
+    "publishedAt": "2026-04-21",
+    "retrievedAt": "2026-11-03T21:28:31.349Z",
+    "sourceType": "paper",
+    "excerpt": "Recent years have experienced growing contributions of AI coding agents that assist human developers in various software engineering tasks. However, this growing AI-assisted autonomy raises questions about security and trust. In this paper, we analyze more than 33,000 AI-generated pull requests (PRs) and identify 675 security-related submissions made by agentic AIs. Then we examine the security-related PRs with a focus on recurring security weaknesses, review outcomes and latency, commit message quality, and rejection reasons. The results show that security-related AI PRs introduce a small set of recurring weaknesses such as regex inefficiencies, injection flaws, and path traversal. Many flawed contributions are still merged, while rejections often arise from social or process factors such as inactivity or missing test coverage. The commit message quality of AI PRs has a limited effect on acceptance or latency, in contrast to human PRs reported in previous studies. We also extend existing rejection taxonomies by adding categories that are unique to AI-generated security contributions. These findings offer new insights into the strengths and shortcomings of autonomous coding systems…",
+    "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Uses the AIDev dataset of agent-authored PRs, many of them likely initiated by repository owners themselves, so findings may not transfer to unsolicited drive-by contributions.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-arxiv-2605-02273",
+    "url": "https://arxiv.org/abs/2605.02273v1",
+    "title": "These Aren't the Reviews You're Looking For How Humans Review AI-Generated Pull Requests",
+    "publisher": "arXiv",
+    "publishedAt": "2026-05-04",
+    "retrievedAt": "2026-11-03T21:28:31.349Z",
+    "sourceType": "paper",
+    "excerpt": "We analyze code review interactions for AI-generated pull requests (PRs) on GitHub using the AIDev dataset and compare them to human-authored PRs within the same repositories. We find that most AI-generated PRs receive no review and, when reviewed, are largely dominated by AI agents rather than humans. Human-authored PRs are more likely to receive human-only review and to attract direct human feedback. In contrast, reviews of AI-generated PRs more often take the form of automation-mediated interaction, with human involvement frequently expressed through agent steering rather than standalone evaluation. These results indicate systematic differences in how review activity is structured in agentic workflows and raise challenges for interpreting review metrics as indicators of human oversight in large-scale mining studies.",
+    "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Uses the AIDev dataset of agent-authored PRs, many of them likely initiated by repository owners themselves, so findings may not transfer to unsolicited drive-by contributions.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-arxiv-2606-26289",
+    "url": "https://arxiv.org/abs/2606.26289v1",
+    "title": "Augmentation with Dilution: A Large-Scale Empirical Study of Human Contributor Ecosystems After AI Coding Agent Adoption",
+    "publisher": "arXiv",
+    "publishedAt": "2026-06-24",
+    "retrievedAt": "2026-11-03T21:28:31.349Z",
+    "sourceType": "paper",
+    "excerpt": "AI coding agents are penetrating open-source software development at an unprecedented pace, yet existing research predominantly treats human contributors as a static backdrop rather than as the subject of inquiry. This paper presents the first large-scale empirical study that takes the human contributor ecosystem as its dependent variable, examining how the number, composition, and behavior of human participants change following AI coding agent adoption in open-source projects. Using a staggered difference-in-differences design on a dataset of 11,097 GitHub repositories spanning January 2023 to May 2026, we provide causal evidence via the Sun and Abraham estimator. Our results show that AI agent adoption does not significantly change the absolute number of human contributors (ATT = 0.014, p = 0.224), but significantly reduces human contributor density (ATT = -0.019, p = 0.002), indicating that the relative share of human participation declines as AI-generated pull requests accumulate. The relative participation share of newcomers declines significantly by 3.7 percentage points (ATT = -0.037, p < 0.001), with the effect emerging immediately after adoption and remaining stable throug…",
+    "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Observational difference-in-differences study of repositories that adopted AI agents themselves; not inbound drive-by contributions.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-arxiv-2609-07542",
+    "url": "https://arxiv.org/abs/2609.07542v1",
+    "title": "\"We Permit the Use of AI, but [...]\": The Landscape of AI Policies in Popular Open Source Projects",
+    "publisher": "arXiv",
+    "publishedAt": "2026-09-07",
+    "retrievedAt": "2026-11-03T21:28:31.349Z",
+    "sourceType": "paper",
+    "excerpt": "Open source communities are converging on a new governance artifact: the AI contribution policy. These policies barely existed a few months ago and are now being written and adopted. We analyzed 281 AI contribution policies, and manually classified them along the six dimensions; to study how policies change, we also tracked 92 dedicated AI policy files over time. We answer four research questions on (1) AI usage allowance, (2) AI disclosure practices, (3) AI slop countermeasures, and (4) AI policy evolution. We find that, first, permission is the norm rather than the exception: 83.3% of policies permit or encourage AI in code contributions. But permission comes with conditions, as 67.3% require a high level of human involvement and 43.4% assign accountability. Second, AI disclosure is required by 48.8% of policies, most often in pull request descriptions and commit messages, but what must be disclosed varies widely. Third, we identify ten countermeasures against AI slop, targeting pull requests, users, and autonomous agents. Finally, policies are not static: half of the dedicated AI policy files have already been revised since creation. Our results give maintainers and researchers …",
+    "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Policy texts express intent; enforcement is not measured.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-arxiv-2609-07919",
+    "url": "https://arxiv.org/abs/2609.07919v1",
+    "title": "You can contribute if you... An Empirical Framework of AI Contribution Policies in OSS",
+    "publisher": "arXiv",
+    "publishedAt": "2026-09-07",
+    "retrievedAt": "2026-11-03T21:28:31.349Z",
+    "sourceType": "paper",
+    "excerpt": "Artificial intelligence is reshaping open source software (OSS) contribution by lowering the cost of producing code, documentation, issue reports, and review interactions. This creates opportunities for broader participation, but also disrupts how maintainers assess contributor effort, competence, and accountability. In response, OSS projects are beginning to regulate AI-mediated contribution through contribution guidelines and other project documentation. This paper presents an empirical study of these emerging policies. We analyze project policies on AI-mediated contributions by evaluating their underlying rationales, rules, and expectations. Our analysis shows that these policies seek to protect scarce maintainer attention, preserve accountability, sustain meaningful review interactions, address legal and quality concerns, and maintain pathways for newcomer learning. Based on these findings, we introduce the AI Contribution Governance Framework, which organizes recurring concerns and governance mechanisms across projects. The framework helps OSS communities develop AI contribution policies and provides researchers with a vocabulary for studying how AI is changing collaborative s…",
+    "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Qualitative policy analysis.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-astropy-ai-pr-policy",
     "url": "https://github.com/astropy/astropy-project/issues/509",
     "title": "Astropy: Policy against AI-generated pull requests (#509)",

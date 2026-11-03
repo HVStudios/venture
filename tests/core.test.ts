@@ -57,6 +57,12 @@ describe("evidence strength", () => {
     expect(spec).toBeLessThan(base);
   });
 
+  it("counts contradictions aimed at a specific idea double", () => {
+    const sources = [src("src-a"), src("src-b")];
+    const evs = [ev("ev-1", "src-a"), ev("ev-2", "src-b", { stance: "contradicts", ideaIds: ["idea-x"] })];
+    expect(assessEvidence(evs, sources, "idea-x").score).toBeLessThan(assessEvidence(evs, sources).score);
+  });
+
   it("penalises quotes that failed re-verification", () => {
     const ok = assessEvidence([ev("ev-1", "src-a")], [src("src-a")]).score;
     const missing = assessEvidence([ev("ev-1", "src-a")], [src("src-a", { verification: { status: "quote-missing" } })]).score;

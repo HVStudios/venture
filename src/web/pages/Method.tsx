@@ -34,6 +34,7 @@ export function Method() {
           <li>Evidence is grouped by <b>independent origin</b>. Ten articles repeating one press release count once.</li>
           <li>Each origin is weighted by epistemic status (fact 1.0, inference 0.6, hypothesis 0.3, speculation 0.1), by source type, and by whether a re-fetch of the page found the quote.</li>
           <li>Support follows a saturating curve: about 3 strong independent origins give ~63 and about 6 give ~86. Contradicting evidence then scales the score down in proportion.</li>
+          <li>For an idea, evidence on its problems counts too, but contradicting evidence aimed at the idea itself counts double: a real problem doesn't validate a particular solution.</li>
           <li>Levels: none &lt; 10 ≤ weak &lt; 35 ≤ moderate &lt; 60 ≤ strong.</li>
         </ul>
         <table className="score-table compact">

@@ -24,7 +24,7 @@ import type { Memory, Provenance, Run, Theme } from "../core/schema";
 import { validateMemory } from "../core/validate";
 import { ActionError, approveExperiment, decideIdea, reconsiderationQueue, recordOutcome } from "../core/actions";
 import type { IdeaStatus } from "../core/schema";
-import { COLLECTORS, mergeSignals, type Fetcher } from "./collectors";
+import { COLLECTORS, mergeSignals, relevantSignals, type Fetcher } from "./collectors";
 import { ingestBundle } from "./ingest";
 import { runPipeline, type PoolItem } from "./pipeline";
 import { AnthropicProvider } from "./providers/anthropic";
@@ -149,7 +149,9 @@ async function main() {
             run.stages.push({ name: "scout", status: "failed", notes: c.name });
           }
         }
-        memory.signals = mergeSignals(memory.signals, found, Number(flags["max-per-theme"] ?? 150));
+        const relevant = relevantSignals(found, [theme]);
+        run.stages.push({ name: "dedupe", status: "ok", notes: `${found.length - relevant.length} off-topic signal(s) filtered out` });
+        memory.signals = relevantSignals(mergeSignals(memory.signals, relevant, Number(flags["max-per-theme"] ?? 150)), memory.themes);
         run.counts.sourcesExamined = found.length;
         run.completedAt = new Date().toISOString();
         run.status = run.errors.length ? (found.length ? "partial" : "failed") : "completed";

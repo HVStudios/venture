@@ -30,6 +30,24 @@ export function stripMarkup(s: string): string {
     .trim();
 }
 
+/**
+ * A signal is relevant to a theme if, for at least one keyword, every
+ * significant token of that keyword appears in its title or excerpt.
+ * Search APIs match loosely; this keeps the feed on-topic.
+ */
+export function isRelevant(text: string, keywords: string[]): boolean {
+  const hay = text.toLowerCase();
+  return keywords.some((kw) => {
+    const toks = kw.toLowerCase().split(/[^a-z0-9]+/).filter((t) => t.length > 2);
+    return toks.length > 0 && toks.every((t) => hay.includes(t.replace(/s$/, "")));
+  });
+}
+
+export function relevantSignals(signals: Signal[], themes: Theme[]): Signal[] {
+  const kw = new Map(themes.map((t) => [t.id, t.keywords]));
+  return signals.filter((s) => s.triage === "promoted" || isRelevant(`${s.title} ${s.excerpt}`, kw.get(s.themeId) ?? []));
+}
+
 // ------------------------------------------------------------ Hacker News (Algolia)
 type HnHit = { objectID: string; title?: string; story_text?: string; comment_text?: string; points?: number; num_comments?: number; created_at?: string; url?: string };
 export const hackerNews: Collector = {
@@ -72,7 +90,7 @@ export const githubIssues: Collector = {
     const headers: Record<string, string> = { ...UA, Accept: "application/vnd.github+json" };
     if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
     for (const kw of theme.keywords) {
-      const q = `${kw} is:issue sort:reactions-+1`;
+      const q = `"${kw}" is:issue sort:reactions-+1`;
       const url = `https://api.github.com/search/issues?q=${encodeURIComponent(q)}&per_page=${perQuery}`;
       const res = await fetcher(url, { headers });
       if (!res.ok) throw new Error(`github ${res.status}`);

@@ -8,11 +8,11 @@
     ],
     "affectedUsers": "Maintainers and moderators of popular open-source projects (evidenced: tldraw, Rust, Astropy, LLVM, Linux, Ghostty, scikit-learn, Zulip, Godot)",
     "severityNote": "High. tldraw auto-closes all external PRs, Rust maintainers call it a DDoS on capacity, and several projects threaten bans.",
-    "frequencyNote": "Recurring across at least 9 independent projects' policies and issues dated Nov 2025 – 2026. No quantitative volume data was retrieved.",
+    "frequencyNote": "Recurring across at least 9 projects' policies and issues (Nov 2025 – 2026). A study counted 281 AI contribution policies in popular projects. No direct measurement of inbound volume was retrieved.",
     "status": "investigating",
     "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
     "firstSeen": "2026-11-03T21:40:00Z",
-    "lastUpdated": "2026-11-03T21:40:00Z",
+    "lastUpdated": "2026-11-03T22:05:00Z",
     "provenance": "real"
   },
   {
@@ -44,7 +44,7 @@
     "status": "open",
     "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
     "firstSeen": "2026-11-03T21:40:00Z",
-    "lastUpdated": "2026-11-03T21:40:00Z",
+    "lastUpdated": "2026-11-03T22:05:00Z",
     "provenance": "real"
   }
 ]
