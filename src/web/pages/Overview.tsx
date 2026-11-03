@@ -44,7 +44,7 @@ export function Landscape({ ideas, height = 320 }: { ideas: Idea[]; height?: num
               onKeyDown={(e) => e.key === "Enter" && nav(`/ideas/${i.id}`)}>
               <circle cx={x(s.evidence.score) + twins * 4} cy={y(s.attractiveness) + dy} r={7} />
               <title>{`${i.title}\nstatus: ${i.status}\nattractiveness ${s.attractiveness} · evidence ${s.evidence.score}`}</title>
-              <text x={x(s.evidence.score) + 12 + twins * 4} y={y(s.attractiveness) + 4 + dy} className="dot-label">
+              <text x={s.evidence.score > 62 ? x(s.evidence.score) - 12 + twins * 4 : x(s.evidence.score) + 12 + twins * 4} y={y(s.attractiveness) + 4 + dy} textAnchor={s.evidence.score > 62 ? "end" : "start"} className="dot-label">
                 {i.title.length > 34 ? i.title.slice(0, 32) + "…" : i.title}
               </text>
             </g>

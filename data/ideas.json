@@ -1,0 +1,452 @@
+[
+  {
+    "id": "idea-ai-authorship-pr-detector",
+    "title": "AI-authorship detector for incoming pull requests",
+    "summary": "A GitHub Action that estimates whether a PR was AI-generated, then labels or closes it before a maintainer looks at it.",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "themeIds": [
+      "theme-ai-contribution-burden"
+    ],
+    "targetUsers": "Maintainers of popular open-source repositories",
+    "solution": "Classify PR text and diffs with stylometric and LLM-based detectors, then apply labels, auto-close, or route to a low-priority queue.",
+    "competitorIds": [
+      "comp-ai-pr-detectors",
+      "comp-fossier"
+    ],
+    "differentiation": "Little: several detectors already exist, and they target the same signal.",
+    "feasibility": "Easy to build, but AI-text detection is unreliable, and AI-assisted human work is indistinguishable from slop by style alone.",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "AI authorship is a good proxy for low-value contributions",
+        "criticality": "high",
+        "status": "weakened"
+      },
+      {
+        "id": "a2",
+        "text": "Detectors can separate AI from human text with low false-positive rates",
+        "criticality": "high",
+        "status": "untested"
+      }
+    ],
+    "risks": [
+      "Penalises legitimate AI-assisted contributors whom projects explicitly welcome",
+      "Arms race with detector evasion"
+    ],
+    "nextSteps": [],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "Wrong target. Ghostty, curl, Zulip and LLVM all permit AI-assisted work. Their complaint is about unreviewed work from contributors who don't understand it.",
+        "severity": "fatal",
+        "evidenceIds": [
+          "ev-ai-burden-14",
+          "ev-ai-burden-15",
+          "ev-ai-burden-16"
+        ],
+        "status": "accepted"
+      },
+      {
+        "id": "obj-2",
+        "text": "Crowded: multiple open-source detectors already exist, and none has meaningful adoption, which suggests weak pull.",
+        "severity": "major",
+        "evidenceIds": [],
+        "status": "accepted"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 4,
+          "rationale": "The underlying problem is severe for maintainers (tldraw closed external PRs)."
+        },
+        "frequency": {
+          "score": 4,
+          "rationale": "Reported across many large projects in 2025–2026."
+        },
+        "userValue": {
+          "score": 2,
+          "rationale": "Classifies the wrong attribute, so its value is doubtful."
+        },
+        "competitiveGap": {
+          "score": 1,
+          "rationale": "Several free detectors exist."
+        },
+        "differentiation": {
+          "score": 1,
+          "rationale": "No clear angle."
+        },
+        "feasibility": {
+          "score": 3,
+          "rationale": "Easy to ship, hard to make accurate."
+        },
+        "costComplexity": {
+          "score": 4,
+          "rationale": "Small GitHub Action."
+        },
+        "userAccess": {
+          "score": 4,
+          "rationale": "Maintainers are easy to reach on GitHub."
+        },
+        "validationCost": {
+          "score": 4,
+          "rationale": "Could be validated cheaply on labelled PR data."
+        }
+      },
+      "assessedAt": "2026-11-03T21:40:00Z",
+      "assessedBy": "critic (claude-code-session)"
+    },
+    "status": "rejected",
+    "statusRationale": "Rejected. It targets AI authorship, while the projects studied explicitly accept AI-assisted work and object to unreviewed, low-understanding work. The space is already crowded with low-adoption detectors.",
+    "relatedIdeaIds": [],
+    "epistemic": "hypothesis",
+    "createdInRun": "run-20261103-agent-ai-contribution-burden",
+    "createdAt": "2026-11-03T21:40:00Z",
+    "updatedAt": "2026-11-03T21:40:00Z",
+    "provenance": "real"
+  },
+  {
+    "id": "idea-contributor-comprehension-gate",
+    "title": "Comprehension gate for first-time contributors' PRs",
+    "summary": "Before a PR from an unknown contributor enters the review queue, its author must answer two or three short, diff-specific questions in their own words. Maintainers see the answers and whether the author engaged at all.",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity",
+      "prob-submission-effort-no-longer-signals-trust"
+    ],
+    "themeIds": [
+      "theme-ai-contribution-burden"
+    ],
+    "targetUsers": "Maintainers of popular repositories that receive many PRs from first-time contributors",
+    "solution": "A GitHub App or Action. When a PR from a non-collaborator without prior merged contributions is opened, it is marked 'awaiting author' and a comment asks diff-specific questions (why this change, what it interacts with, how it was tested). The PR enters the maintainer queue only after the author responds. Follow-up engagement is the primary signal, not detection of AI text. It works alongside vouch lists and GitHub's interaction limits.",
+    "competitorIds": [
+      "comp-github-pr-access-controls",
+      "comp-vouch",
+      "comp-fossier",
+      "comp-written-ai-policies",
+      "comp-close-external-prs"
+    ],
+    "differentiation": "It operationalises the requirement that policies already state ('be able to answer questions about their work', 'If you can't explain what your changes do…'). Unlike reputation gates it doesn't exclude newcomers, and unlike detectors it doesn't judge AI use.",
+    "feasibility": "High. GitHub webhooks, PR comments and labels are standard. Question generation can start with templates; diff-specific questions would need an LLM (cost to the operator).",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "Authors of low-effort PRs rarely respond to maintainer questions, while genuine contributors do (follow-up engagement discriminates)",
+        "criticality": "high",
+        "status": "untested"
+      },
+      {
+        "id": "a2",
+        "text": "Maintainers accept a small added delay for newcomers in exchange for a filtered queue",
+        "criticality": "medium",
+        "status": "untested"
+      },
+      {
+        "id": "a3",
+        "text": "Answers pasted from an LLM still reduce the burden, because they arrive before review time is spent",
+        "criticality": "medium",
+        "status": "untested"
+      }
+    ],
+    "risks": [
+      "Authors can paste the questions into an LLM, which weakens the content signal (though not the engagement signal)",
+      "Adds friction for legitimate newcomers",
+      "GitHub may ship a native equivalent"
+    ],
+    "nextSteps": [
+      "Run the retrospective engagement experiment",
+      "If it is supported, build a template-only prototype and test it on VENTURE's own repository first"
+    ],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "An LLM can answer the questions too, so the gate may only add a round-trip for slop authors.",
+        "severity": "major",
+        "evidenceIds": [],
+        "response": "The bet is on engagement (does the author respond at all, and quickly), which tldraw reports is typically missing. This is the assumption the experiment tests.",
+        "status": "open"
+      },
+      {
+        "id": "obj-2",
+        "text": "Friction for genuine newcomers conflicts with projects' stated wish to grow contributors.",
+        "severity": "major",
+        "evidenceIds": [
+          "ev-ai-burden-20"
+        ],
+        "response": "Questions are short and only apply to authors with no prior merged PRs. Measure newcomer drop-off before adoption.",
+        "status": "open"
+      },
+      {
+        "id": "obj-3",
+        "text": "Platform risk: GitHub could add this natively. tldraw explicitly waits for 'better tools' from GitHub.",
+        "severity": "minor",
+        "evidenceIds": [
+          "ev-ai-burden-13"
+        ],
+        "status": "accepted"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 4,
+          "rationale": "Projects are closing external PRs and describe the load as DDoS-like."
+        },
+        "frequency": {
+          "score": 4,
+          "rationale": "Reported across many large projects in 2025–2026."
+        },
+        "userValue": {
+          "score": 3,
+          "rationale": "Could filter the queue without excluding newcomers. Unproven."
+        },
+        "competitiveGap": {
+          "score": 3,
+          "rationale": "Existing tools gate on reputation or AI style. None found gates on engagement or comprehension, though the search was not exhaustive."
+        },
+        "differentiation": {
+          "score": 3,
+          "rationale": "Aligned with the wording of the policies, but the mechanism is simple to copy."
+        },
+        "feasibility": {
+          "score": 4,
+          "rationale": "Standard GitHub App plumbing."
+        },
+        "costComplexity": {
+          "score": 4,
+          "rationale": "A template-based v1 is small."
+        },
+        "userAccess": {
+          "score": 4,
+          "rationale": "Maintainers who wrote AI policies are visible on GitHub."
+        },
+        "validationCost": {
+          "score": 5,
+          "rationale": "The core assumption can be tested on public GitHub data for $0."
+        }
+      },
+      "assessedAt": "2026-11-03T21:40:00Z",
+      "assessedBy": "critic (claude-code-session)"
+    },
+    "status": "advanced",
+    "statusRationale": "Advanced to a cheap retrospective experiment. It addresses the best-evidenced problem, matches what the policies actually ask for (understanding, not abstinence), and its riskiest assumption can be tested with public data before any building.",
+    "relatedIdeaIds": [],
+    "epistemic": "hypothesis",
+    "createdInRun": "run-20261103-agent-ai-contribution-burden",
+    "createdAt": "2026-11-03T21:40:00Z",
+    "updatedAt": "2026-11-03T21:40:00Z",
+    "provenance": "real"
+  },
+  {
+    "id": "idea-cross-project-contributor-reputation",
+    "title": "Cross-project contributor reputation registry",
+    "summary": "A shared registry where projects publish vouches and denouncements, so trust earned in one project carries over to others.",
+    "problemIds": [
+      "prob-submission-effort-no-longer-signals-trust"
+    ],
+    "themeIds": [
+      "theme-ai-contribution-burden"
+    ],
+    "targetUsers": "Maintainers across many open-source projects",
+    "solution": "Federate vouch-style trust files across projects, with signed attestations and a lookup API used by gating Actions.",
+    "competitorIds": [
+      "comp-vouch",
+      "comp-fossier"
+    ],
+    "differentiation": "Network effects across projects. Vouch already allows lists to be shared, so differentiation is thin.",
+    "feasibility": "Technically simple, socially and legally hard.",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "Projects are willing to trust other projects' vouches",
+        "criticality": "high",
+        "status": "untested"
+      },
+      {
+        "id": "a2",
+        "text": "Public denouncements can be governed without abuse or defamation risk",
+        "criticality": "high",
+        "status": "untested"
+      }
+    ],
+    "risks": [
+      "Public blacklists invite brigading, mistaken identity and legal risk",
+      "Vouch may grow into this itself"
+    ],
+    "nextSteps": [
+      "Revisit if Vouch adoption grows and projects start importing each other's lists"
+    ],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "Governance and abuse risks of a shared public denouncement list outweigh the benefit for a small team to operate.",
+        "severity": "major",
+        "evidenceIds": [],
+        "status": "unresolved"
+      },
+      {
+        "id": "obj-2",
+        "text": "The incumbent (Vouch, ~5k stars, Ghostty) is positioned to add federation itself.",
+        "severity": "major",
+        "evidenceIds": [
+          "ev-ai-burden-21"
+        ],
+        "status": "accepted"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 3,
+          "rationale": "Trust breakdown is real but indirect."
+        },
+        "frequency": {
+          "score": 3,
+          "rationale": "Affects many projects, but few have adopted explicit trust lists yet."
+        },
+        "userValue": {
+          "score": 3,
+          "rationale": "Valuable only at network scale."
+        },
+        "competitiveGap": {
+          "score": 2,
+          "rationale": "Vouch covers much of this."
+        },
+        "differentiation": {
+          "score": 2,
+          "rationale": "Federation is a feature, not a product."
+        },
+        "feasibility": {
+          "score": 4,
+          "rationale": "Simple data plumbing."
+        },
+        "costComplexity": {
+          "score": 2,
+          "rationale": "Ongoing governance and moderation costs."
+        },
+        "userAccess": {
+          "score": 3,
+          "rationale": "Requires many projects to join."
+        },
+        "validationCost": {
+          "score": 2,
+          "rationale": "Hard to test without network adoption."
+        }
+      },
+      "assessedAt": "2026-11-03T21:40:00Z",
+      "assessedBy": "critic (claude-code-session)"
+    },
+    "status": "parked",
+    "statusRationale": "Parked. Plausible, but it depends on network adoption, carries governance and abuse risk, and the incumbent (Vouch) could add federation itself. Revisit if cross-project list sharing emerges.",
+    "relatedIdeaIds": [],
+    "epistemic": "speculation",
+    "createdInRun": "run-20261103-agent-ai-contribution-burden",
+    "createdAt": "2026-11-03T21:40:00Z",
+    "updatedAt": "2026-11-03T21:40:00Z",
+    "provenance": "real"
+  },
+  {
+    "id": "idea-reproduction-first-security-triage",
+    "title": "Reproduction-first triage for AI-assisted security reports",
+    "summary": "Security reports must include a proof of concept that a sandboxed CI job runs against the released code before any human reads the report.",
+    "problemIds": [
+      "prob-fabricated-ai-security-reports"
+    ],
+    "themeIds": [
+      "theme-ai-contribution-burden"
+    ],
+    "targetUsers": "Security teams of widely used open-source projects",
+    "solution": "An intake form and a sandboxed runner execute the submitted PoC against pinned releases and attach the result. Reports that don't reproduce go to a low-priority queue.",
+    "competitorIds": [
+      "comp-written-ai-policies"
+    ],
+    "differentiation": "Shifts verification cost back to the reporter mechanically.",
+    "feasibility": "Possible, but it requires executing untrusted code safely, and many real vulnerabilities (logic bugs, race conditions, memory corruption needing special builds) are hard to demonstrate in a generic sandbox.",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "Most valid reports can include a mechanically runnable PoC",
+        "criticality": "high",
+        "status": "untested"
+      }
+    ],
+    "risks": [
+      "Running attacker-supplied code",
+      "Raises the bar for legitimate reporters",
+      "Bug-bounty platforms may already offer triage services (not researched in this run)"
+    ],
+    "nextSteps": [
+      "Gather more independent evidence on report volumes. Secondary sources were blocked in this session."
+    ],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "Evidence is thin: only one independent origin (curl) was retrievable in this session.",
+        "severity": "major",
+        "evidenceIds": [
+          "ev-ai-burden-17",
+          "ev-ai-burden-19"
+        ],
+        "status": "open"
+      },
+      {
+        "id": "obj-2",
+        "text": "Executing untrusted PoCs is itself a security risk, and many genuine findings can't be reproduced generically.",
+        "severity": "major",
+        "evidenceIds": [],
+        "status": "open"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 4,
+          "rationale": "curl ended its bug bounty and describes fake reports as blocking real work."
+        },
+        "frequency": {
+          "score": 2,
+          "rationale": "Only one origin evidenced in this run."
+        },
+        "userValue": {
+          "score": 3,
+          "rationale": "High if it works, but many reports can't be auto-reproduced."
+        },
+        "competitiveGap": {
+          "score": 3,
+          "rationale": "Platform triage services were not investigated, so this score is uncertain."
+        },
+        "differentiation": {
+          "score": 3,
+          "rationale": "Mechanical reproduction gate."
+        },
+        "feasibility": {
+          "score": 2,
+          "rationale": "Sandboxing and generic reproduction are hard."
+        },
+        "costComplexity": {
+          "score": 2,
+          "rationale": "Secure execution infrastructure is costly."
+        },
+        "userAccess": {
+          "score": 3,
+          "rationale": "Security teams are reachable but cautious."
+        },
+        "validationCost": {
+          "score": 3,
+          "rationale": "Could be tested on historical public advisories."
+        }
+      },
+      "assessedAt": "2026-11-03T21:40:00Z",
+      "assessedBy": "critic (claude-code-session)"
+    },
+    "status": "parked",
+    "statusRationale": "Parked for insufficient evidence. Only curl's own documents were retrievable, so news coverage and platform alternatives are unexamined. Revisit with broader sources.",
+    "relatedIdeaIds": [],
+    "epistemic": "hypothesis",
+    "createdInRun": "run-20261103-agent-ai-contribution-burden",
+    "createdAt": "2026-11-03T21:40:00Z",
+    "updatedAt": "2026-11-03T21:40:00Z",
+    "provenance": "real"
+  }
+]

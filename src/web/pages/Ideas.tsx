@@ -205,7 +205,7 @@ export function IdeaDetail() {
           <Meter value={s.attractiveness} label="Attractiveness" tone="attract" hint="Weighted criterion scores (if assumptions hold)" />
           <Meter value={s.evidence.score} label="Evidence strength" tone="evidence" hint={s.evidence.explanation.join("\n")} />
           <p className="muted">
-            {s.evidence.supportingOrigins} independent supporting origin(s), {s.evidence.contradictingOrigins} contradicting. <Link to="/method">What these mean</Link>
+            Counts evidence on this idea's problems plus idea-specific evidence: {s.evidence.supportingOrigins} independent supporting origin(s), {s.evidence.contradictingOrigins} contradicting. <Link to="/method">What these mean</Link>
           </p>
         </aside>
       </header>

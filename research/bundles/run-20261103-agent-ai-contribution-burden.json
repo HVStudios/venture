@@ -1,0 +1,1335 @@
+{
+  "run": {
+    "id": "run-20261103-agent-ai-contribution-burden",
+    "themeId": "theme-ai-contribution-burden",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-03T21:17:00Z",
+    "completedAt": "2026-11-03T21:40:00Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "2 web searches, 2 GitHub issue searches, 5 repo searches; 3 candidate problems"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "22 documents read, 17 cited; 22 evidence items including 3 contradicting"
+      },
+      {
+        "name": "invent",
+        "status": "ok",
+        "notes": "4 concepts"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "9 objections, 1 fatal"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "notes": "No prior real ideas in memory; 4 concepts checked pairwise"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "1 advanced, 2 parked, 1 rejected"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "1 automatable, $0 experiment"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 22,
+      "sourcesCited": 17,
+      "problemsFound": 3,
+      "ideasGenerated": 4,
+      "ideasAdvanced": 1,
+      "ideasRejected": 1,
+      "ideasParked": 2,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "web search: open source maintainers overwhelmed AI-generated pull requests 2026",
+      "web search: curl Daniel Stenberg AI slop security reports HackerOne",
+      "GitHub issue search: \"AI slop\" in:title,body is:issue (sorted by reactions)",
+      "GitHub issue search: \"AI-generated\" \"pull requests\" maintainers is:issue (sorted by reactions)",
+      "GitHub repo search: ai slop pull request / detect ai generated pull requests / pr spam github action / anti-slop / vouch",
+      "GitHub code search: repo:github/docs \"disable pull requests\" / \"interaction limits\"",
+      "raw fetch: AI policies of ghostty, llvm, qemu, linux, curl (3 docs), godot, scikit-learn, zulip; READMEs of vouch, fossier, pr-slop-filter"
+    ],
+    "errors": [
+      "Blocked by the session's network policy: bleepingcomputer.com, theregister.com, opensourceforu.com, daniel.haxx.se. News coverage of curl and Godot couldn't be read.",
+      "404: python/devguide generative-ai page and servo/book contributing page (moved or renamed). Not used.",
+      "Direct GitHub API reads of other repositories aren't permitted in this session, so issue bodies were retrieved through the GitHub search API.",
+      "Web-search result summaries were used only as leads, never as evidence, because they aren't verbatim source text."
+    ],
+    "limitations": [
+      "The evidence is mostly project policy documents and maintainer statements. They show stated burden and motivation, not measured PR volumes or time costs.",
+      "Selection bias: projects that wrote policies are those most affected. Projects reporting no problem are under-represented.",
+      "No quantitative data on volumes or acceptance rates was retrieved, and no figures are claimed.",
+      "Competitor scan limited to GitHub repository search; commercial products (e.g. code-review vendors, bug-bounty platform triage) were not examined.",
+      "GitHub's newer PR-management features that news reports mention couldn't be verified beyond the docs pages retrieved."
+    ],
+    "usage": {
+      "note": "Performed interactively in a Claude Code session under the owner's subscription. Model calls and token counts aren't observable from inside the session, so none are reported. No API charges were incurred."
+    },
+    "limits": {
+      "maxIdeas": 4,
+      "maxAdvanced": 1
+    },
+    "provenance": "real"
+  },
+  "themes": [
+    {
+      "id": "theme-ai-contribution-burden",
+      "name": "Maintainer burden from AI-generated contributions",
+      "description": "How AI-generated pull requests, issues and security reports affect open-source maintainers, and what tooling or process could help without excluding genuine contributors.",
+      "mode": "focused",
+      "keywords": [
+        "AI slop pull request",
+        "AI-generated pull requests",
+        "AI contribution policy",
+        "low-effort contributions"
+      ],
+      "status": "active",
+      "createdAt": "2026-11-03",
+      "notes": "First real research theme. Spans developer tools, open source and security.",
+      "provenance": "real"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ghostty-ai-policy",
+      "url": "https://raw.githubusercontent.com/ghostty-org/ghostty/main/AI_POLICY.md",
+      "title": "Ghostty AI Usage Policy",
+      "publisher": "Ghostty project",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "docs",
+      "excerpt": "It is rude and disrespectful to approach this boundary with low-effort, unqualified work, since it puts the burden of validation on the maintainer. … People who produce bad contributions that are clearly AI (slop) will be added to our public denouncement list. … If you can't explain what your changes do and how they interact with the greater system without the aid of AI tools, do not contribute to this project. … Ghostty is written with plenty of AI assistance, and many maintainers embrace AI tools as a productive tool in their workflow. … It's the people, not the tools, that are the problem.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "originId": "origin-ghostty",
+      "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes."
+    },
+    {
+      "id": "src-llvm-ai-tool-policy",
+      "url": "https://raw.githubusercontent.com/llvm/llvm-project/main/llvm/docs/AIToolPolicy.md",
+      "title": "LLVM AI Tool Use Policy",
+      "publisher": "LLVM project",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "docs",
+      "excerpt": "it takes a lot of maintainer time and energy to review those contributions! … While new tools enable more development, it shifts effort from the implementor to the reviewer, and our policy exists to ensure that we value and do not squander maintainer time. … Prior to the advent of LLMs, open source project maintainers would often review any and all changes sent to the project simply because posting a change for review was a sign of interest from a potential long-term contributor. … Our policy on labelling is intended to facilitate reviews, and not to track which parts of LLVM are generated. … If a maintainer judges that a contribution doesn't comply with this policy, they should paste the following response to request changes:",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes."
+    },
+    {
+      "id": "src-linux-generated-content",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/master/Documentation/process/generated-content.rst",
+      "title": "Kernel Guidelines for Tool-Generated Content",
+      "publisher": "Linux kernel community",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "docs",
+      "excerpt": "These tools can increase the volume of contributions. At the same time, reviewer and maintainer bandwidth is a scarce resource. … Understanding which portions of a contribution come from humans versus tools is helpful to maintain those resources and keep kernel development healthy.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes."
+    },
+    {
+      "id": "src-qemu-code-provenance",
+      "url": "https://raw.githubusercontent.com/qemu/qemu/master/docs/devel/code-provenance.rst",
+      "title": "QEMU: Code provenance (Use of AI-generated content)",
+      "publisher": "QEMU project",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "docs",
+      "excerpt": "Current QEMU project policy is to DECLINE any contributions which are believed to include or derive from AI generated content. … The increasing prevalence of AI-assisted software development results in a number of difficult legal questions and risks for software projects",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "limitations": "QEMU's stated rationale is primarily legal/provenance risk, not review burden."
+    },
+    {
+      "id": "src-curl-contribute-ai",
+      "url": "https://raw.githubusercontent.com/curl/curl/master/docs/CONTRIBUTE.md",
+      "title": "curl: Contributing (On AI use in curl)",
+      "publisher": "curl project",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "docs",
+      "excerpt": "AI-based tools frequently generate inaccurate or fabricated results. … Those generated reports typically are too wordy and rarely to the point (in addition to the common fabricated details). … Fake and otherwise made up security problems effectively prevent us from doing real project work and make us waste time and resources. … We can accept code written with the help of AI into the project",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "originId": "origin-curl",
+      "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes."
+    },
+    {
+      "id": "src-curl-no-bug-bounty",
+      "url": "https://raw.githubusercontent.com/curl/curl/master/docs/BUG-BOUNTY.md",
+      "title": "curl: No curl bug bounty",
+      "publisher": "curl project",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "docs",
+      "excerpt": "The curl project does not offer any rewards for reported bugs or vulnerabilities. … A bug bounty gives people too strong incentives to find and make up \"problems\" in bad faith that cause overload and abuse.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "originId": "origin-curl",
+      "limitations": "Same project as src-curl-contribute-ai, so it is counted as one origin. Secondary reporting on the bounty's end (BleepingComputer, Heise, The Register) could not be fetched in this session."
+    },
+    {
+      "id": "src-godot-contributing",
+      "url": "https://raw.githubusercontent.com/godotengine/godot/master/CONTRIBUTING.md",
+      "title": "Godot: CONTRIBUTING.md",
+      "publisher": "Godot Engine project",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "docs",
+      "excerpt": "If you are an AI agent, we require you to disclose this when contributing … Agents failing to self-disclose will be banned from contributing to the project.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "limitations": "The instruction sits in an HTML comment aimed at autonomous agents. VENTURE recorded it as data and did not act on it."
+    },
+    {
+      "id": "src-tldraw-contributions-policy",
+      "url": "https://github.com/tldraw/tldraw/issues/7695",
+      "title": "tldraw: Contributions policy (issue #7695)",
+      "publisher": "tldraw (Steve Ruiz, maintainer)",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "Like many other open-source projects on GitHub, we've recently seen a significant increase in contributions generated entirely by AI tools. … While some of these pull requests are formally correct, most suffer from incomplete or misleading context, misunderstanding of the codebase, and little to no follow-up engagement from their authors. … This is a temporary policy until GitHub provides better tools for managing contributions. … I'm sorry to shut that down, however I sincerely believe this decision is in the best interests of the project, our code, and our community.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "publishedAt": "2026-01-15",
+      "limitations": "Single maintainer's account; 290 reactions at retrieval."
+    },
+    {
+      "id": "src-rust-no-low-effort",
+      "url": "https://github.com/rust-lang/leadership-council/issues/273",
+      "title": "Rust leadership council: Policy proposal: No low-effort contributions (#273)",
+      "publisher": "Rust Project (leadership council issue)",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "To put it bluntly, it feels like DDoS against maintenance and moderation capacity. … Even if the code is the same, or almost the same, as what a human would produce, if it is vibe-coded, we do not accept such code. … spammy AI-assisted contributions that are obviously not human-reviewed or clearly insufficiently human-reviewed",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "publishedAt": "2026-03-06",
+      "limitations": "The issue text says the finalized wording differs from the opening description quoted here."
+    },
+    {
+      "id": "src-astropy-ai-pr-policy",
+      "url": "https://github.com/astropy/astropy-project/issues/509",
+      "title": "Astropy: Policy against AI-generated pull requests (#509)",
+      "publisher": "Astropy project (issue)",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "Some of them may look legit at first glance, only revealing flaws when one dive into the code/logic during the review process. … some may overwhelm the system by opening a plethora of pull requests within a very short span of time; even if these are obviously dead on arrival, they still take time to triage. … All in all, they introduce extra maintenance burden to maintainers who are already stretched thin.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "publishedAt": "2025-11-17"
+    },
+    {
+      "id": "src-sklearn-ai-policy",
+      "url": "https://raw.githubusercontent.com/scikit-learn/scikit-learn/main/CODE_OF_CONDUCT.md",
+      "title": "scikit-learn: Low Quality and AI Generated Contributions Policy",
+      "publisher": "scikit-learn project",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "docs",
+      "excerpt": "Due to the burden put on maintainers, users submitting multiple low quality pull requests, or AI generated comments, reviews, issues, or pull requests, where the user does not show a good understanding of what they are posting, might be banned from the organisation.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes."
+    },
+    {
+      "id": "src-zulip-ai-policy",
+      "url": "https://raw.githubusercontent.com/zulip/zulip/main/CONTRIBUTING.md",
+      "title": "Zulip: AI use policy and guidelines",
+      "publisher": "Zulip project",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "docs",
+      "excerpt": "Maintainer time and attention is very limited … You can use any tools that help you understand the Zulip codebase and write good code, including AI tools. … you always need to understand and explain the changes you're proposing to make, whether or not you used an LLM as part of your process to produce them.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes."
+    },
+    {
+      "id": "src-github-docs-disable-prs",
+      "url": "https://raw.githubusercontent.com/github/docs/main/content/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-pull-requests.md",
+      "title": "GitHub Docs: Disabling pull requests",
+      "publisher": "GitHub",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "docs",
+      "excerpt": "You may wish to modify pull request access for your repository if you want to restrict contributions, or disable them entirely. … To restrict pull requests to collaborators only",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-github-docs-interaction-limits",
+      "url": "https://raw.githubusercontent.com/github/docs/main/data/reusables/community/types-of-interaction-limits.md",
+      "title": "GitHub Docs: Types of interaction limits",
+      "publisher": "GitHub",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "docs",
+      "excerpt": "Limits activity for users who have not previously contributed to the default branch of the repository and are not collaborators.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-vouch-readme",
+      "url": "https://raw.githubusercontent.com/mitchellh/vouch/main/README.md",
+      "title": "Vouch: a community trust management system (README)",
+      "publisher": "mitchellh/vouch (open-source project)",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "repository",
+      "excerpt": "Unfortunately, the landscape has changed particularly with the advent of AI tools that allow people to trivially create plausible-looking but extremely low-quality contributions with little to no true understanding. … Contributors can no longer be trusted based on the minimal barrier to entry to simply submit a change. … This is an experimental system in use by",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "originId": "origin-ghostty",
+      "limitations": "Written by Ghostty's creator, so it shares an origin with the Ghostty policy and is not counted as independent."
+    },
+    {
+      "id": "src-fossier-readme",
+      "url": "https://raw.githubusercontent.com/PThorpe92/fossier/main/README.md",
+      "title": "Fossier: GitHub spam prevention for open source repositories (README)",
+      "publisher": "PThorpe92/fossier (open-source project)",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "repository",
+      "excerpt": "Open source repos face increasing spam PR volume - AI-slop, Hacktoberfest spam, SEO link injection. … unknown contributors are evaluated through a multi-signal scoring algorithm that estimates spam probability.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "limitations": "A tool's own README describes the problem it sells a solution to."
+    },
+    {
+      "id": "src-pr-slop-filter-readme",
+      "url": "https://raw.githubusercontent.com/Noxlie/pr-slop-filter/main/README.md",
+      "title": "pr-slop-filter (README)",
+      "publisher": "Noxlie/pr-slop-filter (open-source project)",
+      "retrievedAt": "2026-11-03T21:20:00Z",
+      "sourceType": "repository",
+      "excerpt": "The fastest way to detect and block AI-generated pull requests that waste maintainer time.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "limitations": "Marketing copy; its claims about GitHub and curl are unsourced and were not used as evidence."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-ai-burden-01",
+      "claim": "tldraw's maintainer reports a significant increase in contributions generated entirely by AI tools.",
+      "sourceId": "src-tldraw-contributions-policy",
+      "quote": "Like many other open-source projects on GitHub, we've recently seen a significant increase in contributions generated entirely by AI tools.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-02",
+      "claim": "According to tldraw, most AI-generated PRs lack context and codebase understanding, and their authors rarely follow up.",
+      "sourceId": "src-tldraw-contributions-policy",
+      "quote": "most suffer from incomplete or misleading context, misunderstanding of the codebase, and little to no follow-up engagement from their authors",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity",
+        "prob-submission-effort-no-longer-signals-trust"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-03",
+      "claim": "Rust maintainers describe slop contributions as a DDoS on maintenance and moderation capacity.",
+      "sourceId": "src-rust-no-low-effort",
+      "quote": "To put it bluntly, it feels like DDoS against maintenance and moderation capacity.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-04",
+      "claim": "Astropy maintainers report that even obviously bad AI-generated PRs still cost triage time.",
+      "sourceId": "src-astropy-ai-pr-policy",
+      "quote": "even if these are obviously dead on arrival, they still take time to triage",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-05",
+      "claim": "Some AI-generated PRs look legitimate and reveal their flaws only during in-depth review, so triage alone cannot catch them.",
+      "sourceId": "src-astropy-ai-pr-policy",
+      "quote": "Some of them may look legit at first glance, only revealing flaws when one dive into the code/logic during the review process.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity",
+        "prob-submission-effort-no-longer-signals-trust"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-06",
+      "claim": "LLVM's policy states that AI tools shift effort from the implementer to the reviewer.",
+      "sourceId": "src-llvm-ai-tool-policy",
+      "quote": "While new tools enable more development, it shifts effort from the implementor to the reviewer",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-07",
+      "claim": "Linux kernel guidelines treat tool-driven contribution volume as a pressure on scarce reviewer bandwidth.",
+      "sourceId": "src-linux-generated-content",
+      "quote": "These tools can increase the volume of contributions. At the same time, reviewer and maintainer bandwidth is a scarce resource.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-08",
+      "claim": "Ghostty frames low-effort AI contributions as pushing the validation burden onto maintainers.",
+      "sourceId": "src-ghostty-ai-policy",
+      "quote": "It is rude and disrespectful to approach this boundary with low-effort, unqualified work, since it puts the burden of validation on the maintainer.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-09",
+      "claim": "scikit-learn will ban users who submit AI-generated content they don't understand, citing maintainer burden.",
+      "sourceId": "src-sklearn-ai-policy",
+      "quote": "Due to the burden put on maintainers, users submitting multiple low quality pull requests, or AI generated comments, reviews, issues, or pull requests, where the user does not show a good understanding of what they are posting, might be banned from the organisation.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-10",
+      "claim": "Zulip's AI policy is motivated by limited maintainer time.",
+      "sourceId": "src-zulip-ai-policy",
+      "quote": "Maintainer time and attention is very limited",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-11",
+      "claim": "QEMU declines contributions believed to contain AI-generated content.",
+      "sourceId": "src-qemu-code-provenance",
+      "quote": "Current QEMU project policy is to DECLINE any contributions which are believed to include or derive from AI generated content.",
+      "stance": "context",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "QEMU's stated reason is legal and provenance risk, not review volume, so this is context rather than support."
+    },
+    {
+      "id": "ev-ai-burden-12",
+      "claim": "Godot requires autonomous AI agents to self-disclose and bans agents that don't.",
+      "sourceId": "src-godot-contributing",
+      "quote": "Agents failing to self-disclose will be banned from contributing to the project.",
+      "stance": "supports",
+      "epistemic": "inference",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Suggests autonomous agents (not just AI-assisted humans) are submitting to large projects."
+    },
+    {
+      "id": "ev-ai-burden-13",
+      "claim": "tldraw closed external PRs because it considered GitHub's existing contribution-management tools inadequate.",
+      "sourceId": "src-tldraw-contributions-policy",
+      "quote": "This is a temporary policy until GitHub provides better tools for managing contributions.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [
+        "comp-github-pr-access-controls"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-14",
+      "claim": "Ghostty attributes the problem to unqualified contributors, not to AI tools themselves.",
+      "sourceId": "src-ghostty-ai-policy",
+      "quote": "It's the people, not the tools, that are the problem.",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-ai-authorship-pr-detector"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Contradicts framing the problem as 'AI-generated content'. The issue is unreviewed, low-understanding work."
+    },
+    {
+      "id": "ev-ai-burden-15",
+      "claim": "Zulip explicitly permits AI tools, so AI authorship alone isn't treated as the problem.",
+      "sourceId": "src-zulip-ai-policy",
+      "quote": "You can use any tools that help you understand the Zulip codebase and write good code, including AI tools.",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-ai-authorship-pr-detector"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-16",
+      "claim": "curl accepts AI-assisted code, so its concern is quality and verification, not AI use.",
+      "sourceId": "src-curl-contribute-ai",
+      "quote": "We can accept code written with the help of AI into the project",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-ai-authorship-pr-detector"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-17",
+      "claim": "curl reports that fabricated security reports stop real project work.",
+      "sourceId": "src-curl-contribute-ai",
+      "quote": "Fake and otherwise made up security problems effectively prevent us from doing real project work and make us waste time and resources.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-fabricated-ai-security-reports"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-18",
+      "claim": "curl's contributor guide warns that AI tools frequently produce fabricated findings.",
+      "sourceId": "src-curl-contribute-ai",
+      "quote": "AI-based tools frequently generate inaccurate or fabricated results.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-fabricated-ai-security-reports"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-19",
+      "claim": "curl no longer offers a bug bounty, saying bounties incentivise made-up problems that cause overload.",
+      "sourceId": "src-curl-no-bug-bounty",
+      "quote": "A bug bounty gives people too strong incentives to find and make up \"problems\" in bad faith that cause overload and abuse.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-fabricated-ai-security-reports"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-20",
+      "claim": "Before LLMs, simply posting a change for review signalled a potential long-term contributor.",
+      "sourceId": "src-llvm-ai-tool-policy",
+      "quote": "posting a change for review was a sign of interest from a potential long-term contributor",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-submission-effort-no-longer-signals-trust"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-21",
+      "claim": "The Vouch author argues that the effort of submitting a change no longer filters for trustworthy contributors.",
+      "sourceId": "src-vouch-readme",
+      "quote": "Contributors can no longer be trusted based on the minimal barrier to entry to simply submit a change.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-submission-effort-no-longer-signals-trust"
+      ],
+      "ideaIds": [],
+      "competitorIds": [
+        "comp-vouch"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-22",
+      "claim": "Maintainers used to review every change, a practice that AI-generated volume now strains.",
+      "sourceId": "src-llvm-ai-tool-policy",
+      "quote": "Prior to the advent of LLMs, open source project maintainers would often review any and all changes sent to the project",
+      "stance": "context",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-submission-effort-no-longer-signals-trust"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    }
+  ],
+  "problems": [
+    {
+      "id": "prob-ai-low-effort-prs-drain-review-capacity",
+      "title": "Low-effort AI-generated pull requests drain maintainer review capacity",
+      "statement": "Popular open-source projects report a sharp increase in AI-generated pull requests and issues submitted without understanding or follow-up. Reviewing and triaging them consumes scarce maintainer time, and some projects now restrict or close outside contributions entirely.",
+      "themeIds": [
+        "theme-ai-contribution-burden"
+      ],
+      "affectedUsers": "Maintainers and moderators of popular open-source projects (evidenced: tldraw, Rust, Astropy, LLVM, Linux, Ghostty, scikit-learn, Zulip, Godot)",
+      "severityNote": "High. tldraw auto-closes all external PRs, Rust maintainers call it a DDoS on capacity, and several projects threaten bans.",
+      "frequencyNote": "Recurring across at least 9 independent projects' policies and issues dated Nov 2025 – 2026. No quantitative volume data was retrieved.",
+      "status": "investigating",
+      "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
+      "firstSeen": "2026-11-03T21:40:00Z",
+      "lastUpdated": "2026-11-03T21:40:00Z",
+      "provenance": "real"
+    },
+    {
+      "id": "prob-fabricated-ai-security-reports",
+      "title": "Fabricated AI-generated security reports waste triage capacity",
+      "statement": "Security teams receive confident but fabricated vulnerability reports generated with AI tools. Each one must be investigated with priority, which pulls maintainers away from real work. curl no longer runs a bug bounty because of the incentive for made-up reports.",
+      "themeIds": [
+        "theme-ai-contribution-burden"
+      ],
+      "affectedUsers": "Security teams of widely used open-source projects",
+      "severityNote": "High for affected projects (curl removed its bounty), but evidenced by one origin only in this run.",
+      "frequencyNote": "Unknown. Secondary reporting could not be retrieved in this session.",
+      "status": "investigating",
+      "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
+      "firstSeen": "2026-11-03T21:40:00Z",
+      "lastUpdated": "2026-11-03T21:40:00Z",
+      "provenance": "real"
+    },
+    {
+      "id": "prob-submission-effort-no-longer-signals-trust",
+      "title": "Submission effort no longer signals contributor trustworthiness",
+      "statement": "Open source used to treat the effort of submitting a change as a signal of a potential long-term contributor. AI tools make plausible-looking submissions nearly free, so maintainers lose that cheap filter and are moving to explicit trust mechanisms that risk excluding newcomers.",
+      "themeIds": [
+        "theme-ai-contribution-burden"
+      ],
+      "affectedUsers": "Maintainers, and genuine first-time contributors who face new barriers",
+      "severityNote": "Medium. Structural rather than acute.",
+      "frequencyNote": "Articulated by LLVM, Vouch/Ghostty, tldraw and Astropy.",
+      "status": "open",
+      "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
+      "firstSeen": "2026-11-03T21:40:00Z",
+      "lastUpdated": "2026-11-03T21:40:00Z",
+      "provenance": "real"
+    }
+  ],
+  "competitors": [
+    {
+      "id": "comp-github-pr-access-controls",
+      "name": "GitHub pull-request access settings & interaction limits",
+      "kind": "platform-feature",
+      "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-pull-requests",
+      "description": "Native repository controls: disable pull requests, restrict them to collaborators, or apply interaction limits (existing users, prior contributors, collaborators).",
+      "strengths": [
+        "Built in and free",
+        "Immediate effect"
+      ],
+      "weaknesses": [
+        "Coarse: restricting to collaborators or prior contributors also shuts out legitimate newcomers (inference)",
+        "No assessment of contribution quality"
+      ],
+      "sourceIds": [
+        "src-github-docs-disable-prs",
+        "src-github-docs-interaction-limits"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "comp-vouch",
+      "name": "Vouch (mitchellh/vouch)",
+      "kind": "open-source",
+      "url": "https://github.com/mitchellh/vouch",
+      "description": "Explicit trust lists: trusted people vouch for contributors, bad actors can be denounced. GitHub Actions integration. Used by Ghostty.",
+      "strengths": [
+        "Simple flat-file format",
+        "Adopted by a high-profile project",
+        "~5.2k GitHub stars at retrieval"
+      ],
+      "weaknesses": [
+        "Requires a social path to get vouched (cold start for newcomers, inference)",
+        "Public denouncement lists carry governance and abuse risks (inference)",
+        "Self-described as experimental"
+      ],
+      "sourceIds": [
+        "src-vouch-readme",
+        "src-ghostty-ai-policy"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "comp-fossier",
+      "name": "Fossier",
+      "kind": "open-source",
+      "url": "https://github.com/PThorpe92/fossier",
+      "description": "GitHub Action that scores unknown PR authors on 13 account and content signals (account age, follower ratio, PR description quality…) and auto-allows, flags or closes PRs.",
+      "strengths": [
+        "Vouch-compatible",
+        "Automatic, no contributor action needed"
+      ],
+      "weaknesses": [
+        "Account-reputation signals penalise genuine newcomers (inference)",
+        "Heuristics are gameable (inference)",
+        "Small adoption (~41 stars at retrieval)"
+      ],
+      "sourceIds": [
+        "src-fossier-readme"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "comp-ai-pr-detectors",
+      "name": "AI-authorship PR detectors (pr-slop-filter, deslop-kitten, TuringMerge, …)",
+      "kind": "open-source",
+      "url": "https://github.com/Noxlie/pr-slop-filter",
+      "description": "GitHub Actions that try to detect AI-generated PRs from textual and diff 'tells' and block or label them. A GitHub repository search found several such projects, each with fewer than 5 stars.",
+      "strengths": [
+        "Cheap to install"
+      ],
+      "weaknesses": [
+        "Target AI authorship, while several major projects explicitly allow AI-assisted work",
+        "False positives on legitimate AI-assisted contributions (inference)",
+        "Low adoption"
+      ],
+      "sourceIds": [
+        "src-pr-slop-filter-readme"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "comp-written-ai-policies",
+      "name": "Written AI contribution policies + canned responses",
+      "kind": "workaround",
+      "description": "Projects publish AI policies (LLVM, Linux, QEMU, curl, Ghostty, scikit-learn, Zulip, Godot) and close violating PRs with a standard response. LLVM provides a paste-able reply.",
+      "strengths": [
+        "Sets norms and gives maintainers a cheap way to close",
+        "No tooling needed"
+      ],
+      "weaknesses": [
+        "Enforcement still requires a human to read each submission",
+        "Relies on contributors reading the policy"
+      ],
+      "sourceIds": [
+        "src-llvm-ai-tool-policy",
+        "src-linux-generated-content",
+        "src-sklearn-ai-policy",
+        "src-zulip-ai-policy",
+        "src-qemu-code-provenance"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "comp-close-external-prs",
+      "name": "Auto-closing all external pull requests",
+      "kind": "workaround",
+      "description": "tldraw closes PRs from external contributors by default and selectively reopens the ones under consideration.",
+      "strengths": [
+        "Eliminates the review queue"
+      ],
+      "weaknesses": [
+        "Gives up outside contributions entirely; the maintainer calls it temporary and regrettable"
+      ],
+      "sourceIds": [
+        "src-tldraw-contributions-policy"
+      ],
+      "provenance": "real"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "idea-ai-authorship-pr-detector",
+      "title": "AI-authorship detector for incoming pull requests",
+      "summary": "A GitHub Action that estimates whether a PR was AI-generated, then labels or closes it before a maintainer looks at it.",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "themeIds": [
+        "theme-ai-contribution-burden"
+      ],
+      "targetUsers": "Maintainers of popular open-source repositories",
+      "solution": "Classify PR text and diffs with stylometric and LLM-based detectors, then apply labels, auto-close, or route to a low-priority queue.",
+      "competitorIds": [
+        "comp-ai-pr-detectors",
+        "comp-fossier"
+      ],
+      "differentiation": "Little: several detectors already exist, and they target the same signal.",
+      "feasibility": "Easy to build, but AI-text detection is unreliable, and AI-assisted human work is indistinguishable from slop by style alone.",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "AI authorship is a good proxy for low-value contributions",
+          "criticality": "high",
+          "status": "weakened"
+        },
+        {
+          "id": "a2",
+          "text": "Detectors can separate AI from human text with low false-positive rates",
+          "criticality": "high",
+          "status": "untested"
+        }
+      ],
+      "risks": [
+        "Penalises legitimate AI-assisted contributors whom projects explicitly welcome",
+        "Arms race with detector evasion"
+      ],
+      "nextSteps": [],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "Wrong target. Ghostty, curl, Zulip and LLVM all permit AI-assisted work. Their complaint is about unreviewed work from contributors who don't understand it.",
+          "severity": "fatal",
+          "evidenceIds": [
+            "ev-ai-burden-14",
+            "ev-ai-burden-15",
+            "ev-ai-burden-16"
+          ],
+          "status": "accepted"
+        },
+        {
+          "id": "obj-2",
+          "text": "Crowded: multiple open-source detectors already exist, and none has meaningful adoption, which suggests weak pull.",
+          "severity": "major",
+          "evidenceIds": [],
+          "status": "accepted"
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 4,
+            "rationale": "The underlying problem is severe for maintainers (tldraw closed external PRs)."
+          },
+          "frequency": {
+            "score": 4,
+            "rationale": "Reported across many large projects in 2025–2026."
+          },
+          "userValue": {
+            "score": 2,
+            "rationale": "Classifies the wrong attribute, so its value is doubtful."
+          },
+          "competitiveGap": {
+            "score": 1,
+            "rationale": "Several free detectors exist."
+          },
+          "differentiation": {
+            "score": 1,
+            "rationale": "No clear angle."
+          },
+          "feasibility": {
+            "score": 3,
+            "rationale": "Easy to ship, hard to make accurate."
+          },
+          "costComplexity": {
+            "score": 4,
+            "rationale": "Small GitHub Action."
+          },
+          "userAccess": {
+            "score": 4,
+            "rationale": "Maintainers are easy to reach on GitHub."
+          },
+          "validationCost": {
+            "score": 4,
+            "rationale": "Could be validated cheaply on labelled PR data."
+          }
+        },
+        "assessedAt": "2026-11-03T21:40:00Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "rejected",
+      "statusRationale": "Rejected. It targets AI authorship, while the projects studied explicitly accept AI-assisted work and object to unreviewed, low-understanding work. The space is already crowded with low-adoption detectors.",
+      "relatedIdeaIds": [],
+      "epistemic": "hypothesis",
+      "createdInRun": "run-20261103-agent-ai-contribution-burden",
+      "createdAt": "2026-11-03T21:40:00Z",
+      "updatedAt": "2026-11-03T21:40:00Z",
+      "provenance": "real"
+    },
+    {
+      "id": "idea-contributor-comprehension-gate",
+      "title": "Comprehension gate for first-time contributors' PRs",
+      "summary": "Before a PR from an unknown contributor enters the review queue, its author must answer two or three short, diff-specific questions in their own words. Maintainers see the answers and whether the author engaged at all.",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity",
+        "prob-submission-effort-no-longer-signals-trust"
+      ],
+      "themeIds": [
+        "theme-ai-contribution-burden"
+      ],
+      "targetUsers": "Maintainers of popular repositories that receive many PRs from first-time contributors",
+      "solution": "A GitHub App or Action. When a PR from a non-collaborator without prior merged contributions is opened, it is marked 'awaiting author' and a comment asks diff-specific questions (why this change, what it interacts with, how it was tested). The PR enters the maintainer queue only after the author responds. Follow-up engagement is the primary signal, not detection of AI text. It works alongside vouch lists and GitHub's interaction limits.",
+      "competitorIds": [
+        "comp-github-pr-access-controls",
+        "comp-vouch",
+        "comp-fossier",
+        "comp-written-ai-policies",
+        "comp-close-external-prs"
+      ],
+      "differentiation": "It operationalises the requirement that policies already state ('be able to answer questions about their work', 'If you can't explain what your changes do…'). Unlike reputation gates it doesn't exclude newcomers, and unlike detectors it doesn't judge AI use.",
+      "feasibility": "High. GitHub webhooks, PR comments and labels are standard. Question generation can start with templates; diff-specific questions would need an LLM (cost to the operator).",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "Authors of low-effort PRs rarely respond to maintainer questions, while genuine contributors do (follow-up engagement discriminates)",
+          "criticality": "high",
+          "status": "untested"
+        },
+        {
+          "id": "a2",
+          "text": "Maintainers accept a small added delay for newcomers in exchange for a filtered queue",
+          "criticality": "medium",
+          "status": "untested"
+        },
+        {
+          "id": "a3",
+          "text": "Answers pasted from an LLM still reduce the burden, because they arrive before review time is spent",
+          "criticality": "medium",
+          "status": "untested"
+        }
+      ],
+      "risks": [
+        "Authors can paste the questions into an LLM, which weakens the content signal (though not the engagement signal)",
+        "Adds friction for legitimate newcomers",
+        "GitHub may ship a native equivalent"
+      ],
+      "nextSteps": [
+        "Run the retrospective engagement experiment",
+        "If it is supported, build a template-only prototype and test it on VENTURE's own repository first"
+      ],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "An LLM can answer the questions too, so the gate may only add a round-trip for slop authors.",
+          "severity": "major",
+          "evidenceIds": [],
+          "status": "open",
+          "response": "The bet is on engagement (does the author respond at all, and quickly), which tldraw reports is typically missing. This is the assumption the experiment tests."
+        },
+        {
+          "id": "obj-2",
+          "text": "Friction for genuine newcomers conflicts with projects' stated wish to grow contributors.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-ai-burden-20"
+          ],
+          "status": "open",
+          "response": "Questions are short and only apply to authors with no prior merged PRs. Measure newcomer drop-off before adoption."
+        },
+        {
+          "id": "obj-3",
+          "text": "Platform risk: GitHub could add this natively. tldraw explicitly waits for 'better tools' from GitHub.",
+          "severity": "minor",
+          "evidenceIds": [
+            "ev-ai-burden-13"
+          ],
+          "status": "accepted"
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 4,
+            "rationale": "Projects are closing external PRs and describe the load as DDoS-like."
+          },
+          "frequency": {
+            "score": 4,
+            "rationale": "Reported across many large projects in 2025–2026."
+          },
+          "userValue": {
+            "score": 3,
+            "rationale": "Could filter the queue without excluding newcomers. Unproven."
+          },
+          "competitiveGap": {
+            "score": 3,
+            "rationale": "Existing tools gate on reputation or AI style. None found gates on engagement or comprehension, though the search was not exhaustive."
+          },
+          "differentiation": {
+            "score": 3,
+            "rationale": "Aligned with the wording of the policies, but the mechanism is simple to copy."
+          },
+          "feasibility": {
+            "score": 4,
+            "rationale": "Standard GitHub App plumbing."
+          },
+          "costComplexity": {
+            "score": 4,
+            "rationale": "A template-based v1 is small."
+          },
+          "userAccess": {
+            "score": 4,
+            "rationale": "Maintainers who wrote AI policies are visible on GitHub."
+          },
+          "validationCost": {
+            "score": 5,
+            "rationale": "The core assumption can be tested on public GitHub data for $0."
+          }
+        },
+        "assessedAt": "2026-11-03T21:40:00Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "advanced",
+      "statusRationale": "Advanced to a cheap retrospective experiment. It addresses the best-evidenced problem, matches what the policies actually ask for (understanding, not abstinence), and its riskiest assumption can be tested with public data before any building.",
+      "relatedIdeaIds": [],
+      "epistemic": "hypothesis",
+      "createdInRun": "run-20261103-agent-ai-contribution-burden",
+      "createdAt": "2026-11-03T21:40:00Z",
+      "updatedAt": "2026-11-03T21:40:00Z",
+      "provenance": "real"
+    },
+    {
+      "id": "idea-cross-project-contributor-reputation",
+      "title": "Cross-project contributor reputation registry",
+      "summary": "A shared registry where projects publish vouches and denouncements, so trust earned in one project carries over to others.",
+      "problemIds": [
+        "prob-submission-effort-no-longer-signals-trust"
+      ],
+      "themeIds": [
+        "theme-ai-contribution-burden"
+      ],
+      "targetUsers": "Maintainers across many open-source projects",
+      "solution": "Federate vouch-style trust files across projects, with signed attestations and a lookup API used by gating Actions.",
+      "competitorIds": [
+        "comp-vouch",
+        "comp-fossier"
+      ],
+      "differentiation": "Network effects across projects. Vouch already allows lists to be shared, so differentiation is thin.",
+      "feasibility": "Technically simple, socially and legally hard.",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "Projects are willing to trust other projects' vouches",
+          "criticality": "high",
+          "status": "untested"
+        },
+        {
+          "id": "a2",
+          "text": "Public denouncements can be governed without abuse or defamation risk",
+          "criticality": "high",
+          "status": "untested"
+        }
+      ],
+      "risks": [
+        "Public blacklists invite brigading, mistaken identity and legal risk",
+        "Vouch may grow into this itself"
+      ],
+      "nextSteps": [
+        "Revisit if Vouch adoption grows and projects start importing each other's lists"
+      ],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "Governance and abuse risks of a shared public denouncement list outweigh the benefit for a small team to operate.",
+          "severity": "major",
+          "evidenceIds": [],
+          "status": "unresolved"
+        },
+        {
+          "id": "obj-2",
+          "text": "The incumbent (Vouch, ~5k stars, Ghostty) is positioned to add federation itself.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-ai-burden-21"
+          ],
+          "status": "accepted"
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 3,
+            "rationale": "Trust breakdown is real but indirect."
+          },
+          "frequency": {
+            "score": 3,
+            "rationale": "Affects many projects, but few have adopted explicit trust lists yet."
+          },
+          "userValue": {
+            "score": 3,
+            "rationale": "Valuable only at network scale."
+          },
+          "competitiveGap": {
+            "score": 2,
+            "rationale": "Vouch covers much of this."
+          },
+          "differentiation": {
+            "score": 2,
+            "rationale": "Federation is a feature, not a product."
+          },
+          "feasibility": {
+            "score": 4,
+            "rationale": "Simple data plumbing."
+          },
+          "costComplexity": {
+            "score": 2,
+            "rationale": "Ongoing governance and moderation costs."
+          },
+          "userAccess": {
+            "score": 3,
+            "rationale": "Requires many projects to join."
+          },
+          "validationCost": {
+            "score": 2,
+            "rationale": "Hard to test without network adoption."
+          }
+        },
+        "assessedAt": "2026-11-03T21:40:00Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "parked",
+      "statusRationale": "Parked. Plausible, but it depends on network adoption, carries governance and abuse risk, and the incumbent (Vouch) could add federation itself. Revisit if cross-project list sharing emerges.",
+      "relatedIdeaIds": [],
+      "epistemic": "speculation",
+      "createdInRun": "run-20261103-agent-ai-contribution-burden",
+      "createdAt": "2026-11-03T21:40:00Z",
+      "updatedAt": "2026-11-03T21:40:00Z",
+      "provenance": "real"
+    },
+    {
+      "id": "idea-reproduction-first-security-triage",
+      "title": "Reproduction-first triage for AI-assisted security reports",
+      "summary": "Security reports must include a proof of concept that a sandboxed CI job runs against the released code before any human reads the report.",
+      "problemIds": [
+        "prob-fabricated-ai-security-reports"
+      ],
+      "themeIds": [
+        "theme-ai-contribution-burden"
+      ],
+      "targetUsers": "Security teams of widely used open-source projects",
+      "solution": "An intake form and a sandboxed runner execute the submitted PoC against pinned releases and attach the result. Reports that don't reproduce go to a low-priority queue.",
+      "competitorIds": [
+        "comp-written-ai-policies"
+      ],
+      "differentiation": "Shifts verification cost back to the reporter mechanically.",
+      "feasibility": "Possible, but it requires executing untrusted code safely, and many real vulnerabilities (logic bugs, race conditions, memory corruption needing special builds) are hard to demonstrate in a generic sandbox.",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "Most valid reports can include a mechanically runnable PoC",
+          "criticality": "high",
+          "status": "untested"
+        }
+      ],
+      "risks": [
+        "Running attacker-supplied code",
+        "Raises the bar for legitimate reporters",
+        "Bug-bounty platforms may already offer triage services (not researched in this run)"
+      ],
+      "nextSteps": [
+        "Gather more independent evidence on report volumes. Secondary sources were blocked in this session."
+      ],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "Evidence is thin: only one independent origin (curl) was retrievable in this session.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-ai-burden-17",
+            "ev-ai-burden-19"
+          ],
+          "status": "open"
+        },
+        {
+          "id": "obj-2",
+          "text": "Executing untrusted PoCs is itself a security risk, and many genuine findings can't be reproduced generically.",
+          "severity": "major",
+          "evidenceIds": [],
+          "status": "open"
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 4,
+            "rationale": "curl ended its bug bounty and describes fake reports as blocking real work."
+          },
+          "frequency": {
+            "score": 2,
+            "rationale": "Only one origin evidenced in this run."
+          },
+          "userValue": {
+            "score": 3,
+            "rationale": "High if it works, but many reports can't be auto-reproduced."
+          },
+          "competitiveGap": {
+            "score": 3,
+            "rationale": "Platform triage services were not investigated, so this score is uncertain."
+          },
+          "differentiation": {
+            "score": 3,
+            "rationale": "Mechanical reproduction gate."
+          },
+          "feasibility": {
+            "score": 2,
+            "rationale": "Sandboxing and generic reproduction are hard."
+          },
+          "costComplexity": {
+            "score": 2,
+            "rationale": "Secure execution infrastructure is costly."
+          },
+          "userAccess": {
+            "score": 3,
+            "rationale": "Security teams are reachable but cautious."
+          },
+          "validationCost": {
+            "score": 3,
+            "rationale": "Could be tested on historical public advisories."
+          }
+        },
+        "assessedAt": "2026-11-03T21:40:00Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "parked",
+      "statusRationale": "Parked for insufficient evidence. Only curl's own documents were retrievable, so news coverage and platform alternatives are unexamined. Revisit with broader sources.",
+      "relatedIdeaIds": [],
+      "epistemic": "hypothesis",
+      "createdInRun": "run-20261103-agent-ai-contribution-burden",
+      "createdAt": "2026-11-03T21:40:00Z",
+      "updatedAt": "2026-11-03T21:40:00Z",
+      "provenance": "real"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "exp-followup-engagement-retrospective",
+      "ideaId": "idea-contributor-comprehension-gate",
+      "title": "Does author follow-up engagement separate policy-rejected PRs from accepted first-time PRs?",
+      "hypothesis": "Authors of PRs that projects closed as low-effort or AI-policy violations rarely reply to maintainer comments, while first-time contributors whose PRs were merged usually do.",
+      "uncertainty": "Whether follow-up engagement is a discriminating signal (assumption a1). If it isn't, a comprehension gate adds friction without filtering.",
+      "procedure": [
+        "Pick 4–6 public repos with explicit AI or low-effort policies (e.g. llvm/llvm-project, rust-lang/rust, scikit-learn/scikit-learn, astropy/astropy).",
+        "Using the GitHub REST/search API, sample up to 100 closed-unmerged PRs per repo whose closing comment cites the AI or low-effort policy (e.g. LLVM's canned response), plus up to 100 merged PRs from first-time contributors in the same period.",
+        "For each PR, record whether the author replied to a maintainer comment, and the time to first reply.",
+        "Compare reply rates and timing between the two groups. Report effect sizes and confidence intervals, not just p-values."
+      ],
+      "successCriteria": [
+        "Reply rate in the policy-closed group is at most half that of the merged first-time group, in at least 3 of the repos",
+        "The difference holds after excluding PRs with zero maintainer comments"
+      ],
+      "failureCriteria": [
+        "Reply rates differ by less than 15 percentage points overall",
+        "Too few policy-cited closures can be identified (< 30 per repo) to draw conclusions"
+      ],
+      "estimatedTime": "1–2 days of automated analysis",
+      "estimatedCostUsd": 0,
+      "resources": [
+        "GitHub REST API (within free rate limits)",
+        "A labelled list of policy-citing closing comments"
+      ],
+      "expectedLearning": "Whether engagement-based gating is worth prototyping, and how much newcomer friction it would cause (via the reply-time distribution of genuine contributors).",
+      "nextSteps": {
+        "ifSuccess": "Build a template-question prototype and dogfood it on this repository. Only contact other maintainers with owner approval.",
+        "ifFailure": "Mark assumption a1 refuted and reject or park the idea. Look for other discriminating signals."
+      },
+      "executionMode": "automatable",
+      "status": "proposed",
+      "createdInRun": "run-20261103-agent-ai-contribution-burden",
+      "provenance": "real"
+    }
+  ],
+  "decisions": []
+}

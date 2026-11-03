@@ -1,0 +1,319 @@
+[
+  {
+    "id": "ev-ai-burden-01",
+    "claim": "tldraw's maintainer reports a significant increase in contributions generated entirely by AI tools.",
+    "sourceId": "src-tldraw-contributions-policy",
+    "quote": "Like many other open-source projects on GitHub, we've recently seen a significant increase in contributions generated entirely by AI tools.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-02",
+    "claim": "According to tldraw, most AI-generated PRs lack context and codebase understanding, and their authors rarely follow up.",
+    "sourceId": "src-tldraw-contributions-policy",
+    "quote": "most suffer from incomplete or misleading context, misunderstanding of the codebase, and little to no follow-up engagement from their authors",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity",
+      "prob-submission-effort-no-longer-signals-trust"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-03",
+    "claim": "Rust maintainers describe slop contributions as a DDoS on maintenance and moderation capacity.",
+    "sourceId": "src-rust-no-low-effort",
+    "quote": "To put it bluntly, it feels like DDoS against maintenance and moderation capacity.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-04",
+    "claim": "Astropy maintainers report that even obviously bad AI-generated PRs still cost triage time.",
+    "sourceId": "src-astropy-ai-pr-policy",
+    "quote": "even if these are obviously dead on arrival, they still take time to triage",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-05",
+    "claim": "Some AI-generated PRs look legitimate and reveal their flaws only during in-depth review, so triage alone cannot catch them.",
+    "sourceId": "src-astropy-ai-pr-policy",
+    "quote": "Some of them may look legit at first glance, only revealing flaws when one dive into the code/logic during the review process.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity",
+      "prob-submission-effort-no-longer-signals-trust"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-06",
+    "claim": "LLVM's policy states that AI tools shift effort from the implementer to the reviewer.",
+    "sourceId": "src-llvm-ai-tool-policy",
+    "quote": "While new tools enable more development, it shifts effort from the implementor to the reviewer",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-07",
+    "claim": "Linux kernel guidelines treat tool-driven contribution volume as a pressure on scarce reviewer bandwidth.",
+    "sourceId": "src-linux-generated-content",
+    "quote": "These tools can increase the volume of contributions. At the same time, reviewer and maintainer bandwidth is a scarce resource.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-08",
+    "claim": "Ghostty frames low-effort AI contributions as pushing the validation burden onto maintainers.",
+    "sourceId": "src-ghostty-ai-policy",
+    "quote": "It is rude and disrespectful to approach this boundary with low-effort, unqualified work, since it puts the burden of validation on the maintainer.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-09",
+    "claim": "scikit-learn will ban users who submit AI-generated content they don't understand, citing maintainer burden.",
+    "sourceId": "src-sklearn-ai-policy",
+    "quote": "Due to the burden put on maintainers, users submitting multiple low quality pull requests, or AI generated comments, reviews, issues, or pull requests, where the user does not show a good understanding of what they are posting, might be banned from the organisation.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-10",
+    "claim": "Zulip's AI policy is motivated by limited maintainer time.",
+    "sourceId": "src-zulip-ai-policy",
+    "quote": "Maintainer time and attention is very limited",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-11",
+    "claim": "QEMU declines contributions believed to contain AI-generated content.",
+    "sourceId": "src-qemu-code-provenance",
+    "quote": "Current QEMU project policy is to DECLINE any contributions which are believed to include or derive from AI generated content.",
+    "stance": "context",
+    "epistemic": "fact",
+    "context": "QEMU's stated reason is legal and provenance risk, not review volume, so this is context rather than support.",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-12",
+    "claim": "Godot requires autonomous AI agents to self-disclose and bans agents that don't.",
+    "sourceId": "src-godot-contributing",
+    "quote": "Agents failing to self-disclose will be banned from contributing to the project.",
+    "stance": "supports",
+    "epistemic": "inference",
+    "context": "Suggests autonomous agents (not just AI-assisted humans) are submitting to large projects.",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-13",
+    "claim": "tldraw closed external PRs because it considered GitHub's existing contribution-management tools inadequate.",
+    "sourceId": "src-tldraw-contributions-policy",
+    "quote": "This is a temporary policy until GitHub provides better tools for managing contributions.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [
+      "comp-github-pr-access-controls"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-14",
+    "claim": "Ghostty attributes the problem to unqualified contributors, not to AI tools themselves.",
+    "sourceId": "src-ghostty-ai-policy",
+    "quote": "It's the people, not the tools, that are the problem.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "context": "Contradicts framing the problem as 'AI-generated content'. The issue is unreviewed, low-understanding work.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-ai-authorship-pr-detector"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-15",
+    "claim": "Zulip explicitly permits AI tools, so AI authorship alone isn't treated as the problem.",
+    "sourceId": "src-zulip-ai-policy",
+    "quote": "You can use any tools that help you understand the Zulip codebase and write good code, including AI tools.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-ai-authorship-pr-detector"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-16",
+    "claim": "curl accepts AI-assisted code, so its concern is quality and verification, not AI use.",
+    "sourceId": "src-curl-contribute-ai",
+    "quote": "We can accept code written with the help of AI into the project",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-ai-authorship-pr-detector"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-17",
+    "claim": "curl reports that fabricated security reports stop real project work.",
+    "sourceId": "src-curl-contribute-ai",
+    "quote": "Fake and otherwise made up security problems effectively prevent us from doing real project work and make us waste time and resources.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-fabricated-ai-security-reports"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-18",
+    "claim": "curl's contributor guide warns that AI tools frequently produce fabricated findings.",
+    "sourceId": "src-curl-contribute-ai",
+    "quote": "AI-based tools frequently generate inaccurate or fabricated results.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-fabricated-ai-security-reports"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-19",
+    "claim": "curl no longer offers a bug bounty, saying bounties incentivise made-up problems that cause overload.",
+    "sourceId": "src-curl-no-bug-bounty",
+    "quote": "A bug bounty gives people too strong incentives to find and make up \"problems\" in bad faith that cause overload and abuse.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-fabricated-ai-security-reports"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-20",
+    "claim": "Before LLMs, simply posting a change for review signalled a potential long-term contributor.",
+    "sourceId": "src-llvm-ai-tool-policy",
+    "quote": "posting a change for review was a sign of interest from a potential long-term contributor",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-submission-effort-no-longer-signals-trust"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-21",
+    "claim": "The Vouch author argues that the effort of submitting a change no longer filters for trustworthy contributors.",
+    "sourceId": "src-vouch-readme",
+    "quote": "Contributors can no longer be trusted based on the minimal barrier to entry to simply submit a change.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-submission-effort-no-longer-signals-trust"
+    ],
+    "ideaIds": [],
+    "competitorIds": [
+      "comp-vouch"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-22",
+    "claim": "Maintainers used to review every change, a practice that AI-generated volume now strains.",
+    "sourceId": "src-llvm-ai-tool-policy",
+    "quote": "Prior to the advent of LLMs, open source project maintainers would often review any and all changes sent to the project",
+    "stance": "context",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-submission-effort-no-longer-signals-trust"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  }
+]

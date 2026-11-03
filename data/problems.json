@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prob-ai-low-effort-prs-drain-review-capacity",
+    "title": "Low-effort AI-generated pull requests drain maintainer review capacity",
+    "statement": "Popular open-source projects report a sharp increase in AI-generated pull requests and issues submitted without understanding or follow-up. Reviewing and triaging them consumes scarce maintainer time, and some projects now restrict or close outside contributions entirely.",
+    "themeIds": [
+      "theme-ai-contribution-burden"
+    ],
+    "affectedUsers": "Maintainers and moderators of popular open-source projects (evidenced: tldraw, Rust, Astropy, LLVM, Linux, Ghostty, scikit-learn, Zulip, Godot)",
+    "severityNote": "High. tldraw auto-closes all external PRs, Rust maintainers call it a DDoS on capacity, and several projects threaten bans.",
+    "frequencyNote": "Recurring across at least 9 independent projects' policies and issues dated Nov 2025 – 2026. No quantitative volume data was retrieved.",
+    "status": "investigating",
+    "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
+    "firstSeen": "2026-11-03T21:40:00Z",
+    "lastUpdated": "2026-11-03T21:40:00Z",
+    "provenance": "real"
+  },
+  {
+    "id": "prob-fabricated-ai-security-reports",
+    "title": "Fabricated AI-generated security reports waste triage capacity",
+    "statement": "Security teams receive confident but fabricated vulnerability reports generated with AI tools. Each one must be investigated with priority, which pulls maintainers away from real work. curl no longer runs a bug bounty because of the incentive for made-up reports.",
+    "themeIds": [
+      "theme-ai-contribution-burden"
+    ],
+    "affectedUsers": "Security teams of widely used open-source projects",
+    "severityNote": "High for affected projects (curl removed its bounty), but evidenced by one origin only in this run.",
+    "frequencyNote": "Unknown. Secondary reporting could not be retrieved in this session.",
+    "status": "investigating",
+    "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
+    "firstSeen": "2026-11-03T21:40:00Z",
+    "lastUpdated": "2026-11-03T21:40:00Z",
+    "provenance": "real"
+  },
+  {
+    "id": "prob-submission-effort-no-longer-signals-trust",
+    "title": "Submission effort no longer signals contributor trustworthiness",
+    "statement": "Open source used to treat the effort of submitting a change as a signal of a potential long-term contributor. AI tools make plausible-looking submissions nearly free, so maintainers lose that cheap filter and are moving to explicit trust mechanisms that risk excluding newcomers.",
+    "themeIds": [
+      "theme-ai-contribution-burden"
+    ],
+    "affectedUsers": "Maintainers, and genuine first-time contributors who face new barriers",
+    "severityNote": "Medium. Structural rather than acute.",
+    "frequencyNote": "Articulated by LLVM, Vouch/Ghostty, tldraw and Astropy.",
+    "status": "open",
+    "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
+    "firstSeen": "2026-11-03T21:40:00Z",
+    "lastUpdated": "2026-11-03T21:40:00Z",
+    "provenance": "real"
+  }
+]
