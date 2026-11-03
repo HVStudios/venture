@@ -1,0 +1,374 @@
+{
+  "experiment": "exp-publish-anomaly-campaign-replication",
+  "executedAt": "2026-11-03T23:41:51.496Z",
+  "notes": [
+    "1536 candidate report(s) 2024-01-01..2026-11-02 grouped into 121 campaign(s)",
+    "608 registry lookup(s)",
+    "campaign grouping basis among analysed campaigns: identifier 1, named 4, day 17"
+  ],
+  "byMechanism": {
+    "install-hook": 12,
+    "new-dependency": 0,
+    "file-modification": 3,
+    "unknown": 7
+  },
+  "share": 0.8,
+  "shareCi95": [
+    0.5481406466534955,
+    0.9295257935638959
+  ],
+  "fpRate": 0.016548463356973995,
+  "verdict": {
+    "result": "supported",
+    "reason": "80.0% of classifiable campaigns carry a dependency or install-hook signal (≥ 60%)"
+  },
+  "campaigns": [
+    {
+      "key": "day:2025-07-21",
+      "basis": "day",
+      "reports": 6,
+      "representative": "MAL-2025-6021",
+      "pkg": "@pkgr/core",
+      "published": "2025-07-21T06:24:05Z",
+      "mechanism": "unknown",
+      "legitVersions": 20
+    },
+    {
+      "key": "named:s1ngularity",
+      "basis": "named",
+      "reports": 7,
+      "representative": "MAL-2025-41436",
+      "pkg": "@nx/devkit",
+      "published": "2025-08-27T16:42:47Z",
+      "mechanism": "install-hook",
+      "matched": "postinstall",
+      "legitVersions": 1966
+    },
+    {
+      "key": "day:2025-09-08",
+      "basis": "day",
+      "reports": 19,
+      "representative": "MAL-2025-46974",
+      "pkg": "debug",
+      "published": "2025-09-08T14:26:51Z",
+      "mechanism": "unknown",
+      "legitVersions": 77
+    },
+    {
+      "key": "day:2025-09-09",
+      "basis": "day",
+      "reports": 5,
+      "representative": "MAL-2025-46991",
+      "pkg": "@duckdb/duckdb-wasm",
+      "published": "2025-09-09T10:30:00Z",
+      "mechanism": "unknown",
+      "legitVersions": 451
+    },
+    {
+      "key": "day:2025-09-11",
+      "basis": "day",
+      "reports": 3,
+      "representative": "MAL-2025-47025",
+      "pkg": "@coveops/abi",
+      "published": "2025-09-11T03:58:52Z",
+      "mechanism": "unknown",
+      "legitVersions": 36
+    },
+    {
+      "key": "id:miasma-train-p1",
+      "basis": "identifier",
+      "reports": 4,
+      "representative": "MAL-2025-190643",
+      "pkg": "@asyncapi/specs",
+      "published": "2025-11-24T11:33:26Z",
+      "mechanism": "file-modification",
+      "matched": "prepended",
+      "legitVersions": 125
+    },
+    {
+      "key": "day:2026-02-19",
+      "basis": "day",
+      "reports": 1,
+      "representative": "MAL-2026-1380",
+      "pkg": "cline",
+      "published": "2026-02-19T15:17:10Z",
+      "mechanism": "install-hook",
+      "matched": "postinstall",
+      "legitVersions": 400
+    },
+    {
+      "key": "day:2026-04-29",
+      "basis": "day",
+      "reports": 11,
+      "representative": "MAL-2026-3176",
+      "pkg": "@cap-js/db-service",
+      "published": "2026-04-29T10:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 71
+    },
+    {
+      "key": "named:ironworm",
+      "basis": "named",
+      "reports": 46,
+      "representative": "MAL-2026-4725",
+      "pkg": "weavedb-sdk-node",
+      "published": "2026-05-26T00:59:03Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 233
+    },
+    {
+      "key": "day:2026-05-12",
+      "basis": "day",
+      "reports": 5,
+      "representative": "MAL-2026-3670",
+      "pkg": "11j",
+      "published": "2026-05-12T07:42:26Z",
+      "mechanism": "unknown",
+      "legitVersions": 27
+    },
+    {
+      "key": "day:2026-05-14",
+      "basis": "day",
+      "reports": 6,
+      "representative": "MAL-2026-3744",
+      "pkg": "node-ipc",
+      "published": "2026-05-14T16:53:17Z",
+      "mechanism": "file-modification",
+      "matched": "appended",
+      "legitVersions": 76
+    },
+    {
+      "key": "named:shai hulud",
+      "basis": "named",
+      "reports": 794,
+      "representative": "MAL-2026-3837",
+      "pkg": "@antv/g-image-exporter",
+      "published": "2026-05-19T00:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 156
+    },
+    {
+      "key": "day:2026-05-21",
+      "basis": "day",
+      "reports": 23,
+      "representative": "MAL-2026-4228",
+      "pkg": "@tiledesk/tiledesk-server",
+      "published": "2026-05-21T08:00:00Z",
+      "mechanism": "unknown",
+      "legitVersions": 727
+    },
+    {
+      "key": "day:2026-05-22",
+      "basis": "day",
+      "reports": 4,
+      "representative": "MAL-2026-4497",
+      "pkg": "bingocode",
+      "published": "2026-05-22T06:25:45Z",
+      "mechanism": "install-hook",
+      "matched": "postinstall",
+      "legitVersions": 196
+    },
+    {
+      "key": "day:2026-05-24",
+      "basis": "day",
+      "reports": 4,
+      "representative": "MAL-2026-4567",
+      "pkg": "freertc",
+      "published": "2026-05-24T02:10:29Z",
+      "mechanism": "install-hook",
+      "matched": "postinstall",
+      "legitVersions": 20
+    },
+    {
+      "key": "named:miasma",
+      "basis": "named",
+      "reports": 23,
+      "representative": "MAL-2026-5221",
+      "pkg": "autotel-eventcatalog",
+      "published": "2026-06-05T00:53:43Z",
+      "mechanism": "install-hook",
+      "matched": "lifecycle script",
+      "legitVersions": 39
+    },
+    {
+      "key": "day:2026-07-11",
+      "basis": "day",
+      "reports": 2,
+      "representative": "MAL-2026-10187",
+      "pkg": "jscrambler",
+      "published": "2026-07-11T00:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 222
+    },
+    {
+      "key": "day:2026-07-13",
+      "basis": "day",
+      "reports": 9,
+      "representative": "MAL-2026-10438",
+      "pkg": "netspeedutil",
+      "published": "2026-07-13T09:22:42Z",
+      "mechanism": "file-modification",
+      "matched": "prepending",
+      "legitVersions": 12
+    },
+    {
+      "key": "day:2026-08-04",
+      "basis": "day",
+      "reports": 4,
+      "representative": "MAL-2026-12007",
+      "pkg": "@keyv/bigmap",
+      "published": "2026-08-04T13:01:08Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 15
+    },
+    {
+      "key": "day:2026-08-05",
+      "basis": "day",
+      "reports": 12,
+      "representative": "MAL-2026-13363",
+      "pkg": "@cliphijack/santaclaude",
+      "published": "2026-08-05T18:17:50Z",
+      "mechanism": "unknown",
+      "legitVersions": 133
+    },
+    {
+      "key": "day:2026-10-09",
+      "basis": "day",
+      "reports": 2,
+      "representative": "MAL-2026-17710",
+      "pkg": "pxnpm",
+      "published": "2026-10-09T13:32:13Z",
+      "mechanism": "install-hook",
+      "matched": "postinstall",
+      "legitVersions": 165
+    },
+    {
+      "key": "day:2026-10-26",
+      "basis": "day",
+      "reports": 1,
+      "representative": "MAL-2026-17924",
+      "pkg": "@apexacc/cli",
+      "published": "2026-10-26T05:25:19Z",
+      "mechanism": "install-hook",
+      "matched": "install script",
+      "legitVersions": 118
+    }
+  ],
+  "falsePositiveBaseline": [
+    {
+      "pkg": "@pkgr/core",
+      "pairs": 19,
+      "either": 0
+    },
+    {
+      "pkg": "@nx/devkit",
+      "pairs": 20,
+      "either": 0
+    },
+    {
+      "pkg": "debug",
+      "pairs": 20,
+      "either": 0
+    },
+    {
+      "pkg": "@duckdb/duckdb-wasm",
+      "pairs": 20,
+      "either": 0
+    },
+    {
+      "pkg": "@coveops/abi",
+      "pairs": 20,
+      "either": 0
+    },
+    {
+      "pkg": "@asyncapi/specs",
+      "pairs": 20,
+      "either": 0
+    },
+    {
+      "pkg": "cline",
+      "pairs": 20,
+      "either": 0
+    },
+    {
+      "pkg": "@cap-js/db-service",
+      "pairs": 20,
+      "either": 3
+    },
+    {
+      "pkg": "weavedb-sdk-node",
+      "pairs": 20,
+      "either": 0
+    },
+    {
+      "pkg": "11j",
+      "pairs": 20,
+      "either": 0
+    },
+    {
+      "pkg": "node-ipc",
+      "pairs": 20,
+      "either": 2
+    },
+    {
+      "pkg": "@antv/g-image-exporter",
+      "pairs": 20,
+      "either": 0
+    },
+    {
+      "pkg": "@tiledesk/tiledesk-server",
+      "pairs": 20,
+      "either": 0
+    },
+    {
+      "pkg": "bingocode",
+      "pairs": 20,
+      "either": 0
+    },
+    {
+      "pkg": "freertc",
+      "pairs": 19,
+      "either": 0
+    },
+    {
+      "pkg": "autotel-eventcatalog",
+      "pairs": 20,
+      "either": 0
+    },
+    {
+      "pkg": "jscrambler",
+      "pairs": 20,
+      "either": 0
+    },
+    {
+      "pkg": "netspeedutil",
+      "pairs": 11,
+      "either": 0
+    },
+    {
+      "pkg": "@keyv/bigmap",
+      "pairs": 14,
+      "either": 1
+    },
+    {
+      "pkg": "@cliphijack/santaclaude",
+      "pairs": 20,
+      "either": 0
+    },
+    {
+      "pkg": "pxnpm",
+      "pairs": 20,
+      "either": 1
+    },
+    {
+      "pkg": "@apexacc/cli",
+      "pairs": 20,
+      "either": 0
+    }
+  ]
+}
