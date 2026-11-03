@@ -466,7 +466,7 @@
         "id": "a1",
         "text": "Malicious releases from compromised accounts differ structurally (new deps, new hooks, different publisher) from the maintainer's normal releases",
         "criticality": "high",
-        "status": "untested"
+        "status": "supported"
       },
       {
         "id": "a2",
@@ -559,12 +559,12 @@
       "assessedBy": "critic (claude-code-session)"
     },
     "status": "advanced",
-    "statusRationale": "Stays advanced on weak but positive evidence. One large worm campaign would have been caught by an install-hook diff at a 1.3% false-positive rate, but the sample held about 5 independent attacks, and a known file-modification attack (asyncapi) would slip through. Next: a campaign-level replication.",
+    "statusRationale": "Stays advanced. The campaign-level replication supports the core assumption: most independent hijack campaigns add an install-time hook that legitimate releases rarely add. It also confirms a blind spot, since about one in five classifiable campaigns only modified existing files. Before building anything, check whether vendors or registries already offer maintainer-side alerts.",
     "relatedIdeaIds": [],
     "epistemic": "hypothesis",
     "createdInRun": "run-20261103-agent-supply-chain-1",
     "createdAt": "2026-11-03T22:45:20Z",
-    "updatedAt": "2026-11-03T23:03:23.085Z",
+    "updatedAt": "2026-11-03T23:42:46.144Z",
     "provenance": "real"
   },
   {

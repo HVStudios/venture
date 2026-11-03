@@ -771,5 +771,47 @@
     ],
     "competitorIds": [],
     "provenance": "real"
+  },
+  {
+    "id": "ev-sc-19",
+    "claim": "Across independent hijack campaigns (2024–2026), 12 of 15 classifiable campaigns (80%) added an install-time hook, versus 1.7% of legitimate releases.",
+    "sourceId": "src-exp-publish-campaigns-result",
+    "quote": "Campaigns with a new-dependency or install-hook signal: 12 of 15 classifiable (80.0%, 95% CI 54.8%–93.0%).",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-20",
+    "claim": "3 of 15 classifiable campaigns only modified existing files and would evade a new-dependency or install-hook alarm.",
+    "sourceId": "src-exp-publish-campaigns-analysis",
+    "quote": "The 3 file-modification campaigns (asyncapi, node-ipc, netspeedutil) injected code into existing files and would not trigger a new-dependency or install-hook alarm.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-21",
+    "claim": "The result is sensitive to the 7 campaigns of unknown mechanism: the share could be anywhere from 55% to 86%.",
+    "sourceId": "src-exp-publish-campaigns-analysis",
+    "quote": "If all 7 unknown campaigns were non-signal cases, the share would be 12 of 22 (55%), below the 60% success threshold. If all were signal cases, it would be 19 of 22 (86%).",
+    "stance": "context",
+    "epistemic": "inference",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
   }
 ]

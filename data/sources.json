@@ -288,6 +288,38 @@
     "provenance": "real"
   },
   {
+    "id": "src-exp-publish-campaigns-analysis",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-publish-anomaly-campaign-replication/ANALYSIS.md",
+    "title": "VENTURE experiment: sensitivity of the campaign-level result (not pre-registered)",
+    "publisher": "VENTURE (own experiment)",
+    "publishedAt": "2026-11-03",
+    "retrievedAt": "2026-11-03T23:42:43Z",
+    "sourceType": "dataset",
+    "originId": "origin-venture-exp-publish-campaigns",
+    "excerpt": "If all 7 unknown campaigns were non-signal cases, the share would be 12 of 22 (55%), below the 60% success threshold. If all were signal cases, it would be 19 of 22 (86%). … The 3 file-modification campaigns (asyncapi, node-ipc, netspeedutil) injected code into existing files and would not trigger a new-dependency or install-hook alarm. … Interpretation: across independent attackers, most hijacks that can be characterised add an install-time hook, so a structural alarm would catch the majority. But at least one in five classifiable campaigns would slip through, and the result is sensitive to the campaigns whose mechanism is unknown.",
+    "limitations": "Exploratory, computed after the verdict.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-exp-publish-campaigns-result",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-publish-anomaly-campaign-replication/RESULT.md",
+    "title": "VENTURE experiment result: campaign-level publish-anomaly replication (pre-registered)",
+    "publisher": "VENTURE (own experiment, GitHub Actions run 41740429673)",
+    "publishedAt": "2026-11-03",
+    "retrievedAt": "2026-11-03T23:42:43Z",
+    "sourceType": "dataset",
+    "originId": "origin-venture-exp-publish-campaigns",
+    "excerpt": "Campaigns with a new-dependency or install-hook signal: 12 of 15 classifiable (80.0%, 95% CI 54.8%–93.0%). … Legitimate consecutive releases of the representative packages that add a dependency or install script: 7 of 423 (1.7%). … Verdict (pre-registered rule): supported: 80.0% of classifiable campaigns carry a dependency or install-hook signal (≥ 60%).",
+    "limitations": "Own experiment. Campaigns are grouped heuristically, and mechanisms are classified from report text. npm only.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-fossier-readme",
     "url": "https://raw.githubusercontent.com/PThorpe92/fossier/main/README.md",
     "title": "Fossier: GitHub spam prevention for open source repositories (README)",

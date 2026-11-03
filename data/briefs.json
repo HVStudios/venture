@@ -160,9 +160,11 @@
       },
       {
         "id": "f3",
-        "statement": "In the 60 most recent hijacks of legitimate npm packages in the OpenSSF malicious-packages dataset, every classifiable case added an install script. Only 1.3% of the same packages' legitimate releases did so. However, 56 of the 60 cases came from a single worm campaign.",
-        "strength": "Weak in general, though strong for that campaign. It rests on about 5 independent attacks, and mechanisms were classified from report text.",
+        "statement": "Most hijacks of legitimate npm packages add an install-time hook (a script that runs on install), something legitimate releases almost never do. Across 15 independent attack campaigns (2024–2026) whose mechanism could be determined, 12 (80%) added such a hook, versus 1.7% of legitimate releases of the same packages.",
+        "strength": "Moderate. A pre-registered replication at campaign level supports an earlier package-level result. But it rests on the minimum sample of 15 campaigns, and 7 more campaigns had no described mechanism (the share could be anywhere from 55% to 86%).",
         "evidenceIds": [
+          "ev-sc-19",
+          "ev-sc-21",
           "ev-sc-16",
           "ev-sc-17"
         ],
@@ -170,13 +172,14 @@
       },
       {
         "id": "f4",
-        "statement": "Not every hijack would trip such an alarm. The asyncapi attack went through the project's normal release pipeline and only modified an existing file.",
-        "strength": "Known counter-example, single case.",
+        "statement": "About one in five characterisable campaigns would slip past such an alarm: asyncapi, node-ipc and netspeedutil injected code into existing files without adding hooks or dependencies.",
+        "strength": "Moderate. 3 of 15 classifiable campaigns, consistent with the earlier asyncapi counter-example.",
         "evidenceIds": [
+          "ev-sc-20",
           "ev-sc-06",
           "ev-sc-18"
         ],
-        "epistemic": "inference"
+        "epistemic": "fact"
       },
       {
         "id": "f5",
@@ -191,33 +194,33 @@
     "uncertainties": [
       "Commercial scanners (e.g. Socket, StepSecurity) were not examined. They may already offer maintainer-side alerts.",
       "Whether npm or PyPI already notify maintainers of every new publish wasn't checked.",
+      "Campaign grouping is heuristic, and 7 of 22 campaigns had no described mechanism.",
       "The incident sample favours large, well-publicised attacks."
     ],
     "conclusion": {
-      "belief": "Account and token compromise of popular packages is a severe and recurring problem. Consumer-side release delays are being solved by the platforms themselves, so a standalone tool isn't worthwhile. A maintainer-side alarm that flags unusual structural changes in a new release is promising for worm-style attacks, but VENTURE hasn't shown that it generalises across attackers, or that it isn't already offered.",
-      "confidence": "low",
-      "confidenceReason": "The supporting experiment rests on roughly five independent campaigns, one counter-example is known, and the competitive landscape is unexamined.",
+      "belief": "Account and token compromise of popular packages is a severe and recurring problem. Consumer-side release delays are being solved by the platforms, so a standalone tool isn't worthwhile. A maintainer-side alarm that flags new install-time hooks in a release would have caught most independent hijack campaigns at a low false-positive rate, but it would miss attacks that only modify existing code. Whether such alarms already exist commercially is the main open question before building anything.",
+      "confidence": "medium",
+      "confidenceReason": "Two pre-registered experiments agree, the second counting independent campaigns, so the core technical assumption now has moderate support. Confidence isn't high because the sample is at the minimum size, a third of campaigns couldn't be classified, and the competitive landscape is unexamined.",
       "unknowns": [
-        "Whether structural signals hold across independent campaigns",
-        "Whether existing vendors or registries already alert maintainers",
-        "How quickly maintainers could act on an alert"
+        "Whether vendors or registries already alert maintainers to unusual releases",
+        "How quickly maintainers would act on an alert",
+        "How to catch attacks that only modify existing files"
       ],
       "continueInvestigation": true,
-      "continueReason": "A cheap, pre-registered replication can settle the main uncertainty at no cost."
+      "continueReason": "The technical premise holds up. The next question, whether the gap is already filled, is cheap to answer with desk research."
     },
     "nextSteps": [
       {
-        "text": "Run the campaign-level replication: count one representative per attack campaign (2024–2026) instead of one per package.",
-        "kind": "experiment",
-        "experimentId": "exp-publish-anomaly-campaign-replication",
-        "issue": 27
+        "text": "Survey whether security vendors (e.g. Socket, StepSecurity) or the npm and PyPI registries already alert maintainers to unusual new releases of their own packages.",
+        "kind": "research"
       },
       {
-        "text": "Survey whether security vendors or the registries already send maintainers alerts about unusual new releases.",
-        "kind": "research"
+        "text": "If the gap is real, design a cheap test of whether maintainers want such alerts. This needs owner authorization, because it involves contacting people.",
+        "kind": "owner-action"
       }
     ],
-    "updatedAt": "2026-11-03T23:25:20Z",
+    "updatedAt": "2026-11-03T23:43:03Z",
+    "updatedInRun": "run-20261103-exp-publish-anomaly-campaigns",
     "author": "research director (Claude Code session)",
     "provenance": "real"
   }

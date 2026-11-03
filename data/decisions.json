@@ -164,6 +164,20 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261103-maintainer-publish-anomaly-alarm-2",
+    "at": "2026-11-03T23:42:46.144Z",
+    "subjectType": "idea",
+    "subjectId": "idea-maintainer-publish-anomaly-alarm",
+    "action": "advance",
+    "fromStatus": "advanced",
+    "toStatus": "advanced",
+    "rationale": "Stays advanced. The campaign-level replication supports the core assumption: most independent hijack campaigns add an install-time hook that legitimate releases rarely add. It also confirms a blind spot, since about one in five classifiable campaigns only modified existing files. Before building anything, check whether vendors or registries already offer maintainer-side alerts.",
+    "actor": "director",
+    "attractiveness": 71,
+    "evidenceStrength": 45,
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261103-preregister-followup-engagement",
     "at": "2026-11-03T21:35:30Z",
     "subjectType": "experiment",
@@ -185,6 +199,18 @@
     "toStatus": "approved",
     "rationale": "Approved under the standing rule for automatable experiments. Grouping sanity-checked on campaign counts only (no mechanism classification) before the run: generic phrases were removed from campaign naming.",
     "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-publish-anomaly-campaign-replication-2",
+    "at": "2026-11-03T23:42:45.472Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-publish-anomaly-campaign-replication",
+    "action": "complete",
+    "fromStatus": "approved",
+    "toStatus": "supported",
+    "rationale": "Pre-registered verdict: supported. 12 of 15 classifiable independent campaigns (80%, 95% CI 55–93%) added an install-time hook, versus 1.7% of 423 legitimate releases. Caveats: exactly the minimum of 15 classifiable campaigns; 7 campaigns of unknown mechanism (the share could range from 55% to 86%); 3 file-modification campaigns would evade the alarm.",
+    "actor": "experiment designer",
     "provenance": "real"
   },
   {

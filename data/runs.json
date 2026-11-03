@@ -627,5 +627,60 @@
       "max": 60
     },
     "provenance": "real"
+  },
+  {
+    "id": "run-20261103-exp-publish-anomaly-campaigns",
+    "themeId": "theme-oss-supply-chain-small-maintainers",
+    "mode": "agent-session",
+    "provider": "claude-code-session + github-actions experiment runner",
+    "startedAt": "2026-11-03T23:32:00Z",
+    "completedAt": "2026-11-03T23:43:03Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Executed in Actions run 41740429673: 1,536 reports, 121 campaigns, 22 with a hijacked legitimate package"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "Sensitivity analysis: the share ranges from 55% to 86% depending on the 7 unknown campaigns"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "Publish-anomaly alarm stays advanced; next is a competitive survey"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Research brief updated"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 2,
+      "sourcesCited": 2,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "see research/experiments/exp-publish-anomaly-campaign-replication/result.json"
+    ],
+    "errors": [],
+    "limitations": [
+      "Campaign grouping is heuristic. All Shai-Hulud waves were merged into one group, which undercounts independent attacks.",
+      "Exactly 15 classifiable campaigns: the minimum the design required.",
+      "Before the run, the grouping was sanity-checked on campaign counts only (no mechanism classification). A generic naming rule was removed at that point."
+    ],
+    "usage": {
+      "note": "GitHub Actions (free for public repos). No model calls, no cost."
+    },
+    "limits": {},
+    "provenance": "real"
   }
 ]
