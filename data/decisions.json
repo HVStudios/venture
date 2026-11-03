@@ -56,6 +56,34 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261103-contributor-comprehension-gate",
+    "at": "2026-11-03T21:44:32.255Z",
+    "subjectType": "idea",
+    "subjectId": "idea-contributor-comprehension-gate",
+    "action": "park",
+    "fromStatus": "advanced",
+    "toStatus": "parked",
+    "rationale": "Parked after a real experiment: follow-up engagement alone separates policy-closed from accepted newcomer PRs only weakly (80.9% vs 90.2% within LLVM), so a reply-required gate would let most low-effort PRs through. Revisit if a cheap way to assess answer content emerges, or if silent closures (33/120) suggest a different intervention.",
+    "actor": "director",
+    "attractiveness": 68,
+    "evidenceStrength": 79,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-cross-project-contributor-reputation",
+    "at": "2026-11-03T21:44:43.258Z",
+    "subjectType": "idea",
+    "subjectId": "idea-cross-project-contributor-reputation",
+    "action": "park",
+    "fromStatus": "parked",
+    "toStatus": "parked",
+    "rationale": "Reconsidered after new evidence on the trust-signal problem (newcomer share declines 3.7 points after agent adoption). The problem looks more real, but the main objections (governance and abuse risk of shared denouncement lists, incumbent Vouch) are unaffected. Stays parked.",
+    "actor": "director",
+    "attractiveness": 44,
+    "evidenceStrength": 66,
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261103-followup-engagement-retrospective",
     "at": "2026-11-03T21:35:36.802Z",
     "subjectType": "experiment",
@@ -65,6 +93,18 @@
     "toStatus": "approved",
     "rationale": "Approved under the lab's standing rule: automatable experiments on public data with no external contact or cost need no owner approval.",
     "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-followup-engagement-retrospective-2",
+    "at": "2026-11-03T21:44:31.614Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-followup-engagement-retrospective",
+    "action": "complete",
+    "fromStatus": "approved",
+    "toStatus": "inconclusive",
+    "rationale": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49–69%) versus 90.2% for merged LLVM newcomers (83/92, CI 82–95%): a clear gap, but short of the ≤ 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
+    "actor": "experiment designer",
     "provenance": "real"
   },
   {

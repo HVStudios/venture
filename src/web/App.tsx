@@ -22,7 +22,7 @@ const NAV = [
   ["/experiments", "Experiments"],
   ["/sources", "Evidence"],
   ["/graph", "Map"],
-  ["/history", "Runs & history"],
+  ["/history", "Runs"],
   ["/themes", "Themes"],
   ["/method", "Method"],
 ] as const;

@@ -227,5 +227,63 @@
     },
     "limits": {},
     "provenance": "real"
+  },
+  {
+    "id": "run-20261103-exp-followup-engagement",
+    "themeId": "theme-ai-contribution-burden",
+    "mode": "agent-session",
+    "provider": "claude-code-session + github-actions experiment runner",
+    "startedAt": "2026-11-03T21:39:35Z",
+    "completedAt": "2026-11-03T21:55:00Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Executed exp-followup-engagement-retrospective in Actions: 241 PRs sampled, 180 with human comments"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "Pre-registered verdict plus an exploratory within-LLVM breakdown"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "Comprehension gate parked; assumption a1 weakened"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 2,
+      "sourcesCited": 2,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 1,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "see research/experiments/exp-followup-engagement-retrospective/result.json → queries"
+    ],
+    "errors": [
+      "The newcomer-closed (descriptive) query returned only 1 PR. GitHub search apparently did not apply the negated phrase as intended, so that group is unusable."
+    ],
+    "limitations": [
+      "Group labels are inferred from text matches (e.g. a comment linking AIToolPolicy) and not hand-validated.",
+      "Control group is LLVM-only. Cross-repository comparisons are confounded.",
+      "Replies were not analysed for content: a reply may itself be AI-generated or argumentative."
+    ],
+    "usage": {
+      "note": "GitHub Actions run 41723793126 (free tier for public repos) using GITHUB_TOKEN. No model calls inside the experiment, no cost."
+    },
+    "limits": {
+      "perGroup": 120
+    },
+    "provenance": "real"
   }
 ]

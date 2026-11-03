@@ -462,5 +462,49 @@
     "ideaIds": [],
     "competitorIds": [],
     "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-33",
+    "claim": "Authors of PRs closed under AI or low-effort policies replied to human comments in 59.8% of cases, versus 90.2% for merged LLVM newcomer PRs. The pre-registered verdict is inconclusive.",
+    "sourceId": "src-exp-followup-result",
+    "quote": "policy-closed: 52 of 87 PRs with a human comment got an author reply (reply rate 59.8%, 95% CI 49.3%–69.4%",
+    "stance": "context",
+    "epistemic": "fact",
+    "context": "Short of the pre-registered success threshold (≤ 45.1%), and the difference also exceeds the failure margin.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-contributor-comprehension-gate"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-34",
+    "claim": "Within LLVM, policy-closed PR authors reply nearly as often as merged newcomers (80.9% vs 90.2%), so engagement alone is a weak filter.",
+    "sourceId": "src-exp-followup-analysis",
+    "quote": "Within LLVM only (same repository as the control): policy-closed PRs got an author reply in 38 of 47 cases (80.9%), versus 83 of 92 (90.2%) for merged LLVM newcomer PRs.",
+    "stance": "contradicts",
+    "epistemic": "inference",
+    "limitations": "Exploratory, not pre-registered. n=47 vs 92.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-contributor-comprehension-gate"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-35",
+    "claim": "Over a quarter of policy-closed PRs (33 of 120) were closed without any human comment, suggesting maintainers often close these silently.",
+    "sourceId": "src-exp-followup-analysis",
+    "quote": "33 of 120 policy-closed PRs received no human comment at all before closing.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
   }
 ]
