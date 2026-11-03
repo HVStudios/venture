@@ -76,7 +76,17 @@
       "ifFailure": "Narrow the idea to worm/install-hook detection or park it."
     },
     "executionMode": "automatable",
-    "status": "approved",
+    "status": "completed",
+    "outcome": {
+      "recordedAt": "2026-11-03T23:42:45.472Z",
+      "result": "supported",
+      "summary": "Pre-registered verdict: supported. 12 of 15 classifiable independent campaigns (80%, 95% CI 55–93%) added an install-time hook, versus 1.7% of 423 legitimate releases. Caveats: exactly the minimum of 15 classifiable campaigns; 7 campaigns of unknown mechanism (the share could range from 55% to 86%); 3 file-modification campaigns would evade the alarm.",
+      "evidenceIds": [
+        "ev-sc-19",
+        "ev-sc-20",
+        "ev-sc-21"
+      ]
+    },
     "createdInRun": "run-20261103-exp-publish-anomaly",
     "provenance": "real"
   },

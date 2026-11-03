@@ -1,0 +1,246 @@
+{
+  "run": {
+    "id": "run-20261103-exp-publish-anomaly-campaigns",
+    "themeId": "theme-oss-supply-chain-small-maintainers",
+    "mode": "agent-session",
+    "provider": "claude-code-session + github-actions experiment runner",
+    "startedAt": "2026-11-03T23:32:00Z",
+    "completedAt": "2026-11-03T23:43:03Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Executed in Actions run 41740429673: 1,536 reports, 121 campaigns, 22 with a hijacked legitimate package"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "Sensitivity analysis: the share ranges from 55% to 86% depending on the 7 unknown campaigns"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "Publish-anomaly alarm stays advanced; next is a competitive survey"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Research brief updated"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 2,
+      "sourcesCited": 2,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "see research/experiments/exp-publish-anomaly-campaign-replication/result.json"
+    ],
+    "errors": [],
+    "limitations": [
+      "Campaign grouping is heuristic. All Shai-Hulud waves were merged into one group, which undercounts independent attacks.",
+      "Exactly 15 classifiable campaigns: the minimum the design required.",
+      "Before the run, the grouping was sanity-checked on campaign counts only (no mechanism classification). A generic naming rule was removed at that point."
+    ],
+    "usage": {
+      "note": "GitHub Actions (free for public repos). No model calls, no cost."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [],
+  "sources": [
+    {
+      "id": "src-exp-publish-campaigns-result",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-publish-anomaly-campaign-replication/RESULT.md",
+      "title": "VENTURE experiment result: campaign-level publish-anomaly replication (pre-registered)",
+      "publisher": "VENTURE (own experiment, GitHub Actions run 41740429673)",
+      "retrievedAt": "2026-11-03T23:42:43Z",
+      "publishedAt": "2026-11-03",
+      "sourceType": "dataset",
+      "originId": "origin-venture-exp-publish-campaigns",
+      "excerpt": "Campaigns with a new-dependency or install-hook signal: 12 of 15 classifiable (80.0%, 95% CI 54.8%–93.0%). … Legitimate consecutive releases of the representative packages that add a dependency or install script: 7 of 423 (1.7%). … Verdict (pre-registered rule): supported: 80.0% of classifiable campaigns carry a dependency or install-hook signal (≥ 60%).",
+      "limitations": "Own experiment. Campaigns are grouped heuristically, and mechanisms are classified from report text. npm only.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-exp-publish-campaigns-analysis",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-publish-anomaly-campaign-replication/ANALYSIS.md",
+      "title": "VENTURE experiment: sensitivity of the campaign-level result (not pre-registered)",
+      "publisher": "VENTURE (own experiment)",
+      "retrievedAt": "2026-11-03T23:42:43Z",
+      "publishedAt": "2026-11-03",
+      "sourceType": "dataset",
+      "originId": "origin-venture-exp-publish-campaigns",
+      "excerpt": "If all 7 unknown campaigns were non-signal cases, the share would be 12 of 22 (55%), below the 60% success threshold. If all were signal cases, it would be 19 of 22 (86%). … The 3 file-modification campaigns (asyncapi, node-ipc, netspeedutil) injected code into existing files and would not trigger a new-dependency or install-hook alarm. … Interpretation: across independent attackers, most hijacks that can be characterised add an install-time hook, so a structural alarm would catch the majority. But at least one in five classifiable campaigns would slip through, and the result is sensitive to the campaigns whose mechanism is unknown.",
+      "limitations": "Exploratory, computed after the verdict.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-sc-19",
+      "claim": "Across independent hijack campaigns (2024–2026), 12 of 15 classifiable campaigns (80%) added an install-time hook, versus 1.7% of legitimate releases.",
+      "sourceId": "src-exp-publish-campaigns-result",
+      "quote": "Campaigns with a new-dependency or install-hook signal: 12 of 15 classifiable (80.0%, 95% CI 54.8%–93.0%).",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-20",
+      "claim": "3 of 15 classifiable campaigns only modified existing files and would evade a new-dependency or install-hook alarm.",
+      "sourceId": "src-exp-publish-campaigns-analysis",
+      "quote": "The 3 file-modification campaigns (asyncapi, node-ipc, netspeedutil) injected code into existing files and would not trigger a new-dependency or install-hook alarm.",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-21",
+      "claim": "The result is sensitive to the 7 campaigns of unknown mechanism: the share could be anywhere from 55% to 86%.",
+      "sourceId": "src-exp-publish-campaigns-analysis",
+      "quote": "If all 7 unknown campaigns were non-signal cases, the share would be 12 of 22 (55%), below the 60% success threshold. If all were signal cases, it would be 19 of 22 (86%).",
+      "stance": "context",
+      "epistemic": "inference",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    }
+  ],
+  "problems": [],
+  "competitors": [],
+  "ideas": [],
+  "experiments": [],
+  "decisions": [],
+  "briefs": [
+    {
+      "id": "brief-oss-supply-chain-small-maintainers",
+      "themeId": "theme-oss-supply-chain-small-maintainers",
+      "researchQuestion": "When attackers take over a maintainer's account or publishing credentials, they can push malware to everyone who installs the next release. What can volunteer maintainers without a security team realistically do to catch this?",
+      "whyItMatters": "In 2026, compromised releases of very widely used packages (axios on npm, litellm on PyPI, asyncapi and TanStack packages) installed remote-access trojans or stole credentials. The maintainers were victims, not insiders. Most open-source maintainers have no security staff to notice when a release they didn't make appears.",
+      "subQuestions": [
+        "How do these compromises happen, and how long do malicious releases stay live?",
+        "What already protects consumers (release delays, trusted publishing), and what gaps remain?",
+        "Do hijacked releases look structurally different from a maintainer's normal releases, so that a simple alarm could catch them?"
+      ],
+      "findings": [
+        {
+          "id": "f1",
+          "statement": "Compromised maintainer accounts and tokens are a recurring route to malware in popular packages. At least four 2026 incidents were found, including axios (a remote-access trojan via an injected dependency) and litellm (a credential stealer).",
+          "strength": "Moderate. Four independent incident reports, taken from the projects' own issue trackers.",
+          "evidenceIds": [
+            "ev-sc-01",
+            "ev-sc-02",
+            "ev-sc-04",
+            "ev-sc-06",
+            "ev-sc-07"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f2",
+          "statement": "Malicious releases are typically live for hours: about 3 hours for axios. Delaying installs of brand-new versions is an effective defence that users actively ask for, and the platforms are already shipping it (pnpm, Dependabot cooldown).",
+          "strength": "Moderate. Feature requests with hundreds of reactions, and a study finding 83 of 92 cooldown adoptions were security-motivated.",
+          "evidenceIds": [
+            "ev-sc-03",
+            "ev-sc-08",
+            "ev-sc-10",
+            "ev-sc-11",
+            "ev-sc-12"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f3",
+          "statement": "Most hijacks of legitimate npm packages add an install-time hook (a script that runs on install), something legitimate releases almost never do. Across 15 independent attack campaigns (2024–2026) whose mechanism could be determined, 12 (80%) added such a hook, versus 1.7% of legitimate releases of the same packages.",
+          "strength": "Moderate. A pre-registered replication at campaign level supports an earlier package-level result. But it rests on the minimum sample of 15 campaigns, and 7 more campaigns had no described mechanism (the share could be anywhere from 55% to 86%).",
+          "evidenceIds": [
+            "ev-sc-19",
+            "ev-sc-21",
+            "ev-sc-16",
+            "ev-sc-17"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f4",
+          "statement": "About one in five characterisable campaigns would slip past such an alarm: asyncapi, node-ipc and netspeedutil injected code into existing files without adding hooks or dependencies.",
+          "strength": "Moderate. 3 of 15 classifiable campaigns, consistent with the earlier asyncapi counter-example.",
+          "evidenceIds": [
+            "ev-sc-20",
+            "ev-sc-06",
+            "ev-sc-18"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f5",
+          "statement": "Teams that adopt release delays overwhelmingly use one simple default (most often seven days). Fine-grained settings are used by fewer than 10%.",
+          "strength": "Moderate. One study of early adopters.",
+          "evidenceIds": [
+            "ev-sc-13"
+          ],
+          "epistemic": "fact"
+        }
+      ],
+      "uncertainties": [
+        "Commercial scanners (e.g. Socket, StepSecurity) were not examined. They may already offer maintainer-side alerts.",
+        "Whether npm or PyPI already notify maintainers of every new publish wasn't checked.",
+        "Campaign grouping is heuristic, and 7 of 22 campaigns had no described mechanism.",
+        "The incident sample favours large, well-publicised attacks."
+      ],
+      "conclusion": {
+        "belief": "Account and token compromise of popular packages is a severe and recurring problem. Consumer-side release delays are being solved by the platforms, so a standalone tool isn't worthwhile. A maintainer-side alarm that flags new install-time hooks in a release would have caught most independent hijack campaigns at a low false-positive rate, but it would miss attacks that only modify existing code. Whether such alarms already exist commercially is the main open question before building anything.",
+        "confidence": "medium",
+        "confidenceReason": "Two pre-registered experiments agree, the second counting independent campaigns, so the core technical assumption now has moderate support. Confidence isn't high because the sample is at the minimum size, a third of campaigns couldn't be classified, and the competitive landscape is unexamined.",
+        "unknowns": [
+          "Whether vendors or registries already alert maintainers to unusual releases",
+          "How quickly maintainers would act on an alert",
+          "How to catch attacks that only modify existing files"
+        ],
+        "continueInvestigation": true,
+        "continueReason": "The technical premise holds up. The next question, whether the gap is already filled, is cheap to answer with desk research."
+      },
+      "nextSteps": [
+        {
+          "text": "Survey whether security vendors (e.g. Socket, StepSecurity) or the npm and PyPI registries already alert maintainers to unusual new releases of their own packages.",
+          "kind": "research"
+        },
+        {
+          "text": "If the gap is real, design a cheap test of whether maintainers want such alerts. This needs owner authorization, because it involves contacting people.",
+          "kind": "owner-action"
+        }
+      ],
+      "updatedAt": "2026-11-03T23:43:03Z",
+      "author": "research director (Claude Code session)",
+      "provenance": "real",
+      "updatedInRun": "run-20261103-exp-publish-anomaly-campaigns"
+    }
+  ]
+}
