@@ -10,6 +10,11 @@
  *               [--model m] [--max-cost usd] [--max-ideas n] [--max-calls n]
  *   venture verify [--stale]              re-fetch cited sources, check quotes
  *   venture status                        summary of research memory
+ *   venture decide <idea-id> --status s --rationale "…" [--actor a] [--merged-into id]
+ *   venture approve <exp-id> --by <name> --note "…"   (owner authorization)
+ *   venture outcome <exp-id> --result supported|refuted|inconclusive --summary "…"
+ *               [--evidence ev-1,ev-2] [--assumption a1=supported] [--force]
+ *   venture reconsider                    parked/rejected ideas whose evidence changed
  */
 import { execSync } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -17,6 +22,8 @@ import { join } from "node:path";
 import { runId } from "../core/ids";
 import type { Memory, Provenance, Run, Theme } from "../core/schema";
 import { validateMemory } from "../core/validate";
+import { ActionError, approveExperiment, decideIdea, reconsiderationQueue, recordOutcome } from "../core/actions";
+import type { IdeaStatus } from "../core/schema";
 import { COLLECTORS, mergeSignals, type Fetcher } from "./collectors";
 import { ingestBundle } from "./ingest";
 import { runPipeline, type PoolItem } from "./pipeline";
@@ -226,12 +233,56 @@ async function main() {
       return;
     }
 
+    case "decide":
+    case "approve":
+    case "outcome": {
+      const memory = load(REAL_STORE, "real");
+      const at = new Date().toISOString();
+      const id = pos[0];
+      if (!id) throw new Error(`usage: venture ${cmd} <id> …`);
+      let d;
+      if (cmd === "decide") {
+        d = decideIdea(memory, id, String(flags.status) as IdeaStatus, String(flags.rationale ?? ""), String(flags.actor ?? "director"), at, {
+          mergedInto: flags["merged-into"] ? String(flags["merged-into"]) : undefined,
+        });
+      } else if (cmd === "approve") {
+        if (!flags.by) throw new Error("--by <name> is required: approval is a human authorization");
+        d = approveExperiment(memory, id, String(flags.by), String(flags.note ?? "approved"), at);
+      } else {
+        const assumptions = Object.fromEntries(
+          (flags.assumption ? String(flags.assumption).split(",") : []).map((kv) => kv.split("=") as [string, "supported"]),
+        );
+        d = recordOutcome(memory, id, {
+          result: String(flags.result) as "supported",
+          summary: String(flags.summary ?? ""),
+          evidenceIds: flags.evidence ? String(flags.evidence).split(",") : [],
+          assumptions,
+          actor: String(flags.actor ?? "experimenter"),
+          at,
+          force: !!flags.force,
+        });
+      }
+      const check = validateMemory(memory, "real");
+      if (report(`${cmd} ${id}`, check.issues)) process.exit(1);
+      saveMemory(REAL_STORE, check.memory!);
+      console.log(`recorded ${d.id}: ${d.fromStatus ?? "—"} → ${d.toStatus}`);
+      return;
+    }
+
+    case "reconsider": {
+      const memory = load(REAL_STORE, "real");
+      const queue = reconsiderationQueue(memory, Number(flags.threshold ?? 10));
+      if (!queue.length) console.log("No parked or rejected ideas have new evidence since their last decision.");
+      for (const r of queue) console.log(`${r.idea.id} (${r.idea.status}): ${r.reasons.join("; ")}`);
+      return;
+    }
+
     default:
       console.log(readFileSync(new URL(import.meta.url), "utf8").split("*/")[0]);
   }
 }
 
 main().catch((e) => {
-  console.error(e instanceof Error ? e.message : e);
+  console.error(e instanceof ActionError ? `refused: ${e.message}` : e instanceof Error ? e.message : e);
   process.exit(1);
 });
