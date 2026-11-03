@@ -1,0 +1,934 @@
+{
+  "experiment": "exp-publish-anomaly-retrospective",
+  "executedAt": "2026-11-03T23:02:06.790Z",
+  "queries": [
+    "local scan of /tmp/malicious-packages/osv/malicious/npm for /compromised (npm |maintainer |publisher )?(account|token|credentials)|account (was |had been )?compromised|compromised (version|release|branch)|legitimate package|hijack|account takeover|taken over|stolen (npm |publish )?token|supply[- ]chain (attack|compromise)|trojanized/i"
+  ],
+  "notes": [
+    "1504 candidate OSV report(s) dated 2025-06-01..2026-11-02 mention a hijack, compromise or supply-chain attack",
+    "An earlier execution attempt (2026-11-03T22:51Z) used GitHub code search, got 0 results (not available to Actions tokens) and was discarded as a harness failure.",
+    "Before this run, a local harness dry-run on the 8 newest incidents (2026-11-03T22:58Z) checked that acquisition and classification work. The pre-registered thresholds were not changed afterwards."
+  ],
+  "byMechanism": {
+    "install-hook": 58,
+    "new-dependency": 0,
+    "file-modification": 0,
+    "unknown": 2
+  },
+  "share": 1,
+  "shareCi95": [
+    0.9378800031047062,
+    1
+  ],
+  "fpRate": 0.012511170688114389,
+  "fpCi95": [
+    0.007467027772483887,
+    0.020891023799527696
+  ],
+  "verdict": {
+    "result": "supported",
+    "reason": "100.0% of incidents carry a signal (≥ 60%) and 1.3% of legitimate releases do (< 10%)"
+  },
+  "incidents": [
+    {
+      "id": "MAL-2026-17924",
+      "pkg": "@apexacc/cli",
+      "published": "2026-10-26T05:25:19Z",
+      "mechanism": "install-hook",
+      "matched": "install script",
+      "legitVersions": 118
+    },
+    {
+      "id": "MAL-2026-17710",
+      "pkg": "pxnpm",
+      "published": "2026-10-09T13:32:13Z",
+      "mechanism": "install-hook",
+      "matched": "postinstall",
+      "legitVersions": 165
+    },
+    {
+      "id": "MAL-2026-13412",
+      "pkg": "@apicity/meta",
+      "published": "2026-08-06T13:10:14Z",
+      "mechanism": "unknown",
+      "legitVersions": 80
+    },
+    {
+      "id": "MAL-2026-13363",
+      "pkg": "@cliphijack/santaclaude",
+      "published": "2026-08-05T18:17:50Z",
+      "mechanism": "unknown",
+      "legitVersions": 133
+    },
+    {
+      "id": "MAL-2026-11551",
+      "pkg": "@adminide-stack/clock-tik-browser",
+      "published": "2026-08-04T18:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 46
+    },
+    {
+      "id": "MAL-2026-11788",
+      "pkg": "@qlik/dts-bundler",
+      "published": "2026-08-04T18:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 13
+    },
+    {
+      "id": "MAL-2026-11791",
+      "pkg": "@qlik/embed-svelte",
+      "published": "2026-08-04T18:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 55
+    },
+    {
+      "id": "MAL-2026-11953",
+      "pkg": "@umacloud/cli-darwin-arm64",
+      "published": "2026-08-04T18:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 72
+    },
+    {
+      "id": "MAL-2026-11954",
+      "pkg": "@umacloud/cli-darwin-x64",
+      "published": "2026-08-04T18:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 71
+    },
+    {
+      "id": "MAL-2026-11955",
+      "pkg": "@umacloud/cli-linux-arm64",
+      "published": "2026-08-04T18:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 71
+    },
+    {
+      "id": "MAL-2026-11956",
+      "pkg": "@umacloud/cli-linux-musl-arm64",
+      "published": "2026-08-04T18:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 11
+    },
+    {
+      "id": "MAL-2026-11957",
+      "pkg": "@umacloud/cli-linux-musl-x64",
+      "published": "2026-08-04T18:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 11
+    },
+    {
+      "id": "MAL-2026-11958",
+      "pkg": "@umacloud/cli-linux-x64",
+      "published": "2026-08-04T18:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 71
+    },
+    {
+      "id": "MAL-2026-11959",
+      "pkg": "@umacloud/cli-win32-x64",
+      "published": "2026-08-04T18:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 71
+    },
+    {
+      "id": "MAL-2026-11960",
+      "pkg": "@umacloud/knowledge",
+      "published": "2026-08-04T18:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 71
+    },
+    {
+      "id": "MAL-2026-11989",
+      "pkg": "umadev",
+      "published": "2026-08-04T18:00:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 73
+    },
+    {
+      "id": "MAL-2026-11552",
+      "pkg": "@adminide-stack/yantra-mobile",
+      "published": "2026-08-04T16:03:52Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 617
+    },
+    {
+      "id": "MAL-2026-11961",
+      "pkg": "@workbench-stack/core",
+      "published": "2026-08-04T16:01:39Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 321
+    },
+    {
+      "id": "MAL-2026-11575",
+      "pkg": "@nebula.js/sn-line-chart",
+      "published": "2026-08-04T15:55:03Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 280
+    },
+    {
+      "id": "MAL-2026-11574",
+      "pkg": "@nebula.js/sn-layout-container",
+      "published": "2026-08-04T15:54:58Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 76
+    },
+    {
+      "id": "MAL-2026-11807",
+      "pkg": "@qlik/sprout-icons",
+      "published": "2026-08-04T15:54:38Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 40
+    },
+    {
+      "id": "MAL-2026-11975",
+      "pkg": "http-metrics-middleware",
+      "published": "2026-08-04T15:54:33Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 21
+    },
+    {
+      "id": "MAL-2026-11801",
+      "pkg": "@qlik/prettier-config",
+      "published": "2026-08-04T15:54:01Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 57
+    },
+    {
+      "id": "MAL-2026-11783",
+      "pkg": "@qlik/api",
+      "published": "2026-08-04T15:53:47Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 99
+    },
+    {
+      "id": "MAL-2026-11795",
+      "pkg": "@qlik/eslint-config-react",
+      "published": "2026-08-04T15:53:42Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 16
+    },
+    {
+      "id": "MAL-2026-11983",
+      "pkg": "qlik-modifiers",
+      "published": "2026-08-04T15:53:42Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 67
+    },
+    {
+      "id": "MAL-2026-11794",
+      "pkg": "@qlik/eslint-config-base",
+      "published": "2026-08-04T15:53:25Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 16
+    },
+    {
+      "id": "MAL-2026-11984",
+      "pkg": "qlik-object-conversion",
+      "published": "2026-08-04T15:53:25Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 20
+    },
+    {
+      "id": "MAL-2026-11576",
+      "pkg": "@nebula.js/sn-listbox",
+      "published": "2026-08-04T15:51:59Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 53
+    },
+    {
+      "id": "MAL-2026-11785",
+      "pkg": "@qlik/carbon-core",
+      "published": "2026-08-04T15:50:25Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 15
+    },
+    {
+      "id": "MAL-2026-11790",
+      "pkg": "@qlik/embed-runtime",
+      "published": "2026-08-04T15:50:25Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 75
+    },
+    {
+      "id": "MAL-2026-11982",
+      "pkg": "qlik-chart-modules",
+      "published": "2026-08-04T15:50:25Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 108
+    },
+    {
+      "id": "MAL-2026-11786",
+      "pkg": "@qlik/carboncopy",
+      "published": "2026-08-04T15:50:08Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 19
+    },
+    {
+      "id": "MAL-2026-11584",
+      "pkg": "@nebula.js/stardust",
+      "published": "2026-08-04T15:49:51Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 178
+    },
+    {
+      "id": "MAL-2026-11806",
+      "pkg": "@qlik/sprout-gesture",
+      "published": "2026-08-04T15:49:51Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 15
+    },
+    {
+      "id": "MAL-2026-11568",
+      "pkg": "@nebula.js/cli-serve",
+      "published": "2026-08-04T15:49:45Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 216
+    },
+    {
+      "id": "MAL-2026-11802",
+      "pkg": "@qlik/react-native-simple-grid",
+      "published": "2026-08-04T15:49:44Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 190
+    },
+    {
+      "id": "MAL-2026-11810",
+      "pkg": "@qlik/tsconfig",
+      "published": "2026-08-04T15:49:44Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 33
+    },
+    {
+      "id": "MAL-2026-11978",
+      "pkg": "picasso-plugin-q",
+      "published": "2026-08-04T15:49:44Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 113
+    },
+    {
+      "id": "MAL-2026-11581",
+      "pkg": "@nebula.js/sn-slider",
+      "published": "2026-08-04T15:49:33Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 27
+    },
+    {
+      "id": "MAL-2026-11804",
+      "pkg": "@qlik/sdk",
+      "published": "2026-08-04T15:49:33Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 40
+    },
+    {
+      "id": "MAL-2026-11796",
+      "pkg": "@qlik/eslint-config-svelte",
+      "published": "2026-08-04T15:49:20Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 19
+    },
+    {
+      "id": "MAL-2026-11793",
+      "pkg": "@qlik/eslint-config",
+      "published": "2026-08-04T15:49:20Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 196
+    },
+    {
+      "id": "MAL-2026-11579",
+      "pkg": "@nebula.js/sn-org-chart",
+      "published": "2026-08-04T15:49:16Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 35
+    },
+    {
+      "id": "MAL-2026-11580",
+      "pkg": "@nebula.js/sn-shape",
+      "published": "2026-08-04T15:49:16Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 25
+    },
+    {
+      "id": "MAL-2026-11586",
+      "pkg": "@nebula.js/theme",
+      "published": "2026-08-04T15:49:10Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 18
+    },
+    {
+      "id": "MAL-2026-11800",
+      "pkg": "@qlik/oxlint-config",
+      "published": "2026-08-04T15:49:10Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 25
+    },
+    {
+      "id": "MAL-2026-11567",
+      "pkg": "@nebula.js/cli-sense",
+      "published": "2026-08-04T15:49:05Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 208
+    },
+    {
+      "id": "MAL-2026-11582",
+      "pkg": "@nebula.js/sn-tabbed-container",
+      "published": "2026-08-04T15:49:05Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 46
+    },
+    {
+      "id": "MAL-2026-11803",
+      "pkg": "@qlik/runtime-module-loader",
+      "published": "2026-08-04T15:48:59Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 70
+    },
+    {
+      "id": "MAL-2026-11573",
+      "pkg": "@nebula.js/sn-distributionplot",
+      "published": "2026-08-04T15:48:54Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 55
+    },
+    {
+      "id": "MAL-2026-11583",
+      "pkg": "@nebula.js/snapshooter",
+      "published": "2026-08-04T15:48:54Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 16
+    },
+    {
+      "id": "MAL-2026-11979",
+      "pkg": "picasso.js",
+      "published": "2026-08-04T15:48:54Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 117
+    },
+    {
+      "id": "MAL-2026-11977",
+      "pkg": "picasso-plugin-hammer",
+      "published": "2026-08-04T15:48:48Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 111
+    },
+    {
+      "id": "MAL-2026-11571",
+      "pkg": "@nebula.js/sn-action-button",
+      "published": "2026-08-04T15:48:26Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 113
+    },
+    {
+      "id": "MAL-2026-11789",
+      "pkg": "@qlik/embed-react",
+      "published": "2026-08-04T15:48:20Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 71
+    },
+    {
+      "id": "MAL-2026-11565",
+      "pkg": "@nebula.js/cli",
+      "published": "2026-08-04T15:48:19Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 214
+    },
+    {
+      "id": "MAL-2026-11585",
+      "pkg": "@nebula.js/test-utils",
+      "published": "2026-08-04T15:48:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 12
+    },
+    {
+      "id": "MAL-2026-11799",
+      "pkg": "@qlik/oxfmt-config",
+      "published": "2026-08-04T15:48:00Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 12
+    },
+    {
+      "id": "MAL-2026-11792",
+      "pkg": "@qlik/embed-web-components",
+      "published": "2026-08-04T15:47:55Z",
+      "mechanism": "install-hook",
+      "matched": "preinstall",
+      "legitVersions": 76
+    }
+  ],
+  "falsePositiveBaseline": [
+    {
+      "pkg": "@apexacc/cli",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "pxnpm",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 1,
+      "either": 1
+    },
+    {
+      "pkg": "@apicity/meta",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@cliphijack/santaclaude",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@adminide-stack/clock-tik-browser",
+      "pairs": 20,
+      "newDependency": 2,
+      "newInstallScript": 0,
+      "either": 2
+    },
+    {
+      "pkg": "@qlik/dts-bundler",
+      "pairs": 12,
+      "newDependency": 1,
+      "newInstallScript": 0,
+      "either": 1
+    },
+    {
+      "pkg": "@qlik/embed-svelte",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@umacloud/cli-darwin-arm64",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@umacloud/cli-darwin-x64",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@umacloud/cli-linux-arm64",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@umacloud/cli-linux-musl-arm64",
+      "pairs": 10,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@umacloud/cli-linux-musl-x64",
+      "pairs": 10,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@umacloud/cli-linux-x64",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@umacloud/cli-win32-x64",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@umacloud/knowledge",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "umadev",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@adminide-stack/yantra-mobile",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@workbench-stack/core",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@nebula.js/sn-line-chart",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@nebula.js/sn-layout-container",
+      "pairs": 20,
+      "newDependency": 1,
+      "newInstallScript": 0,
+      "either": 1
+    },
+    {
+      "pkg": "@qlik/sprout-icons",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "http-metrics-middleware",
+      "pairs": 20,
+      "newDependency": 2,
+      "newInstallScript": 0,
+      "either": 2
+    },
+    {
+      "pkg": "@qlik/prettier-config",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@qlik/api",
+      "pairs": 20,
+      "newDependency": 1,
+      "newInstallScript": 0,
+      "either": 1
+    },
+    {
+      "pkg": "@qlik/eslint-config-react",
+      "pairs": 15,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "qlik-modifiers",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@qlik/eslint-config-base",
+      "pairs": 15,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "qlik-object-conversion",
+      "pairs": 19,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@nebula.js/sn-listbox",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@qlik/carbon-core",
+      "pairs": 14,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@qlik/embed-runtime",
+      "pairs": 20,
+      "newDependency": 1,
+      "newInstallScript": 0,
+      "either": 1
+    },
+    {
+      "pkg": "qlik-chart-modules",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@qlik/carboncopy",
+      "pairs": 18,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@nebula.js/stardust",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@qlik/sprout-gesture",
+      "pairs": 14,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@nebula.js/cli-serve",
+      "pairs": 20,
+      "newDependency": 1,
+      "newInstallScript": 0,
+      "either": 1
+    },
+    {
+      "pkg": "@qlik/react-native-simple-grid",
+      "pairs": 20,
+      "newDependency": 1,
+      "newInstallScript": 0,
+      "either": 1
+    },
+    {
+      "pkg": "@qlik/tsconfig",
+      "pairs": 20,
+      "newDependency": 1,
+      "newInstallScript": 0,
+      "either": 1
+    },
+    {
+      "pkg": "picasso-plugin-q",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@nebula.js/sn-slider",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@qlik/sdk",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@qlik/eslint-config-svelte",
+      "pairs": 18,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@qlik/eslint-config",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@nebula.js/sn-org-chart",
+      "pairs": 20,
+      "newDependency": 1,
+      "newInstallScript": 0,
+      "either": 1
+    },
+    {
+      "pkg": "@nebula.js/sn-shape",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@nebula.js/theme",
+      "pairs": 17,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@qlik/oxlint-config",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@nebula.js/cli-sense",
+      "pairs": 20,
+      "newDependency": 1,
+      "newInstallScript": 0,
+      "either": 1
+    },
+    {
+      "pkg": "@nebula.js/sn-tabbed-container",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@qlik/runtime-module-loader",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@nebula.js/sn-distributionplot",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@nebula.js/snapshooter",
+      "pairs": 15,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "picasso.js",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "picasso-plugin-hammer",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@nebula.js/sn-action-button",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@qlik/embed-react",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@nebula.js/cli",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@nebula.js/test-utils",
+      "pairs": 11,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@qlik/oxfmt-config",
+      "pairs": 11,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    },
+    {
+      "pkg": "@qlik/embed-web-components",
+      "pairs": 20,
+      "newDependency": 0,
+      "newInstallScript": 0,
+      "either": 0
+    }
+  ]
+}
