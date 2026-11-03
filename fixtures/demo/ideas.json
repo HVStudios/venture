@@ -1,0 +1,269 @@
+[
+  {
+    "id": "idea-assistant-for-our-ci-fails-randomly-about-once-a",
+    "title": "Assistant for Our CI fails randomly about once a day",
+    "summary": "A mock concept that automates detection and triage for problem 0, produced deterministically for testing.",
+    "problemIds": [
+      "prob-recurring-pain-our-ci-fails-randomly-about-once"
+    ],
+    "themeIds": [
+      "theme-demo-ci-reliability"
+    ],
+    "targetUsers": "Teams affected by the problem",
+    "solution": "Watch the relevant signals, cluster recurring failures, and propose fixes for problem 0.",
+    "competitorIds": [
+      "comp-manual-workaround-0"
+    ],
+    "differentiation": "Mock differentiation statement",
+    "feasibility": "Mock feasibility statement",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "Users will trust automated triage suggestions",
+        "criticality": "high",
+        "status": "untested"
+      }
+    ],
+    "risks": [
+      "Mock risk: incumbents already offer this"
+    ],
+    "nextSteps": [],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "Existing tools may already cover most of this need.",
+        "severity": "major",
+        "evidenceIds": [],
+        "status": "open"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 4,
+          "rationale": "mock rationale for severity"
+        },
+        "frequency": {
+          "score": 3,
+          "rationale": "mock rationale for frequency"
+        },
+        "userValue": {
+          "score": 4,
+          "rationale": "mock rationale for userValue"
+        },
+        "competitiveGap": {
+          "score": 4,
+          "rationale": "mock rationale for competitiveGap"
+        },
+        "differentiation": {
+          "score": 3,
+          "rationale": "mock rationale for differentiation"
+        },
+        "feasibility": {
+          "score": 3,
+          "rationale": "mock rationale for feasibility"
+        },
+        "costComplexity": {
+          "score": 4,
+          "rationale": "mock rationale for costComplexity"
+        },
+        "userAccess": {
+          "score": 4,
+          "rationale": "mock rationale for userAccess"
+        },
+        "validationCost": {
+          "score": 3,
+          "rationale": "mock rationale for validationCost"
+        }
+      },
+      "assessedAt": "2026-11-03T21:05:10.893Z",
+      "assessedBy": "critic via mock"
+    },
+    "status": "advanced",
+    "statusRationale": "Highest attractiveness in this mock run.",
+    "relatedIdeaIds": [],
+    "epistemic": "hypothesis",
+    "createdInRun": "run-20261103-2105-mock-demo-ci-reliabi",
+    "createdAt": "2026-11-03T21:05:10.893Z",
+    "updatedAt": "2026-11-03T21:05:10.893Z",
+    "provenance": "fixture"
+  },
+  {
+    "id": "idea-assistant-for-quarantining-flaky-tests-by-hand",
+    "title": "Assistant for Quarantining flaky tests by hand",
+    "summary": "A mock concept that automates detection and triage for problem 2, produced deterministically for testing.",
+    "problemIds": [
+      "prob-recurring-pain-quarantining-flaky-tests-by-hand"
+    ],
+    "themeIds": [
+      "theme-demo-ci-reliability"
+    ],
+    "targetUsers": "Teams affected by the problem",
+    "solution": "Watch the relevant signals, cluster recurring failures, and propose fixes for problem 2.",
+    "competitorIds": [
+      "comp-manual-workaround-2"
+    ],
+    "differentiation": "Mock differentiation statement",
+    "feasibility": "Mock feasibility statement",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "Users will trust automated triage suggestions",
+        "criticality": "high",
+        "status": "untested"
+      }
+    ],
+    "risks": [
+      "Mock risk: incumbents already offer this"
+    ],
+    "nextSteps": [],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "Existing tools may already cover most of this need.",
+        "severity": "major",
+        "evidenceIds": [],
+        "status": "open"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 4,
+          "rationale": "mock rationale for severity"
+        },
+        "frequency": {
+          "score": 3,
+          "rationale": "mock rationale for frequency"
+        },
+        "userValue": {
+          "score": 4,
+          "rationale": "mock rationale for userValue"
+        },
+        "competitiveGap": {
+          "score": 4,
+          "rationale": "mock rationale for competitiveGap"
+        },
+        "differentiation": {
+          "score": 3,
+          "rationale": "mock rationale for differentiation"
+        },
+        "feasibility": {
+          "score": 3,
+          "rationale": "mock rationale for feasibility"
+        },
+        "costComplexity": {
+          "score": 4,
+          "rationale": "mock rationale for costComplexity"
+        },
+        "userAccess": {
+          "score": 4,
+          "rationale": "mock rationale for userAccess"
+        },
+        "validationCost": {
+          "score": 3,
+          "rationale": "mock rationale for validationCost"
+        }
+      },
+      "assessedAt": "2026-11-03T21:05:10.893Z",
+      "assessedBy": "critic via mock"
+    },
+    "status": "parked",
+    "statusRationale": "Mock decision.",
+    "relatedIdeaIds": [],
+    "epistemic": "hypothesis",
+    "createdInRun": "run-20261103-2105-mock-demo-ci-reliabi",
+    "createdAt": "2026-11-03T21:05:10.893Z",
+    "updatedAt": "2026-11-03T21:05:10.893Z",
+    "provenance": "fixture"
+  },
+  {
+    "id": "idea-assistant-for-waiting-40-minutes-for-the-ci-queu",
+    "title": "Assistant for Waiting 40 minutes for the CI queue",
+    "summary": "A mock concept that automates detection and triage for problem 1, produced deterministically for testing.",
+    "problemIds": [
+      "prob-recurring-pain-waiting-40-minutes-for-the-ci-que"
+    ],
+    "themeIds": [
+      "theme-demo-ci-reliability"
+    ],
+    "targetUsers": "Teams affected by the problem",
+    "solution": "Watch the relevant signals, cluster recurring failures, and propose fixes for problem 1.",
+    "competitorIds": [
+      "comp-manual-workaround-1"
+    ],
+    "differentiation": "Mock differentiation statement",
+    "feasibility": "Mock feasibility statement",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "Users will trust automated triage suggestions",
+        "criticality": "high",
+        "status": "untested"
+      }
+    ],
+    "risks": [
+      "Mock risk: incumbents already offer this"
+    ],
+    "nextSteps": [],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "Existing tools may already cover most of this need.",
+        "severity": "major",
+        "evidenceIds": [],
+        "status": "open"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 4,
+          "rationale": "mock rationale for severity"
+        },
+        "frequency": {
+          "score": 3,
+          "rationale": "mock rationale for frequency"
+        },
+        "userValue": {
+          "score": 4,
+          "rationale": "mock rationale for userValue"
+        },
+        "competitiveGap": {
+          "score": 4,
+          "rationale": "mock rationale for competitiveGap"
+        },
+        "differentiation": {
+          "score": 3,
+          "rationale": "mock rationale for differentiation"
+        },
+        "feasibility": {
+          "score": 3,
+          "rationale": "mock rationale for feasibility"
+        },
+        "costComplexity": {
+          "score": 4,
+          "rationale": "mock rationale for costComplexity"
+        },
+        "userAccess": {
+          "score": 4,
+          "rationale": "mock rationale for userAccess"
+        },
+        "validationCost": {
+          "score": 3,
+          "rationale": "mock rationale for validationCost"
+        }
+      },
+      "assessedAt": "2026-11-03T21:05:10.893Z",
+      "assessedBy": "critic via mock"
+    },
+    "status": "rejected",
+    "statusRationale": "Mock decision.",
+    "relatedIdeaIds": [],
+    "epistemic": "hypothesis",
+    "createdInRun": "run-20261103-2105-mock-demo-ci-reliabi",
+    "createdAt": "2026-11-03T21:05:10.893Z",
+    "updatedAt": "2026-11-03T21:05:10.893Z",
+    "provenance": "fixture"
+  }
+]

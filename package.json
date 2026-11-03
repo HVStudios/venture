@@ -1,0 +1,40 @@
+{
+  "name": "venture",
+  "private": true,
+  "version": "0.1.0",
+  "description": "VENTURE — an evidence-first autonomous AI innovation lab",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "npm run snapshot && vite",
+    "build": "npm run snapshot && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint:data": "tsx src/engine/cli.ts validate",
+    "snapshot": "tsx src/engine/cli.ts snapshot",
+    "venture": "tsx src/engine/cli.ts",
+    "check": "npm run typecheck && npm run test && npm run lint:data && npm run build"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.137.0",
+    "d3-force": "3.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.28.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/d3-force": "3.0.10",
+    "@types/node": "22.10.1",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "4.3.4",
+    "tsx": "4.19.2",
+    "typescript": "5.6.3",
+    "vite": "6.0.3",
+    "vitest": "2.1.8"
+  }
+}

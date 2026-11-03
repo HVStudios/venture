@@ -1,0 +1,44 @@
+name: Deploy site
+
+# Builds the static research site and publishes it to the gh-pages branch.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint:data
+      - run: npm run build
+      - name: Publish dist/ to gh-pages
+        env:
+          REPO: ${{ github.repository }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd dist
+          touch .nojekyll
+          git init -q -b gh-pages
+          git config user.name "venture-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Deploy ${GITHUB_SHA::12}"
+          git push -q --force "https://x-access-token:${TOKEN}@github.com/${REPO}.git" gh-pages

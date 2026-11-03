@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ev-20261103-2105-mock-demo-ci-reliabi-1",
+    "claim": "Source reports: Our CI fails randomly about once a day and engineers just press re-run.",
+    "sourceId": "src-demo-a",
+    "quote": "Our CI fails randomly about once a day and engineers just press re-run.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-recurring-pain-our-ci-fails-randomly-about-once"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "fixture"
+  },
+  {
+    "id": "ev-20261103-2105-mock-demo-ci-reliabi-2",
+    "claim": "Source reports: Waiting 40 minutes for the CI queue before a two-line change can merge is killing our velocity.",
+    "sourceId": "src-demo-b",
+    "quote": "Waiting 40 minutes for the CI queue before a two-line change can merge is killing our velocity.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-recurring-pain-waiting-40-minutes-for-the-ci-que"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "fixture"
+  },
+  {
+    "id": "ev-20261103-2105-mock-demo-ci-reliabi-3",
+    "claim": "Source reports: Quarantining flaky tests by hand takes our platform team several hours every week.",
+    "sourceId": "src-demo-c",
+    "quote": "Quarantining flaky tests by hand takes our platform team several hours every week.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-recurring-pain-quarantining-flaky-tests-by-hand"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "fixture"
+  }
+]

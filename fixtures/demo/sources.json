@@ -1,0 +1,41 @@
+[
+  {
+    "id": "src-demo-a",
+    "url": "https://example.com/demo/a",
+    "title": "Our CI fails randomly about once a day",
+    "publisher": "demo",
+    "retrievedAt": "2026-11-03T00:00:00Z",
+    "sourceType": "other",
+    "excerpt": "Our CI fails randomly about once a day and engineers just press re-run. Nobody owns the flaky tests, so they pile up for months.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "fixture"
+  },
+  {
+    "id": "src-demo-b",
+    "url": "https://example.com/demo/b",
+    "title": "Waiting 40 minutes for the CI queue",
+    "publisher": "demo",
+    "retrievedAt": "2026-11-03T00:00:00Z",
+    "sourceType": "other",
+    "excerpt": "Waiting 40 minutes for the CI queue before a two-line change can merge is killing our velocity. We tried bigger runners but costs doubled.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "fixture"
+  },
+  {
+    "id": "src-demo-c",
+    "url": "https://example.com/demo/c",
+    "title": "Quarantining flaky tests by hand",
+    "publisher": "demo",
+    "retrievedAt": "2026-11-03T00:00:00Z",
+    "sourceType": "other",
+    "excerpt": "Quarantining flaky tests by hand takes our platform team several hours every week. The existing dashboards show failures but not causes.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "fixture"
+  }
+]

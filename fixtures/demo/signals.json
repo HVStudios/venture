@@ -1,0 +1,41 @@
+[
+  {
+    "id": "sig-demo-a",
+    "collector": "demo",
+    "themeId": "theme-demo-ci-reliability",
+    "url": "https://example.com/demo/a",
+    "title": "Our CI fails randomly about once a day",
+    "excerpt": "Our CI fails randomly about once a day and engineers just press re-run. Nobody owns the flaky tests, so they pile up for months.",
+    "engagement": 30,
+    "engagementLabel": "synthetic",
+    "retrievedAt": "2026-11-03T00:00:00Z",
+    "triage": "new",
+    "provenance": "fixture"
+  },
+  {
+    "id": "sig-demo-b",
+    "collector": "demo",
+    "themeId": "theme-demo-ci-reliability",
+    "url": "https://example.com/demo/b",
+    "title": "Waiting 40 minutes for the CI queue",
+    "excerpt": "Waiting 40 minutes for the CI queue before a two-line change can merge is killing our velocity. We tried bigger runners but costs doubled.",
+    "engagement": 25,
+    "engagementLabel": "synthetic",
+    "retrievedAt": "2026-11-03T00:00:00Z",
+    "triage": "new",
+    "provenance": "fixture"
+  },
+  {
+    "id": "sig-demo-c",
+    "collector": "demo",
+    "themeId": "theme-demo-ci-reliability",
+    "url": "https://example.com/demo/c",
+    "title": "Quarantining flaky tests by hand",
+    "excerpt": "Quarantining flaky tests by hand takes our platform team several hours every week. The existing dashboards show failures but not causes.",
+    "engagement": 20,
+    "engagementLabel": "synthetic",
+    "retrievedAt": "2026-11-03T00:00:00Z",
+    "triage": "new",
+    "provenance": "fixture"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "comp-manual-workaround-0",
+    "name": "Manual workaround 0",
+    "kind": "workaround",
+    "description": "Doing it by hand (named by the model; not yet verified against a source)",
+    "strengths": [],
+    "weaknesses": [],
+    "sourceIds": [],
+    "provenance": "fixture"
+  },
+  {
+    "id": "comp-manual-workaround-1",
+    "name": "Manual workaround 1",
+    "kind": "workaround",
+    "description": "Doing it by hand (named by the model; not yet verified against a source)",
+    "strengths": [],
+    "weaknesses": [],
+    "sourceIds": [],
+    "provenance": "fixture"
+  },
+  {
+    "id": "comp-manual-workaround-2",
+    "name": "Manual workaround 2",
+    "kind": "workaround",
+    "description": "Doing it by hand (named by the model; not yet verified against a source)",
+    "strengths": [],
+    "weaknesses": [],
+    "sourceIds": [],
+    "provenance": "fixture"
+  }
+]
