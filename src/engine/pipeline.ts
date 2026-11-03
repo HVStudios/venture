@@ -530,5 +530,7 @@ export async function runPipeline(opts: PipelineOptions): Promise<Bundle> {
     ideas,
     experiments,
     decisions,
+    // Automated runs don't write narrative briefs; a research session reviews and updates them.
+    briefs: [],
   };
 }

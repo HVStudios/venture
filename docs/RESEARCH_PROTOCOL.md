@@ -22,7 +22,15 @@ This protocol lets an interactive or scheduled Claude Code session, powered by t
 6. **Deduplicate.** Compare against existing ideas. The validator blocks TF-IDF similarity ≥ 0.55 unless the ideas are linked via `relatedIdeaIds` with a `noveltyNote`.
 7. **Decide.** Choose a status and a `statusRationale` for every idea.
 8. **Experiment.** Design one cheap test for each advanced idea.
-9. **Persist.** Write `research/bundles/<run-id>.json` and run:
+9. **Update the research brief.** Every run must update the area's brief (`briefs` in the bundle, one per theme, same id). The brief is what readers see first on the area's research page:
+   - `researchQuestion`, `whyItMatters` and `subQuestions` in plain language, for someone who hasn't followed the research.
+   - `findings`: what has actually been established. Each must cite evidence ids and say how strong it is, and why.
+   - `uncertainties`: what could overturn the findings.
+   - `conclusion`: what the lab currently believes, a `confidence` (low/medium/high) with its reason, the open unknowns, and whether further investigation is justified. Omit it if no conclusion is warranted yet; the page will say so.
+   - `nextSteps`: what will be investigated or tested next, linked to experiments or issues.
+
+   Write from the recorded evidence only. Don't add findings, results or confidence the records don't support. A brief older than the area's latest research is flagged as stale on the site.
+10. **Persist.** Write `research/bundles/<run-id>.json` and run:
    ```bash
    npm run venture -- ingest research/bundles/<run-id>.json --dry-run
    npm run venture -- ingest research/bundles/<run-id>.json

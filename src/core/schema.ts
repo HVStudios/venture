@@ -322,6 +322,65 @@ export const Signal = z.object({
 });
 export type Signal = z.infer<typeof Signal>;
 
+
+// ---------------------------------------------------------------- briefs
+/**
+ * A research brief is the human-readable synthesis of one research area,
+ * written by the research team (an agent session) and updated as part of
+ * every research run. Structured records stay the source of truth: every
+ * finding must cite stored evidence, and pages flag briefs that are older
+ * than the latest research.
+ */
+export const Confidence = z.enum(["low", "medium", "high"]);
+export type Confidence = z.infer<typeof Confidence>;
+
+export const Brief = z.object({
+  id: Id,
+  themeId: Id,
+  /** The central question, in plain language. */
+  researchQuestion: z.string().min(10),
+  whyItMatters: z.string().min(20),
+  subQuestions: z.array(z.string().min(5)).default([]),
+  findings: z
+    .array(
+      z.object({
+        id: z.string(),
+        statement: z.string().min(10),
+        /** Plain-language note on how strong this is and why. */
+        strength: z.string().min(5),
+        evidenceIds: z.array(Id).min(1, "every finding must cite stored evidence"),
+        epistemic: Epistemic,
+      }),
+    )
+    .default([]),
+  uncertainties: z.array(z.string().min(5)).default([]),
+  conclusion: z
+    .object({
+      belief: z.string().min(10),
+      confidence: Confidence,
+      confidenceReason: z.string().min(10),
+      unknowns: z.array(z.string().min(5)).default([]),
+      continueInvestigation: z.boolean(),
+      continueReason: z.string().min(5),
+    })
+    .optional(),
+  nextSteps: z
+    .array(
+      z.object({
+        text: z.string().min(5),
+        kind: z.enum(["research", "experiment", "decision", "owner-action"]),
+        experimentId: Id.optional(),
+        issue: z.number().int().optional(),
+      }),
+    )
+    .default([]),
+  updatedAt: IsoDate,
+  updatedInRun: Id.optional(),
+  author: z.string(),
+  provenance: Provenance,
+});
+export type Brief = z.infer<typeof Brief>;
+
 // ---------------------------------------------------------------- memory
 export const Memory = z.object({
   themes: z.array(Theme),
@@ -334,6 +393,7 @@ export const Memory = z.object({
   decisions: z.array(Decision),
   runs: z.array(Run),
   signals: z.array(Signal),
+  briefs: z.array(Brief).default([]),
 });
 export type Memory = z.infer<typeof Memory>;
 export const COLLECTIONS = [
@@ -347,6 +407,7 @@ export const COLLECTIONS = [
   "decisions",
   "runs",
   "signals",
+  "briefs",
 ] as const satisfies readonly (keyof Memory)[];
 export type CollectionName = (typeof COLLECTIONS)[number];
 
@@ -362,6 +423,7 @@ export function emptyMemory(): Memory {
     decisions: [],
     runs: [],
     signals: [],
+    briefs: [],
   };
 }
 
@@ -382,5 +444,6 @@ export const Bundle = z.object({
   ideas: z.array(Idea).default([]),
   experiments: z.array(Experiment).default([]),
   decisions: z.array(Decision).default([]),
+  briefs: z.array(Brief).default([]),
 });
 export type Bundle = z.infer<typeof Bundle>;
