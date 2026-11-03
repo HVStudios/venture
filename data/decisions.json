@@ -56,6 +56,30 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261103-followup-engagement-retrospective",
+    "at": "2026-11-03T21:35:36.802Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-followup-engagement-retrospective",
+    "action": "advance",
+    "fromStatus": "proposed",
+    "toStatus": "approved",
+    "rationale": "Approved under the lab's standing rule: automatable experiments on public data with no external contact or cost need no owner approval.",
+    "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-preregister-followup-engagement",
+    "at": "2026-11-03T22:20:00Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-followup-engagement-retrospective",
+    "action": "revise",
+    "fromStatus": "proposed",
+    "toStatus": "proposed",
+    "rationale": "Design pre-registered before data collection: pooled policy-closed group across GitHub (LLVM alone has too few), LLVM newcomer control, fixed decision thresholds.",
+    "actor": "experiment designer",
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261103-revise-ai-authorship-detector",
     "at": "2026-11-03T22:05:00Z",
     "runId": "run-20261103-agent-ai-contribution-burden-2",

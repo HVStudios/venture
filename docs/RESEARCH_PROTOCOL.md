@@ -32,5 +32,8 @@ This protocol lets an interactive or scheduled Claude Code session, powered by t
 ## Run record
 Use `mode: "agent-session"` and `provider: "claude-code-session"`. List the search queries actually issued in `queries`. Set `counts.sourcesExamined` to the number of pages you actually read, cited or not. Record failures (paywalls, blocked pages) in `errors` and blind spots in `limitations`. Usage: `modelCalls` is not observable from inside a session, so leave it out and explain this in `usage.note` instead of guessing.
 
+## Running an experiment
+Automatable experiments (public data only, no contact with people, no cost) may be approved by the research director (`venture approve <id> --by …`). Everything else needs the owner. Pre-register the procedure and decision thresholds in `data/experiments.json` before collecting data. Implement the experiment under `src/experiments/` and run it through the **Run experiment** workflow, which commits raw results to `research/experiments/<id>/`.
+
 ## Recording an experiment outcome
 Only after an experiment was actually executed: set `status: "completed"`, add an `outcome` with the observed result and the evidence ids, and append a `complete` decision. Update the related idea's assumptions (`supported`, `weakened` or `refuted`) and its status if warranted.
