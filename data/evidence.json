@@ -728,5 +728,48 @@
       "comp-registry-trusted-publishing"
     ],
     "provenance": "real"
+  },
+  {
+    "id": "ev-sc-16",
+    "claim": "In the newest 60 hijacked npm packages in the OpenSSF dataset, 58 of 58 classifiable incidents carried a new install-hook signal, and only 1.3% of legitimate releases did.",
+    "sourceId": "src-exp-publish-anomaly-result",
+    "quote": "Incidents with a new-dependency or install-hook signal: 58 of 58 classifiable (100.0%).",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-17",
+    "claim": "56 of the 60 incidents come from one Shai-Hulud campaign wave, so the sample holds only about 5 independent attacks.",
+    "sourceId": "src-exp-publish-anomaly-analysis",
+    "quote": "Counted by campaign instead of by package, the sample contains about 5 independent attacks, far below the 15 the design intended.",
+    "stance": "context",
+    "epistemic": "fact",
+    "context": "Limits how far the supportive result generalises: it mainly shows that one worm campaign was detectable.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-18",
+    "claim": "A known hijack outside the sample (asyncapi) only modified an existing file, so it would not have triggered either signal.",
+    "sourceId": "src-exp-publish-anomaly-analysis",
+    "quote": "The asyncapi compromise (2026-07-14, outside the newest-60 sample) modified an existing file and would not have triggered either signal.",
+    "stance": "contradicts",
+    "epistemic": "inference",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
   }
 ]

@@ -150,6 +150,20 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261103-maintainer-publish-anomaly-alarm",
+    "at": "2026-11-03T23:03:23.085Z",
+    "subjectType": "idea",
+    "subjectId": "idea-maintainer-publish-anomaly-alarm",
+    "action": "advance",
+    "fromStatus": "advanced",
+    "toStatus": "advanced",
+    "rationale": "Stays advanced on weak but positive evidence. One large worm campaign would have been caught by an install-hook diff at a 1.3% false-positive rate, but the sample held about 5 independent attacks, and a known file-modification attack (asyncapi) would slip through. Next: a campaign-level replication.",
+    "actor": "director",
+    "attractiveness": 71,
+    "evidenceStrength": 50,
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261103-preregister-followup-engagement",
     "at": "2026-11-03T21:35:30Z",
     "subjectType": "experiment",
@@ -171,6 +185,18 @@
     "toStatus": "approved",
     "rationale": "Approved under the standing rule for automatable experiments. Design and thresholds were pre-registered in the revised procedure before any data collection.",
     "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-publish-anomaly-retrospective-2",
+    "at": "2026-11-03T23:03:22.418Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-publish-anomaly-retrospective",
+    "action": "complete",
+    "fromStatus": "approved",
+    "toStatus": "supported",
+    "rationale": "Pre-registered verdict: supported. 58/58 classifiable hijack incidents carried an install-hook signal (95% CI 94–100%), versus 1.3% of 1,119 legitimate releases. Caveat from the independence check: 56 of 60 incidents belong to one Shai-Hulud campaign wave, so this is about 5 independent attacks. Assumption a1 stays untested pending a campaign-level replication (pre-registered).",
+    "actor": "experiment designer",
     "provenance": "real"
   },
   {
