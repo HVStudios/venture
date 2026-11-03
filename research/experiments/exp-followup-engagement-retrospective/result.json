@@ -1,0 +1,1890 @@
+{
+  "experiment": "exp-followup-engagement-retrospective",
+  "executedAt": "2026-11-03T21:42:01.379Z",
+  "queries": {
+    "policy-closed": [
+      "is:pr is:closed is:unmerged \"AIToolPolicy\" created:2025-06-01..2026-11-01",
+      "is:pr is:closed is:unmerged \"policy on tool-generated content\" created:2025-06-01..2026-11-01",
+      "is:pr is:closed is:unmerged \"AI_POLICY.md\" created:2025-06-01..2026-11-01",
+      "is:pr is:closed is:unmerged \"AI slop\" in:comments created:2025-06-01..2026-11-01"
+    ],
+    "newcomer-merged": [
+      "repo:llvm/llvm-project is:pr is:merged \"Thank you for submitting a Pull Request (PR) to the LLVM Project\" created:2025-06-01..2026-11-01"
+    ],
+    "newcomer-closed": [
+      "repo:llvm/llvm-project is:pr is:closed is:unmerged \"Thank you for submitting a Pull Request (PR) to the LLVM Project\" -\"tool-generated content\" created:2025-06-01..2026-11-01"
+    ]
+  },
+  "stats": [
+    {
+      "group": "policy-closed",
+      "sampled": 120,
+      "withHumanComment": 87,
+      "replied": 52,
+      "replyRate": 0.5977011494252874,
+      "ci95": [
+        0.4926454875362509,
+        0.6944934444068237
+      ],
+      "medianHoursToReply": 1.9358333333333333
+    },
+    {
+      "group": "newcomer-merged",
+      "sampled": 120,
+      "withHumanComment": 92,
+      "replied": 83,
+      "replyRate": 0.9021739130434783,
+      "ci95": [
+        0.8244304748274598,
+        0.9476768355680261
+      ],
+      "medianHoursToReply": 6.1275
+    },
+    {
+      "group": "newcomer-closed",
+      "sampled": 1,
+      "withHumanComment": 1,
+      "replied": 1,
+      "replyRate": 1,
+      "ci95": [
+        0.20654329147389294,
+        1
+      ],
+      "medianHoursToReply": 10.085555555555555
+    }
+  ],
+  "verdict": {
+    "result": "inconclusive",
+    "reason": "difference is between the success and failure thresholds (59.8% vs 90.2%)"
+  },
+  "notes": [
+    "policy-closed: 120 PR(s) sampled",
+    "newcomer-merged: 120 PR(s) sampled",
+    "newcomer-closed: 1 PR(s) sampled"
+  ],
+  "rows": [
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236865",
+      "group": "policy-closed",
+      "author": "zjin-lcf",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 4.366666666666666
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230952",
+      "group": "policy-closed",
+      "author": "ozenyunus35",
+      "otherHumanComments": 6,
+      "authorReplied": true,
+      "hoursToReply": 10.750277777777777
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/229355",
+      "group": "policy-closed",
+      "author": "yujincheng08",
+      "otherHumanComments": 11,
+      "authorReplied": true,
+      "hoursToReply": 0.3269444444444444
+    },
+    {
+      "url": "https://github.com/pl0n3r/Condor/pull/624",
+      "group": "policy-closed",
+      "author": "pl0n3r",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/228873",
+      "group": "policy-closed",
+      "author": "ChenMiaoi",
+      "otherHumanComments": 9,
+      "authorReplied": true,
+      "hoursToReply": 1.9358333333333333
+    },
+    {
+      "url": "https://github.com/pl0n3r/Condor/pull/498",
+      "group": "policy-closed",
+      "author": "pl0n3r",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/227874",
+      "group": "policy-closed",
+      "author": "aaditya8979",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/226756",
+      "group": "policy-closed",
+      "author": "addmisol",
+      "otherHumanComments": 7,
+      "authorReplied": true,
+      "hoursToReply": 9.624722222222223
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/225913",
+      "group": "policy-closed",
+      "author": "ZacharyHenkel",
+      "otherHumanComments": 12,
+      "authorReplied": true,
+      "hoursToReply": 20.35472222222222
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/224954",
+      "group": "policy-closed",
+      "author": "rudchenkos",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 0.08388888888888889
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/219478",
+      "group": "policy-closed",
+      "author": "mdionisio",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 0.6638888888888889
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/217617",
+      "group": "policy-closed",
+      "author": "MarkVeerasingam",
+      "otherHumanComments": 5,
+      "authorReplied": true,
+      "hoursToReply": 95.01861111111111
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/215480",
+      "group": "policy-closed",
+      "author": "akash-manna-sky",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/215151",
+      "group": "policy-closed",
+      "author": "M001N",
+      "otherHumanComments": 2,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/214653",
+      "group": "policy-closed",
+      "author": "akash-manna-sky",
+      "otherHumanComments": 4,
+      "authorReplied": true,
+      "hoursToReply": 0.6402777777777777
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/213238",
+      "group": "policy-closed",
+      "author": "mdionisio",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 6.175277777777778
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/575",
+      "group": "policy-closed",
+      "author": "amd-genmingz",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/212264",
+      "group": "policy-closed",
+      "author": "AdityaOP007",
+      "otherHumanComments": 9,
+      "authorReplied": true,
+      "hoursToReply": 0.2025
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/524",
+      "group": "policy-closed",
+      "author": "amd-genmingz",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/210514",
+      "group": "policy-closed",
+      "author": "Joel-Wwalker",
+      "otherHumanComments": 6,
+      "authorReplied": true,
+      "hoursToReply": 18.435833333333335
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/457",
+      "group": "policy-closed",
+      "author": "BoarQing",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/assimp/assimp/pull/6728",
+      "group": "policy-closed",
+      "author": "kimkulling",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/pypa/pip/pull/14137",
+      "group": "policy-closed",
+      "author": "apoorvdarshan",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 0.7072222222222222
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/437",
+      "group": "policy-closed",
+      "author": "lishixlnx",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/424",
+      "group": "policy-closed",
+      "author": "edelaye",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/206222",
+      "group": "policy-closed",
+      "author": "lzto",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 0.2627777777777778
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/205749",
+      "group": "policy-closed",
+      "author": "Peter9606",
+      "otherHumanComments": 12,
+      "authorReplied": true,
+      "hoursToReply": 0.5497222222222222
+    },
+    {
+      "url": "https://github.com/NixOS/nixpkgs/pull/534657",
+      "group": "policy-closed",
+      "author": "fzakaria",
+      "otherHumanComments": 140,
+      "authorReplied": true,
+      "hoursToReply": 0.875
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/392",
+      "group": "policy-closed",
+      "author": "amd-genmingz",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/circt/pull/10711",
+      "group": "policy-closed",
+      "author": "AmurG",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/circt/pull/10693",
+      "group": "policy-closed",
+      "author": "AmurG",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/205051",
+      "group": "policy-closed",
+      "author": "tangyuan0821",
+      "otherHumanComments": 16,
+      "authorReplied": true,
+      "hoursToReply": 2.6033333333333335
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/204635",
+      "group": "policy-closed",
+      "author": "jon-gibney",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 44.62583333333333
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/203474",
+      "group": "policy-closed",
+      "author": "AntonyCJ30",
+      "otherHumanComments": 7,
+      "authorReplied": true,
+      "hoursToReply": 0.1425
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/202556",
+      "group": "policy-closed",
+      "author": "dlgus8648",
+      "otherHumanComments": 14,
+      "authorReplied": true,
+      "hoursToReply": 0.9355555555555556
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/202267",
+      "group": "policy-closed",
+      "author": "playerC",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 2.1066666666666665
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/292",
+      "group": "policy-closed",
+      "author": "fhanuman",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/202093",
+      "group": "policy-closed",
+      "author": "clearnature",
+      "otherHumanComments": 51,
+      "authorReplied": true,
+      "hoursToReply": 10.71888888888889
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/201810",
+      "group": "policy-closed",
+      "author": "clearnature",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 11.504722222222222
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/201734",
+      "group": "policy-closed",
+      "author": "clearnature",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 4.976388888888889
+    },
+    {
+      "url": "https://github.com/YosysHQ/yosys/pull/5931",
+      "group": "policy-closed",
+      "author": "singjyuwong",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 4.755833333333333
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/277",
+      "group": "policy-closed",
+      "author": "amd-genmingz",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/201079",
+      "group": "policy-closed",
+      "author": "ankurrj7",
+      "otherHumanComments": 9,
+      "authorReplied": true,
+      "hoursToReply": 6.969444444444444
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/269",
+      "group": "policy-closed",
+      "author": "lishixlnx",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/268",
+      "group": "policy-closed",
+      "author": "amd-genmingz",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/249",
+      "group": "policy-closed",
+      "author": "zz002",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/199053",
+      "group": "policy-closed",
+      "author": "mygitljf",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 0.8983333333333333
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/198168",
+      "group": "policy-closed",
+      "author": "lux-QAQ",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 7.393055555555556
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/197888",
+      "group": "policy-closed",
+      "author": "moaedy",
+      "otherHumanComments": 5,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/apache/kyuubi/pull/7452",
+      "group": "policy-closed",
+      "author": "wangzhigang1999",
+      "otherHumanComments": 24,
+      "authorReplied": true,
+      "hoursToReply": 11.178055555555556
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/197102",
+      "group": "policy-closed",
+      "author": "atetubou",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 29.862222222222222
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/196744",
+      "group": "policy-closed",
+      "author": "PlutoDog95",
+      "otherHumanComments": 2,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/196654",
+      "group": "policy-closed",
+      "author": "nataliakokoromyti",
+      "otherHumanComments": 2,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/192827",
+      "group": "policy-closed",
+      "author": "nakasan617",
+      "otherHumanComments": 8,
+      "authorReplied": true,
+      "hoursToReply": 37.25527777777778
+    },
+    {
+      "url": "https://github.com/llvm/llvm-test-suite/pull/379",
+      "group": "policy-closed",
+      "author": "loopacino",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 1.3427777777777778
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/190617",
+      "group": "policy-closed",
+      "author": "martin0413133",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/188865",
+      "group": "policy-closed",
+      "author": "avikivity",
+      "otherHumanComments": 7,
+      "authorReplied": true,
+      "hoursToReply": 35.153333333333336
+    },
+    {
+      "url": "https://github.com/rust-lang/rfcs/pull/3936",
+      "group": "policy-closed",
+      "author": "traviscross",
+      "otherHumanComments": 63,
+      "authorReplied": true,
+      "hoursToReply": 0.013888888888888888
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/188619",
+      "group": "policy-closed",
+      "author": "royitaqi",
+      "otherHumanComments": 14,
+      "authorReplied": true,
+      "hoursToReply": 11.870555555555555
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/188467",
+      "group": "policy-closed",
+      "author": "suoyuan666",
+      "otherHumanComments": 31,
+      "authorReplied": true,
+      "hoursToReply": 0.16027777777777777
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/187370",
+      "group": "policy-closed",
+      "author": "Serosh-commits",
+      "otherHumanComments": 10,
+      "authorReplied": true,
+      "hoursToReply": 0.8663888888888889
+    },
+    {
+      "url": "https://github.com/ma3ke/molly/pull/21",
+      "group": "policy-closed",
+      "author": "yesint",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 1.2266666666666666
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/184967",
+      "group": "policy-closed",
+      "author": "midhuncodes7",
+      "otherHumanComments": 20,
+      "authorReplied": true,
+      "hoursToReply": 178.65472222222223
+    },
+    {
+      "url": "https://github.com/p4lang/.github/pull/3",
+      "group": "policy-closed",
+      "author": "Dscano",
+      "otherHumanComments": 6,
+      "authorReplied": true,
+      "hoursToReply": 47.367222222222225
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/180868",
+      "group": "policy-closed",
+      "author": "victorvianna",
+      "otherHumanComments": 14,
+      "authorReplied": true,
+      "hoursToReply": 0.9008333333333334
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/180350",
+      "group": "policy-closed",
+      "author": "rmkhurana28",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/180325",
+      "group": "policy-closed",
+      "author": "mugiwaraluffy56",
+      "otherHumanComments": 3,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/180007",
+      "group": "policy-closed",
+      "author": "Devanshi-cmd",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 2.859722222222222
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/179896",
+      "group": "policy-closed",
+      "author": "SakshamSinghal20",
+      "otherHumanComments": 5,
+      "authorReplied": true,
+      "hoursToReply": 1.456388888888889
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/179484",
+      "group": "policy-closed",
+      "author": "llukito",
+      "otherHumanComments": 2,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/179233",
+      "group": "policy-closed",
+      "author": "llukito",
+      "otherHumanComments": 2,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/178654",
+      "group": "policy-closed",
+      "author": "mugiwaraluffy56",
+      "otherHumanComments": 7,
+      "authorReplied": true,
+      "hoursToReply": 46.513888888888886
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/177449",
+      "group": "policy-closed",
+      "author": "rojer",
+      "otherHumanComments": 4,
+      "authorReplied": true,
+      "hoursToReply": 1.6197222222222223
+    },
+    {
+      "url": "https://github.com/swiftlang/indexstore-db/pull/266",
+      "group": "policy-closed",
+      "author": "DPrakashhh",
+      "otherHumanComments": 52,
+      "authorReplied": true,
+      "hoursToReply": 0.8986111111111111
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67087",
+      "group": "policy-closed",
+      "author": "mwjouini",
+      "otherHumanComments": 2,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67086",
+      "group": "policy-closed",
+      "author": "mwjouini",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67085",
+      "group": "policy-closed",
+      "author": "mwjouini",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67084",
+      "group": "policy-closed",
+      "author": "mwjouini",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67083",
+      "group": "policy-closed",
+      "author": "mwjouini",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67082",
+      "group": "policy-closed",
+      "author": "mwjouini",
+      "otherHumanComments": 2,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67081",
+      "group": "policy-closed",
+      "author": "mwjouini",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67080",
+      "group": "policy-closed",
+      "author": "mwjouini",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67079",
+      "group": "policy-closed",
+      "author": "mwjouini",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67078",
+      "group": "policy-closed",
+      "author": "mwjouini",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/numba/numba/pull/10750",
+      "group": "policy-closed",
+      "author": "Whning0513",
+      "otherHumanComments": 2,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/numba/numba/pull/10749",
+      "group": "policy-closed",
+      "author": "Whning0513",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/numba/numba/pull/10748",
+      "group": "policy-closed",
+      "author": "Whning0513",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/numba/numba/pull/10747",
+      "group": "policy-closed",
+      "author": "Whning0513",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/numba/numba/pull/10746",
+      "group": "policy-closed",
+      "author": "Whning0513",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/numba/numba/pull/10745",
+      "group": "policy-closed",
+      "author": "Whning0513",
+      "otherHumanComments": 2,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/numba/numba/pull/10743",
+      "group": "policy-closed",
+      "author": "karlhillx",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/OSGeo/gdal/pull/14586",
+      "group": "policy-closed",
+      "author": "bscholer",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 0.54
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23065",
+      "group": "policy-closed",
+      "author": "aryanraj45",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23064",
+      "group": "policy-closed",
+      "author": "aryanraj45",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23063",
+      "group": "policy-closed",
+      "author": "alexander-akait",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23062",
+      "group": "policy-closed",
+      "author": "aryanraj45",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 1.2905555555555555
+    },
+    {
+      "url": "https://github.com/pomerium/pomerium/pull/6952",
+      "group": "policy-closed",
+      "author": "desimone",
+      "otherHumanComments": 2,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/pomerium/pomerium/pull/6951",
+      "group": "policy-closed",
+      "author": "desimone",
+      "otherHumanComments": 5,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/Weft-Rust/Weft/pull/48",
+      "group": "policy-closed",
+      "author": "ahlansantos",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/webpack/schema-utils/pull/243",
+      "group": "policy-closed",
+      "author": "alexander-akait",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/degoya/rCommander/pull/3",
+      "group": "policy-closed",
+      "author": "dependabot[bot]",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/Rakosn1cek/Mise-browser/pull/30",
+      "group": "policy-closed",
+      "author": "tecfu",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/HiDiHo01/mijn-liander/pull/66",
+      "group": "policy-closed",
+      "author": "coderabbitai[bot]",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 0.021666666666666667
+    },
+    {
+      "url": "https://github.com/HiDiHo01/mijn-liander/pull/65",
+      "group": "policy-closed",
+      "author": "coderabbitai[bot]",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 0.021944444444444444
+    },
+    {
+      "url": "https://github.com/claudiocebpaz/odd-board/pull/11",
+      "group": "policy-closed",
+      "author": "claudiocebpaz",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/Weft-Rust/Weft/pull/31",
+      "group": "policy-closed",
+      "author": "aRandomDev220",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/Weft-Rust/Weft/pull/25",
+      "group": "policy-closed",
+      "author": "aRandomDev220",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/nautechsystems/nautilus_trader/pull/5516",
+      "group": "policy-closed",
+      "author": "Tickwhiz",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/nautechsystems/nautilus_trader/pull/5513",
+      "group": "policy-closed",
+      "author": "Tickwhiz",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/conniecombs/SumaFile/pull/38",
+      "group": "policy-closed",
+      "author": "dependabot[bot]",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/getplumber/plumber/pull/582",
+      "group": "policy-closed",
+      "author": "Exypte",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23015",
+      "group": "policy-closed",
+      "author": "NUAAwqy",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23012",
+      "group": "policy-closed",
+      "author": "creaumond",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/MDAnalysis/mdanalysis/pull/5539",
+      "group": "policy-closed",
+      "author": "swf1996120",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/MDAnalysis/mdanalysis/pull/5537",
+      "group": "policy-closed",
+      "author": "swf1996120",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23010",
+      "group": "policy-closed",
+      "author": "alexander-akait",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/MDAnalysis/mdanalysis/pull/5535",
+      "group": "policy-closed",
+      "author": "swf1996120",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23002",
+      "group": "policy-closed",
+      "author": "alexander-akait",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/bitcoin/bitcoin/pull/36693",
+      "group": "policy-closed",
+      "author": "b1tflyyyy",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 0.4127777777777778
+    },
+    {
+      "url": "https://github.com/nautechsystems/nautilus_trader/pull/5500",
+      "group": "policy-closed",
+      "author": "ZXEducation",
+      "otherHumanComments": 2,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237798",
+      "group": "newcomer-merged",
+      "author": "anshithayeruva",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 1.8777777777777778
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237717",
+      "group": "newcomer-merged",
+      "author": "TheCloudlet",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237561",
+      "group": "newcomer-merged",
+      "author": "anshithayeruva",
+      "otherHumanComments": 12,
+      "authorReplied": true,
+      "hoursToReply": 10.686111111111112
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237560",
+      "group": "newcomer-merged",
+      "author": "Schottkyc137",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237522",
+      "group": "newcomer-merged",
+      "author": "mdionisio",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237415",
+      "group": "newcomer-merged",
+      "author": "zac77z",
+      "otherHumanComments": 5,
+      "authorReplied": true,
+      "hoursToReply": 1.0625
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237414",
+      "group": "newcomer-merged",
+      "author": "MaxBrandtner",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237223",
+      "group": "newcomer-merged",
+      "author": "leogarci42",
+      "otherHumanComments": 4,
+      "authorReplied": true,
+      "hoursToReply": 0.5908333333333333
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237128",
+      "group": "newcomer-merged",
+      "author": "phongndo",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236861",
+      "group": "newcomer-merged",
+      "author": "estebanpauli",
+      "otherHumanComments": 8,
+      "authorReplied": true,
+      "hoursToReply": 0.5680555555555555
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236644",
+      "group": "newcomer-merged",
+      "author": "zishu0131-png",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236643",
+      "group": "newcomer-merged",
+      "author": "zishu0131-png",
+      "otherHumanComments": 5,
+      "authorReplied": true,
+      "hoursToReply": 0.1825
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236618",
+      "group": "newcomer-merged",
+      "author": "R3nzTheCodeGOD",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 8.254722222222222
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236605",
+      "group": "newcomer-merged",
+      "author": "pjmc-oliveira",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 10.346666666666666
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236599",
+      "group": "newcomer-merged",
+      "author": "ZuseZ4",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236509",
+      "group": "newcomer-merged",
+      "author": "Maoyao233",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 5.038611111111111
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236455",
+      "group": "newcomer-merged",
+      "author": "linhandev",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 0.7236111111111111
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236435",
+      "group": "newcomer-merged",
+      "author": "sriharinmn",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 0.86
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236434",
+      "group": "newcomer-merged",
+      "author": "sendaoYan",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 3.266111111111111
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236377",
+      "group": "newcomer-merged",
+      "author": "NathanVoldman",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236327",
+      "group": "newcomer-merged",
+      "author": "rintaro",
+      "otherHumanComments": 4,
+      "authorReplied": true,
+      "hoursToReply": 2.0388888888888888
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236286",
+      "group": "newcomer-merged",
+      "author": "mishmish-dev",
+      "otherHumanComments": 5,
+      "authorReplied": true,
+      "hoursToReply": 0.3163888888888889
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236087",
+      "group": "newcomer-merged",
+      "author": "yashaggarwal85d",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 55.70055555555555
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236018",
+      "group": "newcomer-merged",
+      "author": "iam28th",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235840",
+      "group": "newcomer-merged",
+      "author": "steelydylan",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 2.525
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235770",
+      "group": "newcomer-merged",
+      "author": "m05t4f4g",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 30.967222222222222
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235760",
+      "group": "newcomer-merged",
+      "author": "FireBurn",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 24.6975
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235759",
+      "group": "newcomer-merged",
+      "author": "FireBurn",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 24.458055555555557
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235758",
+      "group": "newcomer-merged",
+      "author": "FireBurn",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 24.204722222222223
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235755",
+      "group": "newcomer-merged",
+      "author": "TheD0ubleC",
+      "otherHumanComments": 2,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235713",
+      "group": "newcomer-merged",
+      "author": "adamtheturtle",
+      "otherHumanComments": 4,
+      "authorReplied": true,
+      "hoursToReply": 1.4630555555555556
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235553",
+      "group": "newcomer-merged",
+      "author": "mwdmwd",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 4.949722222222222
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235489",
+      "group": "newcomer-merged",
+      "author": "stuarthayhurst",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235483",
+      "group": "newcomer-merged",
+      "author": "Adam-Warlock09",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235445",
+      "group": "newcomer-merged",
+      "author": "aotodev",
+      "otherHumanComments": 6,
+      "authorReplied": true,
+      "hoursToReply": 1.0325
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235433",
+      "group": "newcomer-merged",
+      "author": "meinie0826",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 0.3511111111111111
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235427",
+      "group": "newcomer-merged",
+      "author": "Murthy-Manideep",
+      "otherHumanComments": 6,
+      "authorReplied": true,
+      "hoursToReply": 1.0580555555555555
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235417",
+      "group": "newcomer-merged",
+      "author": "ilyas-mallah",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 8.096944444444444
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235348",
+      "group": "newcomer-merged",
+      "author": "KarthikayC",
+      "otherHumanComments": 10,
+      "authorReplied": true,
+      "hoursToReply": 1.7336111111111112
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235347",
+      "group": "newcomer-merged",
+      "author": "SamG101-Developer",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 11.794444444444444
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235342",
+      "group": "newcomer-merged",
+      "author": "ipranjalks",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235313",
+      "group": "newcomer-merged",
+      "author": "lsh4711",
+      "otherHumanComments": 6,
+      "authorReplied": true,
+      "hoursToReply": 53.85944444444444
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235249",
+      "group": "newcomer-merged",
+      "author": "shalseth",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235248",
+      "group": "newcomer-merged",
+      "author": "shalseth",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 0.7430555555555556
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235247",
+      "group": "newcomer-merged",
+      "author": "shalseth",
+      "otherHumanComments": 4,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235040",
+      "group": "newcomer-merged",
+      "author": "RodrigoCastiel",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234918",
+      "group": "newcomer-merged",
+      "author": "o3wiz",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 15.44
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234862",
+      "group": "newcomer-merged",
+      "author": "towoe",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234836",
+      "group": "newcomer-merged",
+      "author": "yx64",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 6.1275
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234755",
+      "group": "newcomer-merged",
+      "author": "aotodev",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 5.5761111111111115
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234731",
+      "group": "newcomer-merged",
+      "author": "osguzik",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234698",
+      "group": "newcomer-merged",
+      "author": "mykyta5",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234685",
+      "group": "newcomer-merged",
+      "author": "prashantsinghaniya",
+      "otherHumanComments": 4,
+      "authorReplied": true,
+      "hoursToReply": 32.83222222222222
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234511",
+      "group": "newcomer-merged",
+      "author": "amd-bbandlap",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234280",
+      "group": "newcomer-merged",
+      "author": "theihor",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234210",
+      "group": "newcomer-merged",
+      "author": "PathriVidyaPraveen",
+      "otherHumanComments": 10,
+      "authorReplied": true,
+      "hoursToReply": 0.6180555555555556
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234134",
+      "group": "newcomer-merged",
+      "author": "dyslexicsteak",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 11.934722222222222
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234132",
+      "group": "newcomer-merged",
+      "author": "cosminconst",
+      "otherHumanComments": 6,
+      "authorReplied": true,
+      "hoursToReply": 0.0625
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234076",
+      "group": "newcomer-merged",
+      "author": "ADSWT518",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 0.3883333333333333
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234061",
+      "group": "newcomer-merged",
+      "author": "hassila",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 0.5183333333333333
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233979",
+      "group": "newcomer-merged",
+      "author": "leeliu103",
+      "otherHumanComments": 5,
+      "authorReplied": true,
+      "hoursToReply": 21.391944444444444
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233939",
+      "group": "newcomer-merged",
+      "author": "Sajid-Zubair",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233923",
+      "group": "newcomer-merged",
+      "author": "hchataing",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 0.06777777777777778
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233900",
+      "group": "newcomer-merged",
+      "author": "adamant-pwn",
+      "otherHumanComments": 5,
+      "authorReplied": true,
+      "hoursToReply": 151.32861111111112
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233869",
+      "group": "newcomer-merged",
+      "author": "simhyeongseop",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 0.5772222222222222
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233763",
+      "group": "newcomer-merged",
+      "author": "Misasasa",
+      "otherHumanComments": 8,
+      "authorReplied": true,
+      "hoursToReply": 16.2575
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233754",
+      "group": "newcomer-merged",
+      "author": "karmeh01",
+      "otherHumanComments": 5,
+      "authorReplied": true,
+      "hoursToReply": 2.375
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233746",
+      "group": "newcomer-merged",
+      "author": "Anoymoguy",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233666",
+      "group": "newcomer-merged",
+      "author": "xy-mc",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233627",
+      "group": "newcomer-merged",
+      "author": "halehri",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 8.110833333333334
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233617",
+      "group": "newcomer-merged",
+      "author": "jdduke",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233552",
+      "group": "newcomer-merged",
+      "author": "zac77z",
+      "otherHumanComments": 11,
+      "authorReplied": true,
+      "hoursToReply": 30.919444444444444
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233527",
+      "group": "newcomer-merged",
+      "author": "dineshtavva23",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 0.44333333333333336
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233523",
+      "group": "newcomer-merged",
+      "author": "lydkim",
+      "otherHumanComments": 6,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233414",
+      "group": "newcomer-merged",
+      "author": "akasakariko",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 35.589166666666664
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233299",
+      "group": "newcomer-merged",
+      "author": "abhijithnair062",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233099",
+      "group": "newcomer-merged",
+      "author": "keichi",
+      "otherHumanComments": 7,
+      "authorReplied": true,
+      "hoursToReply": 13.319722222222222
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233098",
+      "group": "newcomer-merged",
+      "author": "cornaud",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 1.0491666666666666
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233089",
+      "group": "newcomer-merged",
+      "author": "Shivanshyyy",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233042",
+      "group": "newcomer-merged",
+      "author": "HeliC829",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 1.6188888888888888
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232883",
+      "group": "newcomer-merged",
+      "author": "nfedotenko",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 19.97277777777778
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232791",
+      "group": "newcomer-merged",
+      "author": "ahlag",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 0.19916666666666666
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232754",
+      "group": "newcomer-merged",
+      "author": "m-amirpour",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232738",
+      "group": "newcomer-merged",
+      "author": "jiawan-wang",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 9.007222222222222
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232622",
+      "group": "newcomer-merged",
+      "author": "relaxcn",
+      "otherHumanComments": 5,
+      "authorReplied": true,
+      "hoursToReply": 34.09222222222222
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232582",
+      "group": "newcomer-merged",
+      "author": "frokaikan",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 91.29638888888888
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232570",
+      "group": "newcomer-merged",
+      "author": "henrimarconni",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 10.846944444444444
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232371",
+      "group": "newcomer-merged",
+      "author": "karmeh01",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232314",
+      "group": "newcomer-merged",
+      "author": "lezcano",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 3.729722222222222
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232313",
+      "group": "newcomer-merged",
+      "author": "lezcano",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 1.5552777777777778
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232266",
+      "group": "newcomer-merged",
+      "author": "awayzjj",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232171",
+      "group": "newcomer-merged",
+      "author": "chenzheng1030",
+      "otherHumanComments": 6,
+      "authorReplied": true,
+      "hoursToReply": 22.134444444444444
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232169",
+      "group": "newcomer-merged",
+      "author": "Talb057",
+      "otherHumanComments": 7,
+      "authorReplied": true,
+      "hoursToReply": 59.458333333333336
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232149",
+      "group": "newcomer-merged",
+      "author": "milenaa3110",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 21.43638888888889
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232109",
+      "group": "newcomer-merged",
+      "author": "mthbhuiyan",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232100",
+      "group": "newcomer-merged",
+      "author": "nhan-ngo-usf",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 1.0686111111111112
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232066",
+      "group": "newcomer-merged",
+      "author": "mrowan137",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 0.21305555555555555
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231925",
+      "group": "newcomer-merged",
+      "author": "matthew-j-code",
+      "otherHumanComments": 9,
+      "authorReplied": true,
+      "hoursToReply": 0.9827777777777778
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231820",
+      "group": "newcomer-merged",
+      "author": "loveysuby",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 35.814166666666665
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231816",
+      "group": "newcomer-merged",
+      "author": "Anastasia-Artemova",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 109.83305555555556
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231751",
+      "group": "newcomer-merged",
+      "author": "yumasansansan",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231750",
+      "group": "newcomer-merged",
+      "author": "dvandercorp",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231724",
+      "group": "newcomer-merged",
+      "author": "milenaa3110",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 31.00111111111111
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231704",
+      "group": "newcomer-merged",
+      "author": "mark-zilber",
+      "otherHumanComments": 4,
+      "authorReplied": true,
+      "hoursToReply": 8.464166666666667
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231607",
+      "group": "newcomer-merged",
+      "author": "nv3ifu",
+      "otherHumanComments": 19,
+      "authorReplied": true,
+      "hoursToReply": 14.893333333333333
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231550",
+      "group": "newcomer-merged",
+      "author": "kkdwvd",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 2.921111111111111
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231359",
+      "group": "newcomer-merged",
+      "author": "your-moon",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231331",
+      "group": "newcomer-merged",
+      "author": "Golf0ned",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 41.10166666666667
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231229",
+      "group": "newcomer-merged",
+      "author": "carodewig",
+      "otherHumanComments": 1,
+      "authorReplied": true,
+      "hoursToReply": 15.680555555555555
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231191",
+      "group": "newcomer-merged",
+      "author": "max-winkler",
+      "otherHumanComments": 4,
+      "authorReplied": true,
+      "hoursToReply": 4.797777777777778
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231079",
+      "group": "newcomer-merged",
+      "author": "wjhwjhn",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 1.763611111111111
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231066",
+      "group": "newcomer-merged",
+      "author": "chenzheng1030",
+      "otherHumanComments": 34,
+      "authorReplied": true,
+      "hoursToReply": 2.3847222222222224
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231014",
+      "group": "newcomer-merged",
+      "author": "Aayuparm",
+      "otherHumanComments": 4,
+      "authorReplied": true,
+      "hoursToReply": 16.559166666666666
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230975",
+      "group": "newcomer-merged",
+      "author": "SomnusGG",
+      "otherHumanComments": 0,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230974",
+      "group": "newcomer-merged",
+      "author": "SomnusGG",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 16.5675
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230869",
+      "group": "newcomer-merged",
+      "author": "Ved235",
+      "otherHumanComments": 6,
+      "authorReplied": true,
+      "hoursToReply": 49.141666666666666
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230823",
+      "group": "newcomer-merged",
+      "author": "visitorckw",
+      "otherHumanComments": 1,
+      "authorReplied": false
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230627",
+      "group": "newcomer-merged",
+      "author": "siddhp1",
+      "otherHumanComments": 3,
+      "authorReplied": true,
+      "hoursToReply": 1.856111111111111
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230555",
+      "group": "newcomer-merged",
+      "author": "halehri",
+      "otherHumanComments": 23,
+      "authorReplied": true,
+      "hoursToReply": 27.955277777777777
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230493",
+      "group": "newcomer-merged",
+      "author": "JRP-arm",
+      "otherHumanComments": 2,
+      "authorReplied": true,
+      "hoursToReply": 95.10055555555556
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230256",
+      "group": "newcomer-closed",
+      "author": "atharvaajmera",
+      "otherHumanComments": 14,
+      "authorReplied": true,
+      "hoursToReply": 10.085555555555555
+    }
+  ]
+}
