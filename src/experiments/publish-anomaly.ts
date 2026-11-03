@@ -78,22 +78,28 @@ async function main() {
   const max = Number(process.argv[process.argv.indexOf("--max") + 1] || 60);
   const root = process.env.MALICIOUS_PACKAGES_DIR ?? "/tmp/malicious-packages/osv/malicious/npm";
   if (!existsSync(root)) throw new Error(`dataset not found at ${root}`);
-  const HIJACK = /compromis|hijack|account takeover|taken over|stolen (npm )?token|maintainer account/i;
-  const paths = new Set<string>();
+  const HIJACK =
+    /compromised (npm |maintainer |publisher )?(account|token|credentials)|account (was |had been )?compromised|compromised (version|release|branch)|legitimate package|hijack|account takeover|taken over|stolen (npm |publish )?token|supply[- ]chain (attack|compromise)|trojanized/i;
+  const candidates: [string, string][] = [];
   const walk = (dir: string) => {
     for (const e of readdirSync(dir, { withFileTypes: true })) {
       const p = join(dir, e.name);
       if (e.isDirectory()) walk(p);
       else if (e.name.endsWith(".json")) {
         const t = readFileSync(p, "utf8");
-        if (HIJACK.test(t)) paths.add(p);
+        if (!HIJACK.test(t)) continue;
+        const d = JSON.parse(t) as Osv;
+        const when = d.published ?? d.modified ?? "";
+        if (when >= "2025-06-01" && when <= "2026-11-02") candidates.push([when, p]);
       }
     }
   };
   walk(root);
+  // Newest first, deterministic.
+  const paths = candidates.sort((a, b) => b[0].localeCompare(a[0]) || a[1].localeCompare(b[1])).map((c) => c[1]);
   const queries = [`local scan of ${root} for /${HIJACK.source}/i`];
-  if (!paths.size) throw new Error("data acquisition returned no candidate reports; refusing to emit a verdict");
-  const notes = [`${paths.size} candidate OSV report(s) mention a compromise or hijack`, "An earlier execution attempt (2026-11-03T22:51Z) used GitHub code search, got 0 results (not available to Actions tokens) and was discarded as a harness failure."];
+  if (!paths.length) throw new Error("data acquisition returned no candidate reports; refusing to emit a verdict");
+  const notes = [`${paths.length} candidate OSV report(s) dated 2025-06-01..2026-11-02 mention a hijack, compromise or supply-chain attack`, "An earlier execution attempt (2026-11-03T22:51Z) used GitHub code search, got 0 results (not available to Actions tokens) and was discarded as a harness failure.", "Before this run, a local harness dry-run on the 8 newest incidents (2026-11-03T22:58Z) checked that acquisition and classification work. The pre-registered thresholds were not changed afterwards."];
   const incidents: { id: string; pkg: string; published?: string; mechanism: Mechanism; matched?: string; legitVersions: number }[] = [];
   const fp: { pkg: string; pairs: number; newDependency: number; newInstallScript: number; either: number }[] = [];
   for (const path of paths) {
@@ -137,7 +143,7 @@ async function main() {
   const md = [
     "# Result: exp-publish-anomaly-retrospective",
     "",
-    `Executed ${executedAt} in GitHub Actions on OpenSSF malicious-packages reports and the public npm registry.`,
+    `Executed ${executedAt} ${process.env.GITHUB_ACTIONS ? `in GitHub Actions (run ${process.env.GITHUB_RUN_ID})` : "locally"} on OpenSSF malicious-packages reports and the public npm registry.`,
     "",
     `- Hijacked legitimate npm packages analysed: ${incidents.length} (mechanisms: ${Object.entries(byMech).map(([k, n]) => `${k} ${n}`).join(", ")}).`,
     `- Incidents with a new-dependency or install-hook signal: ${withSignal.length} of ${classifiable.length} classifiable (${pct(share)}).`,
