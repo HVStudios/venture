@@ -36,7 +36,7 @@
     "outcome": {
       "recordedAt": "2026-11-03T21:44:31.614Z",
       "result": "inconclusive",
-      "summary": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49\u201369%) versus 90.2% for merged LLVM newcomers (83/92, CI 82\u201395%): a clear gap, but short of the \u2264 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
+      "summary": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49–69%) versus 90.2% for merged LLVM newcomers (83/92, CI 82–95%): a clear gap, but short of the ≤ 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
       "evidenceIds": [
         "ev-ai-burden-33",
         "ev-ai-burden-34"
@@ -78,7 +78,7 @@
       "ifFailure": "Reject or park the alarm; investigate behaviour-based detection instead."
     },
     "executionMode": "automatable",
-    "status": "proposed",
+    "status": "approved",
     "createdInRun": "run-20261103-agent-supply-chain-1",
     "provenance": "real"
   }
