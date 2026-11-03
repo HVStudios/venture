@@ -56,6 +56,48 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261103-agent-supply-chain-1-adaptive-cooldown-policies",
+    "at": "2026-11-03T22:45:20Z",
+    "runId": "run-20261103-agent-supply-chain-1",
+    "subjectType": "idea",
+    "subjectId": "idea-adaptive-cooldown-policies",
+    "action": "create",
+    "toStatus": "parked",
+    "rationale": "Parked. Adoption data shows a preference for simple defaults over fine-grained controls. Revisit if cooldown users report problems with uniform delays.",
+    "actor": "director",
+    "attractiveness": 41,
+    "evidenceStrength": 36,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-agent-supply-chain-1-maintainer-publish-anomaly-alarm",
+    "at": "2026-11-03T22:45:20Z",
+    "runId": "run-20261103-agent-supply-chain-1",
+    "subjectType": "idea",
+    "subjectId": "idea-maintainer-publish-anomaly-alarm",
+    "action": "create",
+    "toStatus": "advanced",
+    "rationale": "Advanced to a cheap retrospective check. The problem is severe and well evidenced, and the key assumption (structural anomalies) can be tested on public data before building anything.",
+    "actor": "director",
+    "attractiveness": 71,
+    "evidenceStrength": 55,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-agent-supply-chain-1-standalone-release-age-cooldown",
+    "at": "2026-11-03T22:45:20Z",
+    "runId": "run-20261103-agent-supply-chain-1",
+    "subjectType": "idea",
+    "subjectId": "idea-standalone-release-age-cooldown",
+    "action": "create",
+    "toStatus": "rejected",
+    "rationale": "Rejected. Release-age delays are already being solved by the platforms themselves (pnpm, Dependabot; npm and bun requests open). There's no durable gap for a standalone tool.",
+    "actor": "director",
+    "attractiveness": 56,
+    "evidenceStrength": 28,
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261103-contributor-comprehension-gate",
     "at": "2026-11-03T21:44:32.255Z",
     "subjectType": "idea",
@@ -103,7 +145,7 @@
     "action": "complete",
     "fromStatus": "approved",
     "toStatus": "inconclusive",
-    "rationale": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49–69%) versus 90.2% for merged LLVM newcomers (83/92, CI 82–95%): a clear gap, but short of the ≤ 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
+    "rationale": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49\u201369%) versus 90.2% for merged LLVM newcomers (83/92, CI 82\u201395%): a clear gap, but short of the \u2264 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
     "actor": "experiment designer",
     "provenance": "real"
   },
@@ -147,6 +189,18 @@
     "actor": "director",
     "attractiveness": 68,
     "evidenceStrength": 83,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-revise-publish-anomaly-retrospective",
+    "at": "2026-11-03T22:47:06Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-publish-anomaly-retrospective",
+    "action": "revise",
+    "fromStatus": "proposed",
+    "toStatus": "proposed",
+    "rationale": "Revised before any analysis. The malicious versions were removed from the registries, so the design now uses OpenSSF malicious-packages (OSV) reports for mechanisms and npm per-version metadata for false positives. Thresholds fixed in advance.",
+    "actor": "experiment designer",
     "provenance": "real"
   }
 ]

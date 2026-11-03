@@ -1,0 +1,910 @@
+{
+  "run": {
+    "id": "run-20261103-agent-supply-chain-1",
+    "themeId": "theme-oss-supply-chain-small-maintainers",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-03T22:41:00Z",
+    "completedAt": "2026-11-03T22:45:20Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "Triaged 63 collector signals for this theme"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "8 sources cited (all collector-retrieved), 15 evidence items, 4 contradicting"
+      },
+      {
+        "name": "invent",
+        "status": "ok",
+        "notes": "3 concepts"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "5 objections, 1 fatal"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "notes": "No overlap with the other theme's ideas"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "1 advanced, 1 parked, 1 rejected"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "1 automatable $0 retrospective"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 14,
+      "sourcesCited": 8,
+      "problemsFound": 3,
+      "ideasGenerated": 3,
+      "ideasAdvanced": 1,
+      "ideasRejected": 1,
+      "ideasParked": 1,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "triage of data/signals.json for theme-oss-supply-chain-small-maintainers (collected 2026-11-03 by research-ops)"
+    ],
+    "errors": [
+      "Vendor write-ups (StepSecurity, Socket) and news coverage weren't fetchable from this session (network policy), so incident details rely on the captured issue text."
+    ],
+    "limitations": [
+      "Evidence is limited to collector-captured excerpts (first ~1,200 characters of each issue or abstract).",
+      "Commercial alternatives were named but not examined, so the competitive gap for the advanced idea is uncertain.",
+      "Selection bias: the signals are the most-reacted incidents, which are the largest ones. Small maintainers' everyday experience is under-represented.",
+      "The advanced idea's experiment can't run on live registry data: the malicious versions have been removed. It stays proposed, not approved, until an archive source is identified."
+    ],
+    "usage": {
+      "note": "Interactive Claude Code session under the owner's subscription; sources retrieved by the GitHub Actions collector. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [
+    {
+      "id": "theme-oss-supply-chain-small-maintainers",
+      "name": "Supply-chain security for small open-source maintainers",
+      "description": "Security burdens (account takeover, malicious dependencies, release signing, provenance) that fall on volunteer maintainers without security teams, and which lightweight tools could reduce them.",
+      "mode": "focused",
+      "keywords": [
+        "maintainer account takeover",
+        "npm supply chain attack",
+        "trusted publishing",
+        "malicious package"
+      ],
+      "status": "active",
+      "createdAt": "2026-11-03",
+      "notes": "First research session completed (run-20261103-agent-supply-chain-1).",
+      "provenance": "real"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-axios-postmortem-2026",
+      "url": "https://github.com/axios/axios/issues/10636",
+      "title": "Post Mortem: axios npm supply chain compromise",
+      "publisher": "axios maintainers (GitHub issue)",
+      "publishedAt": "2026-04-02",
+      "retrievedAt": "2026-11-03T21:47:31.775Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "# Post Mortem: axios npm supply chain compromise **Date:** March 31, 2026 **Author:** Jason Saayman **Status:** Remediation in progress On March 31, 2026, two malicious versions of axios (1.14.1 and 0.30.4) were published to the npm registry through my compromised account. Both versions injected a dependency called `plain-crypto-js@4.2.1` that installed a remote access trojan on macOS, Windows, and Linux. The malicious versions were live for about 3 hours before being removed. ## Are you affected? Check your lockfile: ```bash grep -E \"axios@(1\\.14\\.1|0\\.30\\.4)|plain-crypto-js\" package-lock.json yarn.lock 2>/dev/null ``` If anything comes back, treat that machine as compromised: 1. Downgrade to `axios@1.14.0` (or `0.30.3` for 0.x users) 2. Delete `node_modules/plain-crypto-js/` 3. Rotate every secret, token, and credential on that machine 4. Check your network logs for connections to `sfrclak[.]com` or `142.11.206.73` on port 8000 5. If this happened on a CI runner, rotate any secrets that were injected during the affected build If you were already pinned to a clean version and didn't run a fresh install between 00:21 and 03:15 UTC on March 31, you're fine. For detailed remediation …",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-litellm-malicious-pth",
+      "url": "https://github.com/BerriAI/litellm/issues/24512",
+      "title": "[Security]: CRITICAL: Malicious litellm_init.pth in litellm 1.82.8 — credential stealer",
+      "publisher": "litellm community report (GitHub issue)",
+      "publishedAt": "2026-03-24",
+      "retrievedAt": "2026-11-03T21:47:31.775Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "[LITELLM TEAM] - For updates from the team, please see: https://github.com/BerriAI/litellm/issues/24518 --- # [Security]: CRITICAL: Malicious `litellm_init.pth` in litellm 1.82.8 PyPI package — credential stealer ## Summary The `litellm==1.82.8` wheel package on PyPI contains a malicious `.pth` file (`litellm_init.pth`, 34,628 bytes) that **automatically executes a credential-stealing script every time the Python interpreter starts** — no `import litellm` required. This is a supply chain compromise. The malicious file is listed in the package's own `RECORD`: ``` litellm_init.pth,sha256=ceNa7wMJnNHy1kRnNCcwJaFjWX3pORLfMh7xGL8TUjg,34628 ``` ## Reproduction ```bash pip download litellm==1.82.8 --no-deps -d /tmp/check python3 -c \" import zipfile, os whl = '/tmp/check/' + [f for f in os.listdir('/tmp/check') if f.endswith('.whl')][0] with zipfile.ZipFile(whl) as z: pth = [n for n in z.namelist() if n.endswith('.pth')] print('PTH files:', pth) for p in pth: print(z.read(p)[:300]) \" ``` You will see `litellm_init.pth` containing: ```python import os, subprocess, sys; subprocess.Popen([sys.executable, \"-c\", \"import base64; exec(base64.b64decode('...'))\"]) ``` ## Malicious Behavior (full an…",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-asyncapi-specs-compromise",
+      "url": "https://github.com/asyncapi/spec-json-schemas/issues/656",
+      "title": "[SECURITY] Malicious versions published via compromised alpha branch - @asyncapi/specs@6.11.2 (latest) and 6.11.2-alpha.1",
+      "publisher": "asyncapi (GitHub issue)",
+      "publishedAt": "2026-07-14",
+      "retrievedAt": "2026-11-03T21:47:31.775Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "## Summary Two malicious versions of `@asyncapi/specs` were published to npm on **2026-07-14** via a compromised `alpha` branch. The current `latest` tag points to the malicious version. This is a second, separate compromise from the same attacker who simultaneously hit the `asyncapi/generator` monorepo. The `asyncapi/spec-json-schemas` maintainers are **victims** - this is a branch write token compromise, not an insider issue. --- ## Affected Versions | Package | Version | Tag | Status | |---------|---------|-----|--------| | `@asyncapi/specs` | `6.11.2-alpha.1` | `alpha` | MALICIOUS | | `@asyncapi/specs` | `6.11.2` | `latest` | MALICIOUS - currently live | **Safe version:** `6.11.1` (published 2026-01-30, last clean version) --- ## What Happened The attacker (GitHub user ID 148100, login `invalid-email-address`) gained write access to the `alpha` branch and made **5 commits between 07:51-08:04 UTC** under the identity **\"Your Name\" / you@example.com** (unconfigured git placeholder - not any real contributor). The key injection commit is `61a930fca7241763e306e31abe4557221e84a76c` (08:04 UTC), which modified `index.js` (+26 lines prepended at top of file). The release workflow (`.g…",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-tanstack-compromised-releases",
+      "url": "https://github.com/TanStack/router/issues/7383",
+      "title": "Several npm latest releases were compromised",
+      "publisher": "TanStack (GitHub issue)",
+      "publishedAt": "2026-05-11",
+      "retrievedAt": "2026-11-03T21:47:31.775Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "We are actively investigating this security incident and sharing our findings here: www.stepsecurity.io/blog/mini-shai-hulud-is-back-a-self-spreading-supply-chain-attack-hits-the-npm-ecosystem",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "limitations": "Body is a pointer to a vendor write-up (StepSecurity), which was not fetched."
+    },
+    {
+      "id": "src-bun-min-release-age-fr",
+      "url": "https://github.com/oven-sh/bun/issues/22679",
+      "title": "Add support to minimumReleaseAge and minimumReleaseAgeExclude for `bun install`",
+      "publisher": "Bun issue tracker (feature request)",
+      "publishedAt": "2025-09-15",
+      "retrievedAt": "2026-11-03T21:47:31.775Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "### What is the problem this feature would solve? Recently, the npm ecosystem has suffered several supply chain attacks where popular packages were compromised right after release. Other package managers, such as [pnpm](https://github.com/pnpm/pnpm/pull/9921), have already introduced a configuration option to mitigate these risks. The feature request is to add support in Bun for two new configuration options (ideally to `.npmrc` and `bunfig.toml`: `minimumReleaseAge`: Defines the minimum amount of minutes that must pass after a version is published before Bun will install it. Example: ``` minimumReleaseAge: 1440 ``` This would ensure that only packages released at least one day ago are installable. `minimumReleaseAgeExclude`: A list of dependencies that should be excluded from the above restriction and always install the latest version immediately. Example: ``` minimumReleaseAgeExclude: - webpack ``` **References** pnpm PR introducing the feature: [#9921](https://github.com/pnpm/pnpm/pull/9921) ### What is the feature you are proposing to solve the problem? Prevent supply chain attacks: in most incidents, malicious packages are discovered and removed from the registry within minute…",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-npm-min-release-age-fr",
+      "url": "https://github.com/npm/cli/issues/8570",
+      "title": "(FR): Implement 'minimumReleaseAge' as a security feature (like pnpm added recently)",
+      "publisher": "npm CLI issue tracker (feature request)",
+      "publishedAt": "2025-09-16",
+      "retrievedAt": "2026-11-03T21:47:31.775Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "Ref: * https://github.com/pnpm/pnpm/issues/9921 * https://pnpm.io/settings#minimumreleaseage * https://socket.dev/blog/pnpm-10-16-adds-new-setting-for-delayed-dependency-updates * https://github.com/raineorshine/npm-check-updates/issues/1532 Copying an excerpt from one of these articles: > Following a wave of high-profile supply chain attacks targeting popular npm packages, pnpm has shipped a new minimumReleaseAge setting in [version 10.16](https://pnpm.io/blog/releases/10.16) that delays installation of newly published packages.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "limitations": "Quotes a Socket.dev blog post. The claim about pnpm comes from that secondary source."
+    },
+    {
+      "id": "src-arxiv-2609-16605",
+      "url": "https://arxiv.org/abs/2609.16605v1",
+      "title": "An Exploratory Study of Dependabot Cooldown Adoption in Open-Source GitHub Projects",
+      "publisher": "arXiv",
+      "publishedAt": "2026-09-15",
+      "retrievedAt": "2026-11-03T21:47:31.775Z",
+      "sourceType": "paper",
+      "excerpt": "Automated dependency updates can rapidly propagate malicious package releases before maintainers and the broader community have enough time to detect them. In July 2025, GitHub made Dependabot cooldown generally available as a defense against software supply chain attacks. However, the effects of its early adoption remain unknown. In this exploratory study, we empirically examine how popular open-source GitHub repositories adopt and configure the feature and investigate their motivations. We find that security concerns motivated 83 of 92 adoption events with known motivations. Security linter warnings triggered 43 of 75 security-only adoptions. Among 251 ecosystems within repositories that retained cooldown, 97.2% set a general delay. Of these, 64.3% used seven days, while use of each update type setting was below 10%. Early adopters therefore favor simple default delays over fine-grained controls. These findings suggest that tools could provide robust defaults reflecting ecosystem support and reserve fine-grained controls for dependencies with clear update priorities.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "limitations": "arXiv preprint (not peer-reviewed). Abstract only."
+    },
+    {
+      "id": "src-npm-oidc-initial-publish",
+      "url": "https://github.com/npm/cli/issues/8544",
+      "title": "Allow publishing initial version with OIDC",
+      "publisher": "npm CLI issue tracker (feature request)",
+      "publishedAt": "2025-09-01",
+      "retrievedAt": "2026-11-03T21:47:31.775Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "Support for trusted publishing using OIDC was added in #8336 and is now [generally available](https://github.blog/changelog/2025-07-31-npm-trusted-publishing-with-oidc-is-generally-available/). One limitation is that it's not possible to publish the initial version of a package using OIDC, it needs to be published manually or using a token. It would be great to support OIDC publishing for the initial version. The main problem is that the UI on npmjs.com requires a package to exist before you can edit its settings and enable OIDC publishing. PyPI solved this by allowing a package to be configured with OIDC publishing before it exists. This was mentioned by @Shegox on https://github.com/orgs/community/discussions/127011#discussioncomment-9933132.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-sc-01",
+      "claim": "Two malicious axios releases were published through the maintainer's compromised npm account (March 2026).",
+      "sourceId": "src-axios-postmortem-2026",
+      "quote": "two malicious versions of axios (1.14.1 and 0.30.4) were published to the npm registry through my compromised account",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-compromised-maintainer-credentials-ship-malware"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-02",
+      "claim": "The malicious axios versions worked by adding a new dependency that installed a remote access trojan.",
+      "sourceId": "src-axios-postmortem-2026",
+      "quote": "Both versions injected a dependency called `plain-crypto-js@4.2.1` that installed a remote access trojan",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-compromised-maintainer-credentials-ship-malware"
+      ],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-03",
+      "claim": "The malicious axios versions were live for about 3 hours.",
+      "sourceId": "src-axios-postmortem-2026",
+      "quote": "The malicious versions were live for about 3 hours before being removed.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-new-releases-installed-before-detection"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-04",
+      "claim": "litellm 1.82.8 on PyPI shipped a credential-stealing .pth file (reported March 2026, 1,118 reactions).",
+      "sourceId": "src-litellm-malicious-pth",
+      "quote": "This is a supply chain compromise.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-compromised-maintainer-credentials-ship-malware"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-05",
+      "claim": "The litellm attack added a file type (.pth) that executes on interpreter start, a change visible in package contents.",
+      "sourceId": "src-litellm-malicious-pth",
+      "quote": "contains a malicious `.pth` file",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-compromised-maintainer-credentials-ship-malware"
+      ],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-06",
+      "claim": "asyncapi's malicious releases came from a compromised branch write token, not from a maintainer acting in bad faith.",
+      "sourceId": "src-asyncapi-specs-compromise",
+      "quote": "this is a branch write token compromise, not an insider issue",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-compromised-maintainer-credentials-ship-malware"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-07",
+      "claim": "TanStack reported that several of its npm latest releases were compromised (May 2026).",
+      "sourceId": "src-tanstack-compromised-releases",
+      "quote": "We are actively investigating this security incident",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-compromised-maintainer-credentials-ship-malware"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real",
+      "limitations": "The issue body only links to a vendor write-up; details are not in the captured text."
+    },
+    {
+      "id": "ev-sc-08",
+      "claim": "Bun users request a minimum-release-age setting because popular packages were compromised right after release.",
+      "sourceId": "src-bun-min-release-age-fr",
+      "quote": "Recently, the npm ecosystem has suffered several supply chain attacks where popular packages were compromised right after release.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-new-releases-installed-before-detection"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-09",
+      "claim": "pnpm already ships a configuration option that delays installing new releases.",
+      "sourceId": "src-bun-min-release-age-fr",
+      "quote": "Other package managers, such as [pnpm](https://github.com/pnpm/pnpm/pull/9921), have already introduced a configuration option to mitigate these risks.",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-standalone-release-age-cooldown"
+      ],
+      "competitorIds": [
+        "comp-pnpm-minimum-release-age"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-10",
+      "claim": "npm CLI users request the same release-age delay (241 reactions), citing a wave of high-profile attacks on popular npm packages.",
+      "sourceId": "src-npm-min-release-age-fr",
+      "quote": "Following a wave of high-profile supply chain attacks targeting popular npm packages",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-new-releases-installed-before-detection"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real",
+      "limitations": "The quoted sentence comes from a Socket.dev article reproduced in the issue."
+    },
+    {
+      "id": "ev-sc-11",
+      "claim": "GitHub's Dependabot has offered a cooldown (update delay) against supply-chain attacks since July 2025.",
+      "sourceId": "src-arxiv-2609-16605",
+      "quote": "In July 2025, GitHub made Dependabot cooldown generally available as a defense against software supply chain attacks.",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-standalone-release-age-cooldown"
+      ],
+      "competitorIds": [
+        "comp-dependabot-cooldown"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-12",
+      "claim": "Security concerns motivated 83 of 92 Dependabot cooldown adoptions with known motivation.",
+      "sourceId": "src-arxiv-2609-16605",
+      "quote": "We find that security concerns motivated 83 of 92 adoption events with known motivations.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-new-releases-installed-before-detection"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-13",
+      "claim": "Adopters of cooldowns prefer simple default delays; fine-grained controls are rarely used (<10%).",
+      "sourceId": "src-arxiv-2609-16605",
+      "quote": "Early adopters therefore favor simple default delays over fine-grained controls.",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-adaptive-cooldown-policies"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-14",
+      "claim": "npm trusted publishing (OIDC) can't be used for a package's first version, so maintainers still need a token or a manual publish.",
+      "sourceId": "src-npm-oidc-initial-publish",
+      "quote": "it's not possible to publish the initial version of a package using OIDC, it needs to be published manually or using a token",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-trusted-publishing-bootstrap-gap"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-15",
+      "claim": "PyPI lets trusted publishing be configured before a package exists, so the gap is specific to npm.",
+      "sourceId": "src-npm-oidc-initial-publish",
+      "quote": "PyPI solved this by allowing a package to be configured with OIDC publishing before it exists.",
+      "stance": "context",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-trusted-publishing-bootstrap-gap"
+      ],
+      "ideaIds": [],
+      "competitorIds": [
+        "comp-registry-trusted-publishing"
+      ],
+      "provenance": "real"
+    }
+  ],
+  "problems": [
+    {
+      "id": "prob-compromised-maintainer-credentials-ship-malware",
+      "title": "Compromised maintainer credentials ship malware in popular packages",
+      "statement": "Attackers who gain a maintainer's registry account, publish token or branch write access publish malicious versions of widely used packages. The 2026 cases include a remote access trojan via axios and a credential stealer via litellm. The maintainers are victims, not insiders.",
+      "themeIds": [
+        "theme-oss-supply-chain-small-maintainers"
+      ],
+      "affectedUsers": "Maintainers of popular packages and every downstream consumer",
+      "severityNote": "Critical: RATs and credential stealers in packages with very large reach.",
+      "frequencyNote": "At least four distinct incidents in the 2026 signals (axios, litellm, asyncapi, TanStack).",
+      "status": "investigating",
+      "discoveredInRun": "run-20261103-agent-supply-chain-1",
+      "firstSeen": "2026-11-03T22:45:20Z",
+      "lastUpdated": "2026-11-03T22:45:20Z",
+      "provenance": "real"
+    },
+    {
+      "id": "prob-new-releases-installed-before-detection",
+      "title": "New releases are installed before malicious ones are detected",
+      "statement": "Automated and manual installs pick up new versions immediately. Malicious releases are typically detected and removed within hours, but not before they've been installed. Users ask package managers for release-age delays.",
+      "themeIds": [
+        "theme-oss-supply-chain-small-maintainers"
+      ],
+      "affectedUsers": "Application and CI pipelines consuming open-source packages",
+      "severityNote": "High.",
+      "frequencyNote": "Popular feature requests on bun (693 reactions) and npm (241).",
+      "status": "investigating",
+      "discoveredInRun": "run-20261103-agent-supply-chain-1",
+      "firstSeen": "2026-11-03T22:45:20Z",
+      "lastUpdated": "2026-11-03T22:45:20Z",
+      "provenance": "real"
+    },
+    {
+      "id": "prob-trusted-publishing-bootstrap-gap",
+      "title": "Trusted publishing can't be bootstrapped on npm",
+      "statement": "npm's OIDC trusted publishing can't be used for a package's first version, so maintainers must still create a token or publish manually. That keeps long-lived credentials around.",
+      "themeIds": [
+        "theme-oss-supply-chain-small-maintainers"
+      ],
+      "affectedUsers": "Maintainers publishing new npm packages",
+      "severityNote": "Medium: a narrow gap, but it keeps tokens in circulation.",
+      "frequencyNote": "One feature request (103 reactions).",
+      "status": "open",
+      "discoveredInRun": "run-20261103-agent-supply-chain-1",
+      "firstSeen": "2026-11-03T22:45:20Z",
+      "lastUpdated": "2026-11-03T22:45:20Z",
+      "provenance": "real"
+    }
+  ],
+  "competitors": [
+    {
+      "id": "comp-pnpm-minimum-release-age",
+      "name": "pnpm minimumReleaseAge",
+      "kind": "platform-feature",
+      "url": "https://github.com/pnpm/pnpm/pull/9921",
+      "description": "pnpm setting that refuses to install versions younger than a configured age.",
+      "strengths": [
+        "Built into the package manager"
+      ],
+      "weaknesses": [
+        "pnpm users only (npm and bun requested it separately)"
+      ],
+      "sourceIds": [
+        "src-bun-min-release-age-fr",
+        "src-npm-min-release-age-fr"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "comp-dependabot-cooldown",
+      "name": "Dependabot cooldown",
+      "kind": "platform-feature",
+      "description": "Delays Dependabot update PRs for newly published versions. GA since July 2025.",
+      "strengths": [
+        "Free on GitHub; adopted mainly for security"
+      ],
+      "weaknesses": [
+        "Only affects automated update PRs, not manual installs (inference)"
+      ],
+      "sourceIds": [
+        "src-arxiv-2609-16605"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "comp-registry-trusted-publishing",
+      "name": "Registry trusted publishing (OIDC) on npm and PyPI",
+      "kind": "platform-feature",
+      "description": "Publish from CI using short-lived OIDC identity instead of long-lived tokens.",
+      "strengths": [
+        "Removes stored publish tokens"
+      ],
+      "weaknesses": [
+        "npm can't use it for a package's first version"
+      ],
+      "sourceIds": [
+        "src-npm-oidc-initial-publish"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "comp-supply-chain-security-vendors",
+      "name": "Commercial supply-chain scanners (e.g. Socket, StepSecurity)",
+      "kind": "product",
+      "description": "Vendors that analyse new package releases and publish incident write-ups. Named in the captured issues; their products were not examined in this run.",
+      "strengths": [
+        "Already detect and report incidents quickly (inference from their write-ups being cited)"
+      ],
+      "weaknesses": [
+        "Not examined in this run"
+      ],
+      "sourceIds": [
+        "src-tanstack-compromised-releases",
+        "src-npm-min-release-age-fr"
+      ],
+      "provenance": "real"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "idea-standalone-release-age-cooldown",
+      "title": "Standalone release-age cooldown tool for all package managers",
+      "summary": "A wrapper or proxy that blocks installing package versions younger than N days, for ecosystems whose package managers don't support it yet.",
+      "problemIds": [
+        "prob-new-releases-installed-before-detection"
+      ],
+      "themeIds": [
+        "theme-oss-supply-chain-small-maintainers"
+      ],
+      "targetUsers": "Application teams consuming npm/PyPI packages",
+      "solution": "A registry proxy or install wrapper that filters out versions published within the last N days, with an allowlist for urgent fixes.",
+      "competitorIds": [
+        "comp-pnpm-minimum-release-age",
+        "comp-dependabot-cooldown"
+      ],
+      "differentiation": "Covers package managers that haven't shipped the feature yet.",
+      "feasibility": "Simple to build: registry metadata includes publish times.",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "Package managers will be slow to ship native release-age settings",
+          "criticality": "high",
+          "status": "weakened"
+        }
+      ],
+      "risks": [
+        "Platform features make it obsolete",
+        "Delays urgent security fixes"
+      ],
+      "nextSteps": [],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "pnpm and Dependabot already ship cooldowns, and npm and bun have popular open requests. A standalone tool competes with imminent free platform features.",
+          "severity": "fatal",
+          "evidenceIds": [
+            "ev-sc-09",
+            "ev-sc-11"
+          ],
+          "status": "accepted"
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 4,
+            "rationale": "Account compromises shipped RATs and credential stealers."
+          },
+          "frequency": {
+            "score": 3,
+            "rationale": "Several major incidents in 2026."
+          },
+          "userValue": {
+            "score": 3,
+            "rationale": "Real, but available elsewhere."
+          },
+          "competitiveGap": {
+            "score": 1,
+            "rationale": "Free platform features exist or are requested upstream."
+          },
+          "differentiation": {
+            "score": 1,
+            "rationale": "None beyond coverage."
+          },
+          "feasibility": {
+            "score": 5,
+            "rationale": "Trivial."
+          },
+          "costComplexity": {
+            "score": 5,
+            "rationale": "Small."
+          },
+          "userAccess": {
+            "score": 3,
+            "rationale": "Developers are reachable."
+          },
+          "validationCost": {
+            "score": 4,
+            "rationale": "Cheap."
+          }
+        },
+        "assessedAt": "2026-11-03T22:45:20Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "rejected",
+      "statusRationale": "Rejected. Release-age delays are already being solved by the platforms themselves (pnpm, Dependabot; npm and bun requests open). There's no durable gap for a standalone tool.",
+      "relatedIdeaIds": [],
+      "epistemic": "hypothesis",
+      "createdInRun": "run-20261103-agent-supply-chain-1",
+      "createdAt": "2026-11-03T22:45:20Z",
+      "updatedAt": "2026-11-03T22:45:20Z",
+      "provenance": "real"
+    },
+    {
+      "id": "idea-maintainer-publish-anomaly-alarm",
+      "title": "Publish-anomaly alarm for maintainers",
+      "summary": "Watches the registry for new versions of a maintainer's own packages and alerts within minutes if a release differs structurally from the maintainer's normal releases.",
+      "problemIds": [
+        "prob-compromised-maintainer-credentials-ship-malware"
+      ],
+      "themeIds": [
+        "theme-oss-supply-chain-small-maintainers"
+      ],
+      "targetUsers": "Maintainers of widely used packages without a security team",
+      "solution": "Subscribe to registry publish events for owned packages. Diff each release against the previous one for structural anomalies: newly added dependencies, new install-time hooks or .pth files, publishing outside the usual CI identity, missing provenance. Notify the maintainer through an out-of-band channel they control.",
+      "competitorIds": [
+        "comp-supply-chain-security-vendors",
+        "comp-registry-trusted-publishing"
+      ],
+      "differentiation": "Maintainer-side and owner-verified: the maintainer can say 'that wasn't me' fastest. Vendors protect consumers after analysis.",
+      "feasibility": "Registry metadata and tarballs are public. The anomaly rules are simple diffs.",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "Malicious releases from compromised accounts differ structurally (new deps, new hooks, different publisher) from the maintainer's normal releases",
+          "criticality": "high",
+          "status": "untested"
+        },
+        {
+          "id": "a2",
+          "text": "Maintainers would notice and react faster than the current detection time (~3 h for axios)",
+          "criticality": "high",
+          "status": "untested"
+        },
+        {
+          "id": "a3",
+          "text": "Commercial scanners don't already offer free maintainer-side alerts",
+          "criticality": "medium",
+          "status": "untested"
+        }
+      ],
+      "risks": [
+        "An attacker who controls the account may also control the notification channel",
+        "Vendors may already cover this (not examined)",
+        "False positives on legitimate dependency changes"
+      ],
+      "nextSteps": [
+        "Retrospective check on the documented incidents (experiment)",
+        "Survey vendor offerings for maintainer-side alerts"
+      ],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "Commercial scanners (Socket, StepSecurity) already analyse new releases quickly. The marginal value of maintainer-side alerts is unproven.",
+          "severity": "major",
+          "evidenceIds": [],
+          "status": "open"
+        },
+        {
+          "id": "obj-2",
+          "text": "If the attacker controls the maintainer's account or email, alerts may be intercepted.",
+          "severity": "major",
+          "evidenceIds": [],
+          "status": "open",
+          "response": "Use a channel registered independently of the registry account."
+        },
+        {
+          "id": "obj-3",
+          "text": "Some attacks, like asyncapi's branch-token compromise, publish through the normal CI pipeline, so publisher-identity checks wouldn't fire.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-sc-06"
+          ],
+          "status": "open"
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 5,
+            "rationale": "RATs and credential stealers in packages with huge reach."
+          },
+          "frequency": {
+            "score": 3,
+            "rationale": "Several high-profile incidents in 2026 in the captured signals."
+          },
+          "userValue": {
+            "score": 4,
+            "rationale": "Could cut exposure windows, if anomalies are detectable."
+          },
+          "competitiveGap": {
+            "score": 3,
+            "rationale": "Vendors exist; maintainer-side free alerts not verified either way."
+          },
+          "differentiation": {
+            "score": 3,
+            "rationale": "Owner-verified signal."
+          },
+          "feasibility": {
+            "score": 4,
+            "rationale": "Public metadata, simple diffs."
+          },
+          "costComplexity": {
+            "score": 4,
+            "rationale": "A small service or Action."
+          },
+          "userAccess": {
+            "score": 3,
+            "rationale": "Maintainers are reachable on GitHub."
+          },
+          "validationCost": {
+            "score": 5,
+            "rationale": "Can be checked retrospectively on public registry data for $0."
+          }
+        },
+        "assessedAt": "2026-11-03T22:45:20Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "advanced",
+      "statusRationale": "Advanced to a cheap retrospective check. The problem is severe and well evidenced, and the key assumption (structural anomalies) can be tested on public data before building anything.",
+      "relatedIdeaIds": [],
+      "epistemic": "hypothesis",
+      "createdInRun": "run-20261103-agent-supply-chain-1",
+      "createdAt": "2026-11-03T22:45:20Z",
+      "updatedAt": "2026-11-03T22:45:20Z",
+      "provenance": "real"
+    },
+    {
+      "id": "idea-adaptive-cooldown-policies",
+      "title": "Adaptive per-dependency cooldown policies",
+      "summary": "Recommends a cooldown per dependency based on risk (maintainer count, publish patterns), instead of one fixed delay.",
+      "problemIds": [
+        "prob-new-releases-installed-before-detection"
+      ],
+      "themeIds": [
+        "theme-oss-supply-chain-small-maintainers"
+      ],
+      "targetUsers": "Teams using Dependabot, Renovate or pnpm cooldowns",
+      "solution": "Analyse the dependency graph and suggest per-package cooldown and exclusion lists.",
+      "competitorIds": [
+        "comp-dependabot-cooldown",
+        "comp-pnpm-minimum-release-age"
+      ],
+      "differentiation": "Risk-tuned rather than uniform delays.",
+      "feasibility": "Feasible, but needs risk data.",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "Teams want fine-grained cooldown controls",
+          "criticality": "high",
+          "status": "weakened"
+        }
+      ],
+      "risks": [
+        "Users prefer simple defaults"
+      ],
+      "nextSteps": [],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "Early adopters overwhelmingly use one simple default delay; fine-grained settings are used by fewer than 10%.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-sc-13"
+          ],
+          "status": "accepted"
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 3,
+            "rationale": "Delays matter, but a uniform delay already captures most of the benefit."
+          },
+          "frequency": {
+            "score": 3,
+            "rationale": "Growing adoption."
+          },
+          "userValue": {
+            "score": 2,
+            "rationale": "Users prefer simple defaults."
+          },
+          "competitiveGap": {
+            "score": 2,
+            "rationale": "Platforms could add this easily."
+          },
+          "differentiation": {
+            "score": 2,
+            "rationale": "A tuning layer."
+          },
+          "feasibility": {
+            "score": 3,
+            "rationale": "Needs risk modelling."
+          },
+          "costComplexity": {
+            "score": 3,
+            "rationale": "Moderate."
+          },
+          "userAccess": {
+            "score": 3,
+            "rationale": "Reachable."
+          },
+          "validationCost": {
+            "score": 3,
+            "rationale": "Survey or usage data."
+          }
+        },
+        "assessedAt": "2026-11-03T22:45:20Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "parked",
+      "statusRationale": "Parked. Adoption data shows a preference for simple defaults over fine-grained controls. Revisit if cooldown users report problems with uniform delays.",
+      "relatedIdeaIds": [],
+      "epistemic": "hypothesis",
+      "createdInRun": "run-20261103-agent-supply-chain-1",
+      "createdAt": "2026-11-03T22:45:20Z",
+      "updatedAt": "2026-11-03T22:45:20Z",
+      "provenance": "real"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "exp-publish-anomaly-retrospective",
+      "ideaId": "idea-maintainer-publish-anomaly-alarm",
+      "title": "Would simple structural diffs have flagged the documented malicious releases?",
+      "hypothesis": "Each documented malicious release differs from the previous legitimate release by at least one simple structural signal: a new dependency, a new install-time hook or .pth file, or a missing or changed provenance attestation.",
+      "uncertainty": "Whether compromised-account releases are structurally anomalous (assumption a1). If they look like normal releases, a maintainer alarm can't work.",
+      "procedure": [
+        "Pre-registered before data collection.",
+        "Feasibility probe (2026-11-03T22:46Z, metadata only, before any analysis): the malicious versions axios 1.14.1 and @asyncapi/specs 6.11.2 have been removed from the npm registry, and litellm 1.82.8 returns 404 on PyPI. Archived copies or detailed diffs must come from a malware-archive dataset (e.g. the OpenSSF malicious-packages reports or vendor datasets). Identify that source before approving this experiment.",
+        "Incidents: axios 1.14.1 / 0.30.4, litellm 1.82.8, @asyncapi/specs 6.11.2, and the TanStack releases named in the vendor write-up, if version numbers can be identified from public sources.",
+        "For each, fetch registry metadata and, where still available, the package archive of the malicious and previous versions from the public npm/PyPI registries.",
+        "Compute the diffs: dependencies added, install scripts or .pth files added, provenance or attestation present vs absent, publisher identity.",
+        "Also diff 20 consecutive legitimate releases of the same packages, to estimate the false-positive rate."
+      ],
+      "successCriteria": [
+        "At least 3 of 4 analysable incidents trigger at least one signal",
+        "Fewer than 1 in 10 legitimate releases trigger a signal"
+      ],
+      "failureCriteria": [
+        "Fewer than half of the analysable incidents trigger any signal",
+        "Malicious versions were removed so thoroughly that fewer than 2 incidents can be analysed (inconclusive)",
+        "No archive source for removed malicious versions can be found (experiment not executable; revise or abandon)"
+      ],
+      "estimatedTime": "half a day of automated analysis",
+      "estimatedCostUsd": 0,
+      "resources": [
+        "Public npm and PyPI registry APIs"
+      ],
+      "expectedLearning": "Whether structural anomaly detection is a viable basis for maintainer-side alerts, and its false-positive cost.",
+      "nextSteps": {
+        "ifSuccess": "Survey existing vendor offerings for maintainer-side alerts before prototyping.",
+        "ifFailure": "Reject or park the alarm; investigate behaviour-based detection instead."
+      },
+      "executionMode": "automatable",
+      "status": "proposed",
+      "createdInRun": "run-20261103-agent-supply-chain-1",
+      "provenance": "real"
+    }
+  ],
+  "decisions": []
+}

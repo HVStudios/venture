@@ -36,13 +36,50 @@
     "outcome": {
       "recordedAt": "2026-11-03T21:44:31.614Z",
       "result": "inconclusive",
-      "summary": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49–69%) versus 90.2% for merged LLVM newcomers (83/92, CI 82–95%): a clear gap, but short of the ≤ 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
+      "summary": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49\u201369%) versus 90.2% for merged LLVM newcomers (83/92, CI 82\u201395%): a clear gap, but short of the \u2264 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
       "evidenceIds": [
         "ev-ai-burden-33",
         "ev-ai-burden-34"
       ]
     },
     "createdInRun": "run-20261103-agent-ai-contribution-burden",
+    "provenance": "real"
+  },
+  {
+    "id": "exp-publish-anomaly-retrospective",
+    "ideaId": "idea-maintainer-publish-anomaly-alarm",
+    "title": "Would simple structural diffs have flagged the documented malicious releases?",
+    "hypothesis": "Each documented malicious release differs from the previous legitimate release by at least one simple structural signal: a new dependency, a new install-time hook or .pth file, or a missing or changed provenance attestation.",
+    "uncertainty": "Whether compromised-account releases are structurally anomalous (assumption a1). If they look like normal releases, a maintainer alarm can't work.",
+    "procedure": [
+      "Pre-registered before data collection; revised after a metadata-only feasibility probe.",
+      "Feasibility probe (2026-11-03T22:46Z): the malicious versions have been removed from npm and PyPI. Archive source: OpenSSF malicious-packages (OSV) reports, which describe the injected mechanism per malicious version (e.g. MAL-2026-2307 axios, MAL-2026-2144 litellm, MAL-2025-190643 @asyncapi/specs).",
+      "Population: OSV entries from 2025-06-01 to 2026-11-01 for packages that still have at least 10 non-malicious versions on their registry (hijacked legitimate packages, not typosquats), up to 60 incidents.",
+      "Classify each incident's mechanism from the OSV text into: new dependency, new install-time script or hook (.pth, pre/postinstall), modification of existing files only, or unknown.",
+      "False positives: for the same npm packages, use public per-version registry metadata to count how often consecutive legitimate releases add a dependency or an install script.",
+      "Code goes under src/experiments/ and runs in the 'Run experiment' workflow; raw results are committed under research/experiments/."
+    ],
+    "successCriteria": [
+      "At least 60% of classifiable incidents involve a new dependency or install-time hook",
+      "Fewer than 10% of legitimate npm releases add a dependency or install script"
+    ],
+    "failureCriteria": [
+      "Fewer than 40% of classifiable incidents involve such signals (most attacks only modify existing files)",
+      "Fewer than 15 classifiable incidents (inconclusive)"
+    ],
+    "estimatedTime": "half a day of automated analysis",
+    "estimatedCostUsd": 0,
+    "resources": [
+      "Public npm and PyPI registry APIs"
+    ],
+    "expectedLearning": "Whether structural anomaly detection is a viable basis for maintainer-side alerts, and its false-positive cost.",
+    "nextSteps": {
+      "ifSuccess": "Survey existing vendor offerings for maintainer-side alerts before prototyping.",
+      "ifFailure": "Reject or park the alarm; investigate behaviour-based detection instead."
+    },
+    "executionMode": "automatable",
+    "status": "proposed",
+    "createdInRun": "run-20261103-agent-supply-chain-1",
     "provenance": "real"
   }
 ]
