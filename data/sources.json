@@ -108,6 +108,21 @@
     "provenance": "real"
   },
   {
+    "id": "src-arxiv-2609-16605",
+    "url": "https://arxiv.org/abs/2609.16605v1",
+    "title": "An Exploratory Study of Dependabot Cooldown Adoption in Open-Source GitHub Projects",
+    "publisher": "arXiv",
+    "publishedAt": "2026-09-15",
+    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "sourceType": "paper",
+    "excerpt": "Automated dependency updates can rapidly propagate malicious package releases before maintainers and the broader community have enough time to detect them. In July 2025, GitHub made Dependabot cooldown generally available as a defense against software supply chain attacks. However, the effects of its early adoption remain unknown. In this exploratory study, we empirically examine how popular open-source GitHub repositories adopt and configure the feature and investigate their motivations. We find that security concerns motivated 83 of 92 adoption events with known motivations. Security linter warnings triggered 43 of 75 security-only adoptions. Among 251 ecosystems within repositories that retained cooldown, 97.2% set a general delay. Of these, 64.3% used seven days, while use of each update type setting was below 10%. Early adopters therefore favor simple default delays over fine-grained controls. These findings suggest that tools could provide robust defaults reflecting ecosystem support and reserve fine-grained controls for dependencies with clear update priorities.",
+    "limitations": "arXiv preprint (not peer-reviewed). Abstract only.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-astropy-ai-pr-policy",
     "url": "https://github.com/astropy/astropy-project/issues/509",
     "title": "Astropy: Policy against AI-generated pull requests (#509)",
@@ -121,6 +136,48 @@
       "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-asyncapi-specs-compromise",
+    "url": "https://github.com/asyncapi/spec-json-schemas/issues/656",
+    "title": "[SECURITY] Malicious versions published via compromised alpha branch - @asyncapi/specs@6.11.2 (latest) and 6.11.2-alpha.1",
+    "publisher": "asyncapi (GitHub issue)",
+    "publishedAt": "2026-07-14",
+    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "## Summary Two malicious versions of `@asyncapi/specs` were published to npm on **2026-07-14** via a compromised `alpha` branch. The current `latest` tag points to the malicious version. This is a second, separate compromise from the same attacker who simultaneously hit the `asyncapi/generator` monorepo. The `asyncapi/spec-json-schemas` maintainers are **victims** - this is a branch write token compromise, not an insider issue. --- ## Affected Versions | Package | Version | Tag | Status | |---------|---------|-----|--------| | `@asyncapi/specs` | `6.11.2-alpha.1` | `alpha` | MALICIOUS | | `@asyncapi/specs` | `6.11.2` | `latest` | MALICIOUS - currently live | **Safe version:** `6.11.1` (published 2026-01-30, last clean version) --- ## What Happened The attacker (GitHub user ID 148100, login `invalid-email-address`) gained write access to the `alpha` branch and made **5 commits between 07:51-08:04 UTC** under the identity **\"Your Name\" / you@example.com** (unconfigured git placeholder - not any real contributor). The key injection commit is `61a930fca7241763e306e31abe4557221e84a76c` (08:04 UTC), which modified `index.js` (+26 lines prepended at top of file). The release workflow (`.g…",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-axios-postmortem-2026",
+    "url": "https://github.com/axios/axios/issues/10636",
+    "title": "Post Mortem: axios npm supply chain compromise",
+    "publisher": "axios maintainers (GitHub issue)",
+    "publishedAt": "2026-04-02",
+    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "# Post Mortem: axios npm supply chain compromise **Date:** March 31, 2026 **Author:** Jason Saayman **Status:** Remediation in progress On March 31, 2026, two malicious versions of axios (1.14.1 and 0.30.4) were published to the npm registry through my compromised account. Both versions injected a dependency called `plain-crypto-js@4.2.1` that installed a remote access trojan on macOS, Windows, and Linux. The malicious versions were live for about 3 hours before being removed. ## Are you affected? Check your lockfile: ```bash grep -E \"axios@(1\\.14\\.1|0\\.30\\.4)|plain-crypto-js\" package-lock.json yarn.lock 2>/dev/null ``` If anything comes back, treat that machine as compromised: 1. Downgrade to `axios@1.14.0` (or `0.30.3` for 0.x users) 2. Delete `node_modules/plain-crypto-js/` 3. Rotate every secret, token, and credential on that machine 4. Check your network logs for connections to `sfrclak[.]com` or `142.11.206.73` on port 8000 5. If this happened on a CI runner, rotate any secrets that were injected during the affected build If you were already pinned to a clean version and didn't run a fresh install between 00:21 and 03:15 UTC on March 31, you're fine. For detailed remediation …",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-bun-min-release-age-fr",
+    "url": "https://github.com/oven-sh/bun/issues/22679",
+    "title": "Add support to minimumReleaseAge and minimumReleaseAgeExclude for `bun install`",
+    "publisher": "Bun issue tracker (feature request)",
+    "publishedAt": "2025-09-15",
+    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "### What is the problem this feature would solve? Recently, the npm ecosystem has suffered several supply chain attacks where popular packages were compromised right after release. Other package managers, such as [pnpm](https://github.com/pnpm/pnpm/pull/9921), have already introduced a configuration option to mitigate these risks. The feature request is to add support in Bun for two new configuration options (ideally to `.npmrc` and `bunfig.toml`: `minimumReleaseAge`: Defines the minimum amount of minutes that must pass after a version is published before Bun will install it. Example: ``` minimumReleaseAge: 1440 ``` This would ensure that only packages released at least one day ago are installable. `minimumReleaseAgeExclude`: A list of dependencies that should be excluded from the above restriction and always install the latest version immediately. Example: ``` minimumReleaseAgeExclude: - webpack ``` **References** pnpm PR introducing the feature: [#9921](https://github.com/pnpm/pnpm/pull/9921) ### What is the feature you are proposing to solve the problem? Prevent supply chain attacks: in most incidents, malicious packages are discovered and removed from the registry within minute…",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },
@@ -300,6 +357,20 @@
     "provenance": "real"
   },
   {
+    "id": "src-litellm-malicious-pth",
+    "url": "https://github.com/BerriAI/litellm/issues/24512",
+    "title": "[Security]: CRITICAL: Malicious litellm_init.pth in litellm 1.82.8 — credential stealer",
+    "publisher": "litellm community report (GitHub issue)",
+    "publishedAt": "2026-03-24",
+    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "[LITELLM TEAM] - For updates from the team, please see: https://github.com/BerriAI/litellm/issues/24518 --- # [Security]: CRITICAL: Malicious `litellm_init.pth` in litellm 1.82.8 PyPI package — credential stealer ## Summary The `litellm==1.82.8` wheel package on PyPI contains a malicious `.pth` file (`litellm_init.pth`, 34,628 bytes) that **automatically executes a credential-stealing script every time the Python interpreter starts** — no `import litellm` required. This is a supply chain compromise. The malicious file is listed in the package's own `RECORD`: ``` litellm_init.pth,sha256=ceNa7wMJnNHy1kRnNCcwJaFjWX3pORLfMh7xGL8TUjg,34628 ``` ## Reproduction ```bash pip download litellm==1.82.8 --no-deps -d /tmp/check python3 -c \" import zipfile, os whl = '/tmp/check/' + [f for f in os.listdir('/tmp/check') if f.endswith('.whl')][0] with zipfile.ZipFile(whl) as z: pth = [n for n in z.namelist() if n.endswith('.pth')] print('PTH files:', pth) for p in pth: print(z.read(p)[:300]) \" ``` You will see `litellm_init.pth` containing: ```python import os, subprocess, sys; subprocess.Popen([sys.executable, \"-c\", \"import base64; exec(base64.b64decode('...'))\"]) ``` ## Malicious Behavior (full an…",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-llvm-ai-tool-policy",
     "url": "https://raw.githubusercontent.com/llvm/llvm-project/main/llvm/docs/AIToolPolicy.md",
     "title": "LLVM AI Tool Use Policy",
@@ -313,6 +384,35 @@
       "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-npm-min-release-age-fr",
+    "url": "https://github.com/npm/cli/issues/8570",
+    "title": "(FR): Implement 'minimumReleaseAge' as a security feature (like pnpm added recently)",
+    "publisher": "npm CLI issue tracker (feature request)",
+    "publishedAt": "2025-09-16",
+    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "Ref: * https://github.com/pnpm/pnpm/issues/9921 * https://pnpm.io/settings#minimumreleaseage * https://socket.dev/blog/pnpm-10-16-adds-new-setting-for-delayed-dependency-updates * https://github.com/raineorshine/npm-check-updates/issues/1532 Copying an excerpt from one of these articles: > Following a wave of high-profile supply chain attacks targeting popular npm packages, pnpm has shipped a new minimumReleaseAge setting in [version 10.16](https://pnpm.io/blog/releases/10.16) that delays installation of newly published packages.",
+    "limitations": "Quotes a Socket.dev blog post. The claim about pnpm comes from that secondary source.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-npm-oidc-initial-publish",
+    "url": "https://github.com/npm/cli/issues/8544",
+    "title": "Allow publishing initial version with OIDC",
+    "publisher": "npm CLI issue tracker (feature request)",
+    "publishedAt": "2025-09-01",
+    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "Support for trusted publishing using OIDC was added in #8336 and is now [generally available](https://github.blog/changelog/2025-07-31-npm-trusted-publishing-with-oidc-is-generally-available/). One limitation is that it's not possible to publish the initial version of a package using OIDC, it needs to be published manually or using a token. It would be great to support OIDC publishing for the initial version. The main problem is that the UI on npmjs.com requires a package to exist before you can edit its settings and enable OIDC publishing. PyPI solved this by allowing a package to be configured with OIDC publishing before it exists. This was mentioned by @Shegox on https://github.com/orgs/community/discussions/127011#discussioncomment-9933132.",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },
@@ -382,6 +482,21 @@
       "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-tanstack-compromised-releases",
+    "url": "https://github.com/TanStack/router/issues/7383",
+    "title": "Several npm latest releases were compromised",
+    "publisher": "TanStack (GitHub issue)",
+    "publishedAt": "2026-05-11",
+    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "We are actively investigating this security incident and sharing our findings here: www.stepsecurity.io/blog/mini-shai-hulud-is-back-a-self-spreading-supply-chain-attack-hits-the-npm-ecosystem",
+    "limitations": "Body is a pointer to a vendor write-up (StepSecurity), which was not fetched.",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },

@@ -1,5 +1,97 @@
 [
   {
+    "id": "idea-adaptive-cooldown-policies",
+    "title": "Adaptive per-dependency cooldown policies",
+    "summary": "Recommends a cooldown per dependency based on risk (maintainer count, publish patterns), instead of one fixed delay.",
+    "problemIds": [
+      "prob-new-releases-installed-before-detection"
+    ],
+    "themeIds": [
+      "theme-oss-supply-chain-small-maintainers"
+    ],
+    "targetUsers": "Teams using Dependabot, Renovate or pnpm cooldowns",
+    "solution": "Analyse the dependency graph and suggest per-package cooldown and exclusion lists.",
+    "competitorIds": [
+      "comp-dependabot-cooldown",
+      "comp-pnpm-minimum-release-age"
+    ],
+    "differentiation": "Risk-tuned rather than uniform delays.",
+    "feasibility": "Feasible, but needs risk data.",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "Teams want fine-grained cooldown controls",
+        "criticality": "high",
+        "status": "weakened"
+      }
+    ],
+    "risks": [
+      "Users prefer simple defaults"
+    ],
+    "nextSteps": [],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "Early adopters overwhelmingly use one simple default delay; fine-grained settings are used by fewer than 10%.",
+        "severity": "major",
+        "evidenceIds": [
+          "ev-sc-13"
+        ],
+        "status": "accepted"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 3,
+          "rationale": "Delays matter, but a uniform delay already captures most of the benefit."
+        },
+        "frequency": {
+          "score": 3,
+          "rationale": "Growing adoption."
+        },
+        "userValue": {
+          "score": 2,
+          "rationale": "Users prefer simple defaults."
+        },
+        "competitiveGap": {
+          "score": 2,
+          "rationale": "Platforms could add this easily."
+        },
+        "differentiation": {
+          "score": 2,
+          "rationale": "A tuning layer."
+        },
+        "feasibility": {
+          "score": 3,
+          "rationale": "Needs risk modelling."
+        },
+        "costComplexity": {
+          "score": 3,
+          "rationale": "Moderate."
+        },
+        "userAccess": {
+          "score": 3,
+          "rationale": "Reachable."
+        },
+        "validationCost": {
+          "score": 3,
+          "rationale": "Survey or usage data."
+        }
+      },
+      "assessedAt": "2026-11-03T22:45:20Z",
+      "assessedBy": "critic (claude-code-session)"
+    },
+    "status": "parked",
+    "statusRationale": "Parked. Adoption data shows a preference for simple defaults over fine-grained controls. Revisit if cooldown users report problems with uniform delays.",
+    "relatedIdeaIds": [],
+    "epistemic": "hypothesis",
+    "createdInRun": "run-20261103-agent-supply-chain-1",
+    "createdAt": "2026-11-03T22:45:20Z",
+    "updatedAt": "2026-11-03T22:45:20Z",
+    "provenance": "real"
+  },
+  {
     "id": "idea-ai-authorship-pr-detector",
     "title": "AI-authorship detector for incoming pull requests",
     "summary": "A GitHub Action that estimates whether a PR was AI-generated, then labels or closes it before a maintainer looks at it.",
@@ -352,6 +444,130 @@
     "provenance": "real"
   },
   {
+    "id": "idea-maintainer-publish-anomaly-alarm",
+    "title": "Publish-anomaly alarm for maintainers",
+    "summary": "Watches the registry for new versions of a maintainer's own packages and alerts within minutes if a release differs structurally from the maintainer's normal releases.",
+    "problemIds": [
+      "prob-compromised-maintainer-credentials-ship-malware"
+    ],
+    "themeIds": [
+      "theme-oss-supply-chain-small-maintainers"
+    ],
+    "targetUsers": "Maintainers of widely used packages without a security team",
+    "solution": "Subscribe to registry publish events for owned packages. Diff each release against the previous one for structural anomalies: newly added dependencies, new install-time hooks or .pth files, publishing outside the usual CI identity, missing provenance. Notify the maintainer through an out-of-band channel they control.",
+    "competitorIds": [
+      "comp-supply-chain-security-vendors",
+      "comp-registry-trusted-publishing"
+    ],
+    "differentiation": "Maintainer-side and owner-verified: the maintainer can say 'that wasn't me' fastest. Vendors protect consumers after analysis.",
+    "feasibility": "Registry metadata and tarballs are public. The anomaly rules are simple diffs.",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "Malicious releases from compromised accounts differ structurally (new deps, new hooks, different publisher) from the maintainer's normal releases",
+        "criticality": "high",
+        "status": "untested"
+      },
+      {
+        "id": "a2",
+        "text": "Maintainers would notice and react faster than the current detection time (~3 h for axios)",
+        "criticality": "high",
+        "status": "untested"
+      },
+      {
+        "id": "a3",
+        "text": "Commercial scanners don't already offer free maintainer-side alerts",
+        "criticality": "medium",
+        "status": "untested"
+      }
+    ],
+    "risks": [
+      "An attacker who controls the account may also control the notification channel",
+      "Vendors may already cover this (not examined)",
+      "False positives on legitimate dependency changes"
+    ],
+    "nextSteps": [
+      "Retrospective check on the documented incidents (experiment)",
+      "Survey vendor offerings for maintainer-side alerts"
+    ],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "Commercial scanners (Socket, StepSecurity) already analyse new releases quickly. The marginal value of maintainer-side alerts is unproven.",
+        "severity": "major",
+        "evidenceIds": [],
+        "status": "open"
+      },
+      {
+        "id": "obj-2",
+        "text": "If the attacker controls the maintainer's account or email, alerts may be intercepted.",
+        "severity": "major",
+        "evidenceIds": [],
+        "response": "Use a channel registered independently of the registry account.",
+        "status": "open"
+      },
+      {
+        "id": "obj-3",
+        "text": "Some attacks, like asyncapi's branch-token compromise, publish through the normal CI pipeline, so publisher-identity checks wouldn't fire.",
+        "severity": "major",
+        "evidenceIds": [
+          "ev-sc-06"
+        ],
+        "status": "open"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 5,
+          "rationale": "RATs and credential stealers in packages with huge reach."
+        },
+        "frequency": {
+          "score": 3,
+          "rationale": "Several high-profile incidents in 2026 in the captured signals."
+        },
+        "userValue": {
+          "score": 4,
+          "rationale": "Could cut exposure windows, if anomalies are detectable."
+        },
+        "competitiveGap": {
+          "score": 3,
+          "rationale": "Vendors exist; maintainer-side free alerts not verified either way."
+        },
+        "differentiation": {
+          "score": 3,
+          "rationale": "Owner-verified signal."
+        },
+        "feasibility": {
+          "score": 4,
+          "rationale": "Public metadata, simple diffs."
+        },
+        "costComplexity": {
+          "score": 4,
+          "rationale": "A small service or Action."
+        },
+        "userAccess": {
+          "score": 3,
+          "rationale": "Maintainers are reachable on GitHub."
+        },
+        "validationCost": {
+          "score": 5,
+          "rationale": "Can be checked retrospectively on public registry data for $0."
+        }
+      },
+      "assessedAt": "2026-11-03T22:45:20Z",
+      "assessedBy": "critic (claude-code-session)"
+    },
+    "status": "advanced",
+    "statusRationale": "Advanced to a cheap retrospective check. The problem is severe and well evidenced, and the key assumption (structural anomalies) can be tested on public data before building anything.",
+    "relatedIdeaIds": [],
+    "epistemic": "hypothesis",
+    "createdInRun": "run-20261103-agent-supply-chain-1",
+    "createdAt": "2026-11-03T22:45:20Z",
+    "updatedAt": "2026-11-03T22:45:20Z",
+    "provenance": "real"
+  },
+  {
     "id": "idea-reproduction-first-security-triage",
     "title": "Reproduction-first triage for AI-assisted security reports",
     "summary": "Security reports must include a proof of concept that a sandboxed CI job runs against the released code before any human reads the report.",
@@ -452,6 +668,100 @@
     "createdInRun": "run-20261103-agent-ai-contribution-burden",
     "createdAt": "2026-11-03T21:25:00Z",
     "updatedAt": "2026-11-03T21:25:00Z",
+    "provenance": "real"
+  },
+  {
+    "id": "idea-standalone-release-age-cooldown",
+    "title": "Standalone release-age cooldown tool for all package managers",
+    "summary": "A wrapper or proxy that blocks installing package versions younger than N days, for ecosystems whose package managers don't support it yet.",
+    "problemIds": [
+      "prob-new-releases-installed-before-detection"
+    ],
+    "themeIds": [
+      "theme-oss-supply-chain-small-maintainers"
+    ],
+    "targetUsers": "Application teams consuming npm/PyPI packages",
+    "solution": "A registry proxy or install wrapper that filters out versions published within the last N days, with an allowlist for urgent fixes.",
+    "competitorIds": [
+      "comp-pnpm-minimum-release-age",
+      "comp-dependabot-cooldown"
+    ],
+    "differentiation": "Covers package managers that haven't shipped the feature yet.",
+    "feasibility": "Simple to build: registry metadata includes publish times.",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "Package managers will be slow to ship native release-age settings",
+        "criticality": "high",
+        "status": "weakened"
+      }
+    ],
+    "risks": [
+      "Platform features make it obsolete",
+      "Delays urgent security fixes"
+    ],
+    "nextSteps": [],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "pnpm and Dependabot already ship cooldowns, and npm and bun have popular open requests. A standalone tool competes with imminent free platform features.",
+        "severity": "fatal",
+        "evidenceIds": [
+          "ev-sc-09",
+          "ev-sc-11"
+        ],
+        "status": "accepted"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 4,
+          "rationale": "Account compromises shipped RATs and credential stealers."
+        },
+        "frequency": {
+          "score": 3,
+          "rationale": "Several major incidents in 2026."
+        },
+        "userValue": {
+          "score": 3,
+          "rationale": "Real, but available elsewhere."
+        },
+        "competitiveGap": {
+          "score": 1,
+          "rationale": "Free platform features exist or are requested upstream."
+        },
+        "differentiation": {
+          "score": 1,
+          "rationale": "None beyond coverage."
+        },
+        "feasibility": {
+          "score": 5,
+          "rationale": "Trivial."
+        },
+        "costComplexity": {
+          "score": 5,
+          "rationale": "Small."
+        },
+        "userAccess": {
+          "score": 3,
+          "rationale": "Developers are reachable."
+        },
+        "validationCost": {
+          "score": 4,
+          "rationale": "Cheap."
+        }
+      },
+      "assessedAt": "2026-11-03T22:45:20Z",
+      "assessedBy": "critic (claude-code-session)"
+    },
+    "status": "rejected",
+    "statusRationale": "Rejected. Release-age delays are already being solved by the platforms themselves (pnpm, Dependabot; npm and bun requests open). There's no durable gap for a standalone tool.",
+    "relatedIdeaIds": [],
+    "epistemic": "hypothesis",
+    "createdInRun": "run-20261103-agent-supply-chain-1",
+    "createdAt": "2026-11-03T22:45:20Z",
+    "updatedAt": "2026-11-03T22:45:20Z",
     "provenance": "real"
   }
 ]

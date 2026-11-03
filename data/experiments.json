@@ -44,5 +44,43 @@
     },
     "createdInRun": "run-20261103-agent-ai-contribution-burden",
     "provenance": "real"
+  },
+  {
+    "id": "exp-publish-anomaly-retrospective",
+    "ideaId": "idea-maintainer-publish-anomaly-alarm",
+    "title": "Would simple structural diffs have flagged the documented malicious releases?",
+    "hypothesis": "Each documented malicious release differs from the previous legitimate release by at least one simple structural signal: a new dependency, a new install-time hook or .pth file, or a missing or changed provenance attestation.",
+    "uncertainty": "Whether compromised-account releases are structurally anomalous (assumption a1). If they look like normal releases, a maintainer alarm can't work.",
+    "procedure": [
+      "Pre-registered before data collection.",
+      "Feasibility probe (2026-11-03T22:46Z, metadata only, before any analysis): the malicious versions axios 1.14.1 and @asyncapi/specs 6.11.2 have been removed from the npm registry, and litellm 1.82.8 returns 404 on PyPI. Archived copies or detailed diffs must come from a malware-archive dataset (e.g. the OpenSSF malicious-packages reports or vendor datasets). Identify that source before approving this experiment.",
+      "Incidents: axios 1.14.1 / 0.30.4, litellm 1.82.8, @asyncapi/specs 6.11.2, and the TanStack releases named in the vendor write-up, if version numbers can be identified from public sources.",
+      "For each, fetch registry metadata and, where still available, the package archive of the malicious and previous versions from the public npm/PyPI registries.",
+      "Compute the diffs: dependencies added, install scripts or .pth files added, provenance or attestation present vs absent, publisher identity.",
+      "Also diff 20 consecutive legitimate releases of the same packages, to estimate the false-positive rate."
+    ],
+    "successCriteria": [
+      "At least 3 of 4 analysable incidents trigger at least one signal",
+      "Fewer than 1 in 10 legitimate releases trigger a signal"
+    ],
+    "failureCriteria": [
+      "Fewer than half of the analysable incidents trigger any signal",
+      "Malicious versions were removed so thoroughly that fewer than 2 incidents can be analysed (inconclusive)",
+      "No archive source for removed malicious versions can be found (experiment not executable; revise or abandon)"
+    ],
+    "estimatedTime": "half a day of automated analysis",
+    "estimatedCostUsd": 0,
+    "resources": [
+      "Public npm and PyPI registry APIs"
+    ],
+    "expectedLearning": "Whether structural anomaly detection is a viable basis for maintainer-side alerts, and its false-positive cost.",
+    "nextSteps": {
+      "ifSuccess": "Survey existing vendor offerings for maintainer-side alerts before prototyping.",
+      "ifFailure": "Reject or park the alarm; investigate behaviour-based detection instead."
+    },
+    "executionMode": "automatable",
+    "status": "proposed",
+    "createdInRun": "run-20261103-agent-supply-chain-1",
+    "provenance": "real"
   }
 ]

@@ -436,6 +436,83 @@
     "provenance": "real"
   },
   {
+    "id": "run-20261103-agent-supply-chain-1",
+    "themeId": "theme-oss-supply-chain-small-maintainers",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-03T22:41:00Z",
+    "completedAt": "2026-11-03T22:45:20Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "Triaged 63 collector signals for this theme"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "8 sources cited (all collector-retrieved), 15 evidence items, 4 contradicting"
+      },
+      {
+        "name": "invent",
+        "status": "ok",
+        "notes": "3 concepts"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "5 objections, 1 fatal"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "notes": "No overlap with the other theme's ideas"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "1 advanced, 1 parked, 1 rejected"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "1 automatable $0 retrospective"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 14,
+      "sourcesCited": 8,
+      "problemsFound": 3,
+      "ideasGenerated": 3,
+      "ideasAdvanced": 1,
+      "ideasRejected": 1,
+      "ideasParked": 1,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "triage of data/signals.json for theme-oss-supply-chain-small-maintainers (collected 2026-11-03 by research-ops)"
+    ],
+    "errors": [
+      "Vendor write-ups (StepSecurity, Socket) and news coverage weren't fetchable from this session (network policy), so incident details rely on the captured issue text."
+    ],
+    "limitations": [
+      "Evidence is limited to collector-captured excerpts (first ~1,200 characters of each issue or abstract).",
+      "Commercial alternatives were named but not examined, so the competitive gap for the advanced idea is uncertain.",
+      "Selection bias: the signals are the most-reacted incidents, which are the largest ones. Small maintainers' everyday experience is under-represented.",
+      "The advanced idea's experiment can't run on live registry data: the malicious versions have been removed. It stays proposed, not approved, until an archive source is identified."
+    ],
+    "usage": {
+      "note": "Interactive Claude Code session under the owner's subscription; sources retrieved by the GitHub Actions collector. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  {
     "id": "run-20261103-exp-followup-engagement",
     "themeId": "theme-ai-contribution-burden",
     "mode": "agent-session",

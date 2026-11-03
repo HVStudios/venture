@@ -16,6 +16,22 @@
     "provenance": "real"
   },
   {
+    "id": "prob-compromised-maintainer-credentials-ship-malware",
+    "title": "Compromised maintainer credentials ship malware in popular packages",
+    "statement": "Attackers who gain a maintainer's registry account, publish token or branch write access publish malicious versions of widely used packages. The 2026 cases include a remote access trojan via axios and a credential stealer via litellm. The maintainers are victims, not insiders.",
+    "themeIds": [
+      "theme-oss-supply-chain-small-maintainers"
+    ],
+    "affectedUsers": "Maintainers of popular packages and every downstream consumer",
+    "severityNote": "Critical: RATs and credential stealers in packages with very large reach.",
+    "frequencyNote": "At least four distinct incidents in the 2026 signals (axios, litellm, asyncapi, TanStack).",
+    "status": "investigating",
+    "discoveredInRun": "run-20261103-agent-supply-chain-1",
+    "firstSeen": "2026-11-03T22:45:20Z",
+    "lastUpdated": "2026-11-03T22:45:20Z",
+    "provenance": "real"
+  },
+  {
     "id": "prob-fabricated-ai-security-reports",
     "title": "Fabricated AI-generated security reports waste triage capacity",
     "statement": "Security teams receive confident but fabricated vulnerability reports generated with AI tools. Each one must be investigated with priority, which pulls maintainers away from real work. curl no longer runs a bug bounty because of the incentive for made-up reports.",
@@ -32,6 +48,22 @@
     "provenance": "real"
   },
   {
+    "id": "prob-new-releases-installed-before-detection",
+    "title": "New releases are installed before malicious ones are detected",
+    "statement": "Automated and manual installs pick up new versions immediately. Malicious releases are typically detected and removed within hours, but not before they've been installed. Users ask package managers for release-age delays.",
+    "themeIds": [
+      "theme-oss-supply-chain-small-maintainers"
+    ],
+    "affectedUsers": "Application and CI pipelines consuming open-source packages",
+    "severityNote": "High.",
+    "frequencyNote": "Popular feature requests on bun (693 reactions) and npm (241).",
+    "status": "investigating",
+    "discoveredInRun": "run-20261103-agent-supply-chain-1",
+    "firstSeen": "2026-11-03T22:45:20Z",
+    "lastUpdated": "2026-11-03T22:45:20Z",
+    "provenance": "real"
+  },
+  {
     "id": "prob-submission-effort-no-longer-signals-trust",
     "title": "Submission effort no longer signals contributor trustworthiness",
     "statement": "Open source used to treat the effort of submitting a change as a signal of a potential long-term contributor. AI tools make plausible-looking submissions nearly free, so maintainers lose that cheap filter and are moving to explicit trust mechanisms that risk excluding newcomers.",
@@ -45,6 +77,22 @@
     "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
     "firstSeen": "2026-11-03T21:25:00Z",
     "lastUpdated": "2026-11-03T21:33:00Z",
+    "provenance": "real"
+  },
+  {
+    "id": "prob-trusted-publishing-bootstrap-gap",
+    "title": "Trusted publishing can't be bootstrapped on npm",
+    "statement": "npm's OIDC trusted publishing can't be used for a package's first version, so maintainers must still create a token or publish manually. That keeps long-lived credentials around.",
+    "themeIds": [
+      "theme-oss-supply-chain-small-maintainers"
+    ],
+    "affectedUsers": "Maintainers publishing new npm packages",
+    "severityNote": "Medium: a narrow gap, but it keeps tokens in circulation.",
+    "frequencyNote": "One feature request (103 reactions).",
+    "status": "open",
+    "discoveredInRun": "run-20261103-agent-supply-chain-1",
+    "firstSeen": "2026-11-03T22:45:20Z",
+    "lastUpdated": "2026-11-03T22:45:20Z",
     "provenance": "real"
   }
 ]

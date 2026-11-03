@@ -506,5 +506,227 @@
     "ideaIds": [],
     "competitorIds": [],
     "provenance": "real"
+  },
+  {
+    "id": "ev-sc-01",
+    "claim": "Two malicious axios releases were published through the maintainer's compromised npm account (March 2026).",
+    "sourceId": "src-axios-postmortem-2026",
+    "quote": "two malicious versions of axios (1.14.1 and 0.30.4) were published to the npm registry through my compromised account",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-compromised-maintainer-credentials-ship-malware"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-02",
+    "claim": "The malicious axios versions worked by adding a new dependency that installed a remote access trojan.",
+    "sourceId": "src-axios-postmortem-2026",
+    "quote": "Both versions injected a dependency called `plain-crypto-js@4.2.1` that installed a remote access trojan",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-compromised-maintainer-credentials-ship-malware"
+    ],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-03",
+    "claim": "The malicious axios versions were live for about 3 hours.",
+    "sourceId": "src-axios-postmortem-2026",
+    "quote": "The malicious versions were live for about 3 hours before being removed.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-new-releases-installed-before-detection"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-04",
+    "claim": "litellm 1.82.8 on PyPI shipped a credential-stealing .pth file (reported March 2026, 1,118 reactions).",
+    "sourceId": "src-litellm-malicious-pth",
+    "quote": "This is a supply chain compromise.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-compromised-maintainer-credentials-ship-malware"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-05",
+    "claim": "The litellm attack added a file type (.pth) that executes on interpreter start, a change visible in package contents.",
+    "sourceId": "src-litellm-malicious-pth",
+    "quote": "contains a malicious `.pth` file",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-compromised-maintainer-credentials-ship-malware"
+    ],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-06",
+    "claim": "asyncapi's malicious releases came from a compromised branch write token, not from a maintainer acting in bad faith.",
+    "sourceId": "src-asyncapi-specs-compromise",
+    "quote": "this is a branch write token compromise, not an insider issue",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-compromised-maintainer-credentials-ship-malware"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-07",
+    "claim": "TanStack reported that several of its npm latest releases were compromised (May 2026).",
+    "sourceId": "src-tanstack-compromised-releases",
+    "quote": "We are actively investigating this security incident",
+    "stance": "supports",
+    "epistemic": "fact",
+    "limitations": "The issue body only links to a vendor write-up; details are not in the captured text.",
+    "problemIds": [
+      "prob-compromised-maintainer-credentials-ship-malware"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-08",
+    "claim": "Bun users request a minimum-release-age setting because popular packages were compromised right after release.",
+    "sourceId": "src-bun-min-release-age-fr",
+    "quote": "Recently, the npm ecosystem has suffered several supply chain attacks where popular packages were compromised right after release.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-new-releases-installed-before-detection"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-09",
+    "claim": "pnpm already ships a configuration option that delays installing new releases.",
+    "sourceId": "src-bun-min-release-age-fr",
+    "quote": "Other package managers, such as [pnpm](https://github.com/pnpm/pnpm/pull/9921), have already introduced a configuration option to mitigate these risks.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-standalone-release-age-cooldown"
+    ],
+    "competitorIds": [
+      "comp-pnpm-minimum-release-age"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-10",
+    "claim": "npm CLI users request the same release-age delay (241 reactions), citing a wave of high-profile attacks on popular npm packages.",
+    "sourceId": "src-npm-min-release-age-fr",
+    "quote": "Following a wave of high-profile supply chain attacks targeting popular npm packages",
+    "stance": "supports",
+    "epistemic": "fact",
+    "limitations": "The quoted sentence comes from a Socket.dev article reproduced in the issue.",
+    "problemIds": [
+      "prob-new-releases-installed-before-detection"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-11",
+    "claim": "GitHub's Dependabot has offered a cooldown (update delay) against supply-chain attacks since July 2025.",
+    "sourceId": "src-arxiv-2609-16605",
+    "quote": "In July 2025, GitHub made Dependabot cooldown generally available as a defense against software supply chain attacks.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-standalone-release-age-cooldown"
+    ],
+    "competitorIds": [
+      "comp-dependabot-cooldown"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-12",
+    "claim": "Security concerns motivated 83 of 92 Dependabot cooldown adoptions with known motivation.",
+    "sourceId": "src-arxiv-2609-16605",
+    "quote": "We find that security concerns motivated 83 of 92 adoption events with known motivations.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-new-releases-installed-before-detection"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-13",
+    "claim": "Adopters of cooldowns prefer simple default delays; fine-grained controls are rarely used (<10%).",
+    "sourceId": "src-arxiv-2609-16605",
+    "quote": "Early adopters therefore favor simple default delays over fine-grained controls.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-adaptive-cooldown-policies"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-14",
+    "claim": "npm trusted publishing (OIDC) can't be used for a package's first version, so maintainers still need a token or a manual publish.",
+    "sourceId": "src-npm-oidc-initial-publish",
+    "quote": "it's not possible to publish the initial version of a package using OIDC, it needs to be published manually or using a token",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-trusted-publishing-bootstrap-gap"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-15",
+    "claim": "PyPI lets trusted publishing be configured before a package exists, so the gap is specific to npm.",
+    "sourceId": "src-npm-oidc-initial-publish",
+    "quote": "PyPI solved this by allowing a package to be configured with OIDC publishing before it exists.",
+    "stance": "context",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-trusted-publishing-bootstrap-gap"
+    ],
+    "ideaIds": [],
+    "competitorIds": [
+      "comp-registry-trusted-publishing"
+    ],
+    "provenance": "real"
   }
 ]

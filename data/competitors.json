@@ -35,6 +35,22 @@
     "provenance": "real"
   },
   {
+    "id": "comp-dependabot-cooldown",
+    "name": "Dependabot cooldown",
+    "kind": "platform-feature",
+    "description": "Delays Dependabot update PRs for newly published versions. GA since July 2025.",
+    "strengths": [
+      "Free on GitHub; adopted mainly for security"
+    ],
+    "weaknesses": [
+      "Only affects automated update PRs, not manual installs (inference)"
+    ],
+    "sourceIds": [
+      "src-arxiv-2609-16605"
+    ],
+    "provenance": "real"
+  },
+  {
     "id": "comp-fossier",
     "name": "Fossier",
     "url": "https://github.com/PThorpe92/fossier",
@@ -71,6 +87,57 @@
     "sourceIds": [
       "src-github-docs-disable-prs",
       "src-github-docs-interaction-limits"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "comp-pnpm-minimum-release-age",
+    "name": "pnpm minimumReleaseAge",
+    "url": "https://github.com/pnpm/pnpm/pull/9921",
+    "kind": "platform-feature",
+    "description": "pnpm setting that refuses to install versions younger than a configured age.",
+    "strengths": [
+      "Built into the package manager"
+    ],
+    "weaknesses": [
+      "pnpm users only (npm and bun requested it separately)"
+    ],
+    "sourceIds": [
+      "src-bun-min-release-age-fr",
+      "src-npm-min-release-age-fr"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "comp-registry-trusted-publishing",
+    "name": "Registry trusted publishing (OIDC) on npm and PyPI",
+    "kind": "platform-feature",
+    "description": "Publish from CI using short-lived OIDC identity instead of long-lived tokens.",
+    "strengths": [
+      "Removes stored publish tokens"
+    ],
+    "weaknesses": [
+      "npm can't use it for a package's first version"
+    ],
+    "sourceIds": [
+      "src-npm-oidc-initial-publish"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "comp-supply-chain-security-vendors",
+    "name": "Commercial supply-chain scanners (e.g. Socket, StepSecurity)",
+    "kind": "product",
+    "description": "Vendors that analyse new package releases and publish incident write-ups. Named in the captured issues; their products were not examined in this run.",
+    "strengths": [
+      "Already detect and report incidents quickly (inference from their write-ups being cited)"
+    ],
+    "weaknesses": [
+      "Not examined in this run"
+    ],
+    "sourceIds": [
+      "src-tanstack-compromised-releases",
+      "src-npm-min-release-age-fr"
     ],
     "provenance": "real"
   },
