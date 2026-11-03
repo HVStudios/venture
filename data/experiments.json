@@ -36,7 +36,7 @@
     "outcome": {
       "recordedAt": "2026-11-03T21:44:31.614Z",
       "result": "inconclusive",
-      "summary": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49–69%) versus 90.2% for merged LLVM newcomers (83/92, CI 82–95%): a clear gap, but short of the ≤ 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
+      "summary": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49\u201369%) versus 90.2% for merged LLVM newcomers (83/92, CI 82\u201395%): a clear gap, but short of the \u2264 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
       "evidenceIds": [
         "ev-ai-burden-33",
         "ev-ai-burden-34"
@@ -52,21 +52,20 @@
     "hypothesis": "Each documented malicious release differs from the previous legitimate release by at least one simple structural signal: a new dependency, a new install-time hook or .pth file, or a missing or changed provenance attestation.",
     "uncertainty": "Whether compromised-account releases are structurally anomalous (assumption a1). If they look like normal releases, a maintainer alarm can't work.",
     "procedure": [
-      "Pre-registered before data collection.",
-      "Feasibility probe (2026-11-03T22:46Z, metadata only, before any analysis): the malicious versions axios 1.14.1 and @asyncapi/specs 6.11.2 have been removed from the npm registry, and litellm 1.82.8 returns 404 on PyPI. Archived copies or detailed diffs must come from a malware-archive dataset (e.g. the OpenSSF malicious-packages reports or vendor datasets). Identify that source before approving this experiment.",
-      "Incidents: axios 1.14.1 / 0.30.4, litellm 1.82.8, @asyncapi/specs 6.11.2, and the TanStack releases named in the vendor write-up, if version numbers can be identified from public sources.",
-      "For each, fetch registry metadata and, where still available, the package archive of the malicious and previous versions from the public npm/PyPI registries.",
-      "Compute the diffs: dependencies added, install scripts or .pth files added, provenance or attestation present vs absent, publisher identity.",
-      "Also diff 20 consecutive legitimate releases of the same packages, to estimate the false-positive rate."
+      "Pre-registered before data collection; revised after a metadata-only feasibility probe.",
+      "Feasibility probe (2026-11-03T22:46Z): the malicious versions have been removed from npm and PyPI. Archive source: OpenSSF malicious-packages (OSV) reports, which describe the injected mechanism per malicious version (e.g. MAL-2026-2307 axios, MAL-2026-2144 litellm, MAL-2025-190643 @asyncapi/specs).",
+      "Population: OSV entries from 2025-06-01 to 2026-11-01 for packages that still have at least 10 non-malicious versions on their registry (hijacked legitimate packages, not typosquats), up to 60 incidents.",
+      "Classify each incident's mechanism from the OSV text into: new dependency, new install-time script or hook (.pth, pre/postinstall), modification of existing files only, or unknown.",
+      "False positives: for the same npm packages, use public per-version registry metadata to count how often consecutive legitimate releases add a dependency or an install script.",
+      "Code goes under src/experiments/ and runs in the 'Run experiment' workflow; raw results are committed under research/experiments/."
     ],
     "successCriteria": [
-      "At least 3 of 4 analysable incidents trigger at least one signal",
-      "Fewer than 1 in 10 legitimate releases trigger a signal"
+      "At least 60% of classifiable incidents involve a new dependency or install-time hook",
+      "Fewer than 10% of legitimate npm releases add a dependency or install script"
     ],
     "failureCriteria": [
-      "Fewer than half of the analysable incidents trigger any signal",
-      "Malicious versions were removed so thoroughly that fewer than 2 incidents can be analysed (inconclusive)",
-      "No archive source for removed malicious versions can be found (experiment not executable; revise or abandon)"
+      "Fewer than 40% of classifiable incidents involve such signals (most attacks only modify existing files)",
+      "Fewer than 15 classifiable incidents (inconclusive)"
     ],
     "estimatedTime": "half a day of automated analysis",
     "estimatedCostUsd": 0,

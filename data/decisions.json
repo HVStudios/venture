@@ -145,7 +145,7 @@
     "action": "complete",
     "fromStatus": "approved",
     "toStatus": "inconclusive",
-    "rationale": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49–69%) versus 90.2% for merged LLVM newcomers (83/92, CI 82–95%): a clear gap, but short of the ≤ 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
+    "rationale": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49\u201369%) versus 90.2% for merged LLVM newcomers (83/92, CI 82\u201395%): a clear gap, but short of the \u2264 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
     "actor": "experiment designer",
     "provenance": "real"
   },
@@ -189,6 +189,18 @@
     "actor": "director",
     "attractiveness": 68,
     "evidenceStrength": 83,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-revise-publish-anomaly-retrospective",
+    "at": "2026-11-03T22:47:06Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-publish-anomaly-retrospective",
+    "action": "revise",
+    "fromStatus": "proposed",
+    "toStatus": "proposed",
+    "rationale": "Revised before any analysis. The malicious versions were removed from the registries, so the design now uses OpenSSF malicious-packages (OSV) reports for mechanisms and npm per-version metadata for false positives. Thresholds fixed in advance.",
+    "actor": "experiment designer",
     "provenance": "real"
   }
 ]
