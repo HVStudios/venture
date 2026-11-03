@@ -176,6 +176,18 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261103-publish-anomaly-campaign-replication",
+    "at": "2026-11-03T23:34:36.410Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-publish-anomaly-campaign-replication",
+    "action": "advance",
+    "fromStatus": "proposed",
+    "toStatus": "approved",
+    "rationale": "Approved under the standing rule for automatable experiments. Grouping sanity-checked on campaign counts only (no mechanism classification) before the run: generic phrases were removed from campaign naming.",
+    "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261103-publish-anomaly-retrospective",
     "at": "2026-11-03T22:50:07.166Z",
     "subjectType": "experiment",

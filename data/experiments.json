@@ -76,7 +76,7 @@
       "ifFailure": "Narrow the idea to worm/install-hook detection or park it."
     },
     "executionMode": "automatable",
-    "status": "proposed",
+    "status": "approved",
     "createdInRun": "run-20261103-exp-publish-anomaly",
     "provenance": "real"
   },
