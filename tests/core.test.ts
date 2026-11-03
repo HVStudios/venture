@@ -156,6 +156,12 @@ describe("validateMemory", () => {
     expect(validateMemory(m, "real").issues.some((i) => i.message.includes("provenance"))).toBe(true);
   });
 
+  it("rejects timestamps in the future", () => {
+    const m = base();
+    m.runs[0].completedAt = "2999-01-01T00:00:00Z";
+    expect(validateMemory(m, "real").issues.some((i) => i.message.includes("in the future"))).toBe(true);
+  });
+
   it("requires problems to have supporting evidence", () => {
     const m = base();
     m.evidence = [];

@@ -166,7 +166,7 @@
     "title": "VENTURE experiment: exploratory within-LLVM breakdown (not pre-registered)",
     "publisher": "VENTURE (own experiment)",
     "publishedAt": "2026-11-03",
-    "retrievedAt": "2026-11-03T21:50:00Z",
+    "retrievedAt": "2026-11-03T21:45:00Z",
     "sourceType": "dataset",
     "originId": "origin-venture-exp-followup",
     "excerpt": "Within LLVM only (same repository as the control): policy-closed PRs got an author reply in 38 of 47 cases (80.9%), versus 83 of 92 (90.2%) for merged LLVM newcomer PRs. … Outside LLVM: policy-closed PRs got an author reply in 14 of 40 cases (35.0%). There is no same-repository control for these. … 33 of 120 policy-closed PRs received no human comment at all before closing. … Interpretation: in a like-for-like comparison inside one repository, authors of policy-closed PRs reply almost as often as genuine newcomers. Follow-up engagement alone therefore looks like a weak filter. The lower reply rate outside LLVM may reflect differences between repositories rather than between contributors.",

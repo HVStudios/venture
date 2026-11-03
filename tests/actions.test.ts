@@ -1,11 +1,11 @@
 
 import { describe, expect, it } from "vitest";
-import { ActionError, approveExperiment, decideIdea, reconsiderationQueue, recordOutcome } from "../src/core/actions";
+import { ActionError, approveExperiment, calibration, decideIdea, reconsiderationQueue, recordOutcome } from "../src/core/actions";
 import { validateMemory } from "../src/core/validate";
 import { loadRaw, FIXTURE_STORE } from "../src/engine/store";
 
 const fresh = () => structuredClone(validateMemory(loadRaw(FIXTURE_STORE), "fixture").memory!);
-const AT = "2026-11-04T10:00:00Z";
+const AT = new Date().toISOString();
 
 describe("decisions and experiments", () => {
   it("records a decision with a score snapshot and keeps memory valid", () => {
@@ -61,5 +61,15 @@ describe("reconsideration queue", () => {
     const real = validateMemory(JSON.parse(JSON.stringify(loadRaw("data"))), "real").memory!;
     expect(Array.isArray(reconsiderationQueue(real))).toBe(true);
 
+  });
+});
+
+describe("calibration", () => {
+  it("pairs real outcomes with the scores held before the outcome", () => {
+    const real = validateMemory(JSON.parse(JSON.stringify(loadRaw("data"))), "real").memory!;
+    const rows = calibration(real);
+    expect(rows).toHaveLength(1);
+    expect(rows[0].result).toBe("inconclusive");
+    expect(rows[0].attractivenessAtDecision).toBeTypeOf("number");
   });
 });

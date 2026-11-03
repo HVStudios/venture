@@ -21,7 +21,7 @@ export function normalizeText(s: string): string {
     .trim();
 }
 
-export function validateMemory(input: unknown, expected?: Provenance): { memory?: Memory; issues: Issue[] } {
+export function validateMemory(input: unknown, expected?: Provenance, now: number = Date.now()): { memory?: Memory; issues: Issue[] } {
   const issues: Issue[] = [];
   const parsed = MemorySchema.safeParse(input);
   if (!parsed.success) {
@@ -113,6 +113,16 @@ export function validateMemory(input: unknown, expected?: Provenance): { memory?
   }
   for (const r of m.runs) need("themes", r.themeId, `runs.${r.id}`);
   for (const s of m.signals) need("themes", s.themeId, `signals.${s.id}`);
+
+  // Timestamps must come from a clock: nothing may be dated in the future.
+  const horizon = now + 10 * 60_000;
+  const stamped: [string, string | undefined][] = [
+    ...m.decisions.map((d) => [`decisions.${d.id}`, d.at] as [string, string]),
+    ...m.runs.flatMap((r) => [[`runs.${r.id}`, r.startedAt], [`runs.${r.id}`, r.completedAt]] as [string, string | undefined][]),
+    ...m.sources.map((x) => [`sources.${x.id}`, x.retrievedAt] as [string, string]),
+    ...m.ideas.map((x) => [`ideas.${x.id}`, x.updatedAt] as [string, string]),
+  ];
+  for (const [ref, at] of stamped) if (at && Date.parse(at) > horizon) err(ref, `timestamp ${at} is in the future`);
 
   // Deduplication: near-identical ideas must be explicitly reconciled.
   const live = m.ideas.filter((i) => i.status !== "merged");

@@ -11,8 +11,8 @@
     "frequencyNote": "Recurring across at least 9 projects' policies and issues (Nov 2025 – 2026). A study counted 281 AI contribution policies in popular projects. No direct measurement of inbound volume was retrieved.",
     "status": "investigating",
     "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
-    "firstSeen": "2026-11-03T21:40:00Z",
-    "lastUpdated": "2026-11-03T22:05:00Z",
+    "firstSeen": "2026-11-03T21:25:00Z",
+    "lastUpdated": "2026-11-03T21:33:00Z",
     "provenance": "real"
   },
   {
@@ -27,8 +27,8 @@
     "frequencyNote": "Unknown. Secondary reporting could not be retrieved in this session.",
     "status": "investigating",
     "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
-    "firstSeen": "2026-11-03T21:40:00Z",
-    "lastUpdated": "2026-11-03T21:40:00Z",
+    "firstSeen": "2026-11-03T21:25:00Z",
+    "lastUpdated": "2026-11-03T21:25:00Z",
     "provenance": "real"
   },
   {
@@ -43,8 +43,8 @@
     "frequencyNote": "Articulated by LLVM, Vouch/Ghostty, tldraw and Astropy.",
     "status": "open",
     "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
-    "firstSeen": "2026-11-03T21:40:00Z",
-    "lastUpdated": "2026-11-03T22:05:00Z",
+    "firstSeen": "2026-11-03T21:25:00Z",
+    "lastUpdated": "2026-11-03T21:33:00Z",
     "provenance": "real"
   }
 ]
