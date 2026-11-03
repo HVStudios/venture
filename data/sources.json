@@ -10,7 +10,10 @@
     "excerpt": "Large Language Model (LLM) Agents are advancing quickly, with the increasing leveraging of LLM Agents to assist in development tasks such as code generation. While LLM Agents accelerate code generation, studies indicate they may introduce adverse effects on development. However, existing metrics solely measure pass rates, failing to reflect impacts on long-term maintainability and readability, and failing to capture human intuitive evaluations of PR. To increase the comprehensiveness of this problem, we investigate and evaluate the characteristics of LLM to know the pull requests' characteristics beyond the pass rate. We observe the code quality and maintainability within PRs based on code metrics to evaluate objective characteristics and developers' reactions to the pull requests from both humans and LLM's generation. Evaluation results indicate that LLM Agents frequently disregard code reuse opportunities, resulting in higher levels of redundancy compared to human developers. In contrast to the quality issues, our emotions analysis reveals that reviewers tend to express more neutral or positive emotions towards AI-generated contributions than human ones. This disconnect suggests …",
     "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Uses the AIDev dataset of agent-authored PRs, many of them likely initiated by repository owners themselves, so findings may not transfer to unsolicited drive-by contributions.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -25,7 +28,10 @@
     "excerpt": "Recent years have experienced growing contributions of AI coding agents that assist human developers in various software engineering tasks. However, this growing AI-assisted autonomy raises questions about security and trust. In this paper, we analyze more than 33,000 AI-generated pull requests (PRs) and identify 675 security-related submissions made by agentic AIs. Then we examine the security-related PRs with a focus on recurring security weaknesses, review outcomes and latency, commit message quality, and rejection reasons. The results show that security-related AI PRs introduce a small set of recurring weaknesses such as regex inefficiencies, injection flaws, and path traversal. Many flawed contributions are still merged, while rejections often arise from social or process factors such as inactivity or missing test coverage. The commit message quality of AI PRs has a limited effect on acceptance or latency, in contrast to human PRs reported in previous studies. We also extend existing rejection taxonomies by adding categories that are unique to AI-generated security contributions. These findings offer new insights into the strengths and shortcomings of autonomous coding systems…",
     "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Uses the AIDev dataset of agent-authored PRs, many of them likely initiated by repository owners themselves, so findings may not transfer to unsolicited drive-by contributions.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
+      "httpStatus": 200,
+      "note": "2 quote(s) found"
     },
     "provenance": "real"
   },
@@ -40,7 +46,10 @@
     "excerpt": "We analyze code review interactions for AI-generated pull requests (PRs) on GitHub using the AIDev dataset and compare them to human-authored PRs within the same repositories. We find that most AI-generated PRs receive no review and, when reviewed, are largely dominated by AI agents rather than humans. Human-authored PRs are more likely to receive human-only review and to attract direct human feedback. In contrast, reviews of AI-generated PRs more often take the form of automation-mediated interaction, with human involvement frequently expressed through agent steering rather than standalone evaluation. These results indicate systematic differences in how review activity is structured in agentic workflows and raise challenges for interpreting review metrics as indicators of human oversight in large-scale mining studies.",
     "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Uses the AIDev dataset of agent-authored PRs, many of them likely initiated by repository owners themselves, so findings may not transfer to unsolicited drive-by contributions.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -55,7 +64,10 @@
     "excerpt": "AI coding agents are penetrating open-source software development at an unprecedented pace, yet existing research predominantly treats human contributors as a static backdrop rather than as the subject of inquiry. This paper presents the first large-scale empirical study that takes the human contributor ecosystem as its dependent variable, examining how the number, composition, and behavior of human participants change following AI coding agent adoption in open-source projects. Using a staggered difference-in-differences design on a dataset of 11,097 GitHub repositories spanning January 2023 to May 2026, we provide causal evidence via the Sun and Abraham estimator. Our results show that AI agent adoption does not significantly change the absolute number of human contributors (ATT = 0.014, p = 0.224), but significantly reduces human contributor density (ATT = -0.019, p = 0.002), indicating that the relative share of human participation declines as AI-generated pull requests accumulate. The relative participation share of newcomers declines significantly by 3.7 percentage points (ATT = -0.037, p < 0.001), with the effect emerging immediately after adoption and remaining stable throug…",
     "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Observational difference-in-differences study of repositories that adopted AI agents themselves; not inbound drive-by contributions.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
+      "httpStatus": 200,
+      "note": "2 quote(s) found"
     },
     "provenance": "real"
   },
@@ -70,7 +82,10 @@
     "excerpt": "Open source communities are converging on a new governance artifact: the AI contribution policy. These policies barely existed a few months ago and are now being written and adopted. We analyzed 281 AI contribution policies, and manually classified them along the six dimensions; to study how policies change, we also tracked 92 dedicated AI policy files over time. We answer four research questions on (1) AI usage allowance, (2) AI disclosure practices, (3) AI slop countermeasures, and (4) AI policy evolution. We find that, first, permission is the norm rather than the exception: 83.3% of policies permit or encourage AI in code contributions. But permission comes with conditions, as 67.3% require a high level of human involvement and 43.4% assign accountability. Second, AI disclosure is required by 48.8% of policies, most often in pull request descriptions and commit messages, but what must be disclosed varies widely. Third, we identify ten countermeasures against AI slop, targeting pull requests, users, and autonomous agents. Finally, policies are not static: half of the dedicated AI policy files have already been revised since creation. Our results give maintainers and researchers …",
     "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Policy texts express intent; enforcement is not measured.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
+      "httpStatus": 200,
+      "note": "3 quote(s) found"
     },
     "provenance": "real"
   },
@@ -85,7 +100,10 @@
     "excerpt": "Artificial intelligence is reshaping open source software (OSS) contribution by lowering the cost of producing code, documentation, issue reports, and review interactions. This creates opportunities for broader participation, but also disrupts how maintainers assess contributor effort, competence, and accountability. In response, OSS projects are beginning to regulate AI-mediated contribution through contribution guidelines and other project documentation. This paper presents an empirical study of these emerging policies. We analyze project policies on AI-mediated contributions by evaluating their underlying rationales, rules, and expectations. Our analysis shows that these policies seek to protect scarce maintainer attention, preserve accountability, sustain meaningful review interactions, address legal and quality concerns, and maintain pathways for newcomer learning. Based on these findings, we introduce the AI Contribution Governance Framework, which organizes recurring concerns and governance mechanisms across projects. The framework helps OSS communities develop AI contribution policies and provides researchers with a vocabulary for studying how AI is changing collaborative s…",
     "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Qualitative policy analysis.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -100,7 +118,7 @@
     "excerpt": "Some of them may look legit at first glance, only revealing flaws when one dive into the code/logic during the review process. … some may overwhelm the system by opening a plethora of pull requests within a very short span of time; even if these are obviously dead on arrival, they still take time to triage. … All in all, they introduce extra maintenance burden to maintainers who are already stretched thin.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
@@ -118,7 +136,7 @@
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
     },
@@ -136,7 +154,7 @@
     "limitations": "Same project as src-curl-contribute-ai, so it is counted as one origin. Secondary reporting on the bounty's end (BleepingComputer, Heise, The Register) could not be fetched in this session.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -154,7 +172,10 @@
     "excerpt": "Within LLVM only (same repository as the control): policy-closed PRs got an author reply in 38 of 47 cases (80.9%), versus 83 of 92 (90.2%) for merged LLVM newcomer PRs. … Outside LLVM: policy-closed PRs got an author reply in 14 of 40 cases (35.0%). There is no same-repository control for these. … 33 of 120 policy-closed PRs received no human comment at all before closing. … Interpretation: in a like-for-like comparison inside one repository, authors of policy-closed PRs reply almost as often as genuine newcomers. Follow-up engagement alone therefore looks like a weak filter. The lower reply rate outside LLVM may reflect differences between repositories rather than between contributors.",
     "limitations": "Exploratory: computed after seeing the pre-registered result.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
+      "httpStatus": 200,
+      "note": "2 quote(s) found"
     },
     "provenance": "real"
   },
@@ -170,7 +191,10 @@
     "excerpt": "policy-closed: 52 of 87 PRs with a human comment got an author reply (reply rate 59.8%, 95% CI 49.3%–69.4%; sampled 120). … newcomer-merged: 83 of 92 PRs with a human comment got an author reply (reply rate 90.2%, 95% CI 82.4%–94.8%; sampled 120). … Verdict (pre-registered rule): inconclusive: difference is between the success and failure thresholds (59.8% vs 90.2%).",
     "limitations": "Own experiment. Group membership is inferred from comment text via GitHub search. The control group is LLVM-only. Raw rows are in result.json.",
     "verification": {
-      "status": "unchecked"
+      "status": "ok",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
+      "httpStatus": 200,
+      "note": "1 quote(s) found"
     },
     "provenance": "real"
   },
@@ -185,7 +209,7 @@
     "limitations": "A tool's own README describes the problem it sells a solution to.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -203,7 +227,7 @@
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
@@ -219,7 +243,7 @@
     "excerpt": "You may wish to modify pull request access for your repository if you want to restrict contributions, or disable them entirely. … To restrict pull requests to collaborators only",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -235,7 +259,7 @@
     "excerpt": "Limits activity for users who have not previously contributed to the default branch of the repository and are not collaborators.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -252,7 +276,7 @@
     "limitations": "The instruction sits in an HTML comment aimed at autonomous agents. VENTURE recorded it as data and did not act on it.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -269,7 +293,7 @@
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -286,7 +310,7 @@
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
     },
@@ -303,7 +327,7 @@
     "limitations": "Marketing copy; its claims about GitHub and curl are unsourced and were not used as evidence.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -320,7 +344,7 @@
     "limitations": "QEMU's stated rationale is primarily legal/provenance risk, not review burden.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -338,7 +362,7 @@
     "limitations": "The issue text says the finalized wording differs from the opening description quoted here.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -355,7 +379,7 @@
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -373,7 +397,7 @@
     "limitations": "Single maintainer's account; 290 reactions at retrieval.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
     },
@@ -391,7 +415,7 @@
     "limitations": "Written by Ghostty's creator, so it shares an origin with the Ghostty policy and is not counted as independent.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -408,7 +432,7 @@
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-03T21:28:37.318Z",
+      "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
