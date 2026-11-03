@@ -47,6 +47,10 @@ jobs:
               git clone -q --depth 1 --filter=blob:none --sparse https://github.com/ossf/malicious-packages /tmp/malicious-packages
               git -C /tmp/malicious-packages sparse-checkout set osv/malicious/npm
               npx tsx src/experiments/publish-anomaly.ts --max "$PER_GROUP" ;;
+            exp-publish-anomaly-campaign-replication)
+              git clone -q --depth 1 --filter=blob:none --sparse https://github.com/ossf/malicious-packages /tmp/malicious-packages
+              git -C /tmp/malicious-packages sparse-checkout set osv/malicious/npm
+              npx tsx src/experiments/publish-anomaly-campaigns.ts ;;
             *) echo "unknown experiment $EXPERIMENT"; exit 1 ;;
           esac
       - name: Commit raw results
