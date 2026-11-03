@@ -42,3 +42,18 @@ jobs:
           git add -A
           git commit -q -m "Deploy ${GITHUB_SHA::12}"
           git push -q --force "https://x-access-token:${TOKEN}@github.com/${REPO}.git" gh-pages
+      - name: Verify the live site serves this build
+        env:
+          URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: |
+          want=$(node -p "require('./dist/data/snapshot.json').commit")
+          echo "expecting snapshot commit $want at ${URL}"
+          for i in $(seq 1 30); do
+            got=$(curl -fsSL "${URL}data/snapshot.json?nocache=$RANDOM" 2>/dev/null | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{console.log(JSON.parse(s).commit)}catch{console.log('')}})")
+            if [ "$got" = "$want" ]; then echo "live site serves commit $got"; exit 0; fi
+            sleep 20
+          done
+          echo "::error::The live site does not serve this build (got '${got}'). Check Settings → Pages: Source must be 'Deploy from a branch' with branch 'gh-pages' and folder '/ (root)'."
+          curl -sS "${URL}" | head -c 600
+          exit 1
+
