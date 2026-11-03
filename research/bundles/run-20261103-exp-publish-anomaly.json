@@ -1,0 +1,181 @@
+{
+  "run": {
+    "id": "run-20261103-exp-publish-anomaly",
+    "themeId": "theme-oss-supply-chain-small-maintainers",
+    "mode": "agent-session",
+    "provider": "claude-code-session + github-actions experiment runner",
+    "startedAt": "2026-11-03T22:51:00Z",
+    "completedAt": "2026-11-03T23:03:20Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Executed in Actions run 41735491312 (60 incidents, 1,119 legitimate release pairs). The first attempt was discarded as a harness failure."
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "Independence check: 56/60 incidents from one campaign"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Campaign-level replication pre-registered"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 2,
+      "sourcesCited": 2,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "see research/experiments/exp-publish-anomaly-retrospective/result.json"
+    ],
+    "errors": [
+      "First execution attempt (22:51Z) used GitHub code search, which the Actions token can't use. It got 0 candidates, and its output was discarded as a harness failure."
+    ],
+    "limitations": [
+      "Newest-first sampling with a cap of 60 let one campaign dominate the sample.",
+      "Mechanisms come from report text, not package diffs (the malicious versions were removed from the registry).",
+      "A local harness dry-run on 8 incidents preceded the official run. The thresholds were unchanged."
+    ],
+    "usage": {
+      "note": "GitHub Actions (free for public repos). No model calls, no cost."
+    },
+    "limits": {
+      "max": 60
+    },
+    "provenance": "real"
+  },
+  "themes": [],
+  "sources": [
+    {
+      "id": "src-exp-publish-anomaly-result",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-publish-anomaly-retrospective/RESULT.md",
+      "title": "VENTURE experiment result: publish-anomaly retrospective (pre-registered analysis)",
+      "publisher": "VENTURE (own experiment, GitHub Actions run 41735491312)",
+      "retrievedAt": "2026-11-03T23:03:20Z",
+      "publishedAt": "2026-11-03",
+      "sourceType": "dataset",
+      "originId": "origin-venture-exp-publish-anomaly",
+      "excerpt": "Incidents with a new-dependency or install-hook signal: 58 of 58 classifiable (100.0%). … Legitimate consecutive releases that add a dependency or install script: 14 of 1119 (1.3%). … Verdict (pre-registered rule): supported: 100.0% of incidents carry a signal (≥ 60%) and 1.3% of legitimate releases do (< 10%).",
+      "limitations": "Own experiment. Mechanisms are classified by keyword rules over OSV report text. npm only.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-exp-publish-anomaly-analysis",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-publish-anomaly-retrospective/ANALYSIS.md",
+      "title": "VENTURE experiment: independence check of incidents (not pre-registered)",
+      "publisher": "VENTURE (own experiment)",
+      "retrievedAt": "2026-11-03T23:03:20Z",
+      "publishedAt": "2026-11-03",
+      "sourceType": "dataset",
+      "originId": "origin-venture-exp-publish-anomaly",
+      "excerpt": "56 of the 60 analysed incidents were published on 2026-08-04 and their OSV reports attribute them to the same Shai-Hulud campaign wave. … Counted by campaign instead of by package, the sample contains about 5 independent attacks, far below the 15 the design intended. … Interpretation: the pre-registered verdict stands as recorded, but it rests mostly on one worm campaign whose payload used `preinstall` hooks. It shows that this campaign would have been caught by an install-hook diff with a low false-positive rate (1.3% of legitimate releases). It does not establish that hijacks in general carry such signals. The asyncapi compromise (2026-07-14, outside the newest-60 sample) modified an existing file and would not have triggered either signal.",
+      "limitations": "Exploratory, computed after the verdict.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-sc-16",
+      "claim": "In the newest 60 hijacked npm packages in the OpenSSF dataset, 58 of 58 classifiable incidents carried a new install-hook signal, and only 1.3% of legitimate releases did.",
+      "sourceId": "src-exp-publish-anomaly-result",
+      "quote": "Incidents with a new-dependency or install-hook signal: 58 of 58 classifiable (100.0%).",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-17",
+      "claim": "56 of the 60 incidents come from one Shai-Hulud campaign wave, so the sample holds only about 5 independent attacks.",
+      "sourceId": "src-exp-publish-anomaly-analysis",
+      "quote": "Counted by campaign instead of by package, the sample contains about 5 independent attacks, far below the 15 the design intended.",
+      "stance": "context",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Limits how far the supportive result generalises: it mainly shows that one worm campaign was detectable."
+    },
+    {
+      "id": "ev-sc-18",
+      "claim": "A known hijack outside the sample (asyncapi) only modified an existing file, so it would not have triggered either signal.",
+      "sourceId": "src-exp-publish-anomaly-analysis",
+      "quote": "The asyncapi compromise (2026-07-14, outside the newest-60 sample) modified an existing file and would not have triggered either signal.",
+      "stance": "contradicts",
+      "epistemic": "inference",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    }
+  ],
+  "problems": [],
+  "competitors": [],
+  "ideas": [],
+  "experiments": [
+    {
+      "id": "exp-publish-anomaly-campaign-replication",
+      "ideaId": "idea-maintainer-publish-anomaly-alarm",
+      "title": "Campaign-level replication: do independent hijack campaigns carry structural signals?",
+      "hypothesis": "Across independent npm hijack campaigns (not individual packages), most carry a new-dependency or install-hook signal.",
+      "uncertainty": "Whether the first experiment's support generalises beyond the single Shai-Hulud wave that dominated its sample.",
+      "procedure": [
+        "Pre-registered 2026-11-03, before any campaign-level data collection.",
+        "Population: OpenSSF OSV reports 2024-01-01..2026-11-02 for hijacked legitimate npm packages (at least 10 non-malicious versions).",
+        "Group incidents into campaigns: same campaign name in the report, or same publish date and payload description. Take one representative per campaign.",
+        "Classify each campaign's mechanism as in exp-publish-anomaly-retrospective. Reuse the same false-positive baseline method."
+      ],
+      "successCriteria": [
+        "At least 60% of classifiable campaigns carry a new-dependency or install-hook signal, with at least 15 classifiable campaigns"
+      ],
+      "failureCriteria": [
+        "Fewer than 40% of classifiable campaigns carry such signals",
+        "Fewer than 15 classifiable campaigns (inconclusive)"
+      ],
+      "estimatedTime": "half a day of automated analysis",
+      "estimatedCostUsd": 0,
+      "resources": [
+        "OpenSSF malicious-packages",
+        "public npm registry"
+      ],
+      "expectedLearning": "Whether structural diffing generalises across attackers, or only catches worm-style campaigns.",
+      "nextSteps": {
+        "ifSuccess": "Survey vendor offerings for maintainer-side alerts, then prototype on VENTURE's own packages (none yet).",
+        "ifFailure": "Narrow the idea to worm/install-hook detection or park it."
+      },
+      "executionMode": "automatable",
+      "status": "proposed",
+      "createdInRun": "run-20261103-exp-publish-anomaly",
+      "provenance": "real"
+    }
+  ],
+  "decisions": []
+}

@@ -559,12 +559,12 @@
       "assessedBy": "critic (claude-code-session)"
     },
     "status": "advanced",
-    "statusRationale": "Advanced to a cheap retrospective check. The problem is severe and well evidenced, and the key assumption (structural anomalies) can be tested on public data before building anything.",
+    "statusRationale": "Stays advanced on weak but positive evidence. One large worm campaign would have been caught by an install-hook diff at a 1.3% false-positive rate, but the sample held about 5 independent attacks, and a known file-modification attack (asyncapi) would slip through. Next: a campaign-level replication.",
     "relatedIdeaIds": [],
     "epistemic": "hypothesis",
     "createdInRun": "run-20261103-agent-supply-chain-1",
     "createdAt": "2026-11-03T22:45:20Z",
-    "updatedAt": "2026-11-03T22:45:20Z",
+    "updatedAt": "2026-11-03T23:03:23.085Z",
     "provenance": "real"
   },
   {

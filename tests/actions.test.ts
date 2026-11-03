@@ -68,8 +68,10 @@ describe("calibration", () => {
   it("pairs real outcomes with the scores held before the outcome", () => {
     const real = validateMemory(JSON.parse(JSON.stringify(loadRaw("data"))), "real").memory!;
     const rows = calibration(real);
-    expect(rows).toHaveLength(1);
-    expect(rows[0].result).toBe("inconclusive");
-    expect(rows[0].attractivenessAtDecision).toBeTypeOf("number");
+    expect(rows.length).toBeGreaterThanOrEqual(1);
+    for (const r of rows) {
+      expect(["supported", "refuted", "inconclusive"]).toContain(r.result);
+      expect(r.attractivenessAtDecision).toBeTypeOf("number");
+    }
   });
 });
