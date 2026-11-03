@@ -11,7 +11,7 @@ on:
         required: true
         default: "exp-followup-engagement-retrospective"
       per_group:
-        description: "Max PRs sampled per group"
+        description: "Sample size (PRs per group, or incidents)"
         required: false
         default: "120"
 
@@ -43,6 +43,7 @@ jobs:
         run: |
           case "$EXPERIMENT" in
             exp-followup-engagement-retrospective) npx tsx src/experiments/followup-engagement.ts --per-group "$PER_GROUP" ;;
+            exp-publish-anomaly-retrospective) npx tsx src/experiments/publish-anomaly.ts --max "$PER_GROUP" ;;
             *) echo "unknown experiment $EXPERIMENT"; exit 1 ;;
           esac
       - name: Commit raw results

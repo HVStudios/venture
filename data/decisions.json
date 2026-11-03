@@ -145,7 +145,7 @@
     "action": "complete",
     "fromStatus": "approved",
     "toStatus": "inconclusive",
-    "rationale": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49\u201369%) versus 90.2% for merged LLVM newcomers (83/92, CI 82\u201395%): a clear gap, but short of the \u2264 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
+    "rationale": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49–69%) versus 90.2% for merged LLVM newcomers (83/92, CI 82–95%): a clear gap, but short of the ≤ 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
     "actor": "experiment designer",
     "provenance": "real"
   },
@@ -159,6 +159,18 @@
     "toStatus": "proposed",
     "rationale": "Design pre-registered before data collection: pooled policy-closed group across GitHub (LLVM alone has too few), LLVM newcomer control, fixed decision thresholds.",
     "actor": "experiment designer",
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-publish-anomaly-retrospective",
+    "at": "2026-11-03T22:50:07.166Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-publish-anomaly-retrospective",
+    "action": "advance",
+    "fromStatus": "proposed",
+    "toStatus": "approved",
+    "rationale": "Approved under the standing rule for automatable experiments. Design and thresholds were pre-registered in the revised procedure before any data collection.",
+    "actor": "research director (automatable: public data only, no contact, $0)",
     "provenance": "real"
   },
   {
