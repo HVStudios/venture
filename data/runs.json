@@ -152,5 +152,80 @@
       "maxAdvanced": 1
     },
     "provenance": "real"
+  },
+  {
+    "id": "run-20261103-agent-ai-contribution-burden-2",
+    "themeId": "theme-ai-contribution-burden",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-03T21:50:00Z",
+    "completedAt": "2026-11-03T22:05:00Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "Triaged 40 relevant signals from the first collector run (filtered from 77)"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "Read 10 arXiv abstracts; cited 6; 10 new evidence items (3 contradicting)"
+      },
+      {
+        "name": "invent",
+        "status": "skipped",
+        "notes": "No new concepts. Existing ideas revised instead."
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "Objections on 2 ideas updated with new evidence"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "notes": "Revisions reuse existing idea ids"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "Statuses unchanged: detector rejected, comprehension gate advanced"
+      },
+      {
+        "name": "experiment",
+        "status": "skipped",
+        "notes": "Existing experiment still appropriate"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 10,
+      "sourcesCited": 6,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "triage of data/signals.json (collector run run-20261103-2128-scout-ai-contributio)"
+    ],
+    "errors": [],
+    "limitations": [
+      "Evidence comes from arXiv abstracts only. Full papers, methods and datasets weren't examined.",
+      "Most studies use the AIDev dataset of agent-authored PRs, which differs from unsolicited inbound contributions to popular projects.",
+      "HN leads such as 'Linux Foundation Estimates 25% of New Pull Requests to Be Low-Quality AI Slop' were only titles in the signal feed. They weren't used as evidence and still need primary sources.",
+      "The evidence-strength formula changed during this run: contradictions aimed at an idea now count double. Snapshots from the first run use the earlier formula, so part of the detector's drop (61 → 50) comes from the method change, not new evidence."
+    ],
+    "usage": {
+      "note": "Interactive Claude Code session under the owner's subscription. Source documents were retrieved by the research-ops GitHub Actions collector. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
   }
 ]

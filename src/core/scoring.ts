@@ -95,7 +95,7 @@ export function originKey(source: Source): string {
   return source.originId ?? source.id;
 }
 
-function weigh(items: Evidence[], sources: Map<string, Source>): { origins: number; weight: number } {
+function weigh(items: Evidence[], sources: Map<string, Source>, boost: (e: Evidence) => number = () => 1): { origins: number; weight: number } {
   // Group by independent origin; take the strongest item per origin, so that
   // ten articles repeating one claim count once.
   const best = new Map<string, number>();
@@ -103,7 +103,7 @@ function weigh(items: Evidence[], sources: Map<string, Source>): { origins: numb
     const src = sources.get(ev.sourceId);
     if (!src) continue;
     const w =
-      EPISTEMIC_WEIGHT[ev.epistemic] * SOURCE_TYPE_WEIGHT[src.sourceType] * VERIFICATION_WEIGHT[src.verification.status];
+      EPISTEMIC_WEIGHT[ev.epistemic] * SOURCE_TYPE_WEIGHT[src.sourceType] * VERIFICATION_WEIGHT[src.verification.status] * boost(ev);
     const key = originKey(src);
     best.set(key, Math.max(best.get(key) ?? 0, w));
   }
@@ -112,7 +112,13 @@ function weigh(items: Evidence[], sources: Map<string, Source>): { origins: numb
   return { origins: best.size, weight };
 }
 
-export function assessEvidence(evidence: Evidence[], sourceList: Source[]): EvidenceAssessment {
+/**
+ * @param targetIdeaId when assessing an idea, contradicting evidence aimed at
+ * the idea itself (not just its problem) counts double: it attacks the
+ * proposed solution directly, while problem-level support only shows the
+ * problem is real.
+ */
+export function assessEvidence(evidence: Evidence[], sourceList: Source[], targetIdeaId?: string): EvidenceAssessment {
   const sources = new Map(sourceList.map((s) => [s.id, s]));
   const support = weigh(
     evidence.filter((e) => e.stance === "supports"),
@@ -121,6 +127,7 @@ export function assessEvidence(evidence: Evidence[], sourceList: Source[]): Evid
   const contra = weigh(
     evidence.filter((e) => e.stance === "contradicts"),
     sources,
+    (e) => (targetIdeaId && e.ideaIds.includes(targetIdeaId) ? 2 : 1),
   );
   // Saturating curve: ~3 strong independent origins ≈ 63, ~6 ≈ 86.
   const raw = 1 - Math.exp(-support.weight / 3);
@@ -130,6 +137,7 @@ export function assessEvidence(evidence: Evidence[], sourceList: Source[]): Evid
   const explanation = [
     `${support.origins} independent supporting origin(s), weighted ${support.weight.toFixed(2)}`,
     `${contra.origins} independent contradicting origin(s), weighted ${contra.weight.toFixed(2)}`,
+    ...(targetIdeaId ? ["Includes evidence on the idea's problems. Contradicting evidence aimed at the idea itself counts double."] : []),
     "Weights combine epistemic status (fact > inference > hypothesis > speculation), source type (surveys and datasets > user reports > vendor claims) and quote verification.",
   ];
   return {
@@ -157,6 +165,6 @@ export function evidenceForProblem(problemId: string, memory: Pick<Memory, "evid
 export function assessIdea(idea: Idea, memory: Pick<Memory, "evidence" | "sources">) {
   return {
     attractiveness: attractiveness(idea),
-    evidence: assessEvidence(evidenceForIdea(idea, memory), memory.sources),
+    evidence: assessEvidence(evidenceForIdea(idea, memory), memory.sources, idea.id),
   };
 }

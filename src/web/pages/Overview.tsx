@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import type { Idea } from "../../core/schema";
 import { Empty, EvidenceLevel, Section, StatusPill } from "../components/ui";
+import { reconsiderationQueue } from "../../core/actions";
 import { fmtDate, lastUpdated, timeAgo, useLab } from "../data";
 
 export function Landscape({ ideas, height = 320 }: { ideas: Idea[]; height?: number }) {
@@ -70,6 +71,7 @@ export function Overview() {
     .flatMap((i) => i.assumptions.filter((a) => a.criticality === "high" && a.status === "untested").map((a) => ({ idea: i, a })))
     .slice(0, 5);
   const active = m.themes.filter((t) => t.status === "active");
+  const reconsider = reconsiderationQueue(m);
 
   return (
     <div className="page">
@@ -193,6 +195,20 @@ export function Overview() {
           </div>
         </Section>
       </div>
+      {reconsider.length > 0 && (
+        <Section title="Up for reconsideration" kicker="Rejected is not forever">
+          <ul className="decision-list">
+            {reconsider.map((r) => (
+              <li key={r.idea.id}>
+                <div>
+                  <StatusPill status={r.idea.status} /> <Link to={`/ideas/${r.idea.id}`}>{r.idea.title}</Link>
+                </div>
+                <p>{r.reasons.join(" · ")}</p>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
       <p className="muted small-print">Research memory last changed {fmtDate(lastUpdated(m))}.</p>
     </div>
   );

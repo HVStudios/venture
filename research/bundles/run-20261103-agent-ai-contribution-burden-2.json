@@ -1,0 +1,629 @@
+{
+  "run": {
+    "id": "run-20261103-agent-ai-contribution-burden-2",
+    "themeId": "theme-ai-contribution-burden",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-03T21:50:00Z",
+    "completedAt": "2026-11-03T22:05:00Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "Triaged 40 relevant signals from the first collector run (filtered from 77)"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "Read 10 arXiv abstracts; cited 6; 10 new evidence items (3 contradicting)"
+      },
+      {
+        "name": "invent",
+        "status": "skipped",
+        "notes": "No new concepts. Existing ideas revised instead."
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "Objections on 2 ideas updated with new evidence"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "notes": "Revisions reuse existing idea ids"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "Statuses unchanged: detector rejected, comprehension gate advanced"
+      },
+      {
+        "name": "experiment",
+        "status": "skipped",
+        "notes": "Existing experiment still appropriate"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 10,
+      "sourcesCited": 6,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "triage of data/signals.json (collector run run-20261103-2128-scout-ai-contributio)"
+    ],
+    "errors": [],
+    "limitations": [
+      "Evidence comes from arXiv abstracts only. Full papers, methods and datasets weren't examined.",
+      "Most studies use the AIDev dataset of agent-authored PRs, which differs from unsolicited inbound contributions to popular projects.",
+      "HN leads such as 'Linux Foundation Estimates 25% of New Pull Requests to Be Low-Quality AI Slop' were only titles in the signal feed. They weren't used as evidence and still need primary sources.",
+      "The evidence-strength formula changed during this run: contradictions aimed at an idea now count double. Snapshots from the first run use the earlier formula, so part of the detector's drop (61 → 50) comes from the method change, not new evidence."
+    ],
+    "usage": {
+      "note": "Interactive Claude Code session under the owner's subscription. Source documents were retrieved by the research-ops GitHub Actions collector. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [],
+  "sources": [
+    {
+      "id": "src-arxiv-2609-07542",
+      "url": "https://arxiv.org/abs/2609.07542v1",
+      "title": "\"We Permit the Use of AI, but [...]\": The Landscape of AI Policies in Popular Open Source Projects",
+      "publisher": "arXiv",
+      "publishedAt": "2026-09-07",
+      "retrievedAt": "2026-11-03T21:28:31.349Z",
+      "sourceType": "paper",
+      "excerpt": "Open source communities are converging on a new governance artifact: the AI contribution policy. These policies barely existed a few months ago and are now being written and adopted. We analyzed 281 AI contribution policies, and manually classified them along the six dimensions; to study how policies change, we also tracked 92 dedicated AI policy files over time. We answer four research questions on (1) AI usage allowance, (2) AI disclosure practices, (3) AI slop countermeasures, and (4) AI policy evolution. We find that, first, permission is the norm rather than the exception: 83.3% of policies permit or encourage AI in code contributions. But permission comes with conditions, as 67.3% require a high level of human involvement and 43.4% assign accountability. Second, AI disclosure is required by 48.8% of policies, most often in pull request descriptions and commit messages, but what must be disclosed varies widely. Third, we identify ten countermeasures against AI slop, targeting pull requests, users, and autonomous agents. Finally, policies are not static: half of the dedicated AI policy files have already been revised since creation. Our results give maintainers and researchers …",
+      "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Policy texts express intent; enforcement is not measured.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-arxiv-2609-07919",
+      "url": "https://arxiv.org/abs/2609.07919v1",
+      "title": "You can contribute if you... An Empirical Framework of AI Contribution Policies in OSS",
+      "publisher": "arXiv",
+      "publishedAt": "2026-09-07",
+      "retrievedAt": "2026-11-03T21:28:31.349Z",
+      "sourceType": "paper",
+      "excerpt": "Artificial intelligence is reshaping open source software (OSS) contribution by lowering the cost of producing code, documentation, issue reports, and review interactions. This creates opportunities for broader participation, but also disrupts how maintainers assess contributor effort, competence, and accountability. In response, OSS projects are beginning to regulate AI-mediated contribution through contribution guidelines and other project documentation. This paper presents an empirical study of these emerging policies. We analyze project policies on AI-mediated contributions by evaluating their underlying rationales, rules, and expectations. Our analysis shows that these policies seek to protect scarce maintainer attention, preserve accountability, sustain meaningful review interactions, address legal and quality concerns, and maintain pathways for newcomer learning. Based on these findings, we introduce the AI Contribution Governance Framework, which organizes recurring concerns and governance mechanisms across projects. The framework helps OSS communities develop AI contribution policies and provides researchers with a vocabulary for studying how AI is changing collaborative s…",
+      "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Qualitative policy analysis.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-arxiv-2606-26289",
+      "url": "https://arxiv.org/abs/2606.26289v1",
+      "title": "Augmentation with Dilution: A Large-Scale Empirical Study of Human Contributor Ecosystems After AI Coding Agent Adoption",
+      "publisher": "arXiv",
+      "publishedAt": "2026-06-24",
+      "retrievedAt": "2026-11-03T21:28:31.349Z",
+      "sourceType": "paper",
+      "excerpt": "AI coding agents are penetrating open-source software development at an unprecedented pace, yet existing research predominantly treats human contributors as a static backdrop rather than as the subject of inquiry. This paper presents the first large-scale empirical study that takes the human contributor ecosystem as its dependent variable, examining how the number, composition, and behavior of human participants change following AI coding agent adoption in open-source projects. Using a staggered difference-in-differences design on a dataset of 11,097 GitHub repositories spanning January 2023 to May 2026, we provide causal evidence via the Sun and Abraham estimator. Our results show that AI agent adoption does not significantly change the absolute number of human contributors (ATT = 0.014, p = 0.224), but significantly reduces human contributor density (ATT = -0.019, p = 0.002), indicating that the relative share of human participation declines as AI-generated pull requests accumulate. The relative participation share of newcomers declines significantly by 3.7 percentage points (ATT = -0.037, p < 0.001), with the effect emerging immediately after adoption and remaining stable throug…",
+      "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Observational difference-in-differences study of repositories that adopted AI agents themselves; not inbound drive-by contributions.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-arxiv-2604-19965",
+      "url": "https://arxiv.org/abs/2604.19965v1",
+      "title": "Insights into Security-Related AI-Generated Pull Requests",
+      "publisher": "arXiv",
+      "publishedAt": "2026-04-21",
+      "retrievedAt": "2026-11-03T21:28:31.349Z",
+      "sourceType": "paper",
+      "excerpt": "Recent years have experienced growing contributions of AI coding agents that assist human developers in various software engineering tasks. However, this growing AI-assisted autonomy raises questions about security and trust. In this paper, we analyze more than 33,000 AI-generated pull requests (PRs) and identify 675 security-related submissions made by agentic AIs. Then we examine the security-related PRs with a focus on recurring security weaknesses, review outcomes and latency, commit message quality, and rejection reasons. The results show that security-related AI PRs introduce a small set of recurring weaknesses such as regex inefficiencies, injection flaws, and path traversal. Many flawed contributions are still merged, while rejections often arise from social or process factors such as inactivity or missing test coverage. The commit message quality of AI PRs has a limited effect on acceptance or latency, in contrast to human PRs reported in previous studies. We also extend existing rejection taxonomies by adding categories that are unique to AI-generated security contributions. These findings offer new insights into the strengths and shortcomings of autonomous coding systems…",
+      "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Uses the AIDev dataset of agent-authored PRs, many of them likely initiated by repository owners themselves, so findings may not transfer to unsolicited drive-by contributions.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-arxiv-2601-21276",
+      "url": "https://arxiv.org/abs/2601.21276v1",
+      "title": "More Code, Less Reuse: Investigating Code Quality and Reviewer Sentiment towards AI-generated Pull Requests",
+      "publisher": "arXiv",
+      "publishedAt": "2026-01-29",
+      "retrievedAt": "2026-11-03T21:28:31.349Z",
+      "sourceType": "paper",
+      "excerpt": "Large Language Model (LLM) Agents are advancing quickly, with the increasing leveraging of LLM Agents to assist in development tasks such as code generation. While LLM Agents accelerate code generation, studies indicate they may introduce adverse effects on development. However, existing metrics solely measure pass rates, failing to reflect impacts on long-term maintainability and readability, and failing to capture human intuitive evaluations of PR. To increase the comprehensiveness of this problem, we investigate and evaluate the characteristics of LLM to know the pull requests' characteristics beyond the pass rate. We observe the code quality and maintainability within PRs based on code metrics to evaluate objective characteristics and developers' reactions to the pull requests from both humans and LLM's generation. Evaluation results indicate that LLM Agents frequently disregard code reuse opportunities, resulting in higher levels of redundancy compared to human developers. In contrast to the quality issues, our emotions analysis reveals that reviewers tend to express more neutral or positive emotions towards AI-generated contributions than human ones. This disconnect suggests …",
+      "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Uses the AIDev dataset of agent-authored PRs, many of them likely initiated by repository owners themselves, so findings may not transfer to unsolicited drive-by contributions.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-arxiv-2605-02273",
+      "url": "https://arxiv.org/abs/2605.02273v1",
+      "title": "These Aren't the Reviews You're Looking For How Humans Review AI-Generated Pull Requests",
+      "publisher": "arXiv",
+      "publishedAt": "2026-05-04",
+      "retrievedAt": "2026-11-03T21:28:31.349Z",
+      "sourceType": "paper",
+      "excerpt": "We analyze code review interactions for AI-generated pull requests (PRs) on GitHub using the AIDev dataset and compare them to human-authored PRs within the same repositories. We find that most AI-generated PRs receive no review and, when reviewed, are largely dominated by AI agents rather than humans. Human-authored PRs are more likely to receive human-only review and to attract direct human feedback. In contrast, reviews of AI-generated PRs more often take the form of automation-mediated interaction, with human involvement frequently expressed through agent steering rather than standalone evaluation. These results indicate systematic differences in how review activity is structured in agentic workflows and raise challenges for interpreting review metrics as indicators of human oversight in large-scale mining studies.",
+      "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Uses the AIDev dataset of agent-authored PRs, many of them likely initiated by repository owners themselves, so findings may not transfer to unsolicited drive-by contributions.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-ai-burden-23",
+      "claim": "Across 281 open-source AI contribution policies, 83.3% permit or encourage AI in code contributions.",
+      "sourceId": "src-arxiv-2609-07542",
+      "quote": "permission is the norm rather than the exception: 83.3% of policies permit or encourage AI in code contributions",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-ai-authorship-pr-detector"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Undercuts gating on AI authorship: most projects explicitly allow AI-assisted code."
+    },
+    {
+      "id": "ev-ai-burden-24",
+      "claim": "Most AI policies (67.3%) require a high level of human involvement, which is the property a comprehension gate tries to check.",
+      "sourceId": "src-arxiv-2609-07542",
+      "quote": "But permission comes with conditions, as 67.3% require a high level of human involvement and 43.4% assign accountability.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-contributor-comprehension-gate"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-25",
+      "claim": "A systematic study found ten distinct countermeasures against AI slop already in use, so the solution space is actively explored.",
+      "sourceId": "src-arxiv-2609-07542",
+      "quote": "we identify ten countermeasures against AI slop, targeting pull requests, users, and autonomous agents",
+      "stance": "context",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-26",
+      "claim": "An empirical analysis of OSS AI policies finds that protecting scarce maintainer attention is a primary rationale.",
+      "sourceId": "src-arxiv-2609-07919",
+      "quote": "these policies seek to protect scarce maintainer attention, preserve accountability, sustain meaningful review interactions, address legal and quality concerns, and maintain pathways for newcomer learning",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity",
+        "prob-submission-effort-no-longer-signals-trust"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-27",
+      "claim": "In 11,097 repositories, AI coding-agent adoption is associated with a 3.7-point drop in newcomers' share of participation.",
+      "sourceId": "src-arxiv-2606-26289",
+      "quote": "The relative participation share of newcomers declines significantly by 3.7 percentage points (ATT = -0.037, p < 0.001)",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-submission-effort-no-longer-signals-trust"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real",
+      "limitations": "Measures agent adoption by the repository itself, not inbound AI contributions. Supports the newcomer-pathway concern only indirectly."
+    },
+    {
+      "id": "ev-ai-burden-28",
+      "claim": "The same study finds no significant change in the absolute number of human contributors.",
+      "sourceId": "src-arxiv-2606-26289",
+      "quote": "AI agent adoption does not significantly change the absolute number of human contributors (ATT = 0.014, p = 0.224)",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-submission-effort-no-longer-signals-trust"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Tempers claims that AI drives human contributors away. The effect is on relative share."
+    },
+    {
+      "id": "ev-ai-burden-29",
+      "claim": "In 675 security-related agent PRs, rejections often stem from inactivity rather than code content, consistent with engagement being a useful signal.",
+      "sourceId": "src-arxiv-2604-19965",
+      "quote": "rejections often arise from social or process factors such as inactivity or missing test coverage",
+      "stance": "supports",
+      "epistemic": "inference",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-contributor-comprehension-gate"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "limitations": "Different population (agent PRs, security subset). Indirect support for assumption a1."
+    },
+    {
+      "id": "ev-ai-burden-30",
+      "claim": "Flawed AI-generated security contributions are often merged, so review isn't catching all problems.",
+      "sourceId": "src-arxiv-2604-19965",
+      "quote": "Many flawed contributions are still merged",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-31",
+      "claim": "In one dataset, reviewers expressed more neutral or positive sentiment toward AI-generated PRs than human ones.",
+      "sourceId": "src-arxiv-2601-21276",
+      "quote": "reviewers tend to express more neutral or positive emotions towards AI-generated contributions than human ones",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Reviewer sentiment in agent-PR datasets doesn't match the frustration expressed in maintainer policies. The populations likely differ (owner-initiated agent PRs vs. unsolicited contributions)."
+    },
+    {
+      "id": "ev-ai-burden-32",
+      "claim": "Most AI-generated PRs in the AIDev dataset receive no review at all.",
+      "sourceId": "src-arxiv-2605-02273",
+      "quote": "most AI-generated PRs receive no review and, when reviewed, are largely dominated by AI agents rather than humans",
+      "stance": "context",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Suggests much agent PR volume never reaches maintainers' review queues, so the burden is concentrated in specific popular projects."
+    }
+  ],
+  "problems": [
+    {
+      "id": "prob-ai-low-effort-prs-drain-review-capacity",
+      "title": "Low-effort AI-generated pull requests drain maintainer review capacity",
+      "statement": "Popular open-source projects report a sharp increase in AI-generated pull requests and issues submitted without understanding or follow-up. Reviewing and triaging them consumes scarce maintainer time, and some projects now restrict or close outside contributions entirely.",
+      "themeIds": [
+        "theme-ai-contribution-burden"
+      ],
+      "affectedUsers": "Maintainers and moderators of popular open-source projects (evidenced: tldraw, Rust, Astropy, LLVM, Linux, Ghostty, scikit-learn, Zulip, Godot)",
+      "severityNote": "High. tldraw auto-closes all external PRs, Rust maintainers call it a DDoS on capacity, and several projects threaten bans.",
+      "frequencyNote": "Recurring across at least 9 projects' policies and issues (Nov 2025 – 2026). A study counted 281 AI contribution policies in popular projects. No direct measurement of inbound volume was retrieved.",
+      "status": "investigating",
+      "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
+      "firstSeen": "2026-11-03T21:40:00Z",
+      "lastUpdated": "2026-11-03T22:05:00Z",
+      "provenance": "real"
+    },
+    {
+      "id": "prob-submission-effort-no-longer-signals-trust",
+      "title": "Submission effort no longer signals contributor trustworthiness",
+      "statement": "Open source used to treat the effort of submitting a change as a signal of a potential long-term contributor. AI tools make plausible-looking submissions nearly free, so maintainers lose that cheap filter and are moving to explicit trust mechanisms that risk excluding newcomers.",
+      "themeIds": [
+        "theme-ai-contribution-burden"
+      ],
+      "affectedUsers": "Maintainers, and genuine first-time contributors who face new barriers",
+      "severityNote": "Medium. Structural rather than acute.",
+      "frequencyNote": "Articulated by LLVM, Vouch/Ghostty, tldraw and Astropy.",
+      "status": "open",
+      "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
+      "firstSeen": "2026-11-03T21:40:00Z",
+      "lastUpdated": "2026-11-03T22:05:00Z",
+      "provenance": "real"
+    }
+  ],
+  "competitors": [],
+  "ideas": [
+    {
+      "id": "idea-ai-authorship-pr-detector",
+      "title": "AI-authorship detector for incoming pull requests",
+      "summary": "A GitHub Action that estimates whether a PR was AI-generated, then labels or closes it before a maintainer looks at it.",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "themeIds": [
+        "theme-ai-contribution-burden"
+      ],
+      "targetUsers": "Maintainers of popular open-source repositories",
+      "solution": "Classify PR text and diffs with stylometric and LLM-based detectors, then apply labels, auto-close, or route to a low-priority queue.",
+      "competitorIds": [
+        "comp-ai-pr-detectors",
+        "comp-fossier"
+      ],
+      "differentiation": "Little: several detectors already exist, and they target the same signal.",
+      "feasibility": "Easy to build, but AI-text detection is unreliable, and AI-assisted human work is indistinguishable from slop by style alone.",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "AI authorship is a good proxy for low-value contributions",
+          "criticality": "high",
+          "status": "weakened"
+        },
+        {
+          "id": "a2",
+          "text": "Detectors can separate AI from human text with low false-positive rates",
+          "criticality": "high",
+          "status": "untested"
+        }
+      ],
+      "risks": [
+        "Penalises legitimate AI-assisted contributors whom projects explicitly welcome",
+        "Arms race with detector evasion"
+      ],
+      "nextSteps": [],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "Wrong target. Projects mostly accept AI-assisted work: 83.3% of 281 policies permit it, as do Ghostty, curl, Zulip and LLVM. Their objection is to unreviewed, low-understanding work.",
+          "severity": "fatal",
+          "evidenceIds": [
+            "ev-ai-burden-14",
+            "ev-ai-burden-15",
+            "ev-ai-burden-16",
+            "ev-ai-burden-23"
+          ],
+          "status": "accepted"
+        },
+        {
+          "id": "obj-2",
+          "text": "Crowded: multiple open-source detectors already exist, and none has meaningful adoption, which suggests weak pull.",
+          "severity": "major",
+          "evidenceIds": [],
+          "status": "accepted"
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 4,
+            "rationale": "The underlying problem is severe for maintainers (tldraw closed external PRs)."
+          },
+          "frequency": {
+            "score": 4,
+            "rationale": "Reported across many large projects in 2025–2026."
+          },
+          "userValue": {
+            "score": 2,
+            "rationale": "Classifies the wrong attribute, so its value is doubtful."
+          },
+          "competitiveGap": {
+            "score": 1,
+            "rationale": "Several free detectors exist."
+          },
+          "differentiation": {
+            "score": 1,
+            "rationale": "No clear angle."
+          },
+          "feasibility": {
+            "score": 3,
+            "rationale": "Easy to ship, hard to make accurate."
+          },
+          "costComplexity": {
+            "score": 4,
+            "rationale": "Small GitHub Action."
+          },
+          "userAccess": {
+            "score": 4,
+            "rationale": "Maintainers are easy to reach on GitHub."
+          },
+          "validationCost": {
+            "score": 4,
+            "rationale": "Could be validated cheaply on labelled PR data."
+          }
+        },
+        "assessedAt": "2026-11-03T21:40:00Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "rejected",
+      "statusRationale": "Rejected, and reaffirmed by follow-up evidence. 83.3% of 281 OSS AI policies permit AI in code, so AI authorship is the wrong thing to gate on. The detector space is also crowded.",
+      "relatedIdeaIds": [],
+      "epistemic": "hypothesis",
+      "createdInRun": "run-20261103-agent-ai-contribution-burden",
+      "createdAt": "2026-11-03T21:40:00Z",
+      "updatedAt": "2026-11-03T22:05:00Z",
+      "provenance": "real"
+    },
+    {
+      "id": "idea-contributor-comprehension-gate",
+      "title": "Comprehension gate for first-time contributors' PRs",
+      "summary": "Before a PR from an unknown contributor enters the review queue, its author must answer two or three short, diff-specific questions in their own words. Maintainers see the answers and whether the author engaged at all.",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity",
+        "prob-submission-effort-no-longer-signals-trust"
+      ],
+      "themeIds": [
+        "theme-ai-contribution-burden"
+      ],
+      "targetUsers": "Maintainers of popular repositories that receive many PRs from first-time contributors",
+      "solution": "A GitHub App or Action. When a PR from a non-collaborator without prior merged contributions is opened, it is marked 'awaiting author' and a comment asks diff-specific questions (why this change, what it interacts with, how it was tested). The PR enters the maintainer queue only after the author responds. Follow-up engagement is the primary signal, not detection of AI text. It works alongside vouch lists and GitHub's interaction limits.",
+      "competitorIds": [
+        "comp-github-pr-access-controls",
+        "comp-vouch",
+        "comp-fossier",
+        "comp-written-ai-policies",
+        "comp-close-external-prs"
+      ],
+      "differentiation": "It operationalises the requirement that policies already state ('be able to answer questions about their work', 'If you can't explain what your changes do…'). Unlike reputation gates it doesn't exclude newcomers, and unlike detectors it doesn't judge AI use.",
+      "feasibility": "High. GitHub webhooks, PR comments and labels are standard. Question generation can start with templates; diff-specific questions would need an LLM (cost to the operator).",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "Authors of low-effort PRs rarely respond to maintainer questions, while genuine contributors do (follow-up engagement discriminates)",
+          "criticality": "high",
+          "status": "untested"
+        },
+        {
+          "id": "a2",
+          "text": "Maintainers accept a small added delay for newcomers in exchange for a filtered queue",
+          "criticality": "medium",
+          "status": "untested"
+        },
+        {
+          "id": "a3",
+          "text": "Answers pasted from an LLM still reduce the burden, because they arrive before review time is spent",
+          "criticality": "medium",
+          "status": "untested"
+        }
+      ],
+      "risks": [
+        "Authors can paste the questions into an LLM, which weakens the content signal (though not the engagement signal)",
+        "Adds friction for legitimate newcomers",
+        "GitHub may ship a native equivalent"
+      ],
+      "nextSteps": [
+        "Run the retrospective engagement experiment",
+        "If it is supported, build a template-only prototype and test it on VENTURE's own repository first"
+      ],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "An LLM can answer the questions too, so the gate may only add a round-trip for slop authors.",
+          "severity": "major",
+          "evidenceIds": [],
+          "response": "The bet is on engagement (does the author respond at all, and quickly), which tldraw reports is typically missing. This is the assumption the experiment tests. Follow-up: in one study of agent PRs, rejections often stemmed from inactivity (indirect support).",
+          "status": "open"
+        },
+        {
+          "id": "obj-2",
+          "text": "Friction for genuine newcomers conflicts with projects' stated wish to grow contributors, and newcomers' share of participation is already shrinking where agents are adopted.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-ai-burden-20",
+            "ev-ai-burden-27"
+          ],
+          "response": "Questions are short and only apply to authors with no prior merged PRs. Measure newcomer drop-off before adoption.",
+          "status": "open"
+        },
+        {
+          "id": "obj-3",
+          "text": "Platform risk: GitHub could add this natively. tldraw explicitly waits for 'better tools' from GitHub.",
+          "severity": "minor",
+          "evidenceIds": [
+            "ev-ai-burden-13"
+          ],
+          "status": "accepted"
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 4,
+            "rationale": "Projects are closing external PRs and describe the load as DDoS-like."
+          },
+          "frequency": {
+            "score": 4,
+            "rationale": "Reported across many large projects in 2025–2026."
+          },
+          "userValue": {
+            "score": 3,
+            "rationale": "Could filter the queue without excluding newcomers. Unproven."
+          },
+          "competitiveGap": {
+            "score": 3,
+            "rationale": "Ten countermeasures exist in practice (policy study), but none found gates on comprehension or engagement. Still uncertain."
+          },
+          "differentiation": {
+            "score": 3,
+            "rationale": "Aligned with the wording of the policies, but the mechanism is simple to copy."
+          },
+          "feasibility": {
+            "score": 4,
+            "rationale": "Standard GitHub App plumbing."
+          },
+          "costComplexity": {
+            "score": 4,
+            "rationale": "A template-based v1 is small."
+          },
+          "userAccess": {
+            "score": 4,
+            "rationale": "Maintainers who wrote AI policies are visible on GitHub."
+          },
+          "validationCost": {
+            "score": 5,
+            "rationale": "The core assumption can be tested on public GitHub data for $0."
+          }
+        },
+        "assessedAt": "2026-11-03T22:05:00Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "advanced",
+      "statusRationale": "Remains advanced. Follow-up evidence shows most policies require high human involvement (67.3%), which is the property this gate checks. The retrospective experiment is still the next step.",
+      "relatedIdeaIds": [
+        "idea-ai-authorship-pr-detector"
+      ],
+      "epistemic": "hypothesis",
+      "createdInRun": "run-20261103-agent-ai-contribution-burden",
+      "createdAt": "2026-11-03T21:40:00Z",
+      "updatedAt": "2026-11-03T22:05:00Z",
+      "provenance": "real",
+      "noveltyNote": "Distinct from AI-authorship detectors (rejected): it gates on author engagement and understanding, not on whether AI was used."
+    }
+  ],
+  "experiments": [],
+  "decisions": [
+    {
+      "id": "dec-20261103-revise-comprehension-gate",
+      "at": "2026-11-03T22:05:00Z",
+      "runId": "run-20261103-agent-ai-contribution-burden-2",
+      "subjectType": "idea",
+      "subjectId": "idea-contributor-comprehension-gate",
+      "action": "revise",
+      "fromStatus": "advanced",
+      "toStatus": "advanced",
+      "rationale": "Remains advanced. Follow-up evidence shows most policies require high human involvement (67.3%), which is the property this gate checks. The retrospective experiment is still the next step.",
+      "actor": "director",
+      "provenance": "real"
+    },
+    {
+      "id": "dec-20261103-revise-ai-authorship-detector",
+      "at": "2026-11-03T22:05:00Z",
+      "runId": "run-20261103-agent-ai-contribution-burden-2",
+      "subjectType": "idea",
+      "subjectId": "idea-ai-authorship-pr-detector",
+      "action": "revise",
+      "fromStatus": "rejected",
+      "toStatus": "rejected",
+      "rationale": "Rejected, and reaffirmed by follow-up evidence. 83.3% of 281 OSS AI policies permit AI in code, so AI authorship is the wrong thing to gate on. The detector space is also crowded.",
+      "actor": "director",
+      "provenance": "real"
+    }
+  ]
+}

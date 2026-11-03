@@ -245,7 +245,8 @@ export type Experiment = z.infer<typeof Experiment>;
 export const Decision = z.object({
   id: Id,
   at: IsoDate,
-  runId: Id,
+  /** The run that produced the decision; absent for manual/owner decisions. */
+  runId: Id.optional(),
   subjectType: z.enum(["idea", "problem", "experiment", "theme"]),
   subjectId: Id,
   action: z.enum(["create", "advance", "reject", "park", "revise", "merge", "reopen", "complete"]),

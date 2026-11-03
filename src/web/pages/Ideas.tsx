@@ -357,7 +357,12 @@ export function IdeaDetail() {
               <span className="when">{fmtDate(d.at)}</span>
               <span>
                 <b>{d.action}</b> {d.fromStatus ? `${d.fromStatus} → ` : ""}
-                <StatusPill status={d.toStatus} /> by {d.actor} in <Link to={`/runs/${d.runId}`}>{d.runId}</Link>
+                <StatusPill status={d.toStatus} /> by {d.actor}
+                {d.runId && (
+                  <>
+                    {" "}in <Link to={`/runs/${d.runId}`}>{d.runId}</Link>
+                  </>
+                )}
                 {d.attractiveness !== undefined && (
                   <span className="muted"> · attractiveness {d.attractiveness} · evidence {d.evidenceStrength}</span>
                 )}

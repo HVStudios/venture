@@ -54,5 +54,35 @@
     "attractiveness": 46,
     "evidenceStrength": 19,
     "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-revise-ai-authorship-detector",
+    "at": "2026-11-03T22:05:00Z",
+    "runId": "run-20261103-agent-ai-contribution-burden-2",
+    "subjectType": "idea",
+    "subjectId": "idea-ai-authorship-pr-detector",
+    "action": "revise",
+    "fromStatus": "rejected",
+    "toStatus": "rejected",
+    "rationale": "Rejected, and reaffirmed by follow-up evidence. 83.3% of 281 OSS AI policies permit AI in code, so AI authorship is the wrong thing to gate on. The detector space is also crowded.",
+    "actor": "director",
+    "attractiveness": 48,
+    "evidenceStrength": 50,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261103-revise-comprehension-gate",
+    "at": "2026-11-03T22:05:00Z",
+    "runId": "run-20261103-agent-ai-contribution-burden-2",
+    "subjectType": "idea",
+    "subjectId": "idea-contributor-comprehension-gate",
+    "action": "revise",
+    "fromStatus": "advanced",
+    "toStatus": "advanced",
+    "rationale": "Remains advanced. Follow-up evidence shows most policies require high human involvement (67.3%), which is the property this gate checks. The retrospective experiment is still the next step.",
+    "actor": "director",
+    "attractiveness": 68,
+    "evidenceStrength": 83,
+    "provenance": "real"
   }
 ]

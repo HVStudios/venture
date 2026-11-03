@@ -4,7 +4,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { emptyMemory, type Theme } from "../src/core/schema";
 import { validateMemory } from "../src/core/validate";
-import { mergeSignals, parseArxiv, stripMarkup } from "../src/engine/collectors";
+import { isRelevant, mergeSignals, parseArxiv, stripMarkup } from "../src/engine/collectors";
 import { ingestBundle } from "../src/engine/ingest";
 import { runPipeline, type PoolItem } from "../src/engine/pipeline";
 import { AnthropicProvider } from "../src/engine/providers/anthropic";
@@ -153,5 +153,12 @@ describe("verification targets", () => {
     const source = { id: "src-a", url: "https://e.com/a", title: "a", publisher: "e", retrievedAt: "2026-11-03", sourceType: "docs" as const, excerpt: "x", verification: { status: "unchecked" as const }, provenance: "real" as const };
     const page = async () => ({ ok: true, status: 200, json: async () => ({}), text: async () => "This policy is **not** intended for _x_." });
     expect((await verifySource(source, ["This policy is not intended for x."], page, new Date())).status).toBe("ok");
+  });
+});
+
+describe("signal relevance", () => {
+  it("requires every keyword token to appear", () => {
+    expect(isRelevant("Maintainers drowning in AI slop pull requests", ["AI slop pull request"])).toBe(true);
+    expect(isRelevant("Allow to change the font size of the workbench", ["AI slop pull request", "low-effort contributions"])).toBe(false);
   });
 });

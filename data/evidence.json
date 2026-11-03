@@ -315,5 +315,152 @@
     "ideaIds": [],
     "competitorIds": [],
     "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-23",
+    "claim": "Across 281 open-source AI contribution policies, 83.3% permit or encourage AI in code contributions.",
+    "sourceId": "src-arxiv-2609-07542",
+    "quote": "permission is the norm rather than the exception: 83.3% of policies permit or encourage AI in code contributions",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "context": "Undercuts gating on AI authorship: most projects explicitly allow AI-assisted code.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-ai-authorship-pr-detector"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-24",
+    "claim": "Most AI policies (67.3%) require a high level of human involvement, which is the property a comprehension gate tries to check.",
+    "sourceId": "src-arxiv-2609-07542",
+    "quote": "But permission comes with conditions, as 67.3% require a high level of human involvement and 43.4% assign accountability.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-contributor-comprehension-gate"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-25",
+    "claim": "A systematic study found ten distinct countermeasures against AI slop already in use, so the solution space is actively explored.",
+    "sourceId": "src-arxiv-2609-07542",
+    "quote": "we identify ten countermeasures against AI slop, targeting pull requests, users, and autonomous agents",
+    "stance": "context",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-26",
+    "claim": "An empirical analysis of OSS AI policies finds that protecting scarce maintainer attention is a primary rationale.",
+    "sourceId": "src-arxiv-2609-07919",
+    "quote": "these policies seek to protect scarce maintainer attention, preserve accountability, sustain meaningful review interactions, address legal and quality concerns, and maintain pathways for newcomer learning",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity",
+      "prob-submission-effort-no-longer-signals-trust"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-27",
+    "claim": "In 11,097 repositories, AI coding-agent adoption is associated with a 3.7-point drop in newcomers' share of participation.",
+    "sourceId": "src-arxiv-2606-26289",
+    "quote": "The relative participation share of newcomers declines significantly by 3.7 percentage points (ATT = -0.037, p < 0.001)",
+    "stance": "supports",
+    "epistemic": "fact",
+    "limitations": "Measures agent adoption by the repository itself, not inbound AI contributions. Supports the newcomer-pathway concern only indirectly.",
+    "problemIds": [
+      "prob-submission-effort-no-longer-signals-trust"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-28",
+    "claim": "The same study finds no significant change in the absolute number of human contributors.",
+    "sourceId": "src-arxiv-2606-26289",
+    "quote": "AI agent adoption does not significantly change the absolute number of human contributors (ATT = 0.014, p = 0.224)",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "context": "Tempers claims that AI drives human contributors away. The effect is on relative share.",
+    "problemIds": [
+      "prob-submission-effort-no-longer-signals-trust"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-29",
+    "claim": "In 675 security-related agent PRs, rejections often stem from inactivity rather than code content, consistent with engagement being a useful signal.",
+    "sourceId": "src-arxiv-2604-19965",
+    "quote": "rejections often arise from social or process factors such as inactivity or missing test coverage",
+    "stance": "supports",
+    "epistemic": "inference",
+    "limitations": "Different population (agent PRs, security subset). Indirect support for assumption a1.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-contributor-comprehension-gate"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-30",
+    "claim": "Flawed AI-generated security contributions are often merged, so review isn't catching all problems.",
+    "sourceId": "src-arxiv-2604-19965",
+    "quote": "Many flawed contributions are still merged",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-31",
+    "claim": "In one dataset, reviewers expressed more neutral or positive sentiment toward AI-generated PRs than human ones.",
+    "sourceId": "src-arxiv-2601-21276",
+    "quote": "reviewers tend to express more neutral or positive emotions towards AI-generated contributions than human ones",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "context": "Reviewer sentiment in agent-PR datasets doesn't match the frustration expressed in maintainer policies. The populations likely differ (owner-initiated agent PRs vs. unsolicited contributions).",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-32",
+    "claim": "Most AI-generated PRs in the AIDev dataset receive no review at all.",
+    "sourceId": "src-arxiv-2605-02273",
+    "quote": "most AI-generated PRs receive no review and, when reviewed, are largely dominated by AI agents rather than humans",
+    "stance": "context",
+    "epistemic": "fact",
+    "context": "Suggests much agent PR volume never reaches maintainers' review queues, so the burden is concentrated in specific popular projects.",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
   }
 ]

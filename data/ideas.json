@@ -39,12 +39,13 @@
     "objections": [
       {
         "id": "obj-1",
-        "text": "Wrong target. Ghostty, curl, Zulip and LLVM all permit AI-assisted work. Their complaint is about unreviewed work from contributors who don't understand it.",
+        "text": "Wrong target. Projects mostly accept AI-assisted work: 83.3% of 281 policies permit it, as do Ghostty, curl, Zulip and LLVM. Their objection is to unreviewed, low-understanding work.",
         "severity": "fatal",
         "evidenceIds": [
           "ev-ai-burden-14",
           "ev-ai-burden-15",
-          "ev-ai-burden-16"
+          "ev-ai-burden-16",
+          "ev-ai-burden-23"
         ],
         "status": "accepted"
       },
@@ -99,12 +100,12 @@
       "assessedBy": "critic (claude-code-session)"
     },
     "status": "rejected",
-    "statusRationale": "Rejected. It targets AI authorship, while the projects studied explicitly accept AI-assisted work and object to unreviewed, low-understanding work. The space is already crowded with low-adoption detectors.",
+    "statusRationale": "Rejected, and reaffirmed by follow-up evidence. 83.3% of 281 OSS AI policies permit AI in code, so AI authorship is the wrong thing to gate on. The detector space is also crowded.",
     "relatedIdeaIds": [],
     "epistemic": "hypothesis",
     "createdInRun": "run-20261103-agent-ai-contribution-burden",
     "createdAt": "2026-11-03T21:40:00Z",
-    "updatedAt": "2026-11-03T21:40:00Z",
+    "updatedAt": "2026-11-03T22:05:00Z",
     "provenance": "real"
   },
   {
@@ -164,15 +165,16 @@
         "text": "An LLM can answer the questions too, so the gate may only add a round-trip for slop authors.",
         "severity": "major",
         "evidenceIds": [],
-        "response": "The bet is on engagement (does the author respond at all, and quickly), which tldraw reports is typically missing. This is the assumption the experiment tests.",
+        "response": "The bet is on engagement (does the author respond at all, and quickly), which tldraw reports is typically missing. This is the assumption the experiment tests. Follow-up: in one study of agent PRs, rejections often stemmed from inactivity (indirect support).",
         "status": "open"
       },
       {
         "id": "obj-2",
-        "text": "Friction for genuine newcomers conflicts with projects' stated wish to grow contributors.",
+        "text": "Friction for genuine newcomers conflicts with projects' stated wish to grow contributors, and newcomers' share of participation is already shrinking where agents are adopted.",
         "severity": "major",
         "evidenceIds": [
-          "ev-ai-burden-20"
+          "ev-ai-burden-20",
+          "ev-ai-burden-27"
         ],
         "response": "Questions are short and only apply to authors with no prior merged PRs. Measure newcomer drop-off before adoption.",
         "status": "open"
@@ -203,7 +205,7 @@
         },
         "competitiveGap": {
           "score": 3,
-          "rationale": "Existing tools gate on reputation or AI style. None found gates on engagement or comprehension, though the search was not exhaustive."
+          "rationale": "Ten countermeasures exist in practice (policy study), but none found gates on comprehension or engagement. Still uncertain."
         },
         "differentiation": {
           "score": 3,
@@ -226,16 +228,19 @@
           "rationale": "The core assumption can be tested on public GitHub data for $0."
         }
       },
-      "assessedAt": "2026-11-03T21:40:00Z",
+      "assessedAt": "2026-11-03T22:05:00Z",
       "assessedBy": "critic (claude-code-session)"
     },
     "status": "advanced",
-    "statusRationale": "Advanced to a cheap retrospective experiment. It addresses the best-evidenced problem, matches what the policies actually ask for (understanding, not abstinence), and its riskiest assumption can be tested with public data before any building.",
-    "relatedIdeaIds": [],
+    "statusRationale": "Remains advanced. Follow-up evidence shows most policies require high human involvement (67.3%), which is the property this gate checks. The retrospective experiment is still the next step.",
+    "relatedIdeaIds": [
+      "idea-ai-authorship-pr-detector"
+    ],
+    "noveltyNote": "Distinct from AI-authorship detectors (rejected): it gates on author engagement and understanding, not on whether AI was used.",
     "epistemic": "hypothesis",
     "createdInRun": "run-20261103-agent-ai-contribution-burden",
     "createdAt": "2026-11-03T21:40:00Z",
-    "updatedAt": "2026-11-03T21:40:00Z",
+    "updatedAt": "2026-11-03T22:05:00Z",
     "provenance": "real"
   },
   {
