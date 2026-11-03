@@ -96,7 +96,7 @@
           "rationale": "Could be validated cheaply on labelled PR data."
         }
       },
-      "assessedAt": "2026-11-03T21:40:00Z",
+      "assessedAt": "2026-11-03T21:25:00Z",
       "assessedBy": "critic (claude-code-session)"
     },
     "status": "rejected",
@@ -104,8 +104,8 @@
     "relatedIdeaIds": [],
     "epistemic": "hypothesis",
     "createdInRun": "run-20261103-agent-ai-contribution-burden",
-    "createdAt": "2026-11-03T21:40:00Z",
-    "updatedAt": "2026-11-03T22:05:00Z",
+    "createdAt": "2026-11-03T21:25:00Z",
+    "updatedAt": "2026-11-03T21:33:00Z",
     "provenance": "real"
   },
   {
@@ -228,7 +228,7 @@
           "rationale": "The core assumption can be tested on public GitHub data for $0."
         }
       },
-      "assessedAt": "2026-11-03T22:05:00Z",
+      "assessedAt": "2026-11-03T21:33:00Z",
       "assessedBy": "critic (claude-code-session)"
     },
     "status": "parked",
@@ -239,7 +239,7 @@
     "noveltyNote": "Distinct from AI-authorship detectors (rejected): it gates on author engagement and understanding, not on whether AI was used.",
     "epistemic": "hypothesis",
     "createdInRun": "run-20261103-agent-ai-contribution-burden",
-    "createdAt": "2026-11-03T21:40:00Z",
+    "createdAt": "2026-11-03T21:25:00Z",
     "updatedAt": "2026-11-03T21:44:32.255Z",
     "provenance": "real"
   },
@@ -339,7 +339,7 @@
           "rationale": "Hard to test without network adoption."
         }
       },
-      "assessedAt": "2026-11-03T21:40:00Z",
+      "assessedAt": "2026-11-03T21:25:00Z",
       "assessedBy": "critic (claude-code-session)"
     },
     "status": "parked",
@@ -347,7 +347,7 @@
     "relatedIdeaIds": [],
     "epistemic": "speculation",
     "createdInRun": "run-20261103-agent-ai-contribution-burden",
-    "createdAt": "2026-11-03T21:40:00Z",
+    "createdAt": "2026-11-03T21:25:00Z",
     "updatedAt": "2026-11-03T21:44:43.258Z",
     "provenance": "real"
   },
@@ -442,7 +442,7 @@
           "rationale": "Could be tested on historical public advisories."
         }
       },
-      "assessedAt": "2026-11-03T21:40:00Z",
+      "assessedAt": "2026-11-03T21:25:00Z",
       "assessedBy": "critic (claude-code-session)"
     },
     "status": "parked",
@@ -450,8 +450,8 @@
     "relatedIdeaIds": [],
     "epistemic": "hypothesis",
     "createdInRun": "run-20261103-agent-ai-contribution-burden",
-    "createdAt": "2026-11-03T21:40:00Z",
-    "updatedAt": "2026-11-03T21:40:00Z",
+    "createdAt": "2026-11-03T21:25:00Z",
+    "updatedAt": "2026-11-03T21:25:00Z",
     "provenance": "real"
   }
 ]

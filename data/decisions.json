@@ -1,7 +1,7 @@
 [
   {
     "id": "dec-20261103-agent-ai-contribution-burden-ai-authorship-pr-detector",
-    "at": "2026-11-03T21:40:00Z",
+    "at": "2026-11-03T21:25:00Z",
     "runId": "run-20261103-agent-ai-contribution-burden",
     "subjectType": "idea",
     "subjectId": "idea-ai-authorship-pr-detector",
@@ -15,7 +15,7 @@
   },
   {
     "id": "dec-20261103-agent-ai-contribution-burden-contributor-comprehension-gate",
-    "at": "2026-11-03T21:40:00Z",
+    "at": "2026-11-03T21:25:00Z",
     "runId": "run-20261103-agent-ai-contribution-burden",
     "subjectType": "idea",
     "subjectId": "idea-contributor-comprehension-gate",
@@ -29,7 +29,7 @@
   },
   {
     "id": "dec-20261103-agent-ai-contribution-burden-cross-project-contributor-reputation",
-    "at": "2026-11-03T21:40:00Z",
+    "at": "2026-11-03T21:25:00Z",
     "runId": "run-20261103-agent-ai-contribution-burden",
     "subjectType": "idea",
     "subjectId": "idea-cross-project-contributor-reputation",
@@ -43,7 +43,7 @@
   },
   {
     "id": "dec-20261103-agent-ai-contribution-burden-reproduction-first-security-triage",
-    "at": "2026-11-03T21:40:00Z",
+    "at": "2026-11-03T21:25:00Z",
     "runId": "run-20261103-agent-ai-contribution-burden",
     "subjectType": "idea",
     "subjectId": "idea-reproduction-first-security-triage",
@@ -109,7 +109,7 @@
   },
   {
     "id": "dec-20261103-preregister-followup-engagement",
-    "at": "2026-11-03T22:20:00Z",
+    "at": "2026-11-03T21:35:30Z",
     "subjectType": "experiment",
     "subjectId": "exp-followup-engagement-retrospective",
     "action": "revise",
@@ -121,7 +121,7 @@
   },
   {
     "id": "dec-20261103-revise-ai-authorship-detector",
-    "at": "2026-11-03T22:05:00Z",
+    "at": "2026-11-03T21:33:00Z",
     "runId": "run-20261103-agent-ai-contribution-burden-2",
     "subjectType": "idea",
     "subjectId": "idea-ai-authorship-pr-detector",
@@ -136,7 +136,7 @@
   },
   {
     "id": "dec-20261103-revise-comprehension-gate",
-    "at": "2026-11-03T22:05:00Z",
+    "at": "2026-11-03T21:33:00Z",
     "runId": "run-20261103-agent-ai-contribution-burden-2",
     "subjectType": "idea",
     "subjectId": "idea-contributor-comprehension-gate",

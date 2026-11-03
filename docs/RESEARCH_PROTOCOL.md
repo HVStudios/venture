@@ -10,7 +10,8 @@ This protocol lets an interactive or scheduled Claude Code session, powered by t
 5. **Independence.** When several sources repeat one original claim (a press release, a single survey), give them the same `originId`.
 6. **Reject freely.** Most ideas should be `parked` or `rejected`. An `advanced` idea needs a cheap experiment.
 7. **No outreach, no spending, no publishing claims** beyond this repository. Mark experiments that need any of these `requires-authorization`.
-8. **Respect prior memory.** Read `data/ideas.json` first. Don't re-propose an existing idea under a new name. Update the existing record (same id) and append a `revise` or `reopen` decision instead.
+8. **Real timestamps only.** Take every `at`, `startedAt`, `completedAt`, `retrievedAt` and `createdAt` from the clock (`date -u +%Y-%m-%dT%H:%M:%SZ`), never estimate them. The decision ledger's order is part of the evidence.
+9. **Respect prior memory.** Read `data/ideas.json` first. Don't re-propose an existing idea under a new name. Update the existing record (same id) and append a `revise` or `reopen` decision instead.
 
 ## Procedure
 1. **Pick a theme.** Use an active theme from `data/themes.json`, an issue labelled `theme-request`, or define a new one (add it to `themes` in the bundle).

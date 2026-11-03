@@ -155,3 +155,33 @@ export function reconsiderationQueue(m: Memory, threshold = 10): Reconsideration
   }
   return out;
 }
+
+export interface CalibrationRow {
+  experimentId: string;
+  ideaId: string;
+  result: NonNullable<Experiment["outcome"]>["result"];
+  /** Scores recorded on the idea's last decision before the outcome. */
+  attractivenessAtDecision?: number;
+  evidenceAtDecision?: number;
+  decidedAt?: string;
+}
+
+/** Pairs each recorded outcome with the scores the lab held when it chose to test it. */
+export function calibration(m: Memory): CalibrationRow[] {
+  return m.experiments
+    .filter((x) => x.outcome)
+    .map((x) => {
+      const before = m.decisions
+        .filter((d) => d.subjectId === x.ideaId && d.at <= x.outcome!.recordedAt && d.attractiveness !== undefined)
+        .sort((a, b) => a.at.localeCompare(b.at))
+        .at(-1);
+      return {
+        experimentId: x.id,
+        ideaId: x.ideaId,
+        result: x.outcome!.result,
+        attractivenessAtDecision: before?.attractiveness,
+        evidenceAtDecision: before?.evidenceStrength,
+        decidedAt: before?.at,
+      };
+    });
+}

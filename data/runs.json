@@ -276,7 +276,7 @@
     "mode": "agent-session",
     "provider": "claude-code-session",
     "startedAt": "2026-11-03T21:17:00Z",
-    "completedAt": "2026-11-03T21:40:00Z",
+    "completedAt": "2026-11-03T21:25:00Z",
     "status": "completed",
     "stages": [
       {
@@ -365,8 +365,8 @@
     "themeId": "theme-ai-contribution-burden",
     "mode": "agent-session",
     "provider": "claude-code-session",
-    "startedAt": "2026-11-03T21:50:00Z",
-    "completedAt": "2026-11-03T22:05:00Z",
+    "startedAt": "2026-11-03T21:30:00Z",
+    "completedAt": "2026-11-03T21:33:00Z",
     "status": "completed",
     "stages": [
       {
@@ -441,7 +441,7 @@
     "mode": "agent-session",
     "provider": "claude-code-session + github-actions experiment runner",
     "startedAt": "2026-11-03T21:39:35Z",
-    "completedAt": "2026-11-03T21:55:00Z",
+    "completedAt": "2026-11-03T21:46:00Z",
     "status": "completed",
     "stages": [
       {

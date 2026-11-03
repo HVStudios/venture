@@ -4,8 +4,8 @@
     "themeId": "theme-ai-contribution-burden",
     "mode": "agent-session",
     "provider": "claude-code-session",
-    "startedAt": "2026-11-03T21:50:00Z",
-    "completedAt": "2026-11-03T22:05:00Z",
+    "startedAt": "2026-11-03T21:30:00Z",
+    "completedAt": "2026-11-03T21:33:00Z",
     "status": "completed",
     "stages": [
       {
@@ -329,8 +329,8 @@
       "frequencyNote": "Recurring across at least 9 projects' policies and issues (Nov 2025 – 2026). A study counted 281 AI contribution policies in popular projects. No direct measurement of inbound volume was retrieved.",
       "status": "investigating",
       "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
-      "firstSeen": "2026-11-03T21:40:00Z",
-      "lastUpdated": "2026-11-03T22:05:00Z",
+      "firstSeen": "2026-11-03T21:25:00Z",
+      "lastUpdated": "2026-11-03T21:33:00Z",
       "provenance": "real"
     },
     {
@@ -345,8 +345,8 @@
       "frequencyNote": "Articulated by LLVM, Vouch/Ghostty, tldraw and Astropy.",
       "status": "open",
       "discoveredInRun": "run-20261103-agent-ai-contribution-burden",
-      "firstSeen": "2026-11-03T21:40:00Z",
-      "lastUpdated": "2026-11-03T22:05:00Z",
+      "firstSeen": "2026-11-03T21:25:00Z",
+      "lastUpdated": "2026-11-03T21:33:00Z",
       "provenance": "real"
     }
   ],
@@ -449,7 +449,7 @@
             "rationale": "Could be validated cheaply on labelled PR data."
           }
         },
-        "assessedAt": "2026-11-03T21:40:00Z",
+        "assessedAt": "2026-11-03T21:25:00Z",
         "assessedBy": "critic (claude-code-session)"
       },
       "status": "rejected",
@@ -457,8 +457,8 @@
       "relatedIdeaIds": [],
       "epistemic": "hypothesis",
       "createdInRun": "run-20261103-agent-ai-contribution-burden",
-      "createdAt": "2026-11-03T21:40:00Z",
-      "updatedAt": "2026-11-03T22:05:00Z",
+      "createdAt": "2026-11-03T21:25:00Z",
+      "updatedAt": "2026-11-03T21:33:00Z",
       "provenance": "real"
     },
     {
@@ -581,7 +581,7 @@
             "rationale": "The core assumption can be tested on public GitHub data for $0."
           }
         },
-        "assessedAt": "2026-11-03T22:05:00Z",
+        "assessedAt": "2026-11-03T21:33:00Z",
         "assessedBy": "critic (claude-code-session)"
       },
       "status": "advanced",
@@ -591,8 +591,8 @@
       ],
       "epistemic": "hypothesis",
       "createdInRun": "run-20261103-agent-ai-contribution-burden",
-      "createdAt": "2026-11-03T21:40:00Z",
-      "updatedAt": "2026-11-03T22:05:00Z",
+      "createdAt": "2026-11-03T21:25:00Z",
+      "updatedAt": "2026-11-03T21:33:00Z",
       "provenance": "real",
       "noveltyNote": "Distinct from AI-authorship detectors (rejected): it gates on author engagement and understanding, not on whether AI was used."
     }
@@ -601,7 +601,7 @@
   "decisions": [
     {
       "id": "dec-20261103-revise-comprehension-gate",
-      "at": "2026-11-03T22:05:00Z",
+      "at": "2026-11-03T21:33:00Z",
       "runId": "run-20261103-agent-ai-contribution-burden-2",
       "subjectType": "idea",
       "subjectId": "idea-contributor-comprehension-gate",
@@ -614,7 +614,7 @@
     },
     {
       "id": "dec-20261103-revise-ai-authorship-detector",
-      "at": "2026-11-03T22:05:00Z",
+      "at": "2026-11-03T21:33:00Z",
       "runId": "run-20261103-agent-ai-contribution-burden-2",
       "subjectType": "idea",
       "subjectId": "idea-ai-authorship-pr-detector",
