@@ -1,0 +1,33 @@
+[
+  {
+    "id": "exp-smoke-test-for-assistant-for-our-ci-fails-random",
+    "ideaId": "idea-assistant-for-our-ci-fails-randomly-about-once-a",
+    "title": "Smoke test for Assistant for Our CI fails randomly about once a day",
+    "hypothesis": "If offered, target users will try the triage assistant.",
+    "uncertainty": "Whether users trust automated triage.",
+    "procedure": [
+      "Build a static mock-up",
+      "Show it to five practitioners (requires authorization)"
+    ],
+    "successCriteria": [
+      "3 of 5 say they would try it"
+    ],
+    "failureCriteria": [
+      "Fewer than 2 of 5 interested"
+    ],
+    "estimatedTime": "2 days",
+    "estimatedCostUsd": 0,
+    "resources": [
+      "mock-up"
+    ],
+    "expectedLearning": "Whether trust is the blocking assumption.",
+    "nextSteps": {
+      "ifSuccess": "Prototype the clustering step.",
+      "ifFailure": "Park the idea."
+    },
+    "executionMode": "requires-authorization",
+    "status": "proposed",
+    "createdInRun": "run-20261103-2105-mock-demo-ci-reliabi",
+    "provenance": "fixture"
+  }
+]

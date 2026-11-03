@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prob-recurring-pain-our-ci-fails-randomly-about-once",
+    "title": "Recurring pain: Our CI fails randomly about once a day",
+    "statement": "Documents describe users struggling with: Our CI fails randomly about once a day and engineers just press re-run.",
+    "themeIds": [
+      "theme-demo-ci-reliability"
+    ],
+    "affectedUsers": "Practitioners described in the source",
+    "severityNote": "Mock assessment",
+    "frequencyNote": "Mock assessment",
+    "status": "investigating",
+    "discoveredInRun": "run-20261103-2105-mock-demo-ci-reliabi",
+    "firstSeen": "2026-11-03T21:05:10.890Z",
+    "lastUpdated": "2026-11-03T21:05:10.890Z",
+    "provenance": "fixture"
+  },
+  {
+    "id": "prob-recurring-pain-quarantining-flaky-tests-by-hand",
+    "title": "Recurring pain: Quarantining flaky tests by hand",
+    "statement": "Documents describe users struggling with: Quarantining flaky tests by hand takes our platform team several hours every week.",
+    "themeIds": [
+      "theme-demo-ci-reliability"
+    ],
+    "affectedUsers": "Practitioners described in the source",
+    "severityNote": "Mock assessment",
+    "frequencyNote": "Mock assessment",
+    "status": "investigating",
+    "discoveredInRun": "run-20261103-2105-mock-demo-ci-reliabi",
+    "firstSeen": "2026-11-03T21:05:10.891Z",
+    "lastUpdated": "2026-11-03T21:05:10.891Z",
+    "provenance": "fixture"
+  },
+  {
+    "id": "prob-recurring-pain-waiting-40-minutes-for-the-ci-que",
+    "title": "Recurring pain: Waiting 40 minutes for the CI queue",
+    "statement": "Documents describe users struggling with: Waiting 40 minutes for the CI queue before a two-line change can merge is killing our velocity.",
+    "themeIds": [
+      "theme-demo-ci-reliability"
+    ],
+    "affectedUsers": "Practitioners described in the source",
+    "severityNote": "Mock assessment",
+    "frequencyNote": "Mock assessment",
+    "status": "investigating",
+    "discoveredInRun": "run-20261103-2105-mock-demo-ci-reliabi",
+    "firstSeen": "2026-11-03T21:05:10.891Z",
+    "lastUpdated": "2026-11-03T21:05:10.891Z",
+    "provenance": "fixture"
+  }
+]

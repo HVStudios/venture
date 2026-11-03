@@ -1,0 +1,62 @@
+name: Research operations
+
+# Deterministic, LLM-free research upkeep that runs unattended:
+#  1. collect raw signals for every active theme from free public APIs
+#  2. re-verify that every cited quote still appears at its source URL
+#  3. validate memory, commit data changes, redeploy the site
+# No paid services, no model calls, no outbound contact with people.
+on:
+  schedule:
+    - cron: "17 5 * * 1,4" # Mon & Thu 05:17 UTC
+  workflow_dispatch:
+    inputs:
+      collectors:
+        description: "Comma-separated collectors (blank = all)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: research-ops
+  cancel-in-progress: false
+
+jobs:
+  operate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Collect signals
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COLLECTORS: ${{ github.event.inputs.collectors }}
+        run: |
+          if [ -n "$COLLECTORS" ]; then npm run venture -- scout --theme all --collectors "$COLLECTORS"; else npm run venture -- scout --theme all; fi
+      - name: Verify cited sources
+        run: npm run venture -- verify
+      - run: npm run lint:data
+      - id: commit
+        name: Commit data changes
+        run: |
+          if git diff --quiet -- data; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git config user.name "venture-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "data: scheduled signal collection and source verification"
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+  deploy:
+    needs: operate
+    if: needs.operate.outputs.changed == 'true'
+    uses: ./.github/workflows/deploy.yml

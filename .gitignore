@@ -1,0 +1,7 @@
+node_modules/
+dist/
+public/data/
+*.log
+.env
+.env.*
+.venture-cache/
