@@ -1,0 +1,27 @@
+{
+  "experiment": "exp-publish-anomaly-retrospective",
+  "executedAt": "2026-11-03T22:51:48.481Z",
+  "queries": [
+    "repo:ossf/malicious-packages path:osv/malicious/npm \"compromised\"",
+    "repo:ossf/malicious-packages path:osv/malicious/npm \"hijacked\""
+  ],
+  "notes": [
+    "0 candidate OSV report(s) from code search"
+  ],
+  "byMechanism": {
+    "install-hook": 0,
+    "new-dependency": 0,
+    "file-modification": 0,
+    "unknown": 0
+  },
+  "share": null,
+  "shareCi95": null,
+  "fpRate": null,
+  "fpCi95": null,
+  "verdict": {
+    "result": "inconclusive",
+    "reason": "only 0 classifiable incident(s); need ≥15"
+  },
+  "incidents": [],
+  "falsePositiveBaseline": []
+}
