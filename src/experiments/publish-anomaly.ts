@@ -10,7 +10,7 @@
  * and the public npm registry (per-version dependencies and scripts).
  * Runs in GitHub Actions:  tsx src/experiments/publish-anomaly.ts [--max 60]
  */
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { wilson } from "./followup-engagement";
 
@@ -56,12 +56,8 @@ export function verdict(signalShare: number | null, classifiable: number, fpRate
 
 // ------------------------------------------------------------------ execution
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
-async function getJson<T>(url: string, gh = false): Promise<T | null> {
+async function getJson<T>(url: string): Promise<T | null> {
   const headers: Record<string, string> = { "User-Agent": "venture-experiment" };
-  if (gh) {
-    headers.Accept = "application/vnd.github+json";
-    headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
-  }
   const res = await fetch(url, { headers });
   if (!res.ok) return null;
   return (await res.json()) as T;
@@ -77,24 +73,32 @@ interface Osv {
 }
 
 async function main() {
-  if (!process.env.GITHUB_TOKEN) throw new Error("GITHUB_TOKEN required");
+  // The dataset is read from a local sparse checkout of ossf/malicious-packages
+  // (the workflow clones it); GitHub code search is not available to Actions tokens.
   const max = Number(process.argv[process.argv.indexOf("--max") + 1] || 60);
-  const queries = ['repo:ossf/malicious-packages path:osv/malicious/npm "compromised"', 'repo:ossf/malicious-packages path:osv/malicious/npm "hijacked"'];
+  const root = process.env.MALICIOUS_PACKAGES_DIR ?? "/tmp/malicious-packages/osv/malicious/npm";
+  if (!existsSync(root)) throw new Error(`dataset not found at ${root}`);
+  const HIJACK = /compromis|hijack|account takeover|taken over|stolen (npm )?token|maintainer account/i;
   const paths = new Set<string>();
-  for (const q of queries) {
-    for (let page = 1; page <= 5; page++) {
-      const r = await getJson<{ items: { path: string }[] }>(`https://api.github.com/search/code?q=${encodeURIComponent(q)}&per_page=100&page=${page}`, true);
-      if (!r?.items?.length) break;
-      r.items.forEach((i) => paths.add(i.path));
-      await sleep(7000); // code search: 10 requests/minute
+  const walk = (dir: string) => {
+    for (const e of readdirSync(dir, { withFileTypes: true })) {
+      const p = join(dir, e.name);
+      if (e.isDirectory()) walk(p);
+      else if (e.name.endsWith(".json")) {
+        const t = readFileSync(p, "utf8");
+        if (HIJACK.test(t)) paths.add(p);
+      }
     }
-  }
-  const notes = [`${paths.size} candidate OSV report(s) from code search`];
+  };
+  walk(root);
+  const queries = [`local scan of ${root} for /${HIJACK.source}/i`];
+  if (!paths.size) throw new Error("data acquisition returned no candidate reports; refusing to emit a verdict");
+  const notes = [`${paths.size} candidate OSV report(s) mention a compromise or hijack`, "An earlier execution attempt (2026-11-03T22:51Z) used GitHub code search, got 0 results (not available to Actions tokens) and was discarded as a harness failure."];
   const incidents: { id: string; pkg: string; published?: string; mechanism: Mechanism; matched?: string; legitVersions: number }[] = [];
   const fp: { pkg: string; pairs: number; newDependency: number; newInstallScript: number; either: number }[] = [];
   for (const path of paths) {
     if (incidents.length >= max) break;
-    const osv = await getJson<Osv>(`https://raw.githubusercontent.com/ossf/malicious-packages/main/${path}`);
+    const osv = JSON.parse(readFileSync(path, "utf8")) as Osv;
     if (!osv?.affected?.[0]) continue;
     const when = osv.published ?? osv.modified ?? "";
     if (when < "2025-06-01" || when > "2026-11-02") continue;
@@ -116,6 +120,7 @@ async function main() {
     fp.push({ pkg: name, pairs: Math.max(0, ordered.length - 1), newDependency: nd, newInstallScript: ns, either: ei });
     await sleep(300);
   }
+  if (!incidents.length) throw new Error("no hijacked legitimate packages found among candidates; refusing to emit a verdict");
   const classifiable = incidents.filter((i) => i.mechanism !== "unknown");
   const withSignal = classifiable.filter((i) => i.mechanism === "install-hook" || i.mechanism === "new-dependency");
   const share = classifiable.length ? withSignal.length / classifiable.length : null;
