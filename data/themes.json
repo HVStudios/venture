@@ -14,5 +14,36 @@
     "createdAt": "2026-11-03",
     "notes": "First real research theme. Spans developer tools, open source and security.",
     "provenance": "real"
+  },
+  {
+    "id": "theme-exploratory-developer-friction",
+    "name": "Exploratory: recurring developer workflow friction",
+    "description": "A broad net for recurring complaints about everyday software-development workflows that might indicate unmet needs. Leads only, until a research session investigates them.",
+    "mode": "exploratory",
+    "keywords": [
+      "flaky tests",
+      "slow CI",
+      "wish there was a tool",
+      "code review bottleneck"
+    ],
+    "status": "active",
+    "createdAt": "2026-11-03",
+    "provenance": "real"
+  },
+  {
+    "id": "theme-oss-supply-chain-small-maintainers",
+    "name": "Supply-chain security for small open-source maintainers",
+    "description": "Security burdens (account takeover, malicious dependencies, release signing, provenance) that fall on volunteer maintainers without security teams, and which lightweight tools could reduce them.",
+    "mode": "focused",
+    "keywords": [
+      "maintainer account takeover",
+      "npm supply chain attack",
+      "trusted publishing",
+      "malicious package"
+    ],
+    "status": "active",
+    "createdAt": "2026-11-03",
+    "notes": "Signals are collected automatically; awaiting its first research session (issue #8).",
+    "provenance": "real"
   }
 ]

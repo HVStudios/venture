@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { HashRouter, NavLink, Route, Routes, useLocation } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { HashRouter, NavLink, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { FixtureNotice } from "./components/ui";
 import { lastUpdated, timeAgo, useLab } from "./data";
 import { Compare } from "./pages/Compare";
@@ -10,6 +10,7 @@ import { Method } from "./pages/Method";
 import { Overview } from "./pages/Overview";
 import { ProblemDetail, Problems } from "./pages/Problems";
 import { History, RunDetail } from "./pages/Runs";
+import { Search } from "./pages/Search";
 import { Signals } from "./pages/Signals";
 import { Sources } from "./pages/Sources";
 import { Themes } from "./pages/Themes";
@@ -48,6 +49,35 @@ function StoreSwitch() {
   );
 }
 
+function SearchBox() {
+  const nav = useNavigate();
+  const ref = useRef<HTMLInputElement>(null);
+  const [q, setQ] = useState("");
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement;
+      if (e.key === "/" && !/input|textarea|select/i.test(t.tagName)) {
+        e.preventDefault();
+        ref.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+  return (
+    <form
+      className="searchbox"
+      role="search"
+      onSubmit={(e) => {
+        e.preventDefault();
+        nav(`/search?q=${encodeURIComponent(q)}`);
+      }}
+    >
+      <input ref={ref} type="search" placeholder="Search  /" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search the lab" />
+    </form>
+  );
+}
+
 function Shell() {
   const lab = useLab();
   const [open, setOpen] = useState(false);
@@ -76,6 +106,7 @@ function Shell() {
           ))}
         </nav>
         <div className="topbar-right">
+          <SearchBox />
           <StoreSwitch />
         </div>
       </header>
@@ -90,6 +121,7 @@ function Shell() {
           <Route path="/experiments" element={<Experiments />} />
           <Route path="/sources" element={<Sources />} />
           <Route path="/signals" element={<Signals />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/compare" element={<Compare />} />
           <Route path="/graph" element={<Graph />} />
           <Route path="/history" element={<History />} />
