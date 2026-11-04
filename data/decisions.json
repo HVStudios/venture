@@ -368,6 +368,18 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261104-pre-review-signal-discrimination-2",
+    "at": "2026-11-04T11:16:21.915Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-pre-review-signal-discrimination",
+    "action": "complete",
+    "fromStatus": "approved",
+    "toStatus": "inconclusive",
+    "rationale": "Pre-registered verdict: inconclusive. The cross-repo PR burst separates the groups only weakly (AUC 0.64; median 6 vs 1 prior PRs), and account age barely at all (AUC 0.54). Catching half of the policy-violating PRs would also flag about 30% of genuine newcomers. Cheap account-level signals aren't a good basis for triage.",
+    "actor": "experiment designer",
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261104-revise-publish-anomaly-alarm",
     "at": "2026-11-04T09:18:07Z",
     "runId": "run-20261104-agent-supply-chain-2",
@@ -380,6 +392,20 @@
     "actor": "director",
     "attractiveness": 71,
     "evidenceStrength": 26,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261104-validated-pre-review-triage-signals",
+    "at": "2026-11-04T11:16:22.436Z",
+    "subjectType": "idea",
+    "subjectId": "idea-validated-pre-review-triage-signals",
+    "action": "park",
+    "fromStatus": "advanced",
+    "toStatus": "parked",
+    "rationale": "Parked after a real test: the two cheapest pre-review signals discriminate weakly (AUC 0.64 and 0.54), and would flag about 30% of genuine newcomers to catch half of the policy-violating PRs. That's too unfair and too noisy to build on. Content-based signals (e.g. PR template compliance) are untested and could be examined next.",
+    "actor": "director",
+    "attractiveness": 66,
+    "evidenceStrength": 78,
     "provenance": "real"
   }
 ]

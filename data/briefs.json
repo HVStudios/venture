@@ -102,6 +102,17 @@
           "ev-ai-burden-39"
         ],
         "epistemic": "inference"
+      },
+      {
+        "id": "f9",
+        "statement": "Cheap account-level signals are poor triage tools. Authors of policy-violating PRs had typically opened more PRs elsewhere in the prior month (median 6 vs 1), but the groups overlap so much that the signal's AUC is only 0.64. Account age is close to useless (0.54). Catching half of the problem PRs this way would also flag about 30% of genuine newcomers.",
+        "strength": "Moderate. A pre-registered test on 237 labelled PRs. The control group is LLVM-only, and per-PR data wasn't persisted.",
+        "evidenceIds": [
+          "ev-ai-burden-41",
+          "ev-ai-burden-42",
+          "ev-ai-burden-43"
+        ],
+        "epistemic": "fact"
       }
     ],
     "uncertainties": [
@@ -111,32 +122,35 @@
       "News coverage and blogs couldn't be read from the research environment, so secondary reporting (e.g. a reported Linux Foundation estimate) remains unverified."
     ],
     "conclusion": {
-      "belief": "The burden is real and widespread, and much of it is triage: deciding which PRs deserve attention at all. Projects largely accept AI help and object to unreviewed, low-understanding work, so detecting AI is the wrong lever, and blunt AI rules carry a fairness cost. The first candidate solution (gating on author follow-up) was not a useful filter. A new candidate, advisory triage based on validated pre-review signals, is being tested next.",
+      "belief": "The burden is real and widespread, and much of it is triage: deciding which PRs deserve attention at all. Projects largely accept AI help and object to unreviewed, low-understanding work, so detecting AI is the wrong lever, and blunt AI rules carry a fairness cost. Two candidate solutions have now been tested and neither works as a filter. Author follow-up and cheap account-level signals (recent PR volume elsewhere, account age) both separate low-effort from genuine contributions only weakly. No solution in this area is currently worth building.",
       "confidence": "medium",
-      "confidenceReason": "Medium for the problem: many independent primary sources and a 281-policy study agree. Low for any solution: one test was inconclusive, and the current candidate is untested.",
+      "confidenceReason": "Medium for the problem: many independent primary sources and a 281-policy study agree. Medium for the negative result on simple signals: two pre-registered tests on real PRs, though with an LLVM-only control group.",
       "unknowns": [
-        "Whether cheap pre-review signals separate low-effort PRs from genuine newcomer PRs",
+        "Whether content-based signals (e.g. PR template or AI-disclosure compliance) discriminate better than account-level ones",
         "How much maintainer time triage actually takes",
         "Which of the existing countermeasures work best"
       ],
       "continueInvestigation": true,
-      "continueReason": "A $0 test on 240 already-labelled PRs can show whether signal-based triage is viable at all."
+      "continueReason": "Content-based signals are the one cheap, untested direction left. If they also fail, the area should be paused rather than continued by invention."
     },
     "nextSteps": [
       {
-        "text": "Test whether two cheap pre-review signals (recent cross-repo PR burst, account age) separate policy-violating PRs from genuine newcomer PRs.",
+        "text": "Test whether content-based signals (PR template and AI-disclosure compliance, description length) separate policy-violating PRs from genuine newcomer PRs. Re-sample, since per-PR data from the last test was lost.",
         "kind": "experiment",
-        "experimentId": "exp-pre-review-signal-discrimination",
         "issue": 17
       },
       {
-        "text": "Find primary sources for unverified leads in the signal feed (e.g. the reported Linux Foundation estimate, and Zig's rationale for its anti-AI policy).",
+        "text": "If content signals also fail, pause this area and record why.",
+        "kind": "decision"
+      },
+      {
+        "text": "Find primary sources for unverified leads in the signal feed (e.g. the reported Linux Foundation estimate, Zig's policy rationale).",
         "kind": "research",
         "issue": 17
       }
     ],
-    "updatedAt": "2026-11-04T09:33:58Z",
-    "updatedInRun": "run-20261104-agent-ai-contribution-burden-3",
+    "updatedAt": "2026-11-04T11:16:37Z",
+    "updatedInRun": "run-20261104-exp-pre-review-signals",
     "author": "research director (Claude Code session)",
     "provenance": "real"
   },

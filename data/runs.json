@@ -871,5 +871,56 @@
     },
     "limits": {},
     "provenance": "real"
+  },
+  {
+    "id": "run-20261104-exp-pre-review-signals",
+    "themeId": "theme-ai-contribution-burden",
+    "mode": "agent-session",
+    "provider": "claude-code-session + github-actions experiment runner",
+    "startedAt": "2026-11-04T09:40:49Z",
+    "completedAt": "2026-11-04T11:16:37Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Executed in Actions run 41809278569 (2 attempts; the results push failed both times; summary taken from the job log)"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "Idea parked: assumption a1 weakened"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Research brief updated"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 1,
+      "sourcesCited": 1,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 1,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "see research/experiments/exp-pre-review-signal-discrimination/RESULT.md"
+    ],
+    "errors": [
+      "Attempt 1 (09:56Z) and attempt 2 (10:47Z) both failed to push results ('fatal error in commit_refs', then 'Internal Server Error'). Per-PR rows were lost. Attempt 1's output was never seen. Bot workflows now upload results as an artifact before pushing and retry the push (PR #40)."
+    ],
+    "limitations": [
+      "Per-PR data wasn't persisted, so further analyses (e.g. other thresholds) can't be done without re-running.",
+      "The control group is LLVM-only."
+    ],
+    "usage": {
+      "note": "GitHub Actions (free for public repos). No model calls, no cost."
+    },
+    "limits": {},
+    "provenance": "real"
   }
 ]

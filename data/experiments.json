@@ -161,7 +161,17 @@
       "ifFailure": "Reject this idea and note that unvalidated signal-based tools (Fossier) are likely ineffective."
     },
     "executionMode": "automatable",
-    "status": "approved",
+    "status": "completed",
+    "outcome": {
+      "recordedAt": "2026-11-04T11:16:21.915Z",
+      "result": "inconclusive",
+      "summary": "Pre-registered verdict: inconclusive. The cross-repo PR burst separates the groups only weakly (AUC 0.64; median 6 vs 1 prior PRs), and account age barely at all (AUC 0.54). Catching half of the policy-violating PRs would also flag about 30% of genuine newcomers. Cheap account-level signals aren't a good basis for triage.",
+      "evidenceIds": [
+        "ev-ai-burden-41",
+        "ev-ai-burden-42",
+        "ev-ai-burden-43"
+      ]
+    },
     "createdInRun": "run-20261104-agent-ai-contribution-burden-3",
     "provenance": "real"
   },

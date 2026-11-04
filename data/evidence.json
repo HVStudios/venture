@@ -587,6 +587,53 @@
     "provenance": "real"
   },
   {
+    "id": "ev-ai-burden-41",
+    "claim": "Authors of policy-violating PRs had opened more PRs across GitHub in the prior 30 days (median 6 vs 1), but the groups overlap heavily: the signal's AUC is only 0.64.",
+    "sourceId": "src-exp-pre-review-signals-result",
+    "quote": "median 6 (policy-closed) vs 1 (newcomer-merged); AUC 0.64",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "context": "Weakens triage tools that rely on this signal, including Fossier's 'open PRs elsewhere'.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-validated-pre-review-triage-signals"
+    ],
+    "competitorIds": [
+      "comp-fossier"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-42",
+    "claim": "Account age barely separates policy-violating authors from genuine newcomers (AUC 0.54).",
+    "sourceId": "src-exp-pre-review-signals-result",
+    "quote": "AUC 0.54",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-validated-pre-review-triage-signals"
+    ],
+    "competitorIds": [
+      "comp-fossier"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-43",
+    "claim": "Using the cross-repo PR signal to catch half of policy-violating PRs would also flag about 30% of genuine newcomers.",
+    "sourceId": "src-exp-pre-review-signals-result",
+    "quote": "30.5% of genuine newcomer PRs would also be flagged",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-validated-pre-review-triage-signals"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
     "id": "ev-sc-01",
     "claim": "Two malicious axios releases were published through the maintainer's compromised npm account (March 2026).",
     "sourceId": "src-axios-postmortem-2026",
