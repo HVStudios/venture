@@ -39,7 +39,10 @@
       ]
     },
     "createdInRun": "run-20261104-exp-content-signals",
-    "provenance": "real"
+    "provenance": "real",
+    "assumptionIds": [
+      "a1"
+    ]
   },
   {
     "id": "exp-content-signal-discrimination",
@@ -85,7 +88,10 @@
       ]
     },
     "createdInRun": "run-20261104-agent-ai-contribution-burden-4",
-    "provenance": "real"
+    "provenance": "real",
+    "assumptionIds": [
+      "a1"
+    ]
   },
   {
     "id": "exp-followup-engagement-retrospective",
@@ -131,7 +137,10 @@
       ]
     },
     "createdInRun": "run-20261103-agent-ai-contribution-burden",
-    "provenance": "real"
+    "provenance": "real",
+    "assumptionIds": [
+      "a1"
+    ]
   },
   {
     "id": "exp-install-hook-watch-prospective",
@@ -214,7 +223,11 @@
       ]
     },
     "createdInRun": "run-20261104-agent-release-breaks-1",
-    "provenance": "real"
+    "provenance": "real",
+    "assumptionIds": [
+      "a1",
+      "a2"
+    ]
   },
   {
     "id": "exp-npm-publishing-practices",
@@ -259,7 +272,10 @@
       ]
     },
     "createdInRun": "run-20261104-agent-supply-chain-2",
-    "provenance": "real"
+    "provenance": "real",
+    "assumptionIds": [
+      "a4"
+    ]
   },
   {
     "id": "exp-pre-review-signal-discrimination",
@@ -308,7 +324,10 @@
       ]
     },
     "createdInRun": "run-20261104-agent-ai-contribution-burden-3",
-    "provenance": "real"
+    "provenance": "real",
+    "assumptionIds": [
+      "a1"
+    ]
   },
   {
     "id": "exp-publish-anomaly-campaign-replication",
@@ -353,7 +372,10 @@
       ]
     },
     "createdInRun": "run-20261103-exp-publish-anomaly",
-    "provenance": "real"
+    "provenance": "real",
+    "assumptionIds": [
+      "a1"
+    ]
   },
   {
     "id": "exp-publish-anomaly-retrospective",
@@ -400,6 +422,9 @@
       ]
     },
     "createdInRun": "run-20261103-agent-supply-chain-1",
-    "provenance": "real"
+    "provenance": "real",
+    "assumptionIds": [
+      "a1"
+    ]
   }
 ]
