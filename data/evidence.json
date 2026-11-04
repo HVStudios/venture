@@ -1219,7 +1219,8 @@
       "prob-type-checkers-miss-runtime-and-metadata-breaks"
     ],
     "ideaIds": [
-      "idea-npm-release-contract-linter"
+      "idea-npm-release-contract-linter",
+      "idea-typescript-api-semver-checker"
     ],
     "competitorIds": [],
     "provenance": "real"

@@ -22,7 +22,10 @@
         "id": "a1",
         "text": "Teams want fine-grained cooldown controls",
         "criticality": "high",
-        "status": "weakened"
+        "status": "weakened",
+        "evidenceIds": [
+          "ev-sc-13"
+        ]
       }
     ],
     "risks": [
@@ -114,7 +117,13 @@
         "id": "a1",
         "text": "AI authorship is a good proxy for low-value contributions",
         "criticality": "high",
-        "status": "weakened"
+        "status": "weakened",
+        "evidenceIds": [
+          "ev-ai-burden-14",
+          "ev-ai-burden-15",
+          "ev-ai-burden-16",
+          "ev-ai-burden-23"
+        ]
       },
       {
         "id": "a2",
@@ -969,7 +978,10 @@
         "id": "a1",
         "text": "Package managers will be slow to ship native release-age settings",
         "criticality": "high",
-        "status": "weakened"
+        "status": "weakened",
+        "evidenceIds": [
+          "ev-sc-09"
+        ]
       }
     ],
     "risks": [
@@ -1064,7 +1076,10 @@
         "id": "a1",
         "text": "Most accidental breaking releases are type-surface changes",
         "criticality": "high",
-        "status": "weakened"
+        "status": "weakened",
+        "evidenceIds": [
+          "ev-sv-05"
+        ]
       }
     ],
     "risks": [
