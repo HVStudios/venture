@@ -285,6 +285,21 @@
     "provenance": "real"
   },
   {
+    "id": "src-exp-pre-review-signals-result",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-pre-review-signal-discrimination/RESULT.md",
+    "title": "VENTURE experiment result: pre-review triage signals (pre-registered)",
+    "publisher": "VENTURE (own experiment, GitHub Actions run 41809278569)",
+    "publishedAt": "2026-11-04",
+    "retrievedAt": "2026-11-04T11:16:20Z",
+    "sourceType": "dataset",
+    "excerpt": "S1, PRs opened across GitHub in the 30 days before: median 6 (policy-closed) vs 1 (newcomer-merged); AUC 0.64; within LLVM 0.62. … S2, account age at PR creation: median 1724 days (policy-closed) vs 2341 days (newcomer-merged); AUC 0.54. … At the S1 threshold that flags half of the policy-closed PRs, 30.5% of genuine newcomer PRs would also be flagged. … Verdict (pre-registered rule): inconclusive: S1 AUC 0.64 (S2 0.54) is between the thresholds.",
+    "limitations": "Own experiment. Summary transcribed verbatim from the job log, because GitHub rejected the push of the raw rows. The control group is LLVM-only.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-exp-publish-anomaly-analysis",
     "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-publish-anomaly-retrospective/ANALYSIS.md",
     "title": "VENTURE experiment: independence check of incidents (not pre-registered)",
