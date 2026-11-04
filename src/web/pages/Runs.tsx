@@ -16,7 +16,7 @@ export function History() {
   const decisions = [...m.decisions].sort((a, b) => b.at.localeCompare(a.at));
   return (
     <div className="page">
-      <Section
+      <Section page
         title="Research runs"
         kicker={`${m.runs.length} run(s) recorded`}
         aside={
@@ -35,7 +35,7 @@ export function History() {
                   <th>Theme</th>
                   <th>Mode / provider</th>
                   <th>Started</th>
-                  <th>Duration</th>
+                  <th className="num">Duration</th>
                   <th className="num">Sources</th>
                   <th className="num">Ideas</th>
                   <th className="num">Adv / Park / Rej</th>
@@ -58,8 +58,8 @@ export function History() {
                       {r.mode}
                       <div className="muted">{r.provider}</div>
                     </td>
-                    <td>{fmtDate(r.startedAt)}</td>
-                    <td>{duration(r.startedAt, r.completedAt)}</td>
+                    <td className="nowrap tnum">{fmtDate(r.startedAt)}</td>
+                    <td className="num">{duration(r.startedAt, r.completedAt)}</td>
                     <td className="num">
                       {r.counts.sourcesCited}/{r.counts.sourcesExamined}
                     </td>

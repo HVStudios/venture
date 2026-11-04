@@ -5,3 +5,4 @@ public/data/
 .env
 .env.*
 .venture-cache/
+.taste-skill/

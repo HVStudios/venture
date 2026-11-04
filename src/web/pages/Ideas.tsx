@@ -68,7 +68,7 @@ export function Ideas() {
 
   return (
     <div className="page">
-      <Section
+      <Section page bare
         title="Ideas"
         kicker={`${list.length} of ${m.ideas.length}`}
         aside={

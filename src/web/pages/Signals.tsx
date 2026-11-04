@@ -8,7 +8,7 @@ export function Signals() {
   const list = m.signals.filter((s) => theme === "all" || s.themeId === theme).sort((a, b) => b.engagement - a.engagement);
   return (
     <div className="page">
-      <Section title="Raw signal feed" kicker={`${m.signals.length} unreviewed items from deterministic collectors`}>
+      <Section page title="Raw signal feed" kicker={`${m.signals.length} unreviewed items from deterministic collectors`}>
         <p className="muted">
           Collectors query public APIs (Hacker News, GitHub Issues, Stack Overflow, arXiv) for each theme's keywords on a schedule, with no AI involved. Signals are leads, not evidence. They become evidence only after a research run quotes them in support of a specific claim.
         </p>

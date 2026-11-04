@@ -5,7 +5,7 @@ import { EpiBadge, Section } from "../components/ui";
 export function Method() {
   return (
     <div className="page prose">
-      <Section title="How VENTURE reasons" kicker="Method, scoring and limitations">
+      <Section page title="How VENTURE reasons" kicker="Method, scoring and limitations">
         <p>
           VENTURE works like a small research organization. Each role has its own job, and the roles check one another. The pipeline is the same whether a human-supervised agent session or an automated model run performs it:
         </p>

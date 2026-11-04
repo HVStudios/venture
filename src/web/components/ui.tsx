@@ -52,13 +52,27 @@ export function EvidenceLevel({ a }: { a: EvidenceAssessment }) {
   );
 }
 
-export function Section({ title, kicker, children, id, aside }: { title: string; kicker?: string; children: ReactNode; id?: string; aside?: ReactNode }) {
+export function Section({ title, kicker, children, id, aside, page, bare }: { title: string; kicker?: string; children: ReactNode; id?: string; aside?: ReactNode; page?: boolean; bare?: boolean }) {
+  if (page) {
+    return (
+      <>
+        <header className="title-row" id={id}>
+          <div>
+            <h1>{title}</h1>
+            {kicker && <p className="sub">{kicker}</p>}
+          </div>
+          {aside && <div className="title-actions">{aside}</div>}
+        </header>
+        {bare ? <div className="page-body">{children}</div> : <section className="section">{children}</section>}
+      </>
+    );
+  }
   return (
     <section className="section" id={id}>
       <header className="section-head">
         <div>
-          {kicker && <div className="kicker">{kicker}</div>}
           <h2>{title}</h2>
+          {kicker && <span className="count-line">{kicker}</span>}
         </div>
         {aside}
       </header>

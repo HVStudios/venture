@@ -49,8 +49,7 @@ export function ResearchAreas() {
   return (
     <div className="page">
       <header className="research-head">
-        <div className="kicker">Research areas</div>
-        <h1>What VENTURE is investigating</h1>
+        <h1>Research areas</h1>
         <p className="lede">
           Each research area is a standing investigation. Open one to read its question, what has been found, what has been tested, what the lab currently concludes and what it will look at next. All of it is traceable to sources.
         </p>
@@ -63,7 +62,6 @@ export function ResearchAreas() {
       <section className="section">
         <header className="section-head">
           <div>
-            <div className="kicker">Steer the lab</div>
             <h2>Propose a new research area</h2>
           </div>
         </header>
@@ -132,11 +130,11 @@ const SECTIONS = [
   ["sources", "Sources & evidence"],
 ] as const;
 
-function JSection({ id, n, title, children, lead }: { id: string; n: number; title: string; children: React.ReactNode; lead?: string }) {
+function JSection({ id, title, children, lead }: { id: string; n: number; title: string; children: React.ReactNode; lead?: string }) {
   return (
     <section className="jsection" id={id}>
       <header>
-        <span className="jnum">{String(n).padStart(2, "0")}</span>
+
         <h2>{title}</h2>
       </header>
       {lead && <p className="jlead">{lead}</p>}
@@ -226,9 +224,9 @@ function Journal({ a }: { a: AreaModel }) {
 
       <div className="journal-layout">
         <nav className="journal-toc" aria-label="Sections">
-          {SECTIONS.map(([sid, label], i) => (
+          {SECTIONS.map(([sid, label]) => (
             <a key={sid} href={`#${sid}`} onClick={(e) => { e.preventDefault(); document.getElementById(sid)?.scrollIntoView({ behavior: "smooth" }); }}>
-              <span>{String(i + 1).padStart(2, "0")}</span> {label}
+              {label}
             </a>
           ))}
           {b && <p className="muted small">Brief updated {fmtDate(b.updatedAt)} by {b.author}</p>}

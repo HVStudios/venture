@@ -53,7 +53,7 @@ export function Experiments() {
   const list = [...m.experiments].sort((a, b) => order[a.status] - order[b.status]);
   return (
     <div className="page">
-      <Section title="Validation experiments" kicker={`${list.length} experiment(s) · ${list.filter((x) => x.outcome).length} with recorded outcomes`}>
+      <Section page bare title="Validation experiments" kicker={`${list.length} experiment(s) · ${list.filter((x) => x.outcome).length} with recorded outcomes`}>
         <p className="muted">
           Experiments target an idea's riskiest assumption at the lowest practical cost. Anything that involves contacting people, spending money or publishing claims is marked <i>requires-authorization</i> and will not run without explicit human approval. An outcome appears only after an experiment has actually been run.
         </p>
