@@ -170,6 +170,43 @@
     "provenance": "real"
   },
   {
+    "id": "exp-npm-metadata-breaks",
+    "ideaId": "idea-npm-release-contract-linter",
+    "title": "How often do popular npm packages ship metadata-level breaking changes in minor or patch releases?",
+    "hypothesis": "At least 20% of popular npm packages shipped at least one minor or patch release in the past 24 months that a release-contract linter would flag. At least 70% of a random sample of flags are genuine breaking changes.",
+    "uncertainty": "Whether the problem the linter targets is common enough (assumption a1), and whether its flags would be trusted (assumption a2).",
+    "procedure": [
+      "Pre-registered 2026-11-04 before any release data was collected.",
+      "Population: the 400 popular npm packages from exp-npm-publishing-practices.",
+      "For each package, take consecutive non-prerelease versions published in the 24 months before 2026-11-04, keeping pairs where the later one is a minor or patch bump of the earlier.",
+      "Rules (from registry metadata): engines.node minimum raised; exports subpath removed, or an exports map added where none existed; main, module, types or typings removed; type switched to module; a new non-optional peer dependency added, or an existing peer's minimum major raised; a bin entry removed.",
+      "Report the share of packages with at least one flagged release, the share of release pairs flagged, and counts per rule.",
+      "Audit: a research session reviews 20 randomly sampled flags (fixed seed) and judges each as a genuine break per SemVer or not, documenting reasons."
+    ],
+    "successCriteria": [
+      "At least 20% of packages have at least one flagged minor or patch release in the window, and at least 70% of the 20 audited flags are genuine breaks"
+    ],
+    "failureCriteria": [
+      "Fewer than 5% of packages have a flagged release (the problem is too rare to justify a tool)",
+      "Fewer than 50% of audited flags are genuine (too noisy)"
+    ],
+    "estimatedTime": "< 1 hour of automated analysis plus a manual audit of 20 flags",
+    "estimatedCostUsd": 0,
+    "resources": [
+      "Public npm registry",
+      "semver library"
+    ],
+    "expectedLearning": "Whether a release-contract linter would catch a meaningful number of real breaks with acceptable noise, before anything is built.",
+    "nextSteps": {
+      "ifSuccess": "Build the CLI and GitHub Action, and dogfood it by running it over recent releases of popular packages.",
+      "ifFailure": "Reject or narrow the idea to the rules that proved common and precise."
+    },
+    "executionMode": "automatable",
+    "status": "approved",
+    "createdInRun": "run-20261104-agent-release-breaks-1",
+    "provenance": "real"
+  },
+  {
     "id": "exp-npm-publishing-practices",
     "ideaId": "idea-maintainer-publish-anomaly-alarm",
     "title": "How many popular npm packages still publish in a way a stolen token could reproduce?",

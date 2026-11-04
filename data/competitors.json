@@ -19,6 +19,43 @@
     "provenance": "real"
   },
   {
+    "id": "comp-api-extractor",
+    "name": "Microsoft API Extractor",
+    "url": "https://api-extractor.com/",
+    "kind": "open-source",
+    "description": "A TypeScript tool that snapshots a library's public API (.d.ts) so changes can be reviewed, among several other jobs (doc generation, .d.ts rollups).",
+    "strengths": [
+      "Mature, Microsoft-maintained"
+    ],
+    "weaknesses": [
+      "Heavy setup aimed at larger teams (inference)",
+      "Type surface only"
+    ],
+    "sourceIds": [
+      "src-api-extractor-readme"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "comp-cargo-semver-checks",
+    "name": "cargo-semver-checks (Rust)",
+    "url": "https://github.com/obi1kenobi/cargo-semver-checks",
+    "kind": "open-source",
+    "description": "Rust's established semver linter with a GitHub Action. It checks a crate's public API before publishing. About 1,700 GitHub stars at retrieval.",
+    "strengths": [
+      "Proven adoption",
+      "Designed for no false positives"
+    ],
+    "weaknesses": [
+      "Rust only",
+      "Documents violations it can't catch"
+    ],
+    "sourceIds": [
+      "src-cargo-semver-checks-readme"
+    ],
+    "provenance": "real"
+  },
+  {
     "id": "comp-close-external-prs",
     "name": "Auto-closing all external pull requests",
     "kind": "workaround",
@@ -196,6 +233,26 @@
     "sourceIds": [
       "src-sklearn-autoclose-rfc",
       "src-nixpkgs-close-missing-ai-checkbox"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "comp-ts-api-checkers",
+    "name": "New TypeScript semver checkers (Clerk break-check, ts-semver-checks, semver-check)",
+    "kind": "open-source",
+    "description": "Several 2026 projects that diff the exported TypeScript surface between versions and fail CI on an insufficient version bump. Clerk's is company-backed and uses API Extractor plus an AI review.",
+    "strengths": [
+      "Directly target the TypeScript gap",
+      "One is company-backed (Clerk)"
+    ],
+    "weaknesses": [
+      "Very new; little adoption (0–3 stars at retrieval)",
+      "Type surface only: blind to engines, exports and other metadata breaks"
+    ],
+    "sourceIds": [
+      "src-clerk-break-check-readme",
+      "src-ts-semver-checks-readme",
+      "src-jsleekr-semver-check-readme"
     ],
     "provenance": "real"
   },

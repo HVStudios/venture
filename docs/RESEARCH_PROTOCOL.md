@@ -17,7 +17,7 @@ This protocol lets an interactive or scheduled Claude Code session, powered by t
 1. **Pick a theme.** Use an active theme from `data/themes.json`, an issue labelled `theme-request`, or define a new one (add it to `themes` in the bundle).
 2. **Scout.** Read `data/signals.json` for the theme and run web searches for complaints, issue threads, surveys and postmortems. Write down candidate problems.
 3. **Research.** For each candidate, fetch primary sources and capture exact quotes. Look for alternatives and competitors, and for counter-evidence.
-4. **Invent.** Propose concepts only for problems that have evidence.
+4. **Invent.** Propose concepts only for problems that have evidence. Every new idea must fill in `practical`: who would adopt it, its distribution (open source, hosted, paid, open core, or knowledge only), the smallest useful version, whether VENTURE could build and test that version itself, and the honest money story. Ideas with no plausible adopter should be rejected early.
 5. **Critique.** Write objections, and score the 9 criteria from 1 to 5 with a rationale for each (see `/method` on the site).
 6. **Deduplicate.** Compare against existing ideas. The validator blocks TF-IDF similarity ≥ 0.55 unless the ideas are linked via `relatedIdeaIds` with a `noveltyNote`.
 7. **Decide.** Choose a status and a `statusRationale` for every idea.
