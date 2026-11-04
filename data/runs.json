@@ -682,5 +682,64 @@
     },
     "limits": {},
     "provenance": "real"
+  },
+  {
+    "id": "run-20261104-agent-supply-chain-2",
+    "themeId": "theme-oss-supply-chain-small-maintainers",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-04T09:05:00Z",
+    "completedAt": "2026-11-04T09:18:07Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "Platform and vendor survey (issue #35): npm docs, PyPI email templates, vendor repositories"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "New major objection: npm offers opt-in prevention"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Pre-registered: share of popular npm packages still publishing without trusted publishing or staged approval"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Brief updated"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 10,
+      "sourcesCited": 6,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "GitHub code search: repo:npm/documentation (publish notification, staged publish, disallow tokens, allowed actions)",
+      "GitHub code search: repo:pypi/warehouse email templates (78 subject templates listed)",
+      "GitHub repo search: org:SocketDev, org:step-security",
+      "npm registry metadata probe: axios latest version _npmUser"
+    ],
+    "errors": [
+      "Vendor and registry websites (socket.dev, stepsecurity.io, docs.npmjs.com, docs.pypi.org) are not reachable from the research environment, so only their GitHub-hosted material was read."
+    ],
+    "limitations": [
+      "Vendor maintainer-side features remain unverified (assumption a3 is weakened, not refuted).",
+      "Documentation shows that features exist, not how widely they're adopted."
+    ],
+    "usage": {
+      "note": "Interactive Claude Code session under the owner's subscription. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
   }
 ]

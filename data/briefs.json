@@ -189,38 +189,56 @@
           "ev-sc-13"
         ],
         "epistemic": "fact"
+      },
+      {
+        "id": "f6",
+        "statement": "The platforms have started to close the stolen-token route themselves. Since May 2026, npm lets maintainers require a human 2FA approval for every release (staged publishing) and forbid publishing with tokens. Since 2024, PyPI emails maintainers when a token uploads to a project that uses trusted publishing.",
+        "strength": "Strong for existence: the registries' own documentation and code. Adoption is unknown and opt-in.",
+        "evidenceIds": [
+          "ev-sc-22",
+          "ev-sc-23",
+          "ev-sc-24",
+          "ev-sc-26"
+        ],
+        "epistemic": "fact"
       }
     ],
     "uncertainties": [
-      "Commercial scanners (e.g. Socket, StepSecurity) were not examined. They may already offer maintainer-side alerts.",
-      "Whether npm or PyPI already notify maintainers of every new publish wasn't checked.",
+      "How many maintainers have adopted npm's staged publishing or token-free publishing (being measured).",
+      "Whether security vendors offer maintainer-side release alerts. Their public tooling is consumer-side, and their product sites couldn't be read.",
       "Campaign grouping is heuristic, and 7 of 22 campaigns had no described mechanism.",
       "The incident sample favours large, well-publicised attacks."
     ],
     "conclusion": {
-      "belief": "Account and token compromise of popular packages is a severe and recurring problem. Consumer-side release delays are being solved by the platforms, so a standalone tool isn't worthwhile. A maintainer-side alarm that flags new install-time hooks in a release would have caught most independent hijack campaigns at a low false-positive rate, but it would miss attacks that only modify existing code. Whether such alarms already exist commercially is the main open question before building anything.",
+      "belief": "Account and token compromise of popular packages is a severe and recurring problem. Most independent hijack campaigns add an install-time hook that legitimate releases rarely add, so a structural alarm is technically sound. But npm now offers opt-in prevention (human-approved staged releases, token-free publishing), so the alarm's value depends on how many maintainers haven't adopted it. That is the decisive open question.",
       "confidence": "medium",
-      "confidenceReason": "Two pre-registered experiments agree, the second counting independent campaigns, so the core technical assumption now has moderate support. Confidence isn't high because the sample is at the minimum size, a third of campaigns couldn't be classified, and the competitive landscape is unexamined.",
+      "confidenceReason": "Moderate support for the technical premise from two pre-registered experiments. The market case is uncertain: the platforms are moving into this space, and adoption hasn't been measured yet.",
       "unknowns": [
-        "Whether vendors or registries already alert maintainers to unusual releases",
-        "How quickly maintainers would act on an alert",
+        "What share of popular packages still publish without trusted publishing or staged approval",
+        "Whether vendors already offer maintainer-side alerts",
         "How to catch attacks that only modify existing files"
       ],
       "continueInvestigation": true,
-      "continueReason": "The technical premise holds up. The next question, whether the gap is already filled, is cheap to answer with desk research."
+      "continueReason": "One cheap measurement (publishing practices across popular npm packages) decides whether the idea still has an audience."
     },
     "nextSteps": [
       {
-        "text": "Survey whether security vendors (e.g. Socket, StepSecurity) or the npm and PyPI registries already alert maintainers to unusual new releases of their own packages.",
-        "kind": "research"
+        "text": "Measure how many popular npm packages still publish without trusted publishing or staged human approval (pre-registered experiment).",
+        "kind": "experiment",
+        "experimentId": "exp-npm-publishing-practices"
       },
       {
-        "text": "If the gap is real, design a cheap test of whether maintainers want such alerts. This needs owner authorization, because it involves contacting people.",
-        "kind": "owner-action"
+        "text": "If the gap is large, consider a review aid for staged releases that flags new install hooks at approval time. If small, park the standalone alarm.",
+        "kind": "decision"
+      },
+      {
+        "text": "Verify vendor offerings once their sites are reachable from the research environment.",
+        "kind": "owner-action",
+        "issue": 10
       }
     ],
-    "updatedAt": "2026-11-03T23:43:03Z",
-    "updatedInRun": "run-20261103-exp-publish-anomaly-campaigns",
+    "updatedAt": "2026-11-04T09:18:07Z",
+    "updatedInRun": "run-20261104-agent-supply-chain-2",
     "author": "research director (Claude Code session)",
     "provenance": "real"
   }

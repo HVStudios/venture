@@ -813,5 +813,106 @@
     ],
     "competitorIds": [],
     "provenance": "real"
+  },
+  {
+    "id": "ev-sc-22",
+    "claim": "Since May 2026, npm lets maintainers stage releases so that a human must approve each one with 2FA before it goes live.",
+    "sourceId": "src-npm-staged-publishing",
+    "quote": "Staged publishing adds an approval step before packages go live on the npm registry.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "context": "Prevention instead of detection: an attacker holding only a token can stage a release but not make it live.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [
+      "comp-npm-staged-publishing"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-23",
+    "claim": "Maintainers can require human proof-of-presence (2FA) for every publish.",
+    "sourceId": "src-npm-stage-command",
+    "quote": "Staged publishing allows package maintainers to require proof-of-presence for all publishes.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-compromised-maintainer-credentials-ship-malware"
+    ],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [
+      "comp-npm-staged-publishing"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-24",
+    "claim": "A package setting can forbid publishing with access tokens altogether, closing the stolen-token route that hit axios.",
+    "sourceId": "src-npm-require-2fa-disallow-tokens",
+    "quote": "Granular access tokens cannot be used to publish packages, regardless of their bypass 2FA setting.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-compromised-maintainer-credentials-ship-malware"
+    ],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [
+      "comp-npm-staged-publishing"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-25",
+    "claim": "CI pipelines can be restricted to staging only, so even a compromised CI job can't publish without human approval.",
+    "sourceId": "src-npm-trusted-publishers-actions",
+    "quote": "`npm stage publish` is always allowed. Choose whether this trusted publisher can also publish directly with `npm publish`",
+    "stance": "context",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [
+      "comp-npm-staged-publishing"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-26",
+    "claim": "Since 2024, PyPI emails maintainers when a long-lived API token uploads to a project that uses trusted publishing: a partial, platform-provided version of the alarm.",
+    "sourceId": "src-pypi-token-in-tp-project-email",
+    "quote": "even though the project has a Trusted Publisher configured.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [
+      "comp-pypi-token-use-warning"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-27",
+    "claim": "Socket's public tooling is consumer-side (scanning and gating installs). Whether it offers maintainer-side release alerts couldn't be verified.",
+    "sourceId": "src-socket-cli-readme",
+    "quote": "letting you scan dependencies, audit packages, and gate installs from your terminal or CI.",
+    "stance": "context",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [
+      "comp-supply-chain-security-vendors"
+    ],
+    "provenance": "real"
   }
 ]

@@ -278,5 +278,32 @@
     "rationale": "Revised before any analysis. The malicious versions were removed from the registries, so the design now uses OpenSSF malicious-packages (OSV) reports for mechanisms and npm per-version metadata for false positives. Thresholds fixed in advance.",
     "actor": "experiment designer",
     "provenance": "real"
+  },
+  {
+    "id": "dec-20261104-npm-publishing-practices",
+    "at": "2026-11-04T09:18:51.677Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-npm-publishing-practices",
+    "action": "advance",
+    "fromStatus": "proposed",
+    "toStatus": "approved",
+    "rationale": "Approved under the standing rule for automatable experiments. Design and thresholds pre-registered in this research session; only one package (axios) was probed beforehand, to confirm the metadata fields exist.",
+    "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261104-revise-publish-anomaly-alarm",
+    "at": "2026-11-04T09:18:07Z",
+    "runId": "run-20261104-agent-supply-chain-2",
+    "subjectType": "idea",
+    "subjectId": "idea-maintainer-publish-anomaly-alarm",
+    "action": "revise",
+    "fromStatus": "advanced",
+    "toStatus": "advanced",
+    "rationale": "Stays advanced, with a narrower case. The technical premise is supported, but npm now offers prevention to maintainers who opt in. Whether the alarm still has a meaningful audience depends on how many popular packages haven't adopted those protections, which is being measured next.",
+    "actor": "director",
+    "attractiveness": 71,
+    "evidenceStrength": 26,
+    "provenance": "real"
   }
 ]
