@@ -1,0 +1,572 @@
+{
+  "run": {
+    "id": "run-20261104-agent-ai-contribution-burden-3",
+    "themeId": "theme-ai-contribution-burden",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-04T09:31:00Z",
+    "completedAt": "2026-11-04T09:33:58Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "Triaged 42 collected signals for triage-cost leads"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "5 sources cited, 5 evidence items, 1 contradicting"
+      },
+      {
+        "name": "invent",
+        "status": "ok",
+        "notes": "1 concept: validated, advisory pre-review triage signals"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "3 objections (Fossier overlap, newcomer fairness, residual human cost)"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "notes": "Linked to the parked comprehension gate with a novelty note"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "Advanced to a $0 test"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Pre-registered exp-pre-review-signal-discrimination"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Research brief updated"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 9,
+      "sourcesCited": 5,
+      "problemsFound": 0,
+      "ideasGenerated": 1,
+      "ideasAdvanced": 1,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "triage of data/signals.json for theme-ai-contribution-burden (collector-retrieved issues and HN titles)"
+    ],
+    "errors": [
+      "HN leads (e.g. 'A standard protocol to handle and discard low-effort, AI-Generated pull requests', Zig's policy rationale) exist only as titles in the signal feed. Their pages aren't reachable from the research environment, so they weren't used."
+    ],
+    "limitations": [
+      "Evidence comes from the first ~1,200 characters of each issue as captured by the collector.",
+      "Proposals in issue trackers show intent, not measured triage savings."
+    ],
+    "usage": {
+      "note": "Interactive Claude Code session under the owner's subscription. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [],
+  "sources": [
+    {
+      "id": "src-astropy-retire-good-first-issue",
+      "url": "https://github.com/astropy/astropy/issues/19710",
+      "title": "Retire these labels: \"good first issue\", Package-novice, Package-intermediate, Hacktoberfest",
+      "publisher": "Astropy (GitHub issue)",
+      "publishedAt": "2026-05-07",
+      "retrievedAt": "2026-11-03T21:47:31.775Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "Some core maintainers (myself included) feel like the following labels have outlived their usefulness. They were originally created in hope we can use these to recruit and retain future maintainers. However, the cost of triaging mostly unacceptable pull requests (nowadays usually AI slops) have outweighed any benefit. These labels are: - `good first issue` - `Package-novice` - `Package-intermediate` (I don't find intermediate very meaningful, you either need expertise or you don't) - `Hacktoberfest` (we have not participated in many years) - `hacktoberfest-accepted` (same reasoning as `Hacktoberfest`) Proposed actions: - Remove them from open issues/PRs. - Retire them in labels list by prepending with a 💤 (as we do with other labels that went through similar fate) - Remove their mentions from https://www.astropy.org/contribute.html (anywhere else?) Out of scope: - I think the keeping `Package-expert` label is fine, as we still need to identify which issues need serious domain expertise, even amongst ourselves.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-sklearn-autoclose-rfc",
+      "url": "https://github.com/scikit-learn/scikit-learn/issues/32207",
+      "title": "RFC: Proposal for autoclose option for non-compliant PRs",
+      "publisher": "scikit-learn (GitHub issue)",
+      "publishedAt": "2025-09-17",
+      "retrievedAt": "2026-11-03T21:47:31.775Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "Following up on the discussion in #31679 about low-effort contributions (like ai-generated with low human supervision), @lucyleeow and me worked out an idea: We would like to propose introducing an autoclose option for PRs that gets triggered when setting an \"autoclose\" label that can be removed if the PR is improved. The idea is to provide a structured way to handle PRs that don't yet meet our contribution standards and facilitate the reviewing process. This will be transparent and fair for new contributors. **Suggested process** 1. A contributor opens a PR that looks low-effort, fly-by, not supervised ai-generated, or otherwise not yet ready for review. 2. A reviewer sets an \"autoclose\" label. This would automatically add a polite, standardised comment explaining: - The PR will be autoclosed after _n_ weeks (e.g. _4_). - A list of common quality issues (similar to what we used in #31822) that outlines what the contributor needs to address in order to avoid the PR being autoclosed (can contain links to the docs and the FAQs where we explain those things in detail). - An encouragement to comment on the PR and ping the person who set the \"autoclose\" once they believe they have met t…",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-nixpkgs-close-missing-ai-checkbox",
+      "url": "https://github.com/NixOS/nixpkgs/issues/551976",
+      "title": "we should instantly close PRs that don't contain the automation/ai and contribution checkboxs",
+      "publisher": "nixpkgs (GitHub issue)",
+      "publishedAt": "2026-08-12",
+      "retrievedAt": "2026-11-03T21:47:31.775Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "Recently I've noticed and been in short conversations with @pyrox0 and @whispersofthedawn who have both also noticed that some PRs will remove the Automation/Ai and Contribution policy checkboxes. I personally believe that merging this PRs would be a gross violation of the policies so we should close PRs that do not contain these checkboxes or have not checked them out intentionally with a notification that to the user to read them.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-kubernetes-ai-policy-disparate-impact",
+      "url": "https://github.com/kubernetes/community/issues/9010",
+      "title": "Disparate Impact of Current AI Policies on Contributors Using AI as Assistive Technology",
+      "publisher": "Kubernetes community (GitHub issue)",
+      "publishedAt": "2026-05-30",
+      "retrievedAt": "2026-11-03T21:47:31.775Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "I have strong concerns that several policies as written in https://www.kubernetes.dev/docs/guide/pull-requests/#ai-guidance have a clear disparate impact (a form of discrimination) against contributors with disabilities who rely on AI as an assistive technology. Here are the 3 policies of concern (the first quote containing two separate policies): > [Large AI generated](https://www.kubernetes.dev/docs/guide/pull-requests/#large-or-automatic-edits) PRs and AI generated commit messages are not allowed. > When responding to review comments, you must do so without relying on AI tools. Reviewers want to engage directly with you, not with generated responses. If you do not engage directly with reviewers, the PR will be closed. The policies do not distinguish unaccountable delegation to AI from accountable AI-assisted or assistive use. Instead, they categorically prohibit several core uses of AI that contributors with disabilities may rely on to participate. ## Policy Intent I understand the intent of the policies. I’ve contributed to the Linux Kernel repo before and have heard Jon Corbet raise concerns about maintainers being overwhelmed by spam and low-quality AI-generated contributions…",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "limitations": "One contributor's argument; the policy authors' response isn't in the captured text."
+    },
+    {
+      "id": "src-sklearn-copilot-agent-policy",
+      "url": "https://github.com/scikit-learn/scikit-learn/issues/31679",
+      "title": "AI tools like Copilot Coding Agent don't know about / don't respect our Automated Contributions Policy",
+      "publisher": "scikit-learn (GitHub issue)",
+      "publishedAt": "2025-06-30",
+      "retrievedAt": "2026-11-03T21:47:31.775Z",
+      "sourceType": "issue-tracker",
+      "excerpt": "(I am creating an issue to a PR already opened (#31643), because there are many more ways to solve the problem.) AI tools many people use to create PRs don't care about our [Automated Contributions Policy](https://scikit-learn.org/dev/developers/contributing.html#automated-contributions-policy). Since [GitHub Copilot Coding Agent Has Arrived!](https://github.com/orgs/community/discussions/159068) and people build [Github-MCP](https://github.com/dhyeyinf/Github-MCP)s that can be integrated with LLM clients, scikit-learn and other open source projects get an increasing amount of AI spam. Many people who care about open source are unhappy about it and request an option to block AI-generated PRs and issues on their projects ([Allow us to block Copilot-generated issues (and PRs) from our own repositories](https://github.com/orgs/community/discussions/159749)) - so far without success. You can see that there is an increasing amount of partially or fully generated PRs and a decrease in overall quality for PRs on scikit-learn by looking at [the last closed PRs](https://github.com/scikit-learn/scikit-learn/pulls?q=is%3Apr+is%3Aclosed) (as of June 30th 2025). It is not a flood yet, but bad e…",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-ai-burden-36",
+      "claim": "Astropy maintainers propose retiring 'good first issue' labels because triaging mostly unacceptable (usually AI-generated) PRs now costs more than the labels gain.",
+      "sourceId": "src-astropy-retire-good-first-issue",
+      "quote": "the cost of triaging mostly unacceptable pull requests (nowadays usually AI slops) have outweighed any benefit",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity",
+        "prob-submission-effort-no-longer-signals-trust"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Triage cost is pushing projects to close newcomer on-ramps."
+    },
+    {
+      "id": "ev-ai-burden-37",
+      "claim": "scikit-learn proposed a label-triggered autoclose workflow, so a reviewer can dispose of a low-effort PR with one action while leaving a path to improve it.",
+      "sourceId": "src-sklearn-autoclose-rfc",
+      "quote": "We would like to propose introducing an autoclose option for PRs that gets triggered when setting an \"autoclose\" label that can be removed if the PR is improved.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [
+        "comp-triage-workflow-conventions"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-38",
+      "claim": "nixpkgs maintainers noticed PRs that delete the AI-disclosure checkboxes from the PR template, and proposed closing them instantly: a cheap triage rule based on template compliance.",
+      "sourceId": "src-nixpkgs-close-missing-ai-checkbox",
+      "quote": "some PRs will remove the Automation/Ai and Contribution policy checkboxes",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [
+        "comp-triage-workflow-conventions"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-39",
+      "claim": "Blunt AI policies can exclude contributors with disabilities who rely on AI as assistive technology, an argument against automatic rejection based on AI use.",
+      "sourceId": "src-kubernetes-ai-policy-disparate-impact",
+      "quote": "The policies do not distinguish unaccountable delegation to AI from accountable AI-assisted or assistive use.",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-ai-authorship-pr-detector"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Supports keeping humans in the decision, and keying on behaviour rather than AI use."
+    },
+    {
+      "id": "ev-ai-burden-40",
+      "claim": "scikit-learn reports that AI tools used to create PRs ignore its automated-contributions policy, so written policies alone don't reduce inbound volume.",
+      "sourceId": "src-sklearn-copilot-agent-policy",
+      "quote": "AI tools many people use to create PRs don't care about our",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity"
+      ],
+      "ideaIds": [],
+      "competitorIds": [
+        "comp-written-ai-policies"
+      ],
+      "provenance": "real"
+    }
+  ],
+  "problems": [],
+  "competitors": [
+    {
+      "id": "comp-triage-workflow-conventions",
+      "name": "Maintainer triage conventions (autoclose labels, template-compliance rules)",
+      "kind": "workaround",
+      "description": "Lightweight project workflows that cut per-PR triage effort: scikit-learn's proposed autoclose label, and nixpkgs' proposal to close PRs that remove the AI-disclosure checkboxes.",
+      "strengths": [
+        "Cheap, transparent, keeps a human in the loop"
+      ],
+      "weaknesses": [
+        "A human still has to look at each PR to apply the label",
+        "Template rules are easy to game (inference)"
+      ],
+      "sourceIds": [
+        "src-sklearn-autoclose-rfc",
+        "src-nixpkgs-close-missing-ai-checkbox"
+      ],
+      "provenance": "real"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "idea-validated-pre-review-triage-signals",
+      "title": "Validated pre-review triage signals for maintainers",
+      "summary": "A suggestion-only ranking of incoming PRs, so maintainers can triage the likely low-effort ones first. It uses only signals shown to separate low-effort from genuine contributions before anyone reads the code.",
+      "problemIds": [
+        "prob-ai-low-effort-prs-drain-review-capacity",
+        "prob-submission-effort-no-longer-signals-trust"
+      ],
+      "themeIds": [
+        "theme-ai-contribution-burden"
+      ],
+      "targetUsers": "Maintainers of popular repositories with many first-time PRs",
+      "solution": "A GitHub Action that, for each PR from a first-time contributor, computes a few cheap signals available before review (e.g. the author's recent PR burst across GitHub, account age, template compliance) and labels the PR with a triage priority and the reasons. It never closes PRs itself; maintainers decide.",
+      "competitorIds": [
+        "comp-fossier",
+        "comp-triage-workflow-conventions",
+        "comp-github-pr-access-controls",
+        "comp-ai-pr-detectors"
+      ],
+      "differentiation": "Existing tools (Fossier) combine many signals with hand-set weights that haven't been validated, and close PRs automatically. This would use only signals with measured discrimination, and stay advisory, keeping humans in the decision (see the disparate-impact objection to blunt policies).",
+      "feasibility": "High: the signals come from public GitHub APIs.",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "Cheap pre-review signals (recent cross-repo PR burst, account age) separate policy-violating PRs from genuine newcomer PRs well (AUC ≥ 0.75)",
+          "criticality": "high",
+          "status": "untested"
+        },
+        {
+          "id": "a2",
+          "text": "Advisory labels save maintainers meaningful triage time",
+          "criticality": "high",
+          "status": "untested"
+        },
+        {
+          "id": "a3",
+          "text": "Signals don't systematically disadvantage genuine newcomers (e.g. new accounts)",
+          "criticality": "medium",
+          "status": "untested"
+        }
+      ],
+      "risks": [
+        "Account-age signals penalise genuine newcomers",
+        "Spammers adapt once signals are known",
+        "Fossier already ships similar signals"
+      ],
+      "nextSteps": [
+        "Run exp-pre-review-signal-discrimination"
+      ],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "Fossier already scores unknown contributors on 13 signals, including open PRs elsewhere and account age. Differentiation rests only on validation and advisory mode.",
+          "severity": "major",
+          "evidenceIds": [],
+          "status": "open"
+        },
+        {
+          "id": "obj-2",
+          "text": "Account-based signals can exclude genuine newcomers and contributors who use AI as assistive technology, the same disparate-impact concern raised against blunt policies.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-ai-burden-39"
+          ],
+          "status": "open",
+          "response": "Advisory only, and the experiment reports how many genuine newcomers each signal would flag."
+        },
+        {
+          "id": "obj-3",
+          "text": "Even a ranked queue still needs a human to look at each PR. The saving may be small.",
+          "severity": "minor",
+          "evidenceIds": [
+            "ev-ai-burden-37"
+          ],
+          "status": "open"
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 4,
+            "rationale": "Triage cost is closing newcomer on-ramps (Astropy) and prompting autoclose workflows."
+          },
+          "frequency": {
+            "score": 4,
+            "rationale": "Reported across many projects."
+          },
+          "userValue": {
+            "score": 3,
+            "rationale": "Depends on how well the signals discriminate; unknown."
+          },
+          "competitiveGap": {
+            "score": 2,
+            "rationale": "Fossier covers similar ground without validation."
+          },
+          "differentiation": {
+            "score": 2,
+            "rationale": "Validation plus an advisory design; thin."
+          },
+          "feasibility": {
+            "score": 5,
+            "rationale": "Public APIs."
+          },
+          "costComplexity": {
+            "score": 4,
+            "rationale": "A small Action."
+          },
+          "userAccess": {
+            "score": 4,
+            "rationale": "Maintainers who wrote AI policies are reachable on GitHub."
+          },
+          "validationCost": {
+            "score": 5,
+            "rationale": "Signal discrimination is testable on existing labelled data for $0."
+          }
+        },
+        "assessedAt": "2026-11-04T09:33:58Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "advanced",
+      "statusRationale": "Advanced to a cheap test. Triage cost is the best-evidenced remaining pain, and whether cheap signals discriminate at all is unknown and testable on the 240 labelled PRs from the earlier experiment. If the signals don't discriminate, this idea, and Fossier's approach, are in doubt.",
+      "relatedIdeaIds": [
+        "idea-contributor-comprehension-gate"
+      ],
+      "noveltyNote": "Distinct from the parked comprehension gate (which relied on post-submission engagement): this uses signals available before any interaction.",
+      "epistemic": "hypothesis",
+      "createdInRun": "run-20261104-agent-ai-contribution-burden-3",
+      "createdAt": "2026-11-04T09:33:58Z",
+      "updatedAt": "2026-11-04T09:33:58Z",
+      "provenance": "real"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "exp-pre-review-signal-discrimination",
+      "ideaId": "idea-validated-pre-review-triage-signals",
+      "title": "Do cheap pre-review signals separate policy-violating PRs from genuine newcomer PRs?",
+      "hypothesis": "Authors of PRs closed under AI or low-effort policies opened many more PRs across GitHub in the 30 days before their PR than genuine first-time LLVM contributors did, so this one signal separates the groups well (AUC ≥ 0.75).",
+      "uncertainty": "Whether any cheap, pre-review signal discriminates at all (assumption a1).",
+      "procedure": [
+        "Pre-registered 2026-11-04 before any signal data was collected.",
+        "Sample: the 240 PRs from exp-followup-engagement-retrospective (120 policy-closed, 120 merged LLVM newcomer PRs). Labels are already known.",
+        "For each PR, read its creation time (GitHub REST API).",
+        "Signal S1: number of PRs the author opened across GitHub in the 30 days before the PR (search API, type:pr author:<login> created:<range>).",
+        "Signal S2: author account age at PR creation, in days (users API).",
+        "Authors whose accounts no longer exist are counted and reported separately, and excluded from the AUC.",
+        "Primary: AUC of S1 (higher → policy-closed). Secondary: AUC of S2 (younger → policy-closed). Secondary: S1 AUC within LLVM only.",
+        "Report the share of genuine newcomers flagged at the threshold that catches 50% of policy-closed PRs."
+      ],
+      "successCriteria": [
+        "S1 AUC ≥ 0.75 over at least 150 PRs with readable authors"
+      ],
+      "failureCriteria": [
+        "Both S1 and S2 have AUC < 0.60 (cheap signals don't discriminate)",
+        "Fewer than 150 PRs with readable authors (inconclusive)"
+      ],
+      "estimatedTime": "< 1 hour of automated analysis",
+      "estimatedCostUsd": 0,
+      "resources": [
+        "GitHub REST and search APIs via the Actions token",
+        "research/experiments/exp-followup-engagement-retrospective/result.json"
+      ],
+      "expectedLearning": "Whether pre-review triage support (and tools like Fossier) rests on signals that work, and what they would cost genuine newcomers.",
+      "nextSteps": {
+        "ifSuccess": "Prototype an advisory triage Action on this repository's own PRs. Any outreach to other projects needs owner authorization.",
+        "ifFailure": "Reject this idea and note that unvalidated signal-based tools (Fossier) are likely ineffective."
+      },
+      "executionMode": "automatable",
+      "status": "proposed",
+      "createdInRun": "run-20261104-agent-ai-contribution-burden-3",
+      "provenance": "real"
+    }
+  ],
+  "decisions": [],
+  "briefs": [
+    {
+      "id": "brief-ai-contribution-burden",
+      "themeId": "theme-ai-contribution-burden",
+      "researchQuestion": "AI tools make it nearly free to open pull requests, issues and security reports. How much extra work does that create for open-source maintainers, and what could reduce it without shutting out genuine newcomers?",
+      "whyItMatters": "Widely used open-source software depends on small groups of maintainers whose review time is scarce. Several well-known projects have responded by restricting or closing outside contributions entirely, which also cuts off the path by which new contributors become future maintainers.",
+      "subQuestions": [
+        "How widespread is the burden, and what form does it take (pull requests, issues, security reports)?",
+        "Do projects object to the use of AI itself, or to unreviewed work that contributors don't understand?",
+        "Can a cheap, automatic signal separate low-effort submissions from genuine ones?",
+        "Can cheap signals, available before anyone reads a PR, make triage cheaper without excluding genuine newcomers?",
+        "Which interventions reduce the burden without excluding newcomers?"
+      ],
+      "findings": [
+        {
+          "id": "f1",
+          "statement": "The burden is reported across many independent projects. tldraw, Rust, Astropy, LLVM, the Linux kernel, Ghostty, scikit-learn and Zulip all describe AI-generated contributions as consuming scarce review time. tldraw went as far as automatically closing all external pull requests.",
+          "strength": "Strong as a reported problem: the policies and statements of eight independent projects agree. They are maintainers' accounts, not measurements of volume or hours.",
+          "evidenceIds": [
+            "ev-ai-burden-01",
+            "ev-ai-burden-03",
+            "ev-ai-burden-04",
+            "ev-ai-burden-06",
+            "ev-ai-burden-07",
+            "ev-ai-burden-08",
+            "ev-ai-burden-09",
+            "ev-ai-burden-10",
+            "ev-ai-burden-13"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f2",
+          "statement": "Projects mostly don't object to AI itself. They object to unreviewed work that the contributor doesn't understand. A study of 281 project AI policies found 83.3% permit AI in code contributions, and 67.3% require a high level of human involvement.",
+          "strength": "Strong: a systematic study of 281 policies, consistent with the individual policies of Ghostty, Zulip and curl.",
+          "evidenceIds": [
+            "ev-ai-burden-23",
+            "ev-ai-burden-24",
+            "ev-ai-burden-14",
+            "ev-ai-burden-15",
+            "ev-ai-burden-16"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f3",
+          "statement": "Whether an author replies to maintainers is only a weak signal of a low-effort pull request. Within LLVM, authors of PRs later closed under the AI policy replied 80.9% of the time, against 90.2% for accepted newcomers.",
+          "strength": "Moderate. Measured by VENTURE's own experiment (180 PRs with comments), but the pre-registered verdict was inconclusive, and the within-LLVM comparison was exploratory.",
+          "evidenceIds": [
+            "ev-ai-burden-33",
+            "ev-ai-burden-34"
+          ],
+          "epistemic": "inference"
+        },
+        {
+          "id": "f4",
+          "statement": "Over a quarter of the policy-closed pull requests sampled (33 of 120) were closed without any human comment. Maintainers often dismiss them silently, which suggests much of the cost is in triage rather than in-depth review.",
+          "strength": "Weak to moderate. The count is measured, but the interpretation hasn't been tested.",
+          "evidenceIds": [
+            "ev-ai-burden-35",
+            "ev-ai-burden-04"
+          ],
+          "epistemic": "inference"
+        },
+        {
+          "id": "f5",
+          "statement": "Where repositories adopt AI coding agents, newcomers' share of participation drops by about 3.7 percentage points, while the absolute number of human contributors doesn't change significantly.",
+          "strength": "Moderate. One large study (11,097 repositories), and it measures agent adoption by the repository itself, which only indirectly concerns inbound contributions.",
+          "evidenceIds": [
+            "ev-ai-burden-27",
+            "ev-ai-burden-28"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f6",
+          "statement": "Fabricated, AI-generated security reports are a separate and severe drain: curl stopped offering a bug bounty, saying it rewarded made-up problems.",
+          "strength": "Weak. Only curl's own documents could be retrieved, so this is one independent origin.",
+          "evidenceIds": [
+            "ev-ai-burden-17",
+            "ev-ai-burden-19"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f7",
+          "statement": "Triage cost is now closing newcomer on-ramps. Astropy maintainers proposed retiring their 'good first issue' labels because triaging mostly unacceptable, usually AI-generated PRs costs more than the labels gain. Other projects are proposing one-click autoclose labels (scikit-learn) and instant closure of PRs that strip AI-disclosure checkboxes (nixpkgs).",
+          "strength": "Moderate. Three independent projects' own issue trackers. Proposals, not measured savings.",
+          "evidenceIds": [
+            "ev-ai-burden-36",
+            "ev-ai-burden-37",
+            "ev-ai-burden-38",
+            "ev-ai-burden-35"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f8",
+          "statement": "Blunt AI rules carry a fairness cost: a Kubernetes contributor argues they exclude people with disabilities who rely on AI as assistive technology. This favours behaviour-based triage that keeps humans in the decision over rules keyed on AI use.",
+          "strength": "Weak. One argued case, but it points to a real design constraint.",
+          "evidenceIds": [
+            "ev-ai-burden-39"
+          ],
+          "epistemic": "inference"
+        }
+      ],
+      "uncertainties": [
+        "No direct measurement of how many AI-generated contributions projects receive, or how much time they cost, has been found.",
+        "Selection bias: projects that wrote AI policies are the ones most affected. Projects that see no problem are under-represented.",
+        "Several empirical studies use a dataset of agent-authored PRs that differs from unsolicited contributions to popular projects.",
+        "News coverage and blogs couldn't be read from the research environment, so secondary reporting (e.g. a reported Linux Foundation estimate) remains unverified."
+      ],
+      "conclusion": {
+        "belief": "The burden is real and widespread, and much of it is triage: deciding which PRs deserve attention at all. Projects largely accept AI help and object to unreviewed, low-understanding work, so detecting AI is the wrong lever, and blunt AI rules carry a fairness cost. The first candidate solution (gating on author follow-up) was not a useful filter. A new candidate, advisory triage based on validated pre-review signals, is being tested next.",
+        "confidence": "medium",
+        "confidenceReason": "Medium for the problem: many independent primary sources and a 281-policy study agree. Low for any solution: one test was inconclusive, and the current candidate is untested.",
+        "unknowns": [
+          "Whether cheap pre-review signals separate low-effort PRs from genuine newcomer PRs",
+          "How much maintainer time triage actually takes",
+          "Which of the existing countermeasures work best"
+        ],
+        "continueInvestigation": true,
+        "continueReason": "A $0 test on 240 already-labelled PRs can show whether signal-based triage is viable at all."
+      },
+      "nextSteps": [
+        {
+          "text": "Test whether two cheap pre-review signals (recent cross-repo PR burst, account age) separate policy-violating PRs from genuine newcomer PRs.",
+          "kind": "experiment",
+          "experimentId": "exp-pre-review-signal-discrimination",
+          "issue": 17
+        },
+        {
+          "text": "Find primary sources for unverified leads in the signal feed (e.g. the reported Linux Foundation estimate, and Zig's rationale for its anti-AI policy).",
+          "kind": "research",
+          "issue": 17
+        }
+      ],
+      "updatedAt": "2026-11-04T09:33:58Z",
+      "author": "research director (Claude Code session)",
+      "provenance": "real",
+      "updatedInRun": "run-20261104-agent-ai-contribution-burden-3"
+    }
+  ]
+}

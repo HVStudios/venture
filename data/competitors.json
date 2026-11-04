@@ -182,6 +182,24 @@
     "provenance": "real"
   },
   {
+    "id": "comp-triage-workflow-conventions",
+    "name": "Maintainer triage conventions (autoclose labels, template-compliance rules)",
+    "kind": "workaround",
+    "description": "Lightweight project workflows that cut per-PR triage effort: scikit-learn's proposed autoclose label, and nixpkgs' proposal to close PRs that remove the AI-disclosure checkboxes.",
+    "strengths": [
+      "Cheap, transparent, keeps a human in the loop"
+    ],
+    "weaknesses": [
+      "A human still has to look at each PR to apply the label",
+      "Template rules are easy to game (inference)"
+    ],
+    "sourceIds": [
+      "src-sklearn-autoclose-rfc",
+      "src-nixpkgs-close-missing-ai-checkbox"
+    ],
+    "provenance": "real"
+  },
+  {
     "id": "comp-vouch",
     "name": "Vouch (mitchellh/vouch)",
     "url": "https://github.com/mitchellh/vouch",

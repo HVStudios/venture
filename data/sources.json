@@ -140,6 +140,20 @@
     "provenance": "real"
   },
   {
+    "id": "src-astropy-retire-good-first-issue",
+    "url": "https://github.com/astropy/astropy/issues/19710",
+    "title": "Retire these labels: \"good first issue\", Package-novice, Package-intermediate, Hacktoberfest",
+    "publisher": "Astropy (GitHub issue)",
+    "publishedAt": "2026-05-07",
+    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "Some core maintainers (myself included) feel like the following labels have outlived their usefulness. They were originally created in hope we can use these to recruit and retain future maintainers. However, the cost of triaging mostly unacceptable pull requests (nowadays usually AI slops) have outweighed any benefit. These labels are: - `good first issue` - `Package-novice` - `Package-intermediate` (I don't find intermediate very meaningful, you either need expertise or you don't) - `Hacktoberfest` (we have not participated in many years) - `hacktoberfest-accepted` (same reasoning as `Hacktoberfest`) Proposed actions: - Remove them from open issues/PRs. - Retire them in labels list by prepending with a 💤 (as we do with other labels that went through similar fate) - Remove their mentions from https://www.astropy.org/contribute.html (anywhere else?) Out of scope: - I think the keeping `Package-expert` label is fine, as we still need to identify which issues need serious domain expertise, even amongst ourselves.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-asyncapi-specs-compromise",
     "url": "https://github.com/asyncapi/spec-json-schemas/issues/656",
     "title": "[SECURITY] Malicious versions published via compromised alpha branch - @asyncapi/specs@6.11.2 (latest) and 6.11.2-alpha.1",
@@ -419,6 +433,21 @@
     "provenance": "real"
   },
   {
+    "id": "src-kubernetes-ai-policy-disparate-impact",
+    "url": "https://github.com/kubernetes/community/issues/9010",
+    "title": "Disparate Impact of Current AI Policies on Contributors Using AI as Assistive Technology",
+    "publisher": "Kubernetes community (GitHub issue)",
+    "publishedAt": "2026-05-30",
+    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "I have strong concerns that several policies as written in https://www.kubernetes.dev/docs/guide/pull-requests/#ai-guidance have a clear disparate impact (a form of discrimination) against contributors with disabilities who rely on AI as an assistive technology. Here are the 3 policies of concern (the first quote containing two separate policies): > [Large AI generated](https://www.kubernetes.dev/docs/guide/pull-requests/#large-or-automatic-edits) PRs and AI generated commit messages are not allowed. > When responding to review comments, you must do so without relying on AI tools. Reviewers want to engage directly with you, not with generated responses. If you do not engage directly with reviewers, the PR will be closed. The policies do not distinguish unaccountable delegation to AI from accountable AI-assisted or assistive use. Instead, they categorically prohibit several core uses of AI that contributors with disabilities may rely on to participate. ## Policy Intent I understand the intent of the policies. I’ve contributed to the Linux Kernel repo before and have heard Jon Corbet raise concerns about maintainers being overwhelmed by spam and low-quality AI-generated contributions…",
+    "limitations": "One contributor's argument; the policy authors' response isn't in the captured text.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-linux-generated-content",
     "url": "https://raw.githubusercontent.com/torvalds/linux/master/Documentation/process/generated-content.rst",
     "title": "Kernel Guidelines for Tool-Generated Content",
@@ -463,6 +492,20 @@
       "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-nixpkgs-close-missing-ai-checkbox",
+    "url": "https://github.com/NixOS/nixpkgs/issues/551976",
+    "title": "we should instantly close PRs that don't contain the automation/ai and contribution checkboxs",
+    "publisher": "nixpkgs (GitHub issue)",
+    "publishedAt": "2026-08-12",
+    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "Recently I've noticed and been in short conversations with @pyrox0 and @whispersofthedawn who have both also noticed that some PRs will remove the Automation/Ai and Contribution policy checkboxes. I personally believe that merging this PRs would be a gross violation of the policies so we should close PRs that do not contain these checkboxes or have not checked them out intentionally with a notification that to the user to read them.",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },
@@ -630,6 +673,34 @@
       "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-sklearn-autoclose-rfc",
+    "url": "https://github.com/scikit-learn/scikit-learn/issues/32207",
+    "title": "RFC: Proposal for autoclose option for non-compliant PRs",
+    "publisher": "scikit-learn (GitHub issue)",
+    "publishedAt": "2025-09-17",
+    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "Following up on the discussion in #31679 about low-effort contributions (like ai-generated with low human supervision), @lucyleeow and me worked out an idea: We would like to propose introducing an autoclose option for PRs that gets triggered when setting an \"autoclose\" label that can be removed if the PR is improved. The idea is to provide a structured way to handle PRs that don't yet meet our contribution standards and facilitate the reviewing process. This will be transparent and fair for new contributors. **Suggested process** 1. A contributor opens a PR that looks low-effort, fly-by, not supervised ai-generated, or otherwise not yet ready for review. 2. A reviewer sets an \"autoclose\" label. This would automatically add a polite, standardised comment explaining: - The PR will be autoclosed after _n_ weeks (e.g. _4_). - A list of common quality issues (similar to what we used in #31822) that outlines what the contributor needs to address in order to avoid the PR being autoclosed (can contain links to the docs and the FAQs where we explain those things in detail). - An encouragement to comment on the PR and ping the person who set the \"autoclose\" once they believe they have met t…",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-sklearn-copilot-agent-policy",
+    "url": "https://github.com/scikit-learn/scikit-learn/issues/31679",
+    "title": "AI tools like Copilot Coding Agent don't know about / don't respect our Automated Contributions Policy",
+    "publisher": "scikit-learn (GitHub issue)",
+    "publishedAt": "2025-06-30",
+    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "(I am creating an issue to a PR already opened (#31643), because there are many more ways to solve the problem.) AI tools many people use to create PRs don't care about our [Automated Contributions Policy](https://scikit-learn.org/dev/developers/contributing.html#automated-contributions-policy). Since [GitHub Copilot Coding Agent Has Arrived!](https://github.com/orgs/community/discussions/159068) and people build [Github-MCP](https://github.com/dhyeyinf/Github-MCP)s that can be integrated with LLM clients, scikit-learn and other open source projects get an increasing amount of AI spam. Many people who care about open source are unhappy about it and request an option to block AI-generated PRs and issues on their projects ([Allow us to block Copilot-generated issues (and PRs) from our own repositories](https://github.com/orgs/community/discussions/159749)) - so far without success. You can see that there is an increasing amount of partially or fully generated PRs and a decrease in overall quality for PRs on scikit-learn by looking at [the last closed PRs](https://github.com/scikit-learn/scikit-learn/pulls?q=is%3Apr+is%3Aclosed) (as of June 30th 2025). It is not a flood yet, but bad e…",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },

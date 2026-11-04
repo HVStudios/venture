@@ -8,6 +8,7 @@
       "How widespread is the burden, and what form does it take (pull requests, issues, security reports)?",
       "Do projects object to the use of AI itself, or to unreviewed work that contributors don't understand?",
       "Can a cheap, automatic signal separate low-effort submissions from genuine ones?",
+      "Can cheap signals, available before anyone reads a PR, make triage cheaper without excluding genuine newcomers?",
       "Which interventions reduce the burden without excluding newcomers?"
     ],
     "findings": [
@@ -80,6 +81,27 @@
           "ev-ai-burden-19"
         ],
         "epistemic": "fact"
+      },
+      {
+        "id": "f7",
+        "statement": "Triage cost is now closing newcomer on-ramps. Astropy maintainers proposed retiring their 'good first issue' labels because triaging mostly unacceptable, usually AI-generated PRs costs more than the labels gain. Other projects are proposing one-click autoclose labels (scikit-learn) and instant closure of PRs that strip AI-disclosure checkboxes (nixpkgs).",
+        "strength": "Moderate. Three independent projects' own issue trackers. Proposals, not measured savings.",
+        "evidenceIds": [
+          "ev-ai-burden-36",
+          "ev-ai-burden-37",
+          "ev-ai-burden-38",
+          "ev-ai-burden-35"
+        ],
+        "epistemic": "fact"
+      },
+      {
+        "id": "f8",
+        "statement": "Blunt AI rules carry a fairness cost: a Kubernetes contributor argues they exclude people with disabilities who rely on AI as assistive technology. This favours behaviour-based triage that keeps humans in the decision over rules keyed on AI use.",
+        "strength": "Weak. One argued case, but it points to a real design constraint.",
+        "evidenceIds": [
+          "ev-ai-burden-39"
+        ],
+        "epistemic": "inference"
       }
     ],
     "uncertainties": [
@@ -89,35 +111,32 @@
       "News coverage and blogs couldn't be read from the research environment, so secondary reporting (e.g. a reported Linux Foundation estimate) remains unverified."
     ],
     "conclusion": {
-      "belief": "The burden is real and widespread, but the right lever isn't detecting AI. Projects largely accept AI help and object to unreviewed, low-understanding work. VENTURE's first candidate solution, gating PRs on author follow-up, did not prove to be a useful filter. No idea in this area is currently worth building.",
+      "belief": "The burden is real and widespread, and much of it is triage: deciding which PRs deserve attention at all. Projects largely accept AI help and object to unreviewed, low-understanding work, so detecting AI is the wrong lever, and blunt AI rules carry a fairness cost. The first candidate solution (gating on author follow-up) was not a useful filter. A new candidate, advisory triage based on validated pre-review signals, is being tested next.",
       "confidence": "medium",
-      "confidenceReason": "Medium for the problem: many independent primary sources plus a 281-policy study agree. Low for any particular solution: the only solution test was inconclusive, and the triage-cost angle is untested.",
+      "confidenceReason": "Medium for the problem: many independent primary sources and a 281-policy study agree. Low for any solution: one test was inconclusive, and the current candidate is untested.",
       "unknowns": [
-        "How much maintainer time triage actually takes, compared with in-depth review",
-        "Which of the ten countermeasures that projects already use work best",
-        "Whether any solution can lower the burden without adding friction for newcomers"
+        "Whether cheap pre-review signals separate low-effort PRs from genuine newcomer PRs",
+        "How much maintainer time triage actually takes",
+        "Which of the existing countermeasures work best"
       ],
       "continueInvestigation": true,
-      "continueReason": "The silent-closure finding points to a new, testable direction (cheaper triage), and several leads from the signal feed are unexamined."
+      "continueReason": "A $0 test on 240 already-labelled PRs can show whether signal-based triage is viable at all."
     },
     "nextSteps": [
       {
-        "text": "Investigate triage cost: why are so many policy-violating PRs closed without comment, and what would make that step cheaper?",
-        "kind": "research",
+        "text": "Test whether two cheap pre-review signals (recent cross-repo PR burst, account age) separate policy-violating PRs from genuine newcomer PRs.",
+        "kind": "experiment",
+        "experimentId": "exp-pre-review-signal-discrimination",
         "issue": 17
       },
       {
-        "text": "Read the full study of ten anti-slop countermeasures to map existing solutions before inventing new ones.",
-        "kind": "research",
-        "issue": 17
-      },
-      {
-        "text": "Find primary sources for unverified leads, such as the reported Linux Foundation estimate that 25% of new PRs are low-quality AI output.",
+        "text": "Find primary sources for unverified leads in the signal feed (e.g. the reported Linux Foundation estimate, and Zig's rationale for its anti-AI policy).",
         "kind": "research",
         "issue": 17
       }
     ],
-    "updatedAt": "2026-11-03T23:25:20Z",
+    "updatedAt": "2026-11-04T09:33:58Z",
+    "updatedInRun": "run-20261104-agent-ai-contribution-burden-3",
     "author": "research director (Claude Code session)",
     "provenance": "real"
   },
