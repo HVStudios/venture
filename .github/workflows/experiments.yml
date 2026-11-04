@@ -54,6 +54,7 @@ jobs:
             exp-npm-publishing-practices) npx tsx src/experiments/publishing-practices.ts ;;
             exp-pre-review-signal-discrimination) npx tsx src/experiments/pre-review-signals.ts ;;
             exp-content-signal-discrimination) npx tsx src/experiments/content-signals.ts ;;
+            exp-combined-signal-discrimination) npx tsx src/experiments/combined-signals.ts ;;
             *) echo "unknown experiment $EXPERIMENT"; exit 1 ;;
           esac
       - name: Keep raw results as a workflow artifact (survives a failed push)

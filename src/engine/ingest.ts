@@ -16,6 +16,23 @@ export interface IngestResult {
   memory?: Memory;
 }
 
+const EXP_ORDER = ["proposed", "approved", "running", "completed", "abandoned"];
+
+/**
+ * Re-ingesting an older bundle must not rewind state recorded since (e.g. an
+ * experiment approved or completed after the bundle was written).
+ */
+export function rewinds(raw: Record<string, unknown[]>, bundle: Bundle): string[] {
+  const problems: string[] = [];
+  for (const x of bundle.experiments) {
+    const cur = (raw.experiments as { id: string; status: string }[]).find((e) => e.id === x.id);
+    if (cur && EXP_ORDER.indexOf(x.status) < EXP_ORDER.indexOf(cur.status)) {
+      problems.push(`experiment ${x.id} would move back from '${cur.status}' to '${x.status}'`);
+    }
+  }
+  return problems;
+}
+
 export function mergeBundle(raw: Record<string, unknown[]>, bundle: Bundle) {
   const added: Record<string, number> = {};
   const replaced: Record<string, number> = {};
@@ -53,6 +70,10 @@ export function ingestBundle(storeDir: string, bundleInput: unknown, expected: P
   }
   const bundle = parsed.data;
   const raw = loadRaw(storeDir);
+  const rewind = rewinds(raw, bundle);
+  if (rewind.length) {
+    return { ok: false, added: {}, replaced: {}, issues: rewind.map((m) => ({ level: "error" as const, ref: "bundle", message: `${m}; remove it from the bundle or update it first` })) };
+  }
   const { merged, added, replaced } = mergeBundle(raw, bundle);
 
   // First pass validation (without decisions enrichment) to get typed memory.

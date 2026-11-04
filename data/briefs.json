@@ -113,6 +113,17 @@
           "ev-ai-burden-43"
         ],
         "epistemic": "fact"
+      },
+      {
+        "id": "f10",
+        "statement": "What a PR says is a slightly better clue than who sent it. Policy-violating PRs had much longer descriptions (median 166 vs 87 words; AUC 0.67), matching maintainers' complaints about verbose AI output. Whether the PR references an issue made no difference.",
+        "strength": "Moderate. A pre-registered test on 240 labelled PRs. Still below the bar for a usable triage signal.",
+        "evidenceIds": [
+          "ev-ai-burden-44",
+          "ev-ai-burden-45",
+          "ev-ai-burden-46"
+        ],
+        "epistemic": "fact"
       }
     ],
     "uncertainties": [
@@ -122,35 +133,31 @@
       "News coverage and blogs couldn't be read from the research environment, so secondary reporting (e.g. a reported Linux Foundation estimate) remains unverified."
     ],
     "conclusion": {
-      "belief": "The burden is real and widespread, and much of it is triage: deciding which PRs deserve attention at all. Projects largely accept AI help and object to unreviewed, low-understanding work, so detecting AI is the wrong lever, and blunt AI rules carry a fairness cost. Two candidate solutions have now been tested and neither works as a filter. Author follow-up and cheap account-level signals (recent PR volume elsewhere, account age) both separate low-effort from genuine contributions only weakly. No solution in this area is currently worth building.",
+      "belief": "The burden is real and widespread, and much of it is triage: deciding which PRs deserve attention at all. Projects largely accept AI help and object to unreviewed, low-understanding work, so detecting AI is the wrong lever, and blunt AI rules carry a fairness cost. None of the simple signals tested so far (author follow-up, recent PR volume elsewhere, account age, issue references, description length) separates low-effort from genuine contributions well enough on its own. Long descriptions are the strongest clue. No solution in this area is currently worth building.",
       "confidence": "medium",
       "confidenceReason": "Medium for the problem: many independent primary sources and a 281-policy study agree. Medium for the negative result on simple signals: two pre-registered tests on real PRs, though with an LLVM-only control group.",
       "unknowns": [
-        "Whether content-based signals (e.g. PR template or AI-disclosure compliance) discriminate better than account-level ones",
+        "Whether the two partially informative signals combined are good enough",
         "How much maintainer time triage actually takes",
         "Which of the existing countermeasures work best"
       ],
       "continueInvestigation": true,
-      "continueReason": "Content-based signals are the one cheap, untested direction left. If they also fail, the area should be paused rather than continued by invention."
+      "continueReason": "One last cheap, pre-registered test (combining the two best signals) decides whether to keep searching for a solution or pause the area."
     },
     "nextSteps": [
       {
-        "text": "Test whether content-based signals (PR template and AI-disclosure compliance, description length) separate policy-violating PRs from genuine newcomer PRs. Re-sample, since per-PR data from the last test was lost.",
+        "text": "Test an unfitted combination of description length and recent cross-repo PR count. Below AUC 0.70, the solution search pauses.",
         "kind": "experiment",
+        "experimentId": "exp-combined-signal-discrimination",
         "issue": 17
       },
       {
-        "text": "If content signals also fail, pause this area and record why.",
+        "text": "If the combination fails, pause the solution search and record the negative results as the area's main finding.",
         "kind": "decision"
-      },
-      {
-        "text": "Find primary sources for unverified leads in the signal feed (e.g. the reported Linux Foundation estimate, Zig's policy rationale).",
-        "kind": "research",
-        "issue": 17
       }
     ],
-    "updatedAt": "2026-11-04T11:16:37Z",
-    "updatedInRun": "run-20261104-exp-pre-review-signals",
+    "updatedAt": "2026-11-04T12:10:04Z",
+    "updatedInRun": "run-20261104-exp-content-signals",
     "author": "research director (Claude Code session)",
     "provenance": "real"
   },

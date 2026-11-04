@@ -1,0 +1,317 @@
+{
+  "run": {
+    "id": "run-20261104-exp-content-signals",
+    "themeId": "theme-ai-contribution-burden",
+    "mode": "agent-session",
+    "provider": "claude-code-session + github-actions experiment runner",
+    "startedAt": "2026-11-04T12:06:00Z",
+    "completedAt": "2026-11-04T12:09:31Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Executed in Actions run 41826339477 (240 PRs)"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Pre-registered the combined-signal test"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Research brief updated"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 1,
+      "sourcesCited": 1,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "see research/experiments/exp-content-signal-discrimination/result.json"
+    ],
+    "errors": [],
+    "limitations": [
+      "The control group is LLVM-only."
+    ],
+    "usage": {
+      "note": "GitHub Actions (free). No model calls, no cost."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [],
+  "sources": [
+    {
+      "id": "src-exp-content-signals-result",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-content-signal-discrimination/RESULT.md",
+      "title": "VENTURE experiment result: content-based triage signals (pre-registered)",
+      "publisher": "VENTURE (own experiment, GitHub Actions run 41826339477)",
+      "retrievedAt": "2026-11-04T12:09:31Z",
+      "publishedAt": "2026-11-04",
+      "sourceType": "dataset",
+      "excerpt": "C1, description references an issue: 55.8% of policy-closed vs 58.3% of newcomer-merged PRs; AUC (no reference → suspicious) 0.51. … C2, description length: median 166 words (policy-closed) vs 87 words (newcomer-merged); AUC 0.67 (policy-closed descriptions are longer). … At the C2 threshold that flags half of the policy-closed PRs, 13.3% of genuine newcomer PRs would also be flagged. … Verdict (pre-registered rule): inconclusive: best content signal AUC 0.67 is between the thresholds.",
+      "limitations": "Own experiment. The control group is LLVM-only, and descriptions may have been edited after closing.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-ai-burden-44",
+      "claim": "Policy-violating PRs have much longer descriptions than genuine newcomer PRs (median 166 vs 87 words), consistent with maintainers' complaints about wordy AI output, but the separation is moderate (AUC 0.67).",
+      "sourceId": "src-exp-content-signals-result",
+      "quote": "median 166 words (policy-closed) vs 87 words (newcomer-merged); AUC 0.67",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-validated-pre-review-triage-signals"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Corroborates curl's 'too wordy' and Ghostty's 'overly verbose' descriptions of AI-generated submissions."
+    },
+    {
+      "id": "ev-ai-burden-45",
+      "claim": "Whether a PR references an issue doesn't distinguish policy-violating from genuine newcomer PRs (56% vs 58%, AUC 0.51).",
+      "sourceId": "src-exp-content-signals-result",
+      "quote": "55.8% of policy-closed vs 58.3% of newcomer-merged PRs; AUC (no reference → suspicious) 0.51",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-validated-pre-review-triage-signals"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-ai-burden-46",
+      "claim": "Flagging by description length to catch half of policy-violating PRs would flag about 13% of genuine newcomers, a better trade-off than account-level signals (about 30%).",
+      "sourceId": "src-exp-content-signals-result",
+      "quote": "13.3% of genuine newcomer PRs would also be flagged",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-validated-pre-review-triage-signals"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    }
+  ],
+  "problems": [],
+  "competitors": [],
+  "ideas": [],
+  "experiments": [
+    {
+      "id": "exp-combined-signal-discrimination",
+      "ideaId": "idea-validated-pre-review-triage-signals",
+      "title": "Do two partial signals combined (description length + recent cross-repo PR count) separate policy-violating PRs well?",
+      "hypothesis": "An unfitted, equal-weight combination of description length (C2) and the author's recent cross-repo PR count (S1) reaches AUC ≥ 0.75 on the same 240 labelled PRs.",
+      "uncertainty": "Whether the two partially informative cheap signals add up to a usable triage signal. This is the last cheap test before pausing the area's solution search.",
+      "procedure": [
+        "Pre-registered 2026-11-04. The individual signals were measured earlier (S1 AUC 0.64, C2 AUC 0.67); this combination and its rule are fixed before measuring them together.",
+        "Sample: the same 240 PRs. Re-collect S1 (search API, 30 days before the PR) and C2 (description word count) per PR.",
+        "Score = (percentile rank of C2 among all PRs + percentile rank of S1 among all PRs) / 2. No weights are fitted.",
+        "Primary: AUC of the score. Also report the newcomer flag rate at the threshold that flags half of the policy-closed PRs."
+      ],
+      "successCriteria": [
+        "Combined AUC ≥ 0.75 over at least 150 PRs"
+      ],
+      "failureCriteria": [
+        "Combined AUC < 0.70: pause the area's solution search",
+        "Fewer than 150 readable PRs (inconclusive)"
+      ],
+      "estimatedTime": "< 30 minutes of automated analysis",
+      "estimatedCostUsd": 0,
+      "resources": [
+        "GitHub REST and search APIs via the Actions token"
+      ],
+      "expectedLearning": "Whether cheap signals can support triage at all, or whether the area should stop looking for a solution of this kind.",
+      "nextSteps": {
+        "ifSuccess": "Validate on a second, non-LLVM control group before reopening the idea.",
+        "ifFailure": "Pause the solution search in this area, and record the negative result as the area's main contribution."
+      },
+      "executionMode": "automatable",
+      "status": "proposed",
+      "createdInRun": "run-20261104-exp-content-signals",
+      "provenance": "real"
+    }
+  ],
+  "decisions": [],
+  "briefs": [
+    {
+      "id": "brief-ai-contribution-burden",
+      "themeId": "theme-ai-contribution-burden",
+      "researchQuestion": "AI tools make it nearly free to open pull requests, issues and security reports. How much extra work does that create for open-source maintainers, and what could reduce it without shutting out genuine newcomers?",
+      "whyItMatters": "Widely used open-source software depends on small groups of maintainers whose review time is scarce. Several well-known projects have responded by restricting or closing outside contributions entirely, which also cuts off the path by which new contributors become future maintainers.",
+      "subQuestions": [
+        "How widespread is the burden, and what form does it take (pull requests, issues, security reports)?",
+        "Do projects object to the use of AI itself, or to unreviewed work that contributors don't understand?",
+        "Can a cheap, automatic signal separate low-effort submissions from genuine ones?",
+        "Can cheap signals, available before anyone reads a PR, make triage cheaper without excluding genuine newcomers?",
+        "Which interventions reduce the burden without excluding newcomers?"
+      ],
+      "findings": [
+        {
+          "id": "f1",
+          "statement": "The burden is reported across many independent projects. tldraw, Rust, Astropy, LLVM, the Linux kernel, Ghostty, scikit-learn and Zulip all describe AI-generated contributions as consuming scarce review time. tldraw went as far as automatically closing all external pull requests.",
+          "strength": "Strong as a reported problem: the policies and statements of eight independent projects agree. They are maintainers' accounts, not measurements of volume or hours.",
+          "evidenceIds": [
+            "ev-ai-burden-01",
+            "ev-ai-burden-03",
+            "ev-ai-burden-04",
+            "ev-ai-burden-06",
+            "ev-ai-burden-07",
+            "ev-ai-burden-08",
+            "ev-ai-burden-09",
+            "ev-ai-burden-10",
+            "ev-ai-burden-13"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f2",
+          "statement": "Projects mostly don't object to AI itself. They object to unreviewed work that the contributor doesn't understand. A study of 281 project AI policies found 83.3% permit AI in code contributions, and 67.3% require a high level of human involvement.",
+          "strength": "Strong: a systematic study of 281 policies, consistent with the individual policies of Ghostty, Zulip and curl.",
+          "evidenceIds": [
+            "ev-ai-burden-23",
+            "ev-ai-burden-24",
+            "ev-ai-burden-14",
+            "ev-ai-burden-15",
+            "ev-ai-burden-16"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f3",
+          "statement": "Whether an author replies to maintainers is only a weak signal of a low-effort pull request. Within LLVM, authors of PRs later closed under the AI policy replied 80.9% of the time, against 90.2% for accepted newcomers.",
+          "strength": "Moderate. Measured by VENTURE's own experiment (180 PRs with comments), but the pre-registered verdict was inconclusive, and the within-LLVM comparison was exploratory.",
+          "evidenceIds": [
+            "ev-ai-burden-33",
+            "ev-ai-burden-34"
+          ],
+          "epistemic": "inference"
+        },
+        {
+          "id": "f4",
+          "statement": "Over a quarter of the policy-closed pull requests sampled (33 of 120) were closed without any human comment. Maintainers often dismiss them silently, which suggests much of the cost is in triage rather than in-depth review.",
+          "strength": "Weak to moderate. The count is measured, but the interpretation hasn't been tested.",
+          "evidenceIds": [
+            "ev-ai-burden-35",
+            "ev-ai-burden-04"
+          ],
+          "epistemic": "inference"
+        },
+        {
+          "id": "f5",
+          "statement": "Where repositories adopt AI coding agents, newcomers' share of participation drops by about 3.7 percentage points, while the absolute number of human contributors doesn't change significantly.",
+          "strength": "Moderate. One large study (11,097 repositories), and it measures agent adoption by the repository itself, which only indirectly concerns inbound contributions.",
+          "evidenceIds": [
+            "ev-ai-burden-27",
+            "ev-ai-burden-28"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f6",
+          "statement": "Fabricated, AI-generated security reports are a separate and severe drain: curl stopped offering a bug bounty, saying it rewarded made-up problems.",
+          "strength": "Weak. Only curl's own documents could be retrieved, so this is one independent origin.",
+          "evidenceIds": [
+            "ev-ai-burden-17",
+            "ev-ai-burden-19"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f7",
+          "statement": "Triage cost is now closing newcomer on-ramps. Astropy maintainers proposed retiring their 'good first issue' labels because triaging mostly unacceptable, usually AI-generated PRs costs more than the labels gain. Other projects are proposing one-click autoclose labels (scikit-learn) and instant closure of PRs that strip AI-disclosure checkboxes (nixpkgs).",
+          "strength": "Moderate. Three independent projects' own issue trackers. Proposals, not measured savings.",
+          "evidenceIds": [
+            "ev-ai-burden-36",
+            "ev-ai-burden-37",
+            "ev-ai-burden-38",
+            "ev-ai-burden-35"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f8",
+          "statement": "Blunt AI rules carry a fairness cost: a Kubernetes contributor argues they exclude people with disabilities who rely on AI as assistive technology. This favours behaviour-based triage that keeps humans in the decision over rules keyed on AI use.",
+          "strength": "Weak. One argued case, but it points to a real design constraint.",
+          "evidenceIds": [
+            "ev-ai-burden-39"
+          ],
+          "epistemic": "inference"
+        },
+        {
+          "id": "f9",
+          "statement": "Cheap account-level signals are poor triage tools. Authors of policy-violating PRs had typically opened more PRs elsewhere in the prior month (median 6 vs 1), but the groups overlap so much that the signal's AUC is only 0.64. Account age is close to useless (0.54). Catching half of the problem PRs this way would also flag about 30% of genuine newcomers.",
+          "strength": "Moderate. A pre-registered test on 237 labelled PRs. The control group is LLVM-only, and per-PR data wasn't persisted.",
+          "evidenceIds": [
+            "ev-ai-burden-41",
+            "ev-ai-burden-42",
+            "ev-ai-burden-43"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f10",
+          "statement": "What a PR says is a slightly better clue than who sent it. Policy-violating PRs had much longer descriptions (median 166 vs 87 words; AUC 0.67), matching maintainers' complaints about verbose AI output. Whether the PR references an issue made no difference.",
+          "strength": "Moderate. A pre-registered test on 240 labelled PRs. Still below the bar for a usable triage signal.",
+          "evidenceIds": [
+            "ev-ai-burden-44",
+            "ev-ai-burden-45",
+            "ev-ai-burden-46"
+          ],
+          "epistemic": "fact"
+        }
+      ],
+      "uncertainties": [
+        "No direct measurement of how many AI-generated contributions projects receive, or how much time they cost, has been found.",
+        "Selection bias: projects that wrote AI policies are the ones most affected. Projects that see no problem are under-represented.",
+        "Several empirical studies use a dataset of agent-authored PRs that differs from unsolicited contributions to popular projects.",
+        "News coverage and blogs couldn't be read from the research environment, so secondary reporting (e.g. a reported Linux Foundation estimate) remains unverified."
+      ],
+      "conclusion": {
+        "belief": "The burden is real and widespread, and much of it is triage: deciding which PRs deserve attention at all. Projects largely accept AI help and object to unreviewed, low-understanding work, so detecting AI is the wrong lever, and blunt AI rules carry a fairness cost. None of the simple signals tested so far (author follow-up, recent PR volume elsewhere, account age, issue references, description length) separates low-effort from genuine contributions well enough on its own. Long descriptions are the strongest clue. No solution in this area is currently worth building.",
+        "confidence": "medium",
+        "confidenceReason": "Medium for the problem: many independent primary sources and a 281-policy study agree. Medium for the negative result on simple signals: two pre-registered tests on real PRs, though with an LLVM-only control group.",
+        "unknowns": [
+          "Whether the two partially informative signals combined are good enough",
+          "How much maintainer time triage actually takes",
+          "Which of the existing countermeasures work best"
+        ],
+        "continueInvestigation": true,
+        "continueReason": "One last cheap, pre-registered test (combining the two best signals) decides whether to keep searching for a solution or pause the area."
+      },
+      "nextSteps": [
+        {
+          "text": "Test an unfitted combination of description length and recent cross-repo PR count. Below AUC 0.70, the solution search pauses.",
+          "kind": "experiment",
+          "experimentId": "exp-combined-signal-discrimination",
+          "issue": 17
+        },
+        {
+          "text": "If the combination fails, pause the solution search and record the negative results as the area's main finding.",
+          "kind": "decision"
+        }
+      ],
+      "updatedAt": "2026-11-04T12:10:04Z",
+      "updatedInRun": "run-20261104-exp-content-signals",
+      "author": "research director (Claude Code session)",
+      "provenance": "real"
+    }
+  ]
+}
