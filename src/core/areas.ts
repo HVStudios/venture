@@ -117,6 +117,7 @@ function decisionEvent(d: Decision, m: Memory): TimelineEvent | undefined {
         link: "/experiments",
         tone: d.toStatus === "supported" ? "positive" : d.toStatus === "refuted" ? "negative" : "neutral",
       };
+    if (d.toStatus === "running") return { at: d.at, kind: "experiment", title: `Experiment started: ${x.title}`, detail: d.rationale, link: "/experiments" };
     if (d.toStatus === "approved") return { at: d.at, kind: "experiment", title: `Experiment approved: ${x.title}`, detail: d.rationale, link: "/experiments" };
     return { at: d.at, kind: "experiment", title: `Experiment design revised: ${x.title}`, detail: d.rationale, link: "/experiments" };
   }

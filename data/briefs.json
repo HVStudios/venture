@@ -235,7 +235,7 @@
     },
     "nextSteps": [
       {
-        "text": "Run a 28-day prospective field test measuring how often the alarm would fire on real releases of popular packages.",
+        "text": "A 28-day prospective field test is running: it measures how often the alarm would fire on real releases of 400 popular npm packages. Results are expected around 2026-12-02.",
         "kind": "experiment",
         "experimentId": "exp-install-hook-watch-prospective"
       },
@@ -250,7 +250,7 @@
         "issue": 10
       }
     ],
-    "updatedAt": "2026-11-04T09:24:01Z",
+    "updatedAt": "2026-11-04T09:25:59Z",
     "updatedInRun": "run-20261104-exp-npm-publishing-practices",
     "author": "research director (Claude Code session)",
     "provenance": "real"

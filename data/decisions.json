@@ -280,6 +280,30 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261104-install-hook-watch-prospective",
+    "at": "2026-11-04T09:25:58.936Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-install-hook-watch-prospective",
+    "action": "advance",
+    "fromStatus": "proposed",
+    "toStatus": "approved",
+    "rationale": "Approved under the standing rule for automatable experiments. Thresholds pre-registered before any monitoring data.",
+    "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261104-install-hook-watch-prospective-2",
+    "at": "2026-11-04T09:25:59.438Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-install-hook-watch-prospective",
+    "action": "advance",
+    "fromStatus": "approved",
+    "toStatus": "running",
+    "rationale": "Daily watch scheduled for 28 days via the Install-hook watch workflow. The first run records the baseline.",
+    "actor": "experiment designer",
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261104-maintainer-publish-anomaly-alarm",
     "at": "2026-11-04T09:23:35.224Z",
     "subjectType": "idea",

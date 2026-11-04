@@ -73,6 +73,16 @@ export function approveExperiment(m: Memory, expId: string, approver: string, no
   return d;
 }
 
+export function startExperiment(m: Memory, expId: string, actor: string, note: string, at: string): Decision {
+  const x = m.experiments.find((e) => e.id === expId);
+  if (!x) throw new ActionError(`unknown experiment ${expId}`);
+  if (x.status !== "approved") throw new ActionError(`experiment is ${x.status}; only approved experiments can start`);
+  x.status = "running";
+  const d: Decision = { id: decisionId(m, expId, at), at, subjectType: "experiment", subjectId: expId, action: "advance", fromStatus: "approved", toStatus: "running", rationale: note, actor, provenance: x.provenance };
+  m.decisions.push(d);
+  return d;
+}
+
 export interface OutcomeInput {
   result: NonNullable<Experiment["outcome"]>["result"];
   summary: string;
