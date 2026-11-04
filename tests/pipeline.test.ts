@@ -177,4 +177,18 @@ describe("ingest safety", () => {
     expect(again.ok).toBe(false);
     expect(again.issues[0].message).toMatch(/move back from 'approved' to 'proposed'/);
   });
+
+  it("refuses to overwrite a newer idea with an older bundle copy", async () => {
+    const dir = mkdtempSync(join(tmpdir(), "venture-idea-rewind-"));
+    const memory = memWithTheme();
+    saveMemory(dir, memory);
+    const bundle = await runPipeline({ theme, pool, memory, provider: new MockProvider(), runId: "run-ir", now: fixedNow });
+    expect(ingestBundle(dir, bundle, "fixture").ok).toBe(true);
+    const raw = loadRaw(dir);
+    (raw.ideas as { updatedAt: string }[])[0].updatedAt = "2026-12-01T00:00:00Z";
+    saveMemory(dir, validateMemory(raw, "fixture", Date.parse("2027-01-01")).memory!);
+    const again = ingestBundle(dir, bundle, "fixture");
+    expect(again.ok).toBe(false);
+    expect(again.issues.some((i) => /older than the stored one/.test(i.message))).toBe(true);
+  });
 });

@@ -1,0 +1,154 @@
+{
+  "run": {
+    "id": "run-20261104-agent-release-breaks-2",
+    "themeId": "theme-npm-release-breaking-changes",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-04T14:05:22Z",
+    "completedAt": "2026-11-04T14:05:22Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Research brief updated after recording the outcome and decision"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 0,
+      "sourcesCited": 0,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 0
+    },
+    "queries": [],
+    "errors": [],
+    "limitations": [],
+    "usage": {
+      "note": "Interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [],
+  "sources": [],
+  "evidence": [],
+  "problems": [],
+  "competitors": [],
+  "ideas": [],
+  "experiments": [],
+  "decisions": [],
+  "briefs": [
+    {
+      "id": "brief-npm-release-breaking-changes",
+      "themeId": "theme-npm-release-breaking-changes",
+      "researchQuestion": "Libraries regularly ship 'minor' or 'patch' updates that break the code of everyone using them, even though those updates are installed automatically on the promise of being safe. Could a small open-source tool catch these breaks before a release is published?",
+      "whyItMatters": "Every JavaScript project depends on dozens to hundreds of packages and trusts version numbers to signal risk. When a minor release breaks that trust, users lose time pinning versions and debugging, and maintainers lose credibility. Rust has a widely adopted tool for this; JavaScript has no established equivalent.",
+      "subQuestions": [
+        "How often do popular npm packages ship breaking changes in minor or patch releases?",
+        "What kinds of breaks are they: type changes, behaviour changes, or metadata changes?",
+        "What do existing and emerging tools catch, and what do they miss?",
+        "Is there a small, buildable tool that catches a meaningful share with little noise?"
+      ],
+      "findings": [
+        {
+          "id": "f1",
+          "statement": "Breaking minor and patch releases cost users real time. Reports describe whole codebases breaking after a React minor update, release pipelines broken for a weekend, and maintainers forced to pin versions. Microsoft built API Extractor partly because users 'keep reporting that their code won't compile after a supposedly minor update'.",
+          "strength": "Moderate. Several independent reports plus Microsoft's own stated motivation. Individual cases, not a measured rate.",
+          "evidenceIds": [
+            "ev-sv-02",
+            "ev-sv-03",
+            "ev-sv-04",
+            "ev-sv-06"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f2",
+          "statement": "The tool model works elsewhere: Rust's cargo-semver-checks (about 1,700 stars, with a GitHub Action) checks releases for semver violations, though it documents breaks it can't catch.",
+          "strength": "Strong as evidence that a tool exists and is adopted in Rust. It doesn't show JS maintainers would adopt one.",
+          "evidenceIds": [
+            "ev-sv-07",
+            "ev-sv-08"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f3",
+          "statement": "The TypeScript type-surface checker niche is filling up: Clerk's break-check (company-backed), ts-semver-checks and semver-check all appeared in 2026, alongside Microsoft's API Extractor.",
+          "strength": "Strong for existence. All are very new, with little adoption yet.",
+          "evidenceIds": [
+            "ev-sv-09",
+            "ev-sv-10"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f4",
+          "statement": "Type checkers miss many real breaks. None of the four complaints examined was a type change: they were behaviour changes (React, floating-ui, node-abort-controller) and a metadata change (polished raised its required Node version in a minor release).",
+          "strength": "Weak to moderate. A small sample, but it points to a clear gap: the install and import contract in package metadata.",
+          "evidenceIds": [
+            "ev-sv-02",
+            "ev-sv-05",
+            "ev-sv-11"
+          ],
+          "epistemic": "inference"
+        },
+        {
+          "id": "f5",
+          "statement": "Metadata-level contract breaks are common: by the linter's rules, 20% of 400 popular npm packages shipped at least one in a minor or patch release over two years. But as specified the rules are too noisy: only 8 of 20 audited flags were genuine breaks. Most of the rest were debatable engine-range changes dropping end-of-life Node versions.",
+          "strength": "Moderate. A pre-registered measurement plus a hand audit of 20 flags against criteria fixed beforehand (one reviewer).",
+          "evidenceIds": [
+            "ev-sv-12",
+            "ev-sv-13"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f6",
+          "statement": "The structural rules are the useful core. Removed export paths, entry fields and CLI commands, and tightened peers, were genuine in 7 of 9 audited cases, but they fire for only about 10% of popular packages over two years. Many flags come from a few fast-moving projects (@tanstack, better-auth, @typescript-eslint).",
+          "strength": "Weak to moderate. Exploratory, post hoc, small n.",
+          "evidenceIds": [
+            "ev-sv-14"
+          ],
+          "epistemic": "inference"
+        }
+      ],
+      "uncertainties": [
+        "How often metadata-level breaks actually happen in popular packages (being measured).",
+        "Whether maintainers consider deliberate engine bumps in minor releases acceptable.",
+        "The four complaints were chosen by GitHub search ranking, not sampled randomly."
+      ],
+      "conclusion": {
+        "belief": "Accidental breaking releases are real, and a cheap metadata check can catch a share of them that type checkers miss: removed export paths, entry points and CLI commands, and tightened peers. But it's a modest benefit (about 1 in 10 popular packages over two years). As first specified, engine-range rules make it too noisy. The practical value is a small, precise rule set, best contributed as a 'compare with last release' mode to an existing packaging linter such as publint. That would be useful open-source work, but not a standalone product.",
+        "confidence": "medium",
+        "confidenceReason": "A pre-registered measurement over 12,240 release pairs plus an audited sample. Not high: the audit had one reviewer and 20 flags, and the narrowed rule set's precision comes from only 9 audited cases.",
+        "unknowns": [
+          "The narrowed rule set's precision on a fresh sample",
+          "Whether publint's maintainers would want this feature",
+          "How often flagged breaks actually hurt users (issues filed after release)"
+        ],
+        "continueInvestigation": true,
+        "continueReason": "One cheap step remains: validate the narrowed rule set on a fresh, independently drawn audit sample before proposing it upstream."
+      },
+      "nextSteps": [
+        {
+          "text": "Validate the structural-only rule set on a fresh random sample of 20 flags not in the first audit (pre-registered: ≥ 70% genuine).",
+          "kind": "experiment"
+        },
+        {
+          "text": "If it holds, prototype a 'compare with last release' check, and ask the owner whether VENTURE may propose it to the publint maintainers. That means contacting people, so it needs authorization.",
+          "kind": "owner-action",
+          "issue": 10
+        }
+      ],
+      "updatedAt": "2026-11-04T14:05:22Z",
+      "updatedInRun": "run-20261104-agent-release-breaks-2",
+      "author": "research director (Claude Code session)",
+      "provenance": "real"
+    }
+  ]
+}

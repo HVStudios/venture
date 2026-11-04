@@ -222,6 +222,25 @@
           "ev-sv-11"
         ],
         "epistemic": "inference"
+      },
+      {
+        "id": "f5",
+        "statement": "Metadata-level contract breaks are common: by the linter's rules, 20% of 400 popular npm packages shipped at least one in a minor or patch release over two years. But as specified the rules are too noisy: only 8 of 20 audited flags were genuine breaks. Most of the rest were debatable engine-range changes dropping end-of-life Node versions.",
+        "strength": "Moderate. A pre-registered measurement plus a hand audit of 20 flags against criteria fixed beforehand (one reviewer).",
+        "evidenceIds": [
+          "ev-sv-12",
+          "ev-sv-13"
+        ],
+        "epistemic": "fact"
+      },
+      {
+        "id": "f6",
+        "statement": "The structural rules are the useful core. Removed export paths, entry fields and CLI commands, and tightened peers, were genuine in 7 of 9 audited cases, but they fire for only about 10% of popular packages over two years. Many flags come from a few fast-moving projects (@tanstack, better-auth, @typescript-eslint).",
+        "strength": "Weak to moderate. Exploratory, post hoc, small n.",
+        "evidenceIds": [
+          "ev-sv-14"
+        ],
+        "epistemic": "inference"
       }
     ],
     "uncertainties": [
@@ -230,30 +249,30 @@
       "The four complaints were chosen by GitHub search ranking, not sampled randomly."
     ],
     "conclusion": {
-      "belief": "Accidental breaking releases are a real, recurring cost, and the tool model is proven in Rust. But the obvious product, a TypeScript type-surface checker, is already being built by several projects including a company-backed one. The more promising gap is a release-contract linter that checks what type checkers ignore: engine requirements, entry points and exports, module format, peer dependencies and CLI commands.",
-      "confidence": "low",
-      "confidenceReason": "Based on one research session: qualitative evidence and a small sample of complaints. How often metadata breaks happen hasn't been measured yet.",
+      "belief": "Accidental breaking releases are real, and a cheap metadata check can catch a share of them that type checkers miss: removed export paths, entry points and CLI commands, and tightened peers. But it's a modest benefit (about 1 in 10 popular packages over two years). As first specified, engine-range rules make it too noisy. The practical value is a small, precise rule set, best contributed as a 'compare with last release' mode to an existing packaging linter such as publint. That would be useful open-source work, but not a standalone product.",
+      "confidence": "medium",
+      "confidenceReason": "A pre-registered measurement over 12,240 release pairs plus an audited sample. Not high: the audit had one reviewer and 20 flags, and the narrowed rule set's precision comes from only 9 audited cases.",
       "unknowns": [
-        "How common metadata-level breaks are",
-        "How many flags would be genuine",
-        "Whether maintainers would adopt another release check"
+        "The narrowed rule set's precision on a fresh sample",
+        "Whether publint's maintainers would want this feature",
+        "How often flagged breaks actually hurt users (issues filed after release)"
       ],
       "continueInvestigation": true,
-      "continueReason": "A $0 measurement on npm registry data can show whether the linter would catch enough to be worth building."
+      "continueReason": "One cheap step remains: validate the narrowed rule set on a fresh, independently drawn audit sample before proposing it upstream."
     },
     "nextSteps": [
       {
-        "text": "Measure how often 400 popular npm packages shipped metadata-level breaking changes in minor or patch releases over two years, and audit 20 flags by hand.",
-        "kind": "experiment",
-        "experimentId": "exp-npm-metadata-breaks"
+        "text": "Validate the structural-only rule set on a fresh random sample of 20 flags not in the first audit (pre-registered: ≥ 70% genuine).",
+        "kind": "experiment"
       },
       {
-        "text": "If the measurement supports it, build the release-contract linter as an open-source CLI and GitHub Action.",
-        "kind": "decision"
+        "text": "If it holds, prototype a 'compare with last release' check, and ask the owner whether VENTURE may propose it to the publint maintainers. That means contacting people, so it needs authorization.",
+        "kind": "owner-action",
+        "issue": 10
       }
     ],
-    "updatedAt": "2026-11-04T13:57:28Z",
-    "updatedInRun": "run-20261104-agent-release-breaks-1",
+    "updatedAt": "2026-11-04T14:05:22Z",
+    "updatedInRun": "run-20261104-agent-release-breaks-2",
     "author": "research director (Claude Code session)",
     "provenance": "real"
   },

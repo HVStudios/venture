@@ -202,7 +202,17 @@
       "ifFailure": "Reject or narrow the idea to the rules that proved common and precise."
     },
     "executionMode": "automatable",
-    "status": "approved",
+    "status": "completed",
+    "outcome": {
+      "recordedAt": "2026-11-04T14:05:01.076Z",
+      "result": "refuted",
+      "summary": "Pre-registered verdict: refuted. The frequency criterion was met exactly (80 of 400 popular packages, 20.0%), but only 8 of 20 audited flags were genuine breaks (40%, below the 50% failure line). Most noise came from engine-range rules dropping end-of-life Node versions. Exploratory: structural rules alone were genuine in 7 of 9 audited cases, but flag only about 10% of packages.",
+      "evidenceIds": [
+        "ev-sv-12",
+        "ev-sv-13",
+        "ev-sv-14"
+      ]
+    },
     "createdInRun": "run-20261104-agent-release-breaks-1",
     "provenance": "real"
   },
