@@ -1,0 +1,2019 @@
+{
+  "experiment": "exp-npm-metadata-breaks",
+  "executedAt": "2026-11-04T14:01:32.377Z",
+  "window": {
+    "from": "2024-11-04T00:00:00Z",
+    "to": "2026-11-04T00:00:00Z"
+  },
+  "packagesRead": 400,
+  "releasePairs": 12240,
+  "flaggedPairs": 137,
+  "packagesWithFlag": 80,
+  "packageShare": 0.2,
+  "perRule": {
+    "engines-tightened": 68,
+    "exports-map-added": 11,
+    "switched-to-esm": 9,
+    "peer-added": 25,
+    "exports-subpath-removed": 25,
+    "bin-removed": 8,
+    "peer-tightened": 9,
+    "entry-removed": 7
+  },
+  "auditSample": [
+    {
+      "id": "@inquirer/confirm@6.1.0->6.1.1",
+      "pkg": "@inquirer/confirm",
+      "from": "6.1.0",
+      "to": "6.1.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@eslint/js@10.0.0->10.0.1",
+      "pkg": "@eslint/js",
+      "from": "10.0.0",
+      "to": "10.0.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node ^18.18.0 || ^20.9.0 || >=21.1.0 → ^20.19.0 || ^22.13.0 || >=24"
+        }
+      ]
+    },
+    {
+      "id": "@typescript-eslint/typescript-estree@8.17.0->8.18.0",
+      "pkg": "@typescript-eslint/typescript-estree",
+      "from": "8.17.0",
+      "to": "8.18.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer typescript@>=4.8.4 <5.8.0"
+        }
+      ]
+    },
+    {
+      "id": "@hookform/resolvers@5.7.1->5.8.0",
+      "pkg": "@hookform/resolvers",
+      "from": "5.7.1",
+      "to": "5.8.0",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer vest >=3.0.0 → >=6.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/router-generator@1.161.3->1.161.4",
+      "pkg": "@tanstack/router-generator",
+      "from": "1.161.3",
+      "to": "1.161.4",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=20.19"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/core@11.2.0->11.2.1",
+      "pkg": "@inquirer/core",
+      "from": "11.2.0",
+      "to": "11.2.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "better-auth@1.6.30->1.7.0",
+      "pkg": "better-auth",
+      "from": "1.6.30",
+      "to": "1.7.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./plugins/mcp/client, ./plugins/oidc-provider, ./plugins/mcp/client/adapters"
+        }
+      ]
+    },
+    {
+      "id": "better-result@2.7.0->2.8.0",
+      "pkg": "better-result",
+      "from": "2.7.0",
+      "to": "2.8.0",
+      "rules": [
+        {
+          "rule": "bin-removed",
+          "detail": "bin removed: better-result"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/react-start-server@1.131.50->1.132.0",
+      "pkg": "@tanstack/react-start-server",
+      "from": "1.131.50",
+      "to": "1.132.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=22.12.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/external-editor@3.0.1->3.0.2",
+      "pkg": "@inquirer/external-editor",
+      "from": "3.0.1",
+      "to": "3.0.2",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@better-auth/telemetry@1.3.34->1.4.0",
+      "pkg": "@better-auth/telemetry",
+      "from": "1.3.34",
+      "to": "1.4.0",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was ./dist/index.d.ts)"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @better-auth/core@1.4.0"
+        }
+      ]
+    },
+    {
+      "id": "@better-auth/core@1.4.22->1.5.6",
+      "pkg": "@better-auth/core",
+      "from": "1.4.22",
+      "to": "1.5.6",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./utils"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @opentelemetry/api@^1.9.0"
+        }
+      ]
+    },
+    {
+      "id": "@supabase/supabase-js@2.78.0->2.79.0",
+      "pkg": "@supabase/supabase-js",
+      "from": "2.78.0",
+      "to": "2.79.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >=20.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@supabase/realtime-js@2.78.0->2.79.0",
+      "pkg": "@supabase/realtime-js",
+      "from": "2.78.0",
+      "to": "2.79.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >=20.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@better-auth/core@1.4.20->1.5.0",
+      "pkg": "@better-auth/core",
+      "from": "1.4.20",
+      "to": "1.5.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./utils"
+        }
+      ]
+    },
+    {
+      "id": "oxlint@1.36.0->1.37.0",
+      "pkg": "oxlint",
+      "from": "1.36.0",
+      "to": "1.37.0",
+      "rules": [
+        {
+          "rule": "bin-removed",
+          "detail": "bin removed: oxc_language_server"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/editor@5.2.0->5.2.1",
+      "pkg": "@inquirer/editor",
+      "from": "5.2.0",
+      "to": "5.2.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/rawlist@5.3.0->5.3.1",
+      "pkg": "@inquirer/rawlist",
+      "from": "5.3.0",
+      "to": "5.3.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/router-plugin@1.167.32->1.167.33",
+      "pkg": "@tanstack/router-plugin",
+      "from": "1.167.32",
+      "to": "1.167.33",
+      "rules": [
+        {
+          "rule": "bin-removed",
+          "detail": "bin removed: intent"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/prompts@8.5.0->8.5.1",
+      "pkg": "@inquirer/prompts",
+      "from": "8.5.0",
+      "to": "8.5.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    }
+  ],
+  "flags": [
+    {
+      "id": "gopd@1.0.1->1.1.0",
+      "pkg": "gopd",
+      "from": "1.0.1",
+      "to": "1.1.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >= 0.4"
+        }
+      ]
+    },
+    {
+      "id": "fdir@6.4.6->6.5.0",
+      "pkg": "fdir",
+      "from": "6.4.6",
+      "to": "6.5.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >=12.0.0"
+        },
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        },
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "@typescript-eslint/typescript-estree@8.17.0->8.18.0",
+      "pkg": "@typescript-eslint/typescript-estree",
+      "from": "8.17.0",
+      "to": "8.18.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer typescript@>=4.8.4 <5.8.0"
+        }
+      ]
+    },
+    {
+      "id": "@typescript-eslint/parser@8.17.0->8.18.0",
+      "pkg": "@typescript-eslint/parser",
+      "from": "8.17.0",
+      "to": "8.18.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer typescript@>=4.8.4 <5.8.0"
+        }
+      ]
+    },
+    {
+      "id": "which-boxed-primitive@1.0.2->1.1.0",
+      "pkg": "which-boxed-primitive",
+      "from": "1.0.2",
+      "to": "1.1.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >= 0.4"
+        }
+      ]
+    },
+    {
+      "id": "@eslint/js@10.0.0->10.0.1",
+      "pkg": "@eslint/js",
+      "from": "10.0.0",
+      "to": "10.0.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node ^18.18.0 || ^20.9.0 || >=21.1.0 → ^20.19.0 || ^22.13.0 || >=24"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/type@4.0.6->4.0.7",
+      "pkg": "@inquirer/type",
+      "from": "4.0.6",
+      "to": "4.0.7",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/core@11.2.0->11.2.1",
+      "pkg": "@inquirer/core",
+      "from": "11.2.0",
+      "to": "11.2.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "typescript-eslint@8.14.0->8.15.0",
+      "pkg": "typescript-eslint",
+      "from": "8.14.0",
+      "to": "8.15.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer eslint@^8.57.0 || ^9.0.0"
+        }
+      ]
+    },
+    {
+      "id": "typescript-eslint@8.17.0->8.18.0",
+      "pkg": "typescript-eslint",
+      "from": "8.17.0",
+      "to": "8.18.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer typescript@>=4.8.4 <5.8.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/figures@2.0.6->2.0.7",
+      "pkg": "@inquirer/figures",
+      "from": "2.0.6",
+      "to": "2.0.7",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "string.prototype.trimend@1.0.8->1.0.9",
+      "pkg": "string.prototype.trimend",
+      "from": "1.0.8",
+      "to": "1.0.9",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >= 0.4"
+        }
+      ]
+    },
+    {
+      "id": "unbox-primitive@1.0.2->1.1.0",
+      "pkg": "unbox-primitive",
+      "from": "1.0.2",
+      "to": "1.1.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >= 0.4"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/select@5.2.0->5.2.1",
+      "pkg": "@inquirer/select",
+      "from": "5.2.0",
+      "to": "5.2.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "inquirer@14.0.0->14.0.1",
+      "pkg": "inquirer",
+      "from": "14.0.0",
+      "to": "14.0.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/expand@5.1.0->5.1.1",
+      "pkg": "@inquirer/expand",
+      "from": "5.1.0",
+      "to": "5.1.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/external-editor@3.0.1->3.0.2",
+      "pkg": "@inquirer/external-editor",
+      "from": "3.0.1",
+      "to": "3.0.2",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/ansi@2.0.6->2.0.7",
+      "pkg": "@inquirer/ansi",
+      "from": "2.0.6",
+      "to": "2.0.7",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/confirm@6.1.0->6.1.1",
+      "pkg": "@inquirer/confirm",
+      "from": "6.1.0",
+      "to": "6.1.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/prompts@8.5.0->8.5.1",
+      "pkg": "@inquirer/prompts",
+      "from": "8.5.0",
+      "to": "8.5.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/checkbox@5.2.0->5.2.1",
+      "pkg": "@inquirer/checkbox",
+      "from": "5.2.0",
+      "to": "5.2.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@supabase/storage-js@2.78.0->2.79.0",
+      "pkg": "@supabase/storage-js",
+      "from": "2.78.0",
+      "to": "2.79.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >=20.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@supabase/storage-js@2.87.3->2.88.0",
+      "pkg": "@supabase/storage-js",
+      "from": "2.87.3",
+      "to": "2.88.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "@supabase/storage-js@2.109.0->2.110.0",
+      "pkg": "@supabase/storage-js",
+      "from": "2.109.0",
+      "to": "2.110.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=20.0.0 → >=22.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/password@5.1.0->5.1.1",
+      "pkg": "@inquirer/password",
+      "from": "5.1.0",
+      "to": "5.1.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/search@4.2.0->4.2.1",
+      "pkg": "@inquirer/search",
+      "from": "4.2.0",
+      "to": "4.2.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/rawlist@5.3.0->5.3.1",
+      "pkg": "@inquirer/rawlist",
+      "from": "5.3.0",
+      "to": "5.3.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/number@4.1.0->4.1.1",
+      "pkg": "@inquirer/number",
+      "from": "4.1.0",
+      "to": "4.1.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/input@5.1.0->5.1.1",
+      "pkg": "@inquirer/input",
+      "from": "5.1.0",
+      "to": "5.1.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "@supabase/realtime-js@2.11.7->2.11.8",
+      "pkg": "@supabase/realtime-js",
+      "from": "2.11.7",
+      "to": "2.11.8",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "@supabase/realtime-js@2.78.0->2.79.0",
+      "pkg": "@supabase/realtime-js",
+      "from": "2.78.0",
+      "to": "2.79.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >=20.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@supabase/realtime-js@2.109.0->2.110.0",
+      "pkg": "@supabase/realtime-js",
+      "from": "2.109.0",
+      "to": "2.110.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=20.0.0 → >=22.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@supabase/supabase-js@2.78.0->2.79.0",
+      "pkg": "@supabase/supabase-js",
+      "from": "2.78.0",
+      "to": "2.79.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >=20.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@supabase/supabase-js@2.86.0->2.86.1",
+      "pkg": "@supabase/supabase-js",
+      "from": "2.86.0",
+      "to": "2.86.1",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "@supabase/supabase-js@2.95.1->2.95.2",
+      "pkg": "@supabase/supabase-js",
+      "from": "2.95.1",
+      "to": "2.95.2",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./cors"
+        }
+      ]
+    },
+    {
+      "id": "@supabase/supabase-js@2.109.0->2.110.0",
+      "pkg": "@supabase/supabase-js",
+      "from": "2.109.0",
+      "to": "2.110.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=20.0.0 → >=22.0.0"
+        }
+      ]
+    },
+    {
+      "id": "oxlint@1.16.0->1.17.0",
+      "pkg": "oxlint",
+      "from": "1.16.0",
+      "to": "1.17.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=8.* → ^20.19.0 || >=22.12.0"
+        },
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: commonjs → module"
+        }
+      ]
+    },
+    {
+      "id": "oxlint@1.36.0->1.37.0",
+      "pkg": "oxlint",
+      "from": "1.36.0",
+      "to": "1.37.0",
+      "rules": [
+        {
+          "rule": "bin-removed",
+          "detail": "bin removed: oxc_language_server"
+        }
+      ]
+    },
+    {
+      "id": "oxlint@1.42.0->1.43.0",
+      "pkg": "oxlint",
+      "from": "1.42.0",
+      "to": "1.43.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "oxlint@1.43.0->1.45.0",
+      "pkg": "oxlint",
+      "from": "1.43.0",
+      "to": "1.45.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./plugins"
+        }
+      ]
+    },
+    {
+      "id": "oxlint@1.74.0->1.75.0",
+      "pkg": "oxlint",
+      "from": "1.74.0",
+      "to": "1.75.0",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer oxlint-tsgolint >=0.24.0 → >=7.0.2001"
+        }
+      ]
+    },
+    {
+      "id": "@inquirer/editor@5.2.0->5.2.1",
+      "pkg": "@inquirer/editor",
+      "from": "5.2.0",
+      "to": "5.2.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0 → >=23.5.0 || ^22.13.0 || ^20.17.0"
+        }
+      ]
+    },
+    {
+      "id": "knip@5.41.1->5.42.0",
+      "pkg": "knip",
+      "from": "5.41.1",
+      "to": "5.42.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=18.6.0 → >=18.18.0"
+        }
+      ]
+    },
+    {
+      "id": "knip@5.74.0->5.75.0",
+      "pkg": "knip",
+      "from": "5.74.0",
+      "to": "5.75.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        },
+        {
+          "rule": "entry-removed",
+          "detail": "main field removed (was ./dist/index.js)"
+        }
+      ]
+    },
+    {
+      "id": "@azure/abort-controller@2.1.2->2.2.0",
+      "pkg": "@azure/abort-controller",
+      "from": "2.1.2",
+      "to": "2.2.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=18.0.0 → >=22.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@azure/core-lro@3.2.0->3.3.0",
+      "pkg": "@azure/core-lro",
+      "from": "3.2.0",
+      "to": "3.3.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=18.0.0 → >=20.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@azure/core-lro@3.3.1->3.4.0",
+      "pkg": "@azure/core-lro",
+      "from": "3.3.1",
+      "to": "3.4.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=20.0.0 → >=22.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@azure/logger@1.2.0->1.3.0",
+      "pkg": "@azure/logger",
+      "from": "1.2.0",
+      "to": "1.3.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=18.0.0 → >=20.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@azure/logger@1.3.0->1.4.0",
+      "pkg": "@azure/logger",
+      "from": "1.3.0",
+      "to": "1.4.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=20.0.0 → >=22.0.0"
+        }
+      ]
+    },
+    {
+      "id": "recma-jsx@1.0.0->1.0.1",
+      "pkg": "recma-jsx",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer acorn@^6.0.0 || ^7.0.0 || ^8.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@azure/storage-blob@12.27.0->12.28.0",
+      "pkg": "@azure/storage-blob",
+      "from": "12.27.0",
+      "to": "12.28.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=18.0.0 → >=20.0.0"
+        },
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        },
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "@azure/storage-blob@12.32.0->12.33.0",
+      "pkg": "@azure/storage-blob",
+      "from": "12.32.0",
+      "to": "12.33.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=20.0.0 → >=22.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@appium/types@1.5.0->1.5.1",
+      "pkg": "@appium/types",
+      "from": "1.5.0",
+      "to": "1.5.1",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @appium/logger@^2.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@fortawesome/react-fontawesome@3.0.0->3.0.1",
+      "pkg": "@fortawesome/react-fontawesome",
+      "from": "3.0.0",
+      "to": "3.0.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >=20"
+        }
+      ]
+    },
+    {
+      "id": "inversify@6.1.1->6.1.2",
+      "pkg": "inversify",
+      "from": "6.1.1",
+      "to": "6.1.2",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "inversify@6.1.4->6.1.5",
+      "pkg": "inversify",
+      "from": "6.1.4",
+      "to": "6.1.5",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer reflect-metadata@~0.2.2"
+        }
+      ]
+    },
+    {
+      "id": "e2b@2.2.1->2.2.2",
+      "pkg": "e2b",
+      "from": "2.2.1",
+      "to": "2.2.2",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=18 → >=20"
+        }
+      ]
+    },
+    {
+      "id": "e2b@2.19.4->2.19.5",
+      "pkg": "e2b",
+      "from": "2.19.4",
+      "to": "2.19.5",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=20 → >=20.18.1"
+        }
+      ]
+    },
+    {
+      "id": "e2b@2.55.0->2.56.0",
+      "pkg": "e2b",
+      "from": "2.55.0",
+      "to": "2.56.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=20.18.1 <21 || >=22 → >=22.19.0"
+        }
+      ]
+    },
+    {
+      "id": "zod@3.24.4->3.25.0",
+      "pkg": "zod",
+      "from": "3.24.4",
+      "to": "3.25.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./locales/*"
+        },
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "zod@3.25.16->3.25.17",
+      "pkg": "zod",
+      "from": "3.25.16",
+      "to": "3.25.17",
+      "rules": [
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "csstype@3.1.3->3.2.0",
+      "pkg": "csstype",
+      "from": "3.1.3",
+      "to": "3.2.0",
+      "rules": [
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "@typescript-eslint/utils@8.17.0->8.18.0",
+      "pkg": "@typescript-eslint/utils",
+      "from": "8.17.0",
+      "to": "8.18.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer typescript@>=4.8.4 <5.8.0"
+        }
+      ]
+    },
+    {
+      "id": "@typescript-eslint/type-utils@8.14.0->8.15.0",
+      "pkg": "@typescript-eslint/type-utils",
+      "from": "8.14.0",
+      "to": "8.15.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer eslint@^8.57.0 || ^9.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@typescript-eslint/type-utils@8.17.0->8.18.0",
+      "pkg": "@typescript-eslint/type-utils",
+      "from": "8.17.0",
+      "to": "8.18.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer typescript@>=4.8.4 <5.8.0"
+        }
+      ]
+    },
+    {
+      "id": "@typescript-eslint/project-service@8.33.0->8.33.1",
+      "pkg": "@typescript-eslint/project-service",
+      "from": "8.33.0",
+      "to": "8.33.1",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer typescript@>=4.8.4 <5.9.0"
+        }
+      ]
+    },
+    {
+      "id": "@typescript-eslint/eslint-plugin@8.17.0->8.18.0",
+      "pkg": "@typescript-eslint/eslint-plugin",
+      "from": "8.17.0",
+      "to": "8.18.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer typescript@>=4.8.4 <5.8.0"
+        }
+      ]
+    },
+    {
+      "id": "@typescript-eslint/eslint-plugin@8.29.1->8.30.0",
+      "pkg": "@typescript-eslint/eslint-plugin",
+      "from": "8.29.1",
+      "to": "8.30.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./use-at-your-own-risk/eslint-recommended-raw"
+        }
+      ]
+    },
+    {
+      "id": "@typescript-eslint/eslint-plugin@8.67.0->8.68.0",
+      "pkg": "@typescript-eslint/eslint-plugin",
+      "from": "8.67.0",
+      "to": "8.68.0",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was ./index.d.ts)"
+        }
+      ]
+    },
+    {
+      "id": "ts-dedent@2.2.0->2.3.0",
+      "pkg": "ts-dedent",
+      "from": "2.2.0",
+      "to": "2.3.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "deepmerge-ts@8.0.1->8.0.2",
+      "pkg": "deepmerge-ts",
+      "from": "8.0.1",
+      "to": "8.0.2",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=16.0.0 → >=16.9.0"
+        }
+      ]
+    },
+    {
+      "id": "@hookform/resolvers@5.7.0->5.7.1",
+      "pkg": "@hookform/resolvers",
+      "from": "5.7.0",
+      "to": "5.7.1",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer ata-validator ^0.7.0 → ^1.2.0"
+        }
+      ]
+    },
+    {
+      "id": "@hookform/resolvers@5.7.1->5.8.0",
+      "pkg": "@hookform/resolvers",
+      "from": "5.7.1",
+      "to": "5.8.0",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer vest >=3.0.0 → >=6.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@bufbuild/protobuf@2.12.1->2.13.0",
+      "pkg": "@bufbuild/protobuf",
+      "from": "2.12.1",
+      "to": "2.13.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./package.json"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/router-utils@1.158.0->1.161.4",
+      "pkg": "@tanstack/router-utils",
+      "from": "1.158.0",
+      "to": "1.161.4",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=20.19"
+        }
+      ]
+    },
+    {
+      "id": "fork-ts-checker-webpack-plugin@9.0.3->9.1.0",
+      "pkg": "fork-ts-checker-webpack-plugin",
+      "from": "9.0.3",
+      "to": "9.1.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12.13.0 → >=14.21.3"
+        }
+      ]
+    },
+    {
+      "id": "@peculiar/utils@3.0.0->3.0.1",
+      "pkg": "@peculiar/utils",
+      "from": "3.0.0",
+      "to": "3.0.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >=16.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/virtual-file-routes@1.154.7->1.161.4",
+      "pkg": "@tanstack/virtual-file-routes",
+      "from": "1.154.7",
+      "to": "1.161.4",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=20.19"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/virtual-file-routes@1.161.7->1.162.0",
+      "pkg": "@tanstack/virtual-file-routes",
+      "from": "1.161.7",
+      "to": "1.162.0",
+      "rules": [
+        {
+          "rule": "bin-removed",
+          "detail": "bin removed: intent"
+        }
+      ]
+    },
+    {
+      "id": "wrangler@4.48.0->4.49.0",
+      "pkg": "wrangler",
+      "from": "4.48.0",
+      "to": "4.49.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=18.0.0 → >=20.0.0"
+        }
+      ]
+    },
+    {
+      "id": "wrangler@4.76.0->4.77.0",
+      "pkg": "wrangler",
+      "from": "4.76.0",
+      "to": "4.77.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=20.0.0 → >=20.3.0"
+        }
+      ]
+    },
+    {
+      "id": "wrangler@4.86.0->4.87.0",
+      "pkg": "wrangler",
+      "from": "4.86.0",
+      "to": "4.87.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=20.3.0 → >=22.0.0"
+        }
+      ]
+    },
+    {
+      "id": "wrangler@4.99.0->4.100.0",
+      "pkg": "wrangler",
+      "from": "4.99.0",
+      "to": "4.100.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "wrangler@4.107.1->4.108.0",
+      "pkg": "wrangler",
+      "from": "4.107.1",
+      "to": "4.108.0",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer @cloudflare/workers-types ^4.20260702.1 → ^5.20260706.1"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/router-plugin@1.161.3->1.161.4",
+      "pkg": "@tanstack/router-plugin",
+      "from": "1.161.3",
+      "to": "1.161.4",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=20.19"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/router-plugin@1.167.32->1.167.33",
+      "pkg": "@tanstack/router-plugin",
+      "from": "1.167.32",
+      "to": "1.167.33",
+      "rules": [
+        {
+          "rule": "bin-removed",
+          "detail": "bin removed: intent"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/start-storage-context@1.131.50->1.132.0",
+      "pkg": "@tanstack/start-storage-context",
+      "from": "1.131.50",
+      "to": "1.132.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=22.12.0"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/react-start-client@1.131.50->1.132.0",
+      "pkg": "@tanstack/react-start-client",
+      "from": "1.131.50",
+      "to": "1.132.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=22.12.0"
+        }
+      ]
+    },
+    {
+      "id": "@better-auth/core@1.3.27->1.3.28",
+      "pkg": "@better-auth/core",
+      "from": "1.3.27",
+      "to": "1.3.28",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer jose@^6.1.0"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer kysely@^0.28.5"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer nanostores@^1.0.1"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer better-call@1.0.19"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer better-sqlite3@^12.4.1"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @better-auth/utils@0.3.0"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @better-fetch/fetch@1.1.18"
+        }
+      ]
+    },
+    {
+      "id": "@better-auth/core@1.3.34->1.4.0",
+      "pkg": "@better-auth/core",
+      "from": "1.3.34",
+      "to": "1.4.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./middleware"
+        },
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was ./dist/index.d.ts)"
+        }
+      ]
+    },
+    {
+      "id": "@better-auth/core@1.4.20->1.5.0",
+      "pkg": "@better-auth/core",
+      "from": "1.4.20",
+      "to": "1.5.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./utils"
+        }
+      ]
+    },
+    {
+      "id": "@better-auth/core@1.4.21->1.5.1",
+      "pkg": "@better-auth/core",
+      "from": "1.4.21",
+      "to": "1.5.1",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./utils"
+        }
+      ]
+    },
+    {
+      "id": "@better-auth/core@1.4.22->1.5.6",
+      "pkg": "@better-auth/core",
+      "from": "1.4.22",
+      "to": "1.5.6",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./utils"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @opentelemetry/api@^1.9.0"
+        }
+      ]
+    },
+    {
+      "id": "typebox@1.0.12->1.0.13",
+      "pkg": "typebox",
+      "from": "1.0.12",
+      "to": "1.0.13",
+      "rules": [
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "typebox@1.0.33->1.0.34",
+      "pkg": "typebox",
+      "from": "1.0.33",
+      "to": "1.0.34",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "main field removed (was ./build/cjs/index.js)"
+        },
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: commonjs → module"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/router-core@1.161.3->1.161.4",
+      "pkg": "@tanstack/router-core",
+      "from": "1.161.3",
+      "to": "1.161.4",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=20.19"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/router-core@1.169.1->1.169.2",
+      "pkg": "@tanstack/router-core",
+      "from": "1.169.1",
+      "to": "1.169.2",
+      "rules": [
+        {
+          "rule": "bin-removed",
+          "detail": "bin removed: intent"
+        }
+      ]
+    },
+    {
+      "id": "ox@1.7.2->1.7.4",
+      "pkg": "ox",
+      "from": "1.7.2",
+      "to": "1.7.4",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./tempo/MultisigWitness, ./zod/tempo/MultisigWitness"
+        }
+      ]
+    },
+    {
+      "id": "ox@1.8.6->1.8.7",
+      "pkg": "ox",
+      "from": "1.8.6",
+      "to": "1.8.7",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./tempo/MultisigConfig, ./tempo/MultisigOperation, ./tempo/MultisigSimulation, ./zod/tempo/MultisigConfig, ./zod/tempo/MultisigOperation"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/react-router@1.161.3->1.161.4",
+      "pkg": "@tanstack/react-router",
+      "from": "1.161.3",
+      "to": "1.161.4",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=20.19"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/react-router@1.170.11->1.170.12",
+      "pkg": "@tanstack/react-router",
+      "from": "1.170.11",
+      "to": "1.170.12",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./llms"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/start-client-core@1.131.50->1.132.0",
+      "pkg": "@tanstack/start-client-core",
+      "from": "1.131.50",
+      "to": "1.132.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=22.12.0"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/start-client-core@1.168.1->1.168.2",
+      "pkg": "@tanstack/start-client-core",
+      "from": "1.168.1",
+      "to": "1.168.2",
+      "rules": [
+        {
+          "rule": "bin-removed",
+          "detail": "bin removed: intent"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/start-server-core@1.131.50->1.132.0",
+      "pkg": "@tanstack/start-server-core",
+      "from": "1.131.50",
+      "to": "1.132.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=22.12.0"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/start-server-core@1.167.28->1.167.29",
+      "pkg": "@tanstack/start-server-core",
+      "from": "1.167.28",
+      "to": "1.167.29",
+      "rules": [
+        {
+          "rule": "bin-removed",
+          "detail": "bin removed: intent"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/history@1.154.14->1.161.4",
+      "pkg": "@tanstack/history",
+      "from": "1.154.14",
+      "to": "1.161.4",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=20.19"
+        }
+      ]
+    },
+    {
+      "id": "better-result@2.7.0->2.8.0",
+      "pkg": "better-result",
+      "from": "2.7.0",
+      "to": "2.8.0",
+      "rules": [
+        {
+          "rule": "bin-removed",
+          "detail": "bin removed: better-result"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/react-start-server@1.131.50->1.132.0",
+      "pkg": "@tanstack/react-start-server",
+      "from": "1.131.50",
+      "to": "1.132.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=22.12.0"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/router-generator@1.161.3->1.161.4",
+      "pkg": "@tanstack/router-generator",
+      "from": "1.161.3",
+      "to": "1.161.4",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=20.19"
+        }
+      ]
+    },
+    {
+      "id": "better-auth@1.1.21->1.2.0",
+      "pkg": "better-auth",
+      "from": "1.1.21",
+      "to": "1.2.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./plugins/oidc-plugin"
+        }
+      ]
+    },
+    {
+      "id": "better-auth@1.3.4->1.3.5",
+      "pkg": "better-auth",
+      "from": "1.3.4",
+      "to": "1.3.5",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer zod@^3.25.0 || ^4.0.0"
+        }
+      ]
+    },
+    {
+      "id": "better-auth@1.3.34->1.4.0",
+      "pkg": "better-auth",
+      "from": "1.3.34",
+      "to": "1.4.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./plugins/sso, ./react-start, ./plugins/passkey"
+        },
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was ./dist/index.d.ts)"
+        }
+      ]
+    },
+    {
+      "id": "better-auth@1.4.20->1.5.0",
+      "pkg": "better-auth",
+      "from": "1.4.20",
+      "to": "1.5.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./adapters/test"
+        }
+      ]
+    },
+    {
+      "id": "better-auth@1.4.21->1.5.1",
+      "pkg": "better-auth",
+      "from": "1.4.21",
+      "to": "1.5.1",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./adapters/test"
+        }
+      ]
+    },
+    {
+      "id": "better-auth@1.4.22->1.5.6",
+      "pkg": "better-auth",
+      "from": "1.4.22",
+      "to": "1.5.6",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./adapters/test"
+        }
+      ]
+    },
+    {
+      "id": "better-auth@1.6.30->1.7.0",
+      "pkg": "better-auth",
+      "from": "1.6.30",
+      "to": "1.7.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./plugins/mcp/client, ./plugins/oidc-provider, ./plugins/mcp/client/adapters"
+        }
+      ]
+    },
+    {
+      "id": "better-auth@1.6.31->1.7.4",
+      "pkg": "better-auth",
+      "from": "1.6.31",
+      "to": "1.7.4",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./plugins/mcp/client, ./plugins/oidc-provider, ./plugins/mcp/client/adapters"
+        }
+      ]
+    },
+    {
+      "id": "better-auth@1.6.33->1.7.5",
+      "pkg": "better-auth",
+      "from": "1.6.33",
+      "to": "1.7.5",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./plugins/mcp/client, ./plugins/oidc-provider, ./plugins/mcp/client/adapters"
+        }
+      ]
+    },
+    {
+      "id": "better-auth@1.6.34->1.7.16",
+      "pkg": "better-auth",
+      "from": "1.6.34",
+      "to": "1.7.16",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./plugins/mcp/client, ./plugins/oidc-provider, ./plugins/mcp/client/adapters"
+        }
+      ]
+    },
+    {
+      "id": "remeda@2.36.0->2.37.0",
+      "pkg": "remeda",
+      "from": "2.36.0",
+      "to": "2.37.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >=18.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@better-auth/telemetry@1.3.34->1.4.0",
+      "pkg": "@better-auth/telemetry",
+      "from": "1.3.34",
+      "to": "1.4.0",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was ./dist/index.d.ts)"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @better-auth/core@1.4.0"
+        }
+      ]
+    },
+    {
+      "id": "@better-auth/telemetry@1.5.6->1.6.0",
+      "pkg": "@better-auth/telemetry",
+      "from": "1.5.6",
+      "to": "1.6.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @better-auth/utils@0.4.0"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @better-fetch/fetch@1.1.21"
+        }
+      ]
+    },
+    {
+      "id": "@microsoft/api-extractor@7.56.3->7.57.0",
+      "pkg": "@microsoft/api-extractor",
+      "from": "7.56.3",
+      "to": "7.57.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "@microsoft/api-extractor@7.58.12->7.58.13",
+      "pkg": "@microsoft/api-extractor",
+      "from": "7.58.12",
+      "to": "7.58.13",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >=20.9.0"
+        }
+      ]
+    },
+    {
+      "id": "@azure/keyvault-common@2.0.0->2.0.1",
+      "pkg": "@azure/keyvault-common",
+      "from": "2.0.0",
+      "to": "2.0.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=18.0.0 → >=20.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@azure/keyvault-common@2.1.0->2.1.1",
+      "pkg": "@azure/keyvault-common",
+      "from": "2.1.0",
+      "to": "2.1.1",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=20.0.0 → >=22.0.0"
+        }
+      ]
+    },
+    {
+      "id": "viem@2.55.19->2.56.0",
+      "pkg": "viem",
+      "from": "2.55.19",
+      "to": "2.56.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./tempo/zones"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/start-plugin-core@1.131.50->1.132.0",
+      "pkg": "@tanstack/start-plugin-core",
+      "from": "1.131.50",
+      "to": "1.132.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=22.12.0"
+        },
+        {
+          "rule": "entry-removed",
+          "detail": "main field removed (was dist/cjs/index.cjs)"
+        },
+        {
+          "rule": "peer-tightened",
+          "detail": "peer vite >=6.0.0 → >=7.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/start-plugin-core@1.167.32->1.167.33",
+      "pkg": "@tanstack/start-plugin-core",
+      "from": "1.167.32",
+      "to": "1.167.33",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./vite/types"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/start-plugin-core@1.171.50->1.171.51",
+      "pkg": "@tanstack/start-plugin-core",
+      "from": "1.171.50",
+      "to": "1.171.51",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer vite >=7.0.0 → >=8.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/react-start@1.120.20->1.121.0",
+      "pkg": "@tanstack/react-start",
+      "from": "1.120.20",
+      "to": "1.121.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./api, ./config, ./router-manifest, ./server-functions-ssr, ./server-functions-handler"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @vitejs/plugin-react@>=4.3.4"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/react-start@1.131.50->1.132.0",
+      "pkg": "@tanstack/react-start",
+      "from": "1.131.50",
+      "to": "1.132.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=12 → >=22.12.0"
+        },
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./server-functions-client, ./server-functions-server"
+        },
+        {
+          "rule": "peer-tightened",
+          "detail": "peer vite >=6.0.0 → >=7.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/react-start@1.167.61->1.167.62",
+      "pkg": "@tanstack/react-start",
+      "from": "1.167.61",
+      "to": "1.167.62",
+      "rules": [
+        {
+          "rule": "bin-removed",
+          "detail": "bin removed: intent"
+        }
+      ]
+    },
+    {
+      "id": "@tanstack/react-start@1.168.61->1.169.0",
+      "pkg": "@tanstack/react-start",
+      "from": "1.168.61",
+      "to": "1.169.0",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer vite >=7.0.0 → >=8.0.0"
+        }
+      ]
+    },
+    {
+      "id": "chat@4.28.1->4.29.0",
+      "pkg": "chat",
+      "from": "4.28.1",
+      "to": "4.29.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node (none) → >=20"
+        }
+      ]
+    },
+    {
+      "id": "node-cron@4.2.1->4.3.0",
+      "pkg": "node-cron",
+      "from": "4.2.1",
+      "to": "4.3.0",
+      "rules": [
+        {
+          "rule": "engines-tightened",
+          "detail": "engines.node >=6.0.0 → >=20"
+        },
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: commonjs → module"
+        }
+      ]
+    },
+    {
+      "id": "pinia@3.0.3->3.0.4",
+      "pkg": "pinia",
+      "from": "3.0.3",
+      "to": "3.0.4",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer vue ^2.7.0 || ^3.5.11 → ^3.5.11"
+        }
+      ]
+    }
+  ]
+}
