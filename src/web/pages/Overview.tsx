@@ -1,5 +1,6 @@
+import { useState, type ReactNode } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import type { Idea } from "../../core/schema";
+import type { Decision, Idea } from "../../core/schema";
 import { Empty, EvidenceLevel, Section, StatusPill } from "../components/ui";
 import { reconsiderationQueue } from "../../core/actions";
 import { buildAreas } from "../../core/areas";
@@ -80,6 +81,74 @@ export function Landscape({ ideas, height = 340 }: { ideas: Idea[]; height?: num
   );
 }
 
+const VERDICT_WORD: Record<string, string> = {
+  advanced: "advanced",
+  proposed: "proposed, not yet tested",
+  parked: "parked",
+  rejected: "rejected",
+};
+const ORDER: Record<string, number> = { advanced: 0, proposed: 1, parked: 2, rejected: 3 };
+
+/** The overview's headline: the lab's kill rate as a sentence, with every idea drawn inline. */
+function Verdict({
+  ideas,
+  latestFor,
+  lead,
+  actions,
+  demo,
+}: {
+  ideas: Idea[];
+  latestFor: (id: string) => Decision | undefined;
+  lead: ReactNode;
+  actions: ReactNode;
+  demo: boolean;
+}) {
+  const sorted = [...ideas].sort((a, b) => (ORDER[a.status] ?? 9) - (ORDER[b.status] ?? 9));
+  const standing = sorted.filter((i) => i.status === "advanced" || i.status === "proposed");
+  const [focus, setFocus] = useState<string | undefined>(undefined);
+  const shown = sorted.find((i) => i.id === focus) ?? standing[0] ?? sorted[0];
+  const d = shown && latestFor(shown.id);
+  const n = ideas.length;
+  return (
+    <header className="verdict">
+      <h1>
+        <span className="verdict-l1">
+          {n} idea{n === 1 ? "" : "s"} tested{demo ? " (demo)" : ""}.
+        </span>{" "}
+        <span className="verdict-l2">
+          <span className="tally" role="group" aria-label="Every idea, by verdict">
+            {sorted.map((i, k) => (
+              <Link
+                key={i.id}
+                to={`/ideas/${i.id}`}
+                className={`mark mark-${i.status}${shown?.id === i.id ? " on" : ""}`}
+                style={{ animationDelay: `${120 + k * 70}ms` }}
+                aria-label={`${i.title}: ${VERDICT_WORD[i.status] ?? i.status}`}
+                onMouseEnter={() => setFocus(i.id)}
+                onFocus={() => setFocus(i.id)}
+              />
+            ))}
+          </span>{" "}
+          {standing.length ? standing.length : "None"} still standing.
+        </span>
+      </h1>
+      {shown && (
+        <p className="verdict-read" aria-live="polite">
+          <Link to={`/ideas/${shown.id}`} className="who">
+            {shown.title}
+          </Link>{" "}
+          <span className={`was was-${shown.status}`}>{VERDICT_WORD[shown.status] ?? shown.status}</span>
+          {d?.rationale && <span className="why"> — {d.rationale}</span>}
+        </p>
+      )}
+      <div className="verdict-foot">
+        <p className="sub">{lead}</p>
+        <div className="title-actions">{actions}</div>
+      </div>
+    </header>
+  );
+}
+
 function Ago({ at }: { at?: string }) {
   return at ? <>{timeAgo(at)}</> : <span className="muted">—</span>;
 }
@@ -92,7 +161,6 @@ export function Overview() {
   const decisions = [...m.decisions].sort((a, b) => b.at.localeCompare(a.at));
   const recent = decisions.slice(0, 6);
   const lastDecision = decisions[0];
-  const counts = (s: Idea["status"]) => m.ideas.filter((i) => i.status === s).length;
   const openAssumptions = m.ideas
     .filter((i) => i.status === "advanced" || i.status === "proposed")
     .flatMap((i) => i.assumptions.filter((a) => a.criticality === "high" && a.status === "untested").map((a) => ({ idea: i, a })))
@@ -106,68 +174,47 @@ export function Overview() {
     (d.subjectType === "idea" ? m.ideas.find((i) => i.id === d.subjectId)?.title : d.subjectType === "problem" ? m.problems.find((p) => p.id === d.subjectId)?.title : d.subjectType === "theme" ? m.themes.find((t) => t.id === d.subjectId)?.name : undefined) ?? d.subjectId;
   const subjectHref = (d: (typeof decisions)[number]) =>
     d.subjectType === "idea" ? `/ideas/${d.subjectId}` : d.subjectType === "problem" ? `/problems/${d.subjectId}` : d.subjectType === "experiment" ? "/experiments" : `/research/${d.subjectId}`;
+  const tested = m.ideas.filter((i) => i.status !== "merged");
+  const latestFor = (id: string) => decisions.find((d) => d.subjectType === "idea" && d.subjectId === id);
   const busiest = [...areas].sort((a, b) => (b.lastActivity ?? "").localeCompare(a.lastActivity ?? ""))[0];
 
   return (
     <div className="page">
-      <header className="title-row">
-        <div>
-          <h1>{store === "real" ? "Lab overview" : "Lab overview (demo)"}</h1>
-          <p className="sub">
-            {lastDecision ? (
-              <>
-                Latest decision: <b>{subjectName(lastDecision)}</b> {lastDecision.action === "create" ? "recorded as" : "moved to"} {lastDecision.toStatus}, {timeAgo(lastDecision.at)}.
-              </>
-            ) : (
-              "No decisions recorded yet."
-            )}{" "}
-            Every claim here is traced to a verbatim quote from a retrieved source.
-          </p>
-        </div>
-        <div className="title-actions">
-          <span className={`stamp${updated ? "" : " stale"}`}>
-            <i /> Research updated {updated ? timeAgo(updated) : "never"}
-          </span>
-          {busiest && (
-            <Link className="btn" to={`/research/${busiest.theme.id}`}>
-              Read the latest journal
-            </Link>
-          )}
-        </div>
-      </header>
+      <Verdict
+        ideas={tested}
+        latestFor={latestFor}
+        demo={store !== "real"}
+        lead={
+          lastDecision ? (
+            <>
+              Latest decision: <b>{subjectName(lastDecision)}</b> {lastDecision.action === "create" ? "recorded as" : "moved to"} {lastDecision.toStatus}, {timeAgo(lastDecision.at)}. Every claim is traced to a verbatim quote from a retrieved source.
+            </>
+          ) : (
+            "No decisions recorded yet. Every claim will be traced to a verbatim quote from a retrieved source."
+          )
+        }
+        actions={
+          <>
+            {busiest && (
+              <Link className="btn" to={`/research/${busiest.theme.id}`}>
+                Read the latest journal
+              </Link>
+            )}
+            <span className={`stamp${updated ? "" : " stale"}`}>
+              <i /> Research updated {updated ? timeAgo(updated) : "never"}
+            </span>
+          </>
+        }
+      />
 
-      <dl className="kpis">
-        <div>
-          <dt>Research areas open</dt>
-          <dd>
-            {activeAreas}
-            <small>of {areas.length}</small>
-          </dd>
-        </div>
-        <div>
-          <dt>Problems with evidence</dt>
-          <dd>{m.problems.length}</dd>
-        </div>
-        <div>
-          <dt>Ideas assessed</dt>
-          <dd>{m.ideas.length}</dd>
-          <p className="kpi-note">
-            {counts("advanced")} advanced · {counts("parked")} parked · {counts("rejected")} rejected
-          </p>
-        </div>
-        <div>
-          <dt>Sources cited</dt>
-          <dd>{m.sources.length}</dd>
-          <p className="kpi-note">{m.evidence.length} quoted claims</p>
-        </div>
-        <div>
-          <dt>Experiments with outcomes</dt>
-          <dd>
-            {withOutcome}
-            <small>of {m.experiments.length}</small>
-          </dd>
-        </div>
-      </dl>
+      <section className="figures" aria-labelledby="figures-h">
+        <h2 id="figures-h" className="sr-only">The lab in figures</h2>
+        <p>
+          Across <b>{activeAreas}&nbsp;open</b> of {areas.length}&nbsp;research areas, the lab has cited <b>{m.sources.length}&nbsp;sources</b>,
+          quoted <b>{m.evidence.length}&nbsp;claims</b>, found evidence for <b>{m.problems.length}&nbsp;problems</b> and taken{" "}
+          <b>{withOutcome}&nbsp;of&nbsp;{m.experiments.length}</b> experiments to an outcome.
+        </p>
+      </section>
 
       <Section title="Research areas" kicker={`${areas.length} standing investigations`} aside={<Link to="/research">All areas</Link>}>
         {areas.length ? (

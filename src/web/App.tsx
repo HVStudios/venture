@@ -98,9 +98,10 @@ function Shell() {
       <header className={`topbar${scrolled ? " scrolled" : ""}`}>
         <div className="topbar-inner">
         <NavLink to="/" className="brand" aria-label="Venture home">
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
-            <rect x="1" y="1" width="22" height="22" rx="5" fill="currentColor" />
-            <path d="M6.5 7.5l5.5 10 5.5-10" stroke="#fff" strokeWidth="2.2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+          <svg viewBox="0 0 34 12" width="34" height="12" aria-hidden>
+            <circle cx="6" cy="6" r="4.2" fill="none" stroke="var(--text)" strokeWidth="1.6" />
+            <circle cx="17" cy="6" r="4.2" fill="none" stroke="var(--text)" strokeWidth="1.6" />
+            <circle cx="28" cy="6" r="5" fill="var(--hue)" />
           </svg>
           <span>Venture</span>
         </NavLink>
