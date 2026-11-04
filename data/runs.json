@@ -741,5 +741,59 @@
     },
     "limits": {},
     "provenance": "real"
+  },
+  {
+    "id": "run-20261104-exp-npm-publishing-practices",
+    "themeId": "theme-oss-supply-chain-small-maintainers",
+    "mode": "agent-session",
+    "provider": "claude-code-session + github-actions experiment runner",
+    "startedAt": "2026-11-04T09:20:30Z",
+    "completedAt": "2026-11-04T09:24:01Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Executed in Actions run 41806670663: 400 popular and 22 previously hijacked npm packages"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "Assumption a4 supported; alarm stays advanced"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Pre-registered a 28-day prospective field test of alert volume"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Research brief updated"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 1,
+      "sourcesCited": 1,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "see research/experiments/exp-npm-publishing-practices/result.json"
+    ],
+    "errors": [],
+    "limitations": [
+      "Registry metadata can't distinguish token publishes from interactive 2FA publishes.",
+      "'Popular' means the npm search API's popularity ranking for six broad keywords, not download counts."
+    ],
+    "usage": {
+      "note": "GitHub Actions (free for public repos). No model calls, no cost."
+    },
+    "limits": {},
+    "provenance": "real"
   }
 ]

@@ -256,6 +256,21 @@
     "provenance": "real"
   },
   {
+    "id": "src-exp-npm-publishing-practices-result",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-publishing-practices/RESULT.md",
+    "title": "VENTURE experiment result: npm publishing practices of popular packages (pre-registered)",
+    "publisher": "VENTURE (own experiment, GitHub Actions run 41806670663)",
+    "publishedAt": "2026-11-04",
+    "retrievedAt": "2026-11-04T09:23:33Z",
+    "sourceType": "dataset",
+    "excerpt": "Popular packages (latest release): 400 packages read. Staged with human approval: 31; trusted publishing (OIDC) only: 168; neither: 201 (50.2%, 95% CI 45.4%–55.1%). … Previously hijacked packages (latest release): 22 packages read. Staged with human approval: 2; trusted publishing (OIDC) only: 7; neither: 13 (59.1%, 95% CI 38.7%–76.7%). … Verdict (pre-registered rule): supported: 50.2% of popular packages' latest releases used neither trusted publishing nor staged approval (≥ 40%). … Caveats: 'neither' includes interactive publishes protected by 2FA, which the registry metadata doesn't distinguish from token publishes, so it is an upper bound on exposure to stolen tokens. Popularity comes from the npm search API's ranking for six broad keywords.",
+    "limitations": "Own experiment. 'Neither' is an upper bound on token exposure (interactive 2FA publishes look the same). Popularity comes from the npm search ranking for six keywords.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-exp-publish-anomaly-analysis",
     "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-publish-anomaly-retrospective/ANALYSIS.md",
     "title": "VENTURE experiment: independence check of incidents (not pre-registered)",
