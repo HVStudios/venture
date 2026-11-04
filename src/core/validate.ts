@@ -3,6 +3,7 @@
  * Errors block ingestion/CI; warnings are surfaced but do not block.
  */
 import { COLLECTIONS, Memory as MemorySchema, type Memory, type Provenance } from "./schema";
+import { assumptionTraced } from "./story";
 import { DUPLICATE_THRESHOLD, SimilarityIndex, ideaText } from "./similarity";
 
 export interface Issue {
@@ -50,6 +51,7 @@ export function validateMemory(input: unknown, expected?: Provenance, now: numbe
   };
 
   const sources = new Map(m.sources.map((s) => [s.id, s]));
+  const evidenceById = new Map(m.evidence.map((e) => [e.id, e]));
   for (const ev of m.evidence) {
     const ref = `evidence.${ev.id}`;
     need("sources", ev.sourceId, ref);
@@ -85,6 +87,11 @@ export function validateMemory(input: unknown, expected?: Provenance, now: numbe
     if (x.status === "completed" && !x.outcome) err(ref, "completed experiment must record an outcome");
     if (x.outcome && x.status !== "completed") err(ref, "only completed experiments may carry an outcome");
     x.outcome?.evidenceIds.forEach((e) => need("evidence", e, ref));
+    const tested = m.ideas.find((i) => i.id === x.ideaId);
+    for (const a of x.assumptionIds) {
+      if (tested && !tested.assumptions.some((s) => s.id === a)) err(ref, `tests assumption '${a}', which idea '${x.ideaId}' does not have`);
+    }
+    if (x.status === "completed" && !x.assumptionIds.length) warn(ref, "completed experiment does not name the assumption(s) it tested");
   }
 
   for (const idea of m.ideas) {
@@ -95,6 +102,20 @@ export function validateMemory(input: unknown, expected?: Provenance, now: numbe
     idea.relatedIdeaIds.forEach((r) => need("ideas", r, ref));
     need("runs", idea.createdInRun, ref);
     for (const o of idea.objections) o.evidenceIds.forEach((e) => need("evidence", e, `${ref}.objections.${o.id}`));
+    // Thread of proof: a decided assumption must point at a quote or a completed experiment.
+    const untraced: string[] = [];
+    for (const a of idea.assumptions) {
+      const aref = `${ref}.assumptions.${a.id}`;
+      for (const e of a.evidenceIds) {
+        need("evidence", e, aref);
+        const ev = evidenceById.get(e);
+        if (ev && !ev.ideaIds.includes(idea.id)) warn(aref, `cites evidence '${e}', which is not linked to this idea`);
+      }
+      if (a.status !== "untested" && !assumptionTraced(m, idea.id, a)) untraced.push(a.id);
+    }
+    if (untraced.length) {
+      warn(ref, `${untraced.length} assumption(s) marked supported, weakened or refuted cite no evidence or completed experiment: ${untraced.join(", ")}`);
+    }
     if (idea.status === "merged" && !idea.mergedInto) err(ref, "merged idea must name mergedInto");
     if (idea.mergedInto) need("ideas", idea.mergedInto, ref);
     if (idea.status === "advanced" && !experimentsByIdea.get(idea.id)) {

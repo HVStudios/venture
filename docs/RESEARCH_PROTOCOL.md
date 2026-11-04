@@ -20,8 +20,8 @@ This protocol lets an interactive or scheduled Claude Code session, powered by t
 4. **Invent.** Propose concepts only for problems that have evidence. Every new idea must fill in `practical`: who would adopt it, its distribution (open source, hosted, paid, open core, or knowledge only), the smallest useful version, whether VENTURE could build and test that version itself, and the honest money story. Ideas with no plausible adopter should be rejected early.
 5. **Critique.** Write objections, and score the 9 criteria from 1 to 5 with a rationale for each (see `/method` on the site).
 6. **Deduplicate.** Compare against existing ideas. The validator blocks TF-IDF similarity ≥ 0.55 unless the ideas are linked via `relatedIdeaIds` with a `noveltyNote`.
-7. **Decide.** Choose a status and a `statusRationale` for every idea.
-8. **Experiment.** Design one cheap test for each advanced idea.
+7. **Decide.** Choose a status and a `statusRationale` for every idea. Whenever you mark an assumption `supported`, `weakened` or `refuted` on the strength of quotes, list those evidence ids in the assumption's `evidenceIds`. The site draws the thread from each idea through its assumptions to these quotes, and the validator warns about any decided assumption with no quote or completed experiment behind it.
+8. **Experiment.** Design one cheap test for each advanced idea. List the assumption ids it tests in `assumptionIds`; start with the riskiest untested one.
 9. **Update the research brief.** Every run must update the area's brief (`briefs` in the bundle, one per theme, same id). The brief is what readers see first on the area's research page:
    - `researchQuestion`, `whyItMatters` and `subQuestions` in plain language, for someone who hasn't followed the research.
    - `findings`: what has actually been established. Each must cite evidence ids and say how strong it is, and why.
@@ -45,4 +45,4 @@ Use `mode: "agent-session"` and `provider: "claude-code-session"`. List the sear
 Automatable experiments (public data only, no contact with people, no cost) may be approved by the research director (`venture approve <id> --by …`). Everything else needs the owner. Pre-register the procedure and decision thresholds in `data/experiments.json` before collecting data. Implement the experiment under `src/experiments/` and run it through the **Run experiment** workflow, which commits raw results to `research/experiments/<id>/`.
 
 ## Recording an experiment outcome
-Only after an experiment was actually executed: set `status: "completed"`, add an `outcome` with the observed result and the evidence ids, and append a `complete` decision. Update the related idea's assumptions (`supported`, `weakened` or `refuted`) and its status if warranted.
+Only after an experiment was actually executed: set `status: "completed"`, add an `outcome` with the observed result and the evidence ids, and append a `complete` decision. Update the related idea's assumptions (`supported`, `weakened` or `refuted`) and its status if warranted. Make sure `assumptionIds` names every assumption the experiment tested.
