@@ -166,6 +166,11 @@ export const Assumption = z.object({
   text: z.string().min(5),
   criticality: z.enum(["low", "medium", "high"]),
   status: z.enum(["untested", "supported", "weakened", "refuted"]),
+  /**
+   * The quotes that moved this assumption to its status. Lets every view draw
+   * the thread from an idea through its assumptions to verbatim sources.
+   */
+  evidenceIds: z.array(Id).default([]),
 });
 
 export const Objection = z.object({
@@ -229,6 +234,8 @@ export type Idea = z.infer<typeof Idea>;
 export const Experiment = z.object({
   id: Id,
   ideaId: Id,
+  /** Ids of the assumptions on `ideaId` that this experiment tests. */
+  assumptionIds: z.array(z.string()).default([]),
   title: z.string().min(5),
   hypothesis: z.string().min(10),
   uncertainty: z.string().min(10),

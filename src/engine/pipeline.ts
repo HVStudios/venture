@@ -152,6 +152,7 @@ const ExperimentOut = z.object({
   ifSuccess: z.string(),
   ifFailure: z.string(),
   executionMode: z.enum(["automatable", "requires-humans", "requires-authorization"]),
+  assumptionIds: z.array(z.string()).default([]),
 });
 
 export function extractJson(text: string): unknown {
@@ -399,7 +400,7 @@ export async function runPipeline(opts: PipelineOptions): Promise<Bundle> {
         competitorIds: compIds,
         differentiation: c.differentiation,
         feasibility: c.feasibility,
-        assumptions: c.assumptions.map((a, i) => ({ id: `a${i + 1}`, text: a.text, criticality: a.criticality, status: "untested" })),
+        assumptions: c.assumptions.map((a, i) => ({ id: `a${i + 1}`, text: a.text, criticality: a.criticality, status: "untested", evidenceIds: [] })),
         risks: c.risks.length ? c.risks : ["unspecified"],
         nextSteps: [],
         objections,
@@ -456,12 +457,14 @@ export async function runPipeline(opts: PipelineOptions): Promise<Bundle> {
       const x = await call(
         "experimenter",
         { idea: { title: idea.title, summary: idea.summary, assumptions: idea.assumptions, objections: idea.objections.map((o) => o.text) } },
-        `Return one experiment object {"title","hypothesis","uncertainty","procedure","successCriteria","failureCriteria","estimatedTime","estimatedCostUsd","resources","expectedLearning","ifSuccess","ifFailure","executionMode"}. Prefer cheap tests. Never plan to contact people or spend money without human authorization; mark such experiments "requires-authorization".`,
+        `Return one experiment object {"title","hypothesis","uncertainty","procedure","successCriteria","failureCriteria","estimatedTime","estimatedCostUsd","resources","expectedLearning","ifSuccess","ifFailure","executionMode","assumptionIds"}. "assumptionIds" lists the ids of the assumptions the experiment tests. Prefer cheap tests. Never plan to contact people or spend money without human authorization; mark such experiments "requires-authorization".`,
         ExperimentOut,
       );
       experiments.push({
         id: `exp-${slug(x.title)}`,
         ideaId: idea.id,
+        // Keep only ids that exist on the idea; a model may invent others.
+        assumptionIds: x.assumptionIds.filter((a) => idea.assumptions.some((s) => s.id === a)),
         title: x.title,
         hypothesis: x.hypothesis,
         uncertainty: x.uncertainty,

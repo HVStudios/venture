@@ -102,6 +102,7 @@ export class MockProvider implements ModelProvider {
           ifSuccess: "Prototype the clustering step.",
           ifFailure: "Park the idea.",
           executionMode: "requires-authorization",
+          assumptionIds: ["a1"],
         };
       default:
         return {};
