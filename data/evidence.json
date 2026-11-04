@@ -634,6 +634,49 @@
     "provenance": "real"
   },
   {
+    "id": "ev-ai-burden-44",
+    "claim": "Policy-violating PRs have much longer descriptions than genuine newcomer PRs (median 166 vs 87 words), consistent with maintainers' complaints about wordy AI output, but the separation is moderate (AUC 0.67).",
+    "sourceId": "src-exp-content-signals-result",
+    "quote": "median 166 words (policy-closed) vs 87 words (newcomer-merged); AUC 0.67",
+    "stance": "supports",
+    "epistemic": "fact",
+    "context": "Corroborates curl's 'too wordy' and Ghostty's 'overly verbose' descriptions of AI-generated submissions.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-validated-pre-review-triage-signals"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-45",
+    "claim": "Whether a PR references an issue doesn't distinguish policy-violating from genuine newcomer PRs (56% vs 58%, AUC 0.51).",
+    "sourceId": "src-exp-content-signals-result",
+    "quote": "55.8% of policy-closed vs 58.3% of newcomer-merged PRs; AUC (no reference → suspicious) 0.51",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-validated-pre-review-triage-signals"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-46",
+    "claim": "Flagging by description length to catch half of policy-violating PRs would flag about 13% of genuine newcomers, a better trade-off than account-level signals (about 30%).",
+    "sourceId": "src-exp-content-signals-result",
+    "quote": "13.3% of genuine newcomer PRs would also be flagged",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-validated-pre-review-triage-signals"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
     "id": "ev-sc-01",
     "claim": "Two malicious axios releases were published through the maintainer's compromised npm account (March 2026).",
     "sourceId": "src-axios-postmortem-2026",

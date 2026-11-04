@@ -232,6 +232,21 @@
     "provenance": "real"
   },
   {
+    "id": "src-exp-content-signals-result",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-content-signal-discrimination/RESULT.md",
+    "title": "VENTURE experiment result: content-based triage signals (pre-registered)",
+    "publisher": "VENTURE (own experiment, GitHub Actions run 41826339477)",
+    "publishedAt": "2026-11-04",
+    "retrievedAt": "2026-11-04T12:09:31Z",
+    "sourceType": "dataset",
+    "excerpt": "C1, description references an issue: 55.8% of policy-closed vs 58.3% of newcomer-merged PRs; AUC (no reference → suspicious) 0.51. … C2, description length: median 166 words (policy-closed) vs 87 words (newcomer-merged); AUC 0.67 (policy-closed descriptions are longer). … At the C2 threshold that flags half of the policy-closed PRs, 13.3% of genuine newcomer PRs would also be flagged. … Verdict (pre-registered rule): inconclusive: best content signal AUC 0.67 is between the thresholds.",
+    "limitations": "Own experiment. The control group is LLVM-only, and descriptions may have been edited after closing.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-exp-followup-analysis",
     "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-followup-engagement-retrospective/ANALYSIS.md",
     "title": "VENTURE experiment: exploratory within-LLVM breakdown (not pre-registered)",

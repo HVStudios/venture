@@ -294,6 +294,18 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261104-combined-signal-discrimination",
+    "at": "2026-11-04T12:10:04.459Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-combined-signal-discrimination",
+    "action": "advance",
+    "fromStatus": "proposed",
+    "toStatus": "approved",
+    "rationale": "Approved under the standing rule for automatable experiments. The combination and thresholds are fixed in advance; no weights are fitted.",
+    "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261104-content-signal-discrimination",
     "at": "2026-11-04T12:04:17.644Z",
     "subjectType": "experiment",
@@ -303,6 +315,18 @@
     "toStatus": "approved",
     "rationale": "Approved under the standing rule for automatable experiments. Thresholds pre-registered before any content data was collected.",
     "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261104-content-signal-discrimination-2",
+    "at": "2026-11-04T12:09:32.231Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-content-signal-discrimination",
+    "action": "complete",
+    "fromStatus": "approved",
+    "toStatus": "inconclusive",
+    "rationale": "Pre-registered verdict: inconclusive. Issue references don't discriminate (AUC 0.51). Description length does moderately (AUC 0.67; median 166 vs 87 words, longer for policy-violating PRs), flagging about 13% of genuine newcomers at half recall.",
+    "actor": "experiment designer",
     "provenance": "real"
   },
   {

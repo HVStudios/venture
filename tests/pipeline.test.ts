@@ -162,3 +162,19 @@ describe("signal relevance", () => {
     expect(isRelevant("Allow to change the font size of the workbench", ["AI slop pull request", "low-effort contributions"])).toBe(false);
   });
 });
+
+describe("ingest safety", () => {
+  it("refuses to rewind an experiment's status when a bundle is re-ingested", async () => {
+    const dir = mkdtempSync(join(tmpdir(), "venture-rewind-"));
+    const memory = memWithTheme();
+    saveMemory(dir, memory);
+    const bundle = await runPipeline({ theme, pool, memory, provider: new MockProvider(), runId: "run-rw", now: fixedNow });
+    expect(ingestBundle(dir, bundle, "fixture").ok).toBe(true);
+    const raw = loadRaw(dir);
+    (raw.experiments as { status: string }[])[0].status = "approved";
+    saveMemory(dir, validateMemory(raw, "fixture").memory!);
+    const again = ingestBundle(dir, bundle, "fixture");
+    expect(again.ok).toBe(false);
+    expect(again.issues[0].message).toMatch(/move back from 'approved' to 'proposed'/);
+  });
+});
