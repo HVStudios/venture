@@ -434,6 +434,18 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261104-npm-metadata-breaks-2",
+    "at": "2026-11-04T14:05:01.076Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-npm-metadata-breaks",
+    "action": "complete",
+    "fromStatus": "approved",
+    "toStatus": "refuted",
+    "rationale": "Pre-registered verdict: refuted. The frequency criterion was met exactly (80 of 400 popular packages, 20.0%), but only 8 of 20 audited flags were genuine breaks (40%, below the 50% failure line). Most noise came from engine-range rules dropping end-of-life Node versions. Exploratory: structural rules alone were genuine in 7 of 9 audited cases, but flag only about 10% of packages.",
+    "actor": "experiment designer",
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261104-npm-publishing-practices",
     "at": "2026-11-04T09:18:51.677Z",
     "subjectType": "experiment",
@@ -455,6 +467,20 @@
     "toStatus": "supported",
     "rationale": "Pre-registered verdict: supported. 201 of 400 popular npm packages (50.2%, 95% CI 45–55%) published their latest release with neither trusted publishing nor staged approval. Only 31 (7.8%) use staged human approval. 13 of 22 previously hijacked packages still publish with neither. 'Neither' is an upper bound, because interactive 2FA publishes look the same in metadata.",
     "actor": "experiment designer",
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261104-npm-release-contract-linter",
+    "at": "2026-11-04T14:05:01.606Z",
+    "subjectType": "idea",
+    "subjectId": "idea-npm-release-contract-linter",
+    "action": "park",
+    "fromStatus": "advanced",
+    "toStatus": "parked",
+    "rationale": "Parked with a narrowed recommendation. As specified, the linter is too noisy (40% genuine). A structural-only rule set looks precise (about 78% in a small exploratory sample) but helps only about 1 in 10 popular packages. Its practical value is as a 'compare with last release' feature for an existing linter like publint, pending validation on a fresh sample.",
+    "actor": "director",
+    "attractiveness": 77,
+    "evidenceStrength": 56,
     "provenance": "real"
   },
   {

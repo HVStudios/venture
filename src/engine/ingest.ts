@@ -30,6 +30,16 @@ export function rewinds(raw: Record<string, unknown[]>, bundle: Bundle): string[
       problems.push(`experiment ${x.id} would move back from '${cur.status}' to '${x.status}'`);
     }
   }
+  for (const i of bundle.ideas) {
+    const cur = (raw.ideas as { id: string; updatedAt: string; status: string }[]).find((e) => e.id === i.id);
+    if (cur && i.updatedAt < cur.updatedAt) {
+      problems.push(`idea ${i.id} in the bundle (updated ${i.updatedAt}) is older than the stored one (updated ${cur.updatedAt}, status '${cur.status}')`);
+    }
+  }
+  for (const b of bundle.briefs) {
+    const cur = (raw.briefs as { id: string; updatedAt: string }[]).find((e) => e.id === b.id);
+    if (cur && b.updatedAt < cur.updatedAt) problems.push(`brief ${b.id} in the bundle is older than the stored one`);
+  }
   return problems;
 }
 

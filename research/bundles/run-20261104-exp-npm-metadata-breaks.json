@@ -1,0 +1,366 @@
+{
+  "run": {
+    "id": "run-20261104-exp-npm-metadata-breaks",
+    "themeId": "theme-npm-release-breaking-changes",
+    "mode": "agent-session",
+    "provider": "claude-code-session + github-actions experiment runner",
+    "startedAt": "2026-11-04T14:00:30Z",
+    "completedAt": "2026-11-04T14:05:00Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Executed in Actions run 41843383169: 400 packages, 12,240 minor/patch pairs, 137 flags"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "Manual audit of 20 fixed-seed flags: 8 genuine, 11 debatable, 1 not genuine"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "Checked existing packaging linters (publint, arethetypeswrong)"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "Idea parked with a narrowed recommendation"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Research brief updated"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 5,
+      "sourcesCited": 4,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 1,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "registry metadata for 12 audited packages and their release dates",
+      "GitHub repo search: publint, arethetypeswrong"
+    ],
+    "errors": [],
+    "limitations": [
+      "One reviewer judged the audit.",
+      "Six of the 20 audited flags came from one @inquirer release wave."
+    ],
+    "usage": {
+      "note": "GitHub Actions (free) plus interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [],
+  "sources": [
+    {
+      "id": "src-exp-npm-metadata-breaks-result",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-metadata-breaks/RESULT.md",
+      "title": "VENTURE experiment result: metadata-level breaking changes in popular npm packages (frequency)",
+      "publisher": "VENTURE (own experiment, GitHub Actions run 41843383169)",
+      "retrievedAt": "2026-11-04T14:05:00Z",
+      "publishedAt": "2026-11-04",
+      "sourceType": "dataset",
+      "originId": "origin-venture-exp-npm-metadata",
+      "excerpt": "Packages with at least one flagged minor/patch release: 80 (20.0%). … Flagged release pairs: 137 (1.1% of pairs). … Flags per rule: engines-tightened 68, peer-added 25, exports-subpath-removed 25, exports-map-added 11, switched-to-esm 9, peer-tightened 9, bin-removed 8, entry-removed 7.",
+      "limitations": "Own experiment. Rules applied to registry metadata only.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-exp-npm-metadata-breaks-audit",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-metadata-breaks/AUDIT.md",
+      "title": "VENTURE experiment: manual audit of 20 sampled flags",
+      "publisher": "VENTURE (own experiment)",
+      "retrievedAt": "2026-11-04T14:05:00Z",
+      "publishedAt": "2026-11-04",
+      "sourceType": "dataset",
+      "originId": "origin-venture-exp-npm-metadata",
+      "excerpt": "Genuine: 8 of 20 (40%). Debatable: 11. Not genuine: 1. … Pre-registered verdict: **refuted**. Fewer than 50% of audited flags are genuine (the frequency criterion, 20.0% of packages, was met exactly).",
+      "limitations": "Judged by a research session against criteria fixed before judging. One reviewer, small sample.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-exp-npm-metadata-breaks-analysis",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-metadata-breaks/ANALYSIS.md",
+      "title": "VENTURE experiment: exploratory analysis of where the noise comes from",
+      "publisher": "VENTURE (own experiment)",
+      "retrievedAt": "2026-11-04T14:05:00Z",
+      "publishedAt": "2026-11-04",
+      "sourceType": "dataset",
+      "originId": "origin-venture-exp-npm-metadata",
+      "excerpt": "Engine-range rules produced 68 of 137 flags. In the audit, 10 of the 12 non-genuine or debatable flags were engine-range changes, mostly dropping end-of-life Node versions. … Without the engines rule, the remaining structural rules (exports removed or added, entry fields removed, ESM switch, peers, bins) flag 75 release pairs in 41 of 400 packages (10.2%). … In the audit sample, 7 of the 9 flags from structural rules were genuine (78%; small n). … Interpretation: a structural-only release-contract check is precise enough to be useful (about 4 in 5 flags genuine), but it fires for about 1 in 10 popular packages over two years. That's a modest benefit, best delivered as a feature of an existing packaging linter (publint, 1.3k stars, which lints a single release) rather than a new standalone tool. Engine-range checks would need to know Node's end-of-life dates to be useful.",
+      "limitations": "Exploratory: computed after the verdict.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-publint-readme",
+      "url": "https://raw.githubusercontent.com/publint/publint/master/README.md",
+      "title": "publint (README)",
+      "publisher": "publint (open source)",
+      "retrievedAt": "2026-11-04T14:05:00Z",
+      "sourceType": "repository",
+      "excerpt": "Lint packaging errors. Ensure compatibility across environments.",
+      "limitations": "About 1,300 GitHub stars at retrieval (GitHub search). It lints a single release; a compare-with-previous-release mode wasn't found.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-sv-12",
+      "claim": "20% of 400 popular npm packages (80) shipped at least one minor or patch release in two years whose metadata changed the install/import contract, by the linter's rules.",
+      "sourceId": "src-exp-npm-metadata-breaks-result",
+      "quote": "Packages with at least one flagged minor/patch release: 80 (20.0%).",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-minor-patch-releases-break-dependents"
+      ],
+      "ideaIds": [
+        "idea-npm-release-contract-linter"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sv-13",
+      "claim": "Only 8 of 20 audited flags were genuine breaks. Most others were debatable engine-range changes dropping end-of-life Node versions, so the full rule set is too noisy.",
+      "sourceId": "src-exp-npm-metadata-breaks-audit",
+      "quote": "Genuine: 8 of 20 (40%).",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-npm-release-contract-linter"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sv-14",
+      "claim": "Without the engine-range rule, the structural rules were genuine in 7 of 9 audited cases (about 78%), but they flag only about 10% of popular packages over two years.",
+      "sourceId": "src-exp-npm-metadata-breaks-analysis",
+      "quote": "In the audit sample, 7 of the 9 flags from structural rules were genuine (78%; small n).",
+      "stance": "context",
+      "epistemic": "inference",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-npm-release-contract-linter"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Exploratory, post hoc. Suggests a narrower, more precise rule set."
+    },
+    {
+      "id": "ev-sv-15",
+      "claim": "publint, an established packaging linter (about 1,300 stars), already checks single releases for packaging errors, so a compare-with-previous-release mode would fit naturally as a feature there.",
+      "sourceId": "src-publint-readme",
+      "quote": "Lint packaging errors.",
+      "stance": "context",
+      "epistemic": "inference",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-npm-release-contract-linter"
+      ],
+      "competitorIds": [
+        "comp-publint"
+      ],
+      "provenance": "real"
+    }
+  ],
+  "problems": [],
+  "competitors": [
+    {
+      "id": "comp-publint",
+      "name": "publint (and arethetypeswrong)",
+      "kind": "open-source",
+      "url": "https://publint.dev",
+      "description": "Established linters for npm packaging mistakes (publint, about 1.3k stars) and TypeScript type resolution (arethetypeswrong, about 1.6k stars). They check a single release, not changes between releases.",
+      "strengths": [
+        "Widely known in the JS tooling community",
+        "Natural home for contract checks"
+      ],
+      "weaknesses": [
+        "No compare-with-previous-release mode found"
+      ],
+      "sourceIds": [
+        "src-publint-readme"
+      ],
+      "provenance": "real"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "idea-npm-release-contract-linter",
+      "title": "Release-contract linter for npm packages",
+      "summary": "Before publishing, check the parts of a release's contract that type checkers ignore: engine requirements tightened, entry points or exports paths removed, module format switched, new required peer dependencies, removed CLI commands. Fail if a minor or patch release changes them.",
+      "problemIds": [
+        "prob-minor-patch-releases-break-dependents",
+        "prob-type-checkers-miss-runtime-and-metadata-breaks"
+      ],
+      "themeIds": [
+        "theme-npm-release-breaking-changes"
+      ],
+      "targetUsers": "Maintainers of JavaScript and TypeScript packages on npm (including packages without types)",
+      "solution": "A CLI and GitHub Action that compares the package.json and published file list of the release candidate with the last published version on npm, and flags contract changes that need a major bump (engines.node raised, exports subpaths removed or an exports map added, main/module/types removed, type: module switch, new non-optional peer dependencies, bin entries removed). It can run alongside a type-surface checker.",
+      "competitorIds": [
+        "comp-api-extractor",
+        "comp-publint",
+        "comp-ts-api-checkers"
+      ],
+      "differentiation": "Existing tools inspect the TypeScript type surface. This inspects the install- and import-time contract, which breaks even for untyped packages (e.g. polished's engines bump). It complements the type checkers rather than replacing them.",
+      "feasibility": "High. Everything needed is in package.json and the npm registry metadata. No compiler work is needed.",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "Metadata-level contract breaks in minor or patch releases are common among popular packages (≥ 20% shipped at least one in two years)",
+          "criticality": "high",
+          "status": "supported"
+        },
+        {
+          "id": "a2",
+          "text": "Flags are mostly genuine breaks rather than noise (≥ 70% of audited flags)",
+          "criticality": "high",
+          "status": "refuted"
+        },
+        {
+          "id": "a3",
+          "text": "Maintainers would add another check to their release workflow",
+          "criticality": "medium",
+          "status": "untested"
+        }
+      ],
+      "risks": [
+        "The rules may be too strict (some engines bumps are deliberate and announced)",
+        "Existing checkers may add metadata rules",
+        "Behaviour breaks (React 16.4) remain invisible"
+      ],
+      "nextSteps": [
+        "Run exp-npm-metadata-breaks",
+        "If supported, build the CLI and dogfood it on real packages"
+      ],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "Behaviour changes, like React 16.4's, are invisible to any static check, so this catches only part of the problem.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-sv-02"
+          ],
+          "response": "It doesn't need to catch everything to be useful. The experiment measures how much it catches.",
+          "status": "accepted"
+        },
+        {
+          "id": "obj-2",
+          "text": "Some maintainers deliberately tighten engines in minor releases (e.g. dropping end-of-life Node). They may consider that acceptable, and see the linter as noise.",
+          "severity": "major",
+          "evidenceIds": [],
+          "response": "The audit step measures how many flags are genuine. Rules can be configured.",
+          "status": "open"
+        },
+        {
+          "id": "obj-3",
+          "text": "The type-checker projects could add metadata rules quickly.",
+          "severity": "minor",
+          "evidenceIds": [
+            "ev-sv-09"
+          ],
+          "status": "open"
+        },
+        {
+          "id": "obj-4",
+          "text": "Engine-range rules dominate the flags and are mostly debatable (dropping end-of-life Node), which made 60% of audited flags non-genuine.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-sv-13"
+          ],
+          "status": "accepted",
+          "response": "A narrowed, structural-only rule set was 78% precise in the audit (exploratory), but fires for only about 10% of popular packages."
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 4,
+            "rationale": "Breaking minor releases cost users real time."
+          },
+          "frequency": {
+            "score": 3,
+            "rationale": "Frequency of metadata breaks unknown; being measured."
+          },
+          "userValue": {
+            "score": 4,
+            "rationale": "Catches a class of breaks no current tool checks, before publish."
+          },
+          "competitiveGap": {
+            "score": 4,
+            "rationale": "No tool found that checks the install/import contract."
+          },
+          "differentiation": {
+            "score": 3,
+            "rationale": "Clear but copyable."
+          },
+          "feasibility": {
+            "score": 5,
+            "rationale": "Pure metadata comparison."
+          },
+          "costComplexity": {
+            "score": 5,
+            "rationale": "Small CLI."
+          },
+          "userAccess": {
+            "score": 4,
+            "rationale": "Maintainers reachable via GitHub Marketplace and npm."
+          },
+          "validationCost": {
+            "score": 5,
+            "rationale": "Frequency testable for $0 on registry data."
+          }
+        },
+        "assessedAt": "2026-11-04T13:57:28Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "advanced",
+      "statusRationale": "Advanced. It covers breaks that the existing TypeScript checkers can't see, is cheap to build, and VENTURE can measure how often such breaks happen directly from npm before building anything.",
+      "relatedIdeaIds": [
+        "idea-typescript-api-semver-checker"
+      ],
+      "noveltyNote": "Distinct from the rejected type-surface checker: it inspects package metadata and the published file contract, not .d.ts types.",
+      "epistemic": "hypothesis",
+      "practical": {
+        "adopters": "npm package maintainers, as a pre-publish check, and possibly downstream teams auditing updates",
+        "distribution": "open-source",
+        "smallestUsefulVersion": "A 'compare with last release' mode for publint (or a small plugin) with the structural rules: removed export paths, entry fields, CLI commands and peer tightening. Engine checks only if they know Node's end-of-life dates.",
+        "buildableByVenture": true,
+        "buildNote": "Needs only package.json parsing, npm registry metadata and the semver library. VENTURE already uses all three.",
+        "monetization": "None realistic: best as an upstream contribution to existing open-source linters."
+      },
+      "createdInRun": "run-20261104-agent-release-breaks-1",
+      "createdAt": "2026-11-04T13:57:28Z",
+      "updatedAt": "2026-11-04T14:05:00Z",
+      "provenance": "real"
+    }
+  ],
+  "experiments": [],
+  "decisions": [],
+  "briefs": []
+}

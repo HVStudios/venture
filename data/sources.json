@@ -341,6 +341,54 @@
     "provenance": "real"
   },
   {
+    "id": "src-exp-npm-metadata-breaks-analysis",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-metadata-breaks/ANALYSIS.md",
+    "title": "VENTURE experiment: exploratory analysis of where the noise comes from",
+    "publisher": "VENTURE (own experiment)",
+    "publishedAt": "2026-11-04",
+    "retrievedAt": "2026-11-04T14:05:00Z",
+    "sourceType": "dataset",
+    "originId": "origin-venture-exp-npm-metadata",
+    "excerpt": "Engine-range rules produced 68 of 137 flags. In the audit, 10 of the 12 non-genuine or debatable flags were engine-range changes, mostly dropping end-of-life Node versions. … Without the engines rule, the remaining structural rules (exports removed or added, entry fields removed, ESM switch, peers, bins) flag 75 release pairs in 41 of 400 packages (10.2%). … In the audit sample, 7 of the 9 flags from structural rules were genuine (78%; small n). … Interpretation: a structural-only release-contract check is precise enough to be useful (about 4 in 5 flags genuine), but it fires for about 1 in 10 popular packages over two years. That's a modest benefit, best delivered as a feature of an existing packaging linter (publint, 1.3k stars, which lints a single release) rather than a new standalone tool. Engine-range checks would need to know Node's end-of-life dates to be useful.",
+    "limitations": "Exploratory: computed after the verdict.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-exp-npm-metadata-breaks-audit",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-metadata-breaks/AUDIT.md",
+    "title": "VENTURE experiment: manual audit of 20 sampled flags",
+    "publisher": "VENTURE (own experiment)",
+    "publishedAt": "2026-11-04",
+    "retrievedAt": "2026-11-04T14:05:00Z",
+    "sourceType": "dataset",
+    "originId": "origin-venture-exp-npm-metadata",
+    "excerpt": "Genuine: 8 of 20 (40%). Debatable: 11. Not genuine: 1. … Pre-registered verdict: **refuted**. Fewer than 50% of audited flags are genuine (the frequency criterion, 20.0% of packages, was met exactly).",
+    "limitations": "Judged by a research session against criteria fixed before judging. One reviewer, small sample.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-exp-npm-metadata-breaks-result",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-metadata-breaks/RESULT.md",
+    "title": "VENTURE experiment result: metadata-level breaking changes in popular npm packages (frequency)",
+    "publisher": "VENTURE (own experiment, GitHub Actions run 41843383169)",
+    "publishedAt": "2026-11-04",
+    "retrievedAt": "2026-11-04T14:05:00Z",
+    "sourceType": "dataset",
+    "originId": "origin-venture-exp-npm-metadata",
+    "excerpt": "Packages with at least one flagged minor/patch release: 80 (20.0%). … Flagged release pairs: 137 (1.1% of pairs). … Flags per rule: engines-tightened 68, peer-added 25, exports-subpath-removed 25, exports-map-added 11, switched-to-esm 9, peer-tightened 9, bin-removed 8, entry-removed 7.",
+    "limitations": "Own experiment. Rules applied to registry metadata only.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-exp-npm-publishing-practices-result",
     "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-publishing-practices/RESULT.md",
     "title": "VENTURE experiment result: npm publishing practices of popular packages (pre-registered)",
@@ -748,6 +796,20 @@
       "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-publint-readme",
+    "url": "https://raw.githubusercontent.com/publint/publint/master/README.md",
+    "title": "publint (README)",
+    "publisher": "publint (open source)",
+    "retrievedAt": "2026-11-04T14:05:00Z",
+    "sourceType": "repository",
+    "excerpt": "Lint packaging errors. Ensure compatibility across environments.",
+    "limitations": "About 1,300 GitHub stars at retrieval (GitHub search). It lints a single release; a compare-with-previous-release mode wasn't found.",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },

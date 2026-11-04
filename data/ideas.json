@@ -707,8 +707,9 @@
     "targetUsers": "Maintainers of JavaScript and TypeScript packages on npm (including packages without types)",
     "solution": "A CLI and GitHub Action that compares the package.json and published file list of the release candidate with the last published version on npm, and flags contract changes that need a major bump (engines.node raised, exports subpaths removed or an exports map added, main/module/types removed, type: module switch, new non-optional peer dependencies, bin entries removed). It can run alongside a type-surface checker.",
     "competitorIds": [
-      "comp-ts-api-checkers",
-      "comp-api-extractor"
+      "comp-api-extractor",
+      "comp-publint",
+      "comp-ts-api-checkers"
     ],
     "differentiation": "Existing tools inspect the TypeScript type surface. This inspects the install- and import-time contract, which breaks even for untyped packages (e.g. polished's engines bump). It complements the type checkers rather than replacing them.",
     "feasibility": "High. Everything needed is in package.json and the npm registry metadata. No compiler work is needed.",
@@ -717,13 +718,13 @@
         "id": "a1",
         "text": "Metadata-level contract breaks in minor or patch releases are common among popular packages (≥ 20% shipped at least one in two years)",
         "criticality": "high",
-        "status": "untested"
+        "status": "supported"
       },
       {
         "id": "a2",
         "text": "Flags are mostly genuine breaks rather than noise (≥ 70% of audited flags)",
         "criticality": "high",
-        "status": "untested"
+        "status": "refuted"
       },
       {
         "id": "a3",
@@ -768,6 +769,16 @@
           "ev-sv-09"
         ],
         "status": "open"
+      },
+      {
+        "id": "obj-4",
+        "text": "Engine-range rules dominate the flags and are mostly debatable (dropping end-of-life Node), which made 60% of audited flags non-genuine.",
+        "severity": "major",
+        "evidenceIds": [
+          "ev-sv-13"
+        ],
+        "response": "A narrowed, structural-only rule set was 78% precise in the audit (exploratory), but fires for only about 10% of popular packages.",
+        "status": "accepted"
       }
     ],
     "scores": {
@@ -812,8 +823,8 @@
       "assessedAt": "2026-11-04T13:57:28Z",
       "assessedBy": "critic (claude-code-session)"
     },
-    "status": "advanced",
-    "statusRationale": "Advanced. It covers breaks that the existing TypeScript checkers can't see, is cheap to build, and VENTURE can measure how often such breaks happen directly from npm before building anything.",
+    "status": "parked",
+    "statusRationale": "Parked with a narrowed recommendation. As specified, the linter is too noisy (40% genuine). A structural-only rule set looks precise (about 78% in a small exploratory sample) but helps only about 1 in 10 popular packages. Its practical value is as a 'compare with last release' feature for an existing linter like publint, pending validation on a fresh sample.",
     "relatedIdeaIds": [
       "idea-typescript-api-semver-checker"
     ],
@@ -822,14 +833,14 @@
     "practical": {
       "adopters": "npm package maintainers, as a pre-publish check, and possibly downstream teams auditing updates",
       "distribution": "open-source",
-      "smallestUsefulVersion": "A CLI (`npx`) and GitHub Action that compares the release candidate's package.json and file list with the last published version and prints contract changes needing a major bump.",
+      "smallestUsefulVersion": "A 'compare with last release' mode for publint (or a small plugin) with the structural rules: removed export paths, entry fields, CLI commands and peer tightening. Engine checks only if they know Node's end-of-life dates.",
       "buildableByVenture": true,
       "buildNote": "Needs only package.json parsing, npm registry metadata and the semver library. VENTURE already uses all three.",
-      "monetization": "As a free open-source tool. A paid angle (dependency-update risk scoring for companies) is speculative."
+      "monetization": "None realistic: best as an upstream contribution to existing open-source linters."
     },
     "createdInRun": "run-20261104-agent-release-breaks-1",
     "createdAt": "2026-11-04T13:57:28Z",
-    "updatedAt": "2026-11-04T13:57:28Z",
+    "updatedAt": "2026-11-04T14:05:01.606Z",
     "provenance": "real"
   },
   {

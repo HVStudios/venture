@@ -169,6 +169,24 @@
     "provenance": "real"
   },
   {
+    "id": "comp-publint",
+    "name": "publint (and arethetypeswrong)",
+    "url": "https://publint.dev",
+    "kind": "open-source",
+    "description": "Established linters for npm packaging mistakes (publint, about 1.3k stars) and TypeScript type resolution (arethetypeswrong, about 1.6k stars). They check a single release, not changes between releases.",
+    "strengths": [
+      "Widely known in the JS tooling community",
+      "Natural home for contract checks"
+    ],
+    "weaknesses": [
+      "No compare-with-previous-release mode found"
+    ],
+    "sourceIds": [
+      "src-publint-readme"
+    ],
+    "provenance": "real"
+  },
+  {
     "id": "comp-pypi-token-use-warning",
     "name": "PyPI warning when an API token uploads to a trusted-publishing project",
     "kind": "platform-feature",

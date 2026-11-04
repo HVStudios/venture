@@ -1321,5 +1321,66 @@
     ],
     "competitorIds": [],
     "provenance": "real"
+  },
+  {
+    "id": "ev-sv-12",
+    "claim": "20% of 400 popular npm packages (80) shipped at least one minor or patch release in two years whose metadata changed the install/import contract, by the linter's rules.",
+    "sourceId": "src-exp-npm-metadata-breaks-result",
+    "quote": "Packages with at least one flagged minor/patch release: 80 (20.0%).",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-minor-patch-releases-break-dependents"
+    ],
+    "ideaIds": [
+      "idea-npm-release-contract-linter"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-13",
+    "claim": "Only 8 of 20 audited flags were genuine breaks. Most others were debatable engine-range changes dropping end-of-life Node versions, so the full rule set is too noisy.",
+    "sourceId": "src-exp-npm-metadata-breaks-audit",
+    "quote": "Genuine: 8 of 20 (40%).",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-npm-release-contract-linter"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-14",
+    "claim": "Without the engine-range rule, the structural rules were genuine in 7 of 9 audited cases (about 78%), but they flag only about 10% of popular packages over two years.",
+    "sourceId": "src-exp-npm-metadata-breaks-analysis",
+    "quote": "In the audit sample, 7 of the 9 flags from structural rules were genuine (78%; small n).",
+    "stance": "context",
+    "epistemic": "inference",
+    "context": "Exploratory, post hoc. Suggests a narrower, more precise rule set.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-npm-release-contract-linter"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-15",
+    "claim": "publint, an established packaging linter (about 1,300 stars), already checks single releases for packaging errors, so a compare-with-previous-release mode would fit naturally as a feature there.",
+    "sourceId": "src-publint-readme",
+    "quote": "Lint packaging errors.",
+    "stance": "context",
+    "epistemic": "inference",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-npm-release-contract-linter"
+    ],
+    "competitorIds": [
+      "comp-publint"
+    ],
+    "provenance": "real"
   }
 ]

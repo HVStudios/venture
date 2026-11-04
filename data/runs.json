@@ -873,6 +873,40 @@
     "provenance": "real"
   },
   {
+    "id": "run-20261104-agent-release-breaks-2",
+    "themeId": "theme-npm-release-breaking-changes",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-04T14:05:22Z",
+    "completedAt": "2026-11-04T14:05:22Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Research brief updated after recording the outcome and decision"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 0,
+      "sourcesCited": 0,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 0
+    },
+    "queries": [],
+    "errors": [],
+    "limitations": [],
+    "usage": {
+      "note": "Interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  {
     "id": "run-20261104-agent-supply-chain-2",
     "themeId": "theme-oss-supply-chain-small-maintainers",
     "mode": "agent-session",
@@ -1023,6 +1057,66 @@
     ],
     "usage": {
       "note": "GitHub Actions (free). No model calls, no cost."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  {
+    "id": "run-20261104-exp-npm-metadata-breaks",
+    "themeId": "theme-npm-release-breaking-changes",
+    "mode": "agent-session",
+    "provider": "claude-code-session + github-actions experiment runner",
+    "startedAt": "2026-11-04T14:00:30Z",
+    "completedAt": "2026-11-04T14:05:00Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Executed in Actions run 41843383169: 400 packages, 12,240 minor/patch pairs, 137 flags"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "Manual audit of 20 fixed-seed flags: 8 genuine, 11 debatable, 1 not genuine"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "Checked existing packaging linters (publint, arethetypeswrong)"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "Idea parked with a narrowed recommendation"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Research brief updated"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 5,
+      "sourcesCited": 4,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 1,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "registry metadata for 12 audited packages and their release dates",
+      "GitHub repo search: publint, arethetypeswrong"
+    ],
+    "errors": [],
+    "limitations": [
+      "One reviewer judged the audit.",
+      "Six of the 20 audited flags came from one @inquirer release wave."
+    ],
+    "usage": {
+      "note": "GitHub Actions (free) plus interactive session. No API charges."
     },
     "limits": {},
     "provenance": "real"
