@@ -10,9 +10,9 @@
       "AI contribution policy",
       "low-effort contributions"
     ],
-    "status": "active",
+    "status": "paused",
     "createdAt": "2026-11-03",
-    "notes": "First real research theme. Spans developer tools, open source and security.",
+    "notes": "Solution search paused 2026-11-04 after pre-registered tests of five cheap triage signals and one combination all fell short (see the research journal). Reopen if: maintainer triage time is measured, GitHub ships contribution-management features worth evaluating, or new evidence links to the parked or rejected ideas.",
     "provenance": "real"
   },
   {

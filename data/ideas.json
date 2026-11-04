@@ -811,7 +811,7 @@
         "id": "a1",
         "text": "Cheap pre-review signals (recent cross-repo PR burst, account age) separate policy-violating PRs from genuine newcomer PRs well (AUC ≥ 0.75)",
         "criticality": "high",
-        "status": "weakened"
+        "status": "refuted"
       },
       {
         "id": "a2",
@@ -904,8 +904,8 @@
       "assessedAt": "2026-11-04T09:33:58Z",
       "assessedBy": "critic (claude-code-session)"
     },
-    "status": "parked",
-    "statusRationale": "Parked after a real test: the two cheapest pre-review signals discriminate weakly (AUC 0.64 and 0.54), and would flag about 30% of genuine newcomers to catch half of the policy-violating PRs. That's too unfair and too noisy to build on. Content-based signals (e.g. PR template compliance) are untested and could be examined next.",
+    "status": "rejected",
+    "statusRationale": "Rejected. Across three pre-registered tests, no cheap pre-review signal or simple combination separates policy-violating PRs from genuine newcomer PRs well enough (best AUC 0.67-0.69) without flagging many genuine newcomers. The same evidence suggests that tools built on these signals (e.g. Fossier) are unlikely to triage reliably.",
     "relatedIdeaIds": [
       "idea-contributor-comprehension-gate"
     ],
@@ -913,7 +913,7 @@
     "epistemic": "hypothesis",
     "createdInRun": "run-20261104-agent-ai-contribution-burden-3",
     "createdAt": "2026-11-04T09:33:58Z",
-    "updatedAt": "2026-11-04T12:09:32.231Z",
+    "updatedAt": "2026-11-04T12:34:02.566Z",
     "provenance": "real"
   }
 ]

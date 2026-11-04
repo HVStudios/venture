@@ -3,7 +3,7 @@
     "id": "exp-combined-signal-discrimination",
     "ideaId": "idea-validated-pre-review-triage-signals",
     "title": "Do two partial signals combined (description length + recent cross-repo PR count) separate policy-violating PRs well?",
-    "hypothesis": "An unfitted, equal-weight combination of description length (C2) and the author's recent cross-repo PR count (S1) reaches AUC \u2265 0.75 on the same 240 labelled PRs.",
+    "hypothesis": "An unfitted, equal-weight combination of description length (C2) and the author's recent cross-repo PR count (S1) reaches AUC ≥ 0.75 on the same 240 labelled PRs.",
     "uncertainty": "Whether the two partially informative cheap signals add up to a usable triage signal. This is the last cheap test before pausing the area's solution search.",
     "procedure": [
       "Pre-registered 2026-11-04. The individual signals were measured earlier (S1 AUC 0.64, C2 AUC 0.67); this combination and its rule are fixed before measuring them together.",
@@ -12,7 +12,7 @@
       "Primary: AUC of the score. Also report the newcomer flag rate at the threshold that flags half of the policy-closed PRs."
     ],
     "successCriteria": [
-      "Combined AUC \u2265 0.75 over at least 150 PRs"
+      "Combined AUC ≥ 0.75 over at least 150 PRs"
     ],
     "failureCriteria": [
       "Combined AUC < 0.70: pause the area's solution search",
@@ -29,7 +29,15 @@
       "ifFailure": "Pause the solution search in this area, and record the negative result as the area's main contribution."
     },
     "executionMode": "automatable",
-    "status": "approved",
+    "status": "completed",
+    "outcome": {
+      "recordedAt": "2026-11-04T12:34:02.066Z",
+      "result": "refuted",
+      "summary": "Pre-registered verdict: refuted. An unfitted equal-weight combination of description length and recent cross-repo PR count reached AUC 0.69, just below the 0.70 line, and would flag about 25% of genuine newcomers at half recall (worse than description length alone, about 13%). The threshold isn't moved after seeing the result.",
+      "evidenceIds": [
+        "ev-ai-burden-47"
+      ]
+    },
     "createdInRun": "run-20261104-exp-content-signals",
     "provenance": "real"
   },
@@ -37,18 +45,18 @@
     "id": "exp-content-signal-discrimination",
     "ideaId": "idea-validated-pre-review-triage-signals",
     "title": "Do content-based signals in the PR itself separate policy-violating PRs from genuine newcomer PRs?",
-    "hypothesis": "PRs closed under AI or low-effort policies differ from merged first-time LLVM PRs in cheap content signals visible before review: whether the description links an existing issue (C1), and description length (C2). At least one reaches AUC \u2265 0.75.",
+    "hypothesis": "PRs closed under AI or low-effort policies differ from merged first-time LLVM PRs in cheap content signals visible before review: whether the description links an existing issue (C1), and description length (C2). At least one reaches AUC ≥ 0.75.",
     "uncertainty": "Whether any cheap pre-review signal works, now that account-level signals have failed. If content signals fail too, the area should be paused.",
     "procedure": [
       "Pre-registered 2026-11-04 before any content data was collected.",
       "Sample: the 240 PRs from exp-followup-engagement-retrospective (120 policy-closed, 120 merged LLVM newcomer PRs). Labels are already known.",
       "For each PR, read the description (body) via the GitHub REST API. It may have been edited after closing, a limitation.",
-      "C1: does the description reference an issue (#number, or a GitHub issue URL)? Absence \u2192 more suspicious.",
-      "C2: description length in words. Direction not assumed: AUC is reported as max(AUC, 1\u2212AUC), with the observed direction stated.",
+      "C1: does the description reference an issue (#number, or a GitHub issue URL)? Absence → more suspicious.",
+      "C2: description length in words. Direction not assumed: AUC is reported as max(AUC, 1−AUC), with the observed direction stated.",
       "Primary: the better of C1 and C2 by AUC. Also report the share of genuine newcomers flagged at the threshold that flags half the policy-closed PRs."
     ],
     "successCriteria": [
-      "The better content signal reaches AUC \u2265 0.75 over at least 150 PRs with readable descriptions"
+      "The better content signal reaches AUC ≥ 0.75 over at least 150 PRs with readable descriptions"
     ],
     "failureCriteria": [
       "Both content signals have AUC < 0.60 (pause the area's solution search)",
@@ -116,7 +124,7 @@
     "outcome": {
       "recordedAt": "2026-11-03T21:44:31.614Z",
       "result": "inconclusive",
-      "summary": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49\u201369%) versus 90.2% for merged LLVM newcomers (83/92, CI 82\u201395%): a clear gap, but short of the \u2264 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
+      "summary": "Pre-registered verdict: inconclusive. Policy-closed PR authors replied 59.8% of the time (52/87, CI 49–69%) versus 90.2% for merged LLVM newcomers (83/92, CI 82–95%): a clear gap, but short of the ≤ 45.1% success threshold. Exploratory within-LLVM comparison: 80.9% vs 90.2%, so engagement alone discriminates weakly.",
       "evidenceIds": [
         "ev-ai-burden-33",
         "ev-ai-burden-34"
@@ -129,7 +137,7 @@
     "id": "exp-install-hook-watch-prospective",
     "ideaId": "idea-maintainer-publish-anomaly-alarm",
     "title": "Prospective field test: how often would the alarm fire on real releases?",
-    "hypothesis": "Across the 400 popular npm packages from exp-npm-publishing-practices, new releases that add an install script or a new dependency are rare enough (\u2264 5% of releases) that alerts wouldn't overwhelm maintainers.",
+    "hypothesis": "Across the 400 popular npm packages from exp-npm-publishing-practices, new releases that add an install script or a new dependency are rare enough (≤ 5% of releases) that alerts wouldn't overwhelm maintainers.",
     "uncertainty": "Real-world alert volume (false-alarm burden), which retrospective data on malicious releases can't show.",
     "procedure": [
       "Pre-registered 2026-11-04 before any monitoring data was collected.",
@@ -165,13 +173,13 @@
     "id": "exp-npm-publishing-practices",
     "ideaId": "idea-maintainer-publish-anomaly-alarm",
     "title": "How many popular npm packages still publish in a way a stolen token could reproduce?",
-    "hypothesis": "A substantial share (\u2265 40%) of popular npm packages' latest releases were published with neither trusted publishing (OIDC) nor staged human approval, so a maintainer-side alarm would still have a large audience.",
+    "hypothesis": "A substantial share (≥ 40%) of popular npm packages' latest releases were published with neither trusted publishing (OIDC) nor staged human approval, so a maintainer-side alarm would still have a large audience.",
     "uncertainty": "Whether npm's new protections have already closed most of the gap the alarm targets (assumption a4).",
     "procedure": [
       "Pre-registered 2026-11-04 before data collection. A metadata probe of one package (axios) confirmed the fields exist.",
       "Population A (popular): union of the top 250 results of the npm search API (popularity weight 1.0) for the keywords javascript, typescript, react, node, cli and util. Deduplicated, first 400 packages in result order.",
       "Population B (previously hijacked): the 22 campaign-representative packages from exp-publish-anomaly-campaign-replication.",
-      "For each package's latest version, read `_npmUser` from the registry: `trustedPublisher` present \u2192 OIDC; `approver` present \u2192 staged with human approval; neither \u2192 token/interactive publish.",
+      "For each package's latest version, read `_npmUser` from the registry: `trustedPublisher` present → OIDC; `approver` present → staged with human approval; neither → token/interactive publish.",
       "Report the shares, with Wilson 95% intervals."
     ],
     "successCriteria": [
@@ -196,7 +204,7 @@
     "outcome": {
       "recordedAt": "2026-11-04T09:23:34.719Z",
       "result": "supported",
-      "summary": "Pre-registered verdict: supported. 201 of 400 popular npm packages (50.2%, 95% CI 45\u201355%) published their latest release with neither trusted publishing nor staged approval. Only 31 (7.8%) use staged human approval. 13 of 22 previously hijacked packages still publish with neither. 'Neither' is an upper bound, because interactive 2FA publishes look the same in metadata.",
+      "summary": "Pre-registered verdict: supported. 201 of 400 popular npm packages (50.2%, 95% CI 45–55%) published their latest release with neither trusted publishing nor staged approval. Only 31 (7.8%) use staged human approval. 13 of 22 previously hijacked packages still publish with neither. 'Neither' is an upper bound, because interactive 2FA publishes look the same in metadata.",
       "evidenceIds": [
         "ev-sc-28",
         "ev-sc-29",
@@ -210,7 +218,7 @@
     "id": "exp-pre-review-signal-discrimination",
     "ideaId": "idea-validated-pre-review-triage-signals",
     "title": "Do cheap pre-review signals separate policy-violating PRs from genuine newcomer PRs?",
-    "hypothesis": "Authors of PRs closed under AI or low-effort policies opened many more PRs across GitHub in the 30 days before their PR than genuine first-time LLVM contributors did, so this one signal separates the groups well (AUC \u2265 0.75).",
+    "hypothesis": "Authors of PRs closed under AI or low-effort policies opened many more PRs across GitHub in the 30 days before their PR than genuine first-time LLVM contributors did, so this one signal separates the groups well (AUC ≥ 0.75).",
     "uncertainty": "Whether any cheap, pre-review signal discriminates at all (assumption a1).",
     "procedure": [
       "Pre-registered 2026-11-04 before any signal data was collected.",
@@ -219,11 +227,11 @@
       "Signal S1: number of PRs the author opened across GitHub in the 30 days before the PR (search API, type:pr author:<login> created:<range>).",
       "Signal S2: author account age at PR creation, in days (users API).",
       "Authors whose accounts no longer exist are counted and reported separately, and excluded from the AUC.",
-      "Primary: AUC of S1 (higher \u2192 policy-closed). Secondary: AUC of S2 (younger \u2192 policy-closed). Secondary: S1 AUC within LLVM only.",
+      "Primary: AUC of S1 (higher → policy-closed). Secondary: AUC of S2 (younger → policy-closed). Secondary: S1 AUC within LLVM only.",
       "Report the share of genuine newcomers flagged at the threshold that catches 50% of policy-closed PRs."
     ],
     "successCriteria": [
-      "S1 AUC \u2265 0.75 over at least 150 PRs with readable authors"
+      "S1 AUC ≥ 0.75 over at least 150 PRs with readable authors"
     ],
     "failureCriteria": [
       "Both S1 and S2 have AUC < 0.60 (cheap signals don't discriminate)",
@@ -290,7 +298,7 @@
     "outcome": {
       "recordedAt": "2026-11-03T23:42:45.472Z",
       "result": "supported",
-      "summary": "Pre-registered verdict: supported. 12 of 15 classifiable independent campaigns (80%, 95% CI 55\u201393%) added an install-time hook, versus 1.7% of 423 legitimate releases. Caveats: exactly the minimum of 15 classifiable campaigns; 7 campaigns of unknown mechanism (the share could range from 55% to 86%); 3 file-modification campaigns would evade the alarm.",
+      "summary": "Pre-registered verdict: supported. 12 of 15 classifiable independent campaigns (80%, 95% CI 55–93%) added an install-time hook, versus 1.7% of 423 legitimate releases. Caveats: exactly the minimum of 15 classifiable campaigns; 7 campaigns of unknown mechanism (the share could range from 55% to 86%); 3 file-modification campaigns would evade the alarm.",
       "evidenceIds": [
         "ev-sc-19",
         "ev-sc-20",
@@ -337,7 +345,7 @@
     "outcome": {
       "recordedAt": "2026-11-03T23:03:22.418Z",
       "result": "supported",
-      "summary": "Pre-registered verdict: supported. 58/58 classifiable hijack incidents carried an install-hook signal (95% CI 94\u2013100%), versus 1.3% of 1,119 legitimate releases. Caveat from the independence check: 56 of 60 incidents belong to one Shai-Hulud campaign wave, so this is about 5 independent attacks. Assumption a1 stays untested pending a campaign-level replication (pre-registered).",
+      "summary": "Pre-registered verdict: supported. 58/58 classifiable hijack incidents carried an install-hook signal (95% CI 94–100%), versus 1.3% of 1,119 legitimate releases. Caveat from the independence check: 56 of 60 incidents belong to one Shai-Hulud campaign wave, so this is about 5 independent attacks. Assumption a1 stays untested pending a campaign-level replication (pre-registered).",
       "evidenceIds": [
         "ev-sc-16",
         "ev-sc-17",

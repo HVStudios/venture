@@ -232,6 +232,21 @@
     "provenance": "real"
   },
   {
+    "id": "src-exp-combined-signals-result",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-combined-signal-discrimination/RESULT.md",
+    "title": "VENTURE experiment result: combined triage signals (pre-registered)",
+    "publisher": "VENTURE (own experiment, GitHub Actions run 41827267462)",
+    "publishedAt": "2026-11-04",
+    "retrievedAt": "2026-11-04T12:34:00Z",
+    "sourceType": "dataset",
+    "excerpt": "Combined score (mean percentile rank of description length and prior 30-day cross-repo PR count): AUC 0.69. … At the threshold that flags half of the policy-closed PRs, 24.6% of genuine newcomer PRs would also be flagged. … Verdict (pre-registered rule): refuted: combined AUC 0.69 < 0.70.",
+    "limitations": "Own experiment. The control group is LLVM-only.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-exp-content-signals-result",
     "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-content-signal-discrimination/RESULT.md",
     "title": "VENTURE experiment result: content-based triage signals (pre-registered)",

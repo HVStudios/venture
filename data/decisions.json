@@ -306,6 +306,18 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261104-combined-signal-discrimination-3",
+    "at": "2026-11-04T12:34:02.066Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-combined-signal-discrimination",
+    "action": "complete",
+    "fromStatus": "approved",
+    "toStatus": "refuted",
+    "rationale": "Pre-registered verdict: refuted. An unfitted equal-weight combination of description length and recent cross-repo PR count reached AUC 0.69, just below the 0.70 line, and would flag about 25% of genuine newcomers at half recall (worse than description length alone, about 13%). The threshold isn't moved after seeing the result.",
+    "actor": "experiment designer",
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261104-content-signal-discrimination",
     "at": "2026-11-04T12:04:17.644Z",
     "subjectType": "experiment",
@@ -392,6 +404,19 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261104-pause-ai-contribution-burden",
+    "at": "2026-11-04T12:34:28Z",
+    "runId": "run-20261104-exp-combined-signals",
+    "subjectType": "theme",
+    "subjectId": "theme-ai-contribution-burden",
+    "action": "park",
+    "fromStatus": "active",
+    "toStatus": "paused",
+    "rationale": "Pausing the solution search, as pre-registered: the combined-signal test fell below AUC 0.70. Signal collection for this area stops until it's reopened.",
+    "actor": "director",
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261104-pre-review-signal-discrimination",
     "at": "2026-11-04T09:34:39.129Z",
     "subjectType": "experiment",
@@ -442,6 +467,20 @@
     "actor": "director",
     "attractiveness": 66,
     "evidenceStrength": 78,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261104-validated-pre-review-triage-signals-2",
+    "at": "2026-11-04T12:34:02.566Z",
+    "subjectType": "idea",
+    "subjectId": "idea-validated-pre-review-triage-signals",
+    "action": "reject",
+    "fromStatus": "parked",
+    "toStatus": "rejected",
+    "rationale": "Rejected. Across three pre-registered tests, no cheap pre-review signal or simple combination separates policy-violating PRs from genuine newcomer PRs well enough (best AUC 0.67-0.69) without flagging many genuine newcomers. The same evidence suggests that tools built on these signals (e.g. Fossier) are unlikely to triage reliably.",
+    "actor": "director",
+    "attractiveness": 66,
+    "evidenceStrength": 67,
     "provenance": "real"
   }
 ]

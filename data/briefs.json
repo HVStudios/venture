@@ -124,6 +124,15 @@
           "ev-ai-burden-46"
         ],
         "epistemic": "fact"
+      },
+      {
+        "id": "f11",
+        "statement": "Combining the two best cheap signals doesn't fix the problem. An unfitted combination of description length and recent cross-repo PR count reached AUC 0.69, just below the pre-registered 0.70 line, and would flag about a quarter of genuine newcomers.",
+        "strength": "Moderate. The third pre-registered test on the same 240 labelled PRs. LLVM-only control group.",
+        "evidenceIds": [
+          "ev-ai-burden-47"
+        ],
+        "epistemic": "fact"
       }
     ],
     "uncertainties": [
@@ -133,31 +142,29 @@
       "News coverage and blogs couldn't be read from the research environment, so secondary reporting (e.g. a reported Linux Foundation estimate) remains unverified."
     ],
     "conclusion": {
-      "belief": "The burden is real and widespread, and much of it is triage: deciding which PRs deserve attention at all. Projects largely accept AI help and object to unreviewed, low-understanding work, so detecting AI is the wrong lever, and blunt AI rules carry a fairness cost. None of the simple signals tested so far (author follow-up, recent PR volume elsewhere, account age, issue references, description length) separates low-effort from genuine contributions well enough on its own. Long descriptions are the strongest clue. No solution in this area is currently worth building.",
+      "belief": "The burden is real and widespread, and much of it is triage: deciding which PRs deserve attention at all. Projects largely accept AI help and object to unreviewed, low-understanding work, so detecting AI is the wrong lever, and blunt AI rules carry a fairness cost. VENTURE tested whether cheap, automatic signals could take over part of that triage: author follow-up, recent PR volume elsewhere, account age, issue references, description length, and a combination. None separates low-effort from genuine contributions well enough without flagging many genuine newcomers. The main contribution of this area is that negative result: tools built on such signals are unlikely to triage reliably. Judging contributions still needs a human, or a much deeper signal than these.",
       "confidence": "medium",
-      "confidenceReason": "Medium for the problem: many independent primary sources and a 281-policy study agree. Medium for the negative result on simple signals: two pre-registered tests on real PRs, though with an LLVM-only control group.",
+      "confidenceReason": "Medium: four pre-registered tests on real PRs agree that cheap signals are weak (best AUC 0.67–0.69). It's not high because the control group is LLVM-only, and deeper signals (e.g. reading the code change itself) weren't tested.",
       "unknowns": [
-        "Whether the two partially informative signals combined are good enough",
+        "Whether deeper, content-aware analysis of the code change would discriminate better",
         "How much maintainer time triage actually takes",
-        "Which of the existing countermeasures work best"
+        "Whether results differ outside LLVM"
       ],
-      "continueInvestigation": true,
-      "continueReason": "One last cheap, pre-registered test (combining the two best signals) decides whether to keep searching for a solution or pause the area."
+      "continueInvestigation": false,
+      "continueReason": "Paused, as the pre-registered rule required. Reopen if maintainer triage time is measured, if GitHub ships contribution-management features worth evaluating, or if new evidence links to the parked or rejected ideas."
     },
     "nextSteps": [
       {
-        "text": "Test an unfitted combination of description length and recent cross-repo PR count. Below AUC 0.70, the solution search pauses.",
-        "kind": "experiment",
-        "experimentId": "exp-combined-signal-discrimination",
-        "issue": 17
+        "text": "None scheduled: the solution search is paused. The reconsideration queue will surface parked and rejected ideas if new evidence arrives.",
+        "kind": "decision"
       },
       {
-        "text": "If the combination fails, pause the solution search and record the negative results as the area's main finding.",
-        "kind": "decision"
+        "text": "Optional: validate the negative result on a non-LLVM control group before publishing it more widely.",
+        "kind": "research"
       }
     ],
-    "updatedAt": "2026-11-04T12:10:04Z",
-    "updatedInRun": "run-20261104-exp-content-signals",
+    "updatedAt": "2026-11-04T12:34:28Z",
+    "updatedInRun": "run-20261104-exp-combined-signals",
     "author": "research director (Claude Code session)",
     "provenance": "real"
   },

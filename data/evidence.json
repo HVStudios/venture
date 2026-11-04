@@ -677,6 +677,22 @@
     "provenance": "real"
   },
   {
+    "id": "ev-ai-burden-47",
+    "claim": "Combining the two best cheap signals (description length and recent cross-repo PR count) without fitting reaches only AUC 0.69, below the pre-registered 0.70 threshold, and flags about 25% of genuine newcomers at half recall.",
+    "sourceId": "src-exp-combined-signals-result",
+    "quote": "refuted: combined AUC 0.69 < 0.70",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-validated-pre-review-triage-signals"
+    ],
+    "competitorIds": [
+      "comp-fossier"
+    ],
+    "provenance": "real"
+  },
+  {
     "id": "ev-sc-01",
     "claim": "Two malicious axios releases were published through the maintainer's compromised npm account (March 2026).",
     "sourceId": "src-axios-postmortem-2026",
