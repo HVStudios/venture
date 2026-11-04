@@ -1,0 +1,615 @@
+{
+  "run": {
+    "id": "run-20261104-agent-supply-chain-2",
+    "themeId": "theme-oss-supply-chain-small-maintainers",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-04T09:05:00Z",
+    "completedAt": "2026-11-04T09:18:07Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "Platform and vendor survey (issue #35): npm docs, PyPI email templates, vendor repositories"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "New major objection: npm offers opt-in prevention"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Pre-registered: share of popular npm packages still publishing without trusted publishing or staged approval"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Brief updated"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 10,
+      "sourcesCited": 6,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "GitHub code search: repo:npm/documentation (publish notification, staged publish, disallow tokens, allowed actions)",
+      "GitHub code search: repo:pypi/warehouse email templates (78 subject templates listed)",
+      "GitHub repo search: org:SocketDev, org:step-security",
+      "npm registry metadata probe: axios latest version _npmUser"
+    ],
+    "errors": [
+      "Vendor and registry websites (socket.dev, stepsecurity.io, docs.npmjs.com, docs.pypi.org) are not reachable from the research environment, so only their GitHub-hosted material was read."
+    ],
+    "limitations": [
+      "Vendor maintainer-side features remain unverified (assumption a3 is weakened, not refuted).",
+      "Documentation shows that features exist, not how widely they're adopted."
+    ],
+    "usage": {
+      "note": "Interactive Claude Code session under the owner's subscription. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [],
+  "sources": [
+    {
+      "id": "src-npm-staged-publishing",
+      "url": "https://raw.githubusercontent.com/npm/documentation/main/content/packages-and-modules/securing-your-code/staged-publishing.mdx",
+      "title": "npm Docs: Staged publishing for npm packages",
+      "publisher": "npm (GitHub)",
+      "retrievedAt": "2026-11-04T09:10:00Z",
+      "sourceType": "docs",
+      "excerpt": "Staged publishing adds an approval step before packages go live on the npm registry. … A maintainer must then review and explicitly approve the staged package — with two-factor authentication (2FA) via the CLI or [npmjs.com](https://www.npmjs.com) — before it becomes publicly available.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "publishedAt": "2026-05-20",
+      "limitations": "Documentation describes the feature, not its adoption. The publish date is the documentation commit date (npm/documentation#1961)."
+    },
+    {
+      "id": "src-npm-stage-command",
+      "url": "https://raw.githubusercontent.com/npm/documentation/main/content/cli/v11/commands/npm-stage.mdx",
+      "title": "npm CLI docs: npm-stage",
+      "publisher": "npm (GitHub)",
+      "retrievedAt": "2026-11-04T09:10:00Z",
+      "sourceType": "docs",
+      "excerpt": "Staged publishing allows package maintainers to require proof-of-presence for all publishes. … The act of staging does not prompt for 2FA and can be done with any token type, the act of approving will.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-npm-require-2fa-disallow-tokens",
+      "url": "https://raw.githubusercontent.com/npm/documentation/main/content/packages-and-modules/securing-your-code/requiring-2fa-for-package-publishing-and-settings-modification.mdx",
+      "title": "npm Docs: Requiring 2FA for package publishing and settings modification",
+      "publisher": "npm (GitHub)",
+      "retrievedAt": "2026-11-04T09:10:00Z",
+      "sourceType": "docs",
+      "excerpt": "Granular access tokens cannot be used to publish packages, regardless of their bypass 2FA setting.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-npm-trusted-publishers-actions",
+      "url": "https://raw.githubusercontent.com/npm/documentation/main/content/packages-and-modules/securing-your-code/trusted-publishers.mdx",
+      "title": "npm Docs: Trusted publishing for npm packages (allowed actions)",
+      "publisher": "npm (GitHub)",
+      "retrievedAt": "2026-11-04T09:10:00Z",
+      "sourceType": "docs",
+      "excerpt": "`npm stage publish` is always allowed. Choose whether this trusted publisher can also publish directly with `npm publish`",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-pypi-token-in-tp-project-email",
+      "url": "https://raw.githubusercontent.com/pypi/warehouse/main/warehouse/templates/email/api-token-used-in-trusted-publisher-project/body.txt",
+      "title": "PyPI (Warehouse) email template: API token used in a Trusted Publishing project",
+      "publisher": "PyPI / Warehouse (GitHub)",
+      "retrievedAt": "2026-11-04T09:10:00Z",
+      "sourceType": "repository",
+      "excerpt": "was used to upload files to the project {{ project_name }} ({{ project_href }}), even though the project has a Trusted Publisher configured.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "publishedAt": "2024-04-15",
+      "limitations": "An email template, not usage statistics. It was introduced in pypa/warehouse#15641. PyPI's 78 email templates include none that announces every newly published release."
+    },
+    {
+      "id": "src-socket-cli-readme",
+      "url": "https://raw.githubusercontent.com/SocketDev/socket-cli/main/README.md",
+      "title": "Socket CLI (README)",
+      "publisher": "Socket (GitHub)",
+      "retrievedAt": "2026-11-04T09:10:00Z",
+      "sourceType": "vendor",
+      "excerpt": "letting you scan dependencies, audit packages, and gate installs from your terminal or CI.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real",
+      "limitations": "Only the open-source CLI was readable; socket.dev product pages couldn't be fetched from the research environment."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-sc-22",
+      "claim": "Since May 2026, npm lets maintainers stage releases so that a human must approve each one with 2FA before it goes live.",
+      "sourceId": "src-npm-staged-publishing",
+      "quote": "Staged publishing adds an approval step before packages go live on the npm registry.",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [
+        "comp-npm-staged-publishing"
+      ],
+      "provenance": "real",
+      "context": "Prevention instead of detection: an attacker holding only a token can stage a release but not make it live."
+    },
+    {
+      "id": "ev-sc-23",
+      "claim": "Maintainers can require human proof-of-presence (2FA) for every publish.",
+      "sourceId": "src-npm-stage-command",
+      "quote": "Staged publishing allows package maintainers to require proof-of-presence for all publishes.",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-compromised-maintainer-credentials-ship-malware"
+      ],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [
+        "comp-npm-staged-publishing"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-24",
+      "claim": "A package setting can forbid publishing with access tokens altogether, closing the stolen-token route that hit axios.",
+      "sourceId": "src-npm-require-2fa-disallow-tokens",
+      "quote": "Granular access tokens cannot be used to publish packages, regardless of their bypass 2FA setting.",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-compromised-maintainer-credentials-ship-malware"
+      ],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [
+        "comp-npm-staged-publishing"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-25",
+      "claim": "CI pipelines can be restricted to staging only, so even a compromised CI job can't publish without human approval.",
+      "sourceId": "src-npm-trusted-publishers-actions",
+      "quote": "`npm stage publish` is always allowed. Choose whether this trusted publisher can also publish directly with `npm publish`",
+      "stance": "context",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [
+        "comp-npm-staged-publishing"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-26",
+      "claim": "Since 2024, PyPI emails maintainers when a long-lived API token uploads to a project that uses trusted publishing: a partial, platform-provided version of the alarm.",
+      "sourceId": "src-pypi-token-in-tp-project-email",
+      "quote": "even though the project has a Trusted Publisher configured.",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [
+        "comp-pypi-token-use-warning"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-27",
+      "claim": "Socket's public tooling is consumer-side (scanning and gating installs). Whether it offers maintainer-side release alerts couldn't be verified.",
+      "sourceId": "src-socket-cli-readme",
+      "quote": "letting you scan dependencies, audit packages, and gate installs from your terminal or CI.",
+      "stance": "context",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [
+        "comp-supply-chain-security-vendors"
+      ],
+      "provenance": "real"
+    }
+  ],
+  "problems": [],
+  "competitors": [
+    {
+      "id": "comp-npm-staged-publishing",
+      "name": "npm staged publishing + token-free publishing settings",
+      "kind": "platform-feature",
+      "url": "https://docs.npmjs.com/staged-publishing",
+      "description": "Opt-in npm features: releases are staged and must be approved by a maintainer with 2FA; a package setting can forbid token publishing; trusted publishers can be limited to staging.",
+      "strengths": [
+        "Prevents (not just detects) token-based hijacks",
+        "Free and built into the registry"
+      ],
+      "weaknesses": [
+        "Opt-in: protects only maintainers who enable it",
+        "A human approving a release still has to notice what changed (inference)",
+        "Launched May 2026; adoption unknown"
+      ],
+      "sourceIds": [
+        "src-npm-staged-publishing",
+        "src-npm-stage-command",
+        "src-npm-require-2fa-disallow-tokens",
+        "src-npm-trusted-publishers-actions"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "comp-pypi-token-use-warning",
+      "name": "PyPI warning when an API token uploads to a trusted-publishing project",
+      "kind": "platform-feature",
+      "description": "An email to maintainers when a long-lived token is used for a project configured for trusted publishing.",
+      "strengths": [
+        "Catches the stolen-token pattern on projects that migrated"
+      ],
+      "weaknesses": [
+        "Only for projects with trusted publishing configured",
+        "No general notice of every new release (none among PyPI's email templates)"
+      ],
+      "sourceIds": [
+        "src-pypi-token-in-tp-project-email"
+      ],
+      "provenance": "real"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "idea-maintainer-publish-anomaly-alarm",
+      "title": "Publish-anomaly alarm for maintainers",
+      "summary": "Watches the registry for new versions of a maintainer's own packages and alerts within minutes if a release differs structurally from the maintainer's normal releases.",
+      "problemIds": [
+        "prob-compromised-maintainer-credentials-ship-malware"
+      ],
+      "themeIds": [
+        "theme-oss-supply-chain-small-maintainers"
+      ],
+      "targetUsers": "Maintainers of widely used packages without a security team",
+      "solution": "Subscribe to registry publish events for owned packages. Diff each release against the previous one for structural anomalies: newly added dependencies, new install-time hooks or .pth files, publishing outside the usual CI identity, missing provenance. Notify the maintainer through an out-of-band channel they control.",
+      "competitorIds": [
+        "comp-npm-staged-publishing",
+        "comp-pypi-token-use-warning",
+        "comp-registry-trusted-publishing",
+        "comp-supply-chain-security-vendors"
+      ],
+      "differentiation": "Maintainer-side and owner-verified: the maintainer can say 'that wasn't me' fastest. Vendors protect consumers after analysis.",
+      "feasibility": "Registry metadata and tarballs are public. The anomaly rules are simple diffs.",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "Malicious releases from compromised accounts differ structurally (new deps, new hooks, different publisher) from the maintainer's normal releases",
+          "criticality": "high",
+          "status": "supported"
+        },
+        {
+          "id": "a2",
+          "text": "Maintainers would notice and react faster than the current detection time (~3 h for axios)",
+          "criticality": "high",
+          "status": "untested"
+        },
+        {
+          "id": "a3",
+          "text": "Commercial scanners don't already offer free maintainer-side alerts",
+          "criticality": "medium",
+          "status": "weakened"
+        },
+        {
+          "id": "a4",
+          "text": "A substantial share of popular packages still publish in a way a stolen token could reproduce (no trusted publishing, no staged approval)",
+          "criticality": "high",
+          "status": "untested"
+        }
+      ],
+      "risks": [
+        "An attacker who controls the account may also control the notification channel",
+        "Vendors may already cover this (not examined)",
+        "False positives on legitimate dependency changes"
+      ],
+      "nextSteps": [
+        "Run exp-npm-publishing-practices",
+        "If the gap is real, consider a review aid for staged releases that highlights new install hooks at approval time"
+      ],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "Commercial scanners (Socket, StepSecurity) already analyse new releases quickly. The marginal value of maintainer-side alerts is unproven.",
+          "severity": "major",
+          "evidenceIds": [],
+          "status": "open"
+        },
+        {
+          "id": "obj-2",
+          "text": "If the attacker controls the maintainer's account or email, alerts may be intercepted.",
+          "severity": "major",
+          "evidenceIds": [],
+          "response": "Use a channel registered independently of the registry account.",
+          "status": "open"
+        },
+        {
+          "id": "obj-3",
+          "text": "Some attacks, like asyncapi's branch-token compromise, publish through the normal CI pipeline, so publisher-identity checks wouldn't fire.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-sc-06"
+          ],
+          "status": "open"
+        },
+        {
+          "id": "obj-4",
+          "text": "npm now offers prevention to maintainers who opt in (staged publishing with 2FA approval, token-free publishing), and PyPI warns about token uploads to trusted-publishing projects. The alarm only adds value for maintainers who haven't adopted these.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-sc-22",
+            "ev-sc-23",
+            "ev-sc-24",
+            "ev-sc-26"
+          ],
+          "status": "open",
+          "response": "Measure adoption: if most popular packages still publish without these protections, the alarm's audience remains large (exp-npm-publishing-practices)."
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 5,
+            "rationale": "RATs and credential stealers in packages with huge reach."
+          },
+          "frequency": {
+            "score": 3,
+            "rationale": "Several high-profile incidents in 2026 in the captured signals."
+          },
+          "userValue": {
+            "score": 4,
+            "rationale": "Could cut exposure windows, if anomalies are detectable."
+          },
+          "competitiveGap": {
+            "score": 3,
+            "rationale": "Vendors exist; maintainer-side free alerts not verified either way."
+          },
+          "differentiation": {
+            "score": 3,
+            "rationale": "Owner-verified signal."
+          },
+          "feasibility": {
+            "score": 4,
+            "rationale": "Public metadata, simple diffs."
+          },
+          "costComplexity": {
+            "score": 4,
+            "rationale": "A small service or Action."
+          },
+          "userAccess": {
+            "score": 3,
+            "rationale": "Maintainers are reachable on GitHub."
+          },
+          "validationCost": {
+            "score": 5,
+            "rationale": "Can be checked retrospectively on public registry data for $0."
+          }
+        },
+        "assessedAt": "2026-11-03T22:45:20Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "advanced",
+      "statusRationale": "Stays advanced, with a narrower case. The technical premise is supported, but npm now offers prevention to maintainers who opt in. Whether the alarm still has a meaningful audience depends on how many popular packages haven't adopted those protections, which is being measured next.",
+      "relatedIdeaIds": [],
+      "epistemic": "hypothesis",
+      "createdInRun": "run-20261103-agent-supply-chain-1",
+      "createdAt": "2026-11-03T22:45:20Z",
+      "updatedAt": "2026-11-04T09:18:07Z",
+      "provenance": "real"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "exp-npm-publishing-practices",
+      "ideaId": "idea-maintainer-publish-anomaly-alarm",
+      "title": "How many popular npm packages still publish in a way a stolen token could reproduce?",
+      "hypothesis": "A substantial share (≥ 40%) of popular npm packages' latest releases were published with neither trusted publishing (OIDC) nor staged human approval, so a maintainer-side alarm would still have a large audience.",
+      "uncertainty": "Whether npm's new protections have already closed most of the gap the alarm targets (assumption a4).",
+      "procedure": [
+        "Pre-registered 2026-11-04 before data collection. A metadata probe of one package (axios) confirmed the fields exist.",
+        "Population A (popular): union of the top 250 results of the npm search API (popularity weight 1.0) for the keywords javascript, typescript, react, node, cli and util. Deduplicated, first 400 packages in result order.",
+        "Population B (previously hijacked): the 22 campaign-representative packages from exp-publish-anomaly-campaign-replication.",
+        "For each package's latest version, read `_npmUser` from the registry: `trustedPublisher` present → OIDC; `approver` present → staged with human approval; neither → token/interactive publish.",
+        "Report the shares, with Wilson 95% intervals."
+      ],
+      "successCriteria": [
+        "At least 40% of population A's latest releases have neither trusted publishing nor staged approval (the alarm still has a large audience)"
+      ],
+      "failureCriteria": [
+        "Fewer than 15% have neither (npm's protections already cover most popular packages)",
+        "Fewer than 200 packages could be read (inconclusive)"
+      ],
+      "estimatedTime": "< 1 hour of automated analysis",
+      "estimatedCostUsd": 0,
+      "resources": [
+        "Public npm registry and search API"
+      ],
+      "expectedLearning": "How much of the popular npm ecosystem is still exposed to the token-theft route that hit axios, and whether previously hijacked packages changed their publishing after the attack.",
+      "nextSteps": {
+        "ifSuccess": "Refine the alarm toward the exposed population, and consider a staged-release review aid that highlights new install hooks at approval time.",
+        "ifFailure": "Park the standalone alarm. npm's own controls cover most of its audience."
+      },
+      "executionMode": "automatable",
+      "status": "proposed",
+      "createdInRun": "run-20261104-agent-supply-chain-2",
+      "provenance": "real"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "dec-20261104-revise-publish-anomaly-alarm",
+      "at": "2026-11-04T09:18:07Z",
+      "runId": "run-20261104-agent-supply-chain-2",
+      "subjectType": "idea",
+      "subjectId": "idea-maintainer-publish-anomaly-alarm",
+      "action": "revise",
+      "fromStatus": "advanced",
+      "toStatus": "advanced",
+      "rationale": "Stays advanced, with a narrower case. The technical premise is supported, but npm now offers prevention to maintainers who opt in. Whether the alarm still has a meaningful audience depends on how many popular packages haven't adopted those protections, which is being measured next.",
+      "actor": "director",
+      "provenance": "real"
+    }
+  ],
+  "briefs": [
+    {
+      "id": "brief-oss-supply-chain-small-maintainers",
+      "themeId": "theme-oss-supply-chain-small-maintainers",
+      "researchQuestion": "When attackers take over a maintainer's account or publishing credentials, they can push malware to everyone who installs the next release. What can volunteer maintainers without a security team realistically do to catch this?",
+      "whyItMatters": "In 2026, compromised releases of very widely used packages (axios on npm, litellm on PyPI, asyncapi and TanStack packages) installed remote-access trojans or stole credentials. The maintainers were victims, not insiders. Most open-source maintainers have no security staff to notice when a release they didn't make appears.",
+      "subQuestions": [
+        "How do these compromises happen, and how long do malicious releases stay live?",
+        "What already protects consumers (release delays, trusted publishing), and what gaps remain?",
+        "Do hijacked releases look structurally different from a maintainer's normal releases, so that a simple alarm could catch them?"
+      ],
+      "findings": [
+        {
+          "id": "f1",
+          "statement": "Compromised maintainer accounts and tokens are a recurring route to malware in popular packages. At least four 2026 incidents were found, including axios (a remote-access trojan via an injected dependency) and litellm (a credential stealer).",
+          "strength": "Moderate. Four independent incident reports, taken from the projects' own issue trackers.",
+          "evidenceIds": [
+            "ev-sc-01",
+            "ev-sc-02",
+            "ev-sc-04",
+            "ev-sc-06",
+            "ev-sc-07"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f2",
+          "statement": "Malicious releases are typically live for hours: about 3 hours for axios. Delaying installs of brand-new versions is an effective defence that users actively ask for, and the platforms are already shipping it (pnpm, Dependabot cooldown).",
+          "strength": "Moderate. Feature requests with hundreds of reactions, and a study finding 83 of 92 cooldown adoptions were security-motivated.",
+          "evidenceIds": [
+            "ev-sc-03",
+            "ev-sc-08",
+            "ev-sc-10",
+            "ev-sc-11",
+            "ev-sc-12"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f3",
+          "statement": "Most hijacks of legitimate npm packages add an install-time hook (a script that runs on install), something legitimate releases almost never do. Across 15 independent attack campaigns (2024–2026) whose mechanism could be determined, 12 (80%) added such a hook, versus 1.7% of legitimate releases of the same packages.",
+          "strength": "Moderate. A pre-registered replication at campaign level supports an earlier package-level result. But it rests on the minimum sample of 15 campaigns, and 7 more campaigns had no described mechanism (the share could be anywhere from 55% to 86%).",
+          "evidenceIds": [
+            "ev-sc-19",
+            "ev-sc-21",
+            "ev-sc-16",
+            "ev-sc-17"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f4",
+          "statement": "About one in five characterisable campaigns would slip past such an alarm: asyncapi, node-ipc and netspeedutil injected code into existing files without adding hooks or dependencies.",
+          "strength": "Moderate. 3 of 15 classifiable campaigns, consistent with the earlier asyncapi counter-example.",
+          "evidenceIds": [
+            "ev-sc-20",
+            "ev-sc-06",
+            "ev-sc-18"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f5",
+          "statement": "Teams that adopt release delays overwhelmingly use one simple default (most often seven days). Fine-grained settings are used by fewer than 10%.",
+          "strength": "Moderate. One study of early adopters.",
+          "evidenceIds": [
+            "ev-sc-13"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f6",
+          "statement": "The platforms have started to close the stolen-token route themselves. Since May 2026, npm lets maintainers require a human 2FA approval for every release (staged publishing) and forbid publishing with tokens. Since 2024, PyPI emails maintainers when a token uploads to a project that uses trusted publishing.",
+          "strength": "Strong for existence: the registries' own documentation and code. Adoption is unknown and opt-in.",
+          "evidenceIds": [
+            "ev-sc-22",
+            "ev-sc-23",
+            "ev-sc-24",
+            "ev-sc-26"
+          ],
+          "epistemic": "fact"
+        }
+      ],
+      "uncertainties": [
+        "How many maintainers have adopted npm's staged publishing or token-free publishing (being measured).",
+        "Whether security vendors offer maintainer-side release alerts. Their public tooling is consumer-side, and their product sites couldn't be read.",
+        "Campaign grouping is heuristic, and 7 of 22 campaigns had no described mechanism.",
+        "The incident sample favours large, well-publicised attacks."
+      ],
+      "conclusion": {
+        "belief": "Account and token compromise of popular packages is a severe and recurring problem. Most independent hijack campaigns add an install-time hook that legitimate releases rarely add, so a structural alarm is technically sound. But npm now offers opt-in prevention (human-approved staged releases, token-free publishing), so the alarm's value depends on how many maintainers haven't adopted it. That is the decisive open question.",
+        "confidence": "medium",
+        "confidenceReason": "Moderate support for the technical premise from two pre-registered experiments. The market case is uncertain: the platforms are moving into this space, and adoption hasn't been measured yet.",
+        "unknowns": [
+          "What share of popular packages still publish without trusted publishing or staged approval",
+          "Whether vendors already offer maintainer-side alerts",
+          "How to catch attacks that only modify existing files"
+        ],
+        "continueInvestigation": true,
+        "continueReason": "One cheap measurement (publishing practices across popular npm packages) decides whether the idea still has an audience."
+      },
+      "nextSteps": [
+        {
+          "text": "Measure how many popular npm packages still publish without trusted publishing or staged human approval (pre-registered experiment).",
+          "kind": "experiment",
+          "experimentId": "exp-npm-publishing-practices"
+        },
+        {
+          "text": "If the gap is large, consider a review aid for staged releases that flags new install hooks at approval time. If small, park the standalone alarm.",
+          "kind": "decision"
+        },
+        {
+          "text": "Verify vendor offerings once their sites are reachable from the research environment.",
+          "kind": "owner-action",
+          "issue": 10
+        }
+      ],
+      "updatedAt": "2026-11-04T09:18:07Z",
+      "updatedInRun": "run-20261104-agent-supply-chain-2",
+      "author": "research director (Claude Code session)",
+      "provenance": "real"
+    }
+  ]
+}

@@ -456,8 +456,10 @@
     "targetUsers": "Maintainers of widely used packages without a security team",
     "solution": "Subscribe to registry publish events for owned packages. Diff each release against the previous one for structural anomalies: newly added dependencies, new install-time hooks or .pth files, publishing outside the usual CI identity, missing provenance. Notify the maintainer through an out-of-band channel they control.",
     "competitorIds": [
-      "comp-supply-chain-security-vendors",
-      "comp-registry-trusted-publishing"
+      "comp-npm-staged-publishing",
+      "comp-pypi-token-use-warning",
+      "comp-registry-trusted-publishing",
+      "comp-supply-chain-security-vendors"
     ],
     "differentiation": "Maintainer-side and owner-verified: the maintainer can say 'that wasn't me' fastest. Vendors protect consumers after analysis.",
     "feasibility": "Registry metadata and tarballs are public. The anomaly rules are simple diffs.",
@@ -478,6 +480,12 @@
         "id": "a3",
         "text": "Commercial scanners don't already offer free maintainer-side alerts",
         "criticality": "medium",
+        "status": "weakened"
+      },
+      {
+        "id": "a4",
+        "text": "A substantial share of popular packages still publish in a way a stolen token could reproduce (no trusted publishing, no staged approval)",
+        "criticality": "high",
         "status": "untested"
       }
     ],
@@ -487,8 +495,8 @@
       "False positives on legitimate dependency changes"
     ],
     "nextSteps": [
-      "Retrospective check on the documented incidents (experiment)",
-      "Survey vendor offerings for maintainer-side alerts"
+      "Run exp-npm-publishing-practices",
+      "If the gap is real, consider a review aid for staged releases that highlights new install hooks at approval time"
     ],
     "objections": [
       {
@@ -513,6 +521,19 @@
         "evidenceIds": [
           "ev-sc-06"
         ],
+        "status": "open"
+      },
+      {
+        "id": "obj-4",
+        "text": "npm now offers prevention to maintainers who opt in (staged publishing with 2FA approval, token-free publishing), and PyPI warns about token uploads to trusted-publishing projects. The alarm only adds value for maintainers who haven't adopted these.",
+        "severity": "major",
+        "evidenceIds": [
+          "ev-sc-22",
+          "ev-sc-23",
+          "ev-sc-24",
+          "ev-sc-26"
+        ],
+        "response": "Measure adoption: if most popular packages still publish without these protections, the alarm's audience remains large (exp-npm-publishing-practices).",
         "status": "open"
       }
     ],
@@ -559,12 +580,12 @@
       "assessedBy": "critic (claude-code-session)"
     },
     "status": "advanced",
-    "statusRationale": "Stays advanced. The campaign-level replication supports the core assumption: most independent hijack campaigns add an install-time hook that legitimate releases rarely add. It also confirms a blind spot, since about one in five classifiable campaigns only modified existing files. Before building anything, check whether vendors or registries already offer maintainer-side alerts.",
+    "statusRationale": "Stays advanced, with a narrower case. The technical premise is supported, but npm now offers prevention to maintainers who opt in. Whether the alarm still has a meaningful audience depends on how many popular packages haven't adopted those protections, which is being measured next.",
     "relatedIdeaIds": [],
     "epistemic": "hypothesis",
     "createdInRun": "run-20261103-agent-supply-chain-1",
     "createdAt": "2026-11-03T22:45:20Z",
-    "updatedAt": "2026-11-03T23:42:46.144Z",
+    "updatedAt": "2026-11-04T09:18:07Z",
     "provenance": "real"
   },
   {

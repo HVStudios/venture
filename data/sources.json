@@ -481,6 +481,60 @@
     "provenance": "real"
   },
   {
+    "id": "src-npm-require-2fa-disallow-tokens",
+    "url": "https://raw.githubusercontent.com/npm/documentation/main/content/packages-and-modules/securing-your-code/requiring-2fa-for-package-publishing-and-settings-modification.mdx",
+    "title": "npm Docs: Requiring 2FA for package publishing and settings modification",
+    "publisher": "npm (GitHub)",
+    "retrievedAt": "2026-11-04T09:10:00Z",
+    "sourceType": "docs",
+    "excerpt": "Granular access tokens cannot be used to publish packages, regardless of their bypass 2FA setting.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-npm-stage-command",
+    "url": "https://raw.githubusercontent.com/npm/documentation/main/content/cli/v11/commands/npm-stage.mdx",
+    "title": "npm CLI docs: npm-stage",
+    "publisher": "npm (GitHub)",
+    "retrievedAt": "2026-11-04T09:10:00Z",
+    "sourceType": "docs",
+    "excerpt": "Staged publishing allows package maintainers to require proof-of-presence for all publishes. … The act of staging does not prompt for 2FA and can be done with any token type, the act of approving will.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-npm-staged-publishing",
+    "url": "https://raw.githubusercontent.com/npm/documentation/main/content/packages-and-modules/securing-your-code/staged-publishing.mdx",
+    "title": "npm Docs: Staged publishing for npm packages",
+    "publisher": "npm (GitHub)",
+    "publishedAt": "2026-05-20",
+    "retrievedAt": "2026-11-04T09:10:00Z",
+    "sourceType": "docs",
+    "excerpt": "Staged publishing adds an approval step before packages go live on the npm registry. … A maintainer must then review and explicitly approve the staged package — with two-factor authentication (2FA) via the CLI or [npmjs.com](https://www.npmjs.com) — before it becomes publicly available.",
+    "limitations": "Documentation describes the feature, not its adoption. The publish date is the documentation commit date (npm/documentation#1961).",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-npm-trusted-publishers-actions",
+    "url": "https://raw.githubusercontent.com/npm/documentation/main/content/packages-and-modules/securing-your-code/trusted-publishers.mdx",
+    "title": "npm Docs: Trusted publishing for npm packages (allowed actions)",
+    "publisher": "npm (GitHub)",
+    "retrievedAt": "2026-11-04T09:10:00Z",
+    "sourceType": "docs",
+    "excerpt": "`npm stage publish` is always allowed. Choose whether this trusted publisher can also publish directly with `npm publish`",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-pr-slop-filter-readme",
     "url": "https://raw.githubusercontent.com/Noxlie/pr-slop-filter/main/README.md",
     "title": "pr-slop-filter (README)",
@@ -494,6 +548,21 @@
       "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-pypi-token-in-tp-project-email",
+    "url": "https://raw.githubusercontent.com/pypi/warehouse/main/warehouse/templates/email/api-token-used-in-trusted-publisher-project/body.txt",
+    "title": "PyPI (Warehouse) email template: API token used in a Trusted Publishing project",
+    "publisher": "PyPI / Warehouse (GitHub)",
+    "publishedAt": "2024-04-15",
+    "retrievedAt": "2026-11-04T09:10:00Z",
+    "sourceType": "repository",
+    "excerpt": "was used to upload files to the project {{ project_name }} ({{ project_href }}), even though the project has a Trusted Publisher configured.",
+    "limitations": "An email template, not usage statistics. It was introduced in pypa/warehouse#15641. PyPI's 78 email templates include none that announces every newly published release.",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },
@@ -546,6 +615,20 @@
       "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-socket-cli-readme",
+    "url": "https://raw.githubusercontent.com/SocketDev/socket-cli/main/README.md",
+    "title": "Socket CLI (README)",
+    "publisher": "Socket (GitHub)",
+    "retrievedAt": "2026-11-04T09:10:00Z",
+    "sourceType": "vendor",
+    "excerpt": "letting you scan dependencies, audit packages, and gate installs from your terminal or CI.",
+    "limitations": "Only the open-source CLI was readable; socket.dev product pages couldn't be fetched from the research environment.",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },

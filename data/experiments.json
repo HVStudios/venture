@@ -46,6 +46,41 @@
     "provenance": "real"
   },
   {
+    "id": "exp-npm-publishing-practices",
+    "ideaId": "idea-maintainer-publish-anomaly-alarm",
+    "title": "How many popular npm packages still publish in a way a stolen token could reproduce?",
+    "hypothesis": "A substantial share (≥ 40%) of popular npm packages' latest releases were published with neither trusted publishing (OIDC) nor staged human approval, so a maintainer-side alarm would still have a large audience.",
+    "uncertainty": "Whether npm's new protections have already closed most of the gap the alarm targets (assumption a4).",
+    "procedure": [
+      "Pre-registered 2026-11-04 before data collection. A metadata probe of one package (axios) confirmed the fields exist.",
+      "Population A (popular): union of the top 250 results of the npm search API (popularity weight 1.0) for the keywords javascript, typescript, react, node, cli and util. Deduplicated, first 400 packages in result order.",
+      "Population B (previously hijacked): the 22 campaign-representative packages from exp-publish-anomaly-campaign-replication.",
+      "For each package's latest version, read `_npmUser` from the registry: `trustedPublisher` present → OIDC; `approver` present → staged with human approval; neither → token/interactive publish.",
+      "Report the shares, with Wilson 95% intervals."
+    ],
+    "successCriteria": [
+      "At least 40% of population A's latest releases have neither trusted publishing nor staged approval (the alarm still has a large audience)"
+    ],
+    "failureCriteria": [
+      "Fewer than 15% have neither (npm's protections already cover most popular packages)",
+      "Fewer than 200 packages could be read (inconclusive)"
+    ],
+    "estimatedTime": "< 1 hour of automated analysis",
+    "estimatedCostUsd": 0,
+    "resources": [
+      "Public npm registry and search API"
+    ],
+    "expectedLearning": "How much of the popular npm ecosystem is still exposed to the token-theft route that hit axios, and whether previously hijacked packages changed their publishing after the attack.",
+    "nextSteps": {
+      "ifSuccess": "Refine the alarm toward the exposed population, and consider a staged-release review aid that highlights new install hooks at approval time.",
+      "ifFailure": "Park the standalone alarm. npm's own controls cover most of its audience."
+    },
+    "executionMode": "automatable",
+    "status": "approved",
+    "createdInRun": "run-20261104-agent-supply-chain-2",
+    "provenance": "real"
+  },
+  {
     "id": "exp-publish-anomaly-campaign-replication",
     "ideaId": "idea-maintainer-publish-anomaly-alarm",
     "title": "Campaign-level replication: do independent hijack campaigns carry structural signals?",

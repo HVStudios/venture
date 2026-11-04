@@ -91,6 +91,29 @@
     "provenance": "real"
   },
   {
+    "id": "comp-npm-staged-publishing",
+    "name": "npm staged publishing + token-free publishing settings",
+    "url": "https://docs.npmjs.com/staged-publishing",
+    "kind": "platform-feature",
+    "description": "Opt-in npm features: releases are staged and must be approved by a maintainer with 2FA; a package setting can forbid token publishing; trusted publishers can be limited to staging.",
+    "strengths": [
+      "Prevents (not just detects) token-based hijacks",
+      "Free and built into the registry"
+    ],
+    "weaknesses": [
+      "Opt-in: protects only maintainers who enable it",
+      "A human approving a release still has to notice what changed (inference)",
+      "Launched May 2026; adoption unknown"
+    ],
+    "sourceIds": [
+      "src-npm-staged-publishing",
+      "src-npm-stage-command",
+      "src-npm-require-2fa-disallow-tokens",
+      "src-npm-trusted-publishers-actions"
+    ],
+    "provenance": "real"
+  },
+  {
     "id": "comp-pnpm-minimum-release-age",
     "name": "pnpm minimumReleaseAge",
     "url": "https://github.com/pnpm/pnpm/pull/9921",
@@ -105,6 +128,23 @@
     "sourceIds": [
       "src-bun-min-release-age-fr",
       "src-npm-min-release-age-fr"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "comp-pypi-token-use-warning",
+    "name": "PyPI warning when an API token uploads to a trusted-publishing project",
+    "kind": "platform-feature",
+    "description": "An email to maintainers when a long-lived token is used for a project configured for trusted publishing.",
+    "strengths": [
+      "Catches the stolen-token pattern on projects that migrated"
+    ],
+    "weaknesses": [
+      "Only for projects with trusted publishing configured",
+      "No general notice of every new release (none among PyPI's email templates)"
+    ],
+    "sourceIds": [
+      "src-pypi-token-in-tp-project-email"
     ],
     "provenance": "real"
   },
