@@ -508,6 +508,85 @@
     "provenance": "real"
   },
   {
+    "id": "ev-ai-burden-36",
+    "claim": "Astropy maintainers propose retiring 'good first issue' labels because triaging mostly unacceptable (usually AI-generated) PRs now costs more than the labels gain.",
+    "sourceId": "src-astropy-retire-good-first-issue",
+    "quote": "the cost of triaging mostly unacceptable pull requests (nowadays usually AI slops) have outweighed any benefit",
+    "stance": "supports",
+    "epistemic": "fact",
+    "context": "Triage cost is pushing projects to close newcomer on-ramps.",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity",
+      "prob-submission-effort-no-longer-signals-trust"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-37",
+    "claim": "scikit-learn proposed a label-triggered autoclose workflow, so a reviewer can dispose of a low-effort PR with one action while leaving a path to improve it.",
+    "sourceId": "src-sklearn-autoclose-rfc",
+    "quote": "We would like to propose introducing an autoclose option for PRs that gets triggered when setting an \"autoclose\" label that can be removed if the PR is improved.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [
+      "comp-triage-workflow-conventions"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-38",
+    "claim": "nixpkgs maintainers noticed PRs that delete the AI-disclosure checkboxes from the PR template, and proposed closing them instantly: a cheap triage rule based on template compliance.",
+    "sourceId": "src-nixpkgs-close-missing-ai-checkbox",
+    "quote": "some PRs will remove the Automation/Ai and Contribution policy checkboxes",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [
+      "comp-triage-workflow-conventions"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-39",
+    "claim": "Blunt AI policies can exclude contributors with disabilities who rely on AI as assistive technology, an argument against automatic rejection based on AI use.",
+    "sourceId": "src-kubernetes-ai-policy-disparate-impact",
+    "quote": "The policies do not distinguish unaccountable delegation to AI from accountable AI-assisted or assistive use.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "context": "Supports keeping humans in the decision, and keying on behaviour rather than AI use.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-ai-authorship-pr-detector"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-ai-burden-40",
+    "claim": "scikit-learn reports that AI tools used to create PRs ignore its automated-contributions policy, so written policies alone don't reduce inbound volume.",
+    "sourceId": "src-sklearn-copilot-agent-policy",
+    "quote": "AI tools many people use to create PRs don't care about our",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity"
+    ],
+    "ideaIds": [],
+    "competitorIds": [
+      "comp-written-ai-policies"
+    ],
+    "provenance": "real"
+  },
+  {
     "id": "ev-sc-01",
     "claim": "Two malicious axios releases were published through the maintainer's compromised npm account (March 2026).",
     "sourceId": "src-axios-postmortem-2026",

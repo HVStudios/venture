@@ -684,6 +684,82 @@
     "provenance": "real"
   },
   {
+    "id": "run-20261104-agent-ai-contribution-burden-3",
+    "themeId": "theme-ai-contribution-burden",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-04T09:31:00Z",
+    "completedAt": "2026-11-04T09:33:58Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "Triaged 42 collected signals for triage-cost leads"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "5 sources cited, 5 evidence items, 1 contradicting"
+      },
+      {
+        "name": "invent",
+        "status": "ok",
+        "notes": "1 concept: validated, advisory pre-review triage signals"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "3 objections (Fossier overlap, newcomer fairness, residual human cost)"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "notes": "Linked to the parked comprehension gate with a novelty note"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "Advanced to a $0 test"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Pre-registered exp-pre-review-signal-discrimination"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Research brief updated"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 9,
+      "sourcesCited": 5,
+      "problemsFound": 0,
+      "ideasGenerated": 1,
+      "ideasAdvanced": 1,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "triage of data/signals.json for theme-ai-contribution-burden (collector-retrieved issues and HN titles)"
+    ],
+    "errors": [
+      "HN leads (e.g. 'A standard protocol to handle and discard low-effort, AI-Generated pull requests', Zig's policy rationale) exist only as titles in the signal feed. Their pages aren't reachable from the research environment, so they weren't used."
+    ],
+    "limitations": [
+      "Evidence comes from the first ~1,200 characters of each issue as captured by the collector.",
+      "Proposals in issue trackers show intent, not measured triage savings."
+    ],
+    "usage": {
+      "note": "Interactive Claude Code session under the owner's subscription. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  {
     "id": "run-20261104-agent-supply-chain-2",
     "themeId": "theme-oss-supply-chain-small-maintainers",
     "mode": "agent-session",

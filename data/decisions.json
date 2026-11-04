@@ -280,6 +280,20 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261104-agent-ai-contribution-burden-3-validated-pre-review-triage-signals",
+    "at": "2026-11-04T09:33:58Z",
+    "runId": "run-20261104-agent-ai-contribution-burden-3",
+    "subjectType": "idea",
+    "subjectId": "idea-validated-pre-review-triage-signals",
+    "action": "create",
+    "toStatus": "advanced",
+    "rationale": "Advanced to a cheap test. Triage cost is the best-evidenced remaining pain, and whether cheap signals discriminate at all is unknown and testable on the 240 labelled PRs from the earlier experiment. If the signals don't discriminate, this idea, and Fossier's approach, are in doubt.",
+    "actor": "director",
+    "attractiveness": 66,
+    "evidenceStrength": 86,
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261104-install-hook-watch-prospective",
     "at": "2026-11-04T09:25:58.936Z",
     "subjectType": "experiment",
@@ -339,6 +353,18 @@
     "toStatus": "supported",
     "rationale": "Pre-registered verdict: supported. 201 of 400 popular npm packages (50.2%, 95% CI 45–55%) published their latest release with neither trusted publishing nor staged approval. Only 31 (7.8%) use staged human approval. 13 of 22 previously hijacked packages still publish with neither. 'Neither' is an upper bound, because interactive 2FA publishes look the same in metadata.",
     "actor": "experiment designer",
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261104-pre-review-signal-discrimination",
+    "at": "2026-11-04T09:34:39.129Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-pre-review-signal-discrimination",
+    "action": "advance",
+    "fromStatus": "proposed",
+    "toStatus": "approved",
+    "rationale": "Approved under the standing rule for automatable experiments. Thresholds pre-registered before any signal data was collected.",
+    "actor": "research director (automatable: public data only, no contact, $0)",
     "provenance": "real"
   },
   {

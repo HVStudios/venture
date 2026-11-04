@@ -784,5 +784,136 @@
     "createdAt": "2026-11-03T22:45:20Z",
     "updatedAt": "2026-11-03T22:45:20Z",
     "provenance": "real"
+  },
+  {
+    "id": "idea-validated-pre-review-triage-signals",
+    "title": "Validated pre-review triage signals for maintainers",
+    "summary": "A suggestion-only ranking of incoming PRs, so maintainers can triage the likely low-effort ones first. It uses only signals shown to separate low-effort from genuine contributions before anyone reads the code.",
+    "problemIds": [
+      "prob-ai-low-effort-prs-drain-review-capacity",
+      "prob-submission-effort-no-longer-signals-trust"
+    ],
+    "themeIds": [
+      "theme-ai-contribution-burden"
+    ],
+    "targetUsers": "Maintainers of popular repositories with many first-time PRs",
+    "solution": "A GitHub Action that, for each PR from a first-time contributor, computes a few cheap signals available before review (e.g. the author's recent PR burst across GitHub, account age, template compliance) and labels the PR with a triage priority and the reasons. It never closes PRs itself; maintainers decide.",
+    "competitorIds": [
+      "comp-fossier",
+      "comp-triage-workflow-conventions",
+      "comp-github-pr-access-controls",
+      "comp-ai-pr-detectors"
+    ],
+    "differentiation": "Existing tools (Fossier) combine many signals with hand-set weights that haven't been validated, and close PRs automatically. This would use only signals with measured discrimination, and stay advisory, keeping humans in the decision (see the disparate-impact objection to blunt policies).",
+    "feasibility": "High: the signals come from public GitHub APIs.",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "Cheap pre-review signals (recent cross-repo PR burst, account age) separate policy-violating PRs from genuine newcomer PRs well (AUC ≥ 0.75)",
+        "criticality": "high",
+        "status": "untested"
+      },
+      {
+        "id": "a2",
+        "text": "Advisory labels save maintainers meaningful triage time",
+        "criticality": "high",
+        "status": "untested"
+      },
+      {
+        "id": "a3",
+        "text": "Signals don't systematically disadvantage genuine newcomers (e.g. new accounts)",
+        "criticality": "medium",
+        "status": "untested"
+      }
+    ],
+    "risks": [
+      "Account-age signals penalise genuine newcomers",
+      "Spammers adapt once signals are known",
+      "Fossier already ships similar signals"
+    ],
+    "nextSteps": [
+      "Run exp-pre-review-signal-discrimination"
+    ],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "Fossier already scores unknown contributors on 13 signals, including open PRs elsewhere and account age. Differentiation rests only on validation and advisory mode.",
+        "severity": "major",
+        "evidenceIds": [],
+        "status": "open"
+      },
+      {
+        "id": "obj-2",
+        "text": "Account-based signals can exclude genuine newcomers and contributors who use AI as assistive technology, the same disparate-impact concern raised against blunt policies.",
+        "severity": "major",
+        "evidenceIds": [
+          "ev-ai-burden-39"
+        ],
+        "response": "Advisory only, and the experiment reports how many genuine newcomers each signal would flag.",
+        "status": "open"
+      },
+      {
+        "id": "obj-3",
+        "text": "Even a ranked queue still needs a human to look at each PR. The saving may be small.",
+        "severity": "minor",
+        "evidenceIds": [
+          "ev-ai-burden-37"
+        ],
+        "status": "open"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 4,
+          "rationale": "Triage cost is closing newcomer on-ramps (Astropy) and prompting autoclose workflows."
+        },
+        "frequency": {
+          "score": 4,
+          "rationale": "Reported across many projects."
+        },
+        "userValue": {
+          "score": 3,
+          "rationale": "Depends on how well the signals discriminate; unknown."
+        },
+        "competitiveGap": {
+          "score": 2,
+          "rationale": "Fossier covers similar ground without validation."
+        },
+        "differentiation": {
+          "score": 2,
+          "rationale": "Validation plus an advisory design; thin."
+        },
+        "feasibility": {
+          "score": 5,
+          "rationale": "Public APIs."
+        },
+        "costComplexity": {
+          "score": 4,
+          "rationale": "A small Action."
+        },
+        "userAccess": {
+          "score": 4,
+          "rationale": "Maintainers who wrote AI policies are reachable on GitHub."
+        },
+        "validationCost": {
+          "score": 5,
+          "rationale": "Signal discrimination is testable on existing labelled data for $0."
+        }
+      },
+      "assessedAt": "2026-11-04T09:33:58Z",
+      "assessedBy": "critic (claude-code-session)"
+    },
+    "status": "advanced",
+    "statusRationale": "Advanced to a cheap test. Triage cost is the best-evidenced remaining pain, and whether cheap signals discriminate at all is unknown and testable on the 240 labelled PRs from the earlier experiment. If the signals don't discriminate, this idea, and Fossier's approach, are in doubt.",
+    "relatedIdeaIds": [
+      "idea-contributor-comprehension-gate"
+    ],
+    "noveltyNote": "Distinct from the parked comprehension gate (which relied on post-submission engagement): this uses signals available before any interaction.",
+    "epistemic": "hypothesis",
+    "createdInRun": "run-20261104-agent-ai-contribution-burden-3",
+    "createdAt": "2026-11-04T09:33:58Z",
+    "updatedAt": "2026-11-04T09:33:58Z",
+    "provenance": "real"
   }
 ]

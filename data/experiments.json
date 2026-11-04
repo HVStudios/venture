@@ -127,6 +127,45 @@
     "provenance": "real"
   },
   {
+    "id": "exp-pre-review-signal-discrimination",
+    "ideaId": "idea-validated-pre-review-triage-signals",
+    "title": "Do cheap pre-review signals separate policy-violating PRs from genuine newcomer PRs?",
+    "hypothesis": "Authors of PRs closed under AI or low-effort policies opened many more PRs across GitHub in the 30 days before their PR than genuine first-time LLVM contributors did, so this one signal separates the groups well (AUC ≥ 0.75).",
+    "uncertainty": "Whether any cheap, pre-review signal discriminates at all (assumption a1).",
+    "procedure": [
+      "Pre-registered 2026-11-04 before any signal data was collected.",
+      "Sample: the 240 PRs from exp-followup-engagement-retrospective (120 policy-closed, 120 merged LLVM newcomer PRs). Labels are already known.",
+      "For each PR, read its creation time (GitHub REST API).",
+      "Signal S1: number of PRs the author opened across GitHub in the 30 days before the PR (search API, type:pr author:<login> created:<range>).",
+      "Signal S2: author account age at PR creation, in days (users API).",
+      "Authors whose accounts no longer exist are counted and reported separately, and excluded from the AUC.",
+      "Primary: AUC of S1 (higher → policy-closed). Secondary: AUC of S2 (younger → policy-closed). Secondary: S1 AUC within LLVM only.",
+      "Report the share of genuine newcomers flagged at the threshold that catches 50% of policy-closed PRs."
+    ],
+    "successCriteria": [
+      "S1 AUC ≥ 0.75 over at least 150 PRs with readable authors"
+    ],
+    "failureCriteria": [
+      "Both S1 and S2 have AUC < 0.60 (cheap signals don't discriminate)",
+      "Fewer than 150 PRs with readable authors (inconclusive)"
+    ],
+    "estimatedTime": "< 1 hour of automated analysis",
+    "estimatedCostUsd": 0,
+    "resources": [
+      "GitHub REST and search APIs via the Actions token",
+      "research/experiments/exp-followup-engagement-retrospective/result.json"
+    ],
+    "expectedLearning": "Whether pre-review triage support (and tools like Fossier) rests on signals that work, and what they would cost genuine newcomers.",
+    "nextSteps": {
+      "ifSuccess": "Prototype an advisory triage Action on this repository's own PRs. Any outreach to other projects needs owner authorization.",
+      "ifFailure": "Reject this idea and note that unvalidated signal-based tools (Fossier) are likely ineffective."
+    },
+    "executionMode": "automatable",
+    "status": "approved",
+    "createdInRun": "run-20261104-agent-ai-contribution-burden-3",
+    "provenance": "real"
+  },
+  {
     "id": "exp-publish-anomaly-campaign-replication",
     "ideaId": "idea-maintainer-publish-anomaly-alarm",
     "title": "Campaign-level replication: do independent hijack campaigns carry structural signals?",

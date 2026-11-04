@@ -25,7 +25,7 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -52,6 +52,7 @@ jobs:
               git -C /tmp/malicious-packages sparse-checkout set osv/malicious/npm
               npx tsx src/experiments/publish-anomaly-campaigns.ts ;;
             exp-npm-publishing-practices) npx tsx src/experiments/publishing-practices.ts ;;
+            exp-pre-review-signal-discrimination) npx tsx src/experiments/pre-review-signals.ts ;;
             *) echo "unknown experiment $EXPERIMENT"; exit 1 ;;
           esac
       - name: Commit raw results
