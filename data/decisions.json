@@ -294,6 +294,18 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261104-content-signal-discrimination",
+    "at": "2026-11-04T12:04:17.644Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-content-signal-discrimination",
+    "action": "advance",
+    "fromStatus": "proposed",
+    "toStatus": "approved",
+    "rationale": "Approved under the standing rule for automatable experiments. Thresholds pre-registered before any content data was collected.",
+    "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261104-install-hook-watch-prospective",
     "at": "2026-11-04T09:25:58.936Z",
     "subjectType": "experiment",

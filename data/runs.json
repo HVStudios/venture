@@ -760,6 +760,46 @@
     "provenance": "real"
   },
   {
+    "id": "run-20261104-agent-ai-contribution-burden-4",
+    "themeId": "theme-ai-contribution-burden",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-04T12:03:43Z",
+    "completedAt": "2026-11-04T12:03:43Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Pre-registered content-signal test (the brief's next step)"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 0,
+      "sourcesCited": 0,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [],
+    "errors": [],
+    "limitations": [
+      "Short planning session: no new sources."
+    ],
+    "usage": {
+      "note": "Interactive Claude Code session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  {
     "id": "run-20261104-agent-supply-chain-2",
     "themeId": "theme-oss-supply-chain-small-maintainers",
     "mode": "agent-session",

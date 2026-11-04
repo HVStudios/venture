@@ -1,0 +1,88 @@
+{
+  "run": {
+    "id": "run-20261104-agent-ai-contribution-burden-4",
+    "themeId": "theme-ai-contribution-burden",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-04T12:03:43Z",
+    "completedAt": "2026-11-04T12:03:43Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Pre-registered content-signal test (the brief's next step)"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 0,
+      "sourcesCited": 0,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [],
+    "errors": [],
+    "limitations": [
+      "Short planning session: no new sources."
+    ],
+    "usage": {
+      "note": "Interactive Claude Code session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [],
+  "sources": [],
+  "evidence": [],
+  "problems": [],
+  "competitors": [],
+  "ideas": [],
+  "experiments": [
+    {
+      "id": "exp-content-signal-discrimination",
+      "ideaId": "idea-validated-pre-review-triage-signals",
+      "title": "Do content-based signals in the PR itself separate policy-violating PRs from genuine newcomer PRs?",
+      "hypothesis": "PRs closed under AI or low-effort policies differ from merged first-time LLVM PRs in cheap content signals visible before review: whether the description links an existing issue (C1), and description length (C2). At least one reaches AUC ≥ 0.75.",
+      "uncertainty": "Whether any cheap pre-review signal works, now that account-level signals have failed. If content signals fail too, the area should be paused.",
+      "procedure": [
+        "Pre-registered 2026-11-04 before any content data was collected.",
+        "Sample: the 240 PRs from exp-followup-engagement-retrospective (120 policy-closed, 120 merged LLVM newcomer PRs). Labels are already known.",
+        "For each PR, read the description (body) via the GitHub REST API. It may have been edited after closing, a limitation.",
+        "C1: does the description reference an issue (#number, or a GitHub issue URL)? Absence → more suspicious.",
+        "C2: description length in words. Direction not assumed: AUC is reported as max(AUC, 1−AUC), with the observed direction stated.",
+        "Primary: the better of C1 and C2 by AUC. Also report the share of genuine newcomers flagged at the threshold that flags half the policy-closed PRs."
+      ],
+      "successCriteria": [
+        "The better content signal reaches AUC ≥ 0.75 over at least 150 PRs with readable descriptions"
+      ],
+      "failureCriteria": [
+        "Both content signals have AUC < 0.60 (pause the area's solution search)",
+        "Fewer than 150 readable PRs (inconclusive)"
+      ],
+      "estimatedTime": "< 15 minutes of automated analysis",
+      "estimatedCostUsd": 0,
+      "resources": [
+        "GitHub REST API via the Actions token"
+      ],
+      "expectedLearning": "Whether triage support can be built on what a PR says, after account-level signals failed.",
+      "nextSteps": {
+        "ifSuccess": "Reopen the triage-signal idea with content signals and test them on a second, non-LLVM control group.",
+        "ifFailure": "Pause the solution search in this area, and record that cheap pre-review signals don't separate low-effort from genuine PRs."
+      },
+      "executionMode": "automatable",
+      "status": "proposed",
+      "createdInRun": "run-20261104-agent-ai-contribution-burden-4",
+      "provenance": "real"
+    }
+  ],
+  "decisions": [],
+  "briefs": []
+}
