@@ -46,6 +46,42 @@
     "provenance": "real"
   },
   {
+    "id": "exp-install-hook-watch-prospective",
+    "ideaId": "idea-maintainer-publish-anomaly-alarm",
+    "title": "Prospective field test: how often would the alarm fire on real releases?",
+    "hypothesis": "Across the 400 popular npm packages from exp-npm-publishing-practices, new releases that add an install script or a new dependency are rare enough (≤ 5% of releases) that alerts wouldn't overwhelm maintainers.",
+    "uncertainty": "Real-world alert volume (false-alarm burden), which retrospective data on malicious releases can't show.",
+    "procedure": [
+      "Pre-registered 2026-11-04 before any monitoring data was collected.",
+      "Daily for 28 days, a scheduled workflow lists new versions of the 400 packages published since the previous check (public npm registry).",
+      "For each new version, compare with the previous version: install scripts added or changed, new dependencies.",
+      "After 28 days, cross-check flagged versions against OpenSSF malicious-packages reports.",
+      "Report the alert rate per release and per package-month, and the number of confirmed malicious hits."
+    ],
+    "successCriteria": [
+      "At most 5% of new releases trigger an alert, over at least 300 observed releases"
+    ],
+    "failureCriteria": [
+      "More than 15% of new releases trigger an alert (alert fatigue likely)",
+      "Fewer than 300 releases observed (inconclusive)"
+    ],
+    "estimatedTime": "28 days of scheduled automated monitoring",
+    "estimatedCostUsd": 0,
+    "resources": [
+      "Public npm registry",
+      "GitHub Actions schedule"
+    ],
+    "expectedLearning": "The false-alarm burden in practice. Malicious hits are unlikely in 28 days, so absence of hits is expected and not evidence against the idea.",
+    "nextSteps": {
+      "ifSuccess": "Ask the owner to authorize a small maintainer interest test (requires contacting people).",
+      "ifFailure": "Refine the signal (e.g. only install hooks) before any further work."
+    },
+    "executionMode": "automatable",
+    "status": "proposed",
+    "createdInRun": "run-20261104-exp-npm-publishing-practices",
+    "provenance": "real"
+  },
+  {
     "id": "exp-npm-publishing-practices",
     "ideaId": "idea-maintainer-publish-anomaly-alarm",
     "title": "How many popular npm packages still publish in a way a stolen token could reproduce?",
@@ -76,7 +112,17 @@
       "ifFailure": "Park the standalone alarm. npm's own controls cover most of its audience."
     },
     "executionMode": "automatable",
-    "status": "approved",
+    "status": "completed",
+    "outcome": {
+      "recordedAt": "2026-11-04T09:23:34.719Z",
+      "result": "supported",
+      "summary": "Pre-registered verdict: supported. 201 of 400 popular npm packages (50.2%, 95% CI 45–55%) published their latest release with neither trusted publishing nor staged approval. Only 31 (7.8%) use staged human approval. 13 of 22 previously hijacked packages still publish with neither. 'Neither' is an upper bound, because interactive 2FA publishes look the same in metadata.",
+      "evidenceIds": [
+        "ev-sc-28",
+        "ev-sc-29",
+        "ev-sc-30"
+      ]
+    },
     "createdInRun": "run-20261104-agent-supply-chain-2",
     "provenance": "real"
   },

@@ -486,7 +486,7 @@
         "id": "a4",
         "text": "A substantial share of popular packages still publish in a way a stolen token could reproduce (no trusted publishing, no staged approval)",
         "criticality": "high",
-        "status": "untested"
+        "status": "supported"
       }
     ],
     "risks": [
@@ -580,12 +580,12 @@
       "assessedBy": "critic (claude-code-session)"
     },
     "status": "advanced",
-    "statusRationale": "Stays advanced, with a narrower case. The technical premise is supported, but npm now offers prevention to maintainers who opt in. Whether the alarm still has a meaningful audience depends on how many popular packages haven't adopted those protections, which is being measured next.",
+    "statusRationale": "Stays advanced. The technical premise (most hijacks add install hooks) and the audience (about half of popular packages still publish without npm's new protections, including most previously hijacked ones) are both supported by pre-registered experiments. Remaining unknowns: whether maintainers want such alerts and act on them, and whether vendors already offer them.",
     "relatedIdeaIds": [],
     "epistemic": "hypothesis",
     "createdInRun": "run-20261103-agent-supply-chain-1",
     "createdAt": "2026-11-03T22:45:20Z",
-    "updatedAt": "2026-11-04T09:18:07Z",
+    "updatedAt": "2026-11-04T09:23:35.224Z",
     "provenance": "real"
   },
   {

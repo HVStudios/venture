@@ -914,5 +914,54 @@
       "comp-supply-chain-security-vendors"
     ],
     "provenance": "real"
+  },
+  {
+    "id": "ev-sc-28",
+    "claim": "Half of 400 popular npm packages (50.2%, CI 45–55%) published their latest release with neither trusted publishing nor staged approval, a route a stolen token could reproduce.",
+    "sourceId": "src-exp-npm-publishing-practices-result",
+    "quote": "neither: 201 (50.2%, 95% CI 45.4%–55.1%)",
+    "stance": "supports",
+    "epistemic": "fact",
+    "context": "An upper bound: some of these are interactive publishes protected by 2FA.",
+    "problemIds": [
+      "prob-compromised-maintainer-credentials-ship-malware"
+    ],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-29",
+    "claim": "Only 31 of 400 popular packages (7.8%) use npm's staged publishing with human approval, six months after it launched.",
+    "sourceId": "src-exp-npm-publishing-practices-result",
+    "quote": "Staged with human approval: 31",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [
+      "comp-npm-staged-publishing"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sc-30",
+    "claim": "Even among 22 packages that were actually hijacked, 13 (59%) still publish their latest release with neither protection.",
+    "sourceId": "src-exp-npm-publishing-practices-result",
+    "quote": "Previously hijacked packages (latest release): 22 packages read. Staged with human approval: 2; trusted publishing (OIDC) only: 7; neither: 13",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-compromised-maintainer-credentials-ship-malware"
+    ],
+    "ideaIds": [
+      "idea-maintainer-publish-anomaly-alarm"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
   }
 ]

@@ -1,0 +1,303 @@
+{
+  "run": {
+    "id": "run-20261104-exp-npm-publishing-practices",
+    "themeId": "theme-oss-supply-chain-small-maintainers",
+    "mode": "agent-session",
+    "provider": "claude-code-session + github-actions experiment runner",
+    "startedAt": "2026-11-04T09:20:30Z",
+    "completedAt": "2026-11-04T09:24:01Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Executed in Actions run 41806670663: 400 popular and 22 previously hijacked npm packages"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "Assumption a4 supported; alarm stays advanced"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Pre-registered a 28-day prospective field test of alert volume"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Research brief updated"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 1,
+      "sourcesCited": 1,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "see research/experiments/exp-npm-publishing-practices/result.json"
+    ],
+    "errors": [],
+    "limitations": [
+      "Registry metadata can't distinguish token publishes from interactive 2FA publishes.",
+      "'Popular' means the npm search API's popularity ranking for six broad keywords, not download counts."
+    ],
+    "usage": {
+      "note": "GitHub Actions (free for public repos). No model calls, no cost."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [],
+  "sources": [
+    {
+      "id": "src-exp-npm-publishing-practices-result",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-publishing-practices/RESULT.md",
+      "title": "VENTURE experiment result: npm publishing practices of popular packages (pre-registered)",
+      "publisher": "VENTURE (own experiment, GitHub Actions run 41806670663)",
+      "retrievedAt": "2026-11-04T09:23:33Z",
+      "publishedAt": "2026-11-04",
+      "sourceType": "dataset",
+      "excerpt": "Popular packages (latest release): 400 packages read. Staged with human approval: 31; trusted publishing (OIDC) only: 168; neither: 201 (50.2%, 95% CI 45.4%–55.1%). … Previously hijacked packages (latest release): 22 packages read. Staged with human approval: 2; trusted publishing (OIDC) only: 7; neither: 13 (59.1%, 95% CI 38.7%–76.7%). … Verdict (pre-registered rule): supported: 50.2% of popular packages' latest releases used neither trusted publishing nor staged approval (≥ 40%). … Caveats: 'neither' includes interactive publishes protected by 2FA, which the registry metadata doesn't distinguish from token publishes, so it is an upper bound on exposure to stolen tokens. Popularity comes from the npm search API's ranking for six broad keywords.",
+      "limitations": "Own experiment. 'Neither' is an upper bound on token exposure (interactive 2FA publishes look the same). Popularity comes from the npm search ranking for six keywords.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-sc-28",
+      "claim": "Half of 400 popular npm packages (50.2%, CI 45–55%) published their latest release with neither trusted publishing nor staged approval, a route a stolen token could reproduce.",
+      "sourceId": "src-exp-npm-publishing-practices-result",
+      "quote": "neither: 201 (50.2%, 95% CI 45.4%–55.1%)",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-compromised-maintainer-credentials-ship-malware"
+      ],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "An upper bound: some of these are interactive publishes protected by 2FA."
+    },
+    {
+      "id": "ev-sc-29",
+      "claim": "Only 31 of 400 popular packages (7.8%) use npm's staged publishing with human approval, six months after it launched.",
+      "sourceId": "src-exp-npm-publishing-practices-result",
+      "quote": "Staged with human approval: 31",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [
+        "comp-npm-staged-publishing"
+      ],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sc-30",
+      "claim": "Even among 22 packages that were actually hijacked, 13 (59%) still publish their latest release with neither protection.",
+      "sourceId": "src-exp-npm-publishing-practices-result",
+      "quote": "Previously hijacked packages (latest release): 22 packages read. Staged with human approval: 2; trusted publishing (OIDC) only: 7; neither: 13",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-compromised-maintainer-credentials-ship-malware"
+      ],
+      "ideaIds": [
+        "idea-maintainer-publish-anomaly-alarm"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    }
+  ],
+  "problems": [],
+  "competitors": [],
+  "ideas": [],
+  "experiments": [
+    {
+      "id": "exp-install-hook-watch-prospective",
+      "ideaId": "idea-maintainer-publish-anomaly-alarm",
+      "title": "Prospective field test: how often would the alarm fire on real releases?",
+      "hypothesis": "Across the 400 popular npm packages from exp-npm-publishing-practices, new releases that add an install script or a new dependency are rare enough (≤ 5% of releases) that alerts wouldn't overwhelm maintainers.",
+      "uncertainty": "Real-world alert volume (false-alarm burden), which retrospective data on malicious releases can't show.",
+      "procedure": [
+        "Pre-registered 2026-11-04 before any monitoring data was collected.",
+        "Daily for 28 days, a scheduled workflow lists new versions of the 400 packages published since the previous check (public npm registry).",
+        "For each new version, compare with the previous version: install scripts added or changed, new dependencies.",
+        "After 28 days, cross-check flagged versions against OpenSSF malicious-packages reports.",
+        "Report the alert rate per release and per package-month, and the number of confirmed malicious hits."
+      ],
+      "successCriteria": [
+        "At most 5% of new releases trigger an alert, over at least 300 observed releases"
+      ],
+      "failureCriteria": [
+        "More than 15% of new releases trigger an alert (alert fatigue likely)",
+        "Fewer than 300 releases observed (inconclusive)"
+      ],
+      "estimatedTime": "28 days of scheduled automated monitoring",
+      "estimatedCostUsd": 0,
+      "resources": [
+        "Public npm registry",
+        "GitHub Actions schedule"
+      ],
+      "expectedLearning": "The false-alarm burden in practice. Malicious hits are unlikely in 28 days, so absence of hits is expected and not evidence against the idea.",
+      "nextSteps": {
+        "ifSuccess": "Ask the owner to authorize a small maintainer interest test (requires contacting people).",
+        "ifFailure": "Refine the signal (e.g. only install hooks) before any further work."
+      },
+      "executionMode": "automatable",
+      "status": "proposed",
+      "createdInRun": "run-20261104-exp-npm-publishing-practices",
+      "provenance": "real"
+    }
+  ],
+  "decisions": [],
+  "briefs": [
+    {
+      "id": "brief-oss-supply-chain-small-maintainers",
+      "themeId": "theme-oss-supply-chain-small-maintainers",
+      "researchQuestion": "When attackers take over a maintainer's account or publishing credentials, they can push malware to everyone who installs the next release. What can volunteer maintainers without a security team realistically do to catch this?",
+      "whyItMatters": "In 2026, compromised releases of very widely used packages (axios on npm, litellm on PyPI, asyncapi and TanStack packages) installed remote-access trojans or stole credentials. The maintainers were victims, not insiders. Most open-source maintainers have no security staff to notice when a release they didn't make appears.",
+      "subQuestions": [
+        "How do these compromises happen, and how long do malicious releases stay live?",
+        "What already protects consumers (release delays, trusted publishing), and what gaps remain?",
+        "Do hijacked releases look structurally different from a maintainer's normal releases, so that a simple alarm could catch them?"
+      ],
+      "findings": [
+        {
+          "id": "f1",
+          "statement": "Compromised maintainer accounts and tokens are a recurring route to malware in popular packages. At least four 2026 incidents were found, including axios (a remote-access trojan via an injected dependency) and litellm (a credential stealer).",
+          "strength": "Moderate. Four independent incident reports, taken from the projects' own issue trackers.",
+          "evidenceIds": [
+            "ev-sc-01",
+            "ev-sc-02",
+            "ev-sc-04",
+            "ev-sc-06",
+            "ev-sc-07"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f2",
+          "statement": "Malicious releases are typically live for hours: about 3 hours for axios. Delaying installs of brand-new versions is an effective defence that users actively ask for, and the platforms are already shipping it (pnpm, Dependabot cooldown).",
+          "strength": "Moderate. Feature requests with hundreds of reactions, and a study finding 83 of 92 cooldown adoptions were security-motivated.",
+          "evidenceIds": [
+            "ev-sc-03",
+            "ev-sc-08",
+            "ev-sc-10",
+            "ev-sc-11",
+            "ev-sc-12"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f3",
+          "statement": "Most hijacks of legitimate npm packages add an install-time hook (a script that runs on install), something legitimate releases almost never do. Across 15 independent attack campaigns (2024–2026) whose mechanism could be determined, 12 (80%) added such a hook, versus 1.7% of legitimate releases of the same packages.",
+          "strength": "Moderate. A pre-registered replication at campaign level supports an earlier package-level result. But it rests on the minimum sample of 15 campaigns, and 7 more campaigns had no described mechanism (the share could be anywhere from 55% to 86%).",
+          "evidenceIds": [
+            "ev-sc-19",
+            "ev-sc-21",
+            "ev-sc-16",
+            "ev-sc-17"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f4",
+          "statement": "About one in five characterisable campaigns would slip past such an alarm: asyncapi, node-ipc and netspeedutil injected code into existing files without adding hooks or dependencies.",
+          "strength": "Moderate. 3 of 15 classifiable campaigns, consistent with the earlier asyncapi counter-example.",
+          "evidenceIds": [
+            "ev-sc-20",
+            "ev-sc-06",
+            "ev-sc-18"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f5",
+          "statement": "Teams that adopt release delays overwhelmingly use one simple default (most often seven days). Fine-grained settings are used by fewer than 10%.",
+          "strength": "Moderate. One study of early adopters.",
+          "evidenceIds": [
+            "ev-sc-13"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f6",
+          "statement": "The platforms have started to close the stolen-token route themselves. Since May 2026, npm lets maintainers require a human 2FA approval for every release (staged publishing) and forbid publishing with tokens. Since 2024, PyPI emails maintainers when a token uploads to a project that uses trusted publishing.",
+          "strength": "Strong for existence: the registries' own documentation and code. Adoption is unknown and opt-in.",
+          "evidenceIds": [
+            "ev-sc-22",
+            "ev-sc-23",
+            "ev-sc-24",
+            "ev-sc-26"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f7",
+          "statement": "npm's new protections are barely adopted. Half of 400 popular npm packages (50.2%) published their latest release with neither trusted publishing nor staged human approval, and only 7.8% use staged approval. Even 13 of 22 packages that were actually hijacked still publish this way.",
+          "strength": "Moderate. A pre-registered measurement on public registry data. 'Neither' is an upper bound on exposure, because interactive 2FA publishes look the same in the metadata.",
+          "evidenceIds": [
+            "ev-sc-28",
+            "ev-sc-29",
+            "ev-sc-30"
+          ],
+          "epistemic": "fact"
+        }
+      ],
+      "uncertainties": [
+        "'Neither' publishing practice is an upper bound on token exposure: interactive 2FA publishes can't be told apart in registry metadata.",
+        "Whether security vendors offer maintainer-side release alerts. Their public tooling is consumer-side, and their product sites couldn't be read.",
+        "Campaign grouping is heuristic, and 7 of 22 campaigns had no described mechanism.",
+        "The incident sample favours large, well-publicised attacks."
+      ],
+      "conclusion": {
+        "belief": "Account and token compromise of popular packages is a severe and recurring problem. Three pre-registered experiments support the case for a maintainer-side alarm: most independent hijack campaigns add an install-time hook that legitimate releases rarely add, and about half of popular npm packages still publish without npm's new protections, so the alarm would have a large audience. What isn't known yet is whether maintainers want such alerts and would act on them, how noisy the alerts would be in practice, and whether vendors already offer this. The alarm also can't catch attacks that only modify existing files.",
+        "confidence": "medium",
+        "confidenceReason": "The technical premise and the audience are each supported by pre-registered experiments on public data. Demand, alert volume and the competitive landscape are untested. Those need either a field test or contact with maintainers.",
+        "unknowns": [
+          "How often the alarm would fire on ordinary releases (alert fatigue)",
+          "Whether maintainers want such alerts and act on them",
+          "Whether vendors already offer maintainer-side alerts",
+          "How to catch attacks that only modify existing files"
+        ],
+        "continueInvestigation": true,
+        "continueReason": "A no-cost prospective field test can measure alert volume next. Testing maintainer demand needs the owner's authorization."
+      },
+      "nextSteps": [
+        {
+          "text": "Run a 28-day prospective field test measuring how often the alarm would fire on real releases of popular packages.",
+          "kind": "experiment",
+          "experimentId": "exp-install-hook-watch-prospective"
+        },
+        {
+          "text": "If alert volume is manageable, ask the owner to authorize a small test of maintainer interest. This involves contacting people.",
+          "kind": "owner-action",
+          "issue": 10
+        },
+        {
+          "text": "Verify vendor offerings once their sites are reachable from the research environment.",
+          "kind": "owner-action",
+          "issue": 10
+        }
+      ],
+      "updatedAt": "2026-11-04T09:24:01Z",
+      "updatedInRun": "run-20261104-exp-npm-publishing-practices",
+      "author": "research director (Claude Code session)",
+      "provenance": "real"
+    }
+  ]
+}

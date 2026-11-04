@@ -280,6 +280,20 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261104-maintainer-publish-anomaly-alarm",
+    "at": "2026-11-04T09:23:35.224Z",
+    "subjectType": "idea",
+    "subjectId": "idea-maintainer-publish-anomaly-alarm",
+    "action": "advance",
+    "fromStatus": "advanced",
+    "toStatus": "advanced",
+    "rationale": "Stays advanced. The technical premise (most hijacks add install hooks) and the audience (about half of popular packages still publish without npm's new protections, including most previously hijacked ones) are both supported by pre-registered experiments. Remaining unknowns: whether maintainers want such alerts and act on them, and whether vendors already offer them.",
+    "actor": "director",
+    "attractiveness": 71,
+    "evidenceStrength": 31,
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261104-npm-publishing-practices",
     "at": "2026-11-04T09:18:51.677Z",
     "subjectType": "experiment",
@@ -289,6 +303,18 @@
     "toStatus": "approved",
     "rationale": "Approved under the standing rule for automatable experiments. Design and thresholds pre-registered in this research session; only one package (axios) was probed beforehand, to confirm the metadata fields exist.",
     "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261104-npm-publishing-practices-2",
+    "at": "2026-11-04T09:23:34.719Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-npm-publishing-practices",
+    "action": "complete",
+    "fromStatus": "approved",
+    "toStatus": "supported",
+    "rationale": "Pre-registered verdict: supported. 201 of 400 popular npm packages (50.2%, 95% CI 45–55%) published their latest release with neither trusted publishing nor staged approval. Only 31 (7.8%) use staged human approval. 13 of 22 previously hijacked packages still publish with neither. 'Neither' is an upper bound, because interactive 2FA publishes look the same in metadata.",
+    "actor": "experiment designer",
     "provenance": "real"
   },
   {
