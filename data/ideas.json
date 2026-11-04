@@ -444,6 +444,103 @@
     "provenance": "real"
   },
   {
+    "id": "idea-downstream-dependent-test-runner",
+    "title": "Downstream dependent test runner ('crater for npm')",
+    "summary": "Before releasing, run the test suites of a sample of the package's dependents against the release candidate, to catch behaviour breaks that static checks miss.",
+    "problemIds": [
+      "prob-minor-patch-releases-break-dependents"
+    ],
+    "themeIds": [
+      "theme-npm-release-breaking-changes"
+    ],
+    "targetUsers": "Maintainers of widely used npm packages",
+    "solution": "A service that picks dependents with test suites, installs the release candidate in their place, runs their tests, and reports regressions.",
+    "competitorIds": [],
+    "differentiation": "Catches behaviour breaks like React 16.4's, which no static tool can.",
+    "feasibility": "Hard: arbitrary test suites need sandboxed execution, and the compute cost is significant.",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "Enough dependents have runnable test suites",
+        "criticality": "high",
+        "status": "untested"
+      }
+    ],
+    "risks": [
+      "Running untrusted dependents' code",
+      "Compute cost",
+      "Flaky dependents' tests create noise"
+    ],
+    "nextSteps": [],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "Running thousands of untrusted test suites safely is expensive and complex. It's not something VENTURE can build or run for free.",
+        "severity": "major",
+        "evidenceIds": [],
+        "status": "accepted"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 4,
+          "rationale": "Behaviour breaks are the hardest to catch."
+        },
+        "frequency": {
+          "score": 3,
+          "rationale": "Unknown."
+        },
+        "userValue": {
+          "score": 4,
+          "rationale": "High if it works."
+        },
+        "competitiveGap": {
+          "score": 3,
+          "rationale": "Not found for npm; not searched exhaustively."
+        },
+        "differentiation": {
+          "score": 4,
+          "rationale": "Catches what static tools can't."
+        },
+        "feasibility": {
+          "score": 2,
+          "rationale": "Sandboxing and flakiness."
+        },
+        "costComplexity": {
+          "score": 1,
+          "rationale": "Significant compute."
+        },
+        "userAccess": {
+          "score": 3,
+          "rationale": "Large maintainers only."
+        },
+        "validationCost": {
+          "score": 2,
+          "rationale": "Expensive to test properly."
+        }
+      },
+      "assessedAt": "2026-11-04T13:57:28Z",
+      "assessedBy": "critic (claude-code-session)"
+    },
+    "status": "parked",
+    "statusRationale": "Parked. Potentially valuable, but expensive and risky to run (executing untrusted code at scale), and well beyond what VENTURE can build for free.",
+    "relatedIdeaIds": [],
+    "epistemic": "speculation",
+    "practical": {
+      "adopters": "Maintainers of very popular packages",
+      "distribution": "hosted-free",
+      "smallestUsefulVersion": "A GitHub Action that runs the tests of 10 hand-picked dependents against a release candidate.",
+      "buildableByVenture": false,
+      "buildNote": "Needs sandboxed execution of untrusted code and paid compute.",
+      "monetization": "Possible as a hosted service for large maintainers or companies, but costly to operate."
+    },
+    "createdInRun": "run-20261104-agent-release-breaks-1",
+    "createdAt": "2026-11-04T13:57:28Z",
+    "updatedAt": "2026-11-04T13:57:28Z",
+    "provenance": "real"
+  },
+  {
     "id": "idea-maintainer-publish-anomaly-alarm",
     "title": "Publish-anomaly alarm for maintainers",
     "summary": "Watches the registry for new versions of a maintainer's own packages and alerts within minutes if a release differs structurally from the maintainer's normal releases.",
@@ -583,9 +680,156 @@
     "statusRationale": "Stays advanced. The technical premise (most hijacks add install hooks) and the audience (about half of popular packages still publish without npm's new protections, including most previously hijacked ones) are both supported by pre-registered experiments. Remaining unknowns: whether maintainers want such alerts and act on them, and whether vendors already offer them.",
     "relatedIdeaIds": [],
     "epistemic": "hypothesis",
+    "practical": {
+      "adopters": "Maintainers of npm packages, especially those not using trusted publishing or staged approval (about half of popular packages)",
+      "distribution": "open-source",
+      "smallestUsefulVersion": "A GitHub Action or small service that watches your own packages on npm and alerts you when a new release adds an install script or an unexpected dependency.",
+      "buildableByVenture": true,
+      "buildNote": "The same registry diffing VENTURE already runs daily in the install-hook watch.",
+      "monetization": "Mainly as a free open-source tool. Security vendors and npm itself are moving into this space, so a paid product is unlikely."
+    },
     "createdInRun": "run-20261103-agent-supply-chain-1",
     "createdAt": "2026-11-03T22:45:20Z",
-    "updatedAt": "2026-11-04T09:23:35.224Z",
+    "updatedAt": "2026-11-04T13:57:28Z",
+    "provenance": "real"
+  },
+  {
+    "id": "idea-npm-release-contract-linter",
+    "title": "Release-contract linter for npm packages",
+    "summary": "Before publishing, check the parts of a release's contract that type checkers ignore: engine requirements tightened, entry points or exports paths removed, module format switched, new required peer dependencies, removed CLI commands. Fail if a minor or patch release changes them.",
+    "problemIds": [
+      "prob-minor-patch-releases-break-dependents",
+      "prob-type-checkers-miss-runtime-and-metadata-breaks"
+    ],
+    "themeIds": [
+      "theme-npm-release-breaking-changes"
+    ],
+    "targetUsers": "Maintainers of JavaScript and TypeScript packages on npm (including packages without types)",
+    "solution": "A CLI and GitHub Action that compares the package.json and published file list of the release candidate with the last published version on npm, and flags contract changes that need a major bump (engines.node raised, exports subpaths removed or an exports map added, main/module/types removed, type: module switch, new non-optional peer dependencies, bin entries removed). It can run alongside a type-surface checker.",
+    "competitorIds": [
+      "comp-ts-api-checkers",
+      "comp-api-extractor"
+    ],
+    "differentiation": "Existing tools inspect the TypeScript type surface. This inspects the install- and import-time contract, which breaks even for untyped packages (e.g. polished's engines bump). It complements the type checkers rather than replacing them.",
+    "feasibility": "High. Everything needed is in package.json and the npm registry metadata. No compiler work is needed.",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "Metadata-level contract breaks in minor or patch releases are common among popular packages (≥ 20% shipped at least one in two years)",
+        "criticality": "high",
+        "status": "untested"
+      },
+      {
+        "id": "a2",
+        "text": "Flags are mostly genuine breaks rather than noise (≥ 70% of audited flags)",
+        "criticality": "high",
+        "status": "untested"
+      },
+      {
+        "id": "a3",
+        "text": "Maintainers would add another check to their release workflow",
+        "criticality": "medium",
+        "status": "untested"
+      }
+    ],
+    "risks": [
+      "The rules may be too strict (some engines bumps are deliberate and announced)",
+      "Existing checkers may add metadata rules",
+      "Behaviour breaks (React 16.4) remain invisible"
+    ],
+    "nextSteps": [
+      "Run exp-npm-metadata-breaks",
+      "If supported, build the CLI and dogfood it on real packages"
+    ],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "Behaviour changes, like React 16.4's, are invisible to any static check, so this catches only part of the problem.",
+        "severity": "major",
+        "evidenceIds": [
+          "ev-sv-02"
+        ],
+        "response": "It doesn't need to catch everything to be useful. The experiment measures how much it catches.",
+        "status": "accepted"
+      },
+      {
+        "id": "obj-2",
+        "text": "Some maintainers deliberately tighten engines in minor releases (e.g. dropping end-of-life Node). They may consider that acceptable, and see the linter as noise.",
+        "severity": "major",
+        "evidenceIds": [],
+        "response": "The audit step measures how many flags are genuine. Rules can be configured.",
+        "status": "open"
+      },
+      {
+        "id": "obj-3",
+        "text": "The type-checker projects could add metadata rules quickly.",
+        "severity": "minor",
+        "evidenceIds": [
+          "ev-sv-09"
+        ],
+        "status": "open"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 4,
+          "rationale": "Breaking minor releases cost users real time."
+        },
+        "frequency": {
+          "score": 3,
+          "rationale": "Frequency of metadata breaks unknown; being measured."
+        },
+        "userValue": {
+          "score": 4,
+          "rationale": "Catches a class of breaks no current tool checks, before publish."
+        },
+        "competitiveGap": {
+          "score": 4,
+          "rationale": "No tool found that checks the install/import contract."
+        },
+        "differentiation": {
+          "score": 3,
+          "rationale": "Clear but copyable."
+        },
+        "feasibility": {
+          "score": 5,
+          "rationale": "Pure metadata comparison."
+        },
+        "costComplexity": {
+          "score": 5,
+          "rationale": "Small CLI."
+        },
+        "userAccess": {
+          "score": 4,
+          "rationale": "Maintainers reachable via GitHub Marketplace and npm."
+        },
+        "validationCost": {
+          "score": 5,
+          "rationale": "Frequency testable for $0 on registry data."
+        }
+      },
+      "assessedAt": "2026-11-04T13:57:28Z",
+      "assessedBy": "critic (claude-code-session)"
+    },
+    "status": "advanced",
+    "statusRationale": "Advanced. It covers breaks that the existing TypeScript checkers can't see, is cheap to build, and VENTURE can measure how often such breaks happen directly from npm before building anything.",
+    "relatedIdeaIds": [
+      "idea-typescript-api-semver-checker"
+    ],
+    "noveltyNote": "Distinct from the rejected type-surface checker: it inspects package metadata and the published file contract, not .d.ts types.",
+    "epistemic": "hypothesis",
+    "practical": {
+      "adopters": "npm package maintainers, as a pre-publish check, and possibly downstream teams auditing updates",
+      "distribution": "open-source",
+      "smallestUsefulVersion": "A CLI (`npx`) and GitHub Action that compares the release candidate's package.json and file list with the last published version and prints contract changes needing a major bump.",
+      "buildableByVenture": true,
+      "buildNote": "Needs only package.json parsing, npm registry metadata and the semver library. VENTURE already uses all three.",
+      "monetization": "As a free open-source tool. A paid angle (dependency-update risk scoring for companies) is speculative."
+    },
+    "createdInRun": "run-20261104-agent-release-breaks-1",
+    "createdAt": "2026-11-04T13:57:28Z",
+    "updatedAt": "2026-11-04T13:57:28Z",
     "provenance": "real"
   },
   {
@@ -783,6 +1027,120 @@
     "createdInRun": "run-20261103-agent-supply-chain-1",
     "createdAt": "2026-11-03T22:45:20Z",
     "updatedAt": "2026-11-03T22:45:20Z",
+    "provenance": "real"
+  },
+  {
+    "id": "idea-typescript-api-semver-checker",
+    "title": "TypeScript API-surface semver checker",
+    "summary": "A 'cargo-semver-checks for TypeScript': diff the exported .d.ts surface between the last release and the next, and fail CI if the version bump understates the change.",
+    "problemIds": [
+      "prob-minor-patch-releases-break-dependents"
+    ],
+    "themeIds": [
+      "theme-npm-release-breaking-changes"
+    ],
+    "targetUsers": "Maintainers of TypeScript libraries on npm",
+    "solution": "Generate API snapshots from .d.ts files, classify each change as major, minor or patch, and compare with the planned version bump in a CLI and GitHub Action.",
+    "competitorIds": [
+      "comp-ts-api-checkers",
+      "comp-api-extractor",
+      "comp-cargo-semver-checks"
+    ],
+    "differentiation": "None that's clear: at least three 2026 projects and Microsoft's API Extractor already do this.",
+    "feasibility": "Feasible: the TypeScript compiler API exposes the surface.",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "Most accidental breaking releases are type-surface changes",
+        "criticality": "high",
+        "status": "weakened"
+      }
+    ],
+    "risks": [
+      "A crowded niche",
+      "Misses behaviour and metadata breaks"
+    ],
+    "nextSteps": [],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "Already being built by at least three projects, one company-backed (Clerk), on top of Microsoft's API Extractor.",
+        "severity": "fatal",
+        "evidenceIds": [
+          "ev-sv-09",
+          "ev-sv-10"
+        ],
+        "status": "accepted"
+      },
+      {
+        "id": "obj-2",
+        "text": "None of the four real breakage complaints examined (React, node-abort-controller, floating-ui, polished) was a type-surface change, so the approach misses many real breaks.",
+        "severity": "major",
+        "evidenceIds": [
+          "ev-sv-02",
+          "ev-sv-05",
+          "ev-sv-08"
+        ],
+        "status": "accepted"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 4,
+          "rationale": "Breaking minor releases cost users real time (weekends, pinned versions)."
+        },
+        "frequency": {
+          "score": 3,
+          "rationale": "Hundreds of issues titled about it; true frequency not yet measured."
+        },
+        "userValue": {
+          "score": 3,
+          "rationale": "Catches one class of break."
+        },
+        "competitiveGap": {
+          "score": 1,
+          "rationale": "Several tools already exist."
+        },
+        "differentiation": {
+          "score": 1,
+          "rationale": "None."
+        },
+        "feasibility": {
+          "score": 5,
+          "rationale": "Compiler API."
+        },
+        "costComplexity": {
+          "score": 4,
+          "rationale": "Small CLI."
+        },
+        "userAccess": {
+          "score": 4,
+          "rationale": "Library maintainers are on GitHub."
+        },
+        "validationCost": {
+          "score": 4,
+          "rationale": "Cheap to test."
+        }
+      },
+      "assessedAt": "2026-11-04T13:57:28Z",
+      "assessedBy": "critic (claude-code-session)"
+    },
+    "status": "rejected",
+    "statusRationale": "Rejected. The TypeScript type-surface checker niche is already being filled (Clerk's break-check, ts-semver-checks, semver-check, API Extractor), and the real complaints examined weren't type-surface breaks.",
+    "relatedIdeaIds": [],
+    "epistemic": "hypothesis",
+    "practical": {
+      "adopters": "TypeScript library maintainers",
+      "distribution": "open-source",
+      "smallestUsefulVersion": "A CLI and GitHub Action that diffs .d.ts exports between versions.",
+      "buildableByVenture": true,
+      "buildNote": "Straightforward with the TypeScript compiler API.",
+      "monetization": "Unlikely: several free tools already exist."
+    },
+    "createdInRun": "run-20261104-agent-release-breaks-1",
+    "createdAt": "2026-11-04T13:57:28Z",
+    "updatedAt": "2026-11-04T13:57:28Z",
     "provenance": "real"
   },
   {

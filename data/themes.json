@@ -31,6 +31,21 @@
     "provenance": "real"
   },
   {
+    "id": "theme-npm-release-breaking-changes",
+    "name": "Accidental breaking changes in JavaScript/TypeScript library releases",
+    "description": "Library releases labelled minor or patch that nonetheless break downstream code, and whether a small open-source tool could catch them before publishing.",
+    "mode": "focused",
+    "keywords": [
+      "breaking change minor release",
+      "semver violation",
+      "breaking change patch release"
+    ],
+    "status": "active",
+    "createdAt": "2026-11-04",
+    "notes": "Chosen by the owner from three VENTURE-proposed candidates, with an explicit practical-value bar: ideas should be buildable, open-sourceable tools.",
+    "provenance": "real"
+  },
+  {
     "id": "theme-oss-supply-chain-small-maintainers",
     "name": "Supply-chain security for small open-source maintainers",
     "description": "Security burdens (account takeover, malicious dependencies, release signing, provenance) that fall on volunteer maintainers without security teams, and which lightweight tools could reduce them.",

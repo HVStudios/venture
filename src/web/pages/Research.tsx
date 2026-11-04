@@ -7,6 +7,13 @@ import { domain, fmtDate, timeAgo, useLab } from "../data";
 import { ThemeProposal } from "../components/ThemeProposal";
 
 const REPO = "https://github.com/HVStudios/venture";
+const DIST: Record<NonNullable<Idea["practical"]>["distribution"], string> = {
+  "open-source": "Open-source tool",
+  "hosted-free": "Free hosted service",
+  "paid-product": "Paid product",
+  "open-core": "Open core (free tool, paid extras)",
+  "write-up-only": "Knowledge, not a product",
+};
 
 function StatusChip({ s }: { s: AreaModel["status"] }) {
   return (
@@ -482,6 +489,17 @@ function IdeaStory({ idea, a, index }: { idea: Idea; a: AreaModel; index: Map<st
             <dt>Idea-specific evidence</dt>
             <dd>
               {support.length} supporting <Cites ids={support.map((e) => e.id)} a={a} index={index} /> · {against.length} contradicting <Cites ids={against.map((e) => e.id)} a={a} index={index} />
+            </dd>
+          </>
+        )}
+        {idea.practical && (
+          <>
+            <dt>Practical value</dt>
+            <dd>
+              <b>{DIST[idea.practical.distribution]}</b> for {idea.practical.adopters}. Smallest useful version: {idea.practical.smallestUsefulVersion}{" "}
+              <span className="muted">
+                ({idea.practical.buildableByVenture ? "VENTURE could build and test this itself" : "beyond what VENTURE can build itself"}: {idea.practical.buildNote}) Money: {idea.practical.monetization}
+              </span>
             </dd>
           </>
         )}

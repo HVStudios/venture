@@ -243,6 +243,14 @@ export function IdeaDetail() {
           <dd>{idea.differentiation}</dd>
           <dt>Technical feasibility</dt>
           <dd>{idea.feasibility}</dd>
+          {idea.practical && (
+            <>
+              <dt>Practical value</dt>
+              <dd>
+                {idea.practical.distribution} · adopters: {idea.practical.adopters} · smallest useful version: {idea.practical.smallestUsefulVersion} · {idea.practical.buildableByVenture ? "buildable by VENTURE" : "not buildable by VENTURE"} ({idea.practical.buildNote}) · money: {idea.practical.monetization}
+              </dd>
+            </>
+          )}
           {idea.noveltyNote && (
             <>
               <dt>Novelty vs. memory</dt>

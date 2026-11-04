@@ -294,6 +294,48 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261104-agent-release-breaks-1-downstream-dependent-test-runner",
+    "at": "2026-11-04T13:57:28Z",
+    "runId": "run-20261104-agent-release-breaks-1",
+    "subjectType": "idea",
+    "subjectId": "idea-downstream-dependent-test-runner",
+    "action": "create",
+    "toStatus": "parked",
+    "rationale": "Parked. Potentially valuable, but expensive and risky to run (executing untrusted code at scale), and well beyond what VENTURE can build for free.",
+    "actor": "director",
+    "attractiveness": 51,
+    "evidenceStrength": 63,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261104-agent-release-breaks-1-npm-release-contract-linter",
+    "at": "2026-11-04T13:57:28Z",
+    "runId": "run-20261104-agent-release-breaks-1",
+    "subjectType": "idea",
+    "subjectId": "idea-npm-release-contract-linter",
+    "action": "create",
+    "toStatus": "advanced",
+    "rationale": "Advanced. It covers breaks that the existing TypeScript checkers can't see, is cheap to build, and VENTURE can measure how often such breaks happen directly from npm before building anything.",
+    "actor": "director",
+    "attractiveness": 77,
+    "evidenceStrength": 69,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261104-agent-release-breaks-1-typescript-api-semver-checker",
+    "at": "2026-11-04T13:57:28Z",
+    "runId": "run-20261104-agent-release-breaks-1",
+    "subjectType": "idea",
+    "subjectId": "idea-typescript-api-semver-checker",
+    "action": "create",
+    "toStatus": "rejected",
+    "rationale": "Rejected. The TypeScript type-surface checker niche is already being filled (Clerk's break-check, ts-semver-checks, semver-check, API Extractor), and the real complaints examined weren't type-surface breaks.",
+    "actor": "director",
+    "attractiveness": 56,
+    "evidenceStrength": 42,
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261104-combined-signal-discrimination",
     "at": "2026-11-04T12:10:04.459Z",
     "subjectType": "experiment",
@@ -377,6 +419,18 @@
     "actor": "director",
     "attractiveness": 71,
     "evidenceStrength": 31,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261104-npm-metadata-breaks",
+    "at": "2026-11-04T13:58:45.611Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-npm-metadata-breaks",
+    "action": "advance",
+    "fromStatus": "proposed",
+    "toStatus": "approved",
+    "rationale": "Approved under the standing rule for automatable experiments. Rules and thresholds pre-registered, and rule logic unit-tested on synthetic cases before any real release data.",
+    "actor": "research director (automatable: public data only, no contact, $0)",
     "provenance": "real"
   },
   {

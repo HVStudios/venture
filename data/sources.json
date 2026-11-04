@@ -1,5 +1,18 @@
 [
   {
+    "id": "src-api-extractor-readme",
+    "url": "https://raw.githubusercontent.com/microsoft/rushstack/main/apps/api-extractor/README.md",
+    "title": "Microsoft API Extractor (README)",
+    "publisher": "Microsoft (rushstack, open source)",
+    "retrievedAt": "2026-11-04T13:45:00Z",
+    "sourceType": "repository",
+    "excerpt": "People keep reporting that their code won't compile after a supposedly \"minor\" update.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-arxiv-2601-21276",
     "url": "https://arxiv.org/abs/2601.21276v1",
     "title": "More Code, Less Reuse: Investigating Code Quality and Reviewer Sentiment towards AI-generated Pull Requests",
@@ -190,6 +203,34 @@
     "retrievedAt": "2026-11-03T21:47:31.775Z",
     "sourceType": "issue-tracker",
     "excerpt": "### What is the problem this feature would solve? Recently, the npm ecosystem has suffered several supply chain attacks where popular packages were compromised right after release. Other package managers, such as [pnpm](https://github.com/pnpm/pnpm/pull/9921), have already introduced a configuration option to mitigate these risks. The feature request is to add support in Bun for two new configuration options (ideally to `.npmrc` and `bunfig.toml`: `minimumReleaseAge`: Defines the minimum amount of minutes that must pass after a version is published before Bun will install it. Example: ``` minimumReleaseAge: 1440 ``` This would ensure that only packages released at least one day ago are installable. `minimumReleaseAgeExclude`: A list of dependencies that should be excluded from the above restriction and always install the latest version immediately. Example: ``` minimumReleaseAgeExclude: - webpack ``` **References** pnpm PR introducing the feature: [#9921](https://github.com/pnpm/pnpm/pull/9921) ### What is the feature you are proposing to solve the problem? Prevent supply chain attacks: in most incidents, malicious packages are discovered and removed from the registry within minute…",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-cargo-semver-checks-readme",
+    "url": "https://raw.githubusercontent.com/obi1kenobi/cargo-semver-checks/main/README.md",
+    "title": "cargo-semver-checks (README)",
+    "publisher": "obi1kenobi/cargo-semver-checks (open source)",
+    "retrievedAt": "2026-11-04T13:45:00Z",
+    "sourceType": "repository",
+    "excerpt": "Lint your crate API changes for semver violations. … A design goal of `cargo-semver-checks` is to not have false positives. … Here are some example areas where `cargo-semver-checks` currently will not catch semver violations:",
+    "limitations": "Rust, not JavaScript. Shows the tool model works, not that JS maintainers would adopt it. About 1,700 GitHub stars at retrieval (from GitHub search).",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-clerk-break-check-readme",
+    "url": "https://raw.githubusercontent.com/clerk/break-check/main/README.md",
+    "title": "@clerk/break-check (README)",
+    "publisher": "Clerk (open source, company-backed)",
+    "retrievedAt": "2026-11-04T13:45:00Z",
+    "sourceType": "repository",
+    "excerpt": "Catch breaking TypeScript API changes before they ship. … Break Check uses Microsoft API Extractor to snapshot public `.d.ts` surfaces,",
+    "limitations": "A new project (3 stars at retrieval, updated 2026-11-04).",
     "verification": {
       "status": "unchecked"
     },
@@ -394,6 +435,20 @@
     "provenance": "real"
   },
   {
+    "id": "src-floating-ui-breaking-minor",
+    "url": "https://github.com/floating-ui/floating-ui/issues/218",
+    "title": "floating-ui: Breaking changes in minor releases (#218)",
+    "publisher": "floating-ui (GitHub issue)",
+    "publishedAt": "2017-04-18",
+    "retrievedAt": "2026-11-04T13:45:00Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "Your change completely broke our release pipelines while we tracked down what changed over the weekend and we've now had to pin our versions back whilst we find a work around.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-fossier-readme",
     "url": "https://raw.githubusercontent.com/PThorpe92/fossier/main/README.md",
     "title": "Fossier: GitHub spam prevention for open source repositories (README)",
@@ -478,6 +533,20 @@
     "provenance": "real"
   },
   {
+    "id": "src-jsleekr-semver-check-readme",
+    "url": "https://raw.githubusercontent.com/JSLEEKR/semver-check/main/README.md",
+    "title": "semver-check (README)",
+    "publisher": "JSLEEKR/semver-check (open source)",
+    "retrievedAt": "2026-11-04T13:45:00Z",
+    "sourceType": "repository",
+    "excerpt": "Compare TypeScript/JavaScript API surfaces across versions and flag semver violations automatically",
+    "limitations": "A new project (0 stars at retrieval).",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-kubernetes-ai-policy-disparate-impact",
     "url": "https://github.com/kubernetes/community/issues/9010",
     "title": "Disparate Impact of Current AI Policies on Contributors Using AI as Assistive Technology",
@@ -549,6 +618,20 @@
     "retrievedAt": "2026-11-03T21:47:31.775Z",
     "sourceType": "issue-tracker",
     "excerpt": "Recently I've noticed and been in short conversations with @pyrox0 and @whispersofthedawn who have both also noticed that some PRs will remove the Automation/Ai and Contribution policy checkboxes. I personally believe that merging this PRs would be a gross violation of the policies so we should close PRs that do not contain these checkboxes or have not checked them out intentionally with a notification that to the user to read them.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-node-abort-controller-breaking-minor",
+    "url": "https://github.com/southpolesteve/node-abort-controller/issues/39",
+    "title": "node-abort-controller: Breaking change in latest minor release (#39)",
+    "publisher": "node-abort-controller (GitHub issue)",
+    "publishedAt": "2023-01-25",
+    "retrievedAt": "2026-11-04T13:45:00Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "If not, I'll be pinning to `3.0.x` until we drop node v14, but this will continue to effect users of existing apollo server versions if their lockfiles are updated.",
     "verification": {
       "status": "unchecked"
     },
@@ -638,6 +721,20 @@
     "provenance": "real"
   },
   {
+    "id": "src-polished-engines-break",
+    "url": "https://github.com/styled-components/polished/issues/644",
+    "title": "polished: Breaking semver change introduced in v4.3.0 (#644)",
+    "publisher": "polished (GitHub issue)",
+    "publishedAt": "2024-02-01",
+    "retrievedAt": "2026-11-04T13:45:00Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "error polished@4.3.0: The engine \"node\" is incompatible with this module. Expected version \">=20\". Got \"18.19.0\"",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-pr-slop-filter-readme",
     "url": "https://raw.githubusercontent.com/Noxlie/pr-slop-filter/main/README.md",
     "title": "pr-slop-filter (README)",
@@ -687,6 +784,21 @@
     "provenance": "real"
   },
   {
+    "id": "src-react-16-4-breaking-minor",
+    "url": "https://github.com/react/react/issues/12898",
+    "title": "React: The minor release of 16.4 causes BREAKING changes in getDerivedStateFromProps (#12898)",
+    "publisher": "React (GitHub issue)",
+    "publishedAt": "2018-05-24",
+    "retrievedAt": "2026-11-04T13:45:00Z",
+    "sourceType": "issue-tracker",
+    "excerpt": "According to semver, only non-breaking changes are supposed to go into minor and patch version releases. … Our entire codebase, running perfectly on 16.3.2 is a dumpster fire as soon as we raise that dependency to 16.4.",
+    "limitations": "A 2018 case. 44 reactions and 104 comments at retrieval.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-rust-no-low-effort",
     "url": "https://github.com/rust-lang/leadership-council/issues/273",
     "title": "Rust leadership council: Policy proposal: No low-effort contributions (#273)",
@@ -701,6 +813,19 @@
       "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-semver-spec",
+    "url": "https://raw.githubusercontent.com/semver/semver/master/semver.md",
+    "title": "Semantic Versioning 2.0.0 (specification)",
+    "publisher": "semver.org (GitHub)",
+    "retrievedAt": "2026-11-04T13:45:00Z",
+    "sourceType": "docs",
+    "excerpt": "Patch version Z (x.y.Z | x > 0) MUST be incremented if only backward compatible bug fixes are introduced.",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },
@@ -793,6 +918,20 @@
       "checkedAt": "2026-11-03T21:47:50.309Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-ts-semver-checks-readme",
+    "url": "https://raw.githubusercontent.com/ardenden/ts-semver-checks/main/README.md",
+    "title": "ts-semver-checks (README)",
+    "publisher": "ardenden/ts-semver-checks (open source)",
+    "retrievedAt": "2026-11-04T13:45:00Z",
+    "sourceType": "repository",
+    "excerpt": "Run it in CI and it fails the build when a PR is a breaking change but the version",
+    "limitations": "A new project (0 stars at retrieval).",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },

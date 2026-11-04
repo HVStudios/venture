@@ -1148,5 +1148,178 @@
     ],
     "competitorIds": [],
     "provenance": "real"
+  },
+  {
+    "id": "ev-sv-01",
+    "claim": "Semantic Versioning promises that patch (and minor) releases don't break users. Package managers install such updates automatically.",
+    "sourceId": "src-semver-spec",
+    "quote": "Patch version Z (x.y.Z | x > 0) MUST be incremented if only backward compatible bug fixes are introduced.",
+    "stance": "context",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-minor-patch-releases-break-dependents"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-02",
+    "claim": "React 16.4, a minor release, broke a user's whole codebase through a behaviour change.",
+    "sourceId": "src-react-16-4-breaking-minor",
+    "quote": "Our entire codebase, running perfectly on 16.3.2 is a dumpster fire as soon as we raise that dependency to 16.4.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-minor-patch-releases-break-dependents",
+      "prob-type-checkers-miss-runtime-and-metadata-breaks"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-03",
+    "claim": "A breaking minor release of node-abort-controller forced Apollo Server's maintainer to pin versions, and affected Apollo's own users downstream.",
+    "sourceId": "src-node-abort-controller-breaking-minor",
+    "quote": "If not, I'll be pinning to `3.0.x` until we drop node v14, but this will continue to effect users of existing apollo server versions if their lockfiles are updated.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-minor-patch-releases-break-dependents",
+      "prob-type-checkers-miss-runtime-and-metadata-breaks"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-04",
+    "claim": "A breaking minor release of floating-ui broke a user's release pipeline and cost them a weekend of debugging.",
+    "sourceId": "src-floating-ui-breaking-minor",
+    "quote": "Your change completely broke our release pipelines while we tracked down what changed over the weekend",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-minor-patch-releases-break-dependents"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-05",
+    "claim": "polished 4.3.0, a minor release, raised its required Node version to ≥ 20, breaking installs on Node 18. That's a metadata change, not a type change.",
+    "sourceId": "src-polished-engines-break",
+    "quote": "Expected version \">=20\". Got \"18.19.0\"",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-minor-patch-releases-break-dependents",
+      "prob-type-checkers-miss-runtime-and-metadata-breaks"
+    ],
+    "ideaIds": [
+      "idea-npm-release-contract-linter"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-06",
+    "claim": "Microsoft built API Extractor partly because users kept reporting compile breaks after 'minor' updates.",
+    "sourceId": "src-api-extractor-readme",
+    "quote": "People keep reporting that their code won't compile after a supposedly \"minor\" update.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-minor-patch-releases-break-dependents"
+    ],
+    "ideaIds": [],
+    "competitorIds": [
+      "comp-api-extractor"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-07",
+    "claim": "Rust has an established tool that checks each release for semver violations before publishing (about 1,700 stars), so the tool model is proven in another ecosystem.",
+    "sourceId": "src-cargo-semver-checks-readme",
+    "quote": "Lint your crate API changes for semver violations.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-typescript-api-semver-checker",
+      "idea-npm-release-contract-linter"
+    ],
+    "competitorIds": [
+      "comp-cargo-semver-checks"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-08",
+    "claim": "Even the mature Rust tool documents classes of breaking change it can't detect. API-surface checking is inherently partial.",
+    "sourceId": "src-cargo-semver-checks-readme",
+    "quote": "Here are some example areas where `cargo-semver-checks` currently will not catch semver violations:",
+    "stance": "context",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-type-checkers-miss-runtime-and-metadata-breaks"
+    ],
+    "ideaIds": [
+      "idea-typescript-api-semver-checker"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-09",
+    "claim": "A company-backed TypeScript API-break checker (Clerk's break-check) appeared in 2026, alongside at least two other new ones.",
+    "sourceId": "src-clerk-break-check-readme",
+    "quote": "Catch breaking TypeScript API changes before they ship.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "context": "The TypeScript type-surface niche is already being filled.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-typescript-api-semver-checker"
+    ],
+    "competitorIds": [
+      "comp-ts-api-checkers"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-10",
+    "claim": "ts-semver-checks explicitly aims to be 'cargo-semver-checks for TypeScript'.",
+    "sourceId": "src-ts-semver-checks-readme",
+    "quote": "Run it in CI and it fails the build when a PR is a breaking change but the version",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-typescript-api-semver-checker"
+    ],
+    "competitorIds": [
+      "comp-ts-api-checkers"
+    ],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-11",
+    "claim": "Some real breaking releases are visible purely in package metadata (here, the engines field), which a type-surface checker wouldn't inspect.",
+    "sourceId": "src-polished-engines-break",
+    "quote": "error polished@4.3.0: The engine \"node\" is incompatible with this module.",
+    "stance": "supports",
+    "epistemic": "inference",
+    "problemIds": [
+      "prob-type-checkers-miss-runtime-and-metadata-breaks"
+    ],
+    "ideaIds": [
+      "idea-npm-release-contract-linter"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
   }
 ]

@@ -48,6 +48,22 @@
     "provenance": "real"
   },
   {
+    "id": "prob-minor-patch-releases-break-dependents",
+    "title": "Minor and patch releases break dependents' code",
+    "statement": "Package managers install minor and patch updates automatically on the promise that they're backward compatible. When a library breaks that promise, downstream projects break without warning. Users report pinned versions, broken release pipelines and lost weekends.",
+    "themeIds": [
+      "theme-npm-release-breaking-changes"
+    ],
+    "affectedUsers": "Developers and teams depending on npm packages, and maintainers of libraries built on other libraries",
+    "severityNote": "High when it happens: broken builds and pipelines, and emergency pinning.",
+    "frequencyNote": "Hundreds of GitHub issues are titled about it. True frequency not yet measured.",
+    "status": "investigating",
+    "discoveredInRun": "run-20261104-agent-release-breaks-1",
+    "firstSeen": "2026-11-04T13:57:28Z",
+    "lastUpdated": "2026-11-04T13:57:28Z",
+    "provenance": "real"
+  },
+  {
     "id": "prob-new-releases-installed-before-detection",
     "title": "New releases are installed before malicious ones are detected",
     "statement": "Automated and manual installs pick up new versions immediately. Malicious releases are typically detected and removed within hours, but not before they've been installed. Users ask package managers for release-age delays.",
@@ -93,6 +109,22 @@
     "discoveredInRun": "run-20261103-agent-supply-chain-1",
     "firstSeen": "2026-11-03T22:45:20Z",
     "lastUpdated": "2026-11-03T22:45:20Z",
+    "provenance": "real"
+  },
+  {
+    "id": "prob-type-checkers-miss-runtime-and-metadata-breaks",
+    "title": "Existing semver checkers only see the type surface",
+    "statement": "The available and emerging checkers compare TypeScript type declarations. Many real breaking releases come from behaviour changes or from package metadata (e.g. a raised Node engine requirement), which those tools don't inspect.",
+    "themeIds": [
+      "theme-npm-release-breaking-changes"
+    ],
+    "affectedUsers": "Maintainers relying on automated checks, and especially packages without TypeScript types",
+    "severityNote": "Medium: a gap in tooling, not a direct harm.",
+    "frequencyNote": "All four real complaints examined were non-type breaks (small sample).",
+    "status": "investigating",
+    "discoveredInRun": "run-20261104-agent-release-breaks-1",
+    "firstSeen": "2026-11-04T13:57:28Z",
+    "lastUpdated": "2026-11-04T13:57:28Z",
     "provenance": "real"
   }
 ]

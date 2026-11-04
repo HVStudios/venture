@@ -204,6 +204,20 @@ export const Idea = z.object({
   /** Explicit statement of how this idea differs from similar historical ideas. */
   noveltyNote: z.string().optional(),
   epistemic: Epistemic.default("hypothesis"),
+  /**
+   * The practical-value case: who would adopt it, in what form, and whether
+   * VENTURE could build and test the smallest useful version itself.
+   */
+  practical: z
+    .object({
+      adopters: z.string().min(5),
+      distribution: z.enum(["open-source", "hosted-free", "paid-product", "open-core", "write-up-only"]),
+      smallestUsefulVersion: z.string().min(10),
+      buildableByVenture: z.boolean(),
+      buildNote: z.string().min(5),
+      monetization: z.string().min(5),
+    })
+    .optional(),
   createdInRun: Id,
   createdAt: IsoDate,
   updatedAt: IsoDate,

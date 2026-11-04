@@ -800,6 +800,79 @@
     "provenance": "real"
   },
   {
+    "id": "run-20261104-agent-release-breaks-1",
+    "themeId": "theme-npm-release-breaking-changes",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-04T13:20:00Z",
+    "completedAt": "2026-11-04T13:57:28Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "Compared three candidate areas by GitHub issue volume and existing tools. The owner chose this one."
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "10 sources: SemVer spec, 4 breakage issues, 5 tool READMEs. 11 evidence items, 2 contradicting."
+      },
+      {
+        "name": "invent",
+        "status": "ok",
+        "notes": "3 concepts, each with a practical-value case"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "Key insight: none of the real complaints was a type-surface break"
+      },
+      {
+        "name": "select",
+        "status": "ok",
+        "notes": "1 advanced, 1 parked, 1 rejected"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Pre-registered exp-npm-metadata-breaks"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "First research brief written"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 14,
+      "sourcesCited": 10,
+      "problemsFound": 2,
+      "ideasGenerated": 3,
+      "ideasAdvanced": 1,
+      "ideasRejected": 1,
+      "ideasParked": 1,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "GitHub issue search (exact title phrases) for 12 candidate pains; repo search for existing tools",
+      "GitHub issue search: React 16.4, node-abort-controller, floating-ui, polished breakage issues",
+      "raw fetch: cargo-semver-checks, API Extractor, break-check, ts-semver-checks, semver-check READMEs; SemVer spec"
+    ],
+    "errors": [
+      "Loose GitHub issue searches produced meaningless counts (e.g. Go generics issues for 'dependabot too many pull requests'). Re-run with exact title phrases."
+    ],
+    "limitations": [
+      "Demand was estimated from GitHub issue titles and reactions, which favour vocal communities.",
+      "Only four breakage complaints were examined, chosen by search ranking."
+    ],
+    "usage": {
+      "note": "Interactive Claude Code session under the owner's subscription. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  {
     "id": "run-20261104-agent-supply-chain-2",
     "themeId": "theme-oss-supply-chain-small-maintainers",
     "mode": "agent-session",
