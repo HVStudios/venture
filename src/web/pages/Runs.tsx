@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Empty, Pill, Section, StatusPill } from "../components/ui";
 import { fmtDate, useLab } from "../data";
+import { RunReplay } from "../components/RunReplay";
+import { Strata } from "../components/Strata";
 
 function duration(a: string, b?: string) {
   if (!b) return "—";
@@ -16,7 +18,7 @@ export function History() {
   const decisions = [...m.decisions].sort((a, b) => b.at.localeCompare(a.at));
   return (
     <div className="page">
-      <Section
+      <Section page
         title="Research runs"
         kicker={`${m.runs.length} run(s) recorded`}
         aside={
@@ -33,9 +35,9 @@ export function History() {
                   <th>Run</th>
                   <th>Status</th>
                   <th>Theme</th>
-                  <th>Mode / provider</th>
+                  <th>Mode</th>
                   <th>Started</th>
-                  <th>Duration</th>
+                  <th className="num">Duration</th>
                   <th className="num">Sources</th>
                   <th className="num">Ideas</th>
                   <th className="num">Adv / Park / Rej</th>
@@ -54,12 +56,11 @@ export function History() {
                       <StatusPill status={r.status} />
                     </td>
                     <td>{byId("themes", r.themeId)?.name ?? r.themeId}</td>
-                    <td>
+                    <td className="nowrap" title={r.provider}>
                       {r.mode}
-                      <div className="muted">{r.provider}</div>
                     </td>
-                    <td>{fmtDate(r.startedAt)}</td>
-                    <td>{duration(r.startedAt, r.completedAt)}</td>
+                    <td className="nowrap tnum">{fmtDate(r.startedAt)}</td>
+                    <td className="num">{duration(r.startedAt, r.completedAt)}</td>
                     <td className="num">
                       {r.counts.sourcesCited}/{r.counts.sourcesExamined}
                     </td>
@@ -79,6 +80,7 @@ export function History() {
       </Section>
 
       <Section title="Decision ledger" kicker={`${decisions.length} decision(s), append-only`}>
+        <Strata decisions={decisions} name={(d) => (d.subjectType === "idea" ? byId("ideas", d.subjectId)?.title : d.subjectType === "problem" ? byId("problems", d.subjectId)?.title : d.subjectType === "experiment" ? byId("experiments", d.subjectId)?.title : byId("themes", d.subjectId)?.name) ?? d.subjectId} />
         <ol className="timeline">
           {decisions.map((d) => (
             <li key={d.id}>
@@ -150,15 +152,8 @@ export function RunDetail() {
           </dl>
         </div>
       </header>
-      <Section title="Stages">
-        <ol className="stages big">
-          {r.stages.map((s, i) => (
-            <li key={i} className={`stage stage-${s.status}`}>
-              <span className="stage-name">{s.name}</span>
-              <span className="stage-notes">{s.notes}</span>
-            </li>
-          ))}
-        </ol>
+      <Section title="Replay" kicker={`${r.stages.length} stage(s), from the run's own record`}>
+        <RunReplay run={r} m={m} />
       </Section>
       {r.queries.length > 0 && (
         <Section title="Queries & sources examined" kicker={`${r.counts.sourcesExamined} examined · ${r.counts.sourcesCited} cited`}>

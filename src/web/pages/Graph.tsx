@@ -90,7 +90,7 @@ export function Graph() {
   if (!nodes.length) return <Empty>Nothing to map yet.</Empty>;
   return (
     <div className="page">
-      <Section
+      <Section page bare
         title="Research map"
         kicker="Themes → problems → ideas → competitors & experiments"
         aside={

@@ -4,6 +4,8 @@ import { CRITERIA, type Idea } from "../../core/schema";
 import { CRITERION_INFO, evidenceForIdea } from "../../core/scoring";
 import { Empty, EpiBadge, EvidenceCard, EvidenceLevel, Meter, Pill, Section, StatusPill } from "../components/ui";
 import { fmtDate, useLab } from "../data";
+import { buildIdeaStory } from "../../core/story";
+import { Beam, Mark, StoryTimeline, Tally, Thread } from "../components/story";
 
 const STATUSES: Idea["status"][] = ["advanced", "proposed", "parked", "rejected", "merged"];
 
@@ -13,6 +15,7 @@ export function IdeaCard({ idea, compare, onToggle }: { idea: Idea; compare?: bo
   return (
     <article className={`card idea-card status-${idea.status}`}>
       <header>
+        <Mark idea={idea} size="row" />
         <StatusPill status={idea.status} />
         <EvidenceLevel a={s.evidence} />
         {onToggle && (
@@ -68,7 +71,7 @@ export function Ideas() {
 
   return (
     <div className="page">
-      <Section
+      <Section page bare
         title="Ideas"
         kicker={`${list.length} of ${m.ideas.length}`}
         aside={
@@ -81,6 +84,12 @@ export function Ideas() {
           )
         }
       >
+        <p className="area-tally ideas-tally">
+          <Tally ideas={m.ideas.filter((i) => i.status !== "merged")} />
+          <span>
+            {m.ideas.filter((i) => i.status === "advanced" || i.status === "proposed").length} of {m.ideas.filter((i) => i.status !== "merged").length} still standing. Hover a mark to see the idea; select it to open its story.
+          </span>
+        </p>
         <div className="filters">
           <input type="search" placeholder="Search ideas…" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search ideas" />
           <select value={status} onChange={(e) => set("status", e.target.value)} aria-label="Status">
@@ -162,6 +171,7 @@ export function ScoreTable({ idea }: { idea: Idea }) {
 
 export function IdeaDetail() {
   const { id } = useParams();
+  const [picked, setPicked] = useState<string | undefined>(undefined);
   const lab = useLab();
   const { m, byId, ideaScores, related } = lab;
   const idea = m.ideas.find((i) => i.id === id);
@@ -172,8 +182,15 @@ export function IdeaDetail() {
   const contra = ev.filter((e) => e.stance === "contradicts");
   const context = ev.filter((e) => e.stance === "context");
   const experiments = m.experiments.filter((x) => x.ideaId === idea.id);
-  const history = m.decisions.filter((d) => d.subjectId === idea.id).sort((a, b) => a.at.localeCompare(b.at));
   const rel = related.get(idea.id) ?? [];
+  const story = buildIdeaStory(m, idea.id)!;
+  const traced = story.threads.filter((t) => t.traced).length;
+  // Open on the chosen pillar, else the one that decided the verdict: refuted first, then the riskiest.
+  const current =
+    story.threads.find((t) => t.assumption.id === picked) ??
+    story.threads.find((t) => t.assumption.status === "refuted") ??
+    story.threads.find((t) => t.assumption.criticality === "high") ??
+    story.threads[0];
 
   return (
     <div className="page detail">
@@ -194,7 +211,7 @@ export function IdeaDetail() {
           <h1>{idea.title}</h1>
           <p className="lede">{idea.summary}</p>
           <p className="decision-note">
-            <b>Director:</b> {idea.statusRationale}
+            <b>Verdict:</b> {idea.statusRationale}
             {idea.mergedInto && (
               <>
                 {" "}
@@ -212,8 +229,17 @@ export function IdeaDetail() {
         </aside>
       </header>
 
+      <Section title="What it stands on" id="assumptions" kicker={`${idea.assumptions.length} assumption(s) · ${traced} traced to a quote or result`}>
+        <Beam story={story} selected={current?.assumption.id} onSelect={setPicked} />
+        {current && <Thread thread={current} />}
+      </Section>
+
+      <Section title="Its story" id="story" kicker={`${story.events.length} event(s), oldest first`}>
+        <StoryTimeline story={story} onAssumption={(a) => { setPicked(a); document.getElementById("assumptions")?.scrollIntoView({ behavior: "smooth" }); }} />
+      </Section>
+
       <nav className="toc">
-        {["problem", "solution", "evidence", "alternatives", "critique", "scores", "experiments", "history"].map((a) => (
+        {["problem", "solution", "evidence", "alternatives", "critique", "scores", "experiments"].map((a) => (
           <a key={a} href={`#/ideas/${idea.id}`} onClick={(e) => { e.preventDefault(); document.getElementById(a)?.scrollIntoView({ behavior: "smooth" }); }}>
             {a}
           </a>
@@ -259,16 +285,6 @@ export function IdeaDetail() {
           )}
         </dl>
         <div className="grid-2 tight">
-          <div>
-            <h3>Key assumptions</h3>
-            <ul className="assumptions">
-              {idea.assumptions.map((a) => (
-                <li key={a.id}>
-                  <Pill kind={`crit-${a.criticality}`}>{a.criticality}</Pill> <Pill kind={`astat-${a.status}`}>{a.status}</Pill> {a.text}
-                </li>
-              ))}
-            </ul>
-          </div>
           <div>
             <h3>Risks</h3>
             <ul className="bullets">
@@ -360,30 +376,8 @@ export function IdeaDetail() {
         {experiments.length ? experiments.map((x) => <ExperimentCard key={x.id} id={x.id} />) : <Empty>No experiment proposed. Only advanced ideas get experiments.</Empty>}
       </Section>
 
-      <Section title="Assessment history" id="history">
-        <ol className="timeline">
-          {history.map((d) => (
-            <li key={d.id}>
-              <span className="when">{fmtDate(d.at)}</span>
-              <span>
-                <b>{d.action}</b> {d.fromStatus ? `${d.fromStatus} → ` : ""}
-                <StatusPill status={d.toStatus} /> by {d.actor}
-                {d.runId && (
-                  <>
-                    {" "}in <Link to={`/runs/${d.runId}`}>{d.runId}</Link>
-                  </>
-                )}
-                {d.attractiveness !== undefined && (
-                  <span className="muted"> · attractiveness {d.attractiveness} · evidence {d.evidenceStrength}</span>
-                )}
-              </span>
-              <p>{d.rationale}</p>
-            </li>
-          ))}
-        </ol>
-        {rel.length > 0 && (
-          <>
-            <h3>Similar ideas in memory</h3>
+      {rel.length > 0 && (
+        <Section title="Similar ideas in memory">
             <ul className="bullets">
               {rel.map((r) => (
                 <li key={r.id}>
@@ -391,9 +385,8 @@ export function IdeaDetail() {
                 </li>
               ))}
             </ul>
-          </>
-        )}
-      </Section>
+        </Section>
+      )}
     </div>
   );
 }

@@ -22,7 +22,7 @@ export function Sources() {
   );
   return (
     <div className="page">
-      <Section
+      <Section page
         title="Evidence library"
         kicker={`${m.sources.length} sources · ${origins} independent origins · ${m.evidence.length} claims`}
         aside={<Link to="/signals">Raw signal feed →</Link>}

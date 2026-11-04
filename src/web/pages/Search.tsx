@@ -47,7 +47,7 @@ export function Search() {
   const kinds = [...new Set(hits.map((h) => h.kind))];
   return (
     <div className="page">
-      <Section title={q ? `Results for “${q}”` : "Search"} kicker={`${hits.length} match(es)`}>
+      <Section page title={q ? `Results for “${q}”` : "Search"} kicker={`${hits.length} match(es)`}>
         {!q && <Empty>Type at least two characters in the search box (press “/” to focus it).</Empty>}
         {q && !hits.length && <Empty>Nothing in this data set matches.</Empty>}
         {kinds.map((k) => (

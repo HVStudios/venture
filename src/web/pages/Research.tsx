@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { buildArea, buildAreas, IDEA_STATUS_TEXT, RESULT_TEXT, strongestObjection, type AreaModel, type TimelineEvent } from "../../core/areas";
 import type { Evidence, Experiment, Idea, IdeaStatus, Source } from "../../core/schema";
 import { EpiBadge, EvidenceLevel, Pill, VerifyBadge } from "../components/ui";
+import { Mark, Tally } from "../components/story";
 import { domain, fmtDate, timeAgo, useLab } from "../data";
 import { ThemeProposal } from "../components/ThemeProposal";
 
@@ -49,8 +50,7 @@ export function ResearchAreas() {
   return (
     <div className="page">
       <header className="research-head">
-        <div className="kicker">Research areas</div>
-        <h1>What VENTURE is investigating</h1>
+        <h1>Research areas</h1>
         <p className="lede">
           Each research area is a standing investigation. Open one to read its question, what has been found, what has been tested, what the lab currently concludes and what it will look at next. All of it is traceable to sources.
         </p>
@@ -63,7 +63,6 @@ export function ResearchAreas() {
       <section className="section">
         <header className="section-head">
           <div>
-            <div className="kicker">Steer the lab</div>
             <h2>Propose a new research area</h2>
           </div>
         </header>
@@ -86,6 +85,14 @@ function AreaCard({ a }: { a: AreaModel }) {
           <Link to={`/research/${a.theme.id}`}>{a.theme.name}</Link>
         </h2>
         <p className="area-question">{a.brief?.researchQuestion ?? a.theme.description}</p>
+        {a.ideas.length > 0 && (
+          <p className="area-tally">
+            <Tally ideas={a.ideas.filter((i) => i.status !== "merged")} label={`Ideas in ${a.theme.name}, by verdict`} />
+            <span>
+              {a.ideas.filter((i) => i.status === "advanced" || i.status === "proposed").length} of {a.ideas.filter((i) => i.status !== "merged").length} ideas still standing
+            </span>
+          </p>
+        )}
         {findings.length > 0 ? (
           <div className="area-findings">
             <div className="kicker">Key findings so far</div>
@@ -132,11 +139,11 @@ const SECTIONS = [
   ["sources", "Sources & evidence"],
 ] as const;
 
-function JSection({ id, n, title, children, lead }: { id: string; n: number; title: string; children: React.ReactNode; lead?: string }) {
+function JSection({ id, title, children, lead }: { id: string; n: number; title: string; children: React.ReactNode; lead?: string }) {
   return (
     <section className="jsection" id={id}>
       <header>
-        <span className="jnum">{String(n).padStart(2, "0")}</span>
+
         <h2>{title}</h2>
       </header>
       {lead && <p className="jlead">{lead}</p>}
@@ -226,9 +233,9 @@ function Journal({ a }: { a: AreaModel }) {
 
       <div className="journal-layout">
         <nav className="journal-toc" aria-label="Sections">
-          {SECTIONS.map(([sid, label], i) => (
+          {SECTIONS.map(([sid, label]) => (
             <a key={sid} href={`#${sid}`} onClick={(e) => { e.preventDefault(); document.getElementById(sid)?.scrollIntoView({ behavior: "smooth" }); }}>
-              <span>{String(i + 1).padStart(2, "0")}</span> {label}
+              {label}
             </a>
           ))}
           {b && <p className="muted small">Brief updated {fmtDate(b.updatedAt)} by {b.author}</p>}
@@ -470,7 +477,7 @@ function IdeaStory({ idea, a, index }: { idea: Idea; a: AreaModel; index: Map<st
   return (
     <div className={`idea-story st-${idea.status}`}>
       <h4>
-        <Link to={`/ideas/${idea.id}`}>{idea.title}</Link>
+        <Mark idea={idea} size="row" /> <Link to={`/ideas/${idea.id}`}>{idea.title}</Link>
       </h4>
       <p>{idea.summary}</p>
       <dl className="facts">

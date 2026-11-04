@@ -9,7 +9,7 @@ export function Problems() {
   const list = [...m.problems].sort((a, b) => (problemEvidence.get(b.id)?.score ?? 0) - (problemEvidence.get(a.id)?.score ?? 0));
   return (
     <div className="page">
-      <Section title="Discovered problems" kicker={`${list.length} problems, each backed by at least one quoted source`}>
+      <Section page bare title="Discovered problems" kicker={`${list.length} problems, each backed by at least one quoted source`}>
         {list.length ? (
           <div className="card-grid">
             {list.map((p) => {

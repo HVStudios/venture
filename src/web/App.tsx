@@ -16,7 +16,7 @@ import { Signals } from "./pages/Signals";
 import { Sources } from "./pages/Sources";
 
 const NAV = [
-  ["/", "Lab"],
+  ["/", "Overview"],
   ["/research", "Research"],
   ["/ideas", "Ideas"],
   ["/experiments", "Experiments"],
@@ -39,10 +39,10 @@ function StoreSwitch() {
   return (
     <div className="store-switch" role="group" aria-label="Data source">
       <button className={store === "real" ? "on" : ""} onClick={() => setStore("real")} title="Research produced by real research runs">
-        Real research <span className="count">{snapshot.stores.real.ideas.length}</span>
+        Real <span className="count">{snapshot.stores.real.ideas.length} ideas</span>
       </button>
       <button className={store === "fixture" ? "on fixture" : ""} onClick={() => setStore("fixture")} title="Synthetic demonstration data from the mock provider">
-        Demo fixtures
+        Demo
       </button>
     </div>
   );
@@ -72,7 +72,8 @@ function SearchBox() {
         nav(`/search?q=${encodeURIComponent(q)}`);
       }}
     >
-      <input ref={ref} type="search" placeholder="Search  /" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search the lab" />
+      <input ref={ref} type="search" placeholder="Search the lab" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search the lab" />
+      {!q && <kbd aria-hidden>/</kbd>}
     </form>
   );
 }
@@ -85,14 +86,24 @@ function Shell() {
     setOpen(false);
   }, [pathname]);
   const updated = lastUpdated(lab.m);
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const on = () => setScrolled(window.scrollY > 4);
+    on();
+    window.addEventListener("scroll", on, { passive: true });
+    return () => window.removeEventListener("scroll", on);
+  }, []);
   return (
     <div className={`shell ${lab.store}`}>
-      <header className="topbar">
-        <NavLink to="/" className="brand" aria-label="VENTURE home">
-          <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden>
-            <path d="M6 7l10 19 10-19" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      <header className={`topbar${scrolled ? " scrolled" : ""}`}>
+        <div className="topbar-inner">
+        <NavLink to="/" className="brand" aria-label="Venture home">
+          <svg viewBox="0 0 34 12" width="34" height="12" aria-hidden>
+            <circle cx="6" cy="6" r="4.2" fill="none" stroke="var(--text)" strokeWidth="1.6" />
+            <circle cx="17" cy="6" r="4.2" fill="none" stroke="var(--text)" strokeWidth="1.6" />
+            <circle cx="28" cy="6" r="5" fill="var(--hue)" />
           </svg>
-          <span>VENTURE</span>
+          <span>Venture</span>
         </NavLink>
         <button className="menu-btn" aria-expanded={open} onClick={() => setOpen(!open)}>
           Menu
@@ -107,6 +118,7 @@ function Shell() {
         <div className="topbar-right">
           <SearchBox />
           <StoreSwitch />
+        </div>
         </div>
       </header>
       <FixtureNotice />
@@ -129,12 +141,12 @@ function Shell() {
           <Route path="/research/:id" element={<ResearchArea />} />
           <Route path="/themes" element={<Navigate to="/research" replace />} />
           <Route path="/method" element={<Method />} />
-          <Route path="*" element={<div className="empty">Nothing here. <NavLink to="/">Back to the lab</NavLink></div>} />
+          <Route path="*" element={<div className="page"><div className="empty">Nothing here. <NavLink to="/">Back to the lab</NavLink></div></div>} />
         </Routes>
       </main>
       <footer className="footer">
         <span>
-          Snapshot built {timeAgo(lab.snapshot.generatedAt)} · commit <code>{lab.snapshot.commit}</code> · research last updated {timeAgo(updated)}
+          Snapshot built {timeAgo(lab.snapshot.generatedAt)} from commit <code>{lab.snapshot.commit}</code> · research last updated {timeAgo(updated)}
         </span>
         <span>
           Scores are heuristics, not probabilities. <NavLink to="/method">How VENTURE reasons →</NavLink>

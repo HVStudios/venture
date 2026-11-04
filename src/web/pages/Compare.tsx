@@ -23,7 +23,7 @@ export function Compare() {
   );
   return (
     <div className="page">
-      <Section title="Compare ideas" kicker={`${ideas.length} side by side`}>
+      <Section page title="Compare ideas" kicker={`${ideas.length} side by side`}>
         <div className="cmp">
           {row("Idea", (i) => (
             <>
