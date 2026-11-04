@@ -61,4 +61,10 @@ describe("research areas", () => {
     m.briefs[0].findings[0].evidenceIds = ["ev-does-not-exist"];
     expect(validateMemory(m, "fixture").issues.some((i) => i.level === "error" && i.message.includes("missing evidence"))).toBe(true);
   });
+
+  it("shows theme-level decisions such as pausing an area", () => {
+    const m = real();
+    const t = buildTimeline(m, "theme-ai-contribution-burden");
+    expect(t.some((e) => e.title === "Paused this research area")).toBe(true);
+  });
 });

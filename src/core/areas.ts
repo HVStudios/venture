@@ -105,6 +105,10 @@ function decisionEvent(d: Decision, m: Memory): TimelineEvent | undefined {
     const tone = d.toStatus === "advanced" ? "positive" : d.toStatus === "rejected" ? "negative" : "neutral";
     return { at: d.at, kind: "decision", title, detail: d.rationale, link: `/ideas/${idea.id}`, tone };
   }
+  if (d.subjectType === "theme") {
+    const verb = d.toStatus === "paused" ? "Paused this research area" : d.toStatus === "active" ? "Reopened this research area" : `Research area status: ${d.toStatus}`;
+    return { at: d.at, kind: "decision", title: verb, detail: d.rationale, tone: d.toStatus === "paused" ? "negative" : "neutral" };
+  }
   if (d.subjectType === "experiment") {
     const x = m.experiments.find((e) => e.id === d.subjectId);
     if (!x) return undefined;
@@ -156,7 +160,7 @@ export function buildTimeline(m: Memory, themeId: string): TimelineEvent[] {
   for (const p of m.problems.filter((x) => x.themeIds.includes(themeId)))
     events.push({ at: p.firstSeen, kind: "discovery", title: `Identified problem: ${p.title}`, detail: p.statement, link: `/problems/${p.id}` });
   for (const d of m.decisions) {
-    if (!ideaIds.has(d.subjectId) && !expIds.has(d.subjectId)) continue;
+    if (!ideaIds.has(d.subjectId) && !expIds.has(d.subjectId) && d.subjectId !== themeId) continue;
     const e = decisionEvent(d, m);
     if (e) events.push(e);
   }
