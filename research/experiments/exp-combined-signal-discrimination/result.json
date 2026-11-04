@@ -1,0 +1,1450 @@
+{
+  "experiment": "exp-combined-signal-discrimination",
+  "executedAt": "2026-11-04T12:33:15.199Z",
+  "n": 237,
+  "auc": 0.6942387124341262,
+  "newcomerFlagRateAtHalfRecall": 0.2457627118644068,
+  "verdict": {
+    "result": "refuted",
+    "reason": "combined AUC 0.69 < 0.70"
+  },
+  "rows": [
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236865",
+      "group": "policy-closed",
+      "words": 178,
+      "priorPrs": 67
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230952",
+      "group": "policy-closed",
+      "words": 155,
+      "priorPrs": 29
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/229355",
+      "group": "policy-closed",
+      "words": 5,
+      "priorPrs": 20
+    },
+    {
+      "url": "https://github.com/pl0n3r/Condor/pull/624",
+      "group": "policy-closed",
+      "words": 206,
+      "priorPrs": 1991
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/228873",
+      "group": "policy-closed",
+      "words": 94,
+      "priorPrs": 6
+    },
+    {
+      "url": "https://github.com/pl0n3r/Condor/pull/498",
+      "group": "policy-closed",
+      "words": 292,
+      "priorPrs": 1648
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/227874",
+      "group": "policy-closed",
+      "words": 238,
+      "priorPrs": 18
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/226756",
+      "group": "policy-closed",
+      "words": 154,
+      "priorPrs": 5
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/225913",
+      "group": "policy-closed",
+      "words": 166,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/224954",
+      "group": "policy-closed",
+      "words": 6,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/219478",
+      "group": "policy-closed",
+      "words": 52,
+      "priorPrs": 2
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/217617",
+      "group": "policy-closed",
+      "words": 99,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/215480",
+      "group": "policy-closed",
+      "words": 220,
+      "priorPrs": 16
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/215151",
+      "group": "policy-closed",
+      "words": 355,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/214653",
+      "group": "policy-closed",
+      "words": 384,
+      "priorPrs": 13
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/213238",
+      "group": "policy-closed",
+      "words": 978,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/575",
+      "group": "policy-closed",
+      "words": 485,
+      "priorPrs": 5
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/212264",
+      "group": "policy-closed",
+      "words": 354,
+      "priorPrs": 8
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/524",
+      "group": "policy-closed",
+      "words": 426,
+      "priorPrs": 5
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/210514",
+      "group": "policy-closed",
+      "words": 166,
+      "priorPrs": 23
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/457",
+      "group": "policy-closed",
+      "words": 525,
+      "priorPrs": 13
+    },
+    {
+      "url": "https://github.com/assimp/assimp/pull/6728",
+      "group": "policy-closed",
+      "words": 0,
+      "priorPrs": 12
+    },
+    {
+      "url": "https://github.com/pypa/pip/pull/14137",
+      "group": "policy-closed",
+      "words": 267,
+      "priorPrs": 10
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/437",
+      "group": "policy-closed",
+      "words": 515,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/424",
+      "group": "policy-closed",
+      "words": 294,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/206222",
+      "group": "policy-closed",
+      "words": 188,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/205749",
+      "group": "policy-closed",
+      "words": 252,
+      "priorPrs": 2
+    },
+    {
+      "url": "https://github.com/NixOS/nixpkgs/pull/534657",
+      "group": "policy-closed",
+      "words": 205,
+      "priorPrs": 2
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/392",
+      "group": "policy-closed",
+      "words": 525,
+      "priorPrs": 18
+    },
+    {
+      "url": "https://github.com/llvm/circt/pull/10711",
+      "group": "policy-closed",
+      "words": 86,
+      "priorPrs": 20
+    },
+    {
+      "url": "https://github.com/llvm/circt/pull/10693",
+      "group": "policy-closed",
+      "words": 69,
+      "priorPrs": 20
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/205051",
+      "group": "policy-closed",
+      "words": 23,
+      "priorPrs": 3
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/204635",
+      "group": "policy-closed",
+      "words": 29,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/203474",
+      "group": "policy-closed",
+      "words": 80,
+      "priorPrs": 3
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/202556",
+      "group": "policy-closed",
+      "words": 154,
+      "priorPrs": 36
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/202267",
+      "group": "policy-closed",
+      "words": 15,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/292",
+      "group": "policy-closed",
+      "words": 525,
+      "priorPrs": 20
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/202093",
+      "group": "policy-closed",
+      "words": 143,
+      "priorPrs": 10
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/201810",
+      "group": "policy-closed",
+      "words": 83,
+      "priorPrs": 6
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/201734",
+      "group": "policy-closed",
+      "words": 111,
+      "priorPrs": 6
+    },
+    {
+      "url": "https://github.com/YosysHQ/yosys/pull/5931",
+      "group": "policy-closed",
+      "words": 29
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/277",
+      "group": "policy-closed",
+      "words": 574,
+      "priorPrs": 9
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/201079",
+      "group": "policy-closed",
+      "words": 300,
+      "priorPrs": 3
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/269",
+      "group": "policy-closed",
+      "words": 525,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/268",
+      "group": "policy-closed",
+      "words": 389,
+      "priorPrs": 8
+    },
+    {
+      "url": "https://github.com/ROCm/hip-ep/pull/249",
+      "group": "policy-closed",
+      "words": 525,
+      "priorPrs": 10
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/199053",
+      "group": "policy-closed",
+      "words": 196,
+      "priorPrs": 7
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/198168",
+      "group": "policy-closed",
+      "words": 348,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/197888",
+      "group": "policy-closed",
+      "words": 54,
+      "priorPrs": 27
+    },
+    {
+      "url": "https://github.com/apache/kyuubi/pull/7452",
+      "group": "policy-closed",
+      "words": 112,
+      "priorPrs": 4
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/197102",
+      "group": "policy-closed",
+      "words": 232,
+      "priorPrs": 5
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/196744",
+      "group": "policy-closed",
+      "words": 111,
+      "priorPrs": 4
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/196654",
+      "group": "policy-closed",
+      "words": 29,
+      "priorPrs": 9
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/192827",
+      "group": "policy-closed",
+      "words": 154,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-test-suite/pull/379",
+      "group": "policy-closed",
+      "words": 13,
+      "priorPrs": 2
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/190617",
+      "group": "policy-closed",
+      "words": 311,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/188865",
+      "group": "policy-closed",
+      "words": 270,
+      "priorPrs": 7
+    },
+    {
+      "url": "https://github.com/rust-lang/rfcs/pull/3936",
+      "group": "policy-closed",
+      "words": 292,
+      "priorPrs": 16
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/188619",
+      "group": "policy-closed",
+      "words": 174,
+      "priorPrs": 2
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/188467",
+      "group": "policy-closed",
+      "words": 759,
+      "priorPrs": 4
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/187370",
+      "group": "policy-closed",
+      "words": 27,
+      "priorPrs": 10
+    },
+    {
+      "url": "https://github.com/ma3ke/molly/pull/21",
+      "group": "policy-closed",
+      "words": 157,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/184967",
+      "group": "policy-closed",
+      "words": 81,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/p4lang/.github/pull/3",
+      "group": "policy-closed",
+      "words": 66,
+      "priorPrs": 9
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/180868",
+      "group": "policy-closed",
+      "words": 60,
+      "priorPrs": 2
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/180350",
+      "group": "policy-closed",
+      "words": 212,
+      "priorPrs": 2
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/180325",
+      "group": "policy-closed",
+      "words": 105,
+      "priorPrs": 29
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/180007",
+      "group": "policy-closed",
+      "words": 45,
+      "priorPrs": 3
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/179896",
+      "group": "policy-closed",
+      "words": 93,
+      "priorPrs": 14
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/179484",
+      "group": "policy-closed",
+      "words": 59,
+      "priorPrs": 10
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/179233",
+      "group": "policy-closed",
+      "words": 34,
+      "priorPrs": 6
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/178654",
+      "group": "policy-closed",
+      "words": 104,
+      "priorPrs": 6
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/177449",
+      "group": "policy-closed",
+      "words": 6,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/swiftlang/indexstore-db/pull/266",
+      "group": "policy-closed",
+      "words": 178,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67087",
+      "group": "policy-closed",
+      "words": 36,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67086",
+      "group": "policy-closed",
+      "words": 39,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67085",
+      "group": "policy-closed",
+      "words": 42,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67084",
+      "group": "policy-closed",
+      "words": 36,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67083",
+      "group": "policy-closed",
+      "words": 46,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67082",
+      "group": "policy-closed",
+      "words": 38,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67081",
+      "group": "policy-closed",
+      "words": 42,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67080",
+      "group": "policy-closed",
+      "words": 55,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67079",
+      "group": "policy-closed",
+      "words": 42,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/qgis/QGIS/pull/67078",
+      "group": "policy-closed",
+      "words": 63,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/numba/numba/pull/10750",
+      "group": "policy-closed",
+      "words": 37,
+      "priorPrs": 71
+    },
+    {
+      "url": "https://github.com/numba/numba/pull/10749",
+      "group": "policy-closed",
+      "words": 22,
+      "priorPrs": 71
+    },
+    {
+      "url": "https://github.com/numba/numba/pull/10748",
+      "group": "policy-closed",
+      "words": 30,
+      "priorPrs": 71
+    },
+    {
+      "url": "https://github.com/numba/numba/pull/10747",
+      "group": "policy-closed",
+      "words": 22,
+      "priorPrs": 71
+    },
+    {
+      "url": "https://github.com/numba/numba/pull/10746",
+      "group": "policy-closed",
+      "words": 25,
+      "priorPrs": 71
+    },
+    {
+      "url": "https://github.com/numba/numba/pull/10745",
+      "group": "policy-closed",
+      "words": 28,
+      "priorPrs": 51
+    },
+    {
+      "url": "https://github.com/numba/numba/pull/10743",
+      "group": "policy-closed",
+      "words": 68,
+      "priorPrs": 9
+    },
+    {
+      "url": "https://github.com/OSGeo/gdal/pull/14586",
+      "group": "policy-closed",
+      "words": 142,
+      "priorPrs": 155
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23065",
+      "group": "policy-closed",
+      "words": 499,
+      "priorPrs": 37
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23064",
+      "group": "policy-closed",
+      "words": 441,
+      "priorPrs": 37
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23063",
+      "group": "policy-closed",
+      "words": 492,
+      "priorPrs": 531
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23062",
+      "group": "policy-closed",
+      "words": 464,
+      "priorPrs": 37
+    },
+    {
+      "url": "https://github.com/pomerium/pomerium/pull/6952",
+      "group": "policy-closed",
+      "words": 270,
+      "priorPrs": 61
+    },
+    {
+      "url": "https://github.com/pomerium/pomerium/pull/6951",
+      "group": "policy-closed",
+      "words": 198,
+      "priorPrs": 61
+    },
+    {
+      "url": "https://github.com/Weft-Rust/Weft/pull/48",
+      "group": "policy-closed",
+      "words": 199,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/webpack/schema-utils/pull/243",
+      "group": "policy-closed",
+      "words": 468,
+      "priorPrs": 531
+    },
+    {
+      "url": "https://github.com/degoya/rCommander/pull/3",
+      "group": "policy-closed",
+      "words": 4426,
+      "priorPrs": 3074443
+    },
+    {
+      "url": "https://github.com/Rakosn1cek/Mise-browser/pull/30",
+      "group": "policy-closed",
+      "words": 677,
+      "priorPrs": 29
+    },
+    {
+      "url": "https://github.com/HiDiHo01/mijn-liander/pull/66",
+      "group": "policy-closed",
+      "words": 147,
+      "priorPrs": 1102
+    },
+    {
+      "url": "https://github.com/HiDiHo01/mijn-liander/pull/65",
+      "group": "policy-closed",
+      "words": 230,
+      "priorPrs": 1102
+    },
+    {
+      "url": "https://github.com/claudiocebpaz/odd-board/pull/11",
+      "group": "policy-closed",
+      "words": 487,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/Weft-Rust/Weft/pull/31",
+      "group": "policy-closed",
+      "words": 236,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/Weft-Rust/Weft/pull/25",
+      "group": "policy-closed",
+      "words": 670,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/nautechsystems/nautilus_trader/pull/5516",
+      "group": "policy-closed",
+      "words": 474,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/nautechsystems/nautilus_trader/pull/5513",
+      "group": "policy-closed",
+      "words": 478,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/conniecombs/SumaFile/pull/38",
+      "group": "policy-closed",
+      "words": 3525,
+      "priorPrs": 3087152
+    },
+    {
+      "url": "https://github.com/getplumber/plumber/pull/582",
+      "group": "policy-closed",
+      "words": 689,
+      "priorPrs": 56
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23015",
+      "group": "policy-closed",
+      "words": 473,
+      "priorPrs": 334
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23012",
+      "group": "policy-closed",
+      "words": 315,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/MDAnalysis/mdanalysis/pull/5539",
+      "group": "policy-closed",
+      "words": 89,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/MDAnalysis/mdanalysis/pull/5537",
+      "group": "policy-closed",
+      "words": 88,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23010",
+      "group": "policy-closed",
+      "words": 484,
+      "priorPrs": 525
+    },
+    {
+      "url": "https://github.com/MDAnalysis/mdanalysis/pull/5535",
+      "group": "policy-closed",
+      "words": 57,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/webpack/webpack/pull/23002",
+      "group": "policy-closed",
+      "words": 594,
+      "priorPrs": 525
+    },
+    {
+      "url": "https://github.com/bitcoin/bitcoin/pull/36693",
+      "group": "policy-closed",
+      "words": 450,
+      "priorPrs": 4
+    },
+    {
+      "url": "https://github.com/nautechsystems/nautilus_trader/pull/5500",
+      "group": "policy-closed",
+      "words": 367,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237798",
+      "group": "newcomer-merged",
+      "words": 23,
+      "priorPrs": 3
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237717",
+      "group": "newcomer-merged",
+      "words": 77,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237561",
+      "group": "newcomer-merged",
+      "words": 18,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237560",
+      "group": "newcomer-merged",
+      "words": 165,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237522",
+      "group": "newcomer-merged",
+      "words": 89,
+      "priorPrs": 2
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237415",
+      "group": "newcomer-merged",
+      "words": 18,
+      "priorPrs": 3
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237414",
+      "group": "newcomer-merged",
+      "words": 43,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237223",
+      "group": "newcomer-merged",
+      "words": 60,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/237128",
+      "group": "newcomer-merged",
+      "words": 53,
+      "priorPrs": 188
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236861",
+      "group": "newcomer-merged",
+      "words": 86,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236644",
+      "group": "newcomer-merged",
+      "words": 114,
+      "priorPrs": 7
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236643",
+      "group": "newcomer-merged",
+      "words": 79,
+      "priorPrs": 7
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236618",
+      "group": "newcomer-merged",
+      "words": 77,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236605",
+      "group": "newcomer-merged",
+      "words": 24,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236599",
+      "group": "newcomer-merged",
+      "words": 121,
+      "priorPrs": 4
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236509",
+      "group": "newcomer-merged",
+      "words": 221,
+      "priorPrs": 3
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236455",
+      "group": "newcomer-merged",
+      "words": 66,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236435",
+      "group": "newcomer-merged",
+      "words": 62,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236434",
+      "group": "newcomer-merged",
+      "words": 183,
+      "priorPrs": 9
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236377",
+      "group": "newcomer-merged",
+      "words": 78,
+      "priorPrs": 2
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236327",
+      "group": "newcomer-merged",
+      "words": 263,
+      "priorPrs": 48
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236286",
+      "group": "newcomer-merged",
+      "words": 108,
+      "priorPrs": 16
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236087",
+      "group": "newcomer-merged",
+      "words": 117,
+      "priorPrs": 67
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/236018",
+      "group": "newcomer-merged",
+      "words": 53,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235840",
+      "group": "newcomer-merged",
+      "words": 165,
+      "priorPrs": 36
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235770",
+      "group": "newcomer-merged",
+      "words": 69,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235760",
+      "group": "newcomer-merged",
+      "words": 96,
+      "priorPrs": 14
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235759",
+      "group": "newcomer-merged",
+      "words": 99,
+      "priorPrs": 14
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235758",
+      "group": "newcomer-merged",
+      "words": 69,
+      "priorPrs": 14
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235755",
+      "group": "newcomer-merged",
+      "words": 15,
+      "priorPrs": 3
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235713",
+      "group": "newcomer-merged",
+      "words": 106,
+      "priorPrs": 1699
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235553",
+      "group": "newcomer-merged",
+      "words": 63,
+      "priorPrs": 3
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235489",
+      "group": "newcomer-merged",
+      "words": 32,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235483",
+      "group": "newcomer-merged",
+      "words": 96,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235445",
+      "group": "newcomer-merged",
+      "words": 67,
+      "priorPrs": 14
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235433",
+      "group": "newcomer-merged",
+      "words": 307,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235427",
+      "group": "newcomer-merged",
+      "words": 82,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235417",
+      "group": "newcomer-merged",
+      "words": 172,
+      "priorPrs": 49
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235348",
+      "group": "newcomer-merged",
+      "words": 41,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235347",
+      "group": "newcomer-merged",
+      "words": 124,
+      "priorPrs": 41
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235342",
+      "group": "newcomer-merged",
+      "words": 42,
+      "priorPrs": 3
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235313",
+      "group": "newcomer-merged",
+      "words": 96,
+      "priorPrs": 5
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235249",
+      "group": "newcomer-merged",
+      "words": 131,
+      "priorPrs": 8
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235248",
+      "group": "newcomer-merged",
+      "words": 264,
+      "priorPrs": 8
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235247",
+      "group": "newcomer-merged",
+      "words": 142,
+      "priorPrs": 8
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/235040",
+      "group": "newcomer-merged",
+      "words": 24,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234918",
+      "group": "newcomer-merged",
+      "words": 65,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234862",
+      "group": "newcomer-merged",
+      "words": 0,
+      "priorPrs": 9
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234836",
+      "group": "newcomer-merged",
+      "words": 184,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234755",
+      "group": "newcomer-merged",
+      "words": 200,
+      "priorPrs": 13
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234731",
+      "group": "newcomer-merged",
+      "words": 15,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234698",
+      "group": "newcomer-merged",
+      "words": 295,
+      "priorPrs": 3
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234685",
+      "group": "newcomer-merged",
+      "words": 57,
+      "priorPrs": 2
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234511",
+      "group": "newcomer-merged",
+      "words": 63,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234280",
+      "group": "newcomer-merged",
+      "words": 137,
+      "priorPrs": 35
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234210",
+      "group": "newcomer-merged",
+      "words": 82,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234134",
+      "group": "newcomer-merged",
+      "words": 98,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234132",
+      "group": "newcomer-merged",
+      "words": 191,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234076",
+      "group": "newcomer-merged",
+      "words": 251,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/234061",
+      "group": "newcomer-merged",
+      "words": 87,
+      "priorPrs": 6
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233979",
+      "group": "newcomer-merged",
+      "words": 128,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233939",
+      "group": "newcomer-merged",
+      "words": 67,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233923",
+      "group": "newcomer-merged",
+      "words": 16,
+      "priorPrs": 4
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233900",
+      "group": "newcomer-merged",
+      "words": 156,
+      "priorPrs": 81
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233869",
+      "group": "newcomer-merged",
+      "words": 169,
+      "priorPrs": 7
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233763",
+      "group": "newcomer-merged",
+      "words": 57,
+      "priorPrs": 4
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233754",
+      "group": "newcomer-merged",
+      "words": 29,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233746",
+      "group": "newcomer-merged",
+      "words": 38,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233666",
+      "group": "newcomer-merged",
+      "words": 69,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233627",
+      "group": "newcomer-merged",
+      "words": 36,
+      "priorPrs": 3
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233617",
+      "group": "newcomer-merged",
+      "words": 149,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233552",
+      "group": "newcomer-merged",
+      "words": 110,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233527",
+      "group": "newcomer-merged",
+      "words": 126,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233523",
+      "group": "newcomer-merged",
+      "words": 391,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233414",
+      "group": "newcomer-merged",
+      "words": 72,
+      "priorPrs": 46
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233299",
+      "group": "newcomer-merged",
+      "words": 110
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233099",
+      "group": "newcomer-merged",
+      "words": 233,
+      "priorPrs": 50
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233098",
+      "group": "newcomer-merged",
+      "words": 135,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233089",
+      "group": "newcomer-merged",
+      "words": 14,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/233042",
+      "group": "newcomer-merged",
+      "words": 38,
+      "priorPrs": 15
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232883",
+      "group": "newcomer-merged",
+      "words": 102,
+      "priorPrs": 6
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232791",
+      "group": "newcomer-merged",
+      "words": 103,
+      "priorPrs": 16
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232754",
+      "group": "newcomer-merged",
+      "words": 41,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232738",
+      "group": "newcomer-merged",
+      "words": 103,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232622",
+      "group": "newcomer-merged",
+      "words": 50,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232582",
+      "group": "newcomer-merged",
+      "words": 118,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232570",
+      "group": "newcomer-merged",
+      "words": 156,
+      "priorPrs": 6
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232371",
+      "group": "newcomer-merged",
+      "words": 42,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232314",
+      "group": "newcomer-merged",
+      "words": 40,
+      "priorPrs": 36
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232313",
+      "group": "newcomer-merged",
+      "words": 18,
+      "priorPrs": 36
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232266",
+      "group": "newcomer-merged",
+      "words": 30,
+      "priorPrs": 6
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232171",
+      "group": "newcomer-merged",
+      "words": 78,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232169",
+      "group": "newcomer-merged",
+      "words": 58,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232149",
+      "group": "newcomer-merged",
+      "words": 70,
+      "priorPrs": 4
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232109",
+      "group": "newcomer-merged",
+      "words": 96,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232100",
+      "group": "newcomer-merged",
+      "words": 18,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/232066",
+      "group": "newcomer-merged",
+      "words": 141,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231925",
+      "group": "newcomer-merged",
+      "words": 35
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231820",
+      "group": "newcomer-merged",
+      "words": 180,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231816",
+      "group": "newcomer-merged",
+      "words": 24,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231751",
+      "group": "newcomer-merged",
+      "words": 60,
+      "priorPrs": 18
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231750",
+      "group": "newcomer-merged",
+      "words": 103,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231724",
+      "group": "newcomer-merged",
+      "words": 117,
+      "priorPrs": 1
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231704",
+      "group": "newcomer-merged",
+      "words": 51,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231607",
+      "group": "newcomer-merged",
+      "words": 102,
+      "priorPrs": 4
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231550",
+      "group": "newcomer-merged",
+      "words": 309,
+      "priorPrs": 8
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231359",
+      "group": "newcomer-merged",
+      "words": 115,
+      "priorPrs": 12
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231331",
+      "group": "newcomer-merged",
+      "words": 11,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231229",
+      "group": "newcomer-merged",
+      "words": 116,
+      "priorPrs": 2
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231191",
+      "group": "newcomer-merged",
+      "words": 122,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231079",
+      "group": "newcomer-merged",
+      "words": 128,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231066",
+      "group": "newcomer-merged",
+      "words": 127,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/231014",
+      "group": "newcomer-merged",
+      "words": 58,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230975",
+      "group": "newcomer-merged",
+      "words": 106,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230974",
+      "group": "newcomer-merged",
+      "words": 115,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230869",
+      "group": "newcomer-merged",
+      "words": 123,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230823",
+      "group": "newcomer-merged",
+      "words": 136,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230627",
+      "group": "newcomer-merged",
+      "words": 2,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230555",
+      "group": "newcomer-merged",
+      "words": 80,
+      "priorPrs": 0
+    },
+    {
+      "url": "https://github.com/llvm/llvm-project/pull/230493",
+      "group": "newcomer-merged",
+      "words": 22,
+      "priorPrs": 2
+    }
+  ]
+}
