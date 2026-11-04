@@ -14,6 +14,7 @@
  *   venture approve <exp-id> --by <name> --note "…"   (owner authorization)
  *   venture outcome <exp-id> --result supported|refuted|inconclusive --summary "…"
  *               [--evidence ev-1,ev-2] [--assumption a1=supported] [--force]
+ *   venture start <exp-id> --note "…"      mark an approved experiment as running
  *   venture reconsider                    parked/rejected ideas whose evidence changed
  */
 import { execSync } from "node:child_process";
@@ -22,7 +23,7 @@ import { join } from "node:path";
 import { runId } from "../core/ids";
 import type { Memory, Provenance, Run, Theme } from "../core/schema";
 import { validateMemory } from "../core/validate";
-import { ActionError, approveExperiment, decideIdea, reconsiderationQueue, recordOutcome } from "../core/actions";
+import { ActionError, approveExperiment, decideIdea, reconsiderationQueue, recordOutcome, startExperiment } from "../core/actions";
 import type { IdeaStatus } from "../core/schema";
 import { COLLECTORS, mergeSignals, relevantSignals, type Fetcher } from "./collectors";
 import { ingestBundle } from "./ingest";
@@ -237,6 +238,7 @@ async function main() {
 
     case "decide":
     case "approve":
+    case "start":
     case "outcome": {
       const memory = load(REAL_STORE, "real");
       const at = new Date().toISOString();
@@ -250,6 +252,8 @@ async function main() {
       } else if (cmd === "approve") {
         if (!flags.by) throw new Error("--by <name> is required: approval is a human authorization");
         d = approveExperiment(memory, id, String(flags.by), String(flags.note ?? "approved"), at);
+      } else if (cmd === "start") {
+        d = startExperiment(memory, id, String(flags.actor ?? "experimenter"), String(flags.note ?? "started"), at);
       } else {
         const assumptions = Object.fromEntries(
           (flags.assumption ? String(flags.assumption).split(",") : []).map((kv) => kv.split("=") as [string, "supported"]),

@@ -77,7 +77,7 @@
       "ifFailure": "Refine the signal (e.g. only install hooks) before any further work."
     },
     "executionMode": "automatable",
-    "status": "proposed",
+    "status": "running",
     "createdInRun": "run-20261104-exp-npm-publishing-practices",
     "provenance": "real"
   },
