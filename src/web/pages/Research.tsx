@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { buildArea, buildAreas, IDEA_STATUS_TEXT, RESULT_TEXT, strongestObjection, type AreaModel, type TimelineEvent } from "../../core/areas";
 import type { Evidence, Experiment, Idea, IdeaStatus, Source } from "../../core/schema";
 import { EpiBadge, EvidenceLevel, Pill, VerifyBadge } from "../components/ui";
+import { Mark, Tally } from "../components/story";
 import { domain, fmtDate, timeAgo, useLab } from "../data";
 import { ThemeProposal } from "../components/ThemeProposal";
 
@@ -84,6 +85,14 @@ function AreaCard({ a }: { a: AreaModel }) {
           <Link to={`/research/${a.theme.id}`}>{a.theme.name}</Link>
         </h2>
         <p className="area-question">{a.brief?.researchQuestion ?? a.theme.description}</p>
+        {a.ideas.length > 0 && (
+          <p className="area-tally">
+            <Tally ideas={a.ideas.filter((i) => i.status !== "merged")} label={`Ideas in ${a.theme.name}, by verdict`} />
+            <span>
+              {a.ideas.filter((i) => i.status === "advanced" || i.status === "proposed").length} of {a.ideas.filter((i) => i.status !== "merged").length} ideas still standing
+            </span>
+          </p>
+        )}
         {findings.length > 0 ? (
           <div className="area-findings">
             <div className="kicker">Key findings so far</div>
@@ -468,7 +477,7 @@ function IdeaStory({ idea, a, index }: { idea: Idea; a: AreaModel; index: Map<st
   return (
     <div className={`idea-story st-${idea.status}`}>
       <h4>
-        <Link to={`/ideas/${idea.id}`}>{idea.title}</Link>
+        <Mark idea={idea} size="row" /> <Link to={`/ideas/${idea.id}`}>{idea.title}</Link>
       </h4>
       <p>{idea.summary}</p>
       <dl className="facts">

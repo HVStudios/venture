@@ -5,6 +5,9 @@ import { Empty, EvidenceLevel, Section, StatusPill } from "../components/ui";
 import { reconsiderationQueue } from "../../core/actions";
 import { buildAreas } from "../../core/areas";
 import { fmtDate, lastUpdated, timeAgo, useLab } from "../data";
+import { buildStories } from "../../core/story";
+import { LastEvent, Mark, SinceLastVisit, Tally, VERDICT_WORD, byVerdict } from "../components/story";
+import { Sieve, sieveLayers } from "../components/Sieve";
 
 const LANDSCAPE_KEY: [Idea["status"], string][] = [
   ["advanced", "Advanced"],
@@ -81,14 +84,6 @@ export function Landscape({ ideas, height = 340 }: { ideas: Idea[]; height?: num
   );
 }
 
-const VERDICT_WORD: Record<string, string> = {
-  advanced: "advanced",
-  proposed: "proposed, not yet tested",
-  parked: "parked",
-  rejected: "rejected",
-};
-const ORDER: Record<string, number> = { advanced: 0, proposed: 1, parked: 2, rejected: 3 };
-
 /** The overview's headline: the lab's kill rate as a sentence, with every idea drawn inline. */
 function Verdict({
   ideas,
@@ -96,14 +91,16 @@ function Verdict({
   lead,
   actions,
   demo,
+  since,
 }: {
   ideas: Idea[];
   latestFor: (id: string) => Decision | undefined;
   lead: ReactNode;
   actions: ReactNode;
   demo: boolean;
+  since?: ReactNode;
 }) {
-  const sorted = [...ideas].sort((a, b) => (ORDER[a.status] ?? 9) - (ORDER[b.status] ?? 9));
+  const sorted = [...ideas].sort(byVerdict);
   const standing = sorted.filter((i) => i.status === "advanced" || i.status === "proposed");
   const [focus, setFocus] = useState<string | undefined>(undefined);
   const shown = sorted.find((i) => i.id === focus) ?? standing[0] ?? sorted[0];
@@ -116,19 +113,7 @@ function Verdict({
           {n} idea{n === 1 ? "" : "s"} tested{demo ? " (demo)" : ""}.
         </span>{" "}
         <span className="verdict-l2">
-          <span className="tally" role="group" aria-label="Every idea, by verdict">
-            {sorted.map((i, k) => (
-              <Link
-                key={i.id}
-                to={`/ideas/${i.id}`}
-                className={`mark mark-${i.status}${shown?.id === i.id ? " on" : ""}`}
-                style={{ animationDelay: `${120 + k * 70}ms` }}
-                aria-label={`${i.title}: ${VERDICT_WORD[i.status] ?? i.status}`}
-                onMouseEnter={() => setFocus(i.id)}
-                onFocus={() => setFocus(i.id)}
-              />
-            ))}
-          </span>{" "}
+          <Tally ideas={ideas} focus={shown?.id} onFocus={setFocus} />{" "}
           {standing.length ? standing.length : "None"} still standing.
         </span>
       </h1>
@@ -141,6 +126,7 @@ function Verdict({
           {d?.rationale && <span className="why"> — {d.rationale}</span>}
         </p>
       )}
+      {since}
       <div className="verdict-foot">
         <p className="sub">{lead}</p>
         <div className="title-actions">{actions}</div>
@@ -175,6 +161,8 @@ export function Overview() {
   const subjectHref = (d: (typeof decisions)[number]) =>
     d.subjectType === "idea" ? `/ideas/${d.subjectId}` : d.subjectType === "problem" ? `/problems/${d.subjectId}` : d.subjectType === "experiment" ? "/experiments" : `/research/${d.subjectId}`;
   const tested = m.ideas.filter((i) => i.status !== "merged");
+  const stories = buildStories(m);
+  const inPlay = [...stories.filter((x) => x.standing), ...stories.filter((x) => !x.standing)].slice(0, 6);
   const latestFor = (id: string) => decisions.find((d) => d.subjectType === "idea" && d.subjectId === id);
   const busiest = [...areas].sort((a, b) => (b.lastActivity ?? "").localeCompare(a.lastActivity ?? ""))[0];
 
@@ -184,6 +172,7 @@ export function Overview() {
         ideas={tested}
         latestFor={latestFor}
         demo={store !== "real"}
+        since={<SinceLastVisit stories={stories} />}
         lead={
           lastDecision ? (
             <>
@@ -215,6 +204,31 @@ export function Overview() {
           <b>{withOutcome}&nbsp;of&nbsp;{m.experiments.length}</b> experiments to an outcome.
         </p>
       </section>
+
+      <div className="grid-wide">
+        <Section title="The sieve" kicker="From what the lab read to what still stands">
+          <Sieve layers={sieveLayers(m)} />
+        </Section>
+        <Section title="In play" kicker="Latest first" aside={<Link to="/ideas">All ideas</Link>}>
+          {inPlay.length ? (
+            <ul className="in-play">
+              {inPlay.map((x) => (
+                <li key={x.idea.id} className={x.standing ? "standing" : ""}>
+                  <Mark idea={x.idea} size="row" />
+                  <div>
+                    <Link to={`/ideas/${x.idea.id}`} className="name">
+                      {x.idea.title}
+                    </Link>
+                    <LastEvent story={x} />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <Empty>No ideas yet.</Empty>
+          )}
+        </Section>
+      </div>
 
       <Section title="Research areas" kicker={`${areas.length} standing investigations`} aside={<Link to="/research">All areas</Link>}>
         {areas.length ? (
