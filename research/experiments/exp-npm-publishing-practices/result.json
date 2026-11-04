@@ -1,0 +1,2574 @@
+{
+  "experiment": "exp-npm-publishing-practices",
+  "executedAt": "2026-11-04T09:22:40.002Z",
+  "keywords": [
+    "javascript",
+    "typescript",
+    "react",
+    "node",
+    "cli",
+    "util"
+  ],
+  "popular": {
+    "n": 400,
+    "stagedApproval": 31,
+    "trustedPublisher": 168,
+    "neither": 201,
+    "neitherShare": 0.5025,
+    "neitherCi95": [
+      0.4537104387832727,
+      0.5512419980137288
+    ]
+  },
+  "hijacked": {
+    "n": 22,
+    "stagedApproval": 2,
+    "trustedPublisher": 7,
+    "neither": 13,
+    "neitherShare": 0.5909090909090909,
+    "neitherCi95": [
+      0.3873447738289381,
+      0.7674444033117963
+    ]
+  },
+  "verdict": {
+    "result": "supported",
+    "reason": "50.2% of popular packages' latest releases used neither trusted publishing nor staged approval (≥ 40%)"
+  },
+  "rowsPopular": [
+    {
+      "name": "tslib",
+      "version": "2.9.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@babel/parser",
+      "version": "8.1.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "es-errors",
+      "version": "1.3.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "typescript",
+      "version": "7.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "jsesc",
+      "version": "3.1.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "es-object-atoms",
+      "version": "1.1.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "prelude-ls",
+      "version": "1.2.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "esquery",
+      "version": "1.7.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "es-define-property",
+      "version": "1.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "call-bound",
+      "version": "1.0.4",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "espree",
+      "version": "11.2.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "diff",
+      "version": "9.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "hasown",
+      "version": "2.0.4",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "human-signals",
+      "version": "8.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "get-intrinsic",
+      "version": "1.3.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "gopd",
+      "version": "1.2.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "fdir",
+      "version": "6.5.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "esprima",
+      "version": "4.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@typescript-eslint/typescript-estree",
+      "version": "8.72.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "version": "8.72.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "has-tostringtag",
+      "version": "1.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "define-data-property",
+      "version": "1.1.4",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "which-boxed-primitive",
+      "version": "1.1.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "set-function-length",
+      "version": "1.2.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "eslint",
+      "version": "10.14.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "is-data-view",
+      "version": "1.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@eslint/js",
+      "version": "10.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "data-view-byte-offset",
+      "version": "1.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "is-shared-array-buffer",
+      "version": "1.0.4",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "is-plain-object",
+      "version": "5.1.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "data-view-buffer",
+      "version": "1.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "is-array-buffer",
+      "version": "3.0.5",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "string.prototype.trimstart",
+      "version": "1.0.8",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "get-symbol-description",
+      "version": "1.1.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "call-bind",
+      "version": "1.0.9",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@inquirer/type",
+      "version": "4.2.1",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "arraybuffer.prototype.slice",
+      "version": "1.0.4",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@inquirer/core",
+      "version": "12.0.6",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "typescript-eslint",
+      "version": "8.72.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@inquirer/figures",
+      "version": "2.0.10",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "object.groupby",
+      "version": "1.0.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "array.prototype.tosorted",
+      "version": "1.1.4",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "string.prototype.trimend",
+      "version": "1.0.10",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxc-parser/binding-linux-x64-gnu",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "unbox-primitive",
+      "version": "1.1.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "data-view-byte-length",
+      "version": "1.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "regexpu-core",
+      "version": "6.5.3",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "terser",
+      "version": "5.51.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@webassemblyjs/wast-printer",
+      "version": "1.14.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "serialize-javascript",
+      "version": "7.1.4",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "reflect-metadata",
+      "version": "0.2.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "style-to-js",
+      "version": "2.0.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "oxc-parser",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "is-arguments",
+      "version": "1.2.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@inquirer/select",
+      "version": "5.2.8",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "inquirer",
+      "version": "14.2.5",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "@inquirer/expand",
+      "version": "5.1.8",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "@xmldom/xmldom",
+      "version": "0.9.12",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@inquirer/external-editor",
+      "version": "3.0.7",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "@inquirer/ansi",
+      "version": "2.0.10",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "es-iterator-helpers",
+      "version": "1.4.0",
+      "practice": "staged-approval",
+      "provenance": false
+    },
+    {
+      "name": "uglify-js",
+      "version": "3.19.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@inquirer/confirm",
+      "version": "6.3.5",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "iterator.prototype",
+      "version": "1.1.5",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@inquirer/prompts",
+      "version": "8.7.5",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "@inquirer/checkbox",
+      "version": "5.2.8",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "@supabase/storage-js",
+      "version": "2.118.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "enquirer",
+      "version": "2.4.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@inquirer/password",
+      "version": "5.2.5",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "ast-types-flow",
+      "version": "0.0.8",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@typescript/typescript-linux-x64",
+      "version": "7.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxc-parser/binding-linux-x64-musl",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@webassemblyjs/wasm-parser",
+      "version": "1.14.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@inquirer/search",
+      "version": "4.3.6",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "estree-util-is-identifier-name",
+      "version": "3.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@inquirer/rawlist",
+      "version": "5.3.8",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "@webassemblyjs/ast",
+      "version": "1.14.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@inquirer/number",
+      "version": "4.2.6",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "regenerate",
+      "version": "1.5.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@inquirer/input",
+      "version": "5.1.9",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "embla-carousel-reactive-utils",
+      "version": "8.6.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "environment",
+      "version": "1.1.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@supabase/realtime-js",
+      "version": "2.118.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@supabase/supabase-js",
+      "version": "2.118.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "embla-carousel-react",
+      "version": "8.6.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "cluster-key-slot",
+      "version": "1.1.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "oxlint",
+      "version": "1.91.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@inquirer/editor",
+      "version": "5.3.6",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "embla-carousel",
+      "version": "8.6.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxlint/binding-linux-x64-gnu",
+      "version": "1.91.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "is-reference",
+      "version": "3.0.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@jsonjoy.com/codegen",
+      "version": "18.30.0",
+      "practice": "neither",
+      "provenance": true
+    },
+    {
+      "name": "redis-errors",
+      "version": "1.2.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@speed-highlight/core",
+      "version": "2.1.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "oxfmt",
+      "version": "0.76.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "html-minifier-terser",
+      "version": "7.2.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "knip",
+      "version": "6.44.1",
+      "practice": "staged-approval",
+      "provenance": false
+    },
+    {
+      "name": "@azure/abort-controller",
+      "version": "2.2.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "oauth4webapi",
+      "version": "3.8.8",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "pdf-lib",
+      "version": "1.17.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "openid-client",
+      "version": "6.8.9",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "redis-parser",
+      "version": "3.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "is-what",
+      "version": "5.5.7",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@formatjs/ecma402-abstract",
+      "version": "3.2.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "three",
+      "version": "0.187.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@azure/core-lro",
+      "version": "3.4.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "has-values",
+      "version": "2.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "fuzzysort",
+      "version": "4.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "jquery",
+      "version": "4.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "micromark-extension-mdx-jsx",
+      "version": "3.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "unist-util-position-from-estree",
+      "version": "2.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@azure/logger",
+      "version": "1.4.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "estree-util-visit",
+      "version": "2.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "jpeg-js",
+      "version": "0.4.4",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "hast-util-to-estree",
+      "version": "3.1.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "ext",
+      "version": "1.7.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxfmt/binding-linux-x64-gnu",
+      "version": "0.76.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "recma-build-jsx",
+      "version": "1.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "estree-util-attach-comments",
+      "version": "3.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "micromark-extension-mdxjs-esm",
+      "version": "3.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "tsyringe",
+      "version": "4.10.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "es5-ext",
+      "version": "0.10.64",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "canvg",
+      "version": "4.0.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "estree-util-scope",
+      "version": "1.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "recma-jsx",
+      "version": "1.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "esast-util-from-estree",
+      "version": "2.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "rehype-recma",
+      "version": "1.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "recma-stringify",
+      "version": "1.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "recma-parse",
+      "version": "1.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "micromark-extension-mdx-expression",
+      "version": "3.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "remark-mdx",
+      "version": "3.1.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "estree-util-build-jsx",
+      "version": "3.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "goober",
+      "version": "2.1.19",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxlint/binding-linux-x64-musl",
+      "version": "1.91.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "gray-matter",
+      "version": "4.0.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@azure/storage-blob",
+      "version": "12.34.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "pe-library",
+      "version": "2.0.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "postcss-focus-visible",
+      "version": "11.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "css-has-pseudo",
+      "version": "8.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "natural-orderby",
+      "version": "5.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "meriyah",
+      "version": "7.4.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "javascript-natural-sort",
+      "version": "0.7.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "strip-comments",
+      "version": "2.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@swc/cli",
+      "version": "0.8.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@typescript/typescript6",
+      "version": "6.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@pmmmwh/react-refresh-webpack-plugin",
+      "version": "0.6.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "resedit",
+      "version": "3.1.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "bmp-js",
+      "version": "0.1.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxfmt/binding-linux-x64-musl",
+      "version": "0.76.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@oxc-parser/binding-linux-arm64-gnu",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@juggle/resize-observer",
+      "version": "3.4.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@yuku-toolchain/types",
+      "version": "0.19.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "array-slice",
+      "version": "1.1.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@hey-api/openapi-ts",
+      "version": "0.99.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "memoizerific",
+      "version": "1.11.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "cardinal",
+      "version": "2.1.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "yuku-codegen",
+      "version": "0.19.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "oxc-transform",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "reserved-identifiers",
+      "version": "1.2.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@astrojs/compiler-binding",
+      "version": "0.5.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "typedarray.prototype.slice",
+      "version": "1.0.6",
+      "practice": "staged-approval",
+      "provenance": false
+    },
+    {
+      "name": "@typescript/native-preview",
+      "version": "7.0.0-dev.20260707.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "css-blank-pseudo",
+      "version": "8.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "detect-gpu",
+      "version": "5.0.70",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "object.defaults",
+      "version": "1.1.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@astrojs/compiler-binding-linux-x64-gnu",
+      "version": "0.5.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@oxlint/binding-linux-arm64-gnu",
+      "version": "1.91.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "map-or-similar",
+      "version": "1.5.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "yuku-parser",
+      "version": "0.19.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "objectorarray",
+      "version": "1.0.5",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "dependency-cruiser",
+      "version": "18.7.2",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "@typescript/native-preview-linux-x64",
+      "version": "7.0.0-dev.20260707.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxc-transform/binding-linux-x64-gnu",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "eslint-config-airbnb-base",
+      "version": "15.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "yuku-ast",
+      "version": "0.19.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "javascript-stringify",
+      "version": "2.1.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxc-parser/binding-darwin-arm64",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "editions",
+      "version": "6.22.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@typescript/typescript-linux-arm64",
+      "version": "7.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "js-library-detector",
+      "version": "6.7.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "is-expression",
+      "version": "4.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@hey-api/codegen-core",
+      "version": "0.9.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "pdfmake",
+      "version": "0.3.13",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@appium/support",
+      "version": "7.2.9",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@webassemblyjs/wast-parser",
+      "version": "1.14.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "babylon",
+      "version": "6.18.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "js2xmlparser",
+      "version": "5.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@appium/schema",
+      "version": "1.3.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "html-minifier",
+      "version": "5.0.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "js-string-escape",
+      "version": "1.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "cloudevents",
+      "version": "10.0.0",
+      "practice": "neither",
+      "provenance": true
+    },
+    {
+      "name": "acorn-node",
+      "version": "2.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxc-parser/binding-linux-arm64-musl",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "jsdoc",
+      "version": "4.0.5",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "tesseract.js-core",
+      "version": "6.1.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "to-valid-identifier",
+      "version": "1.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxlint/binding-linux-arm64-musl",
+      "version": "1.91.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "karma",
+      "version": "6.4.4",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "gifwrap",
+      "version": "0.10.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@appium/types",
+      "version": "1.7.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "mark.js",
+      "version": "8.11.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "material-colors",
+      "version": "1.2.6",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "identifier-regex",
+      "version": "1.1.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "is-identifier",
+      "version": "1.1.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@astrojs/compiler-binding-linux-x64-musl",
+      "version": "0.5.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "oxc-minify",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "embla-carousel-autoplay",
+      "version": "8.6.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxc-parser/binding-darwin-x64",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "fastestsmallesttextencoderdecoder",
+      "version": "1.0.22",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "blueimp-md5",
+      "version": "2.19.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@lingui/message-utils",
+      "version": "6.12.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "jks-js",
+      "version": "1.1.7",
+      "practice": "neither",
+      "provenance": true
+    },
+    {
+      "name": "cron-schedule",
+      "version": "6.0.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "has-symbol-support-x",
+      "version": "2.1.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxc-minify/binding-linux-x64-gnu",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@inversifyjs/common",
+      "version": "2.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxc-parser/binding-win32-x64-msvc",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "eslint-config-airbnb",
+      "version": "19.0.4",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@promptbook/utils",
+      "version": "0.114.0-50",
+      "practice": "neither",
+      "provenance": true
+    },
+    {
+      "name": "merge-anything",
+      "version": "6.0.9",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@fortawesome/react-fontawesome",
+      "version": "3.5.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@trivago/prettier-plugin-sort-imports",
+      "version": "6.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "inversify",
+      "version": "8.2.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "js-binary-schema-parser",
+      "version": "2.0.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "has-to-string-tag-x",
+      "version": "2.1.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@lottiefiles/dotlottie-web",
+      "version": "0.82.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@appium/logger",
+      "version": "2.0.12",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "gradle-to-js",
+      "version": "3.0.0",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "reserved",
+      "version": "0.1.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@azure/monitor-opentelemetry-exporter",
+      "version": "1.0.0-beta.32",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "e2b",
+      "version": "2.62.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@oxc-transform/binding-linux-x64-musl",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "imask",
+      "version": "7.6.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxc-parser/binding-android-arm-eabi",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@oxc-parser/binding-linux-riscv64-musl",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@oxc-parser/binding-openharmony-arm64",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "magic-bytes.js",
+      "version": "1.13.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "truncate-json",
+      "version": "3.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@assistant-ui/react",
+      "version": "0.15.32",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@oxc-parser/binding-linux-ppc64-gnu",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@oxc-parser/binding-win32-ia32-msvc",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@inversifyjs/core",
+      "version": "15.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxfmt/binding-linux-arm64-gnu",
+      "version": "0.76.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@microsoft/dynamicproto-js",
+      "version": "2.0.5",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "string-byte-length",
+      "version": "3.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxc-parser/binding-linux-arm-gnueabihf",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@typescript/typescript-darwin-arm64",
+      "version": "7.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@oxc-parser/binding-freebsd-x64",
+      "version": "0.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@lottiefiles/dotlottie-react",
+      "version": "0.21.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@ianvs/prettier-plugin-sort-imports",
+      "version": "4.7.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "zod",
+      "version": "4.6.7",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "@typescript-eslint/types",
+      "version": "8.72.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@typescript-eslint/visitor-keys",
+      "version": "8.72.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "csstype",
+      "version": "3.2.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "type-fest",
+      "version": "5.10.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@typescript-eslint/scope-manager",
+      "version": "8.72.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@typescript-eslint/utils",
+      "version": "8.72.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "tldts",
+      "version": "7.4.19",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@typescript-eslint/type-utils",
+      "version": "8.72.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@typescript-eslint/tsconfig-utils",
+      "version": "8.72.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@typescript-eslint/project-service",
+      "version": "8.72.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "tsx",
+      "version": "4.23.15",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@sinclair/typebox",
+      "version": "0.34.52",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "get-tsconfig",
+      "version": "4.14.3",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "micromark-util-types",
+      "version": "2.0.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "json-schema-typed",
+      "version": "9.0.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@sindresorhus/is",
+      "version": "8.1.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@babel/plugin-syntax-typescript",
+      "version": "8.0.3",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@standard-schema/spec",
+      "version": "1.1.0",
+      "practice": "neither",
+      "provenance": true
+    },
+    {
+      "name": "@octokit/types",
+      "version": "18.0.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "eslint-import-resolver-typescript",
+      "version": "4.4.5",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "version": "8.72.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@jest/core",
+      "version": "30.5.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "ts-interface-checker",
+      "version": "1.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "effect",
+      "version": "4.1.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@adobe/css-tools",
+      "version": "4.5.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "expect-type",
+      "version": "1.4.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@babel/preset-typescript",
+      "version": "8.0.7",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "ts-algebra",
+      "version": "2.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "tinyspy",
+      "version": "4.0.6",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "@babel/plugin-transform-typescript",
+      "version": "8.0.6",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "jest-cli",
+      "version": "30.5.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "drizzle-orm",
+      "version": "0.45.4",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@swc/core",
+      "version": "1.16.21",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "protobufjs",
+      "version": "8.8.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "drizzle-kit",
+      "version": "0.31.11",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "ts-jest",
+      "version": "29.4.15",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "ts-dedent",
+      "version": "2.3.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "valibot",
+      "version": "1.5.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "deepmerge-ts",
+      "version": "8.0.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@hookform/resolvers",
+      "version": "7.0.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@swc/core-linux-x64-musl",
+      "version": "1.16.21",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "kysely",
+      "version": "0.29.8",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "code-block-writer",
+      "version": "13.0.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "react-hook-form",
+      "version": "7.91.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@bufbuild/protobuf",
+      "version": "2.16.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "unbash",
+      "version": "6.0.3",
+      "practice": "staged-approval",
+      "provenance": false
+    },
+    {
+      "name": "sucrase",
+      "version": "3.35.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@tanstack/react-store",
+      "version": "0.11.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "jest",
+      "version": "30.5.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "json-schema-to-ts",
+      "version": "3.1.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@tanstack/router-utils",
+      "version": "1.162.4",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "emittery",
+      "version": "2.2.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "ts-node",
+      "version": "10.9.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@swc/core-linux-x64-gnu",
+      "version": "1.16.21",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "standardwebhooks",
+      "version": "1.1.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "interpret",
+      "version": "3.1.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "fork-ts-checker-webpack-plugin",
+      "version": "9.1.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "openapi3-ts",
+      "version": "4.6.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@peculiar/utils",
+      "version": "4.1.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "lru.min",
+      "version": "1.1.5",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@jsonjoy.com/fs-node-utils",
+      "version": "4.80.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@better-auth/mongo-adapter",
+      "version": "1.7.16",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "ts-morph",
+      "version": "28.0.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@tanstack/virtual-file-routes",
+      "version": "1.162.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "wrangler",
+      "version": "4.157.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@tanstack/router-plugin",
+      "version": "1.168.48",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "basic-ftp",
+      "version": "6.2.5",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "@tanstack/store",
+      "version": "0.11.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "pvtsutils",
+      "version": "1.3.6",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@tanstack/start-storage-context",
+      "version": "1.167.41",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@tanstack/react-start-client",
+      "version": "1.168.44",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@better-auth/kysely-adapter",
+      "version": "1.7.16",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "bs-logger",
+      "version": "0.2.6",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "svg-pathdata",
+      "version": "9.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@better-auth/core",
+      "version": "1.7.16",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "copy-anything",
+      "version": "4.1.5",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "typebox",
+      "version": "1.4.3",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@tanstack/react-start-rsc",
+      "version": "0.1.65",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "nitro",
+      "version": "3.0.261103-rc",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@envelop/core",
+      "version": "6.0.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@better-auth/prisma-adapter",
+      "version": "1.7.16",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@slack/types",
+      "version": "3.3.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "upath",
+      "version": "3.0.8",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "openapi-fetch",
+      "version": "0.17.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@tanstack/router-core",
+      "version": "1.171.39",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "utility-types",
+      "version": "3.11.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "openapi-typescript",
+      "version": "7.13.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "ox",
+      "version": "1.8.13",
+      "practice": "trusted-publisher",
+      "provenance": false
+    },
+    {
+      "name": "@tanstack/react-router",
+      "version": "1.170.46",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "ts-loader",
+      "version": "9.6.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@tanstack/start-client-core",
+      "version": "1.170.39",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@better-auth/drizzle-adapter",
+      "version": "1.7.16",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@tanstack/start-server-core",
+      "version": "1.169.45",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@better-auth/memory-adapter",
+      "version": "1.7.16",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@graphql-codegen/cli",
+      "version": "7.4.6",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@tanstack/history",
+      "version": "1.162.5",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@better-auth/utils",
+      "version": "0.5.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "better-result",
+      "version": "3.0.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "common-path-prefix",
+      "version": "3.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "verkit",
+      "version": "0.5.0",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "@tanstack/react-start-server",
+      "version": "1.167.52",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "scroll-into-view-if-needed",
+      "version": "3.1.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@react-spring/shared",
+      "version": "10.1.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@tanstack/router-generator",
+      "version": "1.167.46",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "openapi-types",
+      "version": "12.1.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@scalar/openapi-types",
+      "version": "0.9.8",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "ts-essentials",
+      "version": "10.2.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "sql-escaper",
+      "version": "1.5.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "tsutils",
+      "version": "3.21.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@react-spring/rafz",
+      "version": "10.1.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "compute-scroll-into-view",
+      "version": "3.1.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@react-spring/core",
+      "version": "10.1.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "better-auth",
+      "version": "1.7.16",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@schummar/icu-type-parser",
+      "version": "1.27.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "remeda",
+      "version": "2.58.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@asteasolutions/zod-to-openapi",
+      "version": "9.1.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@better-auth/telemetry",
+      "version": "1.7.16",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@microsoft/api-extractor",
+      "version": "7.60.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@xmldom/is-dom-node",
+      "version": "1.0.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@simplewebauthn/server",
+      "version": "14.0.3",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "node-rsa",
+      "version": "2.0.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@scalar/openapi-upgrader",
+      "version": "0.4.6",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@react-spring/types",
+      "version": "10.1.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "ts-toolbelt",
+      "version": "9.6.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@azure/keyvault-common",
+      "version": "2.1.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "viem",
+      "version": "2.57.16",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "ts-pattern",
+      "version": "5.9.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "cosmiconfig-typescript-loader",
+      "version": "6.3.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "node-html-parser",
+      "version": "9.0.6",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@react-spring/animated",
+      "version": "10.1.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@scalar/types",
+      "version": "0.26.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "polished",
+      "version": "4.3.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@swc/core-linux-arm64-gnu",
+      "version": "1.16.21",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "fp-ts",
+      "version": "2.16.11",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@graphql-tools/executor",
+      "version": "4.1.7",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "heap-js",
+      "version": "2.7.1",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@tanstack/start-plugin-core",
+      "version": "1.171.55",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@tanstack/react-start",
+      "version": "1.169.4",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "chat",
+      "version": "4.44.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "parse-imports-exports",
+      "version": "0.2.4",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "node-cron",
+      "version": "4.6.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "pinia",
+      "version": "4.1.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "rolldown-plugin-dts",
+      "version": "0.29.0",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "@react-spring/web",
+      "version": "10.1.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@hey-api/spec-types",
+      "version": "0.2.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "assert-never",
+      "version": "1.4.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "drizzle-zod",
+      "version": "0.8.3",
+      "practice": "neither",
+      "provenance": true
+    },
+    {
+      "name": "typedoc",
+      "version": "0.28.20",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@swc/core-linux-arm64-musl",
+      "version": "1.16.21",
+      "practice": "trusted-publisher",
+      "provenance": true
+    }
+  ],
+  "rowsHijacked": [
+    {
+      "name": "@pkgr/core",
+      "version": "0.3.6",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@nx/devkit",
+      "version": "24.0.4",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "debug",
+      "version": "4.4.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@duckdb/duckdb-wasm",
+      "version": "1.33.1-dev57.0",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@coveops/abi",
+      "version": "2.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@asyncapi/specs",
+      "version": "6.11.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "cline",
+      "version": "3.0.74",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "@cap-js/db-service",
+      "version": "3.1.2",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "weavedb-sdk-node",
+      "version": "0.45.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "11j",
+      "version": "1.3.3",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "node-ipc",
+      "version": "14.0.0",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@antv/g-image-exporter",
+      "version": "1.0.42",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@tiledesk/tiledesk-server",
+      "version": "3.2.2",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "bingocode",
+      "version": "1.1.205",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "freertc",
+      "version": "0.1.33",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "autotel-eventcatalog",
+      "version": "30.1.1",
+      "practice": "trusted-publisher",
+      "provenance": true
+    },
+    {
+      "name": "jscrambler",
+      "version": "8.22.2",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "netspeedutil",
+      "version": "1.0.13",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@keyv/bigmap",
+      "version": "6.1.0",
+      "practice": "staged-approval",
+      "provenance": true
+    },
+    {
+      "name": "@cliphijack/santaclaude",
+      "version": "1.0.125",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "pxnpm",
+      "version": "7.0.5",
+      "practice": "neither",
+      "provenance": false
+    },
+    {
+      "name": "@apexacc/cli",
+      "version": "1.6.2",
+      "practice": "neither",
+      "provenance": true
+    }
+  ]
+}
