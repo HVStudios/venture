@@ -1225,5 +1225,211 @@
     },
     "limits": {},
     "provenance": "real"
+  },
+  {
+    "id": "run-20261105-1311-scout-exploratory-de",
+    "themeId": "theme-exploratory-developer-friction",
+    "mode": "collector",
+    "provider": "none (deterministic collectors)",
+    "startedAt": "2026-11-05T13:11:48.373Z",
+    "completedAt": "2026-11-05T13:11:55.841Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "hackernews: 32 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "github-issues: 32 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "stackoverflow: 32 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "arxiv: 15 signal(s)"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "notes": "57 off-topic signal(s) filtered out"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 111,
+      "sourcesCited": 0,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "flaky tests",
+      "slow CI",
+      "wish there was a tool",
+      "code review bottleneck"
+    ],
+    "errors": [],
+    "limitations": [
+      "Collector runs gather raw signals only; no analysis, ideas or claims are produced."
+    ],
+    "usage": {
+      "modelCalls": 0,
+      "estimatedCostUsd": 0,
+      "actualCostUsd": 0
+    },
+    "limits": {
+      "perQuery": 8
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "run-20261105-1311-scout-npm-release-br",
+    "themeId": "theme-npm-release-breaking-changes",
+    "mode": "collector",
+    "provider": "none (deterministic collectors)",
+    "startedAt": "2026-11-05T13:11:48.373Z",
+    "completedAt": "2026-11-05T13:12:01.188Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "hackernews: 16 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "github-issues: 24 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "stackoverflow: 18 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "arxiv: 0 signal(s)"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "notes": "46 off-topic signal(s) filtered out"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 58,
+      "sourcesCited": 0,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "breaking change minor release",
+      "semver violation",
+      "breaking change patch release"
+    ],
+    "errors": [],
+    "limitations": [
+      "Collector runs gather raw signals only; no analysis, ideas or claims are produced."
+    ],
+    "usage": {
+      "modelCalls": 0,
+      "estimatedCostUsd": 0,
+      "actualCostUsd": 0
+    },
+    "limits": {
+      "perQuery": 8
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "run-20261105-1311-scout-oss-supply-cha",
+    "themeId": "theme-oss-supply-chain-small-maintainers",
+    "mode": "collector",
+    "provider": "none (deterministic collectors)",
+    "startedAt": "2026-11-05T13:11:48.373Z",
+    "completedAt": "2026-11-05T13:12:07.626Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "hackernews: 25 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "github-issues: 32 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "stackoverflow: 24 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "arxiv: 11 signal(s)"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "notes": "26 off-topic signal(s) filtered out"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 92,
+      "sourcesCited": 0,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "maintainer account takeover",
+      "npm supply chain attack",
+      "trusted publishing",
+      "malicious package"
+    ],
+    "errors": [],
+    "limitations": [
+      "Collector runs gather raw signals only; no analysis, ideas or claims are produced."
+    ],
+    "usage": {
+      "modelCalls": 0,
+      "estimatedCostUsd": 0,
+      "actualCostUsd": 0
+    },
+    "limits": {
+      "perQuery": 8
+    },
+    "provenance": "real"
   }
 ]

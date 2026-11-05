@@ -65,7 +65,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-05-01T23:37:50Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -107,7 +107,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-05-12T03:56:40Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -121,7 +121,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-05-20T19:36:51Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -149,7 +149,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-06-29T05:05:02Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -163,7 +163,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-07-02T11:27:01Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -177,7 +177,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-07-10T12:24:25Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -191,7 +191,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-07-15T15:52:11Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -205,7 +205,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-07-28T13:14:39Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -219,7 +219,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-08-06T19:39:46Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -261,7 +261,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-09-13T21:06:35Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -275,7 +275,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-09-15T04:02:08Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -289,7 +289,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-09-16T16:00:58Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -303,7 +303,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-09-22T00:18:39Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -317,7 +317,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-09-22T00:48:48Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -331,7 +331,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-10-01T07:54:44Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -359,7 +359,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-10-20T18:22:40Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -373,7 +373,21 @@
     "engagement": 587,
     "engagementLabel": "375 reactions · 212 comments",
     "createdAt": "2016-08-02T18:14:07Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
+    "triage": "new",
+    "provenance": "real"
+  },
+  {
+    "id": "sig-gh-258976137",
+    "collector": "github-issues",
+    "themeId": "theme-npm-release-breaking-changes",
+    "url": "https://github.com/request/request/issues/2772",
+    "title": "Release @2.82.0 broke semver minor version",
+    "excerpt": "Hi sorry to be a pain, but upgrading the Hawk dep broke the semver minor version. This is a breaking change as the new hoek uses const instead of var. Hawk uses Hoek, which uses `const`. This release should be major version @3. ``` const Hoek = require('hoek'); ^^^^^ SyntaxError: Use of const in strict mode. ```",
+    "engagement": 92,
+    "engagementLabel": "42 reactions · 50 comments",
+    "createdAt": "2017-09-19T21:53:19Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -401,7 +415,7 @@
     "engagement": 112,
     "engagementLabel": "103 reactions · 9 comments",
     "createdAt": "2025-09-01T00:17:34Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -415,7 +429,7 @@
     "engagement": 707,
     "engagementLabel": "693 reactions · 14 comments",
     "createdAt": "2025-09-15T08:39:38Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -429,7 +443,7 @@
     "engagement": 285,
     "engagementLabel": "241 reactions · 44 comments",
     "createdAt": "2025-09-16T14:04:55Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -471,7 +485,7 @@
     "engagement": 2300,
     "engagementLabel": "1634 reactions · 666 comments",
     "createdAt": "2018-11-20T21:26:01Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -499,7 +513,7 @@
     "engagement": 69,
     "engagementLabel": "39 reactions · 30 comments",
     "createdAt": "2026-03-04T14:29:23Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -555,7 +569,7 @@
     "engagement": 1605,
     "engagementLabel": "1118 reactions · 487 comments",
     "createdAt": "2026-03-24T11:48:51Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -569,7 +583,7 @@
     "engagement": 1017,
     "engagementLabel": "907 reactions · 110 comments",
     "createdAt": "2026-04-02T15:06:54Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -597,7 +611,7 @@
     "engagement": 3,
     "engagementLabel": "1 reactions · 2 comments",
     "createdAt": "2026-04-21T16:49:19Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -625,7 +639,7 @@
     "engagement": 397,
     "engagementLabel": "348 reactions · 49 comments",
     "createdAt": "2026-05-11T19:46:46Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -639,7 +653,7 @@
     "engagement": 1453,
     "engagementLabel": "1381 reactions · 72 comments",
     "createdAt": "2026-05-20T19:40:16Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -667,7 +681,7 @@
     "engagement": 16,
     "engagementLabel": "11 reactions · 5 comments",
     "createdAt": "2026-07-14T08:53:08Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -695,7 +709,7 @@
     "engagement": 0,
     "engagementLabel": "0 reactions · 0 comments",
     "createdAt": "2026-09-26T19:27:30Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -709,7 +723,7 @@
     "engagement": 10,
     "engagementLabel": "10 reactions · 0 comments",
     "createdAt": "2026-10-14T22:11:23Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -723,7 +737,7 @@
     "engagement": 0,
     "engagementLabel": "0 reactions · 0 comments",
     "createdAt": "2026-10-23T12:41:53Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -737,7 +751,7 @@
     "engagement": 1,
     "engagementLabel": "0 reactions · 1 comments",
     "createdAt": "2026-10-23T19:18:35Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -751,7 +765,7 @@
     "engagement": 0,
     "engagementLabel": "0 reactions · 0 comments",
     "createdAt": "2026-10-31T10:20:55Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -765,7 +779,7 @@
     "engagement": 27,
     "engagementLabel": "27 reactions · 0 comments",
     "createdAt": "2020-08-17T03:01:40Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -779,7 +793,7 @@
     "engagement": 409,
     "engagementLabel": "279 points · 130 comments",
     "createdAt": "2016-03-26T03:58:07Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -793,7 +807,7 @@
     "engagement": 123,
     "engagementLabel": "85 points · 38 comments",
     "createdAt": "2017-04-19T10:54:40Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -807,7 +821,7 @@
     "engagement": 806,
     "engagementLabel": "578 points · 228 comments",
     "createdAt": "2017-08-01T15:17:34Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -821,7 +835,7 @@
     "engagement": 54,
     "engagementLabel": "28 points · 26 comments",
     "createdAt": "2018-03-15T17:23:07Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -835,7 +849,7 @@
     "engagement": 484,
     "engagementLabel": "329 points · 155 comments",
     "createdAt": "2018-07-12T21:06:42Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -849,7 +863,7 @@
     "engagement": 21,
     "engagementLabel": "19 points · 2 comments",
     "createdAt": "2018-12-20T14:33:20Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -863,7 +877,7 @@
     "engagement": 61,
     "engagementLabel": "44 points · 17 comments",
     "createdAt": "2019-01-31T18:09:13Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -877,7 +891,7 @@
     "engagement": 110,
     "engagementLabel": "61 points · 49 comments",
     "createdAt": "2019-02-02T03:03:24Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -891,7 +905,7 @@
     "engagement": 7,
     "engagementLabel": "6 points · 1 comments",
     "createdAt": "2019-03-28T16:27:52Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -905,7 +919,7 @@
     "engagement": 5,
     "engagementLabel": "3 points · 2 comments",
     "createdAt": "2019-07-15T08:09:17Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -919,7 +933,7 @@
     "engagement": 715,
     "engagementLabel": "489 points · 226 comments",
     "createdAt": "2021-08-03T12:01:22Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -933,7 +947,7 @@
     "engagement": 13,
     "engagementLabel": "13 points · 0 comments",
     "createdAt": "2021-10-26T18:22:39Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -947,7 +961,7 @@
     "engagement": 46,
     "engagementLabel": "27 points · 19 comments",
     "createdAt": "2021-10-28T17:32:49Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -961,7 +975,7 @@
     "engagement": 250,
     "engagementLabel": "213 points · 37 comments",
     "createdAt": "2022-03-01T18:59:03Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -975,7 +989,7 @@
     "engagement": 11,
     "engagementLabel": "7 points · 4 comments",
     "createdAt": "2022-06-02T16:04:14Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -989,7 +1003,7 @@
     "engagement": 19,
     "engagementLabel": "11 points · 8 comments",
     "createdAt": "2008-10-01T08:55:05Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1003,7 +1017,7 @@
     "engagement": 1074,
     "engagementLabel": "754 points · 320 comments",
     "createdAt": "2022-11-02T16:39:15Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1017,7 +1031,21 @@
     "engagement": 23,
     "engagementLabel": "23 points · 0 comments",
     "createdAt": "2023-01-13T19:38:21Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
+    "triage": "new",
+    "provenance": "real"
+  },
+  {
+    "id": "sig-hn-34693708",
+    "collector": "hackernews",
+    "themeId": "theme-npm-release-breaking-changes",
+    "url": "https://news.ycombinator.com/item?id=34693708",
+    "title": "Ask HN: What Happened to Docker 23?",
+    "excerpt": "Docker 23 installs by default now if you update your repository and run [apt|yum|dnf] [install|upgrade] docker-ce. However it breaks on builds (timeouts) and changes the location of config files (&#x2F;etc&#x2F;docker&#x2F;daemon.json isn't used anymore), thus breaking our CI as well as making unusable our config management tools until we patch them. The worst part is that the change occured on thursday, and there was no release notes when our CI started to break. So I was actually lucky to figure out that it was just that and forced version 20 everywhere before we would break everything. And today I found that some build timeout or fail in non-deterministic ways as well which seems to appear on some older versions as well according to google. So I guess the lesson is, never use \"latest\" version of anything, anywhere, as they can't be trusted ? Has anybody encountered this kind of issues ? Edit : I just found out that googling \"docker 23 issues\" also gives volume issues. This is all terrible for a major release that upgrades without warning.",
+    "engagement": 11,
+    "engagementLabel": "3 points · 8 comments",
+    "createdAt": "2023-02-07T15:05:43Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1045,7 +1073,7 @@
     "engagement": 7,
     "engagementLabel": "7 points · 0 comments",
     "createdAt": "2023-05-23T13:56:08Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1059,7 +1087,35 @@
     "engagement": 39,
     "engagementLabel": "23 points · 16 comments",
     "createdAt": "2023-07-03T09:03:24Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
+    "triage": "new",
+    "provenance": "real"
+  },
+  {
+    "id": "sig-hn-36642989",
+    "collector": "hackernews",
+    "themeId": "theme-npm-release-breaking-changes",
+    "url": "https://news.ycombinator.com/item?id=36642989",
+    "title": "Cargo-semver-checks: Scan your Rust crate for semver violations",
+    "excerpt": "Cargo-semver-checks: Scan your Rust crate for semver violations",
+    "engagement": 261,
+    "engagementLabel": "147 points · 114 comments",
+    "createdAt": "2023-07-08T10:10:03Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
+    "triage": "new",
+    "provenance": "real"
+  },
+  {
+    "id": "sig-hn-37420690",
+    "collector": "hackernews",
+    "themeId": "theme-npm-release-breaking-changes",
+    "url": "https://news.ycombinator.com/item?id=37420690",
+    "title": "Semver violations are common, better tooling is the answer",
+    "excerpt": "Semver violations are common, better tooling is the answer",
+    "engagement": 146,
+    "engagementLabel": "77 points · 69 comments",
+    "createdAt": "2023-09-07T15:45:04Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1087,7 +1143,7 @@
     "engagement": 146,
     "engagementLabel": "38 points · 108 comments",
     "createdAt": "2023-10-17T14:13:15Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1101,7 +1157,7 @@
     "engagement": 3,
     "engagementLabel": "3 points · 0 comments",
     "createdAt": "2023-12-14T14:50:01Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1115,7 +1171,7 @@
     "engagement": 18,
     "engagementLabel": "17 points · 1 comments",
     "createdAt": "2024-02-02T11:25:45Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1129,7 +1185,7 @@
     "engagement": 3,
     "engagementLabel": "3 points · 0 comments",
     "createdAt": "2024-02-02T13:44:36Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1162,6 +1218,20 @@
     "provenance": "real"
   },
   {
+    "id": "sig-hn-40899216",
+    "collector": "hackernews",
+    "themeId": "theme-npm-release-breaking-changes",
+    "url": "https://news.ycombinator.com/item?id=40899216",
+    "title": "Lint your crate API changes for semver violations",
+    "excerpt": "Lint your crate API changes for semver violations",
+    "engagement": 1,
+    "engagementLabel": "1 points · 0 comments",
+    "createdAt": "2024-07-07T17:56:17Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
+    "triage": "new",
+    "provenance": "real"
+  },
+  {
     "id": "sig-hn-41008143",
     "collector": "hackernews",
     "themeId": "theme-ai-contribution-burden",
@@ -1176,6 +1246,34 @@
     "provenance": "real"
   },
   {
+    "id": "sig-hn-41242943",
+    "collector": "hackernews",
+    "themeId": "theme-npm-release-breaking-changes",
+    "url": "https://news.ycombinator.com/item?id=41242943",
+    "title": "Tell HN: Microsoft SecureBoot \"Breaking\" Changes, Today's Milestone",
+    "excerpt": "For today's patch Tuesday these articles outline the updates and make good mention of the SecureBoot Advanced Targeting (SBAT) component: https:&#x2F;&#x2F;www.bleepingcomputer.com&#x2F;news&#x2F;microsoft&#x2F;windows-11-kb5041585-cumulative-update-released-with-fixes-new-features&#x2F; https:&#x2F;&#x2F;www.bleepingcomputer.com&#x2F;news&#x2F;microsoft&#x2F;windows-10-kb5041580-update-released-with-14-fixes-security-updates&#x2F; Among other things: >older Linux ISO images might not boot From what I understand this is the next phase from Microsoft in the gradual rollout of a functional \"blacklist\" of original Microsoft-signed keys that all UEFI motherboards shipped with until not that long ago. Until the keys became compromised. These were built-in Microsoft-signed keys which were available for something like Linux to use when Microsoft SecureBoot was enabled on the motherboard, if the OS was willing to go the extra mile and obtain its own Microsoft-signed key according to the strict Microsoft process. Which Linux did eventually, but it took a year or two, until then you mainly needed to disable SecureBoot before you could boot Linux. After that \"finally\" Linux was able to boot o…",
+    "engagement": 20,
+    "engagementLabel": "14 points · 6 comments",
+    "createdAt": "2024-08-14T05:43:04Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
+    "triage": "new",
+    "provenance": "real"
+  },
+  {
+    "id": "sig-hn-41267354",
+    "collector": "hackernews",
+    "themeId": "theme-npm-release-breaking-changes",
+    "url": "https://news.ycombinator.com/item?id=41267354",
+    "title": "Ask HN: Where are the paid Linux desktop distributions?",
+    "excerpt": "Why isn't there any paid linux desktop distribution for personal use? I don't need enterprise stuff like RHEL, Ubuntu Pro or SLE and I don't really want the latest and greatest release of the usual distributions (often with breaking changes). I run something more stable i.e. KDE 5, which only has minor deficiencies for my setup. For obvious reasons I'm not yet switching to KDE 6. Nonetheless, there are still a handful older bugs and occasional issues introduced through security updates. Which means finding, developing and applying patches myself. Wouldn't it be cool, if there were some paid distribution, for a reasonable personal yearly subscription fee. Where you simply submit the bug reports & outstanding patches that affect you and that distribution would then slowly, but steadily (depending on popularity) backport fixes or even hire developers to develop fixes. Does or did something like this exist?",
+    "engagement": 7,
+    "engagementLabel": "3 points · 4 comments",
+    "createdAt": "2024-08-16T15:41:57Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
+    "triage": "new",
+    "provenance": "real"
+  },
+  {
     "id": "sig-hn-41517169",
     "collector": "hackernews",
     "themeId": "theme-oss-supply-chain-small-maintainers",
@@ -1185,7 +1283,7 @@
     "engagement": 37,
     "engagementLabel": "24 points · 13 comments",
     "createdAt": "2024-09-12T03:02:44Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1199,7 +1297,7 @@
     "engagement": 1,
     "engagementLabel": "1 points · 0 comments",
     "createdAt": "2024-10-11T14:12:44Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1213,7 +1311,7 @@
     "engagement": 20,
     "engagementLabel": "15 points · 5 comments",
     "createdAt": "2024-11-12T17:46:31Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1227,7 +1325,7 @@
     "engagement": 886,
     "engagementLabel": "574 points · 312 comments",
     "createdAt": "2025-01-13T22:38:27Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1255,7 +1353,7 @@
     "engagement": 2,
     "engagementLabel": "2 points · 0 comments",
     "createdAt": "2025-04-20T05:58:16Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1269,7 +1367,7 @@
     "engagement": 4,
     "engagementLabel": "3 points · 1 comments",
     "createdAt": "2025-04-30T15:59:37Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1283,7 +1381,7 @@
     "engagement": 3,
     "engagementLabel": "3 points · 0 comments",
     "createdAt": "2025-07-16T22:01:16Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1297,7 +1395,7 @@
     "engagement": 3,
     "engagementLabel": "3 points · 0 comments",
     "createdAt": "2025-07-16T23:42:29Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1311,7 +1409,7 @@
     "engagement": 121,
     "engagementLabel": "85 points · 36 comments",
     "createdAt": "2025-09-15T23:29:40Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1325,7 +1423,7 @@
     "engagement": 393,
     "engagementLabel": "173 points · 220 comments",
     "createdAt": "2025-09-17T09:57:50Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1339,7 +1437,7 @@
     "engagement": 151,
     "engagementLabel": "96 points · 55 comments",
     "createdAt": "2025-09-21T21:19:47Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1381,7 +1479,7 @@
     "engagement": 20,
     "engagementLabel": "19 points · 1 comments",
     "createdAt": "2025-10-27T06:24:02Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1395,7 +1493,7 @@
     "engagement": 659,
     "engagementLabel": "364 points · 295 comments",
     "createdAt": "2025-10-30T00:37:33Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1409,7 +1507,7 @@
     "engagement": 23,
     "engagementLabel": "20 points · 3 comments",
     "createdAt": "2025-11-23T16:43:59Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1423,7 +1521,7 @@
     "engagement": 678,
     "engagementLabel": "420 points · 258 comments",
     "createdAt": "2025-11-27T15:36:56Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1465,7 +1563,7 @@
     "engagement": 3,
     "engagementLabel": "3 points · 0 comments",
     "createdAt": "2026-01-08T11:17:03Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1479,7 +1577,7 @@
     "engagement": 2,
     "engagementLabel": "1 points · 1 comments",
     "createdAt": "2026-01-11T15:14:28Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1535,7 +1633,7 @@
     "engagement": 1,
     "engagementLabel": "1 points · 0 comments",
     "createdAt": "2026-02-05T17:38:32Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1661,7 +1759,7 @@
     "engagement": 20,
     "engagementLabel": "18 points · 2 comments",
     "createdAt": "2026-05-12T08:23:40Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1675,7 +1773,7 @@
     "engagement": 3,
     "engagementLabel": "3 points · 0 comments",
     "createdAt": "2026-05-20T04:45:29Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1689,7 +1787,7 @@
     "engagement": 1229,
     "engagementLabel": "775 points · 454 comments",
     "createdAt": "2026-06-01T13:30:21Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1703,7 +1801,7 @@
     "engagement": 22,
     "engagementLabel": "22 points · 0 comments",
     "createdAt": "2026-06-05T15:12:54Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1717,7 +1815,7 @@
     "engagement": 29,
     "engagementLabel": "29 points · 0 comments",
     "createdAt": "2026-07-07T13:33:47Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1731,7 +1829,7 @@
     "engagement": 1,
     "engagementLabel": "1 points · 0 comments",
     "createdAt": "2026-07-10T09:35:34Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1745,7 +1843,7 @@
     "engagement": 3,
     "engagementLabel": "2 points · 1 comments",
     "createdAt": "2026-07-13T14:56:40Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1759,7 +1857,7 @@
     "engagement": 61,
     "engagementLabel": "47 points · 14 comments",
     "createdAt": "2026-07-22T00:27:35Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1787,7 +1885,7 @@
     "engagement": 11,
     "engagementLabel": "11 points · 0 comments",
     "createdAt": "2026-08-07T16:07:51Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1815,7 +1913,7 @@
     "engagement": 3,
     "engagementLabel": "3 points · 0 comments",
     "createdAt": "2026-09-08T16:43:11Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1829,7 +1927,7 @@
     "engagement": 2,
     "engagementLabel": "2 points · 0 comments",
     "createdAt": "2026-09-21T16:01:01Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1885,7 +1983,21 @@
     "engagement": 128,
     "engagementLabel": "116 votes · 12 answers",
     "createdAt": "2009-07-14T17:35:47.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
+    "triage": "new",
+    "provenance": "real"
+  },
+  {
+    "id": "sig-so-11885764",
+    "collector": "stackoverflow",
+    "themeId": "theme-npm-release-breaking-changes",
+    "url": "https://stackoverflow.com/questions/11885764/attempt-by-security-transparent-method-x-to-access-security-critical-method-y-fa",
+    "title": "Attempt by security transparent method X to access security critical method Y failed",
+    "excerpt": "I have a fairly stable server application version that's been deployed for nearly a year at dozens of customers. One new customer recently setup the application and is getting the following error: System.MethodAccessException: Attempt by security transparent method [SomeMethod] to access security critical method [SomeOtherMethod] failed. Both SomeMethod and SomeOtherMethod are methods in assemblies that I wrote, that are built against .NET 4, and that are running inside a Windows Service. If it makes a difference, SomeOtherMethod does reference a type from a 3rd party assembly (EntLib 4.1) built against .NET 2.0. Looking at the code for EntLib 4.1, I do see that they use both SecurityTransparent and APTC attributes, but this has never caused issues at other clients. These assemblies were upgraded from the .NET 2.0 CLR, but a long time ago. This exact code is running on other customers just fine, and I'm not explicitly using the APTC attribute nor am I using the SecurityCritical attribute anywhere. This leads me to the conclusion that it's a configuration issue or perhaps .NET Framework patch issue. Has there been a patch released for .NET that would cause this breaking change? Is t…",
+    "engagement": 29,
+    "engagementLabel": "24 votes · 5 answers",
+    "createdAt": "2012-08-09T14:33:20.000Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1899,7 +2011,7 @@
     "engagement": 14,
     "engagementLabel": "11 votes · 3 answers",
     "createdAt": "2012-08-18T03:38:21.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1913,7 +2025,7 @@
     "engagement": 176,
     "engagementLabel": "165 votes · 11 answers",
     "createdAt": "2009-09-29T14:20:09.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1927,7 +2039,7 @@
     "engagement": 34,
     "engagementLabel": "31 votes · 3 answers",
     "createdAt": "2013-03-05T11:56:05.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1941,7 +2053,7 @@
     "engagement": 295,
     "engagementLabel": "293 votes · 2 answers",
     "createdAt": "2015-01-11T05:54:22.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1955,7 +2067,21 @@
     "engagement": 583,
     "engagementLabel": "401 votes · 182 answers",
     "createdAt": "2008-11-11T22:14:43.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
+    "triage": "new",
+    "provenance": "real"
+  },
+  {
+    "id": "sig-so-28509481",
+    "collector": "stackoverflow",
+    "themeId": "theme-npm-release-breaking-changes",
+    "url": "https://stackoverflow.com/questions/28509481/should-i-pin-my-python-dependencies-versions",
+    "title": "Should I pin my Python dependencies versions?",
+    "excerpt": "I am about to release a Python library I've been working on the past few weeks. I've read a lot about Python dependencies but something is not quite clear yet: Some people pretend you should never pin your dependencies versions as it would prevent the users of your library from upgrading those dependencies. Some other claim that you should always pin your dependencies versions as it is the only way of guaranteeing that your release works the way it did when you developed it and to prevent that a breaking change in a dependency wreaks havoc in your library. I somehow went for an hybrid solution, where I assumed my dependencies used semantic versioning and pinned only the major version number (say somelib >= 2.3.0, < 3 ) except when the major version number is 0 (semantic versioning dictates that such versions are to be considered volatile and may break the API even if only the patch number is bumped). As of now, I'm not sure which way is the best. Is there an official guideline (even a PEP perhaps ?) that dictates the best practice regarding Python dependencies and how to specify them ?",
+    "engagement": 84,
+    "engagementLabel": "81 votes · 3 answers",
+    "createdAt": "2015-02-13T21:59:16.000Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1969,7 +2095,7 @@
     "engagement": 28,
     "engagementLabel": "26 votes · 2 answers",
     "createdAt": "2015-09-19T10:37:45.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1983,7 +2109,21 @@
     "engagement": 109,
     "engagementLabel": "98 votes · 11 answers",
     "createdAt": "2015-11-11T20:58:13.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
+    "triage": "new",
+    "provenance": "real"
+  },
+  {
+    "id": "sig-so-3583694",
+    "collector": "stackoverflow",
+    "themeId": "theme-npm-release-breaking-changes",
+    "url": "https://stackoverflow.com/questions/3583694/backwards-compatibility-in-net-with-binaryformatter",
+    "title": "Backwards compatibility in .NET with BinaryFormatter",
+    "excerpt": "We use BinaryFormatter in a C# game, to save user game progress, game levels, etc. We are running into the problem of backwards compatibility. The aims: Level designer creates campaign (levels&rules), we change the code, the campaign should still work fine. This can happen everyday during development before release. User saves game, we release a game patch, user should still be able to load game The invisible data-conversion process should work no matter how distant the two versions are. For example an user can skip our first 5 minor updates and get the 6th directly. Still, his saved games should still load fine. The solution needs to be completely invisible to users and level designers, and minimally burden coders who want to change something (e.g. rename a field because they thought of a better name). Some object graphs we serialize are rooted in one class, some in others. Forward compatibility is not needed. Potentially breaking changes (and what happens when we serialize the old version and deserialize into the new): add field (gets default-initialized) change field type (failure) rename field (equivalent to removing it and adding a new one) change property to field and back (e…",
+    "engagement": 14,
+    "engagementLabel": "11 votes · 3 answers",
+    "createdAt": "2010-08-27T11:29:14.000Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1997,7 +2137,7 @@
     "engagement": 40,
     "engagementLabel": "36 votes · 4 answers",
     "createdAt": "2010-09-13T18:44:32.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2011,7 +2151,7 @@
     "engagement": 33,
     "engagementLabel": "29 votes · 4 answers",
     "createdAt": "2017-03-28T04:46:42.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2025,7 +2165,7 @@
     "engagement": 46,
     "engagementLabel": "42 votes · 4 answers",
     "createdAt": "2017-05-04T18:58:04.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2039,7 +2179,7 @@
     "engagement": 68,
     "engagementLabel": "66 votes · 2 answers",
     "createdAt": "2017-06-25T08:12:00.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2053,7 +2193,7 @@
     "engagement": 40,
     "engagementLabel": "38 votes · 2 answers",
     "createdAt": "2017-07-03T05:53:13.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2067,7 +2207,7 @@
     "engagement": 84,
     "engagementLabel": "72 votes · 12 answers",
     "createdAt": "2009-01-17T23:04:44.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2081,7 +2221,7 @@
     "engagement": 56,
     "engagementLabel": "52 votes · 4 answers",
     "createdAt": "2019-02-01T07:45:35.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2095,7 +2235,7 @@
     "engagement": 103,
     "engagementLabel": "96 votes · 7 answers",
     "createdAt": "2019-03-18T21:57:00.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2109,7 +2249,7 @@
     "engagement": 8,
     "engagementLabel": "7 votes · 1 answers",
     "createdAt": "2019-03-21T17:07:19.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2123,7 +2263,7 @@
     "engagement": 55,
     "engagementLabel": "51 votes · 4 answers",
     "createdAt": "2019-12-24T17:42:14.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2137,7 +2277,7 @@
     "engagement": 2,
     "engagementLabel": "1 votes · 1 answers",
     "createdAt": "2020-11-15T14:16:08.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2151,7 +2291,7 @@
     "engagement": 2,
     "engagementLabel": "1 votes · 1 answers",
     "createdAt": "2021-03-03T23:30:40.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2165,7 +2305,7 @@
     "engagement": 3,
     "engagementLabel": "1 votes · 2 answers",
     "createdAt": "2021-10-20T12:20:04.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2179,7 +2319,7 @@
     "engagement": 6,
     "engagementLabel": "5 votes · 1 answers",
     "createdAt": "2022-05-16T20:57:33.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2193,7 +2333,7 @@
     "engagement": 2,
     "engagementLabel": "2 votes · 0 answers",
     "createdAt": "2023-11-29T14:49:49.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2221,7 +2361,7 @@
     "engagement": 18,
     "engagementLabel": "17 votes · 1 answers",
     "createdAt": "2024-06-27T08:10:35.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2249,7 +2389,7 @@
     "engagement": 1,
     "engagementLabel": "0 votes · 1 answers",
     "createdAt": "2025-09-24T07:43:36.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2263,7 +2403,7 @@
     "engagement": 2,
     "engagementLabel": "1 votes · 1 answers",
     "createdAt": "2026-02-07T10:25:09.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2305,7 +2445,7 @@
     "engagement": 92,
     "engagementLabel": "84 votes · 8 answers",
     "createdAt": "2012-01-10T10:34:30.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2319,7 +2459,7 @@
     "engagement": 54,
     "engagementLabel": "49 votes · 5 answers",
     "createdAt": "2012-02-09T20:28:42.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2333,7 +2473,7 @@
     "engagement": 76,
     "engagementLabel": "70 votes · 6 answers",
     "createdAt": "2012-03-01T08:32:07.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2347,7 +2487,7 @@
     "engagement": 33,
     "engagementLabel": "31 votes · 2 answers",
     "createdAt": "2009-06-10T19:19:53.000Z",
-    "retrievedAt": "2026-11-03T21:47:31.775Z",
+    "retrievedAt": "2026-11-05T13:11:48.373Z",
     "triage": "new",
     "provenance": "real"
   }

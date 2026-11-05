@@ -2,6 +2,9 @@
   {
     "id": "exp-combined-signal-discrimination",
     "ideaId": "idea-validated-pre-review-triage-signals",
+    "assumptionIds": [
+      "a1"
+    ],
     "title": "Do two partial signals combined (description length + recent cross-repo PR count) separate policy-violating PRs well?",
     "hypothesis": "An unfitted, equal-weight combination of description length (C2) and the author's recent cross-repo PR count (S1) reaches AUC ≥ 0.75 on the same 240 labelled PRs.",
     "uncertainty": "Whether the two partially informative cheap signals add up to a usable triage signal. This is the last cheap test before pausing the area's solution search.",
@@ -39,14 +42,14 @@
       ]
     },
     "createdInRun": "run-20261104-exp-content-signals",
-    "provenance": "real",
-    "assumptionIds": [
-      "a1"
-    ]
+    "provenance": "real"
   },
   {
     "id": "exp-content-signal-discrimination",
     "ideaId": "idea-validated-pre-review-triage-signals",
+    "assumptionIds": [
+      "a1"
+    ],
     "title": "Do content-based signals in the PR itself separate policy-violating PRs from genuine newcomer PRs?",
     "hypothesis": "PRs closed under AI or low-effort policies differ from merged first-time LLVM PRs in cheap content signals visible before review: whether the description links an existing issue (C1), and description length (C2). At least one reaches AUC ≥ 0.75.",
     "uncertainty": "Whether any cheap pre-review signal works, now that account-level signals have failed. If content signals fail too, the area should be paused.",
@@ -88,14 +91,14 @@
       ]
     },
     "createdInRun": "run-20261104-agent-ai-contribution-burden-4",
-    "provenance": "real",
-    "assumptionIds": [
-      "a1"
-    ]
+    "provenance": "real"
   },
   {
     "id": "exp-followup-engagement-retrospective",
     "ideaId": "idea-contributor-comprehension-gate",
+    "assumptionIds": [
+      "a1"
+    ],
     "title": "Does author follow-up engagement separate policy-rejected PRs from accepted first-time PRs?",
     "hypothesis": "Authors of PRs that projects closed as low-effort or AI-policy violations rarely reply to maintainer comments, while first-time contributors whose PRs were merged usually do.",
     "uncertainty": "Whether follow-up engagement is a discriminating signal (assumption a1). If it isn't, a comprehension gate adds friction without filtering.",
@@ -137,14 +140,12 @@
       ]
     },
     "createdInRun": "run-20261103-agent-ai-contribution-burden",
-    "provenance": "real",
-    "assumptionIds": [
-      "a1"
-    ]
+    "provenance": "real"
   },
   {
     "id": "exp-install-hook-watch-prospective",
     "ideaId": "idea-maintainer-publish-anomaly-alarm",
+    "assumptionIds": [],
     "title": "Prospective field test: how often would the alarm fire on real releases?",
     "hypothesis": "Across the 400 popular npm packages from exp-npm-publishing-practices, new releases that add an install script or a new dependency are rare enough (≤ 5% of releases) that alerts wouldn't overwhelm maintainers.",
     "uncertainty": "Real-world alert volume (false-alarm burden), which retrospective data on malicious releases can't show.",
@@ -181,6 +182,10 @@
   {
     "id": "exp-npm-metadata-breaks",
     "ideaId": "idea-npm-release-contract-linter",
+    "assumptionIds": [
+      "a1",
+      "a2"
+    ],
     "title": "How often do popular npm packages ship metadata-level breaking changes in minor or patch releases?",
     "hypothesis": "At least 20% of popular npm packages shipped at least one minor or patch release in the past 24 months that a release-contract linter would flag. At least 70% of a random sample of flags are genuine breaking changes.",
     "uncertainty": "Whether the problem the linter targets is common enough (assumption a1), and whether its flags would be trusted (assumption a2).",
@@ -223,15 +228,14 @@
       ]
     },
     "createdInRun": "run-20261104-agent-release-breaks-1",
-    "provenance": "real",
-    "assumptionIds": [
-      "a1",
-      "a2"
-    ]
+    "provenance": "real"
   },
   {
     "id": "exp-npm-publishing-practices",
     "ideaId": "idea-maintainer-publish-anomaly-alarm",
+    "assumptionIds": [
+      "a4"
+    ],
     "title": "How many popular npm packages still publish in a way a stolen token could reproduce?",
     "hypothesis": "A substantial share (≥ 40%) of popular npm packages' latest releases were published with neither trusted publishing (OIDC) nor staged human approval, so a maintainer-side alarm would still have a large audience.",
     "uncertainty": "Whether npm's new protections have already closed most of the gap the alarm targets (assumption a4).",
@@ -272,14 +276,14 @@
       ]
     },
     "createdInRun": "run-20261104-agent-supply-chain-2",
-    "provenance": "real",
-    "assumptionIds": [
-      "a4"
-    ]
+    "provenance": "real"
   },
   {
     "id": "exp-pre-review-signal-discrimination",
     "ideaId": "idea-validated-pre-review-triage-signals",
+    "assumptionIds": [
+      "a1"
+    ],
     "title": "Do cheap pre-review signals separate policy-violating PRs from genuine newcomer PRs?",
     "hypothesis": "Authors of PRs closed under AI or low-effort policies opened many more PRs across GitHub in the 30 days before their PR than genuine first-time LLVM contributors did, so this one signal separates the groups well (AUC ≥ 0.75).",
     "uncertainty": "Whether any cheap, pre-review signal discriminates at all (assumption a1).",
@@ -324,14 +328,14 @@
       ]
     },
     "createdInRun": "run-20261104-agent-ai-contribution-burden-3",
-    "provenance": "real",
-    "assumptionIds": [
-      "a1"
-    ]
+    "provenance": "real"
   },
   {
     "id": "exp-publish-anomaly-campaign-replication",
     "ideaId": "idea-maintainer-publish-anomaly-alarm",
+    "assumptionIds": [
+      "a1"
+    ],
     "title": "Campaign-level replication: do independent hijack campaigns carry structural signals?",
     "hypothesis": "Across independent npm hijack campaigns (not individual packages), most carry a new-dependency or install-hook signal.",
     "uncertainty": "Whether the first experiment's support generalises beyond the single Shai-Hulud wave that dominated its sample.",
@@ -372,14 +376,14 @@
       ]
     },
     "createdInRun": "run-20261103-exp-publish-anomaly",
-    "provenance": "real",
-    "assumptionIds": [
-      "a1"
-    ]
+    "provenance": "real"
   },
   {
     "id": "exp-publish-anomaly-retrospective",
     "ideaId": "idea-maintainer-publish-anomaly-alarm",
+    "assumptionIds": [
+      "a1"
+    ],
     "title": "Would simple structural diffs have flagged the documented malicious releases?",
     "hypothesis": "Each documented malicious release differs from the previous legitimate release by at least one simple structural signal: a new dependency, a new install-time hook or .pth file, or a missing or changed provenance attestation.",
     "uncertainty": "Whether compromised-account releases are structurally anomalous (assumption a1). If they look like normal releases, a maintainer alarm can't work.",
@@ -422,9 +426,6 @@
       ]
     },
     "createdInRun": "run-20261103-agent-supply-chain-1",
-    "provenance": "real",
-    "assumptionIds": [
-      "a1"
-    ]
+    "provenance": "real"
   }
 ]

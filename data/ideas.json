@@ -129,7 +129,8 @@
         "id": "a2",
         "text": "Detectors can separate AI from human text with low false-positive rates",
         "criticality": "high",
-        "status": "untested"
+        "status": "untested",
+        "evidenceIds": []
       }
     ],
     "risks": [
@@ -236,19 +237,22 @@
         "id": "a1",
         "text": "Authors of low-effort PRs rarely respond to maintainer questions, while genuine contributors do (follow-up engagement discriminates)",
         "criticality": "high",
-        "status": "weakened"
+        "status": "weakened",
+        "evidenceIds": []
       },
       {
         "id": "a2",
         "text": "Maintainers accept a small added delay for newcomers in exchange for a filtered queue",
         "criticality": "medium",
-        "status": "untested"
+        "status": "untested",
+        "evidenceIds": []
       },
       {
         "id": "a3",
         "text": "Answers pasted from an LLM still reduce the burden, because they arrive before review time is spent",
         "criticality": "medium",
-        "status": "untested"
+        "status": "untested",
+        "evidenceIds": []
       }
     ],
     "risks": [
@@ -367,13 +371,15 @@
         "id": "a1",
         "text": "Projects are willing to trust other projects' vouches",
         "criticality": "high",
-        "status": "untested"
+        "status": "untested",
+        "evidenceIds": []
       },
       {
         "id": "a2",
         "text": "Public denouncements can be governed without abuse or defamation risk",
         "criticality": "high",
-        "status": "untested"
+        "status": "untested",
+        "evidenceIds": []
       }
     ],
     "risks": [
@@ -472,7 +478,8 @@
         "id": "a1",
         "text": "Enough dependents have runnable test suites",
         "criticality": "high",
-        "status": "untested"
+        "status": "untested",
+        "evidenceIds": []
       }
     ],
     "risks": [
@@ -574,25 +581,29 @@
         "id": "a1",
         "text": "Malicious releases from compromised accounts differ structurally (new deps, new hooks, different publisher) from the maintainer's normal releases",
         "criticality": "high",
-        "status": "supported"
+        "status": "supported",
+        "evidenceIds": []
       },
       {
         "id": "a2",
         "text": "Maintainers would notice and react faster than the current detection time (~3 h for axios)",
         "criticality": "high",
-        "status": "untested"
+        "status": "untested",
+        "evidenceIds": []
       },
       {
         "id": "a3",
         "text": "Commercial scanners don't already offer free maintainer-side alerts",
         "criticality": "medium",
-        "status": "weakened"
+        "status": "weakened",
+        "evidenceIds": []
       },
       {
         "id": "a4",
         "text": "A substantial share of popular packages still publish in a way a stolen token could reproduce (no trusted publishing, no staged approval)",
         "criticality": "high",
-        "status": "supported"
+        "status": "supported",
+        "evidenceIds": []
       }
     ],
     "risks": [
@@ -727,19 +738,22 @@
         "id": "a1",
         "text": "Metadata-level contract breaks in minor or patch releases are common among popular packages (≥ 20% shipped at least one in two years)",
         "criticality": "high",
-        "status": "supported"
+        "status": "supported",
+        "evidenceIds": []
       },
       {
         "id": "a2",
         "text": "Flags are mostly genuine breaks rather than noise (≥ 70% of audited flags)",
         "criticality": "high",
-        "status": "refuted"
+        "status": "refuted",
+        "evidenceIds": []
       },
       {
         "id": "a3",
         "text": "Maintainers would add another check to their release workflow",
         "criticality": "medium",
-        "status": "untested"
+        "status": "untested",
+        "evidenceIds": []
       }
     ],
     "risks": [
@@ -874,7 +888,8 @@
         "id": "a1",
         "text": "Most valid reports can include a mechanically runnable PoC",
         "criticality": "high",
-        "status": "untested"
+        "status": "untested",
+        "evidenceIds": []
       }
     ],
     "risks": [
@@ -1195,19 +1210,22 @@
         "id": "a1",
         "text": "Cheap pre-review signals (recent cross-repo PR burst, account age) separate policy-violating PRs from genuine newcomer PRs well (AUC ≥ 0.75)",
         "criticality": "high",
-        "status": "refuted"
+        "status": "refuted",
+        "evidenceIds": []
       },
       {
         "id": "a2",
         "text": "Advisory labels save maintainers meaningful triage time",
         "criticality": "high",
-        "status": "untested"
+        "status": "untested",
+        "evidenceIds": []
       },
       {
         "id": "a3",
         "text": "Signals don't systematically disadvantage genuine newcomers (e.g. new accounts)",
         "criticality": "medium",
-        "status": "untested"
+        "status": "untested",
+        "evidenceIds": []
       }
     ],
     "risks": [
