@@ -99,7 +99,7 @@
     "@speed-highlight/core": "2.1.0",
     "oxfmt": "0.77.0",
     "html-minifier-terser": "7.2.0",
-    "knip": "6.44.1",
+    "knip": "6.44.2",
     "@azure/abort-controller": "2.2.0",
     "oauth4webapi": "3.8.8",
     "pdf-lib": "1.17.1",
@@ -230,7 +230,7 @@
     "has-to-string-tag-x": "2.1.2",
     "@lottiefiles/dotlottie-web": "0.82.1",
     "@appium/logger": "2.0.12",
-    "gradle-to-js": "3.0.1",
+    "gradle-to-js": "3.0.2",
     "reserved": "0.1.2",
     "@azure/monitor-opentelemetry-exporter": "1.0.0-beta.32",
     "e2b": "2.63.0",
@@ -278,7 +278,7 @@
     "@jest/core": "30.5.2",
     "ts-interface-checker": "1.0.2",
     "effect": "4.1.2",
-    "@adobe/css-tools": "4.5.0",
+    "@adobe/css-tools": "5.0.0",
     "expect-type": "1.4.0",
     "@babel/preset-typescript": "8.0.7",
     "ts-algebra": "2.0.0",
@@ -299,7 +299,7 @@
     "code-block-writer": "13.0.3",
     "react-hook-form": "7.91.0",
     "@bufbuild/protobuf": "2.17.0",
-    "unbash": "6.0.3",
+    "unbash": "6.0.4",
     "sucrase": "3.35.1",
     "@tanstack/react-store": "0.11.2",
     "jest": "30.5.2",
@@ -348,7 +348,7 @@
     "@better-auth/drizzle-adapter": "1.7.18",
     "@tanstack/start-server-core": "1.169.45",
     "@better-auth/memory-adapter": "1.7.18",
-    "@graphql-codegen/cli": "7.4.6",
+    "@graphql-codegen/cli": "8.0.0",
     "@tanstack/history": "1.162.5",
     "@better-auth/utils": "0.5.1",
     "better-result": "3.0.1",
@@ -373,7 +373,7 @@
     "@better-auth/telemetry": "1.7.18",
     "@microsoft/api-extractor": "7.60.1",
     "@xmldom/is-dom-node": "1.0.1",
-    "@simplewebauthn/server": "14.0.3",
+    "@simplewebauthn/server": "14.1.0",
     "node-rsa": "2.0.0",
     "@scalar/openapi-upgrader": "0.4.7",
     "@react-spring/types": "10.1.2",
@@ -836,6 +836,63 @@
       "newDependency": false,
       "newInstallScript": false,
       "addedDependencies": []
+    },
+    {
+      "pkg": "knip",
+      "from": "6.44.1",
+      "to": "6.44.2",
+      "seenAt": "2026-11-07T13:31:27.529Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "gradle-to-js",
+      "from": "3.0.1",
+      "to": "3.0.2",
+      "seenAt": "2026-11-07T13:31:27.529Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@adobe/css-tools",
+      "from": "4.5.0",
+      "to": "5.0.0",
+      "seenAt": "2026-11-07T13:31:27.529Z",
+      "newDependency": true,
+      "newInstallScript": false,
+      "addedDependencies": [
+        "postcss",
+        "postcss-safe-parser"
+      ]
+    },
+    {
+      "pkg": "unbash",
+      "from": "6.0.3",
+      "to": "6.0.4",
+      "seenAt": "2026-11-07T13:31:27.529Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@graphql-codegen/cli",
+      "from": "7.4.6",
+      "to": "8.0.0",
+      "seenAt": "2026-11-07T13:31:27.529Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@simplewebauthn/server",
+      "from": "14.0.3",
+      "to": "14.1.0",
+      "seenAt": "2026-11-07T13:31:27.529Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
     }
   ],
   "checks": [
@@ -852,6 +909,11 @@
     {
       "at": "2026-11-06T14:36:03.178Z",
       "newReleases": 20,
+      "failures": 0
+    },
+    {
+      "at": "2026-11-07T13:31:27.529Z",
+      "newReleases": 6,
       "failures": 0
     }
   ]
