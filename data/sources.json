@@ -9,7 +9,7 @@
     "excerpt": "People keep reporting that their code won't compile after a supposedly \"minor\" update.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -27,7 +27,7 @@
     "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Uses the AIDev dataset of agent-authored PRs, many of them likely initiated by repository owners themselves, so findings may not transfer to unsolicited drive-by contributions.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -45,7 +45,7 @@
     "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Uses the AIDev dataset of agent-authored PRs, many of them likely initiated by repository owners themselves, so findings may not transfer to unsolicited drive-by contributions.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
@@ -63,7 +63,7 @@
     "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Uses the AIDev dataset of agent-authored PRs, many of them likely initiated by repository owners themselves, so findings may not transfer to unsolicited drive-by contributions.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -81,7 +81,7 @@
     "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Observational difference-in-differences study of repositories that adopted AI agents themselves; not inbound drive-by contributions.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
@@ -99,7 +99,7 @@
     "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Policy texts express intent; enforcement is not measured.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
     },
@@ -117,7 +117,7 @@
     "limitations": "arXiv preprint (not peer-reviewed). Abstract only, as captured by the collector. Qualitative policy analysis.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -135,7 +135,7 @@
     "limitations": "arXiv preprint (not peer-reviewed). Abstract only.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
     },
@@ -152,7 +152,7 @@
     "excerpt": "Some of them may look legit at first glance, only revealing flaws when one dive into the code/logic during the review process. … some may overwhelm the system by opening a plethora of pull requests within a very short span of time; even if these are obviously dead on arrival, they still take time to triage. … All in all, they introduce extra maintenance burden to maintainers who are already stretched thin.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
@@ -169,7 +169,7 @@
     "excerpt": "Some core maintainers (myself included) feel like the following labels have outlived their usefulness. They were originally created in hope we can use these to recruit and retain future maintainers. However, the cost of triaging mostly unacceptable pull requests (nowadays usually AI slops) have outweighed any benefit. These labels are: - `good first issue` - `Package-novice` - `Package-intermediate` (I don't find intermediate very meaningful, you either need expertise or you don't) - `Hacktoberfest` (we have not participated in many years) - `hacktoberfest-accepted` (same reasoning as `Hacktoberfest`) Proposed actions: - Remove them from open issues/PRs. - Retire them in labels list by prepending with a 💤 (as we do with other labels that went through similar fate) - Remove their mentions from https://www.astropy.org/contribute.html (anywhere else?) Out of scope: - I think the keeping `Package-expert` label is fine, as we still need to identify which issues need serious domain expertise, even amongst ourselves.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -186,7 +186,7 @@
     "excerpt": "## Summary Two malicious versions of `@asyncapi/specs` were published to npm on **2026-07-14** via a compromised `alpha` branch. The current `latest` tag points to the malicious version. This is a second, separate compromise from the same attacker who simultaneously hit the `asyncapi/generator` monorepo. The `asyncapi/spec-json-schemas` maintainers are **victims** - this is a branch write token compromise, not an insider issue. --- ## Affected Versions | Package | Version | Tag | Status | |---------|---------|-----|--------| | `@asyncapi/specs` | `6.11.2-alpha.1` | `alpha` | MALICIOUS | | `@asyncapi/specs` | `6.11.2` | `latest` | MALICIOUS - currently live | **Safe version:** `6.11.1` (published 2026-01-30, last clean version) --- ## What Happened The attacker (GitHub user ID 148100, login `invalid-email-address`) gained write access to the `alpha` branch and made **5 commits between 07:51-08:04 UTC** under the identity **\"Your Name\" / you@example.com** (unconfigured git placeholder - not any real contributor). The key injection commit is `61a930fca7241763e306e31abe4557221e84a76c` (08:04 UTC), which modified `index.js` (+26 lines prepended at top of file). The release workflow (`.g…",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -203,7 +203,7 @@
     "excerpt": "# Post Mortem: axios npm supply chain compromise **Date:** March 31, 2026 **Author:** Jason Saayman **Status:** Remediation in progress On March 31, 2026, two malicious versions of axios (1.14.1 and 0.30.4) were published to the npm registry through my compromised account. Both versions injected a dependency called `plain-crypto-js@4.2.1` that installed a remote access trojan on macOS, Windows, and Linux. The malicious versions were live for about 3 hours before being removed. ## Are you affected? Check your lockfile: ```bash grep -E \"axios@(1\\.14\\.1|0\\.30\\.4)|plain-crypto-js\" package-lock.json yarn.lock 2>/dev/null ``` If anything comes back, treat that machine as compromised: 1. Downgrade to `axios@1.14.0` (or `0.30.3` for 0.x users) 2. Delete `node_modules/plain-crypto-js/` 3. Rotate every secret, token, and credential on that machine 4. Check your network logs for connections to `sfrclak[.]com` or `142.11.206.73` on port 8000 5. If this happened on a CI runner, rotate any secrets that were injected during the affected build If you were already pinned to a clean version and didn't run a fresh install between 00:21 and 03:15 UTC on March 31, you're fine. For detailed remediation …",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
     },
@@ -220,7 +220,7 @@
     "excerpt": "### What is the problem this feature would solve? Recently, the npm ecosystem has suffered several supply chain attacks where popular packages were compromised right after release. Other package managers, such as [pnpm](https://github.com/pnpm/pnpm/pull/9921), have already introduced a configuration option to mitigate these risks. The feature request is to add support in Bun for two new configuration options (ideally to `.npmrc` and `bunfig.toml`: `minimumReleaseAge`: Defines the minimum amount of minutes that must pass after a version is published before Bun will install it. Example: ``` minimumReleaseAge: 1440 ``` This would ensure that only packages released at least one day ago are installable. `minimumReleaseAgeExclude`: A list of dependencies that should be excluded from the above restriction and always install the latest version immediately. Example: ``` minimumReleaseAgeExclude: - webpack ``` **References** pnpm PR introducing the feature: [#9921](https://github.com/pnpm/pnpm/pull/9921) ### What is the feature you are proposing to solve the problem? Prevent supply chain attacks: in most incidents, malicious packages are discovered and removed from the registry within minute…",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
@@ -237,7 +237,7 @@
     "limitations": "Rust, not JavaScript. Shows the tool model works, not that JS maintainers would adopt it. About 1,700 GitHub stars at retrieval (from GitHub search).",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
@@ -254,7 +254,7 @@
     "limitations": "A new project (3 stars at retrieval, updated 2026-11-04).",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -272,7 +272,7 @@
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
     },
@@ -290,7 +290,7 @@
     "limitations": "Same project as src-curl-contribute-ai, so it is counted as one origin. Secondary reporting on the bounty's end (BleepingComputer, Heise, The Register) could not be fetched in this session.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -308,7 +308,7 @@
     "limitations": "Own experiment. The control group is LLVM-only.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -326,7 +326,7 @@
     "limitations": "Own experiment. The control group is LLVM-only, and descriptions may have been edited after closing.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
     },
@@ -345,7 +345,7 @@
     "limitations": "Exploratory: computed after seeing the pre-registered result.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
@@ -364,7 +364,7 @@
     "limitations": "Own experiment. Group membership is inferred from comment text via GitHub search. The control group is LLVM-only. Raw rows are in result.json.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -383,7 +383,7 @@
     "limitations": "Exploratory: computed after the verdict.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -402,7 +402,7 @@
     "limitations": "Judged by a research session against criteria fixed before judging. One reviewer, small sample.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -421,7 +421,7 @@
     "limitations": "Own experiment. Rules applied to registry metadata only.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -439,7 +439,7 @@
     "limitations": "Own experiment. 'Neither' is an upper bound on token exposure (interactive 2FA publishes look the same). Popularity comes from the npm search ranking for six keywords.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
     },
@@ -457,7 +457,7 @@
     "limitations": "Own experiment. Summary transcribed verbatim from the job log, because GitHub rejected the push of the raw rows. The control group is LLVM-only.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
     },
@@ -476,7 +476,7 @@
     "limitations": "Exploratory, computed after the verdict.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
@@ -495,7 +495,7 @@
     "limitations": "Own experiment. Mechanisms are classified by keyword rules over OSV report text. npm only.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -514,7 +514,7 @@
     "limitations": "Exploratory, computed after the verdict.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
@@ -533,7 +533,7 @@
     "limitations": "Own experiment. Campaigns are grouped heuristically, and mechanisms are classified from report text. npm only.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -550,7 +550,7 @@
     "excerpt": "Your change completely broke our release pipelines while we tracked down what changed over the weekend and we've now had to pin our versions back whilst we find a work around.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -567,7 +567,7 @@
     "limitations": "A tool's own README describes the problem it sells a solution to.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -585,7 +585,7 @@
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
@@ -601,7 +601,7 @@
     "excerpt": "You may wish to modify pull request access for your repository if you want to restrict contributions, or disable them entirely. … To restrict pull requests to collaborators only",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -617,7 +617,7 @@
     "excerpt": "Limits activity for users who have not previously contributed to the default branch of the repository and are not collaborators.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -634,7 +634,7 @@
     "limitations": "The instruction sits in an HTML comment aimed at autonomous agents. VENTURE recorded it as data and did not act on it.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -651,7 +651,7 @@
     "limitations": "A new project (0 stars at retrieval).",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -669,7 +669,7 @@
     "limitations": "One contributor's argument; the policy authors' response isn't in the captured text.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -686,7 +686,7 @@
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -703,7 +703,7 @@
     "excerpt": "[LITELLM TEAM] - For updates from the team, please see: https://github.com/BerriAI/litellm/issues/24518 --- # [Security]: CRITICAL: Malicious `litellm_init.pth` in litellm 1.82.8 PyPI package — credential stealer ## Summary The `litellm==1.82.8` wheel package on PyPI contains a malicious `.pth` file (`litellm_init.pth`, 34,628 bytes) that **automatically executes a credential-stealing script every time the Python interpreter starts** — no `import litellm` required. This is a supply chain compromise. The malicious file is listed in the package's own `RECORD`: ``` litellm_init.pth,sha256=ceNa7wMJnNHy1kRnNCcwJaFjWX3pORLfMh7xGL8TUjg,34628 ``` ## Reproduction ```bash pip download litellm==1.82.8 --no-deps -d /tmp/check python3 -c \" import zipfile, os whl = '/tmp/check/' + [f for f in os.listdir('/tmp/check') if f.endswith('.whl')][0] with zipfile.ZipFile(whl) as z: pth = [n for n in z.namelist() if n.endswith('.pth')] print('PTH files:', pth) for p in pth: print(z.read(p)[:300]) \" ``` You will see `litellm_init.pth` containing: ```python import os, subprocess, sys; subprocess.Popen([sys.executable, \"-c\", \"import base64; exec(base64.b64decode('...'))\"]) ``` ## Malicious Behavior (full an…",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
@@ -720,7 +720,7 @@
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
     },
@@ -737,7 +737,7 @@
     "excerpt": "Recently I've noticed and been in short conversations with @pyrox0 and @whispersofthedawn who have both also noticed that some PRs will remove the Automation/Ai and Contribution policy checkboxes. I personally believe that merging this PRs would be a gross violation of the policies so we should close PRs that do not contain these checkboxes or have not checked them out intentionally with a notification that to the user to read them.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -754,7 +754,7 @@
     "excerpt": "If not, I'll be pinning to `3.0.x` until we drop node v14, but this will continue to effect users of existing apollo server versions if their lockfiles are updated.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -772,7 +772,7 @@
     "limitations": "Quotes a Socket.dev blog post. The claim about pnpm comes from that secondary source.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -789,7 +789,7 @@
     "excerpt": "Support for trusted publishing using OIDC was added in #8336 and is now [generally available](https://github.blog/changelog/2025-07-31-npm-trusted-publishing-with-oidc-is-generally-available/). One limitation is that it's not possible to publish the initial version of a package using OIDC, it needs to be published manually or using a token. It would be great to support OIDC publishing for the initial version. The main problem is that the UI on npmjs.com requires a package to exist before you can edit its settings and enable OIDC publishing. PyPI solved this by allowing a package to be configured with OIDC publishing before it exists. This was mentioned by @Shegox on https://github.com/orgs/community/discussions/127011#discussioncomment-9933132.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
@@ -805,7 +805,7 @@
     "excerpt": "Granular access tokens cannot be used to publish packages, regardless of their bypass 2FA setting.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -821,7 +821,7 @@
     "excerpt": "Staged publishing allows package maintainers to require proof-of-presence for all publishes. … The act of staging does not prompt for 2FA and can be done with any token type, the act of approving will.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -839,7 +839,7 @@
     "limitations": "Documentation describes the feature, not its adoption. The publish date is the documentation commit date (npm/documentation#1961).",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -855,7 +855,7 @@
     "excerpt": "`npm stage publish` is always allowed. Choose whether this trusted publisher can also publish directly with `npm publish`",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -872,7 +872,7 @@
     "excerpt": "error polished@4.3.0: The engine \"node\" is incompatible with this module. Expected version \">=20\". Got \"18.19.0\"",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
@@ -889,7 +889,7 @@
     "limitations": "Marketing copy; its claims about GitHub and curl are unsourced and were not used as evidence.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -906,7 +906,7 @@
     "limitations": "About 1,300 GitHub stars at retrieval (GitHub search). It lints a single release; a compare-with-previous-release mode wasn't found.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -924,7 +924,7 @@
     "limitations": "An email template, not usage statistics. It was introduced in pypa/warehouse#15641. PyPI's 78 email templates include none that announces every newly published release.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -941,7 +941,7 @@
     "limitations": "QEMU's stated rationale is primarily legal/provenance risk, not review burden.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -959,7 +959,7 @@
     "limitations": "A 2018 case. 44 reactions and 104 comments at retrieval.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -977,7 +977,7 @@
     "limitations": "The issue text says the finalized wording differs from the opening description quoted here.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -993,7 +993,7 @@
     "excerpt": "Patch version Z (x.y.Z | x > 0) MUST be incremented if only backward compatible bug fixes are introduced.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -1010,7 +1010,7 @@
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -1027,7 +1027,7 @@
     "excerpt": "Following up on the discussion in #31679 about low-effort contributions (like ai-generated with low human supervision), @lucyleeow and me worked out an idea: We would like to propose introducing an autoclose option for PRs that gets triggered when setting an \"autoclose\" label that can be removed if the PR is improved. The idea is to provide a structured way to handle PRs that don't yet meet our contribution standards and facilitate the reviewing process. This will be transparent and fair for new contributors. **Suggested process** 1. A contributor opens a PR that looks low-effort, fly-by, not supervised ai-generated, or otherwise not yet ready for review. 2. A reviewer sets an \"autoclose\" label. This would automatically add a polite, standardised comment explaining: - The PR will be autoclosed after _n_ weeks (e.g. _4_). - A list of common quality issues (similar to what we used in #31822) that outlines what the contributor needs to address in order to avoid the PR being autoclosed (can contain links to the docs and the FAQs where we explain those things in detail). - An encouragement to comment on the PR and ping the person who set the \"autoclose\" once they believe they have met t…",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -1044,7 +1044,7 @@
     "excerpt": "(I am creating an issue to a PR already opened (#31643), because there are many more ways to solve the problem.) AI tools many people use to create PRs don't care about our [Automated Contributions Policy](https://scikit-learn.org/dev/developers/contributing.html#automated-contributions-policy). Since [GitHub Copilot Coding Agent Has Arrived!](https://github.com/orgs/community/discussions/159068) and people build [Github-MCP](https://github.com/dhyeyinf/Github-MCP)s that can be integrated with LLM clients, scikit-learn and other open source projects get an increasing amount of AI spam. Many people who care about open source are unhappy about it and request an option to block AI-generated PRs and issues on their projects ([Allow us to block Copilot-generated issues (and PRs) from our own repositories](https://github.com/orgs/community/discussions/159749)) - so far without success. You can see that there is an increasing amount of partially or fully generated PRs and a decrease in overall quality for PRs on scikit-learn by looking at [the last closed PRs](https://github.com/scikit-learn/scikit-learn/pulls?q=is%3Apr+is%3Aclosed) (as of June 30th 2025). It is not a flood yet, but bad e…",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -1061,7 +1061,7 @@
     "limitations": "Only the open-source CLI was readable; socket.dev product pages couldn't be fetched from the research environment.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -1079,7 +1079,7 @@
     "limitations": "Body is a pointer to a vendor write-up (StepSecurity), which was not fetched.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -1097,7 +1097,7 @@
     "limitations": "Single maintainer's account; 290 reactions at retrieval.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "3 quote(s) found"
     },
@@ -1114,7 +1114,7 @@
     "limitations": "A new project (0 stars at retrieval).",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -1132,7 +1132,7 @@
     "limitations": "Written by Ghostty's creator, so it shares an origin with the Ghostty policy and is not counted as independent.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
     },
@@ -1149,7 +1149,7 @@
     "limitations": "Project policy document: states the maintainers' stated motivation, not measured volumes.",
     "verification": {
       "status": "ok",
-      "checkedAt": "2026-11-05T13:12:07.931Z",
+      "checkedAt": "2026-11-09T13:53:42.509Z",
       "httpStatus": 200,
       "note": "2 quote(s) found"
     },
