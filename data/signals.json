@@ -65,7 +65,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-05-01T23:37:50Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -107,7 +107,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-05-12T03:56:40Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -121,7 +121,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-05-20T19:36:51Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -149,7 +149,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-06-29T05:05:02Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -163,7 +163,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-07-02T11:27:01Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -177,7 +177,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-07-10T12:24:25Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -191,7 +191,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-07-15T15:52:11Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -205,7 +205,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-07-28T13:14:39Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -219,7 +219,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-08-06T19:39:46Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -261,7 +261,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-09-13T21:06:35Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -275,7 +275,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-09-15T04:02:08Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -289,7 +289,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-09-16T16:00:58Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -303,7 +303,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-09-22T00:18:39Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -317,7 +317,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-09-22T00:48:48Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -331,7 +331,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-10-01T07:54:44Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -359,7 +359,7 @@
     "engagement": 0,
     "engagementLabel": "preprint",
     "createdAt": "2026-10-20T18:22:40Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -373,7 +373,7 @@
     "engagement": 587,
     "engagementLabel": "375 reactions · 212 comments",
     "createdAt": "2016-08-02T18:14:07Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -387,7 +387,7 @@
     "engagement": 92,
     "engagementLabel": "42 reactions · 50 comments",
     "createdAt": "2017-09-19T21:53:19Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -415,7 +415,7 @@
     "engagement": 112,
     "engagementLabel": "103 reactions · 9 comments",
     "createdAt": "2025-09-01T00:17:34Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -429,7 +429,7 @@
     "engagement": 707,
     "engagementLabel": "693 reactions · 14 comments",
     "createdAt": "2025-09-15T08:39:38Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -443,7 +443,7 @@
     "engagement": 285,
     "engagementLabel": "241 reactions · 44 comments",
     "createdAt": "2025-09-16T14:04:55Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -485,7 +485,7 @@
     "engagement": 2300,
     "engagementLabel": "1634 reactions · 666 comments",
     "createdAt": "2018-11-20T21:26:01Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -513,7 +513,7 @@
     "engagement": 69,
     "engagementLabel": "39 reactions · 30 comments",
     "createdAt": "2026-03-04T14:29:23Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -569,7 +569,7 @@
     "engagement": 1605,
     "engagementLabel": "1118 reactions · 487 comments",
     "createdAt": "2026-03-24T11:48:51Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -583,7 +583,7 @@
     "engagement": 1017,
     "engagementLabel": "907 reactions · 110 comments",
     "createdAt": "2026-04-02T15:06:54Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -611,7 +611,7 @@
     "engagement": 3,
     "engagementLabel": "1 reactions · 2 comments",
     "createdAt": "2026-04-21T16:49:19Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -639,7 +639,7 @@
     "engagement": 397,
     "engagementLabel": "348 reactions · 49 comments",
     "createdAt": "2026-05-11T19:46:46Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -650,10 +650,10 @@
     "url": "https://github.com/yt-dlp/yt-dlp/issues/16766",
     "title": "[Announcement] Bun support is now limited and deprecated",
     "excerpt": "Due to foreseeable compatibility and security issues, yt-dlp's support for Bun as an [`ejs`](https://github.com/yt-dlp/ejs)-compatible JavaScript runtime is being both limited and deprecated. As of the next yt-dlp and/or ejs release, only Bun versions `1.2.11` through `1.3.14` will be supported. The rationale for this change is twofold: 1. The minimum required version is being raised from `1.0.31` to `1.2.11` because building the `ejs` package with a version earlier than `1.2.0` results in the ejs lockfile being ignored, which is a significant security concern for users when considering all of the recent npm supply chain attacks. Additionally, the support floor is being bumped to `1.2.11` instead of `1.2.0` because the `ejs` test suite cannot be run with versions of Bun earlier than `1.2.11`. 2. Bun was recently rewritten in Rust using Claude, and its development seems to have taken a turn towards being fully vibe-coded. This is alarming and disappointing for a number of reasons, and frankly it seems like a future headache that we'd prefer to avoid. We are adding a support ceiling of version `1.3.14`, as that is the last release built from the original zig codebase. Bun support wil…",
-    "engagement": 1453,
-    "engagementLabel": "1381 reactions · 72 comments",
+    "engagement": 1452,
+    "engagementLabel": "1380 reactions · 72 comments",
     "createdAt": "2026-05-20T19:40:16Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -678,10 +678,10 @@
     "url": "https://github.com/asyncapi/spec-json-schemas/issues/656",
     "title": "[SECURITY] Malicious versions published via compromised alpha branch - @asyncapi/specs@6.11.2 (latest) and 6.11.2-alpha.1",
     "excerpt": "## Summary Two malicious versions of `@asyncapi/specs` were published to npm on **2026-07-14** via a compromised `alpha` branch. The current `latest` tag points to the malicious version. This is a second, separate compromise from the same attacker who simultaneously hit the `asyncapi/generator` monorepo. The `asyncapi/spec-json-schemas` maintainers are **victims** - this is a branch write token compromise, not an insider issue. --- ## Affected Versions | Package | Version | Tag | Status | |---------|---------|-----|--------| | `@asyncapi/specs` | `6.11.2-alpha.1` | `alpha` | MALICIOUS | | `@asyncapi/specs` | `6.11.2` | `latest` | MALICIOUS - currently live | **Safe version:** `6.11.1` (published 2026-01-30, last clean version) --- ## What Happened The attacker (GitHub user ID 148100, login `invalid-email-address`) gained write access to the `alpha` branch and made **5 commits between 07:51-08:04 UTC** under the identity **\"Your Name\" / you@example.com** (unconfigured git placeholder - not any real contributor). The key injection commit is `61a930fca7241763e306e31abe4557221e84a76c` (08:04 UTC), which modified `index.js` (+26 lines prepended at top of file). The release workflow (`.g…",
-    "engagement": 16,
-    "engagementLabel": "11 reactions · 5 comments",
+    "engagement": 17,
+    "engagementLabel": "11 reactions · 6 comments",
     "createdAt": "2026-07-14T08:53:08Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "promoted",
     "provenance": "real"
   },
@@ -709,7 +709,7 @@
     "engagement": 0,
     "engagementLabel": "0 reactions · 0 comments",
     "createdAt": "2026-09-26T19:27:30Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -720,10 +720,10 @@
     "url": "https://github.com/lfortran/lfortran/issues/15162",
     "title": "How to Best Contribute to LFortran",
     "excerpt": "**The most efficient way how you can contribute to LFortran is to report good bug reports** of all the bugs that you are facing when compiling your code. We will then fix the bugs ourselves. To get your code to compile and run correctly, simply report all the bugs, we'll fix them, you run the updated version of LFortran to report again and iterate until your code works. The bottleneck is PR review and CI. So we disabled automatic CI on third-party PRs. You can still send one, but CI will not run automatically and likely we won't have time to review it or run CI, as we are reviewing and running CI on PRs that we create ourselves. We only have 20 CI job runners and we have to use them all for our PRs which we have more than we can handle at the moment. You can also help us prioritize the issues that you want to get fixed. # Good Bug Report Tell your AI agent to use our [create-mre](https://github.com/lfortran/lfortran/blob/73ed75bdee0b392e053dbceb5401946784b67d94/.agents/skills/create-mre/SKILL.md) skill to create an MRE (Minimal Reproducible Example), and report it to our issues. You can do it by hand also, and if you do it by hand, you don't even have to reduce it to absolute minim…",
-    "engagement": 10,
-    "engagementLabel": "10 reactions · 0 comments",
+    "engagement": 11,
+    "engagementLabel": "11 reactions · 0 comments",
     "createdAt": "2026-10-14T22:11:23Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -737,7 +737,7 @@
     "engagement": 0,
     "engagementLabel": "0 reactions · 0 comments",
     "createdAt": "2026-10-23T12:41:53Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -751,7 +751,7 @@
     "engagement": 1,
     "engagementLabel": "0 reactions · 1 comments",
     "createdAt": "2026-10-23T19:18:35Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -765,7 +765,7 @@
     "engagement": 0,
     "engagementLabel": "0 reactions · 0 comments",
     "createdAt": "2026-10-31T10:20:55Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -779,7 +779,7 @@
     "engagement": 27,
     "engagementLabel": "27 reactions · 0 comments",
     "createdAt": "2020-08-17T03:01:40Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -793,7 +793,7 @@
     "engagement": 409,
     "engagementLabel": "279 points · 130 comments",
     "createdAt": "2016-03-26T03:58:07Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -807,7 +807,7 @@
     "engagement": 123,
     "engagementLabel": "85 points · 38 comments",
     "createdAt": "2017-04-19T10:54:40Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -821,7 +821,7 @@
     "engagement": 806,
     "engagementLabel": "578 points · 228 comments",
     "createdAt": "2017-08-01T15:17:34Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -835,7 +835,7 @@
     "engagement": 54,
     "engagementLabel": "28 points · 26 comments",
     "createdAt": "2018-03-15T17:23:07Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -849,7 +849,7 @@
     "engagement": 484,
     "engagementLabel": "329 points · 155 comments",
     "createdAt": "2018-07-12T21:06:42Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -863,7 +863,7 @@
     "engagement": 21,
     "engagementLabel": "19 points · 2 comments",
     "createdAt": "2018-12-20T14:33:20Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -877,7 +877,7 @@
     "engagement": 61,
     "engagementLabel": "44 points · 17 comments",
     "createdAt": "2019-01-31T18:09:13Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -891,7 +891,7 @@
     "engagement": 110,
     "engagementLabel": "61 points · 49 comments",
     "createdAt": "2019-02-02T03:03:24Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -905,7 +905,7 @@
     "engagement": 7,
     "engagementLabel": "6 points · 1 comments",
     "createdAt": "2019-03-28T16:27:52Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -919,7 +919,7 @@
     "engagement": 5,
     "engagementLabel": "3 points · 2 comments",
     "createdAt": "2019-07-15T08:09:17Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -933,7 +933,7 @@
     "engagement": 715,
     "engagementLabel": "489 points · 226 comments",
     "createdAt": "2021-08-03T12:01:22Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -947,7 +947,7 @@
     "engagement": 13,
     "engagementLabel": "13 points · 0 comments",
     "createdAt": "2021-10-26T18:22:39Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -961,7 +961,7 @@
     "engagement": 46,
     "engagementLabel": "27 points · 19 comments",
     "createdAt": "2021-10-28T17:32:49Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -975,7 +975,7 @@
     "engagement": 250,
     "engagementLabel": "213 points · 37 comments",
     "createdAt": "2022-03-01T18:59:03Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -989,7 +989,7 @@
     "engagement": 11,
     "engagementLabel": "7 points · 4 comments",
     "createdAt": "2022-06-02T16:04:14Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1003,7 +1003,7 @@
     "engagement": 19,
     "engagementLabel": "11 points · 8 comments",
     "createdAt": "2008-10-01T08:55:05Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1017,7 +1017,7 @@
     "engagement": 1074,
     "engagementLabel": "754 points · 320 comments",
     "createdAt": "2022-11-02T16:39:15Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1031,7 +1031,7 @@
     "engagement": 23,
     "engagementLabel": "23 points · 0 comments",
     "createdAt": "2023-01-13T19:38:21Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1045,7 +1045,7 @@
     "engagement": 11,
     "engagementLabel": "3 points · 8 comments",
     "createdAt": "2023-02-07T15:05:43Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1073,7 +1073,7 @@
     "engagement": 7,
     "engagementLabel": "7 points · 0 comments",
     "createdAt": "2023-05-23T13:56:08Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1087,7 +1087,7 @@
     "engagement": 39,
     "engagementLabel": "23 points · 16 comments",
     "createdAt": "2023-07-03T09:03:24Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1101,7 +1101,7 @@
     "engagement": 261,
     "engagementLabel": "147 points · 114 comments",
     "createdAt": "2023-07-08T10:10:03Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1115,7 +1115,7 @@
     "engagement": 146,
     "engagementLabel": "77 points · 69 comments",
     "createdAt": "2023-09-07T15:45:04Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1143,7 +1143,7 @@
     "engagement": 146,
     "engagementLabel": "38 points · 108 comments",
     "createdAt": "2023-10-17T14:13:15Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1157,7 +1157,7 @@
     "engagement": 3,
     "engagementLabel": "3 points · 0 comments",
     "createdAt": "2023-12-14T14:50:01Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1171,7 +1171,7 @@
     "engagement": 18,
     "engagementLabel": "17 points · 1 comments",
     "createdAt": "2024-02-02T11:25:45Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1185,7 +1185,7 @@
     "engagement": 3,
     "engagementLabel": "3 points · 0 comments",
     "createdAt": "2024-02-02T13:44:36Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1227,7 +1227,7 @@
     "engagement": 1,
     "engagementLabel": "1 points · 0 comments",
     "createdAt": "2024-07-07T17:56:17Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1255,7 +1255,7 @@
     "engagement": 20,
     "engagementLabel": "14 points · 6 comments",
     "createdAt": "2024-08-14T05:43:04Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1269,7 +1269,7 @@
     "engagement": 7,
     "engagementLabel": "3 points · 4 comments",
     "createdAt": "2024-08-16T15:41:57Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1283,7 +1283,7 @@
     "engagement": 37,
     "engagementLabel": "24 points · 13 comments",
     "createdAt": "2024-09-12T03:02:44Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1297,7 +1297,7 @@
     "engagement": 1,
     "engagementLabel": "1 points · 0 comments",
     "createdAt": "2024-10-11T14:12:44Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1311,7 +1311,7 @@
     "engagement": 20,
     "engagementLabel": "15 points · 5 comments",
     "createdAt": "2024-11-12T17:46:31Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1325,7 +1325,7 @@
     "engagement": 886,
     "engagementLabel": "574 points · 312 comments",
     "createdAt": "2025-01-13T22:38:27Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1353,7 +1353,7 @@
     "engagement": 2,
     "engagementLabel": "2 points · 0 comments",
     "createdAt": "2025-04-20T05:58:16Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1367,7 +1367,7 @@
     "engagement": 4,
     "engagementLabel": "3 points · 1 comments",
     "createdAt": "2025-04-30T15:59:37Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1381,7 +1381,7 @@
     "engagement": 3,
     "engagementLabel": "3 points · 0 comments",
     "createdAt": "2025-07-16T22:01:16Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1395,7 +1395,7 @@
     "engagement": 3,
     "engagementLabel": "3 points · 0 comments",
     "createdAt": "2025-07-16T23:42:29Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1409,7 +1409,7 @@
     "engagement": 121,
     "engagementLabel": "85 points · 36 comments",
     "createdAt": "2025-09-15T23:29:40Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1423,7 +1423,7 @@
     "engagement": 393,
     "engagementLabel": "173 points · 220 comments",
     "createdAt": "2025-09-17T09:57:50Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1437,7 +1437,7 @@
     "engagement": 151,
     "engagementLabel": "96 points · 55 comments",
     "createdAt": "2025-09-21T21:19:47Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1479,7 +1479,7 @@
     "engagement": 20,
     "engagementLabel": "19 points · 1 comments",
     "createdAt": "2025-10-27T06:24:02Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1493,7 +1493,7 @@
     "engagement": 659,
     "engagementLabel": "364 points · 295 comments",
     "createdAt": "2025-10-30T00:37:33Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1507,7 +1507,7 @@
     "engagement": 23,
     "engagementLabel": "20 points · 3 comments",
     "createdAt": "2025-11-23T16:43:59Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1521,7 +1521,7 @@
     "engagement": 678,
     "engagementLabel": "420 points · 258 comments",
     "createdAt": "2025-11-27T15:36:56Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1563,7 +1563,7 @@
     "engagement": 3,
     "engagementLabel": "3 points · 0 comments",
     "createdAt": "2026-01-08T11:17:03Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1577,7 +1577,7 @@
     "engagement": 2,
     "engagementLabel": "1 points · 1 comments",
     "createdAt": "2026-01-11T15:14:28Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1633,7 +1633,7 @@
     "engagement": 1,
     "engagementLabel": "1 points · 0 comments",
     "createdAt": "2026-02-05T17:38:32Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1759,7 +1759,7 @@
     "engagement": 20,
     "engagementLabel": "18 points · 2 comments",
     "createdAt": "2026-05-12T08:23:40Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1773,7 +1773,7 @@
     "engagement": 3,
     "engagementLabel": "3 points · 0 comments",
     "createdAt": "2026-05-20T04:45:29Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1787,7 +1787,7 @@
     "engagement": 1229,
     "engagementLabel": "775 points · 454 comments",
     "createdAt": "2026-06-01T13:30:21Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1801,7 +1801,7 @@
     "engagement": 22,
     "engagementLabel": "22 points · 0 comments",
     "createdAt": "2026-06-05T15:12:54Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1815,7 +1815,7 @@
     "engagement": 29,
     "engagementLabel": "29 points · 0 comments",
     "createdAt": "2026-07-07T13:33:47Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1829,7 +1829,7 @@
     "engagement": 1,
     "engagementLabel": "1 points · 0 comments",
     "createdAt": "2026-07-10T09:35:34Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1843,7 +1843,7 @@
     "engagement": 3,
     "engagementLabel": "2 points · 1 comments",
     "createdAt": "2026-07-13T14:56:40Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1857,7 +1857,7 @@
     "engagement": 61,
     "engagementLabel": "47 points · 14 comments",
     "createdAt": "2026-07-22T00:27:35Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1885,7 +1885,7 @@
     "engagement": 11,
     "engagementLabel": "11 points · 0 comments",
     "createdAt": "2026-08-07T16:07:51Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1913,7 +1913,7 @@
     "engagement": 3,
     "engagementLabel": "3 points · 0 comments",
     "createdAt": "2026-09-08T16:43:11Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1927,7 +1927,7 @@
     "engagement": 2,
     "engagementLabel": "2 points · 0 comments",
     "createdAt": "2026-09-21T16:01:01Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1983,7 +1983,7 @@
     "engagement": 128,
     "engagementLabel": "116 votes · 12 answers",
     "createdAt": "2009-07-14T17:35:47.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -1997,7 +1997,7 @@
     "engagement": 29,
     "engagementLabel": "24 votes · 5 answers",
     "createdAt": "2012-08-09T14:33:20.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2011,7 +2011,7 @@
     "engagement": 14,
     "engagementLabel": "11 votes · 3 answers",
     "createdAt": "2012-08-18T03:38:21.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2025,7 +2025,7 @@
     "engagement": 176,
     "engagementLabel": "165 votes · 11 answers",
     "createdAt": "2009-09-29T14:20:09.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2039,7 +2039,7 @@
     "engagement": 34,
     "engagementLabel": "31 votes · 3 answers",
     "createdAt": "2013-03-05T11:56:05.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2053,7 +2053,7 @@
     "engagement": 295,
     "engagementLabel": "293 votes · 2 answers",
     "createdAt": "2015-01-11T05:54:22.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2081,7 +2081,7 @@
     "engagement": 583,
     "engagementLabel": "401 votes · 182 answers",
     "createdAt": "2008-11-11T22:14:43.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2095,7 +2095,7 @@
     "engagement": 84,
     "engagementLabel": "81 votes · 3 answers",
     "createdAt": "2015-02-13T21:59:16.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2109,7 +2109,7 @@
     "engagement": 28,
     "engagementLabel": "26 votes · 2 answers",
     "createdAt": "2015-09-19T10:37:45.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2123,7 +2123,7 @@
     "engagement": 109,
     "engagementLabel": "98 votes · 11 answers",
     "createdAt": "2015-11-11T20:58:13.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2137,7 +2137,7 @@
     "engagement": 14,
     "engagementLabel": "11 votes · 3 answers",
     "createdAt": "2010-08-27T11:29:14.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2151,7 +2151,7 @@
     "engagement": 40,
     "engagementLabel": "36 votes · 4 answers",
     "createdAt": "2010-09-13T18:44:32.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2165,7 +2165,7 @@
     "engagement": 33,
     "engagementLabel": "29 votes · 4 answers",
     "createdAt": "2017-03-28T04:46:42.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2179,7 +2179,7 @@
     "engagement": 46,
     "engagementLabel": "42 votes · 4 answers",
     "createdAt": "2017-05-04T18:58:04.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2193,7 +2193,7 @@
     "engagement": 68,
     "engagementLabel": "66 votes · 2 answers",
     "createdAt": "2017-06-25T08:12:00.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2207,7 +2207,7 @@
     "engagement": 40,
     "engagementLabel": "38 votes · 2 answers",
     "createdAt": "2017-07-03T05:53:13.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2221,7 +2221,7 @@
     "engagement": 84,
     "engagementLabel": "72 votes · 12 answers",
     "createdAt": "2009-01-17T23:04:44.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2235,7 +2235,7 @@
     "engagement": 56,
     "engagementLabel": "52 votes · 4 answers",
     "createdAt": "2019-02-01T07:45:35.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2249,7 +2249,7 @@
     "engagement": 103,
     "engagementLabel": "96 votes · 7 answers",
     "createdAt": "2019-03-18T21:57:00.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2263,7 +2263,7 @@
     "engagement": 8,
     "engagementLabel": "7 votes · 1 answers",
     "createdAt": "2019-03-21T17:07:19.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2277,7 +2277,7 @@
     "engagement": 55,
     "engagementLabel": "51 votes · 4 answers",
     "createdAt": "2019-12-24T17:42:14.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2291,7 +2291,7 @@
     "engagement": 2,
     "engagementLabel": "1 votes · 1 answers",
     "createdAt": "2020-11-15T14:16:08.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2305,7 +2305,7 @@
     "engagement": 2,
     "engagementLabel": "1 votes · 1 answers",
     "createdAt": "2021-03-03T23:30:40.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2319,7 +2319,7 @@
     "engagement": 3,
     "engagementLabel": "1 votes · 2 answers",
     "createdAt": "2021-10-20T12:20:04.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2333,7 +2333,7 @@
     "engagement": 6,
     "engagementLabel": "5 votes · 1 answers",
     "createdAt": "2022-05-16T20:57:33.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2347,7 +2347,7 @@
     "engagement": 2,
     "engagementLabel": "2 votes · 0 answers",
     "createdAt": "2023-11-29T14:49:49.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2375,7 +2375,7 @@
     "engagement": 18,
     "engagementLabel": "17 votes · 1 answers",
     "createdAt": "2024-06-27T08:10:35.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2403,7 +2403,7 @@
     "engagement": 1,
     "engagementLabel": "0 votes · 1 answers",
     "createdAt": "2025-09-24T07:43:36.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2417,7 +2417,7 @@
     "engagement": 2,
     "engagementLabel": "1 votes · 1 answers",
     "createdAt": "2026-02-07T10:25:09.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2459,7 +2459,7 @@
     "engagement": 92,
     "engagementLabel": "84 votes · 8 answers",
     "createdAt": "2012-01-10T10:34:30.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2473,7 +2473,7 @@
     "engagement": 54,
     "engagementLabel": "49 votes · 5 answers",
     "createdAt": "2012-02-09T20:28:42.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2487,7 +2487,7 @@
     "engagement": 76,
     "engagementLabel": "70 votes · 6 answers",
     "createdAt": "2012-03-01T08:32:07.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   },
@@ -2501,7 +2501,7 @@
     "engagement": 33,
     "engagementLabel": "31 votes · 2 answers",
     "createdAt": "2009-06-10T19:19:53.000Z",
-    "retrievedAt": "2026-11-09T13:53:25.092Z",
+    "retrievedAt": "2026-11-12T13:45:17.668Z",
     "triage": "new",
     "provenance": "real"
   }
