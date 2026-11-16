@@ -1915,6 +1915,75 @@
     "provenance": "real"
   },
   {
+    "id": "run-20261116-agent-wp-orphaned-1",
+    "themeId": "theme-wp-orphaned-plugin-demand",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-16T14:05:00Z",
+    "completedAt": "2026-11-16T14:28:56Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "Web searches on abandoned plugins, plugin-business revenue and directory staleness"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "Read 6 of 8 source pages; checked that the WordPress.org plugin and download-stats APIs work"
+      },
+      {
+        "name": "invent",
+        "status": "ok",
+        "notes": "One idea: maintained freemium replacements"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "4 objections, 9 criteria scored"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Pre-registered exp-wp-orphaned-demand"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "New area brief; release-breaks area paused at the owner's request"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 8,
+      "sourcesCited": 6,
+      "problemsFound": 1,
+      "ideasGenerated": 1,
+      "ideasAdvanced": 1,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "abandoned WordPress plugin many active installs opportunity premium version revenue",
+      "small WordPress plugin business monthly revenue indie developer freemium 2025",
+      "wordpress.org plugin closed \"no longer available\" users looking for alternative support forum",
+      "percentage of WordPress plugins not updated in two years statistics directory"
+    ],
+    "errors": [
+      "wordfence.com returned a bot challenge (HTTP 202, empty) and freemius.com refused (HTTP 403); neither is cited."
+    ],
+    "limitations": [
+      "Revenue benchmarks are self-reported case studies (2016–2024), not a market survey.",
+      "Only one candidate idea was generated; the area was chosen by the director, not by the owner from alternatives."
+    ],
+    "usage": {
+      "note": "Interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  {
     "id": "run-20261116-exp-npm-structural-breaks",
     "themeId": "theme-npm-release-breaking-changes",
     "mode": "agent-session",

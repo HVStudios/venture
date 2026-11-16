@@ -40,9 +40,9 @@
       "semver violation",
       "breaking change patch release"
     ],
-    "status": "active",
+    "status": "paused",
     "createdAt": "2026-11-04",
-    "notes": "Chosen by the owner from three VENTURE-proposed candidates, with an explicit practical-value bar: ideas should be buildable, open-sourceable tools.",
+    "notes": "Chosen by the owner from three VENTURE-proposed candidates, with an explicit practical-value bar: ideas should be buildable, open-sourceable tools. Paused 2026-11-16: desk research concluded; the owner put the upstream proposal to publint on hold for later.",
     "provenance": "real"
   },
   {
@@ -59,6 +59,21 @@
     "status": "active",
     "createdAt": "2026-11-03",
     "notes": "First research session completed (run-20261103-agent-supply-chain-1).",
+    "provenance": "real"
+  },
+  {
+    "id": "theme-wp-orphaned-plugin-demand",
+    "name": "Unserved demand left by abandoned WordPress plugins",
+    "description": "Popular WordPress plugins that nobody maintains but sites still install, and whether a maintained freemium replacement could earn a small recurring income.",
+    "mode": "focused",
+    "keywords": [
+      "abandoned wordpress plugin",
+      "plugin not updated",
+      "alternative to plugin"
+    ],
+    "status": "active",
+    "createdAt": "2026-11-16",
+    "notes": "Opened after the owner asked for areas with a small but real money story: not a big business, but something that could earn some revenue.",
     "provenance": "real"
   }
 ]

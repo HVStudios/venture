@@ -261,6 +261,22 @@
     "provenance": "real"
   },
   {
+    "id": "src-cozmoslabs-pms-revenue",
+    "url": "https://www.cozmoslabs.com/lessons-learned-launching-free-membership-plugin/",
+    "title": "From 0 to $4000+/month with a new WordPress plugin",
+    "publisher": "Cozmoslabs",
+    "publishedAt": "2016-09-27",
+    "retrievedAt": "2026-11-16T14:28:56Z",
+    "sourceType": "blog",
+    "originId": "origin-cozmoslabs-pms",
+    "excerpt": "The first month after launch bought in a little over 900$. … The free version has reached 40K downloads, with 4000+ active installs. … Switching from a paid add-ons model to a paid versioning one, increased our monthly revenue by 30%.",
+    "limitations": "A vendor's self-reported figures from 2016. A success story, so survivorship bias applies.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-curl-contribute-ai",
     "url": "https://raw.githubusercontent.com/curl/curl/master/docs/CONTRIBUTE.md",
     "title": "curl: Contributing (On AI use in curl)",
@@ -588,6 +604,22 @@
     "provenance": "real"
   },
   {
+    "id": "src-flippa-wpgetapi-sale",
+    "url": "https://flippa.com/blog/wordpress-plugin-sells-for-six-figures-on-flippa/",
+    "title": "WordPress Plugin Gem Nets Six Figures in Flippa Sale",
+    "publisher": "Flippa",
+    "publishedAt": "2024-06-14",
+    "retrievedAt": "2026-11-16T14:28:56Z",
+    "sourceType": "blog",
+    "originId": "origin-flippa-wpgetapi",
+    "excerpt": "By the time of sale, the plugin had around 6,000 active installs, with about 500 to 600 active paid users generating thousands in monthly recurring revenue.",
+    "limitations": "A marketplace's promotional case study. Exact revenue not stated.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-floating-ui-breaking-minor",
     "url": "https://github.com/floating-ui/floating-ui/issues/218",
     "title": "floating-ui: Breaking changes in minor releases (#218)",
@@ -720,6 +752,22 @@
       "checkedAt": "2026-11-12T13:45:37.950Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-leow-carrd-plugins",
+    "url": "https://jasonleow.substack.com/p/the-good-the-bad-and-the-old",
+    "title": "The good, the bad & the old",
+    "publisher": "Jason Leow (newsletter)",
+    "publishedAt": "2023-07-08",
+    "retrievedAt": "2026-11-16T14:28:56Z",
+    "sourceType": "blog",
+    "originId": "origin-leow-carrd",
+    "excerpt": "Some good news – it’s been 4 months since I first crossed the $1,000 monthly revenue milestone. … Plugins continue to sell, but not at a volume that can help me reach my goal of $5k/m soon.",
+    "limitations": "About plugins for the Carrd site builder, not WordPress. Self-reported figures.",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },
@@ -1149,6 +1197,22 @@
     "provenance": "real"
   },
   {
+    "id": "src-techcrunch-essential-plugin-backdoor",
+    "url": "https://techcrunch.com/2026/04/14/someone-planted-backdoors-in-dozens-of-wordpress-plugins-used-in-thousands-of-websites/",
+    "title": "Someone planted backdoors in dozens of WordPress plug-ins used in thousands of websites",
+    "publisher": "TechCrunch (Zack Whittaker)",
+    "publishedAt": "2026-04-14",
+    "retrievedAt": "2026-11-16T14:28:56Z",
+    "sourceType": "news",
+    "originId": "origin-essential-plugin-backdoor-2026",
+    "excerpt": "The backdoor was discovered after a new corporate owner bought these plug-ins. … But Ginder warned that WordPress users are not notified of any plug-ins’ change in ownership, exposing users to potential takeover attacks by their new owners.",
+    "limitations": "A single incident, reported from one researcher's findings.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-tldraw-contributions-policy",
     "url": "https://github.com/tldraw/tldraw/issues/7695",
     "title": "tldraw: Contributions policy (issue #7695)",
@@ -1198,6 +1262,38 @@
       "checkedAt": "2026-11-12T13:45:37.950Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-wporg-defunct-plugin-alternative",
+    "url": "https://wordpress.org/support/?p=3343304",
+    "title": "Alternative for this defunct plugin",
+    "publisher": "WordPress.org support forums",
+    "publishedAt": "2013-01-08",
+    "retrievedAt": "2026-11-16T14:28:56Z",
+    "sourceType": "forum",
+    "originId": "origin-wporg-defunct-thread",
+    "excerpt": "Is this plugin defuncted at this point? If so, is there a viable alternative?",
+    "limitations": "One short thread from 2013 (date from the page metadata). Anecdotal.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-wptavern-half-not-updated",
+    "url": "https://wptavern.com/nearly-half-of-the-wordpress-plugins-in-the-directory-are-not-updated-after-two-years",
+    "title": "Nearly Half of the WordPress Plugins in the Directory Are Not Updated After Two Years",
+    "publisher": "WP Tavern (Jeff Chandler)",
+    "publishedAt": "2015-11-20",
+    "retrievedAt": "2026-11-16T14:28:56Z",
+    "sourceType": "news",
+    "originId": "origin-wptavern-2015-plugin-updates",
+    "excerpt": "According to the data, about 22K plugins have been updated in the last 24 months representing a little more than half the directory. This means that approximately half of the plugins in the directory are displaying a notice that the plugin hasn’t been updated in two years. … Sorting plugins by number of updates might help although there might be some plugins that are still working fine after two years without updates.",
+    "limitations": "From 2015, so the directory has changed since then. The figure comes from a third-party analysis. The last quote is a reader comment.",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },

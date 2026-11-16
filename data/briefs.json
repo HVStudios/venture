@@ -274,7 +274,7 @@
     },
     "nextSteps": [
       {
-        "text": "Owner decision: may VENTURE propose a removal-rules 'compare with last release' check to the publint maintainers? Contacting people needs authorization.",
+        "text": "On hold (owner, 2026-11-16): whether VENTURE may propose a removal-rules 'compare with last release' check to the publint maintainers. Contacting people needs authorization.",
         "kind": "owner-action",
         "issue": 10
       },
@@ -283,8 +283,8 @@
         "kind": "experiment"
       }
     ],
-    "updatedAt": "2026-11-16T09:55:44Z",
-    "updatedInRun": "run-20261116-agent-release-breaks-4",
+    "updatedAt": "2026-11-16T14:28:56Z",
+    "updatedInRun": "run-20261116-agent-wp-orphaned-1",
     "author": "research director (Claude Code session)",
     "provenance": "real"
   },
@@ -419,6 +419,71 @@
     ],
     "updatedAt": "2026-11-04T09:25:59Z",
     "updatedInRun": "run-20261104-exp-npm-publishing-practices",
+    "author": "research director (Claude Code session)",
+    "provenance": "real"
+  },
+  {
+    "id": "brief-wp-orphaned-plugin-demand",
+    "themeId": "theme-wp-orphaned-plugin-demand",
+    "researchQuestion": "Thousands of WordPress sites still run, and keep installing, plugins that nobody maintains anymore. Is there demand left unserved, where a small, maintained replacement plugin could earn a modest recurring income?",
+    "whyItMatters": "Abandoned plugins leave site owners exposed to security problems and breakage, and many go looking for a replacement. The WordPress.org directory gives free distribution, and the freemium model (free plugin, paid Pro tier) is a proven way for very small developers to earn some money.",
+    "subQuestions": [
+      "How many popular plugins are abandoned but still being installed?",
+      "For those, does a maintained alternative already exist?",
+      "In the gaps, do people pay for comparable plugins, and how much?",
+      "Could VENTURE build a credible replacement for one niche?"
+    ],
+    "findings": [
+      {
+        "id": "f1",
+        "statement": "Abandonment is common: in 2015 about half of directory plugins hadn't been updated in two years. Owners of defunct plugins look for alternatives, but some stale plugins keep working fine.",
+        "strength": "Weak to moderate. Old data and anecdotes; the current rate is being measured.",
+        "evidenceIds": [
+          "ev-wp-01",
+          "ev-wp-02",
+          "ev-wp-03"
+        ],
+        "epistemic": "fact"
+      },
+      {
+        "id": "f2",
+        "statement": "Small freemium plugins do make money. Case studies report about $900 in a new plugin's first month (4,000+ free installs), and about 1 in 10 free users paying (500–600 of 6,000). Others plateau around $1,000 a month.",
+        "strength": "Weak. Self-reported, mostly old success stories; useful only as rough benchmarks.",
+        "evidenceIds": [
+          "ev-wp-05",
+          "ev-wp-06",
+          "ev-wp-07"
+        ],
+        "epistemic": "fact"
+      },
+      {
+        "id": "f3",
+        "statement": "Taking over or buying an abandoned plugin is risky and distrusted: buying plugins has been used to plant backdoors, and users aren't told when ownership changes. A replacement should be a new plugin under its own name.",
+        "strength": "Moderate. A documented 2026 incident.",
+        "evidenceIds": [
+          "ev-wp-04"
+        ],
+        "epistemic": "inference"
+      }
+    ],
+    "uncertainties": [
+      "Whether abandoned plugins still being installed actually lack a maintained alternative (being measured).",
+      "Whether users of abandoned plugins pay for anything: many may be neglected sites.",
+      "Revenue benchmarks are old and self-reported."
+    ],
+    "nextSteps": [
+      {
+        "text": "Scan the 10,000 most popular plugins for abandoned ones still being installed, then check the top 10 by hand for maintained alternatives (pre-registered).",
+        "kind": "experiment",
+        "experimentId": "exp-wp-orphaned-demand"
+      },
+      {
+        "text": "If gaps exist, profile the top niches (paid competitors, pricing, support complaints) before building anything.",
+        "kind": "research"
+      }
+    ],
+    "updatedAt": "2026-11-16T14:28:56Z",
+    "updatedInRun": "run-20261116-agent-wp-orphaned-1",
     "author": "research director (Claude Code session)",
     "provenance": "real"
   }

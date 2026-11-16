@@ -1444,5 +1444,115 @@
     ],
     "competitorIds": [],
     "provenance": "real"
+  },
+  {
+    "id": "ev-wp-01",
+    "claim": "In 2015 about half of WordPress.org directory plugins had not been updated in two years.",
+    "sourceId": "src-wptavern-half-not-updated",
+    "quote": "This means that approximately half of the plugins in the directory are displaying a notice that the plugin hasn’t been updated in two years.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "context": "2015 data; the experiment re-measures this for popular plugins.",
+    "problemIds": [
+      "prob-sites-depend-on-abandoned-plugins"
+    ],
+    "ideaIds": [],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-wp-02",
+    "claim": "Some stale plugins keep working fine, so 'not updated' doesn't always mean users need a replacement.",
+    "sourceId": "src-wptavern-half-not-updated",
+    "quote": "Sorting plugins by number of updates might help although there might be some plugins that are still working fine after two years without updates.",
+    "stance": "contradicts",
+    "epistemic": "inference",
+    "context": "A reader comment.",
+    "problemIds": [
+      "prob-sites-depend-on-abandoned-plugins"
+    ],
+    "ideaIds": [
+      "idea-wp-maintained-replacement-plugin"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-wp-03",
+    "claim": "Site owners whose plugin went defunct look for a maintained alternative.",
+    "sourceId": "src-wporg-defunct-plugin-alternative",
+    "quote": "If so, is there a viable alternative?",
+    "stance": "supports",
+    "epistemic": "fact",
+    "context": "One anecdotal thread.",
+    "problemIds": [
+      "prob-sites-depend-on-abandoned-plugins"
+    ],
+    "ideaIds": [
+      "idea-wp-maintained-replacement-plugin"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-wp-04",
+    "claim": "Buying established plugins and changing their code has been used to attack sites, and users aren't told when ownership changes. Taking over abandoned plugins carries trust and security risk; building a fresh replacement avoids it.",
+    "sourceId": "src-techcrunch-essential-plugin-backdoor",
+    "quote": "But Ginder warned that WordPress users are not notified of any plug-ins’ change in ownership, exposing users to potential takeover attacks by their new owners.",
+    "stance": "context",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-sites-depend-on-abandoned-plugins"
+    ],
+    "ideaIds": [
+      "idea-wp-maintained-replacement-plugin"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-wp-05",
+    "claim": "A new freemium WordPress plugin earned about $900 in its first month, with 4,000+ active installs of the free version at the time of the report (2016).",
+    "sourceId": "src-cozmoslabs-pms-revenue",
+    "quote": "The free version has reached 40K downloads, with 4000+ active installs.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "context": "Self-reported success story; survivorship bias.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-wp-maintained-replacement-plugin"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-wp-06",
+    "claim": "A free WordPress plugin with about 6,000 active installs had 500 to 600 paying users (roughly 1 in 10) when sold.",
+    "sourceId": "src-flippa-wpgetapi-sale",
+    "quote": "By the time of sale, the plugin had around 6,000 active installs, with about 500 to 600 active paid users generating thousands in monthly recurring revenue.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "context": "Promotional case study.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-wp-maintained-replacement-plugin"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-wp-07",
+    "claim": "Small platform plugin businesses can plateau around $1,000 a month: niche demand caps sales.",
+    "sourceId": "src-leow-carrd-plugins",
+    "quote": "Plugins continue to sell, but not at a volume that can help me reach my goal of $5k/m soon.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "context": "Carrd plugins, not WordPress.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-wp-maintained-replacement-plugin"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
   }
 ]
