@@ -754,6 +754,13 @@
         "criticality": "medium",
         "status": "untested",
         "evidenceIds": []
+      },
+      {
+        "id": "a4",
+        "text": "The structural-only rule set (no engine-range rule) is precise on packages it wasn't tuned on (≥ 70% of audited flags genuine)",
+        "criticality": "high",
+        "status": "untested",
+        "evidenceIds": []
       }
     ],
     "risks": [
@@ -863,7 +870,7 @@
     },
     "createdInRun": "run-20261104-agent-release-breaks-1",
     "createdAt": "2026-11-04T13:57:28Z",
-    "updatedAt": "2026-11-04T14:05:01.606Z",
+    "updatedAt": "2026-11-16T09:46:58Z",
     "provenance": "real"
   },
   {
