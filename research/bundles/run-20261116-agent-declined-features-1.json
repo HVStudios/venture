@@ -1,0 +1,519 @@
+{
+  "run": {
+    "id": "run-20261116-agent-declined-features-1",
+    "themeId": "theme-declined-feature-requests",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-16T14:49:08Z",
+    "completedAt": "2026-11-16T14:49:08Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "Probe searches of GitHub 'not planned' issues and offers to pay"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "Read 3 READMEs on paid and free add-ons for developer tools"
+      },
+      {
+        "name": "invent",
+        "status": "ok",
+        "notes": "One idea: paid add-ons for declined features"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "3 objections, 9 criteria scored"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Pre-registered exp-declined-feature-requests"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "New area brief"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 5,
+      "sourcesCited": 4,
+      "problemsFound": 1,
+      "ideasGenerated": 1,
+      "ideasAdvanced": 1,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "GitHub issue search: is:issue is:closed reason:\"not planned\" stars:>10000 (the stars qualifier is ignored for issues)",
+      "repo:microsoft/vscode and repo:vercel/next.js closed as not planned, by upvotes",
+      "\"would pay for\" and \"happy to pay\" in comments of issues closed as not planned",
+      "READMEs: sidekiq, vscode-gitlens, refined-github, kitty"
+    ],
+    "errors": [
+      "GitHub's phrase search for offers to pay returned near-identical results for different phrases, so it isn't reliable; the experiment reads the threads instead."
+    ],
+    "limitations": [
+      "Money evidence is thin: three READMEs, no revenue figures.",
+      "Start time not recorded during the session; startedAt is set to the completion time."
+    ],
+    "usage": {
+      "note": "Interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [
+    {
+      "id": "theme-declined-feature-requests",
+      "name": "Declined feature requests in popular developer tools",
+      "description": "Highly upvoted feature requests that popular developer tools have declined, and whether a small paid add-on could serve the people who asked.",
+      "mode": "focused",
+      "keywords": [
+        "feature request not planned",
+        "out of scope feature request",
+        "would pay for this feature"
+      ],
+      "status": "active",
+      "createdAt": "2026-11-16",
+      "notes": "Chosen by the owner from three VENTURE-proposed directions, with the aim of a small but real money story (not WordPress).",
+      "provenance": "real"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-sidekiq-readme",
+      "url": "https://github.com/sidekiq/sidekiq/blob/main/README.md",
+      "title": "Sidekiq README",
+      "publisher": "Sidekiq (Contributed Systems)",
+      "retrievedAt": "2026-11-16T14:47:57Z",
+      "sourceType": "docs",
+      "originId": "origin-sidekiq",
+      "excerpt": "I also sell Sidekiq Pro and Sidekiq Enterprise, extensions to Sidekiq … Sidekiq Pro and Sidekiq Enterprise customers get private email support.",
+      "limitations": "The paid extensions are sold by the tool's own author, not by a third party.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-gitlens-readme",
+      "url": "https://github.com/gitkraken/vscode-gitlens/blob/main/README.md",
+      "title": "GitLens README",
+      "publisher": "GitKraken",
+      "retrievedAt": "2026-11-16T14:47:57Z",
+      "sourceType": "docs",
+      "originId": "origin-gitlens",
+      "excerpt": "GitLens Community is free and open-source … several Pro features, the Commit Graph among them, are free on public repos.",
+      "limitations": "A company-backed extension, not an indie add-on.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-refined-github-readme",
+      "url": "https://github.com/refined-github/refined-github/blob/main/readme.md",
+      "title": "Refined GitHub README",
+      "publisher": "Refined GitHub (open source)",
+      "retrievedAt": "2026-11-16T14:47:57Z",
+      "sourceType": "docs",
+      "originId": "origin-refined-github",
+      "excerpt": "We use GitHub a lot and notice many annoyances we'd like to fix. Our hope is that GitHub will notice and implement some of these much-needed improvements.",
+      "limitations": "Says nothing about the number of users or revenue.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-vscode-306502",
+      "url": "https://github.com/microsoft/vscode/issues/306502",
+      "title": "Feature Request: Sync GitHub Copilot Chat History Across Devices",
+      "publisher": "GitHub (microsoft/vscode issues)",
+      "retrievedAt": "2026-11-16T14:49:08Z",
+      "publishedAt": "2026-03-30",
+      "sourceType": "issue-tracker",
+      "originId": "origin-vscode-306502",
+      "excerpt": "That issue was closed as \"not planned / out-of-scope\" and the repository was archived on March 23, 2026 with a note to redirect feedback here. Given the significant community interest (79 👍 / 120 ❤️) and continued activity up until archival, I'm opening this issue to carry the discussion forward.",
+      "limitations": "One request; seen in a probe search before pre-registration. Its own thread was also closed as not planned (87 upvotes, labelled out-of-scope).",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-df-01",
+      "claim": "Paid extensions to a free open-source developer tool can be a business: Sidekiq's author sells Pro and Enterprise extensions, with support.",
+      "sourceId": "src-sidekiq-readme",
+      "quote": "Sidekiq Pro and Sidekiq Enterprise customers get private email support.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-paid-addon-for-declined-feature"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Sold by the tool's own author, who controls the core."
+    },
+    {
+      "id": "ev-df-02",
+      "claim": "A popular editor extension runs a free tier plus paid Pro features.",
+      "sourceId": "src-gitlens-readme",
+      "quote": "several Pro features, the Commit Graph among them, are free on public repos.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-paid-addon-for-declined-feature"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Company-backed."
+    },
+    {
+      "id": "ev-df-03",
+      "claim": "A widely used add-on exists purely to fix annoyances a platform won't fix, which shows the gap is real. But it's free and sponsor-funded, which suggests users expect such add-ons for free.",
+      "sourceId": "src-refined-github-readme",
+      "quote": "We use GitHub a lot and notice many annoyances we'd like to fix.",
+      "stance": "contradicts",
+      "epistemic": "inference",
+      "problemIds": [
+        "prob-dev-tools-decline-wanted-features"
+      ],
+      "ideaIds": [
+        "idea-paid-addon-for-declined-feature"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-df-04",
+      "claim": "Companion tools aim to fill gaps until the platform itself implements them, so their value can vanish if it does.",
+      "sourceId": "src-refined-github-readme",
+      "quote": "Our hope is that GitHub will notice and implement some of these much-needed improvements.",
+      "stance": "context",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-dev-tools-decline-wanted-features"
+      ],
+      "ideaIds": [
+        "idea-paid-addon-for-declined-feature"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-df-05",
+      "claim": "A feature request with about 200 reactions was closed as out of scope, and users reopened it elsewhere; the replacement was closed as not planned too.",
+      "sourceId": "src-vscode-306502",
+      "quote": "That issue was closed as \"not planned / out-of-scope\" and the repository was archived on March 23, 2026 with a note to redirect feedback here.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-dev-tools-decline-wanted-features"
+      ],
+      "ideaIds": [
+        "idea-paid-addon-for-declined-feature"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    }
+  ],
+  "problems": [
+    {
+      "id": "prob-dev-tools-decline-wanted-features",
+      "title": "Popular developer tools decline features many users want",
+      "statement": "Maintainers of popular developer tools close many well-supported feature requests as 'not planned' or 'out of scope', often for good reasons. The users who asked are left with workarounds, and some say they would pay for the feature.",
+      "themeIds": [
+        "theme-declined-feature-requests"
+      ],
+      "affectedUsers": "Developers and teams using popular open-source and commercial developer tools",
+      "severityNote": "Low to moderate per request, but some requests gather hundreds of upvotes.",
+      "frequencyNote": "Thousands of issues closed as 'not planned' in large repositories (37,000 in VS Code alone, all kinds). Feature-request share being measured.",
+      "status": "investigating",
+      "discoveredInRun": "run-20261116-agent-declined-features-1",
+      "firstSeen": "2026-11-16T14:47:57Z",
+      "lastUpdated": "2026-11-16T14:47:57Z",
+      "provenance": "real"
+    }
+  ],
+  "competitors": [
+    {
+      "id": "comp-free-companion-addons",
+      "name": "Free companion add-ons (e.g. Refined GitHub)",
+      "url": "https://github.com/refined-github/refined-github",
+      "kind": "open-source",
+      "description": "Free, often sponsor-funded browser extensions, editor extensions and wrappers that add features a platform declined.",
+      "strengths": [
+        "Free",
+        "Established in some niches"
+      ],
+      "weaknesses": [
+        "Depend on volunteer time",
+        "Not every declined request has one (being measured)"
+      ],
+      "sourceIds": [
+        "src-refined-github-readme"
+      ],
+      "provenance": "real"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "idea-paid-addon-for-declined-feature",
+      "title": "Paid add-ons for features popular developer tools decline",
+      "summary": "Find highly upvoted feature requests that a popular developer tool has explicitly declined, but that could be built on its extension API or as a companion tool. Build the best one as a small add-on, with a free tier and a cheap paid tier.",
+      "problemIds": [
+        "prob-dev-tools-decline-wanted-features"
+      ],
+      "themeIds": [
+        "theme-declined-feature-requests"
+      ],
+      "targetUsers": "Users of a popular developer tool who upvoted a declined request",
+      "solution": "A focused extension, plugin, wrapper CLI or companion app that delivers one declined feature without forking the tool. It's distributed through the tool's own extension marketplace or npm, with a one-time or small subscription price for the paid tier.",
+      "competitorIds": [
+        "comp-free-companion-addons"
+      ],
+      "differentiation": "Starts from demand that is publicly counted (upvotes) and that the maintainers have said they won't meet, so the core tool is unlikely to compete.",
+      "feasibility": "Medium. Depends on the tool's extension API. A single add-on is a small project, but marketplace publishing and payments need the owner's accounts.",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "Among highly upvoted declined feature requests in popular developer tools, at least 5 of 20 sampled are buildable as an add-on and not already served",
+          "criticality": "high",
+          "status": "untested",
+          "evidenceIds": []
+        },
+        {
+          "id": "a2",
+          "text": "Some users of those requests would pay for an add-on (offers to pay appear in the threads)",
+          "criticality": "high",
+          "status": "untested",
+          "evidenceIds": []
+        },
+        {
+          "id": "a3",
+          "text": "The tool's maintainers won't later build the feature themselves or block the add-on",
+          "criticality": "medium",
+          "status": "untested",
+          "evidenceIds": []
+        }
+      ],
+      "risks": [
+        "Users expect developer add-ons to be free (Refined GitHub is sponsor-funded)",
+        "The tool may change its extension API or ship the feature after all",
+        "Upvotes don't translate into paying customers",
+        "Each opportunity is tied to one platform"
+      ],
+      "nextSteps": [
+        "Run exp-declined-feature-requests",
+        "If opportunities exist, profile the best one: size of the tool's user base, existing workarounds, and whether threads show offers to pay"
+      ],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "Developer add-ons are usually free; asking money for one may fail.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-df-03"
+          ],
+          "response": "Partly countered by paid extensions such as Sidekiq Pro and GitLens Pro. The experiment records offers to pay as a secondary signal.",
+          "status": "open"
+        },
+        {
+          "id": "obj-2",
+          "text": "Maintainers usually decline features for good reasons (complexity, scope), which may also make them hard to build as add-ons.",
+          "severity": "major",
+          "evidenceIds": [],
+          "response": "The review checks buildability as an add-on explicitly.",
+          "status": "open"
+        },
+        {
+          "id": "obj-3",
+          "text": "If the platform later builds the feature, the add-on loses its value.",
+          "severity": "minor",
+          "evidenceIds": [
+            "ev-df-04"
+          ],
+          "response": "Only requests explicitly declined count, which lowers this risk.",
+          "status": "accepted"
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 2,
+            "rationale": "Annoyances more than blockers, usually."
+          },
+          "frequency": {
+            "score": 4,
+            "rationale": "Declined requests are plentiful in large projects."
+          },
+          "userValue": {
+            "score": 3,
+            "rationale": "Clear for the requesters; unknown beyond them."
+          },
+          "competitiveGap": {
+            "score": 3,
+            "rationale": "Being measured per request."
+          },
+          "differentiation": {
+            "score": 2,
+            "rationale": "Easy to copy once visible."
+          },
+          "feasibility": {
+            "score": 3,
+            "rationale": "Depends on each tool's extension API."
+          },
+          "costComplexity": {
+            "score": 4,
+            "rationale": "A single add-on is small."
+          },
+          "userAccess": {
+            "score": 4,
+            "rationale": "The upvoters are visible and the tool's marketplace is the channel."
+          },
+          "validationCost": {
+            "score": 5,
+            "rationale": "Measurable for $0 from GitHub data."
+          }
+        },
+        "assessedAt": "2026-11-16T14:47:57Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "advanced",
+      "statusRationale": "Advanced to a cheap test. Demand is publicly counted, the core tool has said it won't compete, paid extensions to developer tools exist, and whether real gaps exist can be measured for $0.",
+      "relatedIdeaIds": [],
+      "epistemic": "hypothesis",
+      "practical": {
+        "adopters": "Users of one popular developer tool who want a feature its maintainers declined",
+        "distribution": "paid-product",
+        "smallestUsefulVersion": "One add-on (extension, plugin or wrapper) delivering one declined, highly upvoted feature, with a free tier and a paid tier.",
+        "buildableByVenture": true,
+        "buildNote": "VENTURE can find the opportunities and write and test the add-on. Publishing it in a marketplace and taking payments need the owner's accounts and approval.",
+        "monetization": "A one-time licence or small subscription (roughly $5–15) for the paid tier. Small: realistically pocket money to a few hundred dollars a month, unless a request has a large, paying audience."
+      },
+      "createdInRun": "run-20261116-agent-declined-features-1",
+      "createdAt": "2026-11-16T14:47:57Z",
+      "updatedAt": "2026-11-16T14:47:57Z",
+      "provenance": "real"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "exp-declined-feature-requests",
+      "ideaId": "idea-paid-addon-for-declined-feature",
+      "assumptionIds": [
+        "a1",
+        "a2"
+      ],
+      "title": "Are declined feature requests in popular developer tools buildable, unserved add-on opportunities?",
+      "hypothesis": "Of 20 sampled feature requests (≥ 20 upvotes, closed as not planned in the past 3 years, in developer-tool repositories with ≥ 10,000 stars), at least 5 were explicitly declined, could be built as a separate add-on, and have no maintained third-party add-on.",
+      "uncertainty": "Whether declined requests leave real, buildable gaps (a1). Willingness to pay (a2) is measured only as a secondary signal: offers to pay in the threads.",
+      "procedure": [
+        "Pre-registered 2026-11-16 before the population was collected. Probe searches beforehand only tested the API: issue search across GitHub, VS Code and Next.js 'not planned' issues, and two phrase searches for offers to pay. They surfaced a handful of issues (e.g. zed-industries/zed#5120), but the sample is drawn by fixed seed afterwards.",
+        "Repositories: GitHub topics developer-tools, cli, terminal, editor, testing, devops; ≥ 10,000 stars; not archived; top 15 per topic by stars.",
+        "Issues: per repository, the top 10 by upvotes closed as 'not planned', created 2023-11-16 to 2026-11-16. Keep those with ≥ 20 upvotes that look like feature requests by label or title.",
+        "Sample: 20 by fixed seed 'venture-declined-2026-11-16', at most one per repository.",
+        "Review: a research session judges each sample as an opportunity only if all four hold: a genuine feature request; declined by maintainers (not just stale or duplicate); buildable as a separate add-on without forking; and no maintained third-party add-on found via GitHub, npm and the tool's marketplace.",
+        "Secondary (not part of the verdict): share of sampled threads with a comment offering to pay."
+      ],
+      "successCriteria": [
+        "At least 5 of the 20 sampled requests are opportunities"
+      ],
+      "failureCriteria": [
+        "At most 1 of the 20 sampled requests is an opportunity"
+      ],
+      "estimatedTime": "< 1 hour of automated collection plus a manual review of 20 issues",
+      "estimatedCostUsd": 0,
+      "resources": [
+        "GitHub REST and search APIs",
+        "npm registry and marketplace searches"
+      ],
+      "expectedLearning": "Whether declined requests are a usable source of small product ideas, and which ones, before building anything.",
+      "nextSteps": {
+        "ifSuccess": "Profile the strongest opportunities (audience size, workarounds, offers to pay) and pick one to prototype.",
+        "ifFailure": "Park the idea: declined requests are mostly unbuildable or already served."
+      },
+      "executionMode": "automatable",
+      "status": "proposed",
+      "createdInRun": "run-20261116-agent-declined-features-1",
+      "provenance": "real"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "dec-20261116-paid-addon-for-declined-feature",
+      "at": "2026-11-16T14:47:57Z",
+      "runId": "run-20261116-agent-declined-features-1",
+      "subjectType": "idea",
+      "subjectId": "idea-paid-addon-for-declined-feature",
+      "action": "create",
+      "toStatus": "advanced",
+      "rationale": "Advanced to a cheap test. Demand is publicly counted, the core tool has said it won't compete, paid extensions to developer tools exist, and whether real gaps exist can be measured for $0.",
+      "actor": "director",
+      "provenance": "real"
+    }
+  ],
+  "briefs": [
+    {
+      "id": "brief-declined-feature-requests",
+      "themeId": "theme-declined-feature-requests",
+      "researchQuestion": "Popular developer tools turn down many feature requests that hundreds of users upvoted. Are some of these gaps buildable as a small add-on that people would pay a little for?",
+      "whyItMatters": "An upvoted, declined request is demand that is publicly counted and that the tool itself has said it won't serve. That's a cheaper starting point for a small paid product than guessing at a market.",
+      "subQuestions": [
+        "How many declined requests could be built as a separate add-on without forking the tool?",
+        "Are those already served by an existing add-on?",
+        "Do people in those threads offer to pay?",
+        "Which single opportunity would be best to build first?"
+      ],
+      "findings": [
+        {
+          "id": "f0",
+          "statement": "Widely supported requests do get declined: for example, a VS Code request to sync Copilot chat history across devices was closed as out of scope twice, with about 200 reactions on the first thread and 87 upvotes on the second.",
+          "strength": "Weak. A single example, chosen from a probe search; the experiment measures how common this is.",
+          "evidenceIds": [
+            "ev-df-05"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f1",
+          "statement": "Paid extensions to free developer tools exist (Sidekiq Pro and Enterprise, GitLens Pro). But a well-known add-on that fixes a platform's annoyances, Refined GitHub, is free and sponsor-funded, which suggests users often expect such add-ons for free.",
+          "strength": "Weak. Three examples, two of them run by the tool's own author or a company.",
+          "evidenceIds": [
+            "ev-df-01",
+            "ev-df-02",
+            "ev-df-03"
+          ],
+          "epistemic": "fact"
+        }
+      ],
+      "uncertainties": [
+        "Whether declined requests are buildable as add-ons (being measured).",
+        "Whether upvoters would pay anything.",
+        "Whether maintainers would later build the feature or block the add-on."
+      ],
+      "nextSteps": [
+        {
+          "text": "Sample 20 highly upvoted declined feature requests from popular developer tools and review each for a buildable, unserved add-on (pre-registered: at least 5 opportunities).",
+          "kind": "experiment",
+          "experimentId": "exp-declined-feature-requests"
+        }
+      ],
+      "updatedAt": "2026-11-16T14:47:57Z",
+      "updatedInRun": "run-20261116-agent-declined-features-1",
+      "author": "research director (Claude Code session)",
+      "provenance": "real"
+    }
+  ]
+}

@@ -94,6 +94,46 @@
     "provenance": "real"
   },
   {
+    "id": "exp-declined-feature-requests",
+    "ideaId": "idea-paid-addon-for-declined-feature",
+    "assumptionIds": [
+      "a1",
+      "a2"
+    ],
+    "title": "Are declined feature requests in popular developer tools buildable, unserved add-on opportunities?",
+    "hypothesis": "Of 20 sampled feature requests (≥ 20 upvotes, closed as not planned in the past 3 years, in developer-tool repositories with ≥ 10,000 stars), at least 5 were explicitly declined, could be built as a separate add-on, and have no maintained third-party add-on.",
+    "uncertainty": "Whether declined requests leave real, buildable gaps (a1). Willingness to pay (a2) is measured only as a secondary signal: offers to pay in the threads.",
+    "procedure": [
+      "Pre-registered 2026-11-16 before the population was collected. Probe searches beforehand only tested the API: issue search across GitHub, VS Code and Next.js 'not planned' issues, and two phrase searches for offers to pay. They surfaced a handful of issues (e.g. zed-industries/zed#5120), but the sample is drawn by fixed seed afterwards.",
+      "Repositories: GitHub topics developer-tools, cli, terminal, editor, testing, devops; ≥ 10,000 stars; not archived; top 15 per topic by stars.",
+      "Issues: per repository, the top 10 by upvotes closed as 'not planned', created 2023-11-16 to 2026-11-16. Keep those with ≥ 20 upvotes that look like feature requests by label or title.",
+      "Sample: 20 by fixed seed 'venture-declined-2026-11-16', at most one per repository.",
+      "Review: a research session judges each sample as an opportunity only if all four hold: a genuine feature request; declined by maintainers (not just stale or duplicate); buildable as a separate add-on without forking; and no maintained third-party add-on found via GitHub, npm and the tool's marketplace.",
+      "Secondary (not part of the verdict): share of sampled threads with a comment offering to pay."
+    ],
+    "successCriteria": [
+      "At least 5 of the 20 sampled requests are opportunities"
+    ],
+    "failureCriteria": [
+      "At most 1 of the 20 sampled requests is an opportunity"
+    ],
+    "estimatedTime": "< 1 hour of automated collection plus a manual review of 20 issues",
+    "estimatedCostUsd": 0,
+    "resources": [
+      "GitHub REST and search APIs",
+      "npm registry and marketplace searches"
+    ],
+    "expectedLearning": "Whether declined requests are a usable source of small product ideas, and which ones, before building anything.",
+    "nextSteps": {
+      "ifSuccess": "Profile the strongest opportunities (audience size, workarounds, offers to pay) and pick one to prototype.",
+      "ifFailure": "Park the idea: declined requests are mostly unbuildable or already served."
+    },
+    "executionMode": "automatable",
+    "status": "approved",
+    "createdInRun": "run-20261116-agent-declined-features-1",
+    "provenance": "real"
+  },
+  {
     "id": "exp-followup-engagement-retrospective",
     "ideaId": "idea-contributor-comprehension-gate",
     "assumptionIds": [

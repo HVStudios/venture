@@ -108,6 +108,25 @@
     "provenance": "real"
   },
   {
+    "id": "comp-free-companion-addons",
+    "name": "Free companion add-ons (e.g. Refined GitHub)",
+    "url": "https://github.com/refined-github/refined-github",
+    "kind": "open-source",
+    "description": "Free, often sponsor-funded browser extensions, editor extensions and wrappers that add features a platform declined.",
+    "strengths": [
+      "Free",
+      "Established in some niches"
+    ],
+    "weaknesses": [
+      "Depend on volunteer time",
+      "Not every declined request has one (being measured)"
+    ],
+    "sourceIds": [
+      "src-refined-github-readme"
+    ],
+    "provenance": "real"
+  },
+  {
     "id": "comp-github-pr-access-controls",
     "name": "GitHub pull-request access settings & interaction limits",
     "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-pull-requests",

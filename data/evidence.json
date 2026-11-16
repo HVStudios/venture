@@ -693,6 +693,84 @@
     "provenance": "real"
   },
   {
+    "id": "ev-df-01",
+    "claim": "Paid extensions to a free open-source developer tool can be a business: Sidekiq's author sells Pro and Enterprise extensions, with support.",
+    "sourceId": "src-sidekiq-readme",
+    "quote": "Sidekiq Pro and Sidekiq Enterprise customers get private email support.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "context": "Sold by the tool's own author, who controls the core.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-paid-addon-for-declined-feature"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-df-02",
+    "claim": "A popular editor extension runs a free tier plus paid Pro features.",
+    "sourceId": "src-gitlens-readme",
+    "quote": "several Pro features, the Commit Graph among them, are free on public repos.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "context": "Company-backed.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-paid-addon-for-declined-feature"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-df-03",
+    "claim": "A widely used add-on exists purely to fix annoyances a platform won't fix, which shows the gap is real. But it's free and sponsor-funded, which suggests users expect such add-ons for free.",
+    "sourceId": "src-refined-github-readme",
+    "quote": "We use GitHub a lot and notice many annoyances we'd like to fix.",
+    "stance": "contradicts",
+    "epistemic": "inference",
+    "problemIds": [
+      "prob-dev-tools-decline-wanted-features"
+    ],
+    "ideaIds": [
+      "idea-paid-addon-for-declined-feature"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-df-04",
+    "claim": "Companion tools aim to fill gaps until the platform itself implements them, so their value can vanish if it does.",
+    "sourceId": "src-refined-github-readme",
+    "quote": "Our hope is that GitHub will notice and implement some of these much-needed improvements.",
+    "stance": "context",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-dev-tools-decline-wanted-features"
+    ],
+    "ideaIds": [
+      "idea-paid-addon-for-declined-feature"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-df-05",
+    "claim": "A feature request with about 200 reactions was closed as out of scope, and users reopened it elsewhere; the replacement was closed as not planned too.",
+    "sourceId": "src-vscode-306502",
+    "quote": "That issue was closed as \"not planned / out-of-scope\" and the repository was archived on March 23, 2026 with a note to redirect feedback here.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-dev-tools-decline-wanted-features"
+    ],
+    "ideaIds": [
+      "idea-paid-addon-for-declined-feature"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
     "id": "ev-sc-01",
     "claim": "Two malicious axios releases were published through the maintainer's compromised npm account (March 2026).",
     "sourceId": "src-axios-postmortem-2026",

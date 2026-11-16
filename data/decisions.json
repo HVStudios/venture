@@ -564,6 +564,18 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261116-declined-feature-requests",
+    "at": "2026-11-16T14:49:17.740Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-declined-feature-requests",
+    "action": "advance",
+    "fromStatus": "proposed",
+    "toStatus": "approved",
+    "rationale": "Approved under the standing rule for automatable experiments. Population, sampling seed, review criteria and thresholds pre-registered before collection; helpers unit-tested on synthetic data.",
+    "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261116-npm-release-contract-linter-revise",
     "at": "2026-11-16T09:46:58Z",
     "runId": "run-20261116-agent-release-breaks-3",
@@ -615,6 +627,20 @@
     "toStatus": "inconclusive",
     "rationale": "Pre-registered verdict: inconclusive. The frequency criterion was met (49 of 400 fresh packages, 12.3%), but only 13 of 20 audited flags were genuine (65%), between the failure line (10) and the success line (14). Five of the 13 count as genuine only because an added exports map blocks deep imports of undocumented files; under a stricter reading it would be 8 of 20 (refuted). Exploratory: removal rules (export path removed, CLI command removed, a peer's minimum major raised) were genuine in 13 of 13 audited cases across both samples, but fire for only about 5% of popular packages.",
     "actor": "experiment designer",
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261116-paid-addon-for-declined-feature",
+    "at": "2026-11-16T14:47:57Z",
+    "runId": "run-20261116-agent-declined-features-1",
+    "subjectType": "idea",
+    "subjectId": "idea-paid-addon-for-declined-feature",
+    "action": "create",
+    "toStatus": "advanced",
+    "rationale": "Advanced to a cheap test. Demand is publicly counted, the core tool has said it won't compete, paid extensions to developer tools exist, and whether real gaps exist can be measured for $0.",
+    "actor": "director",
+    "attractiveness": 54,
+    "evidenceStrength": 33,
     "provenance": "real"
   },
   {

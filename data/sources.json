@@ -761,6 +761,21 @@
     "provenance": "real"
   },
   {
+    "id": "src-gitlens-readme",
+    "url": "https://github.com/gitkraken/vscode-gitlens/blob/main/README.md",
+    "title": "GitLens README",
+    "publisher": "GitKraken",
+    "retrievedAt": "2026-11-16T14:47:57Z",
+    "sourceType": "docs",
+    "originId": "origin-gitlens",
+    "excerpt": "GitLens Community is free and open-source … several Pro features, the Commit Graph among them, are free on public repos.",
+    "limitations": "A company-backed extension, not an indie add-on.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-godot-contributing",
     "url": "https://raw.githubusercontent.com/godotengine/godot/master/CONTRIBUTING.md",
     "title": "Godot: CONTRIBUTING.md",
@@ -1138,6 +1153,21 @@
     "provenance": "real"
   },
   {
+    "id": "src-refined-github-readme",
+    "url": "https://github.com/refined-github/refined-github/blob/main/readme.md",
+    "title": "Refined GitHub README",
+    "publisher": "Refined GitHub (open source)",
+    "retrievedAt": "2026-11-16T14:47:57Z",
+    "sourceType": "docs",
+    "originId": "origin-refined-github",
+    "excerpt": "We use GitHub a lot and notice many annoyances we'd like to fix. Our hope is that GitHub will notice and implement some of these much-needed improvements.",
+    "limitations": "Says nothing about the number of users or revenue.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-rust-no-low-effort",
     "url": "https://github.com/rust-lang/leadership-council/issues/273",
     "title": "Rust leadership council: Policy proposal: No low-effort contributions (#273)",
@@ -1168,6 +1198,21 @@
       "checkedAt": "2026-11-16T13:38:20.143Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-sidekiq-readme",
+    "url": "https://github.com/sidekiq/sidekiq/blob/main/README.md",
+    "title": "Sidekiq README",
+    "publisher": "Sidekiq (Contributed Systems)",
+    "retrievedAt": "2026-11-16T14:47:57Z",
+    "sourceType": "docs",
+    "originId": "origin-sidekiq",
+    "excerpt": "I also sell Sidekiq Pro and Sidekiq Enterprise, extensions to Sidekiq … Sidekiq Pro and Sidekiq Enterprise customers get private email support.",
+    "limitations": "The paid extensions are sold by the tool's own author, not by a third party.",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },
@@ -1322,6 +1367,22 @@
       "checkedAt": "2026-11-16T13:38:20.143Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-vscode-306502",
+    "url": "https://github.com/microsoft/vscode/issues/306502",
+    "title": "Feature Request: Sync GitHub Copilot Chat History Across Devices",
+    "publisher": "GitHub (microsoft/vscode issues)",
+    "publishedAt": "2026-03-30",
+    "retrievedAt": "2026-11-16T14:49:08Z",
+    "sourceType": "issue-tracker",
+    "originId": "origin-vscode-306502",
+    "excerpt": "That issue was closed as \"not planned / out-of-scope\" and the repository was archived on March 23, 2026 with a note to redirect feedback here. Given the significant community interest (79 👍 / 120 ❤️) and continued activity up until archival, I'm opening this issue to carry the discussion forward.",
+    "limitations": "One request; seen in a probe search before pre-registration. Its own thread was also closed as not planned (87 upvotes, labelled out-of-scope).",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },

@@ -874,6 +874,145 @@
     "provenance": "real"
   },
   {
+    "id": "idea-paid-addon-for-declined-feature",
+    "title": "Paid add-ons for features popular developer tools decline",
+    "summary": "Find highly upvoted feature requests that a popular developer tool has explicitly declined, but that could be built on its extension API or as a companion tool. Build the best one as a small add-on, with a free tier and a cheap paid tier.",
+    "problemIds": [
+      "prob-dev-tools-decline-wanted-features"
+    ],
+    "themeIds": [
+      "theme-declined-feature-requests"
+    ],
+    "targetUsers": "Users of a popular developer tool who upvoted a declined request",
+    "solution": "A focused extension, plugin, wrapper CLI or companion app that delivers one declined feature without forking the tool. It's distributed through the tool's own extension marketplace or npm, with a one-time or small subscription price for the paid tier.",
+    "competitorIds": [
+      "comp-free-companion-addons"
+    ],
+    "differentiation": "Starts from demand that is publicly counted (upvotes) and that the maintainers have said they won't meet, so the core tool is unlikely to compete.",
+    "feasibility": "Medium. Depends on the tool's extension API. A single add-on is a small project, but marketplace publishing and payments need the owner's accounts.",
+    "assumptions": [
+      {
+        "id": "a1",
+        "text": "Among highly upvoted declined feature requests in popular developer tools, at least 5 of 20 sampled are buildable as an add-on and not already served",
+        "criticality": "high",
+        "status": "untested",
+        "evidenceIds": []
+      },
+      {
+        "id": "a2",
+        "text": "Some users of those requests would pay for an add-on (offers to pay appear in the threads)",
+        "criticality": "high",
+        "status": "untested",
+        "evidenceIds": []
+      },
+      {
+        "id": "a3",
+        "text": "The tool's maintainers won't later build the feature themselves or block the add-on",
+        "criticality": "medium",
+        "status": "untested",
+        "evidenceIds": []
+      }
+    ],
+    "risks": [
+      "Users expect developer add-ons to be free (Refined GitHub is sponsor-funded)",
+      "The tool may change its extension API or ship the feature after all",
+      "Upvotes don't translate into paying customers",
+      "Each opportunity is tied to one platform"
+    ],
+    "nextSteps": [
+      "Run exp-declined-feature-requests",
+      "If opportunities exist, profile the best one: size of the tool's user base, existing workarounds, and whether threads show offers to pay"
+    ],
+    "objections": [
+      {
+        "id": "obj-1",
+        "text": "Developer add-ons are usually free; asking money for one may fail.",
+        "severity": "major",
+        "evidenceIds": [
+          "ev-df-03"
+        ],
+        "response": "Partly countered by paid extensions such as Sidekiq Pro and GitLens Pro. The experiment records offers to pay as a secondary signal.",
+        "status": "open"
+      },
+      {
+        "id": "obj-2",
+        "text": "Maintainers usually decline features for good reasons (complexity, scope), which may also make them hard to build as add-ons.",
+        "severity": "major",
+        "evidenceIds": [],
+        "response": "The review checks buildability as an add-on explicitly.",
+        "status": "open"
+      },
+      {
+        "id": "obj-3",
+        "text": "If the platform later builds the feature, the add-on loses its value.",
+        "severity": "minor",
+        "evidenceIds": [
+          "ev-df-04"
+        ],
+        "response": "Only requests explicitly declined count, which lowers this risk.",
+        "status": "accepted"
+      }
+    ],
+    "scores": {
+      "criteria": {
+        "severity": {
+          "score": 2,
+          "rationale": "Annoyances more than blockers, usually."
+        },
+        "frequency": {
+          "score": 4,
+          "rationale": "Declined requests are plentiful in large projects."
+        },
+        "userValue": {
+          "score": 3,
+          "rationale": "Clear for the requesters; unknown beyond them."
+        },
+        "competitiveGap": {
+          "score": 3,
+          "rationale": "Being measured per request."
+        },
+        "differentiation": {
+          "score": 2,
+          "rationale": "Easy to copy once visible."
+        },
+        "feasibility": {
+          "score": 3,
+          "rationale": "Depends on each tool's extension API."
+        },
+        "costComplexity": {
+          "score": 4,
+          "rationale": "A single add-on is small."
+        },
+        "userAccess": {
+          "score": 4,
+          "rationale": "The upvoters are visible and the tool's marketplace is the channel."
+        },
+        "validationCost": {
+          "score": 5,
+          "rationale": "Measurable for $0 from GitHub data."
+        }
+      },
+      "assessedAt": "2026-11-16T14:47:57Z",
+      "assessedBy": "critic (claude-code-session)"
+    },
+    "status": "advanced",
+    "statusRationale": "Advanced to a cheap test. Demand is publicly counted, the core tool has said it won't compete, paid extensions to developer tools exist, and whether real gaps exist can be measured for $0.",
+    "relatedIdeaIds": [],
+    "epistemic": "hypothesis",
+    "practical": {
+      "adopters": "Users of one popular developer tool who want a feature its maintainers declined",
+      "distribution": "paid-product",
+      "smallestUsefulVersion": "One add-on (extension, plugin or wrapper) delivering one declined, highly upvoted feature, with a free tier and a paid tier.",
+      "buildableByVenture": true,
+      "buildNote": "VENTURE can find the opportunities and write and test the add-on. Publishing it in a marketplace and taking payments need the owner's accounts and approval.",
+      "monetization": "A one-time licence or small subscription (roughly $5–15) for the paid tier. Small: realistically pocket money to a few hundred dollars a month, unless a request has a large, paying audience."
+    },
+    "createdInRun": "run-20261116-agent-declined-features-1",
+    "createdAt": "2026-11-16T14:47:57Z",
+    "updatedAt": "2026-11-16T14:47:57Z",
+    "provenance": "real"
+  },
+  {
     "id": "idea-reproduction-first-security-triage",
     "title": "Reproduction-first triage for AI-assisted security reports",
     "summary": "Security reports must include a proof of concept that a sandboxed CI job runs against the released code before any human reads the report.",

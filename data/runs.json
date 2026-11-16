@@ -2051,6 +2051,75 @@
     "provenance": "real"
   },
   {
+    "id": "run-20261116-agent-declined-features-1",
+    "themeId": "theme-declined-feature-requests",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-16T14:49:08Z",
+    "completedAt": "2026-11-16T14:49:08Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "Probe searches of GitHub 'not planned' issues and offers to pay"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "Read 3 READMEs on paid and free add-ons for developer tools"
+      },
+      {
+        "name": "invent",
+        "status": "ok",
+        "notes": "One idea: paid add-ons for declined features"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "3 objections, 9 criteria scored"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Pre-registered exp-declined-feature-requests"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "New area brief"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 5,
+      "sourcesCited": 4,
+      "problemsFound": 1,
+      "ideasGenerated": 1,
+      "ideasAdvanced": 1,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "GitHub issue search: is:issue is:closed reason:\"not planned\" stars:>10000 (the stars qualifier is ignored for issues)",
+      "repo:microsoft/vscode and repo:vercel/next.js closed as not planned, by upvotes",
+      "\"would pay for\" and \"happy to pay\" in comments of issues closed as not planned",
+      "READMEs: sidekiq, vscode-gitlens, refined-github, kitty"
+    ],
+    "errors": [
+      "GitHub's phrase search for offers to pay returned near-identical results for different phrases, so it isn't reliable; the experiment reads the threads instead."
+    ],
+    "limitations": [
+      "Money evidence is thin: three READMEs, no revenue figures.",
+      "Start time not recorded during the session; startedAt is set to the completion time."
+    ],
+    "usage": {
+      "note": "Interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  {
     "id": "run-20261116-agent-release-breaks-3",
     "themeId": "theme-npm-release-breaking-changes",
     "mode": "agent-session",
@@ -2125,7 +2194,7 @@
     "themeId": "theme-wp-orphaned-plugin-demand",
     "mode": "agent-session",
     "provider": "claude-code-session",
-    "startedAt": "2026-11-16T14:05:00Z",
+    "startedAt": "2026-11-16T14:28:56Z",
     "completedAt": "2026-11-16T14:28:56Z",
     "status": "completed",
     "stages": [
@@ -2181,7 +2250,8 @@
     ],
     "limitations": [
       "Revenue benchmarks are self-reported case studies (2016–2024), not a market survey.",
-      "Only one candidate idea was generated; the area was chosen by the director, not by the owner from alternatives."
+      "Only one candidate idea was generated; the area was chosen by the director, not by the owner from alternatives.",
+      "Start time not recorded during the session (an estimate was first written and has been removed); startedAt is set to the completion time."
     ],
     "usage": {
       "note": "Interactive session. No API charges."
@@ -2283,7 +2353,7 @@
     "themeId": "theme-wp-orphaned-plugin-demand",
     "mode": "agent-session",
     "provider": "claude-code-session + github-actions experiment runner",
-    "startedAt": "2026-11-16T14:31:00Z",
+    "startedAt": "2026-11-16T14:31:07Z",
     "completedAt": "2026-11-16T14:34:26Z",
     "status": "completed",
     "stages": [

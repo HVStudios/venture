@@ -32,6 +32,22 @@
     "provenance": "real"
   },
   {
+    "id": "prob-dev-tools-decline-wanted-features",
+    "title": "Popular developer tools decline features many users want",
+    "statement": "Maintainers of popular developer tools close many well-supported feature requests as 'not planned' or 'out of scope', often for good reasons. The users who asked are left with workarounds, and some say they would pay for the feature.",
+    "themeIds": [
+      "theme-declined-feature-requests"
+    ],
+    "affectedUsers": "Developers and teams using popular open-source and commercial developer tools",
+    "severityNote": "Low to moderate per request, but some requests gather hundreds of upvotes.",
+    "frequencyNote": "Thousands of issues closed as 'not planned' in large repositories (37,000 in VS Code alone, all kinds). Feature-request share being measured.",
+    "status": "investigating",
+    "discoveredInRun": "run-20261116-agent-declined-features-1",
+    "firstSeen": "2026-11-16T14:47:57Z",
+    "lastUpdated": "2026-11-16T14:47:57Z",
+    "provenance": "real"
+  },
+  {
     "id": "prob-fabricated-ai-security-reports",
     "title": "Fabricated AI-generated security reports waste triage capacity",
     "statement": "Security teams receive confident but fabricated vulnerability reports generated with AI tools. Each one must be investigated with priority, which pulls maintainers away from real work. curl no longer runs a bug bounty because of the incentive for made-up reports.",
