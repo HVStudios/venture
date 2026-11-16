@@ -1,0 +1,1634 @@
+{
+  "experiment": "exp-npm-structural-breaks",
+  "executedAt": "2026-11-16T09:49:49.824Z",
+  "window": {
+    "from": "2024-11-04T00:00:00Z",
+    "to": "2026-11-04T00:00:00Z"
+  },
+  "keywords": [
+    "vue",
+    "eslint",
+    "test",
+    "css",
+    "database",
+    "http"
+  ],
+  "population": [
+    "hast-util-to-jsx-runtime",
+    "@tanstack/virtual-core",
+    "@vue/compiler-dom",
+    "@vue/compiler-core",
+    "@vue/shared",
+    "@vue/compiler-sfc",
+    "@tanstack/table-core",
+    "storybook",
+    "@vue/compiler-ssr",
+    "@tanstack/react-virtual",
+    "@storybook/addon-docs",
+    "@vue/runtime-core",
+    "@vue/server-renderer",
+    "@vue/reactivity",
+    "vue",
+    "nanostores",
+    "@storybook/addon-a11y",
+    "@vueuse/core",
+    "@vue/runtime-dom",
+    "@vueuse/shared",
+    "@vueuse/metadata",
+    "@vitejs/plugin-vue",
+    "@storybook/addon-vitest",
+    "eslint-plugin-vue",
+    "vite-plugin-pwa",
+    "@floating-ui/vue",
+    "@storybook/addon-themes",
+    "highlightjs-vue",
+    "@vueuse/integrations",
+    "markdown-to-jsx",
+    "@tanstack/vue-virtual",
+    "@vue-macros/common",
+    "precinct",
+    "@vue/compiler-vue2",
+    "vite-plugin-dts",
+    "ag-charts-types",
+    "ag-grid-community",
+    "filing-cabinet",
+    "vue-i18n",
+    "@storybook/addon-onboarding",
+    "detective-vue2",
+    "sortablejs",
+    "swiper",
+    "@vitejs/plugin-vue-jsx",
+    "reka-ui",
+    "jest-serializer-html",
+    "orval",
+    "body-scroll-lock",
+    "@mdx-js/loader",
+    "lenis",
+    "ag-charts-community",
+    "diffable-html",
+    "ag-charts-locale",
+    "vue-template-compiler",
+    "postcss-html",
+    "@scalar/use-toasts",
+    "@vue/eslint-config-typescript",
+    "vite-plugin-vue-tracer",
+    "ag-grid-enterprise",
+    "@formkit/auto-animate",
+    "eslint-plugin-better-tailwindcss",
+    "@ai-sdk/vue",
+    "radix-vue",
+    "@cspell/dict-vue",
+    "@scalar/api-reference",
+    "ag-charts-enterprise",
+    "eslint-processor-vue-blocks",
+    "@vue/tsconfig",
+    "ag-charts-core",
+    "@scalar/use-codemirror",
+    "storybook-addon-pseudo-states",
+    "vuedraggable",
+    "@tanstack/vue-table",
+    "@vue/component-compiler-utils",
+    "embla-carousel-fade",
+    "vue-docgen-api",
+    "vitepress",
+    "@vue/reactivity-transform",
+    "virtua",
+    "@intlify/unplugin-vue-i18n",
+    "vue-inbrowser-compiler-independent-utils",
+    "embla-carousel-auto-scroll",
+    "@storybook/vue3",
+    "daisyui",
+    "@flmngr/flmngr-vue",
+    "vite-plugin-vue-inspector",
+    "@inlang/paraglide-js",
+    "unplugin-dts",
+    "@intlify/vue-i18n-extensions",
+    "@vue/eslint-config-prettier",
+    "vue-hot-reload-api",
+    "ag-stack",
+    "@pinia/nuxt",
+    "embla-carousel-vue",
+    "@testing-library/vue",
+    "vaul-vue",
+    "primevue",
+    "embla-carousel-class-names",
+    "embla-carousel-auto-height",
+    "@vue-flow/core",
+    "vue-resize",
+    "@cfcs/core",
+    "@nuxt/ui",
+    "motion-v",
+    "@mdx-js/rollup",
+    "@pinia/testing",
+    "stylelint-config-html",
+    "floating-vue",
+    "vite-svg-loader",
+    "@vuepic/vue-datepicker",
+    "@vueuse/nuxt",
+    "element-plus",
+    "pinia-plugin-persistedstate",
+    "eslint-plugin-vuejs-accessibility",
+    "@vueuse/components",
+    "@vue-flow/background",
+    "@element-plus/icons-vue",
+    "@tanstack/solid-virtual",
+    "rehype-react",
+    "medium-zoom",
+    "stylelint-config-recommended-vue",
+    "@vue/cli-service",
+    "@vue/babel-preset-app",
+    "@vue/cli-shared-utils",
+    "vue-virtual-scroller",
+    "@vue/cli-plugin-router",
+    "@vue/web-component-wrapper",
+    "web-haptics",
+    "@vue/cli-plugin-vuex",
+    "single-spa",
+    "quasar",
+    "@ag-grid-community/core",
+    "@tsparticles/engine",
+    "@vue/cli-overlay",
+    "tinykeys",
+    "@tsparticles/updater-life",
+    "@tsparticles/updater-opacity",
+    "@tsparticles/updater-rotate",
+    "@tsparticles/plugin-hsl-color",
+    "@tsparticles/plugin-hex-color",
+    "@tsparticles/updater-size",
+    "maska",
+    "@tsparticles/basic",
+    "code-inspector-plugin",
+    "@intlify/eslint-plugin-vue-i18n",
+    "@tsparticles/updater-out-modes",
+    "vue-advanced-cropper",
+    "@vue/cli-plugin-babel",
+    "vue-draggable-plus",
+    "@code-inspector/vite",
+    "vue-observe-visibility",
+    "vue-class-component",
+    "@code-inspector/webpack",
+    "@code-inspector/core",
+    "@vue/cli-plugin-eslint",
+    "@tsparticles/interaction-external-slow",
+    "@mdit-vue/plugin-frontmatter",
+    "@vue-flow/minimap",
+    "@vue-flow/controls",
+    "@mdx-js/esbuild",
+    "@tsparticles/slim",
+    "@tsparticles/interaction-external-repulse",
+    "@code-inspector/esbuild",
+    "@quasar/vite-plugin",
+    "@tsparticles/interaction-external-push",
+    "@tsparticles/plugin-rgb-color",
+    "@tsparticles/interaction-external-grab",
+    "@mdit-vue/plugin-component",
+    "@tsparticles/interaction-particles-collisions",
+    "@tsparticles/interaction-external-bubble",
+    "@tsparticles/interaction-particles-links",
+    "@tsparticles/interaction-external-remove",
+    "@tsparticles/interaction-particles-attract",
+    "@mdit-vue/types",
+    "@tsparticles/interaction-external-bounce",
+    "@tsparticles/interaction-external-pause",
+    "qrcode.vue",
+    "ag-grid-vue3",
+    "@tracetail/vue",
+    "@devframes/json-render-ui",
+    "@vueuse/math",
+    "@vueuse/router",
+    "v-calendar",
+    "vue-functional-data-merge",
+    "vue-property-decorator",
+    "dialkit",
+    "@tsparticles/interaction-external-connect",
+    "@vueuse/motion",
+    "@tsparticles/interaction-external-attract",
+    "@tsparticles/plugin-easing-quad",
+    "@fullcalendar/vue3",
+    "@quasar/app-vite",
+    "c15t",
+    "signal-utils",
+    "babel-helper-vue-jsx-merge-props",
+    "@ag-grid-enterprise/core",
+    "keen-slider",
+    "torph",
+    "vue-server-renderer",
+    "vue-json-pretty",
+    "esbuild-plugin-vue3",
+    "vue-draggable-next",
+    "@unovis/vue",
+    "vue-tel-input",
+    "@ag-grid-community/client-side-row-model",
+    "twoslash-vue",
+    "@ag-grid-community/csv-export",
+    "@triplit/client",
+    "shaders",
+    "splitpanes",
+    "tabulator-tables",
+    "vite-plugin-icons-spritesheet",
+    "@vue/vue3-jest",
+    "vue-pdf-embed",
+    "vue-types",
+    "tua-body-scroll-lock",
+    "vue-parser",
+    "vue-jest",
+    "ant-design-vue",
+    "@vue/component-compiler",
+    "@ag-grid-enterprise/row-grouping",
+    "@nutrient-sdk/viewer",
+    "nuxt-security",
+    "nuxt-component-meta",
+    "@vue/compat",
+    "vitest-browser-vue",
+    "vue-input-otp",
+    "@gtm-support/vue-gtm",
+    "morphicons",
+    "vue-currency-input",
+    "@ag-grid-enterprise/set-filter",
+    "vue-toastification",
+    "naive-ui",
+    "@formkit/utils",
+    "@vue/apollo-composable",
+    "vue-dompurify-html",
+    "@formkit/core",
+    "element-ui",
+    "@vuetify/v0",
+    "boneyard-js",
+    "embla-carousel-svelte",
+    "react-facebook-pixel",
+    "lean-qr",
+    "eslint-visitor-keys",
+    "globals",
+    "eslint-scope",
+    "@eslint-community/eslint-utils",
+    "@eslint/core",
+    "@eslint/plugin-kit",
+    "@eslint/config-helpers",
+    "eslint-plugin-react-hooks",
+    "eslint-plugin-react",
+    "jsx-ast-utils",
+    "eslint-module-utils",
+    "eslint-plugin-import",
+    "eslint-import-resolver-node",
+    "eslint-plugin-jsx-a11y",
+    "eslint-config-prettier",
+    "lint-staged",
+    "eslint-plugin-prettier",
+    "eslint-plugin-react-refresh",
+    "eslint-utils",
+    "eslint-plugin-jest",
+    "confusing-browser-globals",
+    "eslint-plugin-unused-imports",
+    "eslint-plugin-storybook",
+    "@oxlint/plugins",
+    "@eslint/compat",
+    "jsonc-eslint-parser",
+    "eslint-plugin-n",
+    "eslint-compat-utils",
+    "eslint-plugin-testing-library",
+    "eslint-plugin-import-x",
+    "@es-joy/jsdoccomment",
+    "@typescript-eslint/experimental-utils",
+    "eslint-plugin-unicorn",
+    "eslint-plugin-jsdoc",
+    "eslint-plugin-es-x",
+    "eslint-plugin-simple-import-sort",
+    "eslint-plugin-promise",
+    "eslint-plugin-sonarjs",
+    "@vitest/eslint-plugin",
+    "eslint-plugin-es",
+    "jsx-ast-utils-x",
+    "eslint-plugin-flowtype",
+    "eslint-plugin-security",
+    "eslint-plugin-perfectionist",
+    "eslint-webpack-plugin",
+    "eslint-plugin-turbo",
+    "eslint-plugin-eslint-comments",
+    "eslint-plugin-expo",
+    "yaml-eslint-parser",
+    "eslint-plugin-regexp",
+    "eslint-plugin-node",
+    "@eslint-community/eslint-plugin-eslint-comments",
+    "eslint-plugin-cypress",
+    "@typescript-eslint/rule-tester",
+    "eslint-plugin-react-x",
+    "eslint-plugin-no-only-tests",
+    "@eslint-react/eslint-plugin",
+    "eslint-plugin-jest-dom",
+    "eslint-plugin-react-web-api",
+    "eslint-plugin-boundaries",
+    "eslint-config-standard",
+    "eslint-plugin-react-dom",
+    "eslint-plugin-react-naming-convention",
+    "@shadcn/lint",
+    "eslint-rule-composer",
+    "eslint-plugin-react-native",
+    "eslint-plugin-svelte",
+    "svelte-eslint-parser",
+    "eslint-plugin-react-native-globals",
+    "eslint-plugin-i18next",
+    "eslint-plugin-mocha",
+    "eslint-plugin-tailwindcss",
+    "@oxlint/binding-darwin-arm64",
+    "eslint-json-compat-utils",
+    "eslint-plugin-jsonc",
+    "eslint-plugin-react-jsx",
+    "eslint-flat-config-utils",
+    "toml-eslint-parser",
+    "eslint-merge-processors",
+    "eslint-config-airbnb-typescript",
+    "eslint-plugin-react-rsc",
+    "eslint-plugin-import-lite",
+    "eslint-plugin-yml",
+    "@graphql-eslint/eslint-plugin",
+    "@oxlint/binding-win32-x64-msvc",
+    "eslint-import-resolver-alias",
+    "eslint-plugin-compat",
+    "eslint-plugin-oxlint",
+    "eslint-plugin-ft-flow",
+    "eslint-plugin-only-warn",
+    "@react-native/eslint-plugin",
+    "eslint-plugin-check-file",
+    "astro-eslint-parser",
+    "eslint-plugin-astro",
+    "eslint-plugin-no-unsanitized",
+    "eslint-plugin-react-you-might-not-need-an-effect",
+    "@eslint/markdown",
+    "eslint-typegen",
+    "@react-native/eslint-config",
+    "@ota-meshi/ast-token-store",
+    "@oxlint/binding-darwin-x64",
+    "oxlint-plugin-eslint",
+    "eslint-import-resolver-webpack",
+    "eslint-config-turbo",
+    "eslint-plugin-prefer-arrow",
+    "eslint-plugin-react-hooks-extra",
+    "@eslint/json",
+    "eslint-plugin-lodash",
+    "eslint-plugin-html",
+    "eslint-plugin-json",
+    "prettier-eslint",
+    "eslint-plugin-formatjs",
+    "eslint-plugin-local-rules",
+    "@oxlint/binding-win32-arm64-msvc",
+    "@e18e/eslint-plugin",
+    "eslint-plugin-jest-formatting",
+    "@eslint-react/kit",
+    "@microsoft/eslint-plugin-sdl",
+    "eslint-plugin-toml",
+    "eslint-rule-docs",
+    "@html-validate/stylish",
+    "flowbite",
+    "@eslint/css",
+    "eslint-plugin-chai-friendly",
+    "eslint-formatter-pretty",
+    "eslint-plugin-vitest",
+    "@oxlint/binding-linux-arm-musleabihf",
+    "@oxlint/binding-linux-ppc64-gnu",
+    "@oxlint/binding-linux-s390x-gnu",
+    "@oxlint/binding-android-arm-eabi",
+    "@microsoft/eslint-formatter-sarif",
+    "@oxlint/binding-linux-arm-gnueabihf",
+    "@oxlint/binding-win32-ia32-msvc",
+    "eslint-plugin-sort-class-members",
+    "@oxlint/binding-openharmony-arm64",
+    "@oxlint/binding-android-arm64",
+    "@oxlint/binding-freebsd-x64",
+    "@oxlint/binding-linux-riscv64-musl",
+    "eslint-plugin-filenames",
+    "eslint-config-google",
+    "@oxlint/binding-linux-riscv64-gnu",
+    "eslint-config-standard-jsx",
+    "eslint-restricted-globals",
+    "eslint-plugin-typescript-sort-keys",
+    "@babel/eslint-plugin",
+    "standard-engine",
+    "vite-plugin-eslint",
+    "eslint-plugin-babel",
+    "eslint-formatter-gitlab",
+    "eslint-plugin-functional",
+    "eslint-plugin-react-perf",
+    "eslint-plugin-sort-keys-fix",
+    "standard",
+    "eslint-plugin-lingui",
+    "eslint-mdx",
+    "eslint-plugin-mdx",
+    "eslint-plugin-drizzle"
+  ],
+  "packagesRead": 400,
+  "releasePairs": 10701,
+  "flaggedPairs": 68,
+  "packagesWithFlag": 49,
+  "packageShare": 0.1225,
+  "flaggedFamilies": 42,
+  "frequency": "met",
+  "perRule": {
+    "exports-subpath-removed": 15,
+    "switched-to-esm": 11,
+    "peer-tightened": 6,
+    "exports-map-added": 13,
+    "entry-removed": 16,
+    "peer-added": 34,
+    "bin-removed": 2
+  },
+  "auditSample": [
+    {
+      "id": "nuxt-security@2.2.0->2.3.0",
+      "pkg": "nuxt-security",
+      "from": "2.2.0",
+      "to": "2.3.0",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "main field removed (was ./dist/module.cjs)"
+        },
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was ./dist/module.d.ts)"
+        }
+      ]
+    },
+    {
+      "id": "pinia-plugin-persistedstate@4.2.0->4.3.0",
+      "pkg": "pinia-plugin-persistedstate",
+      "from": "4.2.0",
+      "to": "4.3.0",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer pinia >=2.3.0 → >=3.0.0"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-oxlint@1.56.0->1.57.0",
+      "pkg": "eslint-plugin-oxlint",
+      "from": "1.56.0",
+      "to": "1.57.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer oxlint@~1.57.0"
+        }
+      ]
+    },
+    {
+      "id": "@storybook/addon-vitest@10.6.2->10.6.3",
+      "pkg": "@storybook/addon-vitest",
+      "from": "10.6.2",
+      "to": "10.6.3",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer vitest ^3.0.0 || ^4.0.0 || ^5.0.0 → ^4.0.0 || ^5.0.0"
+        },
+        {
+          "rule": "peer-tightened",
+          "detail": "peer @vitest/browser ^3.0.0 || ^4.0.0 || ^5.0.0 → ^4.0.0 || ^5.0.0"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-no-only-tests@3.3.0->3.4.0",
+      "pkg": "eslint-plugin-no-only-tests",
+      "from": "3.3.0",
+      "to": "3.4.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "@nuxt/ui@3.0.2->3.1.0",
+      "pkg": "@nuxt/ui",
+      "from": "3.0.2",
+      "to": "3.1.0",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was ./dist/types.d.ts)"
+        }
+      ]
+    },
+    {
+      "id": "boneyard-js@1.1.0->1.1.1",
+      "pkg": "boneyard-js",
+      "from": "1.1.0",
+      "to": "1.1.1",
+      "rules": [
+        {
+          "rule": "bin-removed",
+          "detail": "bin removed: boneyard"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-mdx@3.2.0->3.3.0",
+      "pkg": "eslint-plugin-mdx",
+      "from": "3.2.0",
+      "to": "3.3.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        },
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-import-x@4.9.4->4.10.0",
+      "pkg": "eslint-plugin-import-x",
+      "from": "4.9.4",
+      "to": "4.10.0",
+      "rules": [
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: commonjs → module"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-testing-library@7.14.0->7.15.0",
+      "pkg": "eslint-plugin-testing-library",
+      "from": "7.14.0",
+      "to": "7.15.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        },
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "shaders@3.0.443->3.0.444",
+      "pkg": "shaders",
+      "from": "3.0.443",
+      "to": "3.0.444",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./pixi"
+        }
+      ]
+    },
+    {
+      "id": "vue-i18n@9.1.11->9.14.4",
+      "pkg": "vue-i18n",
+      "from": "9.1.11",
+      "to": "9.14.4",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-mocha@11.0.0->11.1.0",
+      "pkg": "eslint-plugin-mocha",
+      "from": "11.0.0",
+      "to": "11.1.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer eslint@>=9.0.0"
+        }
+      ]
+    },
+    {
+      "id": "eslint-config-turbo@2.3.1->2.3.2",
+      "pkg": "eslint-config-turbo",
+      "from": "2.3.1",
+      "to": "2.3.2",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "@scalar/api-reference@1.51.0->1.52.0",
+      "pkg": "@scalar/api-reference",
+      "from": "1.51.0",
+      "to": "1.52.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./ssr"
+        }
+      ]
+    },
+    {
+      "id": "prettier-eslint@17.0.1->17.1.0",
+      "pkg": "prettier-eslint",
+      "from": "17.0.1",
+      "to": "17.1.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        },
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: commonjs → module"
+        }
+      ]
+    },
+    {
+      "id": "@typescript-eslint/rule-tester@8.59.1->8.59.2",
+      "pkg": "@typescript-eslint/rule-tester",
+      "from": "8.59.1",
+      "to": "8.59.2",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer typescript@>=4.8.4 <6.1.0"
+        }
+      ]
+    },
+    {
+      "id": "splitpanes@3.1.6->3.1.8",
+      "pkg": "splitpanes",
+      "from": "3.1.6",
+      "to": "3.1.8",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer vue@^3.2.0"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-cypress@5.3.0->5.4.0",
+      "pkg": "eslint-plugin-cypress",
+      "from": "5.3.0",
+      "to": "5.4.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./flat"
+        }
+      ]
+    },
+    {
+      "id": "eslint-mdx@3.2.0->3.3.0",
+      "pkg": "eslint-mdx",
+      "from": "3.2.0",
+      "to": "3.3.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        },
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    }
+  ],
+  "flags": [
+    {
+      "id": "storybook@9.0.8->9.0.9",
+      "pkg": "storybook",
+      "from": "9.0.8",
+      "to": "9.0.9",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./measure, ./outline, ./backgrounds, ./test/preview, ./actions/preview"
+        }
+      ]
+    },
+    {
+      "id": "storybook@10.0.8->10.1.0",
+      "pkg": "storybook",
+      "from": "10.0.8",
+      "to": "10.1.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./webpack/loaders/webpack-automock-loader, ./webpack/loaders/storybook-mock-transform-loader"
+        }
+      ]
+    },
+    {
+      "id": "@vueuse/core@12.1.0->12.2.0",
+      "pkg": "@vueuse/core",
+      "from": "12.1.0",
+      "to": "12.2.0",
+      "rules": [
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "@vueuse/shared@12.1.0->12.2.0",
+      "pkg": "@vueuse/shared",
+      "from": "12.1.0",
+      "to": "12.2.0",
+      "rules": [
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "@storybook/addon-vitest@10.6.2->10.6.3",
+      "pkg": "@storybook/addon-vitest",
+      "from": "10.6.2",
+      "to": "10.6.3",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer vitest ^3.0.0 || ^4.0.0 || ^5.0.0 → ^4.0.0 || ^5.0.0"
+        },
+        {
+          "rule": "peer-tightened",
+          "detail": "peer @vitest/browser ^3.0.0 || ^4.0.0 || ^5.0.0 → ^4.0.0 || ^5.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@vueuse/integrations@12.1.0->12.2.0",
+      "pkg": "@vueuse/integrations",
+      "from": "12.1.0",
+      "to": "12.2.0",
+      "rules": [
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "vue-i18n@9.1.11->9.14.4",
+      "pkg": "vue-i18n",
+      "from": "9.1.11",
+      "to": "9.14.4",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "orval@7.11.2->7.12.1",
+      "pkg": "orval",
+      "from": "7.11.2",
+      "to": "7.12.1",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        },
+        {
+          "rule": "entry-removed",
+          "detail": "main field removed (was dist/index.js)"
+        },
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was ./dist/index.d.ts)"
+        }
+      ]
+    },
+    {
+      "id": "orval@8.4.2->8.5.0",
+      "pkg": "orval",
+      "from": "8.4.2",
+      "to": "8.5.0",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "main field removed (was ./dist/index.mjs)"
+        },
+        {
+          "rule": "entry-removed",
+          "detail": "module field removed (was ./dist/index.mjs)"
+        }
+      ]
+    },
+    {
+      "id": "@scalar/api-reference@1.25.128->1.25.130",
+      "pkg": "@scalar/api-reference",
+      "from": "1.25.128",
+      "to": "1.25.130",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./lib/html-rendering"
+        }
+      ]
+    },
+    {
+      "id": "@scalar/api-reference@1.51.0->1.52.0",
+      "pkg": "@scalar/api-reference",
+      "from": "1.51.0",
+      "to": "1.52.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./ssr"
+        }
+      ]
+    },
+    {
+      "id": "@scalar/api-reference@1.52.2->1.52.3",
+      "pkg": "@scalar/api-reference",
+      "from": "1.52.2",
+      "to": "1.52.3",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./browser/standalone.js"
+        }
+      ]
+    },
+    {
+      "id": "vitepress@1.5.0->1.6.0",
+      "pkg": "vitepress",
+      "from": "1.5.0",
+      "to": "1.6.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./vue-demi"
+        }
+      ]
+    },
+    {
+      "id": "@storybook/vue3@10.5.10->10.6.0",
+      "pkg": "@storybook/vue3",
+      "from": "10.5.10",
+      "to": "10.6.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./experimental-playwright"
+        }
+      ]
+    },
+    {
+      "id": "daisyui@5.5.23->5.6.0",
+      "pkg": "daisyui",
+      "from": "5.5.23",
+      "to": "5.6.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "@nuxt/ui@2.21.1->2.22.0",
+      "pkg": "@nuxt/ui",
+      "from": "2.21.1",
+      "to": "2.22.0",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was ./dist/types.d.ts)"
+        }
+      ]
+    },
+    {
+      "id": "@nuxt/ui@3.0.2->3.1.0",
+      "pkg": "@nuxt/ui",
+      "from": "3.0.2",
+      "to": "3.1.0",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was ./dist/types.d.ts)"
+        }
+      ]
+    },
+    {
+      "id": "@nuxt/ui@4.3.0->4.4.0",
+      "pkg": "@nuxt/ui",
+      "from": "4.3.0",
+      "to": "4.4.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer tailwindcss@^4.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@nuxt/ui@4.8.2->4.9.0",
+      "pkg": "@nuxt/ui",
+      "from": "4.8.2",
+      "to": "4.9.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/pm@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/core@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/vue-3@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/markdown@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/suggestion@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/starter-kit@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/extension-code@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/extension-image@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/extension-mention@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/extension-node-range@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/extension-bubble-menu@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/extension-drag-handle@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/extension-placeholder@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/extension-collaboration@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/extension-floating-menu@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/extension-horizontal-rule@^3"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @tiptap/extension-drag-handle-vue-3@^3"
+        }
+      ]
+    },
+    {
+      "id": "@nuxt/ui@4.11.1->4.11.2",
+      "pkg": "@nuxt/ui",
+      "from": "4.11.1",
+      "to": "4.11.2",
+      "rules": [
+        {
+          "rule": "bin-removed",
+          "detail": "bin removed: nuxt-ui"
+        }
+      ]
+    },
+    {
+      "id": "motion-v@1.5.0->1.6.0",
+      "pkg": "motion-v",
+      "from": "1.5.0",
+      "to": "1.6.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @vueuse/core@^10.0.0"
+        }
+      ]
+    },
+    {
+      "id": "@vueuse/nuxt@14.3.0->14.4.0",
+      "pkg": "@vueuse/nuxt",
+      "from": "14.3.0",
+      "to": "14.4.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./*"
+        }
+      ]
+    },
+    {
+      "id": "pinia-plugin-persistedstate@4.2.0->4.3.0",
+      "pkg": "pinia-plugin-persistedstate",
+      "from": "4.2.0",
+      "to": "4.3.0",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer pinia >=2.3.0 → >=3.0.0"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-vuejs-accessibility@2.4.1->2.4.2",
+      "pkg": "eslint-plugin-vuejs-accessibility",
+      "from": "2.4.1",
+      "to": "2.4.2",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer globals@>= 13.12.1"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-vuejs-accessibility@2.6.0->2.6.1",
+      "pkg": "eslint-plugin-vuejs-accessibility",
+      "from": "2.6.0",
+      "to": "2.6.1",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was ./dist/index.d.ts)"
+        }
+      ]
+    },
+    {
+      "id": "@vueuse/components@12.1.0->12.2.0",
+      "pkg": "@vueuse/components",
+      "from": "12.1.0",
+      "to": "12.2.0",
+      "rules": [
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "ag-grid-vue3@33.0.2->33.0.3",
+      "pkg": "ag-grid-vue3",
+      "from": "33.0.2",
+      "to": "33.0.3",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "@vueuse/math@12.1.0->12.2.0",
+      "pkg": "@vueuse/math",
+      "from": "12.1.0",
+      "to": "12.2.0",
+      "rules": [
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "@vueuse/router@12.1.0->12.2.0",
+      "pkg": "@vueuse/router",
+      "from": "12.1.0",
+      "to": "12.2.0",
+      "rules": [
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "vue-tel-input@9.2.0->9.3.0",
+      "pkg": "vue-tel-input",
+      "from": "9.2.0",
+      "to": "9.3.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer vue@^3.5.4"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer libphonenumber-js@^1.10.51"
+        }
+      ]
+    },
+    {
+      "id": "shaders@3.0.440->3.0.441",
+      "pkg": "shaders",
+      "from": "3.0.440",
+      "to": "3.0.441",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./core/Caustics"
+        }
+      ]
+    },
+    {
+      "id": "shaders@3.0.442->3.0.443",
+      "pkg": "shaders",
+      "from": "3.0.442",
+      "to": "3.0.443",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./core/MeshGradient"
+        }
+      ]
+    },
+    {
+      "id": "shaders@3.0.443->3.0.444",
+      "pkg": "shaders",
+      "from": "3.0.443",
+      "to": "3.0.444",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./pixi"
+        }
+      ]
+    },
+    {
+      "id": "splitpanes@3.1.5->3.1.7",
+      "pkg": "splitpanes",
+      "from": "3.1.5",
+      "to": "3.1.7",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer vue@^3.2.0"
+        }
+      ]
+    },
+    {
+      "id": "splitpanes@3.1.6->3.1.8",
+      "pkg": "splitpanes",
+      "from": "3.1.6",
+      "to": "3.1.8",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer vue@^3.2.0"
+        }
+      ]
+    },
+    {
+      "id": "vue-pdf-embed@2.1.3->2.1.4",
+      "pkg": "vue-pdf-embed",
+      "from": "2.1.3",
+      "to": "2.1.4",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./dist/styles/*.css"
+        }
+      ]
+    },
+    {
+      "id": "nuxt-security@2.2.0->2.3.0",
+      "pkg": "nuxt-security",
+      "from": "2.2.0",
+      "to": "2.3.0",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "main field removed (was ./dist/module.cjs)"
+        },
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was ./dist/module.d.ts)"
+        }
+      ]
+    },
+    {
+      "id": "boneyard-js@1.1.0->1.1.1",
+      "pkg": "boneyard-js",
+      "from": "1.1.0",
+      "to": "1.1.1",
+      "rules": [
+        {
+          "rule": "bin-removed",
+          "detail": "bin removed: boneyard"
+        }
+      ]
+    },
+    {
+      "id": "eslint-config-prettier@10.0.3->10.1.0",
+      "pkg": "eslint-config-prettier",
+      "from": "10.0.3",
+      "to": "10.1.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "lint-staged@15.4.3->15.5.0",
+      "pkg": "lint-staged",
+      "from": "15.4.3",
+      "to": "15.5.0",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was lib/types.d.ts)"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-prettier@5.2.4->5.2.5",
+      "pkg": "eslint-plugin-prettier",
+      "from": "5.2.4",
+      "to": "5.2.5",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer eslint-config-prettier * → >= 7.0.0 <10.0.0 || >=10.1.0"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-storybook@9.0.7->9.0.8",
+      "pkg": "eslint-plugin-storybook",
+      "from": "9.0.7",
+      "to": "9.0.8",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was ./dist/index.d.ts)"
+        },
+        {
+          "rule": "peer-added",
+          "detail": "new required peer storybook@^9.0.8"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-testing-library@7.14.0->7.15.0",
+      "pkg": "eslint-plugin-testing-library",
+      "from": "7.14.0",
+      "to": "7.15.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        },
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-import-x@4.9.4->4.10.0",
+      "pkg": "eslint-plugin-import-x",
+      "from": "4.9.4",
+      "to": "4.10.0",
+      "rules": [
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: commonjs → module"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-jsdoc@52.0.2->52.0.3",
+      "pkg": "eslint-plugin-jsdoc",
+      "from": "52.0.2",
+      "to": "52.0.3",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "main field removed (was ./dist/index.cjs)"
+        },
+        {
+          "rule": "entry-removed",
+          "detail": "types field removed (was ./dist/index.d.ts)"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-jsdoc@52.0.3->52.0.4",
+      "pkg": "eslint-plugin-jsdoc",
+      "from": "52.0.3",
+      "to": "52.0.4",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./package.json"
+        }
+      ]
+    },
+    {
+      "id": "@vitest/eslint-plugin@1.1.34->1.1.35",
+      "pkg": "@vitest/eslint-plugin",
+      "from": "1.1.34",
+      "to": "1.1.35",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @typescript-eslint/utils@^8.24.0"
+        }
+      ]
+    },
+    {
+      "id": "@vitest/eslint-plugin@1.1.40->1.1.42",
+      "pkg": "@vitest/eslint-plugin",
+      "from": "1.1.40",
+      "to": "1.1.42",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @typescript-eslint/utils@>= 8.24.0"
+        }
+      ]
+    },
+    {
+      "id": "@vitest/eslint-plugin@1.6.27->1.6.28",
+      "pkg": "@vitest/eslint-plugin",
+      "from": "1.6.27",
+      "to": "1.6.28",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer typescript >=5.0.0 → >=6.0.0"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-turbo@2.3.3->2.3.4",
+      "pkg": "eslint-plugin-turbo",
+      "from": "2.3.3",
+      "to": "2.3.4",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer turbo@>2.0.0"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-cypress@5.3.0->5.4.0",
+      "pkg": "eslint-plugin-cypress",
+      "from": "5.3.0",
+      "to": "5.4.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./flat"
+        }
+      ]
+    },
+    {
+      "id": "@typescript-eslint/rule-tester@8.59.1->8.59.2",
+      "pkg": "@typescript-eslint/rule-tester",
+      "from": "8.59.1",
+      "to": "8.59.2",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer typescript@>=4.8.4 <6.1.0"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-no-only-tests@3.3.0->3.4.0",
+      "pkg": "eslint-plugin-no-only-tests",
+      "from": "3.3.0",
+      "to": "3.4.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-boundaries@5.0.2->5.1.0",
+      "pkg": "eslint-plugin-boundaries",
+      "from": "5.0.2",
+      "to": "5.1.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-boundaries@5.1.0->5.2.0",
+      "pkg": "eslint-plugin-boundaries",
+      "from": "5.1.0",
+      "to": "5.2.0",
+      "rules": [
+        {
+          "rule": "exports-subpath-removed",
+          "detail": "exports removed: ./rules, ./settings"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-mocha@11.0.0->11.1.0",
+      "pkg": "eslint-plugin-mocha",
+      "from": "11.0.0",
+      "to": "11.1.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer eslint@>=9.0.0"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-tailwindcss@4.0.4->4.0.5",
+      "pkg": "eslint-plugin-tailwindcss",
+      "from": "4.0.4",
+      "to": "4.0.5",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer eslint@^9.0.0 || ^10.0.0"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-oxlint@1.56.0->1.57.0",
+      "pkg": "eslint-plugin-oxlint",
+      "from": "1.56.0",
+      "to": "1.57.0",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer oxlint@~1.57.0"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-no-unsanitized@4.1.4->4.1.5",
+      "pkg": "eslint-plugin-no-unsanitized",
+      "from": "4.1.4",
+      "to": "4.1.5",
+      "rules": [
+        {
+          "rule": "peer-tightened",
+          "detail": "peer eslint ^8 || ^9 → ^9 || ^10"
+        }
+      ]
+    },
+    {
+      "id": "eslint-typegen@2.3.0->2.3.1",
+      "pkg": "eslint-typegen",
+      "from": "2.3.0",
+      "to": "2.3.1",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "main field removed (was ./dist/index.mjs)"
+        },
+        {
+          "rule": "entry-removed",
+          "detail": "module field removed (was ./dist/index.mjs)"
+        }
+      ]
+    },
+    {
+      "id": "eslint-config-turbo@2.3.1->2.3.2",
+      "pkg": "eslint-config-turbo",
+      "from": "2.3.1",
+      "to": "2.3.2",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "eslint-config-turbo@2.3.3->2.3.4",
+      "pkg": "eslint-config-turbo",
+      "from": "2.3.3",
+      "to": "2.3.4",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer turbo@>2.0.0"
+        }
+      ]
+    },
+    {
+      "id": "eslint-config-turbo@2.5.8->2.6.0",
+      "pkg": "eslint-config-turbo",
+      "from": "2.5.8",
+      "to": "2.6.0",
+      "rules": [
+        {
+          "rule": "entry-removed",
+          "detail": "module field removed (was ./dist/es/index.mjs)"
+        }
+      ]
+    },
+    {
+      "id": "prettier-eslint@17.0.1->17.1.0",
+      "pkg": "prettier-eslint",
+      "from": "17.0.1",
+      "to": "17.1.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        },
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: commonjs → module"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-formatjs@6.0.8->6.0.9",
+      "pkg": "eslint-plugin-formatjs",
+      "from": "6.0.8",
+      "to": "6.0.9",
+      "rules": [
+        {
+          "rule": "peer-added",
+          "detail": "new required peer @types/eslint@9"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-formatjs@6.4.0->6.4.1",
+      "pkg": "eslint-plugin-formatjs",
+      "from": "6.4.0",
+      "to": "6.4.1",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        }
+      ]
+    },
+    {
+      "id": "eslint-mdx@3.2.0->3.3.0",
+      "pkg": "eslint-mdx",
+      "from": "3.2.0",
+      "to": "3.3.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        },
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    },
+    {
+      "id": "eslint-plugin-mdx@3.2.0->3.3.0",
+      "pkg": "eslint-plugin-mdx",
+      "from": "3.2.0",
+      "to": "3.3.0",
+      "rules": [
+        {
+          "rule": "exports-map-added",
+          "detail": "exports map added (blocks deep imports that previously worked)"
+        },
+        {
+          "rule": "switched-to-esm",
+          "detail": "type: (commonjs) → module"
+        }
+      ]
+    }
+  ]
+}
