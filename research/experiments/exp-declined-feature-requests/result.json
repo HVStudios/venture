@@ -1,0 +1,735 @@
+{
+  "experiment": "exp-declined-feature-requests",
+  "executedAt": "2026-11-16T14:55:20.345Z",
+  "window": {
+    "from": "2023-11-16",
+    "to": "2026-11-16"
+  },
+  "topics": [
+    "developer-tools",
+    "cli",
+    "terminal",
+    "editor",
+    "testing",
+    "devops"
+  ],
+  "minUpvotes": 20,
+  "repositories": [
+    "affaan-m/ECC",
+    "DietrichGebert/ponytail",
+    "Graphify-Labs/graphify",
+    "tt-a1i/archify",
+    "puppeteer/puppeteer",
+    "OpenHands/OpenHands",
+    "rtk-ai/rtk",
+    "hoppscotch/hoppscotch",
+    "ComposioHQ/awesome-claude-skills",
+    "Ebony-Vinyl/dsh-our-free-model",
+    "ayghri/i-have-adhd",
+    "herdrdev/herdr",
+    "sickn33/agentic-awesome-skills",
+    "DeusData/codebase-memory-mcp",
+    "GitHubDaily/GitHubDaily",
+    "morluto/rea",
+    "n8n-io/n8n",
+    "yt-dlp/yt-dlp",
+    "ohmyzsh/ohmyzsh",
+    "sherlock-project/sherlock",
+    "Panniantong/Agent-Reach",
+    "google-gemini/gemini-cli",
+    "junegunn/fzf",
+    "jesseduffield/lazygit",
+    "BurntSushi/ripgrep",
+    "tldr-pages/tldr",
+    "tw93/Pake",
+    "Raphire/Win11Debloat",
+    "stablyai/orca",
+    "microsoft/terminal",
+    "Eugeny/tabby",
+    "alacritty/alacritty",
+    "warpdotdev/warp",
+    "termux/termux-app",
+    "sharkdp/bat",
+    "Textualize/rich",
+    "sharkdp/fd",
+    "sxyazi/yazi",
+    "chubin/cheat.sh",
+    "microsoft/vscode",
+    "OpenCut-app/OpenCut",
+    "toeverything/AFFiNE",
+    "marktext/marktext",
+    "slab/quill",
+    "microsoft/monaco-editor",
+    "mifi/lossless-cut",
+    "drawdb-io/drawdb",
+    "ueberdosis/tiptap",
+    "VSCodium/vscodium",
+    "codex-team/editor.js",
+    "ianstormtaylor/slate",
+    "notepad-plus-plus/notepad-plus-plus",
+    "micro-editor/micro",
+    "NickeManarin/ScreenToGif",
+    "goldbergyoni/nodebestpractices",
+    "microsoft/playwright",
+    "storybookjs/storybook",
+    "usebruno/bruno",
+    "jestjs/jest",
+    "promptfoo/promptfoo",
+    "stretchr/testify",
+    "goldbergyoni/javascript-testing-best-practices",
+    "quii/learn-go-with-tests",
+    "mochajs/mocha",
+    "catchorg/Catch2",
+    "avajs/ava",
+    "keploy/keploy",
+    "trimstray/the-book-of-secret-knowledge",
+    "bregman-arie/devops-exercises",
+    "netdata/netdata",
+    "binhnguyennus/awesome-scalability",
+    "nektos/act",
+    "go-gitea/gitea",
+    "getsentry/sentry",
+    "Kong/kong",
+    "httpie/cli",
+    "Dokploy/dokploy",
+    "awesome-foss/awesome-sysadmin",
+    "dokku/dokku",
+    "floci-io/floci",
+    "MichaelCade/90DaysOfDevOps",
+    "kestra-io/kestra"
+  ],
+  "issuesScanned": 668,
+  "candidates": 31,
+  "sample": [
+    {
+      "id": "microsoft/vscode#249826",
+      "repo": "microsoft/vscode",
+      "number": 249826,
+      "title": "Add support for Bluetooth for web extensions",
+      "url": "https://github.com/microsoft/vscode/issues/249826",
+      "labels": [
+        "feature-request",
+        "web"
+      ],
+      "upvotes": 70,
+      "comments": 6,
+      "createdAt": "2025-05-26",
+      "closedAt": "2025-08-03",
+      "commentsRead": 6,
+      "payOffers": 0,
+      "payOfferExamples": [],
+      "lastMaintainerComment": "How do we reopen this @vs-code-enginnering? Would be nice to have this @mjbvz\n"
+    },
+    {
+      "id": "google-gemini/gemini-cli#5874",
+      "repo": "google-gemini/gemini-cli",
+      "number": 5874,
+      "title": "Feature: Neovim IDE Integration",
+      "url": "https://github.com/google-gemini/gemini-cli/issues/5874",
+      "labels": [
+        "priority/p2",
+        "area/core",
+        "🔒 maintainer only",
+        "kind/enhancement"
+      ],
+      "upvotes": 42,
+      "comments": 11,
+      "createdAt": "2025-08-09",
+      "closedAt": "2026-05-06",
+      "commentsRead": 11,
+      "payOffers": 0,
+      "payOfferExamples": [],
+      "lastMaintainerComment": null
+    },
+    {
+      "id": "microsoft/playwright#35294",
+      "repo": "microsoft/playwright",
+      "number": 35294,
+      "title": "[Feature]: all locators only select visible elements by default",
+      "url": "https://github.com/microsoft/playwright/issues/35294",
+      "labels": [
+        "archive"
+      ],
+      "upvotes": 32,
+      "comments": 9,
+      "createdAt": "2025-03-20",
+      "closedAt": "2026-10-31",
+      "commentsRead": 9,
+      "payOffers": 0,
+      "payOfferExamples": [],
+      "lastMaintainerComment": "We're closing all `P3-collecting-feedback` issues and retiring the label. #43813 explains why. This doesn't mean the request is wrong. If it still matters to you, please open a new issue against the latest Playwright version with your concrete use case and link back here."
+    },
+    {
+      "id": "Dokploy/dokploy#1851",
+      "repo": "Dokploy/dokploy",
+      "number": 1851,
+      "title": "Move project to different organization",
+      "url": "https://github.com/Dokploy/dokploy/issues/1851",
+      "labels": [
+        "enhancement"
+      ],
+      "upvotes": 23,
+      "comments": 16,
+      "createdAt": "2025-05-08",
+      "closedAt": "2026-09-09",
+      "commentsRead": 16,
+      "payOffers": 0,
+      "payOfferExamples": [],
+      "lastMaintainerComment": null
+    },
+    {
+      "id": "netdata/netdata#19007",
+      "repo": "netdata/netdata",
+      "number": 19007,
+      "title": "[Feat]: disable Netdata cloud sign-in splash",
+      "url": "https://github.com/netdata/netdata/issues/19007",
+      "labels": [
+        "feature request",
+        "needs triage"
+      ],
+      "upvotes": 31,
+      "comments": 9,
+      "createdAt": "2024-11-13",
+      "closedAt": "2024-11-13",
+      "commentsRead": 9,
+      "payOffers": 0,
+      "payOfferExamples": [],
+      "lastMaintainerComment": "I don't like it either, but it's not my decision 🤷‍♂️ "
+    },
+    {
+      "id": "usebruno/bruno#6816",
+      "repo": "usebruno/bruno",
+      "number": 6816,
+      "title": "Change default workspace location",
+      "url": "https://github.com/usebruno/bruno/issues/6816",
+      "labels": [
+        "enhancement",
+        "module-workspaces"
+      ],
+      "upvotes": 28,
+      "comments": 20,
+      "createdAt": "2026-01-14",
+      "closedAt": "2026-06-05",
+      "commentsRead": 20,
+      "payOffers": 0,
+      "payOfferExamples": [],
+      "lastMaintainerComment": null
+    },
+    {
+      "id": "OpenHands/OpenHands#5325",
+      "repo": "OpenHands/OpenHands",
+      "number": 5325,
+      "title": "Support podman",
+      "url": "https://github.com/OpenHands/OpenHands/issues/5325",
+      "labels": [
+        "enhancement",
+        "Stale"
+      ],
+      "upvotes": 25,
+      "comments": 26,
+      "createdAt": "2024-11-29",
+      "closedAt": "2025-12-08",
+      "commentsRead": 26,
+      "payOffers": 0,
+      "payOfferExamples": [],
+      "lastMaintainerComment": "Is this supported now? Some folks seem to have got it working so want to know where we are with this?"
+    },
+    {
+      "id": "herdrdev/herdr#261",
+      "repo": "herdrdev/herdr",
+      "number": 261,
+      "title": "Support placeholders in [worktrees].directory for sibling-folder layouts",
+      "url": "https://github.com/herdrdev/herdr/issues/261",
+      "labels": [
+        "intends-to-pr",
+        "planned"
+      ],
+      "upvotes": 24,
+      "comments": 13,
+      "createdAt": "2026-05-23",
+      "closedAt": "2026-08-02",
+      "commentsRead": 13,
+      "payOffers": 0,
+      "payOfferExamples": [],
+      "lastMaintainerComment": null
+    },
+    {
+      "id": "notepad-plus-plus/notepad-plus-plus#15932",
+      "repo": "notepad-plus-plus/notepad-plus-plus",
+      "number": 15932,
+      "title": "Request for Apolitical Release Notes and Documentation",
+      "url": "https://github.com/notepad-plus-plus/notepad-plus-plus/issues/15932",
+      "labels": [],
+      "upvotes": 35,
+      "comments": 14,
+      "createdAt": "2024-12-10",
+      "closedAt": "2024-12-11",
+      "commentsRead": 13,
+      "payOffers": 0,
+      "payOfferExamples": [],
+      "lastMaintainerComment": null
+    }
+  ],
+  "candidatesList": [
+    {
+      "id": "OpenHands/OpenHands#5325",
+      "repo": "OpenHands/OpenHands",
+      "number": 5325,
+      "title": "Support podman",
+      "url": "https://github.com/OpenHands/OpenHands/issues/5325",
+      "labels": [
+        "enhancement",
+        "Stale"
+      ],
+      "upvotes": 25,
+      "comments": 26,
+      "createdAt": "2024-11-29",
+      "closedAt": "2025-12-08"
+    },
+    {
+      "id": "herdrdev/herdr#261",
+      "repo": "herdrdev/herdr",
+      "number": 261,
+      "title": "Support placeholders in [worktrees].directory for sibling-folder layouts",
+      "url": "https://github.com/herdrdev/herdr/issues/261",
+      "labels": [
+        "intends-to-pr",
+        "planned"
+      ],
+      "upvotes": 24,
+      "comments": 13,
+      "createdAt": "2026-05-23",
+      "closedAt": "2026-08-02"
+    },
+    {
+      "id": "google-gemini/gemini-cli#2208",
+      "repo": "google-gemini/gemini-cli",
+      "number": 2208,
+      "title": "Feature Request: Option to Disable Automatic Model Fallback (Pro to Flash)",
+      "url": "https://github.com/google-gemini/gemini-cli/issues/2208",
+      "labels": [
+        "priority/p3",
+        "area/core",
+        "status/needs-info"
+      ],
+      "upvotes": 58,
+      "comments": 13,
+      "createdAt": "2025-06-27",
+      "closedAt": "2026-04-09"
+    },
+    {
+      "id": "google-gemini/gemini-cli#1698",
+      "repo": "google-gemini/gemini-cli",
+      "number": 1698,
+      "title": "Add support for VISUAL/EDITOR environment variable in external editor selection",
+      "url": "https://github.com/google-gemini/gemini-cli/issues/1698",
+      "labels": [
+        "priority/p2",
+        "priority/p3",
+        "area/agent",
+        "Stale",
+        "kind/customer-issue",
+        "status/bot-triaged"
+      ],
+      "upvotes": 55,
+      "comments": 14,
+      "createdAt": "2025-06-26",
+      "closedAt": "2026-07-24"
+    },
+    {
+      "id": "google-gemini/gemini-cli#1679",
+      "repo": "google-gemini/gemini-cli",
+      "number": 1679,
+      "title": "Feature Request: Allow configuration of a custom API endpoint and API key header",
+      "url": "https://github.com/google-gemini/gemini-cli/issues/1679",
+      "labels": [
+        "priority/p2",
+        "area/enterprise",
+        "Stale",
+        "kind/customer-issue",
+        "status/bot-triaged",
+        "status/need-information"
+      ],
+      "upvotes": 54,
+      "comments": 6,
+      "createdAt": "2025-06-26",
+      "closedAt": "2026-05-14"
+    },
+    {
+      "id": "google-gemini/gemini-cli#5874",
+      "repo": "google-gemini/gemini-cli",
+      "number": 5874,
+      "title": "Feature: Neovim IDE Integration",
+      "url": "https://github.com/google-gemini/gemini-cli/issues/5874",
+      "labels": [
+        "priority/p2",
+        "area/core",
+        "🔒 maintainer only",
+        "kind/enhancement"
+      ],
+      "upvotes": 42,
+      "comments": 11,
+      "createdAt": "2025-08-09",
+      "closedAt": "2026-05-06"
+    },
+    {
+      "id": "microsoft/vscode#208093",
+      "repo": "microsoft/vscode",
+      "number": 208093,
+      "title": "add raiseWindow function",
+      "url": "https://github.com/microsoft/vscode/issues/208093",
+      "labels": [
+        "feature-request",
+        "api"
+      ],
+      "upvotes": 107,
+      "comments": 8,
+      "createdAt": "2024-03-19",
+      "closedAt": "2026-11-06"
+    },
+    {
+      "id": "microsoft/vscode#306502",
+      "repo": "microsoft/vscode",
+      "number": 306502,
+      "title": "Feature Request: Sync GitHub Copilot Chat History Across Devices",
+      "url": "https://github.com/microsoft/vscode/issues/306502",
+      "labels": [
+        "feature-request",
+        "*out-of-scope",
+        "panel-chat"
+      ],
+      "upvotes": 87,
+      "comments": 10,
+      "createdAt": "2026-03-30",
+      "closedAt": "2026-05-19"
+    },
+    {
+      "id": "microsoft/vscode#236991",
+      "repo": "microsoft/vscode",
+      "number": 236991,
+      "title": "Ghostty as replacement to Xterm",
+      "url": "https://github.com/microsoft/vscode/issues/236991",
+      "labels": [
+        "*out-of-scope"
+      ],
+      "upvotes": 76,
+      "comments": 32,
+      "createdAt": "2024-12-27",
+      "closedAt": "2025-01-06"
+    },
+    {
+      "id": "microsoft/vscode#249826",
+      "repo": "microsoft/vscode",
+      "number": 249826,
+      "title": "Add support for Bluetooth for web extensions",
+      "url": "https://github.com/microsoft/vscode/issues/249826",
+      "labels": [
+        "feature-request",
+        "web"
+      ],
+      "upvotes": 70,
+      "comments": 6,
+      "createdAt": "2025-05-26",
+      "closedAt": "2025-08-03"
+    },
+    {
+      "id": "microsoft/vscode#202543",
+      "repo": "microsoft/vscode",
+      "number": 202543,
+      "title": "Feature Request: Support VSCode running natively in Vision Pro",
+      "url": "https://github.com/microsoft/vscode/issues/202543",
+      "labels": [
+        "*out-of-scope"
+      ],
+      "upvotes": 68,
+      "comments": 31,
+      "createdAt": "2024-01-15",
+      "closedAt": "2024-01-18"
+    },
+    {
+      "id": "microsoft/vscode#203326",
+      "repo": "microsoft/vscode",
+      "number": 203326,
+      "title": "Add an option to suppress the overwrite prompt in showSaveDialog",
+      "url": "https://github.com/microsoft/vscode/issues/203326",
+      "labels": [
+        "feature-request",
+        "file-io"
+      ],
+      "upvotes": 60,
+      "comments": 11,
+      "createdAt": "2024-01-24",
+      "closedAt": "2024-03-25"
+    },
+    {
+      "id": "microsoft/vscode#249904",
+      "repo": "microsoft/vscode",
+      "number": 249904,
+      "title": "Send VS Code notifications via Codex CLI",
+      "url": "https://github.com/microsoft/vscode/issues/249904",
+      "labels": [
+        "feature-request",
+        "workbench-notifications"
+      ],
+      "upvotes": 59,
+      "comments": 4,
+      "createdAt": "2025-05-27",
+      "closedAt": "2026-11-06"
+    },
+    {
+      "id": "microsoft/vscode#265651",
+      "repo": "microsoft/vscode",
+      "number": 265651,
+      "title": "Add dev.containers.defaultMounts setting for personal mount paths in devcontainers",
+      "url": "https://github.com/microsoft/vscode/issues/265651",
+      "labels": [
+        "feature-request",
+        "containers"
+      ],
+      "upvotes": 49,
+      "comments": 12,
+      "createdAt": "2025-09-08",
+      "closedAt": "2026-02-10"
+    },
+    {
+      "id": "microsoft/vscode#204933",
+      "repo": "microsoft/vscode",
+      "number": 204933,
+      "title": "Status bar placement",
+      "url": "https://github.com/microsoft/vscode/issues/204933",
+      "labels": [
+        "feature-request",
+        "layout",
+        "workbench-status"
+      ],
+      "upvotes": 47,
+      "comments": 5,
+      "createdAt": "2024-02-11",
+      "closedAt": "2024-04-14"
+    },
+    {
+      "id": "notepad-plus-plus/notepad-plus-plus#15932",
+      "repo": "notepad-plus-plus/notepad-plus-plus",
+      "number": 15932,
+      "title": "Request for Apolitical Release Notes and Documentation",
+      "url": "https://github.com/notepad-plus-plus/notepad-plus-plus/issues/15932",
+      "labels": [],
+      "upvotes": 35,
+      "comments": 14,
+      "createdAt": "2024-12-10",
+      "closedAt": "2024-12-11"
+    },
+    {
+      "id": "microsoft/playwright#31163",
+      "repo": "microsoft/playwright",
+      "number": 31163,
+      "title": "[Feature]: Firefox-ESR Support",
+      "url": "https://github.com/microsoft/playwright/issues/31163",
+      "labels": [
+        "archive"
+      ],
+      "upvotes": 65,
+      "comments": 8,
+      "createdAt": "2024-06-05",
+      "closedAt": "2026-05-08"
+    },
+    {
+      "id": "microsoft/playwright#37812",
+      "repo": "microsoft/playwright",
+      "number": 37812,
+      "title": "[Feature]: Support for Red Hat and Oracle Linux",
+      "url": "https://github.com/microsoft/playwright/issues/37812",
+      "labels": [
+        "archive"
+      ],
+      "upvotes": 63,
+      "comments": 9,
+      "createdAt": "2025-10-12",
+      "closedAt": "2026-10-31"
+    },
+    {
+      "id": "microsoft/playwright#35885",
+      "repo": "microsoft/playwright",
+      "number": 35885,
+      "title": "[Feature]: Enable Playwright to Click Accessible, Re-styled `checkbox`es and `radio`s",
+      "url": "https://github.com/microsoft/playwright/issues/35885",
+      "labels": [
+        "archive"
+      ],
+      "upvotes": 49,
+      "comments": 10,
+      "createdAt": "2025-05-07",
+      "closedAt": "2026-10-31"
+    },
+    {
+      "id": "microsoft/playwright#29646",
+      "repo": "microsoft/playwright",
+      "number": 29646,
+      "title": "[Feature]: decorators (again)",
+      "url": "https://github.com/microsoft/playwright/issues/29646",
+      "labels": [
+        "archive"
+      ],
+      "upvotes": 44,
+      "comments": 27,
+      "createdAt": "2024-02-24",
+      "closedAt": "2024-02-29"
+    },
+    {
+      "id": "microsoft/playwright#34348",
+      "repo": "microsoft/playwright",
+      "number": 34348,
+      "title": "[Feature]: Resolve Elements with aria-owns and aria-controls as Children in getByRole Method",
+      "url": "https://github.com/microsoft/playwright/issues/34348",
+      "labels": [
+        "archive"
+      ],
+      "upvotes": 41,
+      "comments": 21,
+      "createdAt": "2025-01-16",
+      "closedAt": "2026-05-12"
+    },
+    {
+      "id": "microsoft/playwright#28857",
+      "repo": "microsoft/playwright",
+      "number": 28857,
+      "title": "[Feature] Exponential backoff on retries",
+      "url": "https://github.com/microsoft/playwright/issues/28857",
+      "labels": [
+        "archive"
+      ],
+      "upvotes": 35,
+      "comments": 13,
+      "createdAt": "2024-01-04",
+      "closedAt": "2026-05-13"
+    },
+    {
+      "id": "microsoft/playwright#32803",
+      "repo": "microsoft/playwright",
+      "number": 32803,
+      "title": "[Feature]: An option to NOT shutdown worker after test failure",
+      "url": "https://github.com/microsoft/playwright/issues/32803",
+      "labels": [
+        "archive"
+      ],
+      "upvotes": 35,
+      "comments": 27,
+      "createdAt": "2024-09-25",
+      "closedAt": "2026-05-12"
+    },
+    {
+      "id": "microsoft/playwright#31729",
+      "repo": "microsoft/playwright",
+      "number": 31729,
+      "title": "[Feature]: Publish Docker images containing only one browser",
+      "url": "https://github.com/microsoft/playwright/issues/31729",
+      "labels": [
+        "archive"
+      ],
+      "upvotes": 34,
+      "comments": 4,
+      "createdAt": "2024-07-17",
+      "closedAt": "2026-05-12"
+    },
+    {
+      "id": "microsoft/playwright#29227",
+      "repo": "microsoft/playwright",
+      "number": 29227,
+      "title": "[Feature] Support remote storage for visual regression testing",
+      "url": "https://github.com/microsoft/playwright/issues/29227",
+      "labels": [],
+      "upvotes": 32,
+      "comments": 22,
+      "createdAt": "2024-01-29",
+      "closedAt": "2026-05-08"
+    },
+    {
+      "id": "microsoft/playwright#35294",
+      "repo": "microsoft/playwright",
+      "number": 35294,
+      "title": "[Feature]: all locators only select visible elements by default",
+      "url": "https://github.com/microsoft/playwright/issues/35294",
+      "labels": [
+        "archive"
+      ],
+      "upvotes": 32,
+      "comments": 9,
+      "createdAt": "2025-03-20",
+      "closedAt": "2026-10-31"
+    },
+    {
+      "id": "usebruno/bruno#1537",
+      "repo": "usebruno/bruno",
+      "number": 1537,
+      "title": "Support for http files (VSCode REST Client / IntelliJ HTTP Client)",
+      "url": "https://github.com/usebruno/bruno/issues/1537",
+      "labels": [
+        "enhancement",
+        "module-importers",
+        "module-vscode"
+      ],
+      "upvotes": 80,
+      "comments": 16,
+      "createdAt": "2024-02-07",
+      "closedAt": "2026-07-11"
+    },
+    {
+      "id": "usebruno/bruno#6816",
+      "repo": "usebruno/bruno",
+      "number": 6816,
+      "title": "Change default workspace location",
+      "url": "https://github.com/usebruno/bruno/issues/6816",
+      "labels": [
+        "enhancement",
+        "module-workspaces"
+      ],
+      "upvotes": 28,
+      "comments": 20,
+      "createdAt": "2026-01-14",
+      "closedAt": "2026-06-05"
+    },
+    {
+      "id": "netdata/netdata#19007",
+      "repo": "netdata/netdata",
+      "number": 19007,
+      "title": "[Feat]: disable Netdata cloud sign-in splash",
+      "url": "https://github.com/netdata/netdata/issues/19007",
+      "labels": [
+        "feature request",
+        "needs triage"
+      ],
+      "upvotes": 31,
+      "comments": 9,
+      "createdAt": "2024-11-13",
+      "closedAt": "2024-11-13"
+    },
+    {
+      "id": "Dokploy/dokploy#1765",
+      "repo": "Dokploy/dokploy",
+      "number": 1765,
+      "title": "Support use sso (like OIDC .etc) to login or signup Dokploy",
+      "url": "https://github.com/Dokploy/dokploy/issues/1765",
+      "labels": [
+        "enhancement"
+      ],
+      "upvotes": 27,
+      "comments": 9,
+      "createdAt": "2025-04-24",
+      "closedAt": "2026-09-09"
+    },
+    {
+      "id": "Dokploy/dokploy#1851",
+      "repo": "Dokploy/dokploy",
+      "number": 1851,
+      "title": "Move project to different organization",
+      "url": "https://github.com/Dokploy/dokploy/issues/1851",
+      "labels": [
+        "enhancement"
+      ],
+      "upvotes": 23,
+      "comments": 16,
+      "createdAt": "2025-05-08",
+      "closedAt": "2026-09-09"
+    }
+  ]
+}
