@@ -464,26 +464,43 @@
           "ev-wp-04"
         ],
         "epistemic": "inference"
+      },
+      {
+        "id": "f4",
+        "statement": "Abandoned plugins that people still install are real but already served. 158 of 2,151 popular plugins (7.3%) haven't been updated in two years and are still downloaded hundreds of times a month. But 9 of the 10 most-downloaded have a maintained alternative that does the same job, and the tenth is a hosting provider's own plugin no one else could replace. People stay because the old plugin is known and ranks well, not because nothing else exists.",
+        "strength": "Moderate. A pre-registered scan of 9,990 plugins plus a manual check of the top 10 (one reviewer).",
+        "evidenceIds": [
+          "ev-wp-08",
+          "ev-wp-09",
+          "ev-wp-10"
+        ],
+        "epistemic": "fact"
       }
     ],
     "uncertainties": [
-      "Whether abandoned plugins still being installed actually lack a maintained alternative (being measured).",
-      "Whether users of abandoned plugins pay for anything: many may be neglected sites.",
+      "The manual check covered only the 10 most-downloaded abandoned plugins; smaller niches among the other 148 may still have gaps.",
+      "Download counts may include automated installs.",
       "Revenue benchmarks are old and self-reported."
     ],
+    "conclusion": {
+      "belief": "The 'replace an abandoned plugin' strategy doesn't hold up as an easy way to earn money. The demand is real, but almost always already served by a maintained, free alternative. A new replacement would compete for users who haven't felt enough pain to switch. Freemium WordPress plugins can earn hundreds to a few thousand dollars a month, but the opportunity has to come from a real unmet need, not from abandonment alone.",
+      "confidence": "medium",
+      "confidenceReason": "A pre-registered scan of nearly 10,000 plugins and a manual check of the 10 biggest cases. Not high: one reviewer, and smaller niches weren't checked.",
+      "unknowns": [
+        "Whether smaller abandoned niches (below the top 10) hide real gaps",
+        "Whether users of abandoned plugins would pay to migrate"
+      ],
+      "continueInvestigation": false,
+      "continueReason": "The pre-registered test came out clearly negative. A different angle on small-money opportunities is more promising than digging further into this one."
+    },
     "nextSteps": [
       {
-        "text": "Scan the 10,000 most popular plugins for abandoned ones still being installed, then check the top 10 by hand for maintained alternatives (pre-registered).",
-        "kind": "experiment",
-        "experimentId": "exp-wp-orphaned-demand"
-      },
-      {
-        "text": "If gaps exist, profile the top niches (paid competitors, pricing, support complaints) before building anything.",
+        "text": "Area paused. A different small-money angle will be proposed to the owner (for example, starting from paid plugins' public complaints rather than from abandonment).",
         "kind": "research"
       }
     ],
-    "updatedAt": "2026-11-16T14:28:56Z",
-    "updatedInRun": "run-20261116-agent-wp-orphaned-1",
+    "updatedAt": "2026-11-16T14:34:44Z",
+    "updatedInRun": "run-20261116-agent-wp-orphaned-2",
     "author": "research director (Claude Code session)",
     "provenance": "real"
   }

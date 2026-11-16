@@ -1,0 +1,323 @@
+{
+  "run": {
+    "id": "run-20261116-agent-wp-orphaned-2",
+    "themeId": "theme-wp-orphaned-plugin-demand",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-16T14:34:44Z",
+    "completedAt": "2026-11-16T14:34:44Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Idea parked, area paused, brief updated after the outcome"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 0,
+      "sourcesCited": 0,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 1,
+      "experimentsProposed": 0
+    },
+    "queries": [],
+    "errors": [],
+    "limitations": [],
+    "usage": {
+      "note": "Interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [
+    {
+      "id": "theme-wp-orphaned-plugin-demand",
+      "name": "Unserved demand left by abandoned WordPress plugins",
+      "description": "Popular WordPress plugins that nobody maintains but sites still install, and whether a maintained freemium replacement could earn a small recurring income.",
+      "mode": "focused",
+      "keywords": [
+        "abandoned wordpress plugin",
+        "plugin not updated",
+        "alternative to plugin"
+      ],
+      "status": "paused",
+      "createdAt": "2026-11-16",
+      "notes": "Opened after the owner asked for areas with a small but real money story: not a big business, but something that could earn some revenue.",
+      "provenance": "real"
+    }
+  ],
+  "sources": [],
+  "evidence": [],
+  "problems": [],
+  "competitors": [],
+  "ideas": [
+    {
+      "id": "idea-wp-maintained-replacement-plugin",
+      "title": "Maintained freemium replacements for abandoned WordPress plugins",
+      "summary": "Find popular WordPress plugins that nobody maintains but people still install, with no maintained alternative. Build a fresh, maintained replacement with a one-click import of the old plugin's settings. Distribute it free on WordPress.org and sell a small Pro tier.",
+      "problemIds": [
+        "prob-sites-depend-on-abandoned-plugins"
+      ],
+      "themeIds": [
+        "theme-wp-orphaned-plugin-demand"
+      ],
+      "targetUsers": "Site owners and agencies still running, or newly installing, an abandoned plugin",
+      "solution": "A new plugin written from scratch (not a takeover of the old code) that does the abandoned plugin's job on current WordPress and PHP. It imports the old plugin's settings and data, and is free on WordPress.org with a Pro upgrade for advanced features or support.",
+      "competitorIds": [
+        "comp-wp-maintained-alternatives"
+      ],
+      "differentiation": "Targets demand that is already proven by daily installs but left unserved, instead of guessing at a market. The settings import removes the main reason people stay on a dead plugin.",
+      "feasibility": "Medium. The directory API shows where the demand is. A replacement for one plugin is a small PHP project, but listing it on WordPress.org and taking payments needs the owner's accounts.",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "Among the 10,000 most popular plugins, at least 10 abandoned plugins with ≥ 10,000 installs are still downloaded ≥ 300 times a month",
+          "criticality": "high",
+          "status": "supported",
+          "evidenceIds": []
+        },
+        {
+          "id": "a2",
+          "text": "At least 3 of the 10 most-downloaded such plugins have no maintained alternative that does the same job",
+          "criticality": "high",
+          "status": "refuted",
+          "evidenceIds": []
+        },
+        {
+          "id": "a3",
+          "text": "Users of abandoned plugins will switch to and pay for a maintained replacement (about 1 in 10 free users paying, as in the case studies)",
+          "criticality": "high",
+          "status": "untested",
+          "evidenceIds": []
+        }
+      ],
+      "risks": [
+        "Abandoned plugins may mostly run on neglected sites whose owners never pay",
+        "Downloads may come from automated tools or site migrations, not fresh choices",
+        "A maintainer could resume work on the original plugin",
+        "WordPress.org review rules and support load"
+      ],
+      "nextSteps": [
+        "Reopen only if a niche turns up with real demand and no maintained alternative, e.g. from the 59 plugins the tag rule flagged (an upper bound)"
+      ],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "Many stale plugins still work fine, so their users feel no pain and won't switch.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-wp-02"
+          ],
+          "response": "The experiment counts only plugins still being installed, and the manual check looks for real gaps. Willingness to switch and pay stays untested (a3).",
+          "status": "open"
+        },
+        {
+          "id": "obj-2",
+          "text": "Small plugin businesses often plateau around $1,000 a month.",
+          "severity": "minor",
+          "evidenceIds": [
+            "ev-wp-07"
+          ],
+          "response": "That's in line with the goal here: a small income, not a big business.",
+          "status": "accepted"
+        },
+        {
+          "id": "obj-3",
+          "text": "Revenue figures come from old, self-reported success stories.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-wp-05",
+            "ev-wp-06"
+          ],
+          "response": "Used only as rough benchmarks. Real willingness to pay can only be measured with a live listing, which needs the owner's approval.",
+          "status": "open"
+        },
+        {
+          "id": "obj-4",
+          "text": "Taking over an abandoned plugin is a known attack route, and users may distrust anything presented as its successor.",
+          "severity": "minor",
+          "evidenceIds": [
+            "ev-wp-04"
+          ],
+          "response": "Build a new plugin under its own name instead of taking over or buying old code.",
+          "status": "accepted"
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 3,
+            "rationale": "Security risk and upgrade breakage, though many stale plugins keep working."
+          },
+          "frequency": {
+            "score": 4,
+            "rationale": "About half of directory plugins were stale in 2015; being re-measured."
+          },
+          "userValue": {
+            "score": 3,
+            "rationale": "High for affected sites, but only if no alternative exists."
+          },
+          "competitiveGap": {
+            "score": 3,
+            "rationale": "Unknown per niche: the experiment measures it."
+          },
+          "differentiation": {
+            "score": 2,
+            "rationale": "Easy to copy once a niche is visible."
+          },
+          "feasibility": {
+            "score": 4,
+            "rationale": "A small PHP plugin per niche."
+          },
+          "costComplexity": {
+            "score": 4,
+            "rationale": "Low build cost, but ongoing support."
+          },
+          "userAccess": {
+            "score": 4,
+            "rationale": "The WordPress.org directory is the distribution channel."
+          },
+          "validationCost": {
+            "score": 5,
+            "rationale": "Demand can be measured for $0 from the directory API."
+          }
+        },
+        "assessedAt": "2026-11-16T14:28:56Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "parked",
+      "statusRationale": "Parked, as pre-registered. Abandoned but still-installed plugins are common (158 popular ones), but 9 of the 10 biggest already have a maintained alternative. A replacement would compete with existing free plugins for users who haven't felt enough pain to switch, which is not the easy small-money gap the idea assumed.",
+      "relatedIdeaIds": [],
+      "epistemic": "hypothesis",
+      "practical": {
+        "adopters": "Owners and agencies of WordPress sites that depend on an abandoned plugin",
+        "distribution": "open-core",
+        "smallestUsefulVersion": "One replacement plugin for the single most promising unserved niche, with import of the old plugin's settings and a small Pro tier.",
+        "buildableByVenture": true,
+        "buildNote": "VENTURE can find the niches and write and test the plugin code. Publishing on WordPress.org and selling the Pro tier need the owner's accounts and approval.",
+        "monetization": "Freemium: free on WordPress.org, Pro at roughly $29–79 a year. Case studies suggest hundreds to a few thousand dollars a month if a niche has real unserved demand."
+      },
+      "createdInRun": "run-20261116-agent-wp-orphaned-1",
+      "createdAt": "2026-11-16T14:28:56Z",
+      "updatedAt": "2026-11-16T14:34:44Z",
+      "provenance": "real"
+    }
+  ],
+  "experiments": [],
+  "decisions": [
+    {
+      "id": "dec-20261116-wp-maintained-replacement-plugin-park",
+      "at": "2026-11-16T14:34:44Z",
+      "runId": "run-20261116-agent-wp-orphaned-2",
+      "subjectType": "idea",
+      "subjectId": "idea-wp-maintained-replacement-plugin",
+      "action": "park",
+      "fromStatus": "advanced",
+      "toStatus": "parked",
+      "rationale": "Parked, as pre-registered. Abandoned but still-installed plugins are common (158 popular ones), but 9 of the 10 biggest already have a maintained alternative. A replacement would compete with existing free plugins for users who haven't felt enough pain to switch, which is not the easy small-money gap the idea assumed.",
+      "actor": "director",
+      "provenance": "real"
+    },
+    {
+      "id": "dec-20261116-pause-wp-orphaned-plugin-demand",
+      "at": "2026-11-16T14:34:44Z",
+      "runId": "run-20261116-agent-wp-orphaned-2",
+      "subjectType": "theme",
+      "subjectId": "theme-wp-orphaned-plugin-demand",
+      "action": "park",
+      "fromStatus": "active",
+      "toStatus": "paused",
+      "rationale": "Pausing after the pre-registered test was refuted: abandoned-plugin demand is already served. No live idea remains in this area.",
+      "actor": "director",
+      "provenance": "real"
+    }
+  ],
+  "briefs": [
+    {
+      "id": "brief-wp-orphaned-plugin-demand",
+      "themeId": "theme-wp-orphaned-plugin-demand",
+      "researchQuestion": "Thousands of WordPress sites still run, and keep installing, plugins that nobody maintains anymore. Is there demand left unserved, where a small, maintained replacement plugin could earn a modest recurring income?",
+      "whyItMatters": "Abandoned plugins leave site owners exposed to security problems and breakage, and many go looking for a replacement. The WordPress.org directory gives free distribution, and the freemium model (free plugin, paid Pro tier) is a proven way for very small developers to earn some money.",
+      "subQuestions": [
+        "How many popular plugins are abandoned but still being installed?",
+        "For those, does a maintained alternative already exist?",
+        "In the gaps, do people pay for comparable plugins, and how much?",
+        "Could VENTURE build a credible replacement for one niche?"
+      ],
+      "findings": [
+        {
+          "id": "f1",
+          "statement": "Abandonment is common: in 2015 about half of directory plugins hadn't been updated in two years. Owners of defunct plugins look for alternatives, but some stale plugins keep working fine.",
+          "strength": "Weak to moderate. Old data and anecdotes; the current rate is being measured.",
+          "evidenceIds": [
+            "ev-wp-01",
+            "ev-wp-02",
+            "ev-wp-03"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f2",
+          "statement": "Small freemium plugins do make money. Case studies report about $900 in a new plugin's first month (4,000+ free installs), and about 1 in 10 free users paying (500–600 of 6,000). Others plateau around $1,000 a month.",
+          "strength": "Weak. Self-reported, mostly old success stories; useful only as rough benchmarks.",
+          "evidenceIds": [
+            "ev-wp-05",
+            "ev-wp-06",
+            "ev-wp-07"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f3",
+          "statement": "Taking over or buying an abandoned plugin is risky and distrusted: buying plugins has been used to plant backdoors, and users aren't told when ownership changes. A replacement should be a new plugin under its own name.",
+          "strength": "Moderate. A documented 2026 incident.",
+          "evidenceIds": [
+            "ev-wp-04"
+          ],
+          "epistemic": "inference"
+        },
+        {
+          "id": "f4",
+          "statement": "Abandoned plugins that people still install are real but already served. 158 of 2,151 popular plugins (7.3%) haven't been updated in two years and are still downloaded hundreds of times a month. But 9 of the 10 most-downloaded have a maintained alternative that does the same job, and the tenth is a hosting provider's own plugin no one else could replace. People stay because the old plugin is known and ranks well, not because nothing else exists.",
+          "strength": "Moderate. A pre-registered scan of 9,990 plugins plus a manual check of the top 10 (one reviewer).",
+          "evidenceIds": [
+            "ev-wp-08",
+            "ev-wp-09",
+            "ev-wp-10"
+          ],
+          "epistemic": "fact"
+        }
+      ],
+      "uncertainties": [
+        "The manual check covered only the 10 most-downloaded abandoned plugins; smaller niches among the other 148 may still have gaps.",
+        "Download counts may include automated installs.",
+        "Revenue benchmarks are old and self-reported."
+      ],
+      "nextSteps": [
+        {
+          "text": "Area paused. A different small-money angle will be proposed to the owner (for example, starting from paid plugins' public complaints rather than from abandonment).",
+          "kind": "research"
+        }
+      ],
+      "updatedAt": "2026-11-16T14:34:44Z",
+      "updatedInRun": "run-20261116-agent-wp-orphaned-2",
+      "author": "research director (Claude Code session)",
+      "provenance": "real",
+      "conclusion": {
+        "belief": "The 'replace an abandoned plugin' strategy doesn't hold up as an easy way to earn money. The demand is real, but almost always already served by a maintained, free alternative. A new replacement would compete for users who haven't felt enough pain to switch. Freemium WordPress plugins can earn hundreds to a few thousand dollars a month, but the opportunity has to come from a real unmet need, not from abandonment alone.",
+        "confidence": "medium",
+        "confidenceReason": "A pre-registered scan of nearly 10,000 plugins and a manual check of the 10 biggest cases. Not high: one reviewer, and smaller niches weren't checked.",
+        "unknowns": [
+          "Whether smaller abandoned niches (below the top 10) hide real gaps",
+          "Whether users of abandoned plugins would pay to migrate"
+        ],
+        "continueInvestigation": false,
+        "continueReason": "The pre-registered test came out clearly negative. A different angle on small-money opportunities is more promising than digging further into this one."
+      }
+    }
+  ]
+}

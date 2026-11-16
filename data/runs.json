@@ -2190,6 +2190,40 @@
     "provenance": "real"
   },
   {
+    "id": "run-20261116-agent-wp-orphaned-2",
+    "themeId": "theme-wp-orphaned-plugin-demand",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-16T14:34:44Z",
+    "completedAt": "2026-11-16T14:34:44Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Idea parked, area paused, brief updated after the outcome"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 0,
+      "sourcesCited": 0,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 1,
+      "experimentsProposed": 0
+    },
+    "queries": [],
+    "errors": [],
+    "limitations": [],
+    "usage": {
+      "note": "Interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  {
     "id": "run-20261116-exp-npm-structural-breaks",
     "themeId": "theme-npm-release-breaking-changes",
     "mode": "agent-session",
@@ -2237,6 +2271,56 @@
       "One reviewer judged the audit.",
       "The criteria did not anticipate blocked deep imports of undocumented files; the verdict is reported under both readings.",
       "Two audited flags (#8, #20) come from one release train under different unscoped names."
+    ],
+    "usage": {
+      "note": "GitHub Actions (free) plus interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  {
+    "id": "run-20261116-exp-wp-orphaned-demand",
+    "themeId": "theme-wp-orphaned-plugin-demand",
+    "mode": "agent-session",
+    "provider": "claude-code-session + github-actions experiment runner",
+    "startedAt": "2026-11-16T14:31:00Z",
+    "completedAt": "2026-11-16T14:34:26Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Executed in Actions run 43886560379: 9,990 plugins scanned, 158 live orphans"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "Manual check of the top 10: 9 served, 1 unserved (not addressable)"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Outcome refuted; idea parked; area paused"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 3,
+      "sourcesCited": 3,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 1,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "WordPress.org plugin searches: troubleshooting mode, related posts, transients, transient manager, disable rest api, limit login attempts, taxonomy term order, sakura webfonts, mw wp form recaptcha, mw wp form, display posts shortcode, blogger import",
+      "plugin_information for 10 candidate alternatives"
+    ],
+    "errors": [],
+    "limitations": [
+      "One reviewer.",
+      "The 300-download threshold didn't discriminate (minimum observed 518)."
     ],
     "usage": {
       "note": "GitHub Actions (free) plus interactive session. No API charges."
