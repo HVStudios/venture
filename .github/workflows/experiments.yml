@@ -59,6 +59,7 @@ jobs:
             exp-npm-structural-breaks) npx tsx src/experiments/npm-structural-breaks.ts ;;
             exp-wp-orphaned-demand) npx tsx src/experiments/wp-orphaned-demand.ts ;;
             exp-declined-feature-requests) npx tsx src/experiments/declined-features.ts ;;
+            exp-declined-feature-requests-review) npx tsx src/experiments/declined-features-review.ts ;;
             *) echo "unknown experiment $EXPERIMENT"; exit 1 ;;
           esac
       - name: Keep raw results as a workflow artifact (survives a failed push)
