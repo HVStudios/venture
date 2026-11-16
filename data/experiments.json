@@ -313,7 +313,17 @@
       "ifFailure": "Reject the idea: even the narrowed rule set is not reliable enough to recommend."
     },
     "executionMode": "automatable",
-    "status": "approved",
+    "status": "completed",
+    "outcome": {
+      "recordedAt": "2026-11-16T09:55:19.821Z",
+      "result": "inconclusive",
+      "summary": "Pre-registered verdict: inconclusive. The frequency criterion was met (49 of 400 fresh packages, 12.3%), but only 13 of 20 audited flags were genuine (65%), between the failure line (10) and the success line (14). Five of the 13 count as genuine only because an added exports map blocks deep imports of undocumented files; under a stricter reading it would be 8 of 20 (refuted). Exploratory: removal rules (export path removed, CLI command removed, a peer's minimum major raised) were genuine in 13 of 13 audited cases across both samples, but fire for only about 5% of popular packages.",
+      "evidenceIds": [
+        "ev-sv-16",
+        "ev-sv-17",
+        "ev-sv-18"
+      ]
+    },
     "createdInRun": "run-20261116-agent-release-breaks-3",
     "provenance": "real"
   },

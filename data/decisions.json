@@ -579,6 +579,21 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261116-npm-release-contract-linter-revise-2",
+    "at": "2026-11-16T09:55:44Z",
+    "runId": "run-20261116-agent-release-breaks-4",
+    "subjectType": "idea",
+    "subjectId": "idea-npm-release-contract-linter",
+    "action": "revise",
+    "fromStatus": "parked",
+    "toStatus": "parked",
+    "rationale": "Parked with a narrower recommendation. The broad structural rule set fell short on fresh packages (13 of 20 genuine; inconclusive), but removal rules (export path removed, CLI command removed, a peer's minimum major raised) were genuine in all 13 audited cases across two samples. They catch about 1 in 20 popular packages over two years: worth a small 'compare with last release' feature in an existing linter, not a standalone tool.",
+    "actor": "director",
+    "attractiveness": 77,
+    "evidenceStrength": 59,
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261116-npm-structural-breaks",
     "at": "2026-11-16T09:47:22.624Z",
     "subjectType": "experiment",
@@ -588,6 +603,18 @@
     "toStatus": "approved",
     "rationale": "Approved under the standing rule for automatable experiments. Population, rules, sampling seed and thresholds pre-registered before any data for the new population was collected; helpers unit-tested on synthetic data only.",
     "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261116-npm-structural-breaks-2",
+    "at": "2026-11-16T09:55:19.821Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-npm-structural-breaks",
+    "action": "complete",
+    "fromStatus": "approved",
+    "toStatus": "inconclusive",
+    "rationale": "Pre-registered verdict: inconclusive. The frequency criterion was met (49 of 400 fresh packages, 12.3%), but only 13 of 20 audited flags were genuine (65%), between the failure line (10) and the success line (14). Five of the 13 count as genuine only because an added exports map blocks deep imports of undocumented files; under a stricter reading it would be 8 of 20 (refuted). Exploratory: removal rules (export path removed, CLI command removed, a peer's minimum major raised) were genuine in 13 of 13 audited cases across both samples, but fire for only about 5% of popular packages.",
+    "actor": "experiment designer",
     "provenance": "real"
   }
 ]

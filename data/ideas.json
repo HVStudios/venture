@@ -759,7 +759,7 @@
         "id": "a4",
         "text": "The structural-only rule set (no engine-range rule) is precise on packages it wasn't tuned on (≥ 70% of audited flags genuine)",
         "criticality": "high",
-        "status": "untested",
+        "status": "weakened",
         "evidenceIds": []
       }
     ],
@@ -769,8 +769,8 @@
       "Behaviour breaks (React 16.4) remain invisible"
     ],
     "nextSteps": [
-      "Run exp-npm-metadata-breaks",
-      "If supported, build the CLI and dogfood it on real packages"
+      "Ask the owner whether VENTURE may propose a removal-rules 'compare with last release' check to publint's maintainers",
+      "If approved, prototype it against the audited cases before proposing"
     ],
     "objections": [
       {
@@ -854,7 +854,7 @@
       "assessedBy": "critic (claude-code-session)"
     },
     "status": "parked",
-    "statusRationale": "Parked with a narrowed recommendation. As specified, the linter is too noisy (40% genuine). A structural-only rule set looks precise (about 78% in a small exploratory sample) but helps only about 1 in 10 popular packages. Its practical value is as a 'compare with last release' feature for an existing linter like publint, pending validation on a fresh sample.",
+    "statusRationale": "Parked with a narrower recommendation. The broad structural rule set fell short on fresh packages (13 of 20 genuine; inconclusive), but removal rules (export path removed, CLI command removed, a peer's minimum major raised) were genuine in all 13 audited cases across two samples. They catch about 1 in 20 popular packages over two years: worth a small 'compare with last release' feature in an existing linter, not a standalone tool.",
     "relatedIdeaIds": [
       "idea-typescript-api-semver-checker"
     ],
@@ -863,14 +863,14 @@
     "practical": {
       "adopters": "npm package maintainers, as a pre-publish check, and possibly downstream teams auditing updates",
       "distribution": "open-source",
-      "smallestUsefulVersion": "A 'compare with last release' mode for publint (or a small plugin) with the structural rules: removed export paths, entry fields, CLI commands and peer tightening. Engine checks only if they know Node's end-of-life dates.",
+      "smallestUsefulVersion": "A 'compare with last release' check for publint (or a small plugin) with three removal rules only: export paths removed, CLI commands removed, a peer's minimum major raised. Compare each release with the next-lower version, not the previously published one, so backports aren't misread.",
       "buildableByVenture": true,
       "buildNote": "Needs only package.json parsing, npm registry metadata and the semver library. VENTURE already uses all three.",
       "monetization": "None realistic: best as an upstream contribution to existing open-source linters."
     },
     "createdInRun": "run-20261104-agent-release-breaks-1",
     "createdAt": "2026-11-04T13:57:28Z",
-    "updatedAt": "2026-11-16T09:46:58Z",
+    "updatedAt": "2026-11-16T09:55:44Z",
     "provenance": "real"
   },
   {

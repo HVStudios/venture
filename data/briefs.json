@@ -241,39 +241,50 @@
           "ev-sv-14"
         ],
         "epistemic": "inference"
+      },
+      {
+        "id": "f7",
+        "statement": "On 400 fresh packages, the broad structural rule set was only partly precise: 13 of 20 audited flags were genuine (65%), and 5 of those were genuine only because a new exports map blocks deep imports of undocumented files. Removal rules were the exception: export paths removed, CLI commands removed and raised peer minimums were genuine in all 13 audited cases across both samples, and one break was confirmed by the maintainers' own deprecation notice. Those rules fire for about 1 in 20 popular packages over two years.",
+        "strength": "Moderate for the broad set (a pre-registered replication on fresh packages). Weak to moderate for the removal rules: consistent across two samples, but chosen after the fact and only 13 cases.",
+        "evidenceIds": [
+          "ev-sv-16",
+          "ev-sv-17",
+          "ev-sv-18",
+          "ev-sv-19"
+        ],
+        "epistemic": "inference"
       }
     ],
     "uncertainties": [
-      "Whether the structural-only rules stay precise on packages they weren't tuned on (being measured).",
+      "Whether maintainers treat blocked deep imports of undocumented files as breaking (the audit criteria didn't settle it).",
       "Whether maintainers consider deliberate engine bumps in minor releases acceptable.",
+      "Whether publint's maintainers would want a release-comparison feature.",
       "The four complaints were chosen by GitHub search ranking, not sampled randomly."
     ],
     "conclusion": {
-      "belief": "Accidental breaking releases are real, and a cheap metadata check can catch a share of them that type checkers miss: removed export paths, entry points and CLI commands, and tightened peers. But it's a modest benefit (about 1 in 10 popular packages over two years). As first specified, engine-range rules make it too noisy. The practical value is a small, precise rule set, best contributed as a 'compare with last release' mode to an existing packaging linter such as publint. That would be useful open-source work, but not a standalone product.",
+      "belief": "Accidental breaking releases are real and measurable: maintainers sometimes deprecate a minor release because it 'accidentally includes breaking changes'. A metadata check can catch a narrow slice reliably: removed export paths, removed CLI commands and raised peer minimums, about 1 in 20 popular packages over two years. Broader rules are too noisy or hinge on judgement calls. The practical outcome is a small open-source feature for an existing linter such as publint, not a product. The research question is answered as far as desk research can take it.",
       "confidence": "medium",
-      "confidenceReason": "A pre-registered measurement over 12,240 release pairs plus an audited sample. Not high: the audit had one reviewer and 20 flags, and the narrowed rule set's precision comes from only 9 audited cases.",
+      "confidenceReason": "Two pre-registered measurements on independent samples of 400 packages, each with an audit of 20 flags. Not high: one reviewer, and the removal-rule precision comes from 13 cases chosen after the fact.",
       "unknowns": [
-        "The narrowed rule set's precision on a fresh sample",
-        "Whether publint's maintainers would want this feature",
+        "Whether publint's maintainers would want the feature",
         "How often flagged breaks actually hurt users (issues filed after release)"
       ],
-      "continueInvestigation": true,
-      "continueReason": "One cheap step remains: validate the narrowed rule set on a fresh, independently drawn audit sample before proposing it upstream."
+      "continueInvestigation": false,
+      "continueReason": "More desk research is unlikely to change the picture. The remaining question, whether maintainers want this, needs contact with people, which needs the owner's authorization."
     },
     "nextSteps": [
       {
-        "text": "Replicate the structural-only rule set on 400 fresh popular packages, auditing 20 flags with at most one per package family (pre-registered: ≥ 5% of packages flagged and ≥ 70% genuine).",
-        "kind": "experiment",
-        "experimentId": "exp-npm-structural-breaks"
-      },
-      {
-        "text": "If it holds, prototype a 'compare with last release' check, and ask the owner whether VENTURE may propose it to the publint maintainers. That means contacting people, so it needs authorization.",
+        "text": "Owner decision: may VENTURE propose a removal-rules 'compare with last release' check to the publint maintainers? Contacting people needs authorization.",
         "kind": "owner-action",
         "issue": 10
+      },
+      {
+        "text": "If approved, prototype the check and run it against the 40 audited flags before proposing it.",
+        "kind": "experiment"
       }
     ],
-    "updatedAt": "2026-11-16T09:46:58Z",
-    "updatedInRun": "run-20261116-agent-release-breaks-3",
+    "updatedAt": "2026-11-16T09:55:44Z",
+    "updatedInRun": "run-20261116-agent-release-breaks-4",
     "author": "research director (Claude Code session)",
     "provenance": "real"
   },
