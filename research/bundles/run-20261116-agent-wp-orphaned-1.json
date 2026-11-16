@@ -4,7 +4,7 @@
     "themeId": "theme-wp-orphaned-plugin-demand",
     "mode": "agent-session",
     "provider": "claude-code-session",
-    "startedAt": "2026-11-16T14:05:00Z",
+    "startedAt": "2026-11-16T14:28:56Z",
     "completedAt": "2026-11-16T14:28:56Z",
     "status": "completed",
     "stages": [
@@ -60,7 +60,8 @@
     ],
     "limitations": [
       "Revenue benchmarks are self-reported case studies (2016–2024), not a market survey.",
-      "Only one candidate idea was generated; the area was chosen by the director, not by the owner from alternatives."
+      "Only one candidate idea was generated; the area was chosen by the director, not by the owner from alternatives.",
+      "Start time not recorded during the session (an estimate was first written and has been removed); startedAt is set to the completion time."
     ],
     "usage": {
       "note": "Interactive session. No API charges."

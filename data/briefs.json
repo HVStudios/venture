@@ -169,6 +169,56 @@
     "provenance": "real"
   },
   {
+    "id": "brief-declined-feature-requests",
+    "themeId": "theme-declined-feature-requests",
+    "researchQuestion": "Popular developer tools turn down many feature requests that hundreds of users upvoted. Are some of these gaps buildable as a small add-on that people would pay a little for?",
+    "whyItMatters": "An upvoted, declined request is demand that is publicly counted and that the tool itself has said it won't serve. That's a cheaper starting point for a small paid product than guessing at a market.",
+    "subQuestions": [
+      "How many declined requests could be built as a separate add-on without forking the tool?",
+      "Are those already served by an existing add-on?",
+      "Do people in those threads offer to pay?",
+      "Which single opportunity would be best to build first?"
+    ],
+    "findings": [
+      {
+        "id": "f0",
+        "statement": "Widely supported requests do get declined: for example, a VS Code request to sync Copilot chat history across devices was closed as out of scope twice, with about 200 reactions on the first thread and 87 upvotes on the second.",
+        "strength": "Weak. A single example, chosen from a probe search; the experiment measures how common this is.",
+        "evidenceIds": [
+          "ev-df-05"
+        ],
+        "epistemic": "fact"
+      },
+      {
+        "id": "f1",
+        "statement": "Paid extensions to free developer tools exist (Sidekiq Pro and Enterprise, GitLens Pro). But a well-known add-on that fixes a platform's annoyances, Refined GitHub, is free and sponsor-funded, which suggests users often expect such add-ons for free.",
+        "strength": "Weak. Three examples, two of them run by the tool's own author or a company.",
+        "evidenceIds": [
+          "ev-df-01",
+          "ev-df-02",
+          "ev-df-03"
+        ],
+        "epistemic": "fact"
+      }
+    ],
+    "uncertainties": [
+      "Whether declined requests are buildable as add-ons (being measured).",
+      "Whether upvoters would pay anything.",
+      "Whether maintainers would later build the feature or block the add-on."
+    ],
+    "nextSteps": [
+      {
+        "text": "Sample 20 highly upvoted declined feature requests from popular developer tools and review each for a buildable, unserved add-on (pre-registered: at least 5 opportunities).",
+        "kind": "experiment",
+        "experimentId": "exp-declined-feature-requests"
+      }
+    ],
+    "updatedAt": "2026-11-16T14:47:57Z",
+    "updatedInRun": "run-20261116-agent-declined-features-1",
+    "author": "research director (Claude Code session)",
+    "provenance": "real"
+  },
+  {
     "id": "brief-npm-release-breaking-changes",
     "themeId": "theme-npm-release-breaking-changes",
     "researchQuestion": "Libraries regularly ship 'minor' or 'patch' updates that break the code of everyone using them, even though those updates are installed automatically on the promise of being safe. Could a small open-source tool catch these breaks before a release is published?",

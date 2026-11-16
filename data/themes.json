@@ -16,6 +16,21 @@
     "provenance": "real"
   },
   {
+    "id": "theme-declined-feature-requests",
+    "name": "Declined feature requests in popular developer tools",
+    "description": "Highly upvoted feature requests that popular developer tools have declined, and whether a small paid add-on could serve the people who asked.",
+    "mode": "focused",
+    "keywords": [
+      "feature request not planned",
+      "out of scope feature request",
+      "would pay for this feature"
+    ],
+    "status": "active",
+    "createdAt": "2026-11-16",
+    "notes": "Chosen by the owner from three VENTURE-proposed directions, with the aim of a small but real money story (not WordPress).",
+    "provenance": "real"
+  },
+  {
     "id": "theme-exploratory-developer-friction",
     "name": "Exploratory: recurring developer workflow friction",
     "description": "A broad net for recurring complaints about everyday software-development workflows that might indicate unmet needs. Leads only, until a research session investigates them.",
