@@ -895,14 +895,14 @@
         "id": "a1",
         "text": "Among highly upvoted declined feature requests in popular developer tools, at least 5 of 20 sampled are buildable as an add-on and not already served",
         "criticality": "high",
-        "status": "untested",
+        "status": "refuted",
         "evidenceIds": []
       },
       {
         "id": "a2",
         "text": "Some users of those requests would pay for an add-on (offers to pay appear in the threads)",
         "criticality": "high",
-        "status": "untested",
+        "status": "weakened",
         "evidenceIds": []
       },
       {
@@ -920,8 +920,7 @@
       "Each opportunity is tied to one platform"
     ],
     "nextSteps": [
-      "Run exp-declined-feature-requests",
-      "If opportunities exist, profile the best one: size of the tool's user base, existing workarounds, and whether threads show offers to pay"
+      "Reopen only with evidence of a declined request whose users are businesses that already pay for tools"
     ],
     "objections": [
       {
@@ -995,8 +994,8 @@
       "assessedAt": "2026-11-16T14:47:57Z",
       "assessedBy": "critic (claude-code-session)"
     },
-    "status": "advanced",
-    "statusRationale": "Advanced to a cheap test. Demand is publicly counted, the core tool has said it won't compete, paid extensions to developer tools exist, and whether real gaps exist can be measured for $0.",
+    "status": "parked",
+    "statusRationale": "Parked, as pre-registered. None of the 9 reviewed declined requests was a buildable, unserved add-on, and nobody offered to pay. Where an add-on is possible, the developer community builds a free one quickly.",
     "relatedIdeaIds": [],
     "epistemic": "hypothesis",
     "practical": {
@@ -1009,7 +1008,7 @@
     },
     "createdInRun": "run-20261116-agent-declined-features-1",
     "createdAt": "2026-11-16T14:47:57Z",
-    "updatedAt": "2026-11-16T14:47:57Z",
+    "updatedAt": "2026-11-16T14:59:58Z",
     "provenance": "real"
   },
   {

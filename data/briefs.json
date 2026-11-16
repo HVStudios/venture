@@ -199,22 +199,41 @@
           "ev-df-03"
         ],
         "epistemic": "fact"
+      },
+      {
+        "id": "f2",
+        "statement": "Declined requests are not a usable source of small paid products for developers. Across 82 popular developer-tool repositories, only 31 highly upvoted declined feature requests exist, in 9 repositories. None of the 9 reviewed was a buildable, unserved add-on: some weren't really declined (closed by bots), some can't be built outside the core, and where an add-on is possible, free community plugins already exist. No thread contained an offer to pay.",
+        "strength": "Moderate. A pre-registered review of every eligible repository's sampled request (9, fewer than the planned 20), one reviewer.",
+        "evidenceIds": [
+          "ev-df-06",
+          "ev-df-07",
+          "ev-df-08"
+        ],
+        "epistemic": "fact"
       }
     ],
     "uncertainties": [
-      "Whether declined requests are buildable as add-ons (being measured).",
-      "Whether upvoters would pay anything.",
-      "Whether maintainers would later build the feature or block the add-on."
+      "The review covered 9 requests, fewer than the planned 20.",
+      "Requests below 20 upvotes, or in non-developer tools, weren't examined."
     ],
+    "conclusion": {
+      "belief": "Developers fill each other's gaps for free and fast, and they rarely offer to pay. Small paid add-ons for declined developer-tool features don't look viable. A small-money idea probably needs an audience that already pays to save time, such as small businesses, freelancers or teams, rather than individual developers.",
+      "confidence": "medium",
+      "confidenceReason": "A pre-registered review with a clear negative result, consistent with the free-add-on norm seen in the desk research. Not high: a small sample, one reviewer.",
+      "unknowns": [
+        "Whether declined requests in business-facing tools behave differently"
+      ],
+      "continueInvestigation": false,
+      "continueReason": "The result is clearly negative and matches the desk research. A different audience is more promising than more sampling here."
+    },
     "nextSteps": [
       {
-        "text": "Sample 20 highly upvoted declined feature requests from popular developer tools and review each for a buildable, unserved add-on (pre-registered: at least 5 opportunities).",
-        "kind": "experiment",
-        "experimentId": "exp-declined-feature-requests"
+        "text": "Area paused. Next small-money areas should start from audiences that already pay for tools (small businesses, freelancers, teams).",
+        "kind": "research"
       }
     ],
-    "updatedAt": "2026-11-16T14:47:57Z",
-    "updatedInRun": "run-20261116-agent-declined-features-1",
+    "updatedAt": "2026-11-16T14:59:58Z",
+    "updatedInRun": "run-20261116-agent-declined-features-2",
     "author": "research director (Claude Code session)",
     "provenance": "real"
   },

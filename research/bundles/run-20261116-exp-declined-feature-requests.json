@@ -1,0 +1,157 @@
+{
+  "run": {
+    "id": "run-20261116-exp-declined-feature-requests",
+    "themeId": "theme-declined-feature-requests",
+    "mode": "agent-session",
+    "provider": "claude-code-session + github-actions experiment runner",
+    "startedAt": "2026-11-16T14:50:45Z",
+    "completedAt": "2026-11-16T14:59:38Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Actions run 43890042375 (collection) and 43891271513 (review data): 82 repositories, 668 issues, 31 candidates, 9 sampled"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "Manual review: 0 of 9 opportunities, 0 offers to pay"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Outcome refuted; idea parked; area paused"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 3,
+      "sourcesCited": 3,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 1,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "GitHub repository search: gemini cli neovim; dokploy migrate project organization"
+    ],
+    "errors": [
+      "This session can't read other repositories' issues directly (scope), so review data was collected by a helper in Actions (PR #55)."
+    ],
+    "limitations": [
+      "9 requests reviewed instead of the planned 20.",
+      "One reviewer."
+    ],
+    "usage": {
+      "note": "GitHub Actions (free) plus interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [],
+  "sources": [
+    {
+      "id": "src-exp-declined-result",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-declined-feature-requests/RESULT.md",
+      "title": "VENTURE experiment result: declined feature requests in popular developer tools (automated part)",
+      "publisher": "VENTURE (own experiment)",
+      "retrievedAt": "2026-11-16T14:59:38Z",
+      "publishedAt": "2026-11-16",
+      "sourceType": "dataset",
+      "originId": "origin-venture-exp-declined",
+      "excerpt": "Closed-as-not-planned issues read (top 10 by upvotes per repository): 668. Feature-like with ≥ 20 upvotes: 31.",
+      "limitations": "Own experiment via the GitHub API (Actions run 43890042375).",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-exp-declined-review",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-declined-feature-requests/REVIEW.md",
+      "title": "VENTURE experiment: manual review of 9 declined feature requests",
+      "publisher": "VENTURE (own experiment)",
+      "retrievedAt": "2026-11-16T14:59:38Z",
+      "publishedAt": "2026-11-16",
+      "sourceType": "dataset",
+      "originId": "origin-venture-exp-declined",
+      "excerpt": "Opportunities: 0 of 9. … Offers to pay: 0 of 9 threads.",
+      "limitations": "One reviewer. 9 instead of the planned 20, because only 9 repositories had a qualifying request.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-exp-declined-analysis",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-declined-feature-requests/ANALYSIS.md",
+      "title": "VENTURE experiment: exploratory notes on declined feature requests",
+      "publisher": "VENTURE (own experiment)",
+      "retrievedAt": "2026-11-16T14:59:38Z",
+      "publishedAt": "2026-11-16",
+      "sourceType": "dataset",
+      "originId": "origin-venture-exp-declined",
+      "excerpt": "Where a declined feature can be built as an add-on, free add-ons appear quickly.",
+      "limitations": "Exploratory, post hoc.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-df-06",
+      "claim": "Highly upvoted declined feature requests are rare: only 31 feature-like requests with at least 20 upvotes among 668 'not planned' issues across 82 popular developer-tool repositories.",
+      "sourceId": "src-exp-declined-result",
+      "quote": "Feature-like with ≥ 20 upvotes: 31.",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-dev-tools-decline-wanted-features"
+      ],
+      "ideaIds": [
+        "idea-paid-addon-for-declined-feature"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-df-07",
+      "claim": "None of the 9 reviewed declined requests was a buildable, unserved add-on opportunity, and no thread contained an offer to pay.",
+      "sourceId": "src-exp-declined-review",
+      "quote": "Opportunities: 0 of 9.",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-paid-addon-for-declined-feature"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-df-08",
+      "claim": "Where a declined feature can be built as an add-on, free community add-ons appear quickly (five Neovim plugins for Gemini CLI, two plugins for herdr).",
+      "sourceId": "src-exp-declined-analysis",
+      "quote": "Where a declined feature can be built as an add-on, free add-ons appear quickly.",
+      "stance": "contradicts",
+      "epistemic": "inference",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-paid-addon-for-declined-feature"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Exploratory; two cases."
+    }
+  ],
+  "problems": [],
+  "competitors": [],
+  "ideas": [],
+  "experiments": [],
+  "decisions": [],
+  "briefs": []
+}

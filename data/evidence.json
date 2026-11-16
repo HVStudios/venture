@@ -771,6 +771,51 @@
     "provenance": "real"
   },
   {
+    "id": "ev-df-06",
+    "claim": "Highly upvoted declined feature requests are rare: only 31 feature-like requests with at least 20 upvotes among 668 'not planned' issues across 82 popular developer-tool repositories.",
+    "sourceId": "src-exp-declined-result",
+    "quote": "Feature-like with ≥ 20 upvotes: 31.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-dev-tools-decline-wanted-features"
+    ],
+    "ideaIds": [
+      "idea-paid-addon-for-declined-feature"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-df-07",
+    "claim": "None of the 9 reviewed declined requests was a buildable, unserved add-on opportunity, and no thread contained an offer to pay.",
+    "sourceId": "src-exp-declined-review",
+    "quote": "Opportunities: 0 of 9.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-paid-addon-for-declined-feature"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-df-08",
+    "claim": "Where a declined feature can be built as an add-on, free community add-ons appear quickly (five Neovim plugins for Gemini CLI, two plugins for herdr).",
+    "sourceId": "src-exp-declined-analysis",
+    "quote": "Where a declined feature can be built as an add-on, free add-ons appear quickly.",
+    "stance": "contradicts",
+    "epistemic": "inference",
+    "context": "Exploratory; two cases.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-paid-addon-for-declined-feature"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
     "id": "ev-sc-01",
     "claim": "Two malicious axios releases were published through the maintainer's compromised npm account (March 2026).",
     "sourceId": "src-axios-postmortem-2026",

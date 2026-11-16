@@ -2120,6 +2120,40 @@
     "provenance": "real"
   },
   {
+    "id": "run-20261116-agent-declined-features-2",
+    "themeId": "theme-declined-feature-requests",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-16T14:59:58Z",
+    "completedAt": "2026-11-16T14:59:58Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Idea parked, area paused, brief updated after the outcome"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 0,
+      "sourcesCited": 0,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 1,
+      "experimentsProposed": 0
+    },
+    "queries": [],
+    "errors": [],
+    "limitations": [],
+    "usage": {
+      "note": "Interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  {
     "id": "run-20261116-agent-release-breaks-3",
     "themeId": "theme-npm-release-breaking-changes",
     "mode": "agent-session",
@@ -2289,6 +2323,57 @@
     "limitations": [],
     "usage": {
       "note": "Interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  {
+    "id": "run-20261116-exp-declined-feature-requests",
+    "themeId": "theme-declined-feature-requests",
+    "mode": "agent-session",
+    "provider": "claude-code-session + github-actions experiment runner",
+    "startedAt": "2026-11-16T14:50:45Z",
+    "completedAt": "2026-11-16T14:59:38Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Actions run 43890042375 (collection) and 43891271513 (review data): 82 repositories, 668 issues, 31 candidates, 9 sampled"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "Manual review: 0 of 9 opportunities, 0 offers to pay"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Outcome refuted; idea parked; area paused"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 3,
+      "sourcesCited": 3,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 1,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "GitHub repository search: gemini cli neovim; dokploy migrate project organization"
+    ],
+    "errors": [
+      "This session can't read other repositories' issues directly (scope), so review data was collected by a helper in Actions (PR #55)."
+    ],
+    "limitations": [
+      "9 requests reviewed instead of the planned 20.",
+      "One reviewer."
+    ],
+    "usage": {
+      "note": "GitHub Actions (free) plus interactive session. No API charges."
     },
     "limits": {},
     "provenance": "real"
