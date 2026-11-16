@@ -129,7 +129,17 @@
       "ifFailure": "Park the idea: declined requests are mostly unbuildable or already served."
     },
     "executionMode": "automatable",
-    "status": "approved",
+    "status": "completed",
+    "outcome": {
+      "recordedAt": "2026-11-16T14:59:39.585Z",
+      "result": "refuted",
+      "summary": "Pre-registered verdict: refuted. Only 9 repositories had a qualifying request (31 requests in total), so 9 were reviewed instead of 20; thresholds were applied as absolute counts. 0 of 9 were opportunities: 3 weren't actually declined (closed by bots or in bulk), 3 are already served by free add-ons or workarounds, 2 can't be built as add-ons, and 1 isn't a feature. No thread contained an offer to pay.",
+      "evidenceIds": [
+        "ev-df-06",
+        "ev-df-07",
+        "ev-df-08"
+      ]
+    },
     "createdInRun": "run-20261116-agent-declined-features-1",
     "provenance": "real"
   },

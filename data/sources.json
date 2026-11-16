@@ -349,6 +349,54 @@
     "provenance": "real"
   },
   {
+    "id": "src-exp-declined-analysis",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-declined-feature-requests/ANALYSIS.md",
+    "title": "VENTURE experiment: exploratory notes on declined feature requests",
+    "publisher": "VENTURE (own experiment)",
+    "publishedAt": "2026-11-16",
+    "retrievedAt": "2026-11-16T14:59:38Z",
+    "sourceType": "dataset",
+    "originId": "origin-venture-exp-declined",
+    "excerpt": "Where a declined feature can be built as an add-on, free add-ons appear quickly.",
+    "limitations": "Exploratory, post hoc.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-exp-declined-result",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-declined-feature-requests/RESULT.md",
+    "title": "VENTURE experiment result: declined feature requests in popular developer tools (automated part)",
+    "publisher": "VENTURE (own experiment)",
+    "publishedAt": "2026-11-16",
+    "retrievedAt": "2026-11-16T14:59:38Z",
+    "sourceType": "dataset",
+    "originId": "origin-venture-exp-declined",
+    "excerpt": "Closed-as-not-planned issues read (top 10 by upvotes per repository): 668. Feature-like with ≥ 20 upvotes: 31.",
+    "limitations": "Own experiment via the GitHub API (Actions run 43890042375).",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-exp-declined-review",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-declined-feature-requests/REVIEW.md",
+    "title": "VENTURE experiment: manual review of 9 declined feature requests",
+    "publisher": "VENTURE (own experiment)",
+    "publishedAt": "2026-11-16",
+    "retrievedAt": "2026-11-16T14:59:38Z",
+    "sourceType": "dataset",
+    "originId": "origin-venture-exp-declined",
+    "excerpt": "Opportunities: 0 of 9. … Offers to pay: 0 of 9 threads.",
+    "limitations": "One reviewer. 9 instead of the planned 20, because only 9 repositories had a qualifying request.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-exp-followup-analysis",
     "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-followup-engagement-retrospective/ANALYSIS.md",
     "title": "VENTURE experiment: exploratory within-LLVM breakdown (not pre-registered)",

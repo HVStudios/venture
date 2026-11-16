@@ -576,6 +576,18 @@
     "provenance": "real"
   },
   {
+    "id": "dec-20261116-declined-feature-requests-2",
+    "at": "2026-11-16T14:59:39.585Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-declined-feature-requests",
+    "action": "complete",
+    "fromStatus": "approved",
+    "toStatus": "refuted",
+    "rationale": "Pre-registered verdict: refuted. Only 9 repositories had a qualifying request (31 requests in total), so 9 were reviewed instead of 20; thresholds were applied as absolute counts. 0 of 9 were opportunities: 3 weren't actually declined (closed by bots or in bulk), 3 are already served by free add-ons or workarounds, 2 can't be built as add-ons, and 1 isn't a feature. No thread contained an offer to pay.",
+    "actor": "experiment designer",
+    "provenance": "real"
+  },
+  {
     "id": "dec-20261116-npm-release-contract-linter-revise",
     "at": "2026-11-16T09:46:58Z",
     "runId": "run-20261116-agent-release-breaks-3",
@@ -641,6 +653,34 @@
     "actor": "director",
     "attractiveness": 54,
     "evidenceStrength": 33,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261116-paid-addon-for-declined-feature-park",
+    "at": "2026-11-16T14:59:58Z",
+    "runId": "run-20261116-agent-declined-features-2",
+    "subjectType": "idea",
+    "subjectId": "idea-paid-addon-for-declined-feature",
+    "action": "park",
+    "fromStatus": "advanced",
+    "toStatus": "parked",
+    "rationale": "Parked, as pre-registered. None of the 9 reviewed declined requests was a buildable, unserved add-on, and nobody offered to pay. Where an add-on is possible, the developer community builds a free one quickly.",
+    "actor": "director",
+    "attractiveness": 54,
+    "evidenceStrength": 21,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261116-pause-declined-feature-requests",
+    "at": "2026-11-16T14:59:58Z",
+    "runId": "run-20261116-agent-declined-features-2",
+    "subjectType": "theme",
+    "subjectId": "theme-declined-feature-requests",
+    "action": "park",
+    "fromStatus": "active",
+    "toStatus": "paused",
+    "rationale": "Pausing after the pre-registered review was refuted: no buildable, unserved opportunities and no offers to pay.",
+    "actor": "director",
     "provenance": "real"
   },
   {
