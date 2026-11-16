@@ -1347,14 +1347,14 @@
         "id": "a1",
         "text": "Among the 10,000 most popular plugins, at least 10 abandoned plugins with ≥ 10,000 installs are still downloaded ≥ 300 times a month",
         "criticality": "high",
-        "status": "untested",
+        "status": "supported",
         "evidenceIds": []
       },
       {
         "id": "a2",
         "text": "At least 3 of the 10 most-downloaded such plugins have no maintained alternative that does the same job",
         "criticality": "high",
-        "status": "untested",
+        "status": "refuted",
         "evidenceIds": []
       },
       {
@@ -1372,8 +1372,7 @@
       "WordPress.org review rules and support load"
     ],
     "nextSteps": [
-      "Run exp-wp-orphaned-demand",
-      "If unserved demand exists, check the top niches for paid competitors and pricing before building anything"
+      "Reopen only if a niche turns up with real demand and no maintained alternative, e.g. from the 59 plugins the tag rule flagged (an upper bound)"
     ],
     "objections": [
       {
@@ -1460,8 +1459,8 @@
       "assessedAt": "2026-11-16T14:28:56Z",
       "assessedBy": "critic (claude-code-session)"
     },
-    "status": "advanced",
-    "statusRationale": "Advanced to a cheap test. It has a plausible small-money model, backed by case studies of 1 in 10 free users paying, and a concrete $0 way to find whether demand is left unserved.",
+    "status": "parked",
+    "statusRationale": "Parked, as pre-registered. Abandoned but still-installed plugins are common (158 popular ones), but 9 of the 10 biggest already have a maintained alternative. A replacement would compete with existing free plugins for users who haven't felt enough pain to switch, which is not the easy small-money gap the idea assumed.",
     "relatedIdeaIds": [],
     "epistemic": "hypothesis",
     "practical": {
@@ -1474,7 +1473,7 @@
     },
     "createdInRun": "run-20261116-agent-wp-orphaned-1",
     "createdAt": "2026-11-16T14:28:56Z",
-    "updatedAt": "2026-11-16T14:28:56Z",
+    "updatedAt": "2026-11-16T14:34:44Z",
     "provenance": "real"
   }
 ]

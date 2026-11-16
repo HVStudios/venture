@@ -514,7 +514,17 @@
       "ifFailure": "Park the idea: abandoned-plugin demand is already served."
     },
     "executionMode": "automatable",
-    "status": "approved",
+    "status": "completed",
+    "outcome": {
+      "recordedAt": "2026-11-16T14:34:27.251Z",
+      "result": "refuted",
+      "summary": "Pre-registered verdict: refuted. 158 popular plugins (7.3% of those with at least 10,000 installs) are abandoned yet still downloaded, so a1 holds. But 9 of the 10 most-downloaded already have a maintained alternative that does the same job. The tenth is a hosting provider's own plugin that no third party could replace (1 unserved; failure line: fewer than 2). Exploratory: the gap is discovery and migration, not a missing product.",
+      "evidenceIds": [
+        "ev-wp-08",
+        "ev-wp-09",
+        "ev-wp-10"
+      ]
+    },
     "createdInRun": "run-20261116-agent-wp-orphaned-1",
     "provenance": "real"
   }

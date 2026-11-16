@@ -1554,5 +1554,52 @@
     ],
     "competitorIds": [],
     "provenance": "real"
+  },
+  {
+    "id": "ev-wp-08",
+    "claim": "158 of 2,151 popular WordPress plugins (7.3%) have gone two years without an update while keeping at least 10,000 installs, and all of them are still downloaded hundreds of times a month.",
+    "sourceId": "src-exp-wp-orphaned-demand-result",
+    "quote": "Orphaned (not updated for 24 months, ≥ 10,000 installs): 158 (7.3% of plugins with that many installs).",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-sites-depend-on-abandoned-plugins"
+    ],
+    "ideaIds": [
+      "idea-wp-maintained-replacement-plugin"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-wp-09",
+    "claim": "Of the 10 most-downloaded abandoned plugins, 9 already have a maintained alternative that does the same job. The tenth is a hosting provider's own plugin that no one else could replace.",
+    "sourceId": "src-exp-wp-orphaned-demand-review",
+    "quote": "Unserved: 1 of 10, and that one (#7) is a hosting provider's own plugin that no third party could replace.",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-wp-maintained-replacement-plugin"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-wp-10",
+    "claim": "Users stay on abandoned plugins because they're known and rank well, not because alternatives are missing: the gap is discovery and migration, not an empty niche.",
+    "sourceId": "src-exp-wp-orphaned-demand-analysis",
+    "quote": "People keep picking the abandoned plugin because it is known and ranks well, not because nothing else exists.",
+    "stance": "contradicts",
+    "epistemic": "inference",
+    "context": "Exploratory; based on one striking case (Transients Manager) and the general pattern.",
+    "problemIds": [
+      "prob-sites-depend-on-abandoned-plugins"
+    ],
+    "ideaIds": [
+      "idea-wp-maintained-replacement-plugin"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
   }
 ]
