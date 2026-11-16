@@ -279,6 +279,45 @@
     "provenance": "real"
   },
   {
+    "id": "exp-npm-structural-breaks",
+    "ideaId": "idea-npm-release-contract-linter",
+    "assumptionIds": [
+      "a4"
+    ],
+    "title": "Do structural release-contract rules stay precise on fresh packages?",
+    "hypothesis": "On 400 popular npm packages not in the first study, structural rules alone flag at least one minor or patch release in at least 5% of packages over 24 months, and at least 70% of 20 audited flags are genuine breaking changes.",
+    "uncertainty": "The structural rules' 7-of-9 precision came from a post-hoc subset of the first audit, dominated by a few release trains. This tests it on packages and flags the rules were not tuned on (assumption a4).",
+    "procedure": [
+      "Pre-registered 2026-11-16 before any data for the new population was collected.",
+      "Population: npm search, keywords vue, eslint, test, css, database, http (250 each, ranked by popularity), excluding all 400 packages of exp-npm-metadata-breaks; first 400 unique names.",
+      "Release pairs: identical to exp-npm-metadata-breaks (consecutive non-prerelease minor or patch releases within a major line ≥ 1, published 2024-11-04 to 2026-11-04).",
+      "Rules: the structural rules of exp-npm-metadata-breaks unchanged (exports subpath removed or exports map added, main/module/types/typings removed, switch to type module, new required peer or a peer's minimum major raised, bin removed). The engines rule is excluded.",
+      "Audit: 20 flags drawn by fixed seed 'venture-structural-2026-11-16', at most one per package family (npm scope, or name when unscoped). Judged by a research session with the criteria of the first audit, unchanged: genuine, debatable, or not genuine."
+    ],
+    "successCriteria": [
+      "At least 5% of packages have a structural flag, and at least 14 of the 20 audited flags (70%) are genuine"
+    ],
+    "failureCriteria": [
+      "Fewer than 5% of packages have a structural flag (too rare to be worth a feature)",
+      "Fewer than 10 of the 20 audited flags (50%) are genuine (too noisy)"
+    ],
+    "estimatedTime": "< 1 hour of automated analysis plus a manual audit of 20 flags",
+    "estimatedCostUsd": 0,
+    "resources": [
+      "Public npm registry",
+      "semver library"
+    ],
+    "expectedLearning": "Whether the narrowed rule set is precise enough to propose upstream, judged on data it was not derived from.",
+    "nextSteps": {
+      "ifSuccess": "Prototype a 'compare with last release' check and ask the owner whether VENTURE may propose it to publint's maintainers.",
+      "ifFailure": "Reject the idea: even the narrowed rule set is not reliable enough to recommend."
+    },
+    "executionMode": "automatable",
+    "status": "approved",
+    "createdInRun": "run-20261116-agent-release-breaks-3",
+    "provenance": "real"
+  },
+  {
     "id": "exp-pre-review-signal-discrimination",
     "ideaId": "idea-validated-pre-review-triage-signals",
     "assumptionIds": [

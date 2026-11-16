@@ -36,3 +36,17 @@ describe("release-contract rules", () => {
     expect(sampleFixed(items, 5)).toEqual(sampleFixed([...items].reverse(), 5));
   });
 });
+
+describe("structural replication helpers", () => {
+  it("samples at most one flag per package family, deterministically", async () => {
+    const { sampleOnePerFamily, family, frequencyVerdict, STRUCTURAL } = await import("../src/experiments/npm-structural-breaks");
+    const items = ["@a/x", "@a/y", "@a/z", "b", "c", "@d/q"].flatMap((pkg) => [1, 2].map((n) => ({ id: `${pkg}@${n}`, pkg })));
+    const s = sampleOnePerFamily(items, 10);
+    expect(s.map((i) => family(i.pkg)).sort()).toEqual(["@a", "@d", "b", "c"]);
+    expect(sampleOnePerFamily(items, 10)).toEqual(s);
+    expect(sampleOnePerFamily(items, 2)).toHaveLength(2);
+    expect(frequencyVerdict(0.05)).toBe("met");
+    expect(frequencyVerdict(0.049)).toBe("too-rare");
+    expect(STRUCTURAL).not.toContain("engines-tightened");
+  });
+});

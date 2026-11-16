@@ -244,7 +244,7 @@
       }
     ],
     "uncertainties": [
-      "How often metadata-level breaks actually happen in popular packages (being measured).",
+      "Whether the structural-only rules stay precise on packages they weren't tuned on (being measured).",
       "Whether maintainers consider deliberate engine bumps in minor releases acceptable.",
       "The four complaints were chosen by GitHub search ranking, not sampled randomly."
     ],
@@ -262,8 +262,9 @@
     },
     "nextSteps": [
       {
-        "text": "Validate the structural-only rule set on a fresh random sample of 20 flags not in the first audit (pre-registered: ≥ 70% genuine).",
-        "kind": "experiment"
+        "text": "Replicate the structural-only rule set on 400 fresh popular packages, auditing 20 flags with at most one per package family (pre-registered: ≥ 5% of packages flagged and ≥ 70% genuine).",
+        "kind": "experiment",
+        "experimentId": "exp-npm-structural-breaks"
       },
       {
         "text": "If it holds, prototype a 'compare with last release' check, and ask the owner whether VENTURE may propose it to the publint maintainers. That means contacting people, so it needs authorization.",
@@ -271,8 +272,8 @@
         "issue": 10
       }
     ],
-    "updatedAt": "2026-11-04T14:05:22Z",
-    "updatedInRun": "run-20261104-agent-release-breaks-2",
+    "updatedAt": "2026-11-16T09:46:58Z",
+    "updatedInRun": "run-20261116-agent-release-breaks-3",
     "author": "research director (Claude Code session)",
     "provenance": "real"
   },

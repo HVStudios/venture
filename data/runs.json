@@ -1843,5 +1843,41 @@
       "perQuery": 8
     },
     "provenance": "real"
+  },
+  {
+    "id": "run-20261116-agent-release-breaks-3",
+    "themeId": "theme-npm-release-breaking-changes",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-16T09:46:58Z",
+    "completedAt": "2026-11-16T09:46:58Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Pre-registration of the structural-rule replication; no new data collected"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 0,
+      "sourcesCited": 0,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [],
+    "errors": [],
+    "limitations": [
+      "Inclusive inequality: 'inconclusive' if 10–13 of 20 flags are genuine."
+    ],
+    "usage": {
+      "note": "Interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
   }
 ]

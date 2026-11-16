@@ -562,5 +562,32 @@
     "attractiveness": 66,
     "evidenceStrength": 67,
     "provenance": "real"
+  },
+  {
+    "id": "dec-20261116-npm-release-contract-linter-revise",
+    "at": "2026-11-16T09:46:58Z",
+    "runId": "run-20261116-agent-release-breaks-3",
+    "subjectType": "idea",
+    "subjectId": "idea-npm-release-contract-linter",
+    "action": "revise",
+    "fromStatus": "parked",
+    "toStatus": "parked",
+    "rationale": "Still parked. Added assumption a4 (the structural-only rules are precise on fresh packages) and pre-registered exp-npm-structural-breaks to test it before any upstream proposal.",
+    "actor": "director",
+    "attractiveness": 77,
+    "evidenceStrength": 61,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261116-npm-structural-breaks",
+    "at": "2026-11-16T09:47:22.624Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-npm-structural-breaks",
+    "action": "advance",
+    "fromStatus": "proposed",
+    "toStatus": "approved",
+    "rationale": "Approved under the standing rule for automatable experiments. Population, rules, sampling seed and thresholds pre-registered before any data for the new population was collected; helpers unit-tested on synthetic data only.",
+    "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
   }
 ]
