@@ -1,0 +1,4449 @@
+{
+  "experiment": "exp-wp-orphaned-demand",
+  "executedAt": "2026-11-16T14:32:04.092Z",
+  "asOf": "2026-11-16T00:00:00Z",
+  "thresholds": {
+    "orphanMonths": 24,
+    "minInstalls": 10000,
+    "minDownloads30d": 300,
+    "maintainedMonths": 12,
+    "altInstallShare": 0.5,
+    "minSharedTags": 2
+  },
+  "scanned": 9990,
+  "withMinInstalls": 2151,
+  "orphaned": 158,
+  "liveOrphans": 158,
+  "unservedByTagRule": 59,
+  "reviewSample": [
+    "health-check",
+    "yet-another-related-posts-plugin",
+    "transients-manager",
+    "disable-json-api",
+    "limit-login-attempts",
+    "simple-taxonomy-ordering",
+    "ts-webfonts-for-sakura",
+    "recaptcha-for-mw-wp-form",
+    "display-posts-shortcode",
+    "blogger-importer"
+  ],
+  "rows": [
+    {
+      "slug": "limit-login-attempts",
+      "name": "Limit Login Attempts",
+      "activeInstalls": 200000,
+      "lastUpdated": "2023-04-04",
+      "tested": "6.2.15",
+      "rating": 92,
+      "numRatings": 202,
+      "tags": [
+        "authentication",
+        "login",
+        "security"
+      ],
+      "downloads30d": 7974,
+      "alternatives": [
+        {
+          "slug": "loginizer",
+          "activeInstalls": 1000000,
+          "lastUpdated": "2026-10-29"
+        },
+        {
+          "slug": "sg-security",
+          "activeInstalls": 1000000,
+          "lastUpdated": "2026-11-04"
+        },
+        {
+          "slug": "two-factor",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-09-28"
+        },
+        {
+          "slug": "wps-limit-login",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-09-18"
+        },
+        {
+          "slug": "hide-my-wp",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-11-12"
+        }
+      ],
+      "alternativeCount": 5
+    },
+    {
+      "slug": "health-check",
+      "name": "Health Check &amp; Troubleshooting",
+      "activeInstalls": 200000,
+      "lastUpdated": "2024-07-25",
+      "tested": "6.6.11",
+      "rating": 72,
+      "numRatings": 181,
+      "tags": [
+        "health-check"
+      ],
+      "downloads30d": 24747,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "layout-grid",
+      "name": "Layout Grid Block",
+      "activeInstalls": 200000,
+      "lastUpdated": "2023-07-11",
+      "tested": "6.2.15",
+      "rating": 94,
+      "numRatings": 13,
+      "tags": [
+        "block",
+        "blocks",
+        "design",
+        "grid",
+        "layout"
+      ],
+      "downloads30d": 3145,
+      "alternatives": [
+        {
+          "slug": "ultimate-addons-for-gutenberg",
+          "activeInstalls": 1000000,
+          "lastUpdated": "2026-11-03"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "woosidebars",
+      "name": "WooSidebars",
+      "activeInstalls": 100000,
+      "lastUpdated": "2024-04-03",
+      "tested": "6.5.14",
+      "rating": 78,
+      "numRatings": 48,
+      "tags": [
+        "sidebars",
+        "widget-areas",
+        "widgets"
+      ],
+      "downloads30d": 4150,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "yet-another-related-posts-plugin",
+      "name": "YARPP &#8211; Yet Another Related Posts Plugin",
+      "activeInstalls": 100000,
+      "lastUpdated": "2024-11-11",
+      "tested": "6.7.11",
+      "rating": 96,
+      "numRatings": 1166,
+      "tags": [
+        "contextual-related-posts",
+        "posts",
+        "related-posts",
+        "seo",
+        "similar-posts"
+      ],
+      "downloads30d": 13916,
+      "alternatives": [
+        {
+          "slug": "contextual-related-posts",
+          "activeInstalls": 50000,
+          "lastUpdated": "2026-11-03"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "disable-json-api",
+      "name": "Disable REST API",
+      "activeInstalls": 80000,
+      "lastUpdated": "2023-09-14",
+      "tested": "6.3.14",
+      "rating": 96,
+      "numRatings": 38,
+      "tags": [
+        "admin",
+        "api",
+        "json",
+        "rest",
+        "rest-api"
+      ],
+      "downloads30d": 8379,
+      "alternatives": [
+        {
+          "slug": "integromat-connector",
+          "activeInstalls": 70000,
+          "lastUpdated": "2026-11-05"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "widget-css-classes",
+      "name": "Widget CSS Classes",
+      "activeInstalls": 80000,
+      "lastUpdated": "2024-11-12",
+      "tested": "6.7.11",
+      "rating": 98,
+      "numRatings": 74,
+      "tags": [
+        "classes",
+        "css",
+        "widget-classes",
+        "widget-css",
+        "widgets"
+      ],
+      "downloads30d": 2431,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "display-posts-shortcode",
+      "name": "Display Posts &#8211; Easy lists, grids, navigation, and more",
+      "activeInstalls": 70000,
+      "lastUpdated": "2024-10-14",
+      "tested": "6.6.11",
+      "rating": 96,
+      "numRatings": 164,
+      "tags": [
+        "page",
+        "pages",
+        "posts",
+        "query",
+        "shortcode"
+      ],
+      "downloads30d": 4964,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "heartbeat-control",
+      "name": "Heartbeat Control",
+      "activeInstalls": 70000,
+      "lastUpdated": "2023-08-31",
+      "tested": "6.3.14",
+      "rating": 84,
+      "numRatings": 68,
+      "tags": [
+        "admin-ajax",
+        "heartbeat",
+        "heartbeat-api",
+        "heartbeat-control",
+        "server-resources"
+      ],
+      "downloads30d": 4351,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "php-code-widget",
+      "name": "PHP Code Widget",
+      "activeInstalls": 70000,
+      "lastUpdated": "2022-03-30",
+      "tested": "5.9.20",
+      "rating": 94,
+      "numRatings": 61,
+      "tags": [
+        "execphp",
+        "php",
+        "widget"
+      ],
+      "downloads30d": 2074,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "q2w3-fixed-widget",
+      "name": "Fixed Widget and Sticky Elements for WordPress",
+      "activeInstalls": 70000,
+      "lastUpdated": "2023-03-30",
+      "tested": "6.2.15",
+      "rating": 94,
+      "numRatings": 262,
+      "tags": [
+        "ads",
+        "fixed-widget",
+        "sidebar",
+        "sticky-widget",
+        "widget"
+      ],
+      "downloads30d": 2204,
+      "alternatives": [
+        {
+          "slug": "recent-posts-widget-with-thumbnails",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-10"
+        },
+        {
+          "slug": "image-widget",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-04-20"
+        },
+        {
+          "slug": "custom-sidebars",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-08-16"
+        }
+      ],
+      "alternativeCount": 3
+    },
+    {
+      "slug": "facebook-messenger-customer-chat",
+      "name": "Facebook Chat Plugin &#8211; Live Chat Plugin for WordPress",
+      "activeInstalls": 70000,
+      "lastUpdated": "2022-07-05",
+      "tested": "5.9.20",
+      "rating": 70,
+      "numRatings": 302,
+      "tags": [
+        "chat",
+        "customer-care",
+        "facebook",
+        "messaging",
+        "messenger"
+      ],
+      "downloads30d": 1908,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "title-remover",
+      "name": "Title Remover",
+      "activeInstalls": 70000,
+      "lastUpdated": "2021-06-03",
+      "tested": "5.7.21",
+      "rating": 78,
+      "numRatings": 68,
+      "tags": [
+        "hide-title",
+        "page-title",
+        "post-title",
+        "remove-title",
+        "title"
+      ],
+      "downloads30d": 1469,
+      "alternatives": [
+        {
+          "slug": "hide-page-and-post-title",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-09-25"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "wp-show-posts",
+      "name": "WP Show Posts",
+      "activeInstalls": 60000,
+      "lastUpdated": "2024-04-16",
+      "tested": "6.1.16",
+      "rating": 94,
+      "numRatings": 80,
+      "tags": [
+        "display-posts-shortcode",
+        "gallery",
+        "portfolio",
+        "post-columns",
+        "show-posts"
+      ],
+      "downloads30d": 3516,
+      "alternatives": [
+        {
+          "slug": "visual-portfolio",
+          "activeInstalls": 50000,
+          "lastUpdated": "2026-11-10"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "async-javascript",
+      "name": "Async JavaScript",
+      "activeInstalls": 60000,
+      "lastUpdated": "2023-06-22",
+      "tested": "6.2.15",
+      "rating": 94,
+      "numRatings": 102,
+      "tags": [
+        "async",
+        "javascript",
+        "pagespeed",
+        "performance",
+        "render-blocking"
+      ],
+      "downloads30d": 2697,
+      "alternatives": [
+        {
+          "slug": "litespeed-cache",
+          "activeInstalls": 7000000,
+          "lastUpdated": "2026-11-03"
+        },
+        {
+          "slug": "wp-fastest-cache",
+          "activeInstalls": 1000000,
+          "lastUpdated": "2026-11-05"
+        },
+        {
+          "slug": "w3-total-cache",
+          "activeInstalls": 900000,
+          "lastUpdated": "2026-10-20"
+        },
+        {
+          "slug": "autoptimize",
+          "activeInstalls": 800000,
+          "lastUpdated": "2026-10-25"
+        },
+        {
+          "slug": "aruba-hispeed-cache",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-26"
+        }
+      ],
+      "alternativeCount": 9
+    },
+    {
+      "slug": "woocommerce-extra-checkout-fields-for-brazil",
+      "name": "Brazilian Market on WooCommerce",
+      "activeInstalls": 60000,
+      "lastUpdated": "2024-02-17",
+      "tested": "6.4.14",
+      "rating": 96,
+      "numRatings": 515,
+      "tags": [
+        "brazil",
+        "checkout",
+        "cpf",
+        "cpnj",
+        "woocommerce"
+      ],
+      "downloads30d": 2888,
+      "alternatives": [
+        {
+          "slug": "recaptcha-woo",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-11-09"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "hotjar",
+      "name": "Hotjar",
+      "activeInstalls": 60000,
+      "lastUpdated": "2023-10-25",
+      "tested": "6.0.18",
+      "rating": 58,
+      "numRatings": 18,
+      "tags": [
+        "heatmaps",
+        "hotjar",
+        "insights",
+        "recordings",
+        "visual"
+      ],
+      "downloads30d": 3330,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "easy-theme-and-plugin-upgrades",
+      "name": "Easy Theme and Plugin Upgrades",
+      "activeInstalls": 60000,
+      "lastUpdated": "2022-04-20",
+      "tested": "5.7.21",
+      "rating": 94,
+      "numRatings": 117,
+      "tags": [
+        "theme",
+        "update",
+        "upgrade",
+        "upload"
+      ],
+      "downloads30d": 1615,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "enhanced-media-library",
+      "name": "Enhanced Media Library",
+      "activeInstalls": 60000,
+      "lastUpdated": "2024-07-15",
+      "tested": "6.5.14",
+      "rating": 86,
+      "numRatings": 298,
+      "tags": [
+        "media-categories",
+        "media-folders",
+        "media-library",
+        "media-tags",
+        "mime-types"
+      ],
+      "downloads30d": 4854,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "column-shortcodes",
+      "name": "Column Shortcodes",
+      "activeInstalls": 60000,
+      "lastUpdated": "2022-10-11",
+      "tested": "6.0.18",
+      "rating": 96,
+      "numRatings": 134,
+      "tags": [
+        "column",
+        "columns",
+        "divider",
+        "shortcode",
+        "shortcodes"
+      ],
+      "downloads30d": 2137,
+      "alternatives": [
+        {
+          "slug": "shortcodes-ultimate",
+          "activeInstalls": 400000,
+          "lastUpdated": "2026-10-17"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "all-in-one-favicon",
+      "name": "All In One Favicon",
+      "activeInstalls": 60000,
+      "lastUpdated": "2023-08-08",
+      "tested": "6.2.15",
+      "rating": 90,
+      "numRatings": 82,
+      "tags": [
+        "admin",
+        "blog",
+        "favicon",
+        "image",
+        "theme"
+      ],
+      "downloads30d": 2005,
+      "alternatives": [
+        {
+          "slug": "cryout-theme-settings",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-01-26"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "add-from-server",
+      "name": "Add From Server",
+      "activeInstalls": 60000,
+      "lastUpdated": "2020-12-11",
+      "tested": "5.5.24",
+      "rating": 92,
+      "numRatings": 239,
+      "tags": [
+        "admin",
+        "import",
+        "media",
+        "post",
+        "uploads"
+      ],
+      "downloads30d": 2084,
+      "alternatives": [
+        {
+          "slug": "media-sync",
+          "activeInstalls": 50000,
+          "lastUpdated": "2026-08-15"
+        },
+        {
+          "slug": "reveal-ids-for-wp-admin-25",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-08-15"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "blogger-importer",
+      "name": "Blogger Importer",
+      "activeInstalls": 50000,
+      "lastUpdated": "2024-10-21",
+      "tested": "6.6.11",
+      "rating": 62,
+      "numRatings": 57,
+      "tags": [
+        "blogger",
+        "importer"
+      ],
+      "downloads30d": 4886,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "sakura-rs-wp-ssl",
+      "name": "Easy SSL Plugin for SAKURA Rental Server",
+      "activeInstalls": 50000,
+      "lastUpdated": "2019-11-25",
+      "tested": "5.3.27",
+      "rating": 0,
+      "numRatings": 0,
+      "tags": [
+        "ssl"
+      ],
+      "downloads30d": 1653,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "contact-form-7-add-confirm",
+      "name": "Contact Form 7 add confirm",
+      "activeInstalls": 50000,
+      "lastUpdated": "2018-02-27",
+      "tested": "4.9.35",
+      "rating": 100,
+      "numRatings": 4,
+      "tags": [
+        "contact",
+        "contact-form",
+        "form"
+      ],
+      "downloads30d": 1947,
+      "alternatives": [
+        {
+          "slug": "calculated-fields-form",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-11-16"
+        },
+        {
+          "slug": "form-maker",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-10-30"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "wpcat2tag-importer",
+      "name": "Categories to Tags Converter",
+      "activeInstalls": 50000,
+      "lastUpdated": "2024-10-21",
+      "tested": "6.7.11",
+      "rating": 86,
+      "numRatings": 16,
+      "tags": [
+        "categories-and-tags-converter",
+        "importer"
+      ],
+      "downloads30d": 4878,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "portfolio-post-type",
+      "name": "Portfolio Post Type",
+      "activeInstalls": 40000,
+      "lastUpdated": "2020-08-29",
+      "tested": "5.5.24",
+      "rating": 94,
+      "numRatings": 14,
+      "tags": [
+        "portfolio",
+        "post-type"
+      ],
+      "downloads30d": 1214,
+      "alternatives": [
+        {
+          "slug": "themify-portfolio-post",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-11-11"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "wp-extra-file-types",
+      "name": "WP Extra File Types",
+      "activeInstalls": 40000,
+      "lastUpdated": "2023-10-28",
+      "tested": "6.3.14",
+      "rating": 68,
+      "numRatings": 39,
+      "tags": [
+        "file-type",
+        "media-library",
+        "upload"
+      ],
+      "downloads30d": 1770,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "revision-control",
+      "name": "Revision Control",
+      "activeInstalls": 40000,
+      "lastUpdated": "2018-04-01",
+      "tested": "4.9.35",
+      "rating": 88,
+      "numRatings": 36,
+      "tags": [
+        "admin",
+        "post",
+        "revisions"
+      ],
+      "downloads30d": 1171,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "wp-edit",
+      "name": "WP Edit",
+      "activeInstalls": 40000,
+      "lastUpdated": "2018-10-15",
+      "tested": "4.9.35",
+      "rating": 80,
+      "numRatings": 159,
+      "tags": [
+        "button",
+        "buttons",
+        "editor",
+        "wp-edit",
+        "wpedit"
+      ],
+      "downloads30d": 1099,
+      "alternatives": [
+        {
+          "slug": "addquicktag",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-01"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "underconstruction",
+      "name": "underConstruction",
+      "activeInstalls": 40000,
+      "lastUpdated": "2024-03-08",
+      "tested": "6.4.14",
+      "rating": 90,
+      "numRatings": 111,
+      "tags": [
+        "construction",
+        "preview",
+        "private",
+        "security",
+        "under-construction"
+      ],
+      "downloads30d": 2113,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "login-logo",
+      "name": "Login Logo",
+      "activeInstalls": 30000,
+      "lastUpdated": "2024-09-11",
+      "tested": "6.6.11",
+      "rating": 98,
+      "numRatings": 62,
+      "tags": [
+        "custom-logo",
+        "customize",
+        "login",
+        "login-screen",
+        "logo"
+      ],
+      "downloads30d": 2144,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "disable-google-fonts",
+      "name": "Disable Google Fonts",
+      "activeInstalls": 30000,
+      "lastUpdated": "2019-02-24",
+      "tested": "5.1.28",
+      "rating": 88,
+      "numRatings": 42,
+      "tags": [
+        "google-fonts",
+        "google-web-fonts",
+        "open-sans"
+      ],
+      "downloads30d": 2019,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "upload-max-file-size",
+      "name": "Increase Maximum Upload File Size",
+      "activeInstalls": 30000,
+      "lastUpdated": "2023-08-14",
+      "tested": "5.8.19",
+      "rating": 78,
+      "numRatings": 101,
+      "tags": [
+        "increase-file-size-limit",
+        "increase-upload-limit",
+        "max-upload-file-size",
+        "post-max-size",
+        "upload-limit"
+      ],
+      "downloads30d": 1258,
+      "alternatives": [
+        {
+          "slug": "tuxedo-big-file-uploads",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-07"
+        },
+        {
+          "slug": "wp-maximum-upload-file-size",
+          "activeInstalls": 70000,
+          "lastUpdated": "2026-10-02"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "recaptcha-for-mw-wp-form",
+      "name": "reCAPTCHA for MW WP Form",
+      "activeInstalls": 30000,
+      "lastUpdated": "2024-05-09",
+      "tested": "6.5.14",
+      "rating": 74,
+      "numRatings": 3,
+      "tags": [
+        "form",
+        "mail",
+        "mw-wp-form",
+        "recaptcha"
+      ],
+      "downloads30d": 5046,
+      "alternatives": [
+        {
+          "slug": "mw-wp-form",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-09-27"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "export-media-library",
+      "name": "Export Media Library",
+      "activeInstalls": 30000,
+      "lastUpdated": "2023-04-05",
+      "tested": "6.2.15",
+      "rating": 98,
+      "numRatings": 48,
+      "tags": [
+        "download",
+        "download-media-library",
+        "export",
+        "export-media-library",
+        "media-library"
+      ],
+      "downloads30d": 2247,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "hide-title",
+      "name": "Hide Title",
+      "activeInstalls": 30000,
+      "lastUpdated": "2019-05-22",
+      "tested": "5.2.30",
+      "rating": 74,
+      "numRatings": 87,
+      "tags": [
+        "title",
+        "wp"
+      ],
+      "downloads30d": 1054,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "my-plugins",
+      "name": "My-Plugins",
+      "activeInstalls": 30000,
+      "lastUpdated": "2013-07-02",
+      "tested": "3.5.2",
+      "rating": 20,
+      "numRatings": 1,
+      "tags": [
+        "list"
+      ],
+      "downloads30d": 669,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "display-php-version",
+      "name": "Display PHP Version",
+      "activeInstalls": 30000,
+      "lastUpdated": "2023-05-16",
+      "tested": "6.2.15",
+      "rating": 98,
+      "numRatings": 35,
+      "tags": [
+        "admin",
+        "dashboard",
+        "server",
+        "support",
+        "version"
+      ],
+      "downloads30d": 1534,
+      "alternatives": [
+        {
+          "slug": "admin-menu-editor",
+          "activeInstalls": 300000,
+          "lastUpdated": "2026-11-16"
+        },
+        {
+          "slug": "white-label-cms",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-07-09"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "enhanced-text-widget",
+      "name": "Enhanced Text Widget",
+      "activeInstalls": 30000,
+      "lastUpdated": "2024-07-17",
+      "tested": "6.6.11",
+      "rating": 98,
+      "numRatings": 50,
+      "tags": [
+        "clickable",
+        "linkable",
+        "linked-title",
+        "text",
+        "widget"
+      ],
+      "downloads30d": 1646,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "ts-webfonts-for-sakura",
+      "name": "TS Webfonts for さくらのレンタルサーバ",
+      "activeInstalls": 30000,
+      "lastUpdated": "2024-02-14",
+      "tested": "6.2.15",
+      "rating": 54,
+      "numRatings": 3,
+      "tags": [
+        "font"
+      ],
+      "downloads30d": 5630,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "social-media-widget",
+      "name": "Social Media Widget",
+      "activeInstalls": 30000,
+      "lastUpdated": "2024-06-10",
+      "tested": "6.4.14",
+      "rating": 78,
+      "numRatings": 84,
+      "tags": [
+        "facebook",
+        "google",
+        "linkedin",
+        "social-media",
+        "twitter"
+      ],
+      "downloads30d": 1577,
+      "alternatives": [
+        {
+          "slug": "nextend-facebook-connect",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-11-13"
+        },
+        {
+          "slug": "og",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-10-30"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "scripts-n-styles",
+      "name": "Scripts n Styles",
+      "activeInstalls": 30000,
+      "lastUpdated": "2023-06-06",
+      "tested": "6.2.15",
+      "rating": 88,
+      "numRatings": 30,
+      "tags": [
+        "admin",
+        "code",
+        "css",
+        "custom",
+        "javascript"
+      ],
+      "downloads30d": 1399,
+      "alternatives": [
+        {
+          "slug": "insert-headers-and-footers",
+          "activeInstalls": 3000000,
+          "lastUpdated": "2026-11-12"
+        },
+        {
+          "slug": "white-label-cms",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-07-09"
+        },
+        {
+          "slug": "shortcoder",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-09-14"
+        }
+      ],
+      "alternativeCount": 3
+    },
+    {
+      "slug": "selfhost-google-fonts",
+      "name": "Self-Hosted Google Fonts",
+      "activeInstalls": 20000,
+      "lastUpdated": "2018-06-15",
+      "tested": "4.9.35",
+      "rating": 96,
+      "numRatings": 40,
+      "tags": [
+        "dsgvo",
+        "gdpr",
+        "google-fonts",
+        "typography"
+      ],
+      "downloads30d": 1027,
+      "alternatives": [
+        {
+          "slug": "gdpr-cookie-compliance",
+          "activeInstalls": 300000,
+          "lastUpdated": "2026-11-06"
+        },
+        {
+          "slug": "host-webfonts-local",
+          "activeInstalls": 300000,
+          "lastUpdated": "2026-11-02"
+        },
+        {
+          "slug": "use-any-font",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-11-11"
+        },
+        {
+          "slug": "olympus-google-fonts",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-10-28"
+        },
+        {
+          "slug": "disable-remove-google-fonts",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-09-13"
+        }
+      ],
+      "alternativeCount": 7
+    },
+    {
+      "slug": "exclude-pages",
+      "name": "Exclude Pages",
+      "activeInstalls": 20000,
+      "lastUpdated": "2017-11-28",
+      "tested": "3.4.2",
+      "rating": 98,
+      "numRatings": 47,
+      "tags": [
+        "exclude-pages",
+        "get_pages",
+        "hide-pages",
+        "menu",
+        "navigation"
+      ],
+      "downloads30d": 938,
+      "alternatives": [
+        {
+          "slug": "megamenu",
+          "activeInstalls": 300000,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "slug": "float-menu",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-08-25"
+        },
+        {
+          "slug": "flexy-breadcrumb",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-11-05"
+        },
+        {
+          "slug": "menu-duplicator",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-22"
+        }
+      ],
+      "alternativeCount": 4
+    },
+    {
+      "slug": "lightweight-social-icons",
+      "name": "Lightweight Social Icons",
+      "activeInstalls": 20000,
+      "lastUpdated": "2020-03-18",
+      "tested": "5.4.25",
+      "rating": 94,
+      "numRatings": 63,
+      "tags": [
+        "social-icon-widget",
+        "social-icons",
+        "social-media",
+        "social-networking",
+        "social-profiles"
+      ],
+      "downloads30d": 823,
+      "alternatives": [
+        {
+          "slug": "simple-social-icons",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-09-17"
+        },
+        {
+          "slug": "fuse-social-floating-sidebar",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-09-12"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "rss-importer",
+      "name": "RSS Importer",
+      "activeInstalls": 20000,
+      "lastUpdated": "2024-10-17",
+      "tested": "6.6.11",
+      "rating": 40,
+      "numRatings": 10,
+      "tags": [
+        "importer",
+        "rss"
+      ],
+      "downloads30d": 3023,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "block-options",
+      "name": "Gutenberg Block Editor Toolkit – EditorsKit",
+      "activeInstalls": 20000,
+      "lastUpdated": "2024-05-28",
+      "tested": "6.5.14",
+      "rating": 92,
+      "numRatings": 176,
+      "tags": [
+        "blocks",
+        "gutenberg",
+        "gutenberg-blocks",
+        "gutenberg-editor",
+        "wordpress-blocks"
+      ],
+      "downloads30d": 2183,
+      "alternatives": [
+        {
+          "slug": "ultimate-addons-for-gutenberg",
+          "activeInstalls": 1000000,
+          "lastUpdated": "2026-11-03"
+        },
+        {
+          "slug": "kadence-blocks",
+          "activeInstalls": 600000,
+          "lastUpdated": "2026-11-11"
+        },
+        {
+          "slug": "extendify",
+          "activeInstalls": 500000,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "slug": "otter-blocks",
+          "activeInstalls": 300000,
+          "lastUpdated": "2026-11-13"
+        },
+        {
+          "slug": "coblocks",
+          "activeInstalls": 300000,
+          "lastUpdated": "2026-03-05"
+        }
+      ],
+      "alternativeCount": 26
+    },
+    {
+      "slug": "site-offline",
+      "name": "Site Offline Or Coming Soon Or Maintenance Mode",
+      "activeInstalls": 20000,
+      "lastUpdated": "2024-03-20",
+      "tested": "6.4.14",
+      "rating": 96,
+      "numRatings": 399,
+      "tags": [
+        "admin",
+        "coming-soon",
+        "coming-soon-page",
+        "coming-soon-wordpress-plugin",
+        "coming-soon-wp"
+      ],
+      "downloads30d": 1987,
+      "alternatives": [
+        {
+          "slug": "maintenance",
+          "activeInstalls": 1000000,
+          "lastUpdated": "2026-11-04"
+        },
+        {
+          "slug": "cmp-coming-soon-maintenance",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-10-16"
+        },
+        {
+          "slug": "minimal-coming-soon-maintenance-mode",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-08-16"
+        },
+        {
+          "slug": "nifty-coming-soon-and-under-construction-page",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-25"
+        }
+      ],
+      "alternativeCount": 4
+    },
+    {
+      "slug": "jetsticky-for-elementor",
+      "name": "JetSticky For Elementor",
+      "activeInstalls": 20000,
+      "lastUpdated": "2023-08-24",
+      "tested": "6.3.14",
+      "rating": 74,
+      "numRatings": 18,
+      "tags": [
+        "elementor",
+        "sticky",
+        "sticky-column",
+        "sticky-header",
+        "sticky-section"
+      ],
+      "downloads30d": 3925,
+      "alternatives": [
+        {
+          "slug": "sticky-header-effects-for-elementor",
+          "activeInstalls": 300000,
+          "lastUpdated": "2026-09-18"
+        },
+        {
+          "slug": "sticky-menu-or-anything-on-scroll",
+          "activeInstalls": 90000,
+          "lastUpdated": "2026-08-16"
+        },
+        {
+          "slug": "xpro-theme-builder",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-10-13"
+        }
+      ],
+      "alternativeCount": 3
+    },
+    {
+      "slug": "link-manager",
+      "name": "Link Manager",
+      "activeInstalls": 20000,
+      "lastUpdated": "2017-11-28",
+      "tested": "6.1.16",
+      "rating": 90,
+      "numRatings": 33,
+      "tags": [
+        "blogroll",
+        "link-manager",
+        "links"
+      ],
+      "downloads30d": 925,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "any-mobile-theme-switcher",
+      "name": "Any Mobile Theme Switcher",
+      "activeInstalls": 20000,
+      "lastUpdated": "2024-09-03",
+      "tested": "6.6.11",
+      "rating": 96,
+      "numRatings": 244,
+      "tags": [
+        "mobile-browser-detect",
+        "mobile-detect",
+        "mobile-theme",
+        "mobile-theme-switcher",
+        "theme-redirection-based-on-mobile-device"
+      ],
+      "downloads30d": 1027,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "automatic-updater",
+      "name": "Advanced Automatic Updates",
+      "activeInstalls": 20000,
+      "lastUpdated": "2021-06-04",
+      "tested": "5.0.31",
+      "rating": 94,
+      "numRatings": 61,
+      "tags": [
+        "core",
+        "plugins",
+        "stable",
+        "themes",
+        "updates"
+      ],
+      "downloads30d": 729,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "basic-user-avatars",
+      "name": "Basic User Avatars",
+      "activeInstalls": 20000,
+      "lastUpdated": "2024-11-15",
+      "tested": "6.7.11",
+      "rating": 94,
+      "numRatings": 42,
+      "tags": [
+        "avatar",
+        "gravatar",
+        "profile",
+        "user-profile",
+        "users"
+      ],
+      "downloads30d": 1906,
+      "alternatives": [
+        {
+          "slug": "gravatar-enhanced",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-10-30"
+        },
+        {
+          "slug": "simple-local-avatars",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-08-19"
+        },
+        {
+          "slug": "one-user-avatar",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-08-21"
+        },
+        {
+          "slug": "profile-builder",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-11-11"
+        },
+        {
+          "slug": "metronet-profile-picture",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-07-09"
+        }
+      ],
+      "alternativeCount": 7
+    },
+    {
+      "slug": "forget-about-shortcode-buttons",
+      "name": "Forget About Shortcode Buttons",
+      "activeInstalls": 20000,
+      "lastUpdated": "2024-11-04",
+      "tested": "6.7.11",
+      "rating": 94,
+      "numRatings": 69,
+      "tags": [
+        "button",
+        "css",
+        "edit",
+        "shortcode",
+        "visual-editor"
+      ],
+      "downloads30d": 1131,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "disable-feeds",
+      "name": "Disable Feeds",
+      "activeInstalls": 20000,
+      "lastUpdated": "2018-03-30",
+      "tested": "4.9.35",
+      "rating": 94,
+      "numRatings": 31,
+      "tags": [
+        "atom",
+        "disable",
+        "feeds",
+        "rdf",
+        "rss"
+      ],
+      "downloads30d": 1371,
+      "alternatives": [
+        {
+          "slug": "gn-publisher",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-11-04"
+        },
+        {
+          "slug": "disable-feeds-wp",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-05-29"
+        },
+        {
+          "slug": "rss-includes-pages",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-20"
+        }
+      ],
+      "alternativeCount": 3
+    },
+    {
+      "slug": "transients-manager",
+      "name": "Transients Manager",
+      "activeInstalls": 20000,
+      "lastUpdated": "2024-10-18",
+      "tested": "6.6.11",
+      "rating": 100,
+      "numRatings": 38,
+      "tags": [
+        "cron",
+        "tool",
+        "transient"
+      ],
+      "downloads30d": 8813,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "change-login-logo",
+      "name": "Change WordPress Login Logo",
+      "activeInstalls": 20000,
+      "lastUpdated": "2024-07-31",
+      "tested": "6.6.11",
+      "rating": 92,
+      "numRatings": 17,
+      "tags": [
+        "change-default-logo",
+        "custom-logo",
+        "login-logo",
+        "wordpress-logo-change",
+        "wp-admin-logo"
+      ],
+      "downloads30d": 1161,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "hide-admin-notices",
+      "name": "Hide Admin Notices",
+      "activeInstalls": 20000,
+      "lastUpdated": "2024-02-18",
+      "tested": "6.4.14",
+      "rating": 92,
+      "numRatings": 20,
+      "tags": [
+        "hide-admin-notices",
+        "hide-admin-notifications",
+        "hide-dashboard-notices",
+        "hide-dashboard-notifications",
+        "hide-updates-nags"
+      ],
+      "downloads30d": 1051,
+      "alternatives": [
+        {
+          "slug": "wp-hide-backed-notices",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-03-30"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "wp-maximum-execution-time-exceeded",
+      "name": "WP Maximum Execution Time Exceeded",
+      "activeInstalls": 20000,
+      "lastUpdated": "2021-01-25",
+      "tested": "5.6.23",
+      "rating": 96,
+      "numRatings": 9,
+      "tags": [
+        "error",
+        "execution",
+        "fatal",
+        "maximum",
+        "time"
+      ],
+      "downloads30d": 1137,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "cf7-phone-mask-field",
+      "name": "Contact Form 7 &#8211; Phone mask field",
+      "activeInstalls": 20000,
+      "lastUpdated": "2021-01-07",
+      "tested": "5.6.23",
+      "rating": 88,
+      "numRatings": 24,
+      "tags": [
+        "contact-form-7",
+        "contact-form-7-phone",
+        "mask",
+        "mask-field",
+        "phone-field"
+      ],
+      "downloads30d": 978,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "seed-fonts",
+      "name": "Seed Fonts",
+      "activeInstalls": 20000,
+      "lastUpdated": "2024-08-06",
+      "tested": "6.6.11",
+      "rating": 92,
+      "numRatings": 16,
+      "tags": [
+        "font-face-embed",
+        "typography",
+        "web-fonts",
+        "webfont"
+      ],
+      "downloads30d": 1067,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "material-design-icons-for-elementor",
+      "name": "Material Design Icons for Page Builders",
+      "activeInstalls": 20000,
+      "lastUpdated": "2024-03-20",
+      "tested": "6.5.14",
+      "rating": 100,
+      "numRatings": 5,
+      "tags": [
+        "beaver-builder",
+        "beaver-builder-icons",
+        "elementor",
+        "elementor-icons",
+        "material-design-icons"
+      ],
+      "downloads30d": 1118,
+      "alternatives": [
+        {
+          "slug": "skyboot-custom-icons-for-elementor",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-08-11"
+        },
+        {
+          "slug": "fullwidth-templates",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-08-24"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "pushpress",
+      "name": "PuSHPress",
+      "activeInstalls": 20000,
+      "lastUpdated": "2022-03-04",
+      "tested": "5.9.20",
+      "rating": 72,
+      "numRatings": 5,
+      "tags": [
+        "pubsubhubbub",
+        "push",
+        "websub",
+        "wordpress-com"
+      ],
+      "downloads30d": 927,
+      "alternatives": [
+        {
+          "slug": "pubsubhubbub",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-08-21"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "external-thumbnail",
+      "name": "External Thumbnail",
+      "activeInstalls": 20000,
+      "lastUpdated": "2016-06-17",
+      "tested": "4.5.33",
+      "rating": 100,
+      "numRatings": 2,
+      "tags": [
+        "external-featured-image",
+        "external-thumbnail",
+        "remote-thumbnail",
+        "thumbnail-via-url"
+      ],
+      "downloads30d": 607,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "widgets-on-pages",
+      "name": "Widgets on Pages",
+      "activeInstalls": 20000,
+      "lastUpdated": "2024-11-13",
+      "tested": "6.7.0",
+      "rating": 94,
+      "numRatings": 161,
+      "tags": [
+        "pages",
+        "sidebar",
+        "widgets",
+        "widgets-in-page",
+        "widgets-in-post"
+      ],
+      "downloads30d": 1281,
+      "alternatives": [
+        {
+          "slug": "essential-widgets",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-06-18"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "audit-trail",
+      "name": "Audit Trail",
+      "activeInstalls": 20000,
+      "lastUpdated": "2017-11-28",
+      "tested": "4.7.39",
+      "rating": 56,
+      "numRatings": 4,
+      "tags": [
+        "admin",
+        "audit",
+        "diff",
+        "log",
+        "version"
+      ],
+      "downloads30d": 754,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "wp-test-email",
+      "name": "WP Test Email",
+      "activeInstalls": 20000,
+      "lastUpdated": "2024-07-31",
+      "tested": "6.6.11",
+      "rating": 94,
+      "numRatings": 15,
+      "tags": [
+        "check-mail",
+        "emal-log",
+        "mail-tester",
+        "test-email"
+      ],
+      "downloads30d": 2366,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "add-category-to-pages",
+      "name": "Add Category to Pages",
+      "activeInstalls": 10000,
+      "lastUpdated": "2019-10-19",
+      "tested": "5.2.30",
+      "rating": 94,
+      "numRatings": 30,
+      "tags": [
+        "category",
+        "category-in-page",
+        "page",
+        "page-archive",
+        "tag-in-page"
+      ],
+      "downloads30d": 932,
+      "alternatives": [
+        {
+          "slug": "pages-with-category-and-tag",
+          "activeInstalls": 50000,
+          "lastUpdated": "2026-08-13"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "multiple-post-thumbnails",
+      "name": "Multiple Post Thumbnails",
+      "activeInstalls": 10000,
+      "lastUpdated": "2018-11-26",
+      "tested": "5.0.31",
+      "rating": 94,
+      "numRatings": 42,
+      "tags": [
+        "featured-image",
+        "image",
+        "thumbnails"
+      ],
+      "downloads30d": 1389,
+      "alternatives": [
+        {
+          "slug": "recent-posts-widget-with-thumbnails",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-10"
+        },
+        {
+          "slug": "auto-post-thumbnail",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-11-15"
+        },
+        {
+          "slug": "conditionally-display-featured-image-on-singular-pages",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-05-03"
+        }
+      ],
+      "alternativeCount": 3
+    },
+    {
+      "slug": "meks-simple-flickr-widget",
+      "name": "Meks Simple Flickr Widget",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-07-29",
+      "tested": "6.6.11",
+      "rating": 86,
+      "numRatings": 3,
+      "tags": [
+        "flickr",
+        "photos",
+        "photostream",
+        "sidebar",
+        "widget"
+      ],
+      "downloads30d": 1193,
+      "alternatives": [
+        {
+          "slug": "recent-posts-widget-with-thumbnails",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-10"
+        },
+        {
+          "slug": "image-widget",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-04-20"
+        },
+        {
+          "slug": "custom-sidebars",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-08-16"
+        },
+        {
+          "slug": "content-aware-sidebars",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-10-23"
+        },
+        {
+          "slug": "smk-sidebar-generator",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-02-17"
+        }
+      ],
+      "alternativeCount": 8
+    },
+    {
+      "slug": "accessible-poetry",
+      "name": "AccessibleWP &#8211; Accessibility Toolbar",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-10-03",
+      "tested": "6.6.11",
+      "rating": 90,
+      "numRatings": 47,
+      "tags": [
+        "a11y",
+        "accessibility",
+        "section-508",
+        "wai",
+        "wcag"
+      ],
+      "downloads30d": 1298,
+      "alternatives": [
+        {
+          "slug": "pojo-accessibility",
+          "activeInstalls": 500000,
+          "lastUpdated": "2026-08-24"
+        },
+        {
+          "slug": "userway-accessibility-widget",
+          "activeInstalls": 80000,
+          "lastUpdated": "2025-12-08"
+        },
+        {
+          "slug": "wp-accessibility",
+          "activeInstalls": 60000,
+          "lastUpdated": "2026-10-25"
+        },
+        {
+          "slug": "button-visually-impaired",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-09-21"
+        },
+        {
+          "slug": "accessibility-checker",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-11-03"
+        }
+      ],
+      "alternativeCount": 8
+    },
+    {
+      "slug": "jivochat",
+      "name": "JivoChat Live Chat &#8211; WP live chat plugin for WordPress",
+      "activeInstalls": 10000,
+      "lastUpdated": "2023-10-25",
+      "tested": "6.4.14",
+      "rating": 98,
+      "numRatings": 710,
+      "tags": [
+        "free-live-chat",
+        "live-chat-plugin",
+        "%d1%81hat-plugin",
+        "wordpress-chat",
+        "wordpress-live-chat"
+      ],
+      "downloads30d": 1331,
+      "alternatives": [
+        {
+          "slug": "wp-live-chat-support",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-20"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "seo-image",
+      "name": "SEO Friendly Images",
+      "activeInstalls": 10000,
+      "lastUpdated": "2017-11-28",
+      "tested": "4.1.42",
+      "rating": 60,
+      "numRatings": 58,
+      "tags": [
+        "admin",
+        "google",
+        "images",
+        "post",
+        "seo"
+      ],
+      "downloads30d": 1025,
+      "alternatives": [
+        {
+          "slug": "smntcs-google-webmaster-tools",
+          "activeInstalls": 6000,
+          "lastUpdated": "2026-09-27"
+        },
+        {
+          "slug": "format-media-titles",
+          "activeInstalls": 5000,
+          "lastUpdated": "2026-10-05"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "spiderblocker",
+      "name": "Spider Blocker",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-05-07",
+      "tested": "6.5.14",
+      "rating": 80,
+      "numRatings": 5,
+      "tags": [
+        "apache",
+        "block",
+        "bots",
+        "htaccess",
+        "seo"
+      ],
+      "downloads30d": 3689,
+      "alternatives": [
+        {
+          "slug": "redirection",
+          "activeInstalls": 2000000,
+          "lastUpdated": "2026-09-19"
+        },
+        {
+          "slug": "custom-php-settings",
+          "activeInstalls": 10000,
+          "lastUpdated": "2025-11-20"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "simple-taxonomy-ordering",
+      "name": "Simple Taxonomy Ordering",
+      "activeInstalls": 10000,
+      "lastUpdated": "2023-03-22",
+      "tested": "6.2.15",
+      "rating": 98,
+      "numRatings": 28,
+      "tags": [
+        "admin",
+        "meta",
+        "order",
+        "simple",
+        "term"
+      ],
+      "downloads30d": 6828,
+      "alternatives": [
+        {
+          "slug": "acf-extended",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-19"
+        },
+        {
+          "slug": "catch-ids",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-05-21"
+        },
+        {
+          "slug": "term-management-tools",
+          "activeInstalls": 10000,
+          "lastUpdated": "2025-12-11"
+        },
+        {
+          "slug": "wp-term-order",
+          "activeInstalls": 6000,
+          "lastUpdated": "2026-10-17"
+        }
+      ],
+      "alternativeCount": 4
+    },
+    {
+      "slug": "gravity-forms-google-analytics-event-tracking",
+      "name": "Event Tracking for Gravity Forms",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-11-03",
+      "tested": "6.7.11",
+      "rating": 100,
+      "numRatings": 37,
+      "tags": [
+        "google-analytics",
+        "google-tag-manager",
+        "gravity-forms",
+        "matomo",
+        "piwik"
+      ],
+      "downloads30d": 3353,
+      "alternatives": [
+        {
+          "slug": "duracelltomi-google-tag-manager",
+          "activeInstalls": 700000,
+          "lastUpdated": "2026-11-05"
+        },
+        {
+          "slug": "beehive-analytics",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-10-13"
+        },
+        {
+          "slug": "wk-google-analytics",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-20"
+        },
+        {
+          "slug": "ga-in",
+          "activeInstalls": 7000,
+          "lastUpdated": "2026-10-29"
+        },
+        {
+          "slug": "wp-global-site-tag",
+          "activeInstalls": 7000,
+          "lastUpdated": "2026-09-05"
+        }
+      ],
+      "alternativeCount": 5
+    },
+    {
+      "slug": "dash-notifier",
+      "name": "Dash Notifier",
+      "activeInstalls": 10000,
+      "lastUpdated": "2021-03-26",
+      "tested": "5.7.21",
+      "rating": 0,
+      "numRatings": 0,
+      "tags": [
+        "dashboard-notify",
+        "plugin-installer"
+      ],
+      "downloads30d": 814,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "granular-controls-for-elementor",
+      "name": "Granular Controls For Elementor",
+      "activeInstalls": 10000,
+      "lastUpdated": "2018-03-29",
+      "tested": "4.9.35",
+      "rating": 84,
+      "numRatings": 25,
+      "tags": [
+        "accordion-off",
+        "custom-controls",
+        "delayed-content",
+        "editor-skins",
+        "elementor"
+      ],
+      "downloads30d": 797,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "bulk-page-creator",
+      "name": "Bulk Page Creator",
+      "activeInstalls": 10000,
+      "lastUpdated": "2022-05-07",
+      "tested": "5.9.20",
+      "rating": 96,
+      "numRatings": 45,
+      "tags": [
+        "add-pages",
+        "batch-action",
+        "bulk-page-creator",
+        "dagan-lev",
+        "solid-code"
+      ],
+      "downloads30d": 1636,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "shareaholic",
+      "name": "Professional Social Sharing Buttons, Icons &amp; Related Posts &#8211; Shareaholic",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-11-05",
+      "tested": "6.7.11",
+      "rating": 88,
+      "numRatings": 1053,
+      "tags": [
+        "google-analytics",
+        "pinterest",
+        "social",
+        "social-sharing",
+        "twitter"
+      ],
+      "downloads30d": 1831,
+      "alternatives": [
+        {
+          "slug": "ocean-social-sharing",
+          "activeInstalls": 60000,
+          "lastUpdated": "2026-08-18"
+        },
+        {
+          "slug": "ocean-product-sharing",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-08-18"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "seo-ultimate",
+      "name": "SEO Ultimate",
+      "activeInstalls": 10000,
+      "lastUpdated": "2016-11-03",
+      "tested": "4.6.30",
+      "rating": 76,
+      "numRatings": 98,
+      "tags": [
+        "google",
+        "seo",
+        "seo-ultimate",
+        "suite",
+        "yahoo"
+      ],
+      "downloads30d": 1161,
+      "alternatives": [
+        {
+          "slug": "smntcs-google-webmaster-tools",
+          "activeInstalls": 6000,
+          "lastUpdated": "2026-09-27"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "disable-right-click-for-wp",
+      "name": "Disable Right Click For WP",
+      "activeInstalls": 10000,
+      "lastUpdated": "2023-11-26",
+      "tested": "6.4.14",
+      "rating": 86,
+      "numRatings": 42,
+      "tags": [
+        "copyright-protection",
+        "disable-right-click",
+        "prevent-right-click",
+        "stop-image-saving-with-right-click",
+        "stop-right-click"
+      ],
+      "downloads30d": 694,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "meks-easy-instagram-widget",
+      "name": "Meks Easy Photo Feed Widget",
+      "activeInstalls": 10000,
+      "lastUpdated": "2023-09-11",
+      "tested": "6.3.14",
+      "rating": 76,
+      "numRatings": 12,
+      "tags": [
+        "instagram",
+        "instagram-feed",
+        "instagram-gallery",
+        "instagram-images",
+        "instagram-widget"
+      ],
+      "downloads30d": 1022,
+      "alternatives": [
+        {
+          "slug": "instagram-feed",
+          "activeInstalls": 1000000,
+          "lastUpdated": "2026-11-12"
+        },
+        {
+          "slug": "insta-gallery",
+          "activeInstalls": 80000,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "slug": "spotlight-social-photo-feeds",
+          "activeInstalls": 50000,
+          "lastUpdated": "2026-10-21"
+        },
+        {
+          "slug": "instagram-widget-by-wpzoom",
+          "activeInstalls": 50000,
+          "lastUpdated": "2026-11-14"
+        },
+        {
+          "slug": "social-photo-feed-widget",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-11-01"
+        }
+      ],
+      "alternativeCount": 6
+    },
+    {
+      "slug": "kt-tinymce-color-grid",
+      "name": "Central Color Palette",
+      "activeInstalls": 10000,
+      "lastUpdated": "2023-08-16",
+      "tested": "5.3.27",
+      "rating": 98,
+      "numRatings": 57,
+      "tags": [
+        "color",
+        "customizer",
+        "editor",
+        "gutenberg",
+        "palette"
+      ],
+      "downloads30d": 911,
+      "alternatives": [
+        {
+          "slug": "classic-editor",
+          "activeInstalls": 8000000,
+          "lastUpdated": "2026-05-28"
+        },
+        {
+          "slug": "classic-widgets",
+          "activeInstalls": 2000000,
+          "lastUpdated": "2025-12-08"
+        },
+        {
+          "slug": "tinymce-advanced",
+          "activeInstalls": 1000000,
+          "lastUpdated": "2026-08-26"
+        },
+        {
+          "slug": "ultimate-addons-for-gutenberg",
+          "activeInstalls": 1000000,
+          "lastUpdated": "2026-11-03"
+        },
+        {
+          "slug": "kadence-blocks",
+          "activeInstalls": 600000,
+          "lastUpdated": "2026-11-11"
+        }
+      ],
+      "alternativeCount": 16
+    },
+    {
+      "slug": "visual-term-description-editor",
+      "name": "Visual Term Description Editor",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-08-17",
+      "tested": "6.6.11",
+      "rating": 100,
+      "numRatings": 21,
+      "tags": [
+        "categories",
+        "rich-text",
+        "tags",
+        "tinymce",
+        "wysiwyg"
+      ],
+      "downloads30d": 1531,
+      "alternatives": [
+        {
+          "slug": "black-studio-tinymce-widget",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-08-20"
+        },
+        {
+          "slug": "media-library-assistant",
+          "activeInstalls": 70000,
+          "lastUpdated": "2026-10-28"
+        },
+        {
+          "slug": "post-tags-and-categories-for-pages",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-01-07"
+        },
+        {
+          "slug": "essential-widgets",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-06-18"
+        },
+        {
+          "slug": "wysiwyg-widgets",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-20"
+        }
+      ],
+      "alternativeCount": 5
+    },
+    {
+      "slug": "lazy-load",
+      "name": "Lazy Load",
+      "activeInstalls": 10000,
+      "lastUpdated": "2018-11-22",
+      "tested": "5.0.31",
+      "rating": 80,
+      "numRatings": 53,
+      "tags": [
+        "front-end-optimization",
+        "images",
+        "lazy-load"
+      ],
+      "downloads30d": 782,
+      "alternatives": [
+        {
+          "slug": "disable-lazy-loading",
+          "activeInstalls": 9000,
+          "lastUpdated": "2026-11-03"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "raw-html",
+      "name": "Raw HTML",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-11-11",
+      "tested": "6.7.11",
+      "rating": 86,
+      "numRatings": 33,
+      "tags": [
+        "css",
+        "formatting",
+        "html",
+        "javascript",
+        "posts"
+      ],
+      "downloads30d": 1348,
+      "alternatives": [
+        {
+          "slug": "shortcoder",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-09-14"
+        },
+        {
+          "slug": "simple-embed-code",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-21"
+        },
+        {
+          "slug": "wp-super-minify",
+          "activeInstalls": 8000,
+          "lastUpdated": "2026-08-21"
+        }
+      ],
+      "alternativeCount": 3
+    },
+    {
+      "slug": "options-framework",
+      "name": "Options Framework",
+      "activeInstalls": 10000,
+      "lastUpdated": "2017-11-01",
+      "tested": "4.8.34",
+      "rating": 96,
+      "numRatings": 27,
+      "tags": [
+        "options",
+        "theme-options"
+      ],
+      "downloads30d": 884,
+      "alternatives": [
+        {
+          "slug": "redux-framework",
+          "activeInstalls": 900000,
+          "lastUpdated": "2026-11-09"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "cookies-for-comments",
+      "name": "Cookies for Comments",
+      "activeInstalls": 10000,
+      "lastUpdated": "2019-06-04",
+      "tested": "5.2.30",
+      "rating": 98,
+      "numRatings": 18,
+      "tags": [
+        "comments",
+        "cookies",
+        "spam"
+      ],
+      "downloads30d": 669,
+      "alternatives": [
+        {
+          "slug": "akismet",
+          "activeInstalls": 5000000,
+          "lastUpdated": "2026-08-18"
+        },
+        {
+          "slug": "cleantalk-spam-protect",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-11-16"
+        },
+        {
+          "slug": "throws-spam-away",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-26"
+        },
+        {
+          "slug": "simply-disable-comments",
+          "activeInstalls": 8000,
+          "lastUpdated": "2026-08-11"
+        },
+        {
+          "slug": "spam-destroyer",
+          "activeInstalls": 5000,
+          "lastUpdated": "2026-04-29"
+        }
+      ],
+      "alternativeCount": 5
+    },
+    {
+      "slug": "meks-smart-social-widget",
+      "name": "Meks Smart Social Widget",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-07-29",
+      "tested": "6.6.11",
+      "rating": 92,
+      "numRatings": 10,
+      "tags": [
+        "icons",
+        "linkedin",
+        "reddit",
+        "social",
+        "widget"
+      ],
+      "downloads30d": 1118,
+      "alternatives": [
+        {
+          "slug": "ultimate-social-media-icons",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-09-18"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "hide-featured-image",
+      "name": "Hide Featured Image",
+      "activeInstalls": 10000,
+      "lastUpdated": "2018-05-28",
+      "tested": "4.9.35",
+      "rating": 72,
+      "numRatings": 81,
+      "tags": [
+        "featured",
+        "hide",
+        "image",
+        "post",
+        "show"
+      ],
+      "downloads30d": 842,
+      "alternatives": [
+        {
+          "slug": "conditionally-display-featured-image-on-singular-pages",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-05-03"
+        },
+        {
+          "slug": "whp-hide-posts",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-11-03"
+        },
+        {
+          "slug": "disable-media-pages",
+          "activeInstalls": 9000,
+          "lastUpdated": "2026-09-18"
+        },
+        {
+          "slug": "wp-showhide",
+          "activeInstalls": 9000,
+          "lastUpdated": "2026-08-09"
+        }
+      ],
+      "alternativeCount": 4
+    },
+    {
+      "slug": "accordion-blocks",
+      "name": "Accordion Blocks",
+      "activeInstalls": 10000,
+      "lastUpdated": "2022-02-07",
+      "tested": "5.9.20",
+      "rating": 100,
+      "numRatings": 36,
+      "tags": [
+        "accordion",
+        "accordions",
+        "block",
+        "gutenberg",
+        "responsive"
+      ],
+      "downloads30d": 1980,
+      "alternatives": [
+        {
+          "slug": "ultimate-addons-for-gutenberg",
+          "activeInstalls": 1000000,
+          "lastUpdated": "2026-11-03"
+        },
+        {
+          "slug": "crowdsignal-forms",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-10-08"
+        },
+        {
+          "slug": "flexible-table-block",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-11-09"
+        },
+        {
+          "slug": "genesis-blocks",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-08-20"
+        },
+        {
+          "slug": "snow-monkey-blocks",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-10-28"
+        }
+      ],
+      "alternativeCount": 14
+    },
+    {
+      "slug": "simple-map",
+      "name": "Simple Map",
+      "activeInstalls": 10000,
+      "lastUpdated": "2018-03-11",
+      "tested": "4.9.35",
+      "rating": 94,
+      "numRatings": 12,
+      "tags": [
+        "address",
+        "google-maps",
+        "map",
+        "shortcode"
+      ],
+      "downloads30d": 800,
+      "alternatives": [
+        {
+          "slug": "wp-google-maps",
+          "activeInstalls": 300000,
+          "lastUpdated": "2026-11-13"
+        },
+        {
+          "slug": "wp-google-map-plugin",
+          "activeInstalls": 60000,
+          "lastUpdated": "2026-10-28"
+        },
+        {
+          "slug": "mappress-google-maps-for-wordpress",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-11-07"
+        },
+        {
+          "slug": "google-maps-widget",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-08-16"
+        },
+        {
+          "slug": "google-maps-easy",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-10-30"
+        }
+      ],
+      "alternativeCount": 9
+    },
+    {
+      "slug": "jquery-pin-it-button-for-images",
+      "name": "jQuery Pin It Button for Images",
+      "activeInstalls": 10000,
+      "lastUpdated": "2020-10-01",
+      "tested": "5.5.24",
+      "rating": 92,
+      "numRatings": 305,
+      "tags": [
+        "button",
+        "image",
+        "images",
+        "pin-it",
+        "pinterest"
+      ],
+      "downloads30d": 750,
+      "alternatives": [
+        {
+          "slug": "responsive-lightbox",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-20"
+        },
+        {
+          "slug": "simple-image-sizes",
+          "activeInstalls": 60000,
+          "lastUpdated": "2026-08-17"
+        },
+        {
+          "slug": "image-watermark",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "slug": "no-right-click-images-plugin",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-08-16"
+        },
+        {
+          "slug": "auto-upload-images",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-09-20"
+        }
+      ],
+      "alternativeCount": 6
+    },
+    {
+      "slug": "remove-yoast-seo-comments",
+      "name": "Remove Yoast SEO Comments",
+      "activeInstalls": 10000,
+      "lastUpdated": "2018-09-25",
+      "tested": "4.9.35",
+      "rating": 76,
+      "numRatings": 16,
+      "tags": [
+        "remove-comments",
+        "remove-html",
+        "seo",
+        "yoast",
+        "yoast-seo"
+      ],
+      "downloads30d": 673,
+      "alternatives": [
+        {
+          "slug": "acf-content-analysis-for-yoast-seo",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-06"
+        },
+        {
+          "slug": "yoast-test-helper",
+          "activeInstalls": 50000,
+          "lastUpdated": "2026-10-06"
+        },
+        {
+          "slug": "website-llms-txt",
+          "activeInstalls": 50000,
+          "lastUpdated": "2026-10-04"
+        },
+        {
+          "slug": "yoast-seo-settings-xml-csv-import",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-10-07"
+        },
+        {
+          "slug": "add-wpgraphql-seo",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-11-01"
+        }
+      ],
+      "alternativeCount": 5
+    },
+    {
+      "slug": "wd-instagram-feed",
+      "name": "10WebSocial",
+      "activeInstalls": 10000,
+      "lastUpdated": "2023-02-09",
+      "tested": "5.0.31",
+      "rating": 90,
+      "numRatings": 352,
+      "tags": [],
+      "downloads30d": 1222,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "meks-smart-author-widget",
+      "name": "Meks Smart Author Widget",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-07-23",
+      "tested": "6.6.11",
+      "rating": 90,
+      "numRatings": 8,
+      "tags": [
+        "author",
+        "avatar",
+        "profile",
+        "user",
+        "widget"
+      ],
+      "downloads30d": 1351,
+      "alternatives": [
+        {
+          "slug": "gravatar-enhanced",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-10-30"
+        },
+        {
+          "slug": "simple-local-avatars",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-08-19"
+        },
+        {
+          "slug": "one-user-avatar",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-08-21"
+        },
+        {
+          "slug": "wp-user-avatars",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-10-15"
+        },
+        {
+          "slug": "simple-user-avatar",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-11-02"
+        }
+      ],
+      "alternativeCount": 7
+    },
+    {
+      "slug": "animated-typing-effect",
+      "name": "Typing Effect",
+      "activeInstalls": 10000,
+      "lastUpdated": "2023-10-26",
+      "tested": "6.3.14",
+      "rating": 86,
+      "numRatings": 28,
+      "tags": [
+        "animated-typing-effect",
+        "typewriter-effect",
+        "typing-effect-plugin"
+      ],
+      "downloads30d": 833,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "tinymce-clear-buttons",
+      "name": "TinyMCE Clear Float",
+      "activeInstalls": 10000,
+      "lastUpdated": "2018-08-01",
+      "tested": "4.9.35",
+      "rating": 100,
+      "numRatings": 6,
+      "tags": [
+        "clear",
+        "clear-floats",
+        "formatting",
+        "tinymce",
+        "wordpress-editor"
+      ],
+      "downloads30d": 783,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "contact-form-7-shortcode-enabler",
+      "name": "Contact Form 7 Shortcode Enabler",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-10-18",
+      "tested": "6.6.11",
+      "rating": 98,
+      "numRatings": 12,
+      "tags": [
+        "cf7",
+        "contact-form-7",
+        "shortcode",
+        "shortcodes"
+      ],
+      "downloads30d": 783,
+      "alternatives": [
+        {
+          "slug": "contact-form-cfdb7",
+          "activeInstalls": 600000,
+          "lastUpdated": "2026-10-09"
+        },
+        {
+          "slug": "shortcodes-ultimate",
+          "activeInstalls": 400000,
+          "lastUpdated": "2026-10-17"
+        },
+        {
+          "slug": "cf7-google-sheets-connector",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-10-10"
+        },
+        {
+          "slug": "date-time-picker-for-contact-form-7",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-04-09"
+        },
+        {
+          "slug": "cf7-widget-elementor",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-18"
+        }
+      ],
+      "alternativeCount": 9
+    },
+    {
+      "slug": "wp-jalali",
+      "name": "wp-jalali",
+      "activeInstalls": 10000,
+      "lastUpdated": "2017-11-28",
+      "tested": "4.6.30",
+      "rating": 80,
+      "numRatings": 21,
+      "tags": [
+        "afghan",
+        "calendar-conversion",
+        "farsi",
+        "persian",
+        "tajik"
+      ],
+      "downloads30d": 660,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "custom-icons-for-elementor",
+      "name": "Custom Icons for Elementor",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-10-28",
+      "tested": "6.6.11",
+      "rating": 90,
+      "numRatings": 33,
+      "tags": [
+        "elementor",
+        "fontello",
+        "icon-fonts",
+        "icons"
+      ],
+      "downloads30d": 948,
+      "alternatives": [
+        {
+          "slug": "skyboot-custom-icons-for-elementor",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-08-11"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "wp-no-base-permalink",
+      "name": "WP No Base Permalink",
+      "activeInstalls": 10000,
+      "lastUpdated": "2020-05-06",
+      "tested": "4.8.34",
+      "rating": 82,
+      "numRatings": 16,
+      "tags": [
+        "base",
+        "category",
+        "parents",
+        "permalink",
+        "tag"
+      ],
+      "downloads30d": 602,
+      "alternatives": [
+        {
+          "slug": "pages-with-category-and-tag",
+          "activeInstalls": 50000,
+          "lastUpdated": "2026-08-13"
+        },
+        {
+          "slug": "search-filter",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-08-22"
+        },
+        {
+          "slug": "simple-tags",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-11-03"
+        },
+        {
+          "slug": "term-management-tools",
+          "activeInstalls": 10000,
+          "lastUpdated": "2025-12-11"
+        },
+        {
+          "slug": "remove-cpt-base",
+          "activeInstalls": 10000,
+          "lastUpdated": "2025-12-01"
+        }
+      ],
+      "alternativeCount": 5
+    },
+    {
+      "slug": "breadcrumb-trail",
+      "name": "Breadcrumb Trail",
+      "activeInstalls": 10000,
+      "lastUpdated": "2017-11-28",
+      "tested": "4.8.34",
+      "rating": 86,
+      "numRatings": 30,
+      "tags": [
+        "breadcrumbs",
+        "menu",
+        "navigation"
+      ],
+      "downloads30d": 747,
+      "alternatives": [
+        {
+          "slug": "breadcrumb-navxt",
+          "activeInstalls": 700000,
+          "lastUpdated": "2026-08-29"
+        },
+        {
+          "slug": "megamenu",
+          "activeInstalls": 300000,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "slug": "float-menu",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-08-25"
+        },
+        {
+          "slug": "flexy-breadcrumb",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-11-05"
+        },
+        {
+          "slug": "menu-duplicator",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-22"
+        }
+      ],
+      "alternativeCount": 5
+    },
+    {
+      "slug": "adjust-admin-categories",
+      "name": "Adjust Admin Categories",
+      "activeInstalls": 10000,
+      "lastUpdated": "2022-06-27",
+      "tested": "6.0.0",
+      "rating": 100,
+      "numRatings": 4,
+      "tags": [
+        "admin",
+        "category"
+      ],
+      "downloads30d": 2294,
+      "alternatives": [
+        {
+          "slug": "term-management-tools",
+          "activeInstalls": 10000,
+          "lastUpdated": "2025-12-11"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "easy-twitter-feed-widget",
+      "name": "Easy Twitter Feed Widget Plugin",
+      "activeInstalls": 10000,
+      "lastUpdated": "2017-12-20",
+      "tested": "4.9.35",
+      "rating": 74,
+      "numRatings": 55,
+      "tags": [
+        "feed",
+        "tweet",
+        "twitter",
+        "twitter-feed",
+        "twitter-widget"
+      ],
+      "downloads30d": 718,
+      "alternatives": [
+        {
+          "slug": "custom-twitter-feeds",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-11-12"
+        },
+        {
+          "slug": "autoshare-for-twitter",
+          "activeInstalls": 5000,
+          "lastUpdated": "2026-09-02"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "meks-easy-ads-widget",
+      "name": "Meks Easy Ads Widget",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-07-25",
+      "tested": "6.6.11",
+      "rating": 82,
+      "numRatings": 14,
+      "tags": [
+        "ad",
+        "ads",
+        "advertising",
+        "affiliate",
+        "widget"
+      ],
+      "downloads30d": 1168,
+      "alternatives": [
+        {
+          "slug": "ads-txt",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-09-14"
+        },
+        {
+          "slug": "image-widget",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-04-20"
+        },
+        {
+          "slug": "quick-adsense",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-11-02"
+        }
+      ],
+      "alternativeCount": 3
+    },
+    {
+      "slug": "meks-easy-social-share",
+      "name": "Meks Easy Social Share",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-07-29",
+      "tested": "6.6.11",
+      "rating": 90,
+      "numRatings": 8,
+      "tags": [
+        "reddit",
+        "share",
+        "social",
+        "vkontakte",
+        "whatsapp"
+      ],
+      "downloads30d": 1036,
+      "alternatives": [
+        {
+          "slug": "add-to-any",
+          "activeInstalls": 300000,
+          "lastUpdated": "2026-05-22"
+        },
+        {
+          "slug": "ultimate-social-media-icons",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-09-18"
+        },
+        {
+          "slug": "ocean-social-sharing",
+          "activeInstalls": 60000,
+          "lastUpdated": "2026-08-18"
+        },
+        {
+          "slug": "facebook-pagelike-widget",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-08-13"
+        },
+        {
+          "slug": "genesis-simple-share",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-09-17"
+        }
+      ],
+      "alternativeCount": 7
+    },
+    {
+      "slug": "posts-in-page",
+      "name": "Posts in Page",
+      "activeInstalls": 10000,
+      "lastUpdated": "2019-05-13",
+      "tested": "5.2.30",
+      "rating": 88,
+      "numRatings": 86,
+      "tags": [
+        "custom-post-types",
+        "pages",
+        "posts",
+        "shortcode",
+        "taxonomy"
+      ],
+      "downloads30d": 823,
+      "alternatives": [
+        {
+          "slug": "custom-post-type-ui",
+          "activeInstalls": 1000000,
+          "lastUpdated": "2026-07-14"
+        },
+        {
+          "slug": "insert-pages",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-06-19"
+        },
+        {
+          "slug": "essential-content-types",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-11-16"
+        },
+        {
+          "slug": "related-posts-by-taxonomy",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-21"
+        },
+        {
+          "slug": "essential-widgets",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-06-18"
+        }
+      ],
+      "alternativeCount": 9
+    },
+    {
+      "slug": "advanced-tinymce-configuration",
+      "name": "Advanced TinyMCE Configuration",
+      "activeInstalls": 10000,
+      "lastUpdated": "2023-04-10",
+      "tested": "6.6.11",
+      "rating": 96,
+      "numRatings": 12,
+      "tags": [
+        "editor",
+        "tinymce",
+        "wysiwyg"
+      ],
+      "downloads30d": 1140,
+      "alternatives": [
+        {
+          "slug": "tinymce-advanced",
+          "activeInstalls": 1000000,
+          "lastUpdated": "2026-08-26"
+        },
+        {
+          "slug": "black-studio-tinymce-widget",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-08-20"
+        },
+        {
+          "slug": "addquicktag",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-01"
+        },
+        {
+          "slug": "re-add-underline-justify",
+          "activeInstalls": 50000,
+          "lastUpdated": "2025-11-30"
+        },
+        {
+          "slug": "post-and-page-builder",
+          "activeInstalls": 50000,
+          "lastUpdated": "2026-09-25"
+        }
+      ],
+      "alternativeCount": 6
+    },
+    {
+      "slug": "lockdown-wp-admin",
+      "name": "Lockdown WP Admin",
+      "activeInstalls": 10000,
+      "lastUpdated": "2017-11-28",
+      "tested": "4.3.34",
+      "rating": 78,
+      "numRatings": 54,
+      "tags": [
+        "lockdown",
+        "secure",
+        "security",
+        "vulnerability",
+        "website-security"
+      ],
+      "downloads30d": 658,
+      "alternatives": [
+        {
+          "slug": "patchstack",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-07-28"
+        },
+        {
+          "slug": "block-bad-queries",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-11-06"
+        },
+        {
+          "slug": "wpvulnerability",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-23"
+        },
+        {
+          "slug": "wpscan",
+          "activeInstalls": 8000,
+          "lastUpdated": "2026-09-29"
+        },
+        {
+          "slug": "security-ninja",
+          "activeInstalls": 7000,
+          "lastUpdated": "2026-11-12"
+        }
+      ],
+      "alternativeCount": 5
+    },
+    {
+      "slug": "lightweight-grid-columns",
+      "name": "Lightweight Grid Columns",
+      "activeInstalls": 10000,
+      "lastUpdated": "2019-03-14",
+      "tested": "5.1.28",
+      "rating": 98,
+      "numRatings": 42,
+      "tags": [
+        "columns",
+        "columns-shortcode",
+        "grid-columns"
+      ],
+      "downloads30d": 659,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "uber-login-logo",
+      "name": "Uber Login Logo",
+      "activeInstalls": 10000,
+      "lastUpdated": "2017-11-28",
+      "tested": "4.0.38",
+      "rating": 98,
+      "numRatings": 42,
+      "tags": [
+        "admin",
+        "customisation",
+        "login",
+        "login-logo",
+        "logo"
+      ],
+      "downloads30d": 653,
+      "alternatives": [
+        {
+          "slug": "loginizer",
+          "activeInstalls": 1000000,
+          "lastUpdated": "2026-10-29"
+        },
+        {
+          "slug": "login-as-user",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-11-13"
+        },
+        {
+          "slug": "custom-login",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-13"
+        },
+        {
+          "slug": "wp-last-login",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-10-09"
+        },
+        {
+          "slug": "wps-bidouille",
+          "activeInstalls": 9000,
+          "lastUpdated": "2026-08-13"
+        }
+      ],
+      "alternativeCount": 5
+    },
+    {
+      "slug": "wp-tab-widget",
+      "name": "WP Tab Widget",
+      "activeInstalls": 10000,
+      "lastUpdated": "2022-01-26",
+      "tested": "5.9.20",
+      "rating": 86,
+      "numRatings": 33,
+      "tags": [
+        "ajax-tabs",
+        "recent-posts-tab",
+        "tab-widget",
+        "tabs",
+        "tabs-widget"
+      ],
+      "downloads30d": 823,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "wp-notification-bars",
+      "name": "WP Notification Bars",
+      "activeInstalls": 10000,
+      "lastUpdated": "2022-02-28",
+      "tested": "5.9.20",
+      "rating": 74,
+      "numRatings": 41,
+      "tags": [
+        "alert",
+        "notification",
+        "notification-bar",
+        "welcome-facebook-visitor",
+        "welcome-google-visitor"
+      ],
+      "downloads30d": 1115,
+      "alternatives": [
+        {
+          "slug": "wpfront-notification-bar",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-09-29"
+        },
+        {
+          "slug": "bnfw",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-10-31"
+        },
+        {
+          "slug": "top-bar",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-01-29"
+        },
+        {
+          "slug": "notification",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-03-11"
+        },
+        {
+          "slug": "easy-notification-bar",
+          "activeInstalls": 9000,
+          "lastUpdated": "2026-03-10"
+        }
+      ],
+      "alternativeCount": 5
+    },
+    {
+      "slug": "disable-theme-and-plugin-auto-update-emails",
+      "name": "Disable Theme and Plugin Auto-Update Emails",
+      "activeInstalls": 10000,
+      "lastUpdated": "2023-10-24",
+      "tested": "6.4.14",
+      "rating": 100,
+      "numRatings": 10,
+      "tags": [
+        "email",
+        "notifications",
+        "plugin-update",
+        "theme-update",
+        "updates"
+      ],
+      "downloads30d": 608,
+      "alternatives": [
+        {
+          "slug": "wp-updates-notifier",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-10-26"
+        },
+        {
+          "slug": "disable-updates",
+          "activeInstalls": 9000,
+          "lastUpdated": "2026-09-21"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "wp-missed-schedule-posts",
+      "name": "WP Missed Schedule Posts",
+      "activeInstalls": 10000,
+      "lastUpdated": "2017-07-20",
+      "tested": "4.8.34",
+      "rating": 60,
+      "numRatings": 6,
+      "tags": [
+        "future",
+        "future-posts",
+        "posts",
+        "scheduled",
+        "scheduled-posts"
+      ],
+      "downloads30d": 780,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "tag-pages",
+      "name": "Tag Pages",
+      "activeInstalls": 10000,
+      "lastUpdated": "2022-06-24",
+      "tested": "6.0.0",
+      "rating": 98,
+      "numRatings": 18,
+      "tags": [
+        "pages",
+        "tag-pages",
+        "tags"
+      ],
+      "downloads30d": 679,
+      "alternatives": [
+        {
+          "slug": "post-tags-and-categories-for-pages",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-01-07"
+        },
+        {
+          "slug": "essential-widgets",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-06-18"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "robots-txt-editor",
+      "name": "Robots.txt Editor",
+      "activeInstalls": 10000,
+      "lastUpdated": "2021-01-16",
+      "tested": "5.6.23",
+      "rating": 90,
+      "numRatings": 8,
+      "tags": [
+        "crawler",
+        "robots",
+        "robots-txt",
+        "seo"
+      ],
+      "downloads30d": 3627,
+      "alternatives": [
+        {
+          "slug": "wp-robots-txt",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-08-24"
+        },
+        {
+          "slug": "pc-robotstxt",
+          "activeInstalls": 40000,
+          "lastUpdated": "2026-08-20"
+        },
+        {
+          "slug": "head-meta-data",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-10"
+        },
+        {
+          "slug": "companion-sitemap-generator",
+          "activeInstalls": 6000,
+          "lastUpdated": "2026-04-23"
+        },
+        {
+          "slug": "better-robots-txt",
+          "activeInstalls": 5000,
+          "lastUpdated": "2026-11-11"
+        }
+      ],
+      "alternativeCount": 5
+    },
+    {
+      "slug": "typekit-fonts-for-wordpress",
+      "name": "Adobe Fonts (formerly Typekit) for WordPress",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-07-17",
+      "tested": "6.6.11",
+      "rating": 98,
+      "numRatings": 7,
+      "tags": [
+        "adobe",
+        "design",
+        "font",
+        "fonts",
+        "typekit"
+      ],
+      "downloads30d": 814,
+      "alternatives": [
+        {
+          "slug": "local-google-fonts",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-21"
+        },
+        {
+          "slug": "japanese-font-for-tinymce",
+          "activeInstalls": 10000,
+          "lastUpdated": "2025-12-04"
+        },
+        {
+          "slug": "customify",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-13"
+        }
+      ],
+      "alternativeCount": 3
+    },
+    {
+      "slug": "zopim-live-chat",
+      "name": "Zendesk Chat",
+      "activeInstalls": 10000,
+      "lastUpdated": "2020-08-20",
+      "tested": "5.5.24",
+      "rating": 80,
+      "numRatings": 27,
+      "tags": [
+        "chat",
+        "chat-online",
+        "contact-plugin",
+        "contact-us",
+        "customer-support"
+      ],
+      "downloads30d": 992,
+      "alternatives": [
+        {
+          "slug": "chatway-live-chat",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-11-15"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "bulk-post-update-date",
+      "name": "Bulk Post Update Date",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-08-02",
+      "tested": "6.3.14",
+      "rating": 94,
+      "numRatings": 18,
+      "tags": [
+        "bulk",
+        "date",
+        "posts",
+        "seo",
+        "update"
+      ],
+      "downloads30d": 894,
+      "alternatives": [
+        {
+          "slug": "wp-meta-and-date-remover",
+          "activeInstalls": 80000,
+          "lastUpdated": "2026-05-31"
+        },
+        {
+          "slug": "bulk-datetime-change",
+          "activeInstalls": 6000,
+          "lastUpdated": "2026-10-19"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "show-hidecollapse-expand",
+      "name": "Show-Hide / Collapse-Expand",
+      "activeInstalls": 10000,
+      "lastUpdated": "2023-03-19",
+      "tested": "6.1.16",
+      "rating": 92,
+      "numRatings": 20,
+      "tags": [
+        "collapse",
+        "expand",
+        "faq",
+        "hide-content",
+        "show-content"
+      ],
+      "downloads30d": 790,
+      "alternatives": [
+        {
+          "slug": "read-more-without-refresh",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-10-16"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "blog-designer",
+      "name": "Blog Designer",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-08-12",
+      "tested": "6.6.11",
+      "rating": 80,
+      "numRatings": 167,
+      "tags": [
+        "blog-design",
+        "blog-layout",
+        "blog-template",
+        "custom-blog-template",
+        "wordpress-blog"
+      ],
+      "downloads30d": 1367,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "parent-category-toggler",
+      "name": "Parent Category Toggler",
+      "activeInstalls": 10000,
+      "lastUpdated": "2017-11-28",
+      "tested": "4.8.34",
+      "rating": 96,
+      "numRatings": 15,
+      "tags": [
+        "category",
+        "parent",
+        "toggle"
+      ],
+      "downloads30d": 761,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "custom-css-and-javascript",
+      "name": "Custom CSS and JavaScript",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-08-12",
+      "tested": "6.6.11",
+      "rating": 94,
+      "numRatings": 60,
+      "tags": [
+        "custom-css",
+        "custom-javascript",
+        "javascript",
+        "styles",
+        "stylesheet"
+      ],
+      "downloads30d": 1050,
+      "alternatives": [
+        {
+          "slug": "wp-coder",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-11-16"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "g-meta-keywords",
+      "name": "G Meta Keywords",
+      "activeInstalls": 10000,
+      "lastUpdated": "2019-06-19",
+      "tested": "5.1.28",
+      "rating": 100,
+      "numRatings": 9,
+      "tags": [
+        "g-meta-keywords",
+        "gmk",
+        "keywords",
+        "meta",
+        "meta-keywords"
+      ],
+      "downloads30d": 688,
+      "alternatives": [
+        {
+          "slug": "cds-simple-seo",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-09-23"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "public-post-preview-configurator",
+      "name": "Public Post Preview Configurator",
+      "activeInstalls": 10000,
+      "lastUpdated": "2021-09-23",
+      "tested": "5.8.19",
+      "rating": 100,
+      "numRatings": 3,
+      "tags": [
+        "configuration",
+        "post",
+        "posts",
+        "preview",
+        "public"
+      ],
+      "downloads30d": 2762,
+      "alternatives": [
+        {
+          "slug": "post-duplicator",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-11-04"
+        },
+        {
+          "slug": "public-post-preview",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-29"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "shortcodes-for-divi",
+      "name": "Shortcodes for Divi",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-08-13",
+      "tested": "6.6.11",
+      "rating": 100,
+      "numRatings": 7,
+      "tags": [
+        "divi",
+        "divi-builder",
+        "divi-module",
+        "divi-page-builder",
+        "divi-theme"
+      ],
+      "downloads30d": 632,
+      "alternatives": [
+        {
+          "slug": "supreme-modules-for-divi",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-29"
+        },
+        {
+          "slug": "addons-for-divi",
+          "activeInstalls": 50000,
+          "lastUpdated": "2026-11-08"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "video-user-manuals",
+      "name": "Video User Manuals",
+      "activeInstalls": 10000,
+      "lastUpdated": "2019-06-02",
+      "tested": "5.1.28",
+      "rating": 90,
+      "numRatings": 2,
+      "tags": [
+        "manual",
+        "tutorials"
+      ],
+      "downloads30d": 758,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "woocommerce-pagseguro",
+      "name": "Claudio Sanches &#8211; PagSeguro for WooCommerce",
+      "activeInstalls": 10000,
+      "lastUpdated": "2020-08-10",
+      "tested": "5.5.24",
+      "rating": 98,
+      "numRatings": 914,
+      "tags": [
+        "pagseguro",
+        "payment",
+        "woocommerce"
+      ],
+      "downloads30d": 651,
+      "alternatives": [
+        {
+          "slug": "woocommerce-services",
+          "activeInstalls": 500000,
+          "lastUpdated": "2026-11-11"
+        },
+        {
+          "slug": "checkout-fees-for-woocommerce",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-09-10"
+        },
+        {
+          "slug": "yookassa",
+          "activeInstalls": 9000,
+          "lastUpdated": "2026-11-16"
+        },
+        {
+          "slug": "cashfree",
+          "activeInstalls": 9000,
+          "lastUpdated": "2026-09-01"
+        },
+        {
+          "slug": "zibal-payment-gateway-for-woocommerce",
+          "activeInstalls": 8000,
+          "lastUpdated": "2026-09-01"
+        }
+      ],
+      "alternativeCount": 13
+    },
+    {
+      "slug": "wp-security-hardening",
+      "name": "WP Hardening (discontinued)",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-09-13",
+      "tested": "6.0.18",
+      "rating": 80,
+      "numRatings": 20,
+      "tags": [
+        "discontinued"
+      ],
+      "downloads30d": 1223,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "sticky-header-oceanwp",
+      "name": "Oceanwp sticky header",
+      "activeInstalls": 10000,
+      "lastUpdated": "2021-10-22",
+      "tested": "5.8.19",
+      "rating": 82,
+      "numRatings": 24,
+      "tags": [
+        "header",
+        "menu",
+        "navigation",
+        "oceanwp",
+        "sticky"
+      ],
+      "downloads30d": 601,
+      "alternatives": [
+        {
+          "slug": "megamenu",
+          "activeInstalls": 300000,
+          "lastUpdated": "2026-11-10"
+        },
+        {
+          "slug": "float-menu",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-08-25"
+        },
+        {
+          "slug": "ocean-stick-anything",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-08-18"
+        },
+        {
+          "slug": "flexy-breadcrumb",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-11-05"
+        },
+        {
+          "slug": "menu-duplicator",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-22"
+        }
+      ],
+      "alternativeCount": 5
+    },
+    {
+      "slug": "shortcode-ui",
+      "name": "Shortcake (Shortcode UI)",
+      "activeInstalls": 10000,
+      "lastUpdated": "2019-01-16",
+      "tested": "5.0.31",
+      "rating": 82,
+      "numRatings": 24,
+      "tags": [
+        "shortcodes"
+      ],
+      "downloads30d": 2135,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "multiple-domain",
+      "name": "Multiple Domain",
+      "activeInstalls": 10000,
+      "lastUpdated": "2021-04-11",
+      "tested": "5.7.21",
+      "rating": 96,
+      "numRatings": 28,
+      "tags": [
+        "domains",
+        "multiple",
+        "redirect"
+      ],
+      "downloads30d": 887,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "wc-password-strength-settings",
+      "name": "Password Strength Settings for WooCommerce",
+      "activeInstalls": 10000,
+      "lastUpdated": "2023-10-11",
+      "tested": "6.3.14",
+      "rating": 90,
+      "numRatings": 24,
+      "tags": [
+        "accounts",
+        "passwords",
+        "security",
+        "users",
+        "woocommerce"
+      ],
+      "downloads30d": 777,
+      "alternatives": [
+        {
+          "slug": "user-switching",
+          "activeInstalls": 200000,
+          "lastUpdated": "2026-08-29"
+        },
+        {
+          "slug": "smntcs-disable-rest-api-user-endpoints",
+          "activeInstalls": 8000,
+          "lastUpdated": "2026-09-26"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "yandex-metrika",
+      "name": "Яндекс Метрика",
+      "activeInstalls": 10000,
+      "lastUpdated": "2017-11-28",
+      "tested": "4.6.30",
+      "rating": 90,
+      "numRatings": 15,
+      "tags": [
+        "analytics",
+        "metrica",
+        "metrika",
+        "stats",
+        "yandex"
+      ],
+      "downloads30d": 518,
+      "alternatives": [
+        {
+          "slug": "wp-statistics",
+          "activeInstalls": 500000,
+          "lastUpdated": "2026-11-15"
+        },
+        {
+          "slug": "statify",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-11-07"
+        },
+        {
+          "slug": "official-statcounter-plugin-for-wordpress",
+          "activeInstalls": 70000,
+          "lastUpdated": "2026-08-19"
+        },
+        {
+          "slug": "wp-yandex-metrika",
+          "activeInstalls": 60000,
+          "lastUpdated": "2026-06-03"
+        },
+        {
+          "slug": "wp-piwik",
+          "activeInstalls": 60000,
+          "lastUpdated": "2026-09-15"
+        }
+      ],
+      "alternativeCount": 12
+    },
+    {
+      "slug": "related-posts-flatsome",
+      "name": "Related Posts Flatsome",
+      "activeInstalls": 10000,
+      "lastUpdated": "2022-08-22",
+      "tested": "6.0.18",
+      "rating": 100,
+      "numRatings": 2,
+      "tags": [
+        "atweb-vn",
+        "flatsome",
+        "related-posts",
+        "related-posts-flatsome"
+      ],
+      "downloads30d": 603,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "meks-themeforest-smart-widget",
+      "name": "Meks ThemeForest Smart Widget",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-07-23",
+      "tested": "6.6.11",
+      "rating": 100,
+      "numRatings": 1,
+      "tags": [
+        "affiliate",
+        "envato",
+        "marketplace",
+        "themeforest",
+        "widget"
+      ],
+      "downloads30d": 1033,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "wp-content-copy-protection",
+      "name": "WP Content Copy Protection",
+      "activeInstalls": 10000,
+      "lastUpdated": "2023-06-27",
+      "tested": "6.2.15",
+      "rating": 70,
+      "numRatings": 163,
+      "tags": [
+        "content-protection",
+        "copyright",
+        "no-right-click",
+        "protection",
+        "theft"
+      ],
+      "downloads30d": 851,
+      "alternatives": [
+        {
+          "slug": "wp-content-copy-protector",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-21"
+        },
+        {
+          "slug": "secure-copy-content-protection",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-11-13"
+        },
+        {
+          "slug": "disabled-source-disabled-right-click-and-content-protection",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-11-13"
+        }
+      ],
+      "alternativeCount": 3
+    },
+    {
+      "slug": "bootstrap-for-contact-form-7",
+      "name": "Bootstrap for Contact Form 7",
+      "activeInstalls": 10000,
+      "lastUpdated": "2018-05-24",
+      "tested": "4.9.35",
+      "rating": 96,
+      "numRatings": 26,
+      "tags": [
+        "bootstrap",
+        "bootstrap-3",
+        "bootstrap-framework",
+        "contact-form-7",
+        "wpcf7"
+      ],
+      "downloads30d": 901,
+      "alternatives": [
+        {
+          "slug": "contact-form-cfdb7",
+          "activeInstalls": 600000,
+          "lastUpdated": "2026-10-09"
+        },
+        {
+          "slug": "contact-form-7-accessible-defaults",
+          "activeInstalls": 5000,
+          "lastUpdated": "2026-10-25"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "use-google-libraries",
+      "name": "Use Google Libraries",
+      "activeInstalls": 10000,
+      "lastUpdated": "2017-11-28",
+      "tested": "4.7.39",
+      "rating": 88,
+      "numRatings": 47,
+      "tags": [
+        "cdn",
+        "google",
+        "javascript",
+        "jquery",
+        "performance"
+      ],
+      "downloads30d": 686,
+      "alternatives": [
+        {
+          "slug": "w3-total-cache",
+          "activeInstalls": 900000,
+          "lastUpdated": "2026-10-20"
+        },
+        {
+          "slug": "breeze",
+          "activeInstalls": 300000,
+          "lastUpdated": "2026-11-02"
+        },
+        {
+          "slug": "speculation-rules",
+          "activeInstalls": 60000,
+          "lastUpdated": "2026-08-26"
+        },
+        {
+          "slug": "jquery-updater",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-07-27"
+        },
+        {
+          "slug": "bunnycdn",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-19"
+        }
+      ],
+      "alternativeCount": 8
+    },
+    {
+      "slug": "auth0",
+      "name": "Login by Auth0",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-07-12",
+      "tested": "6.5.14",
+      "rating": 62,
+      "numRatings": 18,
+      "tags": [
+        "authentication",
+        "multi-factor",
+        "security",
+        "single-sign-on",
+        "social"
+      ],
+      "downloads30d": 4835,
+      "alternatives": [
+        {
+          "slug": "two-factor",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-09-28"
+        },
+        {
+          "slug": "wps-limit-login",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-09-18"
+        },
+        {
+          "slug": "google-authenticator",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-08-23"
+        }
+      ],
+      "alternativeCount": 3
+    },
+    {
+      "slug": "shortcodes-to-show-or-hide-content",
+      "name": "Show/Hide Content at Set Time",
+      "activeInstalls": 10000,
+      "lastUpdated": "2019-10-01",
+      "tested": "5.2.30",
+      "rating": 98,
+      "numRatings": 33,
+      "tags": [
+        "active",
+        "date",
+        "expire",
+        "show-hide",
+        "time"
+      ],
+      "downloads30d": 534,
+      "alternatives": [
+        {
+          "slug": "wp-date-and-time-shortcode",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-25"
+        },
+        {
+          "slug": "meks-time-ago",
+          "activeInstalls": 10000,
+          "lastUpdated": "2025-12-04"
+        },
+        {
+          "slug": "bulk-datetime-change",
+          "activeInstalls": 6000,
+          "lastUpdated": "2026-10-19"
+        }
+      ],
+      "alternativeCount": 3
+    },
+    {
+      "slug": "wp-font-awesome",
+      "name": "WP Font Awesome",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-07-09",
+      "tested": "6.6.11",
+      "rating": 98,
+      "numRatings": 9,
+      "tags": [
+        "font-awesome",
+        "font-icon",
+        "fontawesome",
+        "icon"
+      ],
+      "downloads30d": 783,
+      "alternatives": [
+        {
+          "slug": "font-awesome",
+          "activeInstalls": 400000,
+          "lastUpdated": "2026-08-13"
+        },
+        {
+          "slug": "advanced-custom-fields-font-awesome",
+          "activeInstalls": 90000,
+          "lastUpdated": "2026-11-10"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "simple-full-screen-background-image",
+      "name": "Simple Full Screen Background Image",
+      "activeInstalls": 10000,
+      "lastUpdated": "2023-03-29",
+      "tested": "6.1.16",
+      "rating": 88,
+      "numRatings": 45,
+      "tags": [
+        "background",
+        "background-image",
+        "full-screen",
+        "fullscreen",
+        "image"
+      ],
+      "downloads30d": 582,
+      "alternatives": [
+        {
+          "slug": "media-focus-point",
+          "activeInstalls": 7000,
+          "lastUpdated": "2026-11-06"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "popup-trigger-url-for-elementor-pro",
+      "name": "Popup Trigger URL for Elementor Pro",
+      "activeInstalls": 10000,
+      "lastUpdated": "2020-06-16",
+      "tested": "5.4.25",
+      "rating": 92,
+      "numRatings": 19,
+      "tags": [],
+      "downloads30d": 524,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "social-icons",
+      "name": "Social Icons",
+      "activeInstalls": 10000,
+      "lastUpdated": "2021-02-08",
+      "tested": "5.6.23",
+      "rating": 90,
+      "numRatings": 15,
+      "tags": [
+        "brands",
+        "icons",
+        "media",
+        "social",
+        "widget"
+      ],
+      "downloads30d": 779,
+      "alternatives": [
+        {
+          "slug": "ultimate-social-media-icons",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-09-18"
+        },
+        {
+          "slug": "superb-social-share-and-follow-buttons",
+          "activeInstalls": 6000,
+          "lastUpdated": "2026-01-21"
+        },
+        {
+          "slug": "brands-for-woocommerce",
+          "activeInstalls": 5000,
+          "lastUpdated": "2026-10-23"
+        }
+      ],
+      "alternativeCount": 3
+    },
+    {
+      "slug": "search-by-sku-for-woocommerce",
+      "name": "Search by SKU for Woocommerce",
+      "activeInstalls": 10000,
+      "lastUpdated": "2021-07-16",
+      "tested": "5.7.21",
+      "rating": 92,
+      "numRatings": 85,
+      "tags": [
+        "ecommerce",
+        "search",
+        "sku",
+        "stock-keeping-unit",
+        "woocommerce"
+      ],
+      "downloads30d": 853,
+      "alternatives": [
+        {
+          "slug": "woocommerce-paypal-payments",
+          "activeInstalls": 700000,
+          "lastUpdated": "2026-11-09"
+        },
+        {
+          "slug": "woocommerce-multilingual",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-07"
+        },
+        {
+          "slug": "woocommerce-mercadopago",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-11-12"
+        },
+        {
+          "slug": "ti-woocommerce-wishlist",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-11-04"
+        },
+        {
+          "slug": "mollie-payments-for-woocommerce",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-11-13"
+        }
+      ],
+      "alternativeCount": 26
+    },
+    {
+      "slug": "wp-author-date-and-meta-remover",
+      "name": "WP Author, Date and Meta Remover",
+      "activeInstalls": 10000,
+      "lastUpdated": "2021-01-25",
+      "tested": "5.6.23",
+      "rating": 64,
+      "numRatings": 25,
+      "tags": [
+        "author",
+        "date",
+        "home-page",
+        "metadata",
+        "post"
+      ],
+      "downloads30d": 725,
+      "alternatives": [
+        {
+          "slug": "wp-meta-and-date-remover",
+          "activeInstalls": 80000,
+          "lastUpdated": "2026-05-31"
+        },
+        {
+          "slug": "hide-metadata",
+          "activeInstalls": 20000,
+          "lastUpdated": "2026-05-27"
+        },
+        {
+          "slug": "vk-post-author-display",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-24"
+        }
+      ],
+      "alternativeCount": 3
+    },
+    {
+      "slug": "dashboard-notepad",
+      "name": "Dashboard Notepad",
+      "activeInstalls": 10000,
+      "lastUpdated": "2017-07-30",
+      "tested": "4.1.42",
+      "rating": 92,
+      "numRatings": 12,
+      "tags": [
+        "dashboard",
+        "notes",
+        "widget"
+      ],
+      "downloads30d": 594,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "ultimate-posts-widget",
+      "name": "Ultimate Posts Widget",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-07-17",
+      "tested": "6.6.11",
+      "rating": 90,
+      "numRatings": 55,
+      "tags": [
+        "custom-post-types",
+        "featured-image",
+        "recent-posts",
+        "sticky-posts",
+        "widget"
+      ],
+      "downloads30d": 1187,
+      "alternatives": [
+        {
+          "slug": "recent-posts-widget-with-thumbnails",
+          "activeInstalls": 100000,
+          "lastUpdated": "2026-10-10"
+        },
+        {
+          "slug": "themezee-widget-bundle",
+          "activeInstalls": 5000,
+          "lastUpdated": "2026-08-06"
+        }
+      ],
+      "alternativeCount": 2
+    },
+    {
+      "slug": "tc-custom-javascript",
+      "name": "TC Custom JavaScript",
+      "activeInstalls": 10000,
+      "lastUpdated": "2023-02-24",
+      "tested": "6.1.16",
+      "rating": 100,
+      "numRatings": 8,
+      "tags": [
+        "custom-javascript",
+        "custom-js",
+        "edit-js-theme",
+        "javascript-editor"
+      ],
+      "downloads30d": 587,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "ot-flatsome-vertical-menu",
+      "name": "OT Flatsome Vertical Menu",
+      "activeInstalls": 10000,
+      "lastUpdated": "2020-06-17",
+      "tested": "5.2.30",
+      "rating": 94,
+      "numRatings": 22,
+      "tags": [
+        "flatsome",
+        "vertical-menu"
+      ],
+      "downloads30d": 716,
+      "alternatives": [],
+      "alternativeCount": 0
+    },
+    {
+      "slug": "woocommerce-colors",
+      "name": "WooCommerce Colors",
+      "activeInstalls": 10000,
+      "lastUpdated": "2020-08-27",
+      "tested": "5.5.24",
+      "rating": 64,
+      "numRatings": 31,
+      "tags": [
+        "shortcodes",
+        "woocommerce"
+      ],
+      "downloads30d": 552,
+      "alternatives": [
+        {
+          "slug": "futurio-extra",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-11-09"
+        }
+      ],
+      "alternativeCount": 1
+    },
+    {
+      "slug": "rest-api",
+      "name": "WordPress REST API (Version 2)",
+      "activeInstalls": 10000,
+      "lastUpdated": "2017-11-28",
+      "tested": "4.7.39",
+      "rating": 84,
+      "numRatings": 34,
+      "tags": [
+        "api",
+        "json",
+        "rest",
+        "rest-api"
+      ],
+      "downloads30d": 1055,
+      "alternatives": [
+        {
+          "slug": "integromat-connector",
+          "activeInstalls": 70000,
+          "lastUpdated": "2026-11-05"
+        },
+        {
+          "slug": "disable-wp-rest-api",
+          "activeInstalls": 30000,
+          "lastUpdated": "2026-08-10"
+        },
+        {
+          "slug": "wp-rest-api-authentication",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-11-12"
+        },
+        {
+          "slug": "wp-rest-cache",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-10-30"
+        },
+        {
+          "slug": "wpgetapi",
+          "activeInstalls": 10000,
+          "lastUpdated": "2026-08-13"
+        }
+      ],
+      "alternativeCount": 6
+    },
+    {
+      "slug": "cyclone-demo-importer",
+      "name": "Cyclone Demo Importer",
+      "activeInstalls": 10000,
+      "lastUpdated": "2024-06-18",
+      "tested": "6.5.14",
+      "rating": 0,
+      "numRatings": 0,
+      "tags": [
+        "demo-data",
+        "one-click-demo-import"
+      ],
+      "downloads30d": 1390,
+      "alternatives": [
+        {
+          "slug": "blockskit",
+          "activeInstalls": 8000,
+          "lastUpdated": "2025-12-21"
+        }
+      ],
+      "alternativeCount": 1
+    }
+  ]
+}
