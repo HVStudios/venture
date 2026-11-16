@@ -1,0 +1,193 @@
+{
+  "run": {
+    "id": "run-20261116-exp-npm-structural-breaks",
+    "themeId": "theme-npm-release-breaking-changes",
+    "mode": "agent-session",
+    "provider": "claude-code-session + github-actions experiment runner",
+    "startedAt": "2026-11-16T09:48:47Z",
+    "completedAt": "2026-11-16T09:55:10Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Executed in Actions run 43843179942: 400 fresh packages, 10,701 minor/patch pairs, 68 structural flags"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "Manual audit of 20 fixed-seed flags (one per package family): 13 genuine, 5 debatable, 2 not genuine"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "Outcome recorded as inconclusive; idea stays parked with a narrower recommendation"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 4,
+      "sourcesCited": 4,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "npm registry metadata for the 20 audited packages, including later versions and deprecation notices",
+      "package tarball file lists for 6 packages that added an exports map",
+      "eslint-plugin-mocha CHANGELOG.md (raw.githubusercontent.com)",
+      "typescript release dates (npm registry)"
+    ],
+    "errors": [
+      "A first workflow dispatch ran on main before the experiment was merged; it was cancelled within a minute, before producing results."
+    ],
+    "limitations": [
+      "One reviewer judged the audit.",
+      "The criteria did not anticipate blocked deep imports of undocumented files; the verdict is reported under both readings.",
+      "Two audited flags (#8, #20) come from one release train under different unscoped names."
+    ],
+    "usage": {
+      "note": "GitHub Actions (free) plus interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [],
+  "sources": [
+    {
+      "id": "src-exp-npm-structural-breaks-result",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-structural-breaks/RESULT.md",
+      "title": "VENTURE experiment result: structural release-contract flags in 400 fresh npm packages (frequency)",
+      "publisher": "VENTURE (own experiment, GitHub Actions run 43843179942)",
+      "retrievedAt": "2026-11-16T09:55:10Z",
+      "publishedAt": "2026-11-16",
+      "sourceType": "dataset",
+      "originId": "origin-venture-exp-npm-structural",
+      "excerpt": "Packages with at least one structural flag: 49 (12.3%), in 42 package families. … Flagged release pairs: 68 (0.6% of pairs).",
+      "limitations": "Own experiment. Rules applied to registry metadata only.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-exp-npm-structural-breaks-audit",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-structural-breaks/AUDIT.md",
+      "title": "VENTURE experiment: manual audit of 20 structural flags (one per package family)",
+      "publisher": "VENTURE (own experiment)",
+      "retrievedAt": "2026-11-16T09:55:10Z",
+      "publishedAt": "2026-11-16",
+      "sourceType": "dataset",
+      "originId": "origin-venture-exp-npm-structural",
+      "excerpt": "Genuine: 13 of 20 (65%). Debatable: 5. Not genuine: 2. … Of the 13 genuine flags, 5 (#5, #8, #10, #14, #20) are genuine only because an added exports map blocks deep imports of files the package shipped but did not document.",
+      "limitations": "Judged by a research session against the first audit's criteria. One reviewer, small sample.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-exp-npm-structural-breaks-analysis",
+      "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-structural-breaks/ANALYSIS.md",
+      "title": "VENTURE experiment: exploratory analysis of which structural rules are precise",
+      "publisher": "VENTURE (own experiment)",
+      "retrievedAt": "2026-11-16T09:55:10Z",
+      "publishedAt": "2026-11-16",
+      "sourceType": "dataset",
+      "originId": "origin-venture-exp-npm-structural",
+      "excerpt": "two independent samples now agree that a small set of removal rules is precise (13 of 13 audited flags genuine). But it fires for only about 1 in 20 popular packages over two years.",
+      "limitations": "Exploratory, post hoc. Small per-rule counts.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-npm-eslint-plugin-cypress-540",
+      "url": "https://registry.npmjs.org/eslint-plugin-cypress/5.4.0",
+      "title": "eslint-plugin-cypress 5.4.0 registry metadata",
+      "publisher": "npm registry",
+      "retrievedAt": "2026-11-16T09:55:10Z",
+      "publishedAt": "2026-02-17",
+      "sourceType": "docs",
+      "originId": "origin-npm-eslint-plugin-cypress",
+      "excerpt": "deprecate: accidentally includes breaking changes from 6.0.0",
+      "limitations": "A one-line deprecation notice; it doesn't say how many users were affected.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-sv-16",
+      "claim": "On 400 fresh popular npm packages, structural rules alone flagged at least one minor or patch release in 12.3% of packages over two years.",
+      "sourceId": "src-exp-npm-structural-breaks-result",
+      "quote": "Packages with at least one structural flag: 49 (12.3%), in 42 package families.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-minor-patch-releases-break-dependents"
+      ],
+      "ideaIds": [
+        "idea-npm-release-contract-linter"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sv-17",
+      "claim": "Only 13 of 20 audited structural flags were genuine (65%), short of the 70% bar. Five of the 13 depend on counting blocked deep imports of undocumented files; without them it's 8 of 20.",
+      "sourceId": "src-exp-npm-structural-breaks-audit",
+      "quote": "Genuine: 13 of 20 (65%).",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-npm-release-contract-linter"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-sv-18",
+      "claim": "Removal rules (export path removed, CLI command removed, a peer's minimum major raised) were genuine in all 13 audited cases across both samples, but fire for only about 1 in 20 popular packages over two years.",
+      "sourceId": "src-exp-npm-structural-breaks-analysis",
+      "quote": "two independent samples now agree that a small set of removal rules is precise (13 of 13 audited flags genuine)",
+      "stance": "context",
+      "epistemic": "inference",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-npm-release-contract-linter"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Exploratory, post hoc. Small per-rule counts."
+    },
+    {
+      "id": "ev-sv-19",
+      "claim": "Maintainers of a popular ESLint plugin confirmed shipping a breaking change in a minor release by accident: they deprecated 5.4.0 after releasing 6.0.0 the same day.",
+      "sourceId": "src-npm-eslint-plugin-cypress-540",
+      "quote": "accidentally includes breaking changes from 6.0.0",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-minor-patch-releases-break-dependents"
+      ],
+      "ideaIds": [
+        "idea-npm-release-contract-linter"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    }
+  ],
+  "problems": [],
+  "competitors": [],
+  "ideas": [],
+  "experiments": [],
+  "decisions": [],
+  "briefs": []
+}

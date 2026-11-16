@@ -446,6 +446,54 @@
     "provenance": "real"
   },
   {
+    "id": "src-exp-npm-structural-breaks-analysis",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-structural-breaks/ANALYSIS.md",
+    "title": "VENTURE experiment: exploratory analysis of which structural rules are precise",
+    "publisher": "VENTURE (own experiment)",
+    "publishedAt": "2026-11-16",
+    "retrievedAt": "2026-11-16T09:55:10Z",
+    "sourceType": "dataset",
+    "originId": "origin-venture-exp-npm-structural",
+    "excerpt": "two independent samples now agree that a small set of removal rules is precise (13 of 13 audited flags genuine). But it fires for only about 1 in 20 popular packages over two years.",
+    "limitations": "Exploratory, post hoc. Small per-rule counts.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-exp-npm-structural-breaks-audit",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-structural-breaks/AUDIT.md",
+    "title": "VENTURE experiment: manual audit of 20 structural flags (one per package family)",
+    "publisher": "VENTURE (own experiment)",
+    "publishedAt": "2026-11-16",
+    "retrievedAt": "2026-11-16T09:55:10Z",
+    "sourceType": "dataset",
+    "originId": "origin-venture-exp-npm-structural",
+    "excerpt": "Genuine: 13 of 20 (65%). Debatable: 5. Not genuine: 2. … Of the 13 genuine flags, 5 (#5, #8, #10, #14, #20) are genuine only because an added exports map blocks deep imports of files the package shipped but did not document.",
+    "limitations": "Judged by a research session against the first audit's criteria. One reviewer, small sample.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-exp-npm-structural-breaks-result",
+    "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-npm-structural-breaks/RESULT.md",
+    "title": "VENTURE experiment result: structural release-contract flags in 400 fresh npm packages (frequency)",
+    "publisher": "VENTURE (own experiment, GitHub Actions run 43843179942)",
+    "publishedAt": "2026-11-16",
+    "retrievedAt": "2026-11-16T09:55:10Z",
+    "sourceType": "dataset",
+    "originId": "origin-venture-exp-npm-structural",
+    "excerpt": "Packages with at least one structural flag: 49 (12.3%), in 42 package families. … Flagged release pairs: 68 (0.6% of pairs).",
+    "limitations": "Own experiment. Rules applied to registry metadata only.",
+    "verification": {
+      "status": "unchecked"
+    },
+    "provenance": "real"
+  },
+  {
     "id": "src-exp-pre-review-signals-result",
     "url": "https://raw.githubusercontent.com/HVStudios/venture/main/research/experiments/exp-pre-review-signal-discrimination/RESULT.md",
     "title": "VENTURE experiment result: pre-review triage signals (pre-registered)",
@@ -757,6 +805,22 @@
       "checkedAt": "2026-11-12T13:45:37.950Z",
       "httpStatus": 200,
       "note": "1 quote(s) found"
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "src-npm-eslint-plugin-cypress-540",
+    "url": "https://registry.npmjs.org/eslint-plugin-cypress/5.4.0",
+    "title": "eslint-plugin-cypress 5.4.0 registry metadata",
+    "publisher": "npm registry",
+    "publishedAt": "2026-02-17",
+    "retrievedAt": "2026-11-16T09:55:10Z",
+    "sourceType": "docs",
+    "originId": "origin-npm-eslint-plugin-cypress",
+    "excerpt": "deprecate: accidentally includes breaking changes from 6.0.0",
+    "limitations": "A one-line deprecation notice; it doesn't say how many users were affected.",
+    "verification": {
+      "status": "unchecked"
     },
     "provenance": "real"
   },

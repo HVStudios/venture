@@ -1383,5 +1383,66 @@
       "comp-publint"
     ],
     "provenance": "real"
+  },
+  {
+    "id": "ev-sv-16",
+    "claim": "On 400 fresh popular npm packages, structural rules alone flagged at least one minor or patch release in 12.3% of packages over two years.",
+    "sourceId": "src-exp-npm-structural-breaks-result",
+    "quote": "Packages with at least one structural flag: 49 (12.3%), in 42 package families.",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-minor-patch-releases-break-dependents"
+    ],
+    "ideaIds": [
+      "idea-npm-release-contract-linter"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-17",
+    "claim": "Only 13 of 20 audited structural flags were genuine (65%), short of the 70% bar. Five of the 13 depend on counting blocked deep imports of undocumented files; without them it's 8 of 20.",
+    "sourceId": "src-exp-npm-structural-breaks-audit",
+    "quote": "Genuine: 13 of 20 (65%).",
+    "stance": "contradicts",
+    "epistemic": "fact",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-npm-release-contract-linter"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-18",
+    "claim": "Removal rules (export path removed, CLI command removed, a peer's minimum major raised) were genuine in all 13 audited cases across both samples, but fire for only about 1 in 20 popular packages over two years.",
+    "sourceId": "src-exp-npm-structural-breaks-analysis",
+    "quote": "two independent samples now agree that a small set of removal rules is precise (13 of 13 audited flags genuine)",
+    "stance": "context",
+    "epistemic": "inference",
+    "context": "Exploratory, post hoc. Small per-rule counts.",
+    "problemIds": [],
+    "ideaIds": [
+      "idea-npm-release-contract-linter"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
+  },
+  {
+    "id": "ev-sv-19",
+    "claim": "Maintainers of a popular ESLint plugin confirmed shipping a breaking change in a minor release by accident: they deprecated 5.4.0 after releasing 6.0.0 the same day.",
+    "sourceId": "src-npm-eslint-plugin-cypress-540",
+    "quote": "accidentally includes breaking changes from 6.0.0",
+    "stance": "supports",
+    "epistemic": "fact",
+    "problemIds": [
+      "prob-minor-patch-releases-break-dependents"
+    ],
+    "ideaIds": [
+      "idea-npm-release-contract-linter"
+    ],
+    "competitorIds": [],
+    "provenance": "real"
   }
 ]
