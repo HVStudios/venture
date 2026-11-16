@@ -1,0 +1,1149 @@
+{
+  "collectedAt": "2026-11-16T14:57:53.723Z",
+  "run": "43891271513",
+  "issues": [
+    {
+      "id": "microsoft/vscode#249826",
+      "closes": [
+        {
+          "at": "2025-08-03T03:03:02Z",
+          "by": "vs-code-engineering[bot]",
+          "byType": "Bot",
+          "reason": "not_planned"
+        }
+      ],
+      "labelsAdded": [
+        {
+          "at": "2025-05-26T17:04:35Z",
+          "label": "triage-needed",
+          "by": "vs-code-engineering[bot]"
+        },
+        {
+          "at": "2025-06-02T17:05:54Z",
+          "label": "stale",
+          "by": "vs-code-engineering[bot]"
+        },
+        {
+          "at": "2025-06-03T06:52:34Z",
+          "label": "feature-request",
+          "by": "bpasero"
+        },
+        {
+          "at": "2025-06-03T06:52:34Z",
+          "label": "web",
+          "by": "bpasero"
+        }
+      ],
+      "comments": [
+        {
+          "by": "bpasero",
+          "byType": "User",
+          "association": "CONTRIBUTOR",
+          "at": "2025-06-03T06:53:18Z",
+          "body": "cc @mjbvz "
+        },
+        {
+          "by": "vs-code-engineering[bot]",
+          "byType": "Bot",
+          "association": "CONTRIBUTOR",
+          "at": "2025-06-03T06:54:17Z",
+          "body": "<!-- 6d457af9-96bd-47a8-a0e8-ecf120dfffc1 -->\nThis feature request is now a candidate for our backlog. The community has 60 days to [upvote](https://github.com/microsoft/vscode/wiki/Issues-Triaging#up-voting-a-feature-request) the issue. If it receives 20 upvotes we will move it to our backlog. If not, we will close it. To learn more about how we handle feature requests, please see our [documentation](https://aka.ms/vscode-issue-lifecycle).\n\nHappy Coding!"
+        },
+        {
+          "by": "vs-code-engineering[bot]",
+          "byType": "Bot",
+          "association": "CONTRIBUTOR",
+          "at": "2025-07-24T02:59:25Z",
+          "body": "<!-- 7e568b0a-a7ce-58b9-b1f9-fd0231e000d2 -->\nThis feature request has not yet received the 20 community [upvotes](https://github.com/microsoft/vscode/wiki/Issues-Triaging#up-voting-a-feature-request) it takes to make to our backlog. 10 days to go. To learn more about how we handle feature requests, please see our [documentation](https://aka.ms/vscode-issue-lifecycle).\n\nHappy Coding!"
+        },
+        {
+          "by": "vs-code-engineering[bot]",
+          "byType": "Bot",
+          "association": "CONTRIBUTOR",
+          "at": "2025-08-03T03:03:01Z",
+          "body": "<!-- 8f679c1b-b8df-69ca-c20a-0e1342f111e3 -->\n:slightly_frowning_face: In the last 60 days, this feature request has received less than 20 community upvotes and we closed it. Still a big Thank You to you for taking the time to create this issue! To learn more about how we handle feature requests, please see our [documentation](https://aka.ms/vscode-issue-lifecycle).\n\nHappy Coding!"
+        },
+        {
+          "by": "shanselman",
+          "byType": "User",
+          "association": "MEMBER",
+          "at": "2025-09-16T22:48:06Z",
+          "body": "How do we reopen this @vs-code-enginnering? Would be nice to have this @mjbvz\n"
+        },
+        {
+          "by": "afarago",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-10-31T22:08:29Z",
+          "body": "I would also like to have this reopened and re-voted.\n\nWebBLE would be an awesome feature for a web extension! Hoe do we do this?"
+        }
+      ]
+    },
+    {
+      "id": "google-gemini/gemini-cli#5874",
+      "closes": [
+        {
+          "at": "2026-05-06T16:11:33Z",
+          "by": "cocosheng-g",
+          "byType": "User",
+          "reason": "not_planned"
+        }
+      ],
+      "labelsAdded": [
+        {
+          "at": "2025-08-09T05:02:19Z",
+          "label": "kind/enhancement",
+          "by": "jiangyinzuo"
+        },
+        {
+          "at": "2025-08-09T05:02:19Z",
+          "label": "status/need-triage",
+          "by": "jiangyinzuo"
+        },
+        {
+          "at": "2025-08-09T05:03:18Z",
+          "label": "area/extensibility",
+          "by": "gemini-cli[bot]"
+        },
+        {
+          "at": "2025-08-09T05:03:18Z",
+          "label": "sub-area/ecosystem",
+          "by": "gemini-cli[bot]"
+        },
+        {
+          "at": "2025-08-09T05:03:18Z",
+          "label": "priority/p3",
+          "by": "gemini-cli[bot]"
+        },
+        {
+          "at": "2025-08-18T19:27:33Z",
+          "label": "sub-area/ide",
+          "by": "skeshive"
+        },
+        {
+          "at": "2026-01-08T08:08:47Z",
+          "label": "area/extensibility",
+          "by": "gemini-cli[bot]"
+        },
+        {
+          "at": "2026-01-08T08:08:47Z",
+          "label": "kind/enhancement",
+          "by": "gemini-cli[bot]"
+        },
+        {
+          "at": "2026-01-08T08:08:47Z",
+          "label": "priority/p2",
+          "by": "gemini-cli[bot]"
+        },
+        {
+          "at": "2026-01-08T08:08:47Z",
+          "label": "status/bot-triaged",
+          "by": "gemini-cli[bot]"
+        },
+        {
+          "at": "2026-01-10T15:19:12Z",
+          "label": "area/core",
+          "by": "bdmorgan"
+        },
+        {
+          "at": "2026-04-09T15:28:05Z",
+          "label": "🔒 maintainer only",
+          "by": "cocosheng-g"
+        }
+      ],
+      "comments": [
+        {
+          "by": "JunYang-tes",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-08-13T03:56:47Z",
+          "body": "I made one and still continuously improving it. https://github.com/JunYang-tes/neovim-ide-companion"
+        },
+        {
+          "by": "brianhuster",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-08-14T04:01:23Z",
+          "body": "> open diff in an existing Neovim instance\n\nThis can also be done with this (small) plugin https://github.com/brianhuster/unnest.nvim"
+        },
+        {
+          "by": "gutsavgupta",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-09-25T15:17:24Z",
+          "body": "> By this feature, gemini-cli will be able to:\n>  * access information already in Neovim, like buffers, lsp diagnostics and selected codes...\n> * open diff in an existing Neovim instance (may be related to https://github.com/google-gemini/gemini-cli/pull/5603).\n\ncheckout: https://github.com/gutsavgupta/nvim-gemini-companion"
+        },
+        {
+          "by": "gemini-cli[bot]",
+          "byType": "Bot",
+          "association": "CONTRIBUTOR",
+          "at": "2026-01-08T08:08:49Z",
+          "body": "This is a feature request for deeper integration with the Neovim IDE. This falls under the extensibility area as it's about integrating with external tools. It's a valuable feature for a specific user group, so it has a medium priority."
+        },
+        {
+          "by": "vaijab",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-01-08T17:48:35Z",
+          "body": "Hi everyone! I wanted to share a Neovim integration I've been building for the Gemini CLI: **[gemini-cli.nvim](https://github.com/vaijab/gemini-cli.nvim)**.\n\nIt implements the MCP to turn Neovim into a semantic backend for the agent. Instead of just wrapping the terminal, it gives the model native access to:\n\n*   **LSP & Tree-sitter Tools**: Accurate `Go to Definition`, `Find References`, and smart implementation extraction (including docstrings).\n*   **Live Context Sync**: Automatically shares your active buffer, cursor position, and visual selections with the model.\n*   **Native Diff Workflow**: Review and accept/reject proposed changes directly in a floating Neovim diff split.\n*   **Diagnostic Awareness**: The agent can see and fix project errors using Neovim's diagnostic engine."
+        },
+        {
+          "by": "zaucy",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-01-19T04:49:28Z",
+          "body": "I ended up making my own mcp server in pure lua [`zaucy/mcp.nvim`](https://github.com/zaucy/mcp.nvim). I intentionally made it quite minimal. I extend it in my personal config. No lsp or diagnostics exposed. Tools can be registered by other plugins via `require('mcp').register_tool(...)`.\n\nOn top of that I made [`zaucy/gemini.nvim`](https://github.com/zaucy/gemini.nvim) That just registeres the minimal `openDiff` and `closeDiff` tools. I also added autocmds for the gemini hooks so you can respond to them in your own config.\n\nThose two plugins + some of my custom config the workflow looks like this:\n\n![Image](https://github.com/user-attachments/assets/236dfcc4-b21d-4e5e-821a-ca4a180b8453)\n\nYou can see the diff in action and all the hooks being triggered right in neovim!"
+        },
+        {
+          "by": "JagjeevanAK",
+          "byType": "User",
+          "association": "CONTRIBUTOR",
+          "at": "2026-02-19T14:57:21Z",
+          "body": "I am working on this issue \n"
+        },
+        {
+          "by": "JagjeevanAK",
+          "byType": "User",
+          "association": "CONTRIBUTOR",
+          "at": "2026-02-19T15:43:29Z",
+          "body": "/assign\n"
+        },
+        {
+          "by": "gemini-cli[bot]",
+          "byType": "Bot",
+          "association": "CONTRIBUTOR",
+          "at": "2026-02-19T15:43:42Z",
+          "body": "👋 @JagjeevanAK, you've been assigned to this issue! Thank you for taking the time to contribute. Make sure to check out our [contributing guidelines](https://github.com/google-gemini/gemini-cli/blob/main/CONTRIBUTING.md)."
+        },
+        {
+          "by": "cocosheng-g",
+          "byType": "User",
+          "association": "CONTRIBUTOR",
+          "at": "2026-04-09T15:28:11Z",
+          "body": "### Triage Summary\n\nBuilding a robust Neovim IDE integration touches many parts of the system and will require significant architectural alignment and maintainer review time. Therefore, it is categorized as a Maintainer-only issue."
+        },
+        {
+          "by": "cocosheng-g",
+          "byType": "User",
+          "association": "CONTRIBUTOR",
+          "at": "2026-05-06T16:11:33Z",
+          "body": "Thank you for bringing this to our attention. Right now, our engineering team is focusing all resources on critical system maintenance and core stability. Because of this, we don't have immediate plans to address this specific issue, but we truly appreciate you flagging it for us."
+        }
+      ]
+    },
+    {
+      "id": "microsoft/playwright#35294",
+      "closes": [
+        {
+          "at": "2026-10-31T00:27:27Z",
+          "by": "pavelfeldman",
+          "byType": "User",
+          "reason": "not_planned"
+        }
+      ],
+      "labelsAdded": [
+        {
+          "at": "2025-03-20T16:39:53Z",
+          "label": "P3-collecting-feedback",
+          "by": "dgozman"
+        }
+      ],
+      "comments": [
+        {
+          "by": "dgozman",
+          "byType": "User",
+          "association": "COLLABORATOR",
+          "at": "2025-03-20T16:39:49Z",
+          "body": "Implementation thoughts: this could be similar to `contextOptions.strictSelectors` with the same declaration and plumbing. Leaving the issue open for prioritization."
+        },
+        {
+          "by": "hugosajama-ae",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-09-12T06:37:30Z",
+          "body": "Is there any update on this?\n"
+        },
+        {
+          "by": "OliverJAsh",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-10-09T15:56:07Z",
+          "body": "I believe this is also needed for React applications where streaming SSR emits content as hidden `div`s at the end of the HTML, with `script`s to move/copy things into place. I have sporadic strict mode violation errors due to Playwright matching the visible content _and also_ duplicated elements inside these hidden `div`s created by React.\n\n\n```\n    Error: locator.fill: Error: strict mode violation: getByLabel('First name') resolved to 2 elements:\n        1) <input required=\"\" type=\"text\" name=\"first_name\"/> aka getByRole('textbox', { name: 'First name' })\n        2) <input type=\"text\" required=\"\" name=\"first_name\"/> aka getByLabel('First name').nth(1)\n\n    Call log:\n      - waiting for getByLabel('First name')\n\n\n      44 | test('example', async ({ page }) => {\n      45 |   await page.goto('/join');\n    > 46 |   await page.getByLabel('First name').fill('Bear');\n         |                                       ^\n      47 | });\n```\n\n<img width=\"1840\" height=\"1195\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7a1aea1c-5e07-4f77-bb57-949a6ae1fe6a\" />\n\nIn case it helps anyone else, I was able to workaround this using `getByRole` which excludes hidden elements by default (unlike `getByText` for example)."
+        },
+        {
+          "by": "CHC383",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-11-13T19:56:11Z",
+          "body": "> I believe this is also needed for React applications where streaming SSR emits content as hidden divs at the end of the HTML\n\n@OliverJAsh Thanks for the insights! My tests have been flaky for a while and I couldn't figure out the exact root cause. I suspected it was due to React hydration and elements somehow gets duplicated during a short transition time, and with your information I am able to confirm the tests were failed due to the hidden `divs`.\n\nIn my case I use `getByTestId` which is suppose to uniquely locate exact one element in my code, and the hidden elements are really confusing.\n\nI think either this request to only select visible elements by default, or automatically wait to resolve strict mode violation (https://github.com/microsoft/playwright/issues/36045) would be helpful for the React use case. Alternatively, a config option to opt in for only select visible elements globally would work too."
+        },
+        {
+          "by": "BetoFrega",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-11-27T17:18:08Z",
+          "body": "I'd like to highlight that this feature request is about to become **significantly** more critical due to upcoming architectural shifts in the Next.js ecosystem.\n\nAs detailed in the [Next.js documentation](https://nextjs.org/docs/app/getting-started/cache-components#navigation-uses-activity), when the [cacheComponents](https://nextjs.org/docs/app/api-reference/config/next-config-js/cacheComponents) flag is enabled the framework will now default to keeping previously visited routes in the DOM (marked as hidden/inert) rather than unmounting them.\n\nIn this new architecture, a simple navigation often results in two instances of the UI existing simultaneously in the DOM:\n- The user-visible version.\n- The cached, display: none version from the previous \"activity.\"\n\nWithout a global configuration for visibility (as requested in this issue), developers adopting modern Next.js features will be forced to append .filter({ visible: true }) to **virtually every locator interaction** to avoid strict mode violations. This creates **massive boilerplate** and DX friction for what is effectively the \"soon to be\" default behavior of the framework.\n\nGiven that this \"keep-alive\" pattern is becoming a standard in modern web frameworks to enhance UX, Playwright needs a native, ergonomic way to handle \"offscreen\" or \"inactive\" subtrees without requiring verbose filtering on every line of test code."
+        },
+        {
+          "by": "BetoFrega",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-11-30T12:48:24Z",
+          "body": "I'd like to take a crack at this.\n\nI plan to implement the `visibleOnly` parameter (alongside `strictSelectors`) with a default of `false`. This ensures backward compatibility and keeps the implementation lightweight/easy to review.\n\nI understand this is P3, but since the scope is small, I hope it can be considered."
+        },
+        {
+          "by": "pavelfeldman",
+          "byType": "User",
+          "association": "MEMBER",
+          "at": "2025-11-30T19:35:48Z",
+          "body": "> I understand this is P3, but since the scope is small, I hope it can be considered.\n\nThe scope is in fact substantial, I don't think  a non-core team member can tackle this."
+        },
+        {
+          "by": "GrinZero",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-12-05T08:36:33Z",
+          "body": "This is an important and even foundational capability. If it isn’t fixed, the user is forced to take on the cognitive load themselves, which can easily result in unexpected failures."
+        },
+        {
+          "by": "pavelfeldman",
+          "byType": "User",
+          "association": "MEMBER",
+          "at": "2026-10-31T00:27:26Z",
+          "body": "We're closing all `P3-collecting-feedback` issues and retiring the label. #43813 explains why. This doesn't mean the request is wrong. If it still matters to you, please open a new issue against the latest Playwright version with your concrete use case and link back here."
+        }
+      ]
+    },
+    {
+      "id": "Dokploy/dokploy#1851",
+      "closes": [
+        {
+          "at": "2026-09-09T23:04:54Z",
+          "by": "Siumauricio",
+          "byType": "User",
+          "reason": "not_planned"
+        }
+      ],
+      "labelsAdded": [
+        {
+          "at": "2025-05-08T06:19:49Z",
+          "label": "enhancement",
+          "by": "jocubeit"
+        }
+      ],
+      "comments": [
+        {
+          "by": "itsmaty",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-05-19T09:40:33Z",
+          "body": "I also came to the conclusion that this feature does not exist.\nMaybe I will look into creating a PR sometime..."
+        },
+        {
+          "by": "skaldebane",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-10-02T20:39:40Z",
+          "body": "Facing the same need here! Already set up a shared project with all its bells and whistles, and would love to move it to another organization that I can share with my team."
+        },
+        {
+          "by": "toluolatubosun",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-10-21T18:13:13Z",
+          "body": "Also came across this issue. This feature is needed"
+        },
+        {
+          "by": "snorrehu",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-11-05T05:47:13Z",
+          "body": "Same!"
+        },
+        {
+          "by": "zilvestro",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-01-06T09:01:23Z",
+          "body": "same here :)"
+        },
+        {
+          "by": "cucumber-sp",
+          "byType": "User",
+          "association": "CONTRIBUTOR",
+          "at": "2026-01-27T16:46:28Z",
+          "body": "same"
+        },
+        {
+          "by": "michielkalle",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-01-30T13:47:38Z",
+          "body": "same!"
+        },
+        {
+          "by": "carlos-duran",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-01-31T08:44:42Z",
+          "body": "I also would like to have this"
+        },
+        {
+          "by": "andresousadotpt",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-02-08T00:36:21Z",
+          "body": "Any news regarding this?"
+        },
+        {
+          "by": "Siumauricio",
+          "byType": "User",
+          "association": "CONTRIBUTOR",
+          "at": "2026-02-17T03:38:36Z",
+          "body": "I don’t think this feature should be merged as-is. Moving a project only updates the project’s organization, but applications, compose stacks, and databases keep their references to servers (and registries, SSH keys, etc.). Those resources stay in the original organization, so the destination org would end up with a project that uses the source org’s servers and registries. That breaks organization isolation. Supporting move properly would require either restricting it to projects with no org-scoped resources, or handling servers/registries in the target org, which is a much larger change.\n\nIn our model, servers, registries, and SSH keys are scoped to an organization. Projects contain environments, and those contain applications, compose stacks, and databases—all of which reference servers (and applications also reference registries and SSH keys). When we “move” a project, we only change the project’s organizationId. We do not update the servers, registries, or other resources that the project’s services point to\n\n So after a move, the destination organization would own a project whose services still use servers (and registries, etc.) that belong to the source organization. That breaks the isolation we want between organizations.\n\nFor now, this is not something we want. It could lead to strange behaviour. I don't think we can proceed with this issue at the moment. \n"
+        },
+        {
+          "by": "webbyus",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-04-08T11:52:05Z",
+          "body": "I m also looking this feature. its really important !!!"
+        },
+        {
+          "by": "vanlueckn",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-06-25T14:32:59Z",
+          "body": "This feature would be really nice"
+        },
+        {
+          "by": "SimonSchroffner",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-06-27T14:38:13Z",
+          "body": "Same would be a really great feature"
+        },
+        {
+          "by": "ArtifactyNight",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-07-21T17:42:28Z",
+          "body": "I'm waiting this feature since 1987 and I would say it's really great to have it!"
+        },
+        {
+          "by": "raulcanodev",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-08-17T16:57:41Z",
+          "body": "Hello! I need that too"
+        },
+        {
+          "by": "Siumauricio",
+          "byType": "User",
+          "association": "CONTRIBUTOR",
+          "at": "2026-09-09T23:04:54Z",
+          "body": "I will close this issue, since we are not proceeding with this for now read here https://github.com/Dokploy/dokploy/issues/1851#issuecomment-3912036511"
+        }
+      ]
+    },
+    {
+      "id": "netdata/netdata#19007",
+      "closes": [
+        {
+          "at": "2024-11-13T19:59:09Z",
+          "by": "ilyam8",
+          "byType": "User",
+          "reason": "not_planned"
+        }
+      ],
+      "labelsAdded": [
+        {
+          "at": "2024-11-13T19:46:57Z",
+          "label": "feature request",
+          "by": "kylrth"
+        },
+        {
+          "at": "2024-11-13T19:46:57Z",
+          "label": "needs triage",
+          "by": "kylrth"
+        }
+      ],
+      "comments": [
+        {
+          "by": "ilyam8",
+          "byType": "User",
+          "association": "MEMBER",
+          "at": "2024-11-13T19:59:09Z",
+          "body": "Hi, @kylrth. This is expected. If you want to skip the splash screen, you have a few options:\r\n\r\n - sign in\r\n - use `/v3` endpoint\r\n"
+        },
+        {
+          "by": "kylrth",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2024-11-14T02:46:00Z",
+          "body": "Thanks for the information. I'll have my reverse proxy redirect from the homepage to `/v3`."
+        },
+        {
+          "by": "rdbisme",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2024-11-20T13:45:47Z",
+          "body": "Thanks! Let me also preach against this dark pattern. I understand the business side of this, but this really doesn't make me happy :). \r\n\r\nNo problem in advertising your cloud offering, but please don't hide so much the way to skip that for people which are not interested. I'm not entirely convinced that forcing the cloud service down to my throat will make me give up and sign in. Possibly the contrary.\r\n\r\nI'm a huge fan of your product, so... just saying :)"
+        },
+        {
+          "by": "ilyam8",
+          "byType": "User",
+          "association": "MEMBER",
+          "at": "2024-11-20T13:58:21Z",
+          "body": "I don't like it either, but it's not my decision 🤷‍♂️ "
+        },
+        {
+          "by": "balajeek",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2024-11-26T13:29:09Z",
+          "body": "Me too don't like it, I run it on a screen side by just for dashboard like this, and I had to click skip every time.\r\nAlso what I noticed, even with self hosting it seem my internet is down the other day and I couldn't access net data ! is that true ?"
+        },
+        {
+          "by": "DocMAX",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-01-04T01:24:31Z",
+          "body": "so, what's the solution??"
+        },
+        {
+          "by": "rdbisme",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-01-05T00:51:25Z",
+          "body": "@DocMAX the solution is to go to this url: http://<your_host>:19999/v3 should automatically redirect to the dashboard after a slow show of the splash page."
+        },
+        {
+          "by": "rdbisme",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-01-05T15:40:53Z",
+          "body": "I just installed the windows version: \r\n![image](https://github.com/user-attachments/assets/d3d78c80-9c15-42a7-9fbb-64269019aae0)\r\n\r\n\r\nIt says it's not allowed to see the dashboard anonymously?! \r\n\r\nThis is not true, If I redirect to localhost:19999/v3 I can still see it. \r\n"
+        },
+        {
+          "by": "industrial64",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-10-19T08:52:07Z",
+          "body": "Wow, I am glad I don't update my netdata dashboards. Just installed one, and this is atrocious. \nDid someone malicious take over this project?\n\n**I guess these days are over:**\n1. Lightweight dashboard\n2. No fuss\n3. Something for the community\n\nBye bye netdata! We won't be back."
+        }
+      ]
+    },
+    {
+      "id": "usebruno/bruno#6816",
+      "closes": [
+        {
+          "at": "2026-06-05T15:46:09Z",
+          "by": "baek-sang",
+          "byType": "User",
+          "reason": "not_planned"
+        }
+      ],
+      "labelsAdded": [
+        {
+          "at": "2026-01-14T11:34:50Z",
+          "label": "enhancement",
+          "by": "baek-sang"
+        },
+        {
+          "at": "2026-03-30T10:56:14Z",
+          "label": "module-workspaces",
+          "by": "naman-bruno"
+        }
+      ],
+      "comments": [
+        {
+          "by": "helloanoop",
+          "byType": "User",
+          "association": "CONTRIBUTOR",
+          "at": "2026-01-14T12:27:47Z",
+          "body": "Hey @baek-sang Could you share the reason why you'd want this ?\n\ncould you share the reason you’d want this?\n\nOur current thinking is that Bruno should always manage a default workspace. This removes friction for new users, since they don’t have to manually create one to get started. A workspace is essentially a directory that needs to follow a specific structure, and if the default workspace is placed at a custom location, the chances of that structure being accidentally modified, moved, or corrupted are relatively higher. When Bruno manages the default workspace itself, it can better ensure the structure remains intact and avoid situations where the workspace can no longer be opened correctly.\n\nThat said, users can still create custom workspaces at locations of their choice - for teams, projects, or general grouping of collections."
+        },
+        {
+          "by": "MarcoMP1310",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-01-21T11:18:26Z",
+          "body": "Hi @helloanoop \n\nSorry if I use this \"issue\" but I agree with the user @baek-sang, I don't use the default workspace because, with my team, we have our workspace into Git. My question is: will it be possible, at least, to select a different default workspace so that, when I open Bruno, the workspace is always the same, without having to reselect it every time? \n\nThank you,\n\nMarco"
+        },
+        {
+          "by": "baek-sang",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-01-25T20:46:22Z",
+          "body": "@helloanoop \n\nWe do not utilize the default OS-based workspace path enforced by Bruno. Our workflow is entirely based on SMB shares and Git directories. Therefore, we strongly believe that allowing users to configure the default workspace would be the correct approach."
+        },
+        {
+          "by": "Rykov7",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-02-02T14:17:52Z",
+          "body": "Yes, remembering the last Workspace or changing the default Workspace is exactly what you’re looking for and don’t find right away when setting up the program, especially when you actually want to use different Workspaces."
+        },
+        {
+          "by": "RastaTux",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-02-03T15:45:06Z",
+          "body": "+1.\nNothing against a default workspace for new users. If i understand correctly, this is about the OPTION of changing the default workspace later on.\n\nMy use case:\nTwo workspaces. One (the default) with only one entry, another shared one with the most entries I use. But I always land on the first one when starting the program."
+        },
+        {
+          "by": "blagasse700",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-02-20T15:11:55Z",
+          "body": "@baek-sang \nI noticed by chance that if we change the value of the variables:\n- general.defaultCollectionLocation\n- general.defaultWorkspacePath\n\n<img width=\"590\" height=\"107\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/8be43245-21a5-415a-b12d-beed5e24e008\" />\n\nfrom the file %APPDATA%\\AppData\\Roaming\\bruno\\preferences.json, it seems that you can change the location of the default workspace."
+        },
+        {
+          "by": "sklakegg",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-02-26T10:22:33Z",
+          "body": "I dont understand why you create a tool centered around GitOps (my reason for using it) and then you enforce the exact opposite. Just the idea of having to change workspace every time I start the app is not appealing. Also, coming from Postman I am trialing the free version and that default workspace is eating up the workspace limit (2)."
+        },
+        {
+          "by": "distantcompany",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-03-01T03:07:59Z",
+          "body": "> I dont understand why you create a tool centered around GitOps (my reason for using it) and then you enforce the exact opposite. Just the idea of having to change workspace every time I start the app is not appealing. Also, coming from Postman I am trialing the free version and that default workspace is eating up the workspace limit (2).\n\nThis right here. Bruno is overall an incredibly user and developer-friendly client...I just can't wrap my head around this design choice at all.\n\nLimiting the free version to 2 workspaces...I totally understand that. But enforcing this \"My Workspace\" as default is just creating friction for no reason. I shouldn't have to toggle to my custom workspace **every time** I launch Bruno. I suspect most users don't even use it."
+        },
+        {
+          "by": "deammer",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-03-04T14:39:48Z",
+          "body": "I'm trying to sell Bruno to my team and this is the main complaint: everyone is confused that they have to pick our shared workspace when they open the app. Please fix this 🙏 "
+        },
+        {
+          "by": "iz0mb",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-03-09T13:19:23Z",
+          "body": "Also supporting this, not only is it incredibly inconvenient having to switch the workspace each time the application is launched, but it is also not intuitive as a new user. I expected the application to just load the workspace I was working off of last time the application was used, or at the minimum the option to set the workspace I want to load when the application launches."
+        },
+        {
+          "by": "iugo-robert",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-03-10T00:16:00Z",
+          "body": "Would love to see this properly supported. Edited in preferences.json for now."
+        },
+        {
+          "by": "JeeremB",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-03-18T07:52:21Z",
+          "body": "Hello ! Same \"issue\" here, the reason for me is just the UX, I have the default workspace and a shared workspace and I would like to have the shared workspace opened by default when I launch the app so if the default one is open by default, a way to change the default workspace would be cool\n(AppImage Ubuntu 20)"
+        },
+        {
+          "by": "Gonzalez-S",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-03-25T00:30:08Z",
+          "body": "+1. Love bruno, would like to be able to set the default workspace on my own"
+        },
+        {
+          "by": "omasseau",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-04-24T10:53:36Z",
+          "body": "Same problem here. When all your team workspaces are managed in Git, it is completely counter-intuitive to have a default workspace that is local.\nThe default workspace to show when opening the app should be editable."
+        },
+        {
+          "by": "kylewhittaker",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-05-02T18:40:55Z",
+          "body": "Building off of what @blagasse700  suggested with editing the `preferences.json` file, I tried something similar on mac using symlinks.\n\nThis is working well for me on two machines.\n\n**Tested on:** macOS 14.8.1, macOS 15.7.5\n\n1. Close Bruno.\n2. Make sure your target workspace already has a valid `workspace.yml` (any existing Bruno workspace will have one).\n3. Check the name of the default workspace folder inside `~/Library/Application Support/bruno/`. It's usually `default-workspace`, but may be `default-workspace-1` or similar depending on your install history.\n4. Move or back up any collections from that folder if you want to keep them, then delete it.\n5. Create a symlink in its place pointing to your workspace folder (**not the *workspace.yml* file**):\n\n```bash\nln -s \"/path/to/your/workspace\" ~/Library/Application\\ Support/bruno/default-workspace\n```\n\n6. Launch Bruno. Your workspace will open as the default, but the name will still display as \"My Workspace\".\n\nLooks like @naman-bruno is already working on a permanent fix, but hopefully this helps in the short term. "
+        },
+        {
+          "by": "RosieColler",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-05-20T10:21:59Z",
+          "body": "We have the same issue. Users are confused when the shared, git controlled, workspace that they were using previously seems to be empty... when actually it's just reverted to their local workspace.\n\nNo problem with there being a local workspace, but allow the user to choose which is default, or remember the last used.\n\nThat would be a feature that would really help."
+        },
+        {
+          "by": "robross0606",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-06-17T14:24:10Z",
+          "body": "Even better, the VSCode extension apparently uses a _different_ \"Default Workspace\" than the standalone client.  That makes three contradictory strategies surrounding Bruno:\n\n1. \"Git first\" API management.\n2. Unchangeable default workspace that is NOT controlled by git because it \"removes friction for new users\".\n3. Completely different default workspace for VSCode extension also NOT controlled by git because... ?\n\nWhere exactly are we removing friction for new users here?  You're doing literally the exact opposite of removing friction.  You're creating friction and confusion."
+        },
+        {
+          "by": "inigopascall",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-07-08T11:29:40Z",
+          "body": "Just ended up here after going round in circles trying to figure out to change \"My Workspace\" to something else. \n\nSo... that's actually literally just flat-out not possible? Seriously?"
+        },
+        {
+          "by": "mkvlrn",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-10-03T05:58:35Z",
+          "body": "> Just ended up here after going round in circles trying to figure out to change \"My Workspace\" to something else.\n> \n> So... that's actually literally just flat-out not possible? Seriously?\n\nFeels like it, and without even a note about it.\n\nAll points presented here are so reasonable, too. I guess Listening to what users want is out."
+        },
+        {
+          "by": "distantcompany",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-10-03T12:59:15Z",
+          "body": "> > Just ended up here after going round in circles trying to figure out to change \"My Workspace\" to something else.\n> > So... that's actually literally just flat-out not possible? Seriously?\n> \n> Feels like it, and without even a note about it.\n> \n> All points presented here are so reasonable, too. I guess Listening to what users want is out.\n\nTBF to the devs, one of the more recent versions added workspace persistence, where at least it remembers your last open workspace. It's not exactly what everyone was asking for, but it's good enough for my purposes. I totally forgot the 'My Workspace' is even there."
+        }
+      ]
+    },
+    {
+      "id": "OpenHands/OpenHands#5325",
+      "closes": [
+        {
+          "at": "2025-12-08T02:12:01Z",
+          "by": "github-actions[bot]",
+          "byType": "Bot",
+          "reason": "not_planned"
+        }
+      ],
+      "labelsAdded": [
+        {
+          "at": "2024-11-29T09:37:23Z",
+          "label": "bug",
+          "by": "cool9203"
+        },
+        {
+          "at": "2024-11-29T14:15:11Z",
+          "label": "enhancement",
+          "by": "mamoodi"
+        },
+        {
+          "at": "2025-02-03T01:57:53Z",
+          "label": "Stale",
+          "by": "github-actions[bot]"
+        },
+        {
+          "at": "2025-05-15T02:09:03Z",
+          "label": "Stale",
+          "by": "github-actions[bot]"
+        },
+        {
+          "at": "2025-06-27T02:12:36Z",
+          "label": "Stale",
+          "by": "github-actions[bot]"
+        },
+        {
+          "at": "2025-09-24T02:03:00Z",
+          "label": "Stale",
+          "by": "github-actions[bot]"
+        },
+        {
+          "at": "2025-11-28T02:08:03Z",
+          "label": "Stale",
+          "by": "github-actions[bot]"
+        }
+      ],
+      "comments": [
+        {
+          "by": "mamoodi",
+          "byType": "User",
+          "association": "COLLABORATOR",
+          "at": "2024-11-29T14:15:05Z",
+          "body": "I'm going to change this to an enhancement because it's asking support for podman which is new functionality."
+        },
+        {
+          "by": "pathquester",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2024-11-29T17:53:49Z",
+          "body": "Was about to ask the same thing, podman is by design daemonless and rootless and although there is a rootless version of Docker as well, there is no reason not to support both."
+        },
+        {
+          "by": "andrewginns",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2024-12-12T17:06:05Z",
+          "body": "Related to this issue which became stale https://github.com/All-Hands-AI/OpenHands/issues/2651\r\n\r\nUsing the same command as before where `docker` is a `podman` alias\r\n```\r\ndocker run -it \\\r\n    --pull=always \\\r\n    --privileged \\\r\n    -e SANDBOX_RUNTIME_CONTAINER_IMAGE=ghcr.io/all-hands-ai/runtime:main-nikolaik \\\r\n    -e SANDBOX_USER_ID=$(id -u) \\\r\n    -e WORKSPACE_MOUNT_PATH=$WORKSPACE_BASE \\\r\n    -v $WORKSPACE_BASE:/opt/workspace_base:z \\\r\n    -v /run/user/502/podman/podman.sock:/var/run/docker.sock:Z \\\r\n    -p 3008:3000 \\\r\n    --name openhands-app-$(date +%Y%m%d%H%M%S) \\\r\n    ghcr.io/all-hands-ai/openhands:main\r\n ```\r\nI get this result after adding a model API key and sending some instructions to the model.\r\n```\r\nINFO:     10.88.0.3:60984 - \"GET /assets/terminal-_JfXwz37.js HTTP/1.1\" 200 OK\r\nINFO:     ('10.88.0.3', 32782) - \"WebSocket /socket.io/?EIO=4&transport=websocket\" [accepted]\r\n17:02:58 - openhands:INFO: listen_socket.py:22 - sio:connect: Oc1IJEsCersb-253AAAB\r\nINFO:     10.88.0.3:60986 - \"GET /config.json HTTP/1.1\" 200 OK\r\n17:02:58 - openhands:INFO: listen_socket.py:64 - New session: Oc1IJEsCersb-253AAAB\r\n17:02:58 - openhands:INFO: manager.py:220 - start_new_local_session:Oc1IJEsCersb-253AAAB\r\n17:02:58 - openhands:INFO: codeact_agent.py:88 - Function calling not enabled for model openai/o1-mini. Mocking function calling via prompting.\r\n17:02:58 - openhands:INFO: shutdown_listener.py:37 - _register_signal_handlers\r\n17:02:58 - openhands:INFO: shutdown_listener.py:41 -"
+        },
+        {
+          "by": "kenkoooo",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-01-04T01:11:09Z",
+          "body": "The root cause of this issue is that the Python Docker client returns the version of Podman when Podman is used instead of Docker. Currently, Podman’s version is 5.x, which does not satisfy the \">= 18.09\" version constraint. To address this, we need to revise the logic for checking BuildKit compatibility so that it does not rely on the version number."
+        },
+        {
+          "by": "github-actions[bot]",
+          "byType": "Bot",
+          "association": "CONTRIBUTOR",
+          "at": "2025-02-03T01:57:53Z",
+          "body": "This issue is stale because it has been open for 30 days with no activity. Remove stale label or comment or this will be closed in 7 days."
+        },
+        {
+          "by": "onurcanozavci",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-03-02T13:18:09Z",
+          "body": "Just for a quick workaround until the issue is solved creating a Dockerfile as follows and running `podman build -t openhands . ` worked for me.\n\n\n```\nFROM docker.all-hands.dev/all-hands-ai/openhands:0.27\nRUN sed -i 's|18|1|g' /app/openhands/runtime/builder/docker.py\n```"
+        },
+        {
+          "by": "enyst",
+          "byType": "User",
+          "association": "MEMBER",
+          "at": "2025-03-02T13:42:36Z",
+          "body": "@onurcanozavci That's cool!\n\nThis was fixed by https://github.com/All-Hands-AI/OpenHands/pull/6778 and it should be in the next release, please tell if that is not the case or if you have thoughts about it."
+        },
+        {
+          "by": "Kurtisone",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-03-26T16:58:13Z",
+          "body": "Hi all,\n\nI test  on SteamOS 3.6.22 with podman and :\n```\n\n16:54:25 - openhands:ERROR: docker_runtime.py:180 - Launch docker client failed. Please make sure you have installed docker and started docker desktop/daemon.\n16:54:25 - openhands:INFO: agent_session.py:160 - Agent session start\n16:54:25 - openhands:ERROR: session.py:159 - Error creating agent_session: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))\n```\n\n\nOkay, sorry I didn't know I need to launch this command before :\n\n`systemctl --user start podman.socket`\n\nBut I stuck on this , first message on a repo (Works great from scratch):\n\n```\n19:10:39 - openhands:ERROR: agent_controller.py:261 - [Agent Controller d4b515c6a9084f5e8a815791647ff127] Error while running the agent (session ID: d4b515c6a9084f5e8a815791647ff127): . Traceback: Traceback (most recent call last):\n  File \"/app/openhands/controller/agent_controller.py\", line 259, in _step_with_exception_handling\n    await self._step()\n  File \"/app/openhands/controller/agent_controller.py\", line 734, in _step\n    action = self.agent.step(self.state)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/openhands/agenthub/codeact_agent/codeact_agent.py\", line 124, in step\n    response = self.llm.completion(**params)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/tenacity/__init__.py\", line 336, in wrapped_f\n    return copy(f, *args, **kw)\n           ^^^^^^^^^^"
+        },
+        {
+          "by": "github-actions[bot]",
+          "byType": "Bot",
+          "association": "CONTRIBUTOR",
+          "at": "2025-05-15T02:09:02Z",
+          "body": "This issue is stale because it has been open for 30 days with no activity. Remove stale label or comment or this will be closed in 7 days."
+        },
+        {
+          "by": "aa956",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-05-24T08:31:42Z",
+          "body": "Just a note, got almost working in rootless podman with local llama-swap running llama.cpp servers as OpenAI API server.\n\nDebian (upgraded from bookworm to trixie in the process as version of podman in debian 12 was too low).\n\nNot resolved yet:\n\n- Correct permissions for mounted directories for sandbox runtime.\n\nNot related but will probably not investigate more as:\n- git integration is essential\n- I'm running self-hosted forgejo\n- setting up self hosted gitlab for single user is overkill.\n\nRelated issues:\n- forgejo/gitea integration (they're basically the same if I understand correctly as these forks are not very far apart for now), mentioned in #5210, #7080\n\n\nHere's the working part:\n\n```bash\n#!/usr/bin/env bash\n\ncd \"$(dirname \"$0\")\"\n\nmkdir -p ./workspace\nmkdir -p ./openhands-state\n\nsystemctl --user enable podman.socket\nsystemctl --user start podman.socket\n\nPODMAN_SOCKET=$XDG_RUNTIME_DIR/podman/podman.sock\n\n# Linux and Mac Example - Writable workspace\n#SANDBOX_VOLUMES=$HOME/OpenHands:/workspace:rw\nSANDBOX_VOLUMES=./workspace:/workspace:rw\n\n# No need to map ports as we're using --network=host\n#-p 3000:3000 \\\n\npodman run -it --rm \\\n--pull=always \\\n--network=host \\\n-e SANDBOX_USER_ID=$(id -u) \\\n-e SANDBOX_VOLUMES=${SANDBOX_VOLUMES} \\\n-e SANDBOX_RUNTIME_CONTAINER_IMAGE=docker.all-hands.dev/all-hands-ai/runtime:0.39-nikolaik \\\n-e LOG_ALL_EVENTS=true \\\n-v ./openhands-state:/.openhands-state:z \\\n-v ${PODMAN_SOCKET}:/var/run/docker.sock:Z \\\n--name openhands-app \\\ndocker.all-hands.d"
+        },
+        {
+          "by": "fmoorhof",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-05-25T22:54:54Z",
+          "body": "@aa956 \n> Not resolved yet:\n\n>    Correct permissions for mounted directories for sandbox runtime.\n\nDo you mean this error while spawning a new container with the sandbox?\n`Internal Server Error (\"make cli opts(): making volume mountpoint for volume /app/workspace: mkdir /app: permission denied\")`\n\nWhat worked for me was:\n`SANDBOX_VOLUMES=$(realpath ./workspace):/app/workspace:rw`\nalternatively you might try: `SANDBOX_VOLUMES=$(realpath ./workspace):/app/workspace:Z`\n\nThanks for your steps, its working fine for me now:)"
+        },
+        {
+          "by": "aa956",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-05-27T09:13:14Z",
+          "body": "@fmoorhof \n\nThank you, works now.\n\nLooks like permission problem was resolved by removing `-e SANDBOX_USER_ID=$(id -u)` from the command line.\n\nNow files in ./workspace are created as owned by my user.\nWith `SANDBOX_USER_ID` set files were created using different random uid-s on each restart of the runtime.\n"
+        },
+        {
+          "by": "github-actions[bot]",
+          "byType": "Bot",
+          "association": "CONTRIBUTOR",
+          "at": "2025-06-27T02:12:36Z",
+          "body": "This issue is stale because it has been open for 30 days with no activity. Remove stale label or comment or this will be closed in 7 days."
+        },
+        {
+          "by": "mamoodi",
+          "byType": "User",
+          "association": "COLLABORATOR",
+          "at": "2025-06-30T15:10:11Z",
+          "body": "Is this supported now? Some folks seem to have got it working so want to know where we are with this?"
+        },
+        {
+          "by": "llamantino",
+          "byType": "User",
+          "association": "CONTRIBUTOR",
+          "at": "2025-07-01T12:31:38Z",
+          "body": "@mamoodi Yes, it's working (tested on stock Ubuntu 24.04.2 LTS). It needs a page in the docs explaining how to get it working, as there are significant differences to work around."
+        },
+        {
+          "by": "Kurtisone",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-07-01T20:21:53Z",
+          "body": "Didn´t update but yes, it works on SteamOS too \n\nBelow my script : \n\n```\n#!/bin/bash\nVERSION=0.47\n\n# Launch socket\nsystemctl --user is-active --quiet podman.socket || systemctl --user start podman.socket\n\n# Ddl runtime\npodman pull docker.all-hands.dev/all-hands-ai/runtime:$VERSION-nikolaik\n\n# Here we go !\npodman run -it --rm --pull=always -e SANDBOX_RUNTIME_CONTAINER_IMAGE=docker.all-hands.dev/all-hands-ai/runtime:$VERSION-nikolaik -e LOG_ALL_EVENTS=true -v $XDG_RUNTIME_DIR/podman/podman.sock:/var/run/docker.sock -v ~/.openhands-state:/.openhands-state -p 3000:3000 --add-host host.docker.internal:host-gateway --name openhands-app docker.all-hands.dev/all-hands-ai/openhands:$VERSION\n```"
+        },
+        {
+          "by": "KenMacD",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-07-09T23:27:13Z",
+          "body": "@Kurtisone the volume path should probably be updated in that command, and [it changed in `0.44`](https://docs.all-hands.dev/usage/local-setup#start-the-app): `-v ~/.openhands:/.openhands`"
+        },
+        {
+          "by": "AndesKrrrrrrrrrrr",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-07-17T14:53:32Z",
+          "body": "I got podman working on rootless Podman with a few important flags:\n- `SANDBOX_VOLUMES` env, with SELinux relabeling (`:Z`)\n- ` --security-opt label=disable` to allow Podman socket mounting inside the container (see [RedHat blog](https://www.redhat.com/en/blog/podman-inside-container))\n\n```bash\nexport OPENHANDS_VERSION=0.43\nexport OPENHANDS_RUNTIME=docker.all-hands.dev/all-hands-ai/runtime:$OPENHANDS_VERSION-nikolaik\nexport OPENHANDS_IMAGE=docker.all-hands.dev/all-hands-ai/openhands:$OPENHANDS_VERSION\n\nFLAGS=(\n  -it\n  --rm\n  -e \"SANDBOX_RUNTIME_CONTAINER_IMAGE=$OPENHANDS_RUNTIME\"\n  # NOTE: `:Z` mount flag fixes SELinux permission errors\n  -e \"SANDBOX_VOLUMES=$PWD:/workspace:Z\"\n  -e LOG_LEVEL=debug\n  -e DEBUG=true\n  -e LOG_ALL_EVENTS=true\n  # NOTE: Use Docker host env, but strip protocol prefix\n  -v \"${DOCKER_HOST#*://}:/var/run/docker.sock\"\n  # NOTE: Updated volume mount\n  -v ~/.openhands:/.openhands\n  --security-opt label=disable\n  -p 3000:3000\n  --add-host host.docker.internal:host-gateway\n  --name openhands-app\n  \"$OPENHANDS_IMAGE\"\n)\n\npodman pull \"$OPENHANDS_RUNTIME\"\npodman pull \"$OPENHANDS_IMAGE\"\npodman run \"${FLAGS[@]}\"\n```"
+        },
+        {
+          "by": "acsezen",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-08-14T08:04:25Z",
+          "body": "> Was about to ask the same thing, podman is by design daemonless and rootless and although there is a rootless version of Docker as well, there is no reason not to support both.\n\nHighly agree with this comment and suggest to move to podman and drop docker support."
+        },
+        {
+          "by": "acsezen",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-08-14T08:13:18Z",
+          "body": "> I got podman working on rootless Podman with a few important flags:\n> \n>     * `SANDBOX_VOLUMES` env, with SELinux relabeling (`:Z`)\n> \n>     * ` --security-opt label=disable` to allow Podman socket mounting inside the container (see [RedHat blog](https://www.redhat.com/en/blog/podman-inside-container))\n> \n> \n> export OPENHANDS_VERSION=0.43\n> export OPENHANDS_RUNTIME=docker.all-hands.dev/all-hands-ai/runtime:$OPENHANDS_VERSION-nikolaik\n> export OPENHANDS_IMAGE=docker.all-hands.dev/all-hands-ai/openhands:$OPENHANDS_VERSION\n> \n> FLAGS=(\n>   -it\n>   --rm\n>   -e \"SANDBOX_RUNTIME_CONTAINER_IMAGE=$OPENHANDS_RUNTIME\"\n>   # NOTE: `:Z` mount flag fixes SELinux permission errors\n>   -e \"SANDBOX_VOLUMES=$PWD:/workspace:Z\"\n>   -e LOG_LEVEL=debug\n>   -e DEBUG=true\n>   -e LOG_ALL_EVENTS=true\n>   # NOTE: Use Docker host env, but strip protocol prefix\n>   -v \"${DOCKER_HOST#*://}:/var/run/docker.sock\"\n>   # NOTE: Updated volume mount\n>   -v ~/.openhands:/.openhands\n>   --security-opt label=disable\n>   -p 3000:3000\n>   --add-host host.docker.internal:host-gateway\n>   --name openhands-app\n>   \"$OPENHANDS_IMAGE\"\n> )\n> \n> podman pull \"$OPENHANDS_RUNTIME\"\n> podman pull \"$OPENHANDS_IMAGE\"\n> podman run \"${FLAGS[@]}\"\n\nCan some part of it moved to config maybe? I see some runtime settings in config.toml like runtime_startup_env_vars."
+        },
+        {
+          "by": "github-actions[bot]",
+          "byType": "Bot",
+          "association": "CONTRIBUTOR",
+          "at": "2025-09-24T02:02:59Z",
+          "body": "This issue is stale because it has been open for 40 days with no activity. Remove the stale label or leave a comment, otherwise it will be closed in 10 days."
+        },
+        {
+          "by": "sheepdestroyer",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-10-07T18:53:07Z",
+          "body": "Up to fight stale label xD"
+        },
+        {
+          "by": "sheepdestroyer",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-10-08T14:26:19Z",
+          "body": "```\n> I got podman working on rootless Podman with a few important flags:\n> \n> * `SANDBOX_VOLUMES` env, with SELinux relabeling (`:Z`)\n> * ` --security-opt label=disable` to allow Podman socket mounting inside the container (see [RedHat blog](https://www.redhat.com/en/blog/podman-inside-container))\n> \n> export OPENHANDS_VERSION=0.43\n> export OPENHANDS_RUNTIME=docker.all-hands.dev/all-hands-ai/runtime:$OPENHANDS_VERSION-nikolaik\n> export OPENHANDS_IMAGE=docker.all-hands.dev/all-hands-ai/openhands:$OPENHANDS_VERSION\n> \n> FLAGS=(\n>   -it\n>   --rm\n>   -e \"SANDBOX_RUNTIME_CONTAINER_IMAGE=$OPENHANDS_RUNTIME\"\n>   # NOTE: `:Z` mount flag fixes SELinux permission errors\n>   -e \"SANDBOX_VOLUMES=$PWD:/workspace:Z\"\n>   -e LOG_LEVEL=debug\n>   -e DEBUG=true\n>   -e LOG_ALL_EVENTS=true\n>   # NOTE: Use Docker host env, but strip protocol prefix\n>   -v \"${DOCKER_HOST#*://}:/var/run/docker.sock\"\n>   # NOTE: Updated volume mount\n>   -v ~/.openhands:/.openhands\n>   --security-opt label=disable\n>   -p 3000:3000\n>   --add-host host.docker.internal:host-gateway\n>   --name openhands-app\n>   \"$OPENHANDS_IMAGE\"\n> )\n> \n> podman pull \"$OPENHANDS_RUNTIME\"\n> podman pull \"$OPENHANDS_IMAGE\"\n> podman run \"${FLAGS[@]}\"\n```\n@AndesKrrrrrrrrrrr I confirm this works great."
+        },
+        {
+          "by": "GeoDerp",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-10-19T00:23:53Z",
+          "body": "I got to a slightly different solution, posting if it helps \n```bash\n# --- Configuration ---\n# Set the version of OpenHands to be used.\nexport OPENHANDS_VERSION=0.59\n\n# Define the local directory for the OpenHands workspace in the user's home.\nexport OPENHANDS_DIR=\"$HOME/openhands\"\n\n# Define the container images using the public Docker Hub registry.\nexport OPENHANDS_RUNTIME=\"docker.all-hands.dev/all-hands-ai/runtime:${OPENHANDS_VERSION}-nikolaik\"\nexport OPENHANDS_IMAGE=\"docker.all-hands.dev/all-hands-ai/openhands:${OPENHANDS_VERSION}\"\n\n# --- Prerequisites Setup ---\necho \"Creating directories...\"\nmkdir -p \"$OPENHANDS_DIR\"\nmkdir -p \"$HOME/.openhands\"\nsudo chcon -Rt container_file_t \"$HOME/openhands\"\n\nexport HOST_UID=$(id -u)\nexport HOST_GID=$(id -g)\n\n# --- Podman Run Flags ---\nFLAGS=(\n  -it\n  --rm\n  -e \"SANDBOX_TYPE=ssh\"\n  -e \"SANDBOX_USER=root\"\n  -e \"SANDBOX_PASSWORD=openhands\"\n  -e \"ACTION_EXECUTION_SERVER_URL=http://host.docker.internal:5000\"\n  -e \"SANDBOX_RUNTIME_CONTAINER_IMAGE=$OPENHANDS_RUNTIME\"\n  -e \"SANDBOX_VOLUMES=$OPENHANDS_DIR:/workspace\"\n  -e LOG_LEVEL=debug\n  -e DEBUG=true\n  -e LOG_ALL_EVENTS=true\n  -v \"${XDG_RUNTIME_DIR}/podman/podman.sock:/var/run/docker.sock:Z\"\n  -v \"$HOME/.openhands:/.openhands:Z\"\n  --security-opt label=disable\n  -p 3000:3000\n  --add-host host.docker.internal:host-gateway\n  --name openhands-app\n)\n\n# --- Execution ---\necho \"Pulling necessary container images...\"\npodman pull \"$OPENHANDS_RUNTIME\"\npodman pull \"$OPENHANDS_IMAGE\"\n\necho \"Starting Ope"
+        },
+        {
+          "by": "github-actions[bot]",
+          "byType": "Bot",
+          "association": "CONTRIBUTOR",
+          "at": "2025-11-28T02:08:02Z",
+          "body": "This issue is stale because it has been open for 40 days with no activity. Remove the stale label or leave a comment, otherwise it will be closed in 10 days."
+        },
+        {
+          "by": "github-actions[bot]",
+          "byType": "Bot",
+          "association": "CONTRIBUTOR",
+          "at": "2025-12-08T02:12:00Z",
+          "body": "This issue was automatically closed due to 50 days of inactivity. We do this to help keep the issues somewhat manageable and focus on active issues."
+        }
+      ]
+    },
+    {
+      "id": "herdrdev/herdr#261",
+      "closes": [
+        {
+          "at": "2026-08-02T20:09:35Z",
+          "by": "ogulcancelik",
+          "byType": "User",
+          "reason": "not_planned"
+        }
+      ],
+      "labelsAdded": [
+        {
+          "at": "2026-05-23T08:46:39Z",
+          "label": "intends-to-pr",
+          "by": "github-actions[bot]"
+        },
+        {
+          "at": "2026-06-01T00:39:29Z",
+          "label": "planned",
+          "by": "ogulcancelik"
+        }
+      ],
+      "comments": [
+        {
+          "by": "orzFly",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-05-28T05:30:00Z",
+          "body": "+1 for this. I have many projects living on different filesystems. This is a must for me."
+        },
+        {
+          "by": "mcphailtom",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-06-19T06:33:36Z",
+          "body": "👍🏻 for this too"
+        },
+        {
+          "by": "dvic",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-06-29T12:46:58Z",
+          "body": "@ZainRizvi one question: does your imp/proposal also capture the resolving of `..`? like i prefer to have `../.worktrees` relative to repo root (so direnv allow works on parent owner org), so then I would use `{repo_root}/../.worktrees`?"
+        },
+        {
+          "by": "kostis-codefresh",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-07-01T14:11:55Z",
+          "body": " The default configuration for putting worktrees under a central dot/hidden folder (.herdr) was a big surprise for me when starting to work with herdr.\n\nNot only do I fully agree with this issue, but I would go even as far as to say that once this is implemented, the default behavior should be `{repo_root}/.worktrees` or `{repo_root}-worktrees` or `{repo_root}/worktrees` or something similar. "
+        },
+        {
+          "by": "devashish2203",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-07-04T08:34:05Z",
+          "body": "I built [herdr-worktrunk](https://github.com/devashish2203/herdr-worktrunk/) as a plugin to delegate the task of managing and configuring worktree creation behaviour to [worktrunk](https://github.com/max-sixty/worktrunk).\nHopefully that helps address most of the concerns expressed in this issue."
+        },
+        {
+          "by": "tkgalk",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-07-09T10:45:39Z",
+          "body": "This would also help to support bare folder layouts.\n```\nproject/\n  .bare/\n  .git\n  main/\n  worktree_a/\n  worktree_b/\n```\nWhere `.git` is a file with `gitdir: ./.bare`."
+        },
+        {
+          "by": "nickspaargaren",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-07-14T09:57:26Z",
+          "body": "Some ideas for configuration options could be inspired by  [Worktrunk](https://github.com/max-sixty/worktrunk) `worktree-path-template` configuration: https://worktrunk.dev/config/#worktree-path-template."
+        },
+        {
+          "by": "justfalter",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-07-15T15:11:43Z",
+          "body": "Just to add - I work with multiple git hosts, so my folders include the host: `~/code/{host}/{owner}/{repo}`. "
+        },
+        {
+          "by": "ZainRizvi",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-07-19T13:17:34Z",
+          "body": "> @ZainRizvi one question: does your imp/proposal also capture the resolving of `..`? like i prefer to have `../.worktrees` relative to repo root (so direnv allow works on parent owner org), so then I would use `{repo_root}/../.worktrees`?\n\n@dvic  Absolutely, yes"
+        },
+        {
+          "by": "FelixDamrau",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-08-19T06:29:45Z",
+          "body": "Could you share the reasoning behind closing this as _not planned_? I can't tell whether the idea itself was rejected, or only the proposed API shape or the way the PR was introduced.\n\nThe suggested plugin herdr-worktrunk does not work on windows, unfortunately. Well, and -- unfortunately -- I have to use windows on my machine on work. "
+        },
+        {
+          "by": "Max-Levitskiy",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-09-25T10:32:25Z",
+          "body": "@ogulcancelik I'm interested in that as well, same question @FelixDamrau asked, but haven't mention you, so just wanted to ping you to ask.\nFor now, if you have a lot of different projects, and have the same name of repositories folders, you can have a collision.\nAlso, for my case, I'm using .envrc actively, and same \"folder for all\" is one of the biggest problem for me.\nI have multiple implementation ideas, how to make it good from the development experience. And if you're open to it, I can create a PR to make it much better for a lot of people.\nAs we see, there are a lot of people have the same problem here."
+        },
+        {
+          "by": "StreamOfRon",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-10-12T17:52:46Z",
+          "body": "+1 — hitting this with direnv. My repos live under `~/Work/<type>/<repo>` with a `.envrc` at each `~/Work/<type>/` that sets up that group's environment, and my herdr panes rely on direnv activating from the pane's cwd. So worktrees need to land under the same parent as their source repo — the central `~/.herdr/worktrees` default breaks that. I'm working around it today with per-repo symlinks plus a `realpath`-based `.envrc`, which is fragile and needs per-repo maintenance. The `{repo_parent}` placeholder proposed here would let me set `directory = \"{repo_parent}/.herdr/worktrees\"` and drop all of that.\n"
+        },
+        {
+          "by": "tjs0",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2026-10-15T21:15:58Z",
+          "body": "For anyone who wants worktrees inside the repo without an extra tool: [herdr-repo-worktrees](https://github.com/tjs0/herdr-repo-worktrees) creates them at `<repo>/.worktrees/<name>` (configurable) through `herdr worktree create --path`, so they still group under the repo in the sidebar. It needs only bash, git and jq."
+        }
+      ]
+    },
+    {
+      "id": "notepad-plus-plus/notepad-plus-plus#15932",
+      "closes": [],
+      "labelsAdded": [],
+      "comments": [
+        {
+          "by": "kevinwwillis",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2024-12-10T03:36:55Z",
+          "body": "Daily N++ user for 6 yrs. Uninstalled instantly when this was brought to my attention."
+        },
+        {
+          "by": "The-King-of-Toasters",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2024-12-10T10:48:19Z",
+          "body": "First off, nice list of AI slop \"concerns\". Next time you should use that big, politically neutral brain of yours to come up with an original idea.\r\n\r\nAlso, a [quick search](https://hn.algolia.com/?dateRange=all&page=0&prefix=true&query=%22https%3A%2F%2Fnotepad-plus-plus.org%22&sort=byDate&type=story) of previous N++ release notes shows that the authors have constantly inserted their strongly held political beliefs on:\r\n- Supporting Taiwan over China.\r\n- Supporting Hong Kong.\r\n- Supporting the rights of the Uyghur peoples.\r\n- Supporting the Yellow Vest protestors.\r\n- Denouncing the CIA's use of DLL injection into programs (including N++!).\r\n\r\nApparently this was all fine before, but attacking daddy Elon (richest man in the world btw) is crossing the line?"
+        },
+        {
+          "by": "Gauva1n",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2024-12-10T12:40:11Z",
+          "body": "+1\n\nI recognize and appreciate that the open source community is built upon freedom of speech and collaboration. There are times I engage in political or lifestyle discussions within dev Discords, for example, and see no problem with this. However, there are concerns that come when politically-driven agendas and messages begin to escape from discussion threads and instead start to find their way into documentation or even source. This raises substantial security concerns, especially given such past examples as vue-cli and the ES5-ext library. Those use cases began as commentary in the codebase but turned into people writing malicious commits into the code in the name of furthering their desired causes.\n\nUnfortunately after getting bitten by these previous examples, my company's stance has become one where open-source products that engage in overly political messaging must be blocked due to the heightened potential of a bad actor pushing malicious commits in the name of hacktivism. The inability to keep documentation agnostic and focused solely on the product reflects a mentality where politics has taken precedence over the product, and history has shown time and again that this mentality can quickly devolve into product instability or even malicious activity."
+        },
+        {
+          "by": "DoloMike",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2024-12-10T13:35:12Z",
+          "body": "> Apparently this was all fine before, but attacking daddy Elon (richest man in the world btw) is crossing the line?\n\nNo @The-King-of-Toasters this falls into the same category. I will add these examples to the issue. Thanks."
+        },
+        {
+          "by": "xomx",
+          "byType": "User",
+          "association": "CONTRIBUTOR",
+          "at": "2024-12-10T20:22:36Z",
+          "body": "If the Notepad++ author overreacted a little bit to Musk/X/MAGA, this issue is not any better.\r\n\r\nRequest for apolitical Release Notes, maybe, why not, but for apolitical documentation? Show me please one such political line in the N++ docs.\r\n\r\nAnd then another one, speculating that it could maybe lead to something malicious might appear in the code over time. Nice nudge. FYI: https://community.notepad-plus-plus.org/post/81387"
+        },
+        {
+          "by": "alankilborn",
+          "byType": "User",
+          "association": "CONTRIBUTOR",
+          "at": "2024-12-10T21:03:00Z",
+          "body": "This issue should be closed by the petitioner, for 2 reasons:\r\n\r\n* The author of Notepad++, when he notices this issue, will close it himself anyway, without action or comment (we've been down this road before)\r\n* The sanctioned place for a complaint of this ilk is [Boycott Notepad++](https://community.notepad-plus-plus.org/category/8/boycott-notepad).\r\n\r\nIf anyone disagrees with the way things are currently, they are free to take such (perhaps drastic) action as to stop using the Notepad++ software, and / or apply for their refund, the form for which is found [HERE](https://notepad-plus-plus.org/news/v843-unhappy-users-edition)."
+        },
+        {
+          "by": "AlmostHuman34",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2024-12-11T02:30:21Z",
+          "body": "Clown world, can't even keep your feelings/politics away from coding and math. Weak times. "
+        },
+        {
+          "by": "Gauva1n",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2024-12-11T02:53:38Z",
+          "body": "Thanks to @xomx for the forum callout. I haven't waded through the Notepad++ forums but I appreciate the info straight from the lead dev that they have no intention to build that sort of hacktivist behavior into source. That post is a couple years old so hopefully that mentality still stands. That helps build confidence, even if only at a personal level.\n\nThat said, a forum post does not hold up when faced with a security audit from a company with 200+ programmers when a program is in direct violation of their P&Ps. My comment is meant to draw attention to the fact that the corporate world does not currently hold a favorable position or forecast to political messaging being present in open source software, especially given the current political situation in not only the US but around the world. I understand there is no monetary gain that the lead dev is getting for this project and that at the end of the day it doesn't matter to their livelihood if 200+ programmers are forced to switch to VS Code. \n\nMy concern is that, when programmers are forced to work in VS Code 8+ hours a day, they will invariably switch over to that for their home use as well; it's just human nature. Given enough corporate influence, increased politicization in NPP could, in the mid-term, lead to decreased adoption rates and a falloff of user base. NPP has been the go-to text editor since I started in the field almost 20 years ago, and it would be a shame to see it fade into obscurity or obsolescence due"
+        },
+        {
+          "by": "DoloMike",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2024-12-11T03:34:53Z",
+          "body": "Closing this. Top contributors mention this is a feature not a bug. Has been discussed many times previously and the author is not concerned."
+        },
+        {
+          "by": "xomx",
+          "byType": "User",
+          "association": "CONTRIBUTOR",
+          "at": "2024-12-11T12:32:10Z",
+          "body": "@Gauva1n \r\n\r\n> I understand the current approach is and has been a meme-like approach with \"Send in a refund request lol\" and the like. \r\n\r\nI did not use myself that refund-joke-link above because it was originally mentioned for something else (a good typical target https://community.notepad-plus-plus.org/post/78786 ).\r\n\r\n> But while there is freedom of speech, there is no freedom from consequence of speech.\r\n\r\nNo, it's not like that. The clear proof is that anyone can report anything here. But OTOH one cannot expect that anything substantial will change in the case of weak (were that supporting arguments in the 1st post really generated by the AI(?), because it sounds to me like that ;-) ), invalid or simply unnecessary arguments (as the @alankilborn correctly points out, the N++ author will not be silenced by arguments like \"please don't push me out of my conservative comfort zone, I'm not used to a programmer commenting on politics\").\r\n\r\nThis is, after all, also the reason why I am posting here - I see a possible reasonable demand in some comments here for a clearer separation of the app's release notes from the occasional release announcements unrelated to the essence of this text editor.\r\n\r\n@DoloMike \r\n\r\n> Has been discussed many times previously and the author is not concerned.\r\n\r\nI think he concerns and cares (sometimes maybe too much, but it is a nice change for me because people usually do not care about the others, even if they needs at least some supportive voice h"
+        },
+        {
+          "by": "jfmatth",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2024-12-31T19:23:40Z",
+          "body": "Just curious, when DJT and Elon get the war in Ukraine to stop, then what will you post?\r\n\r\nI doubt you'll ever leave the echo chamber that is IT software and culture, which is too bad, you're clearly a smart developer.\r\n\r\nI loved NP++ until VSCode came out, but I'm sure you're against that since MS created it?"
+        },
+        {
+          "by": "jmoralesv",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-06-18T22:41:34Z",
+          "body": "@jfmatth it seems like the two girls didn't stop any war so far, right?\n\nOn the other hand, [version 8.8.1 has some answers for you](https://notepad-plus-plus.org/downloads/v8.8.1/)."
+        },
+        {
+          "by": "jfmatth",
+          "byType": "User",
+          "association": "NONE",
+          "at": "2025-06-18T22:44:41Z",
+          "body": "@jmoralesv Impressive that you came back to answer this, thank you 😄 \n\nGlad to see that NP++ is still moving forward."
+        }
+      ]
+    }
+  ]
+}
