@@ -616,5 +616,44 @@
     "rationale": "Pre-registered verdict: inconclusive. The frequency criterion was met (49 of 400 fresh packages, 12.3%), but only 13 of 20 audited flags were genuine (65%), between the failure line (10) and the success line (14). Five of the 13 count as genuine only because an added exports map blocks deep imports of undocumented files; under a stricter reading it would be 8 of 20 (refuted). Exploratory: removal rules (export path removed, CLI command removed, a peer's minimum major raised) were genuine in 13 of 13 audited cases across both samples, but fire for only about 5% of popular packages.",
     "actor": "experiment designer",
     "provenance": "real"
+  },
+  {
+    "id": "dec-20261116-pause-npm-release-breaking-changes",
+    "at": "2026-11-16T14:28:56Z",
+    "runId": "run-20261116-agent-wp-orphaned-1",
+    "subjectType": "theme",
+    "subjectId": "theme-npm-release-breaking-changes",
+    "action": "park",
+    "fromStatus": "active",
+    "toStatus": "paused",
+    "rationale": "Paused at the owner's request: the desk research is concluded, and the upstream proposal to publint is on hold for later. The owner asked to focus on areas with a small money story.",
+    "actor": "owner (via research director)",
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261116-wp-maintained-replacement-plugin",
+    "at": "2026-11-16T14:28:56Z",
+    "runId": "run-20261116-agent-wp-orphaned-1",
+    "subjectType": "idea",
+    "subjectId": "idea-wp-maintained-replacement-plugin",
+    "action": "create",
+    "toStatus": "advanced",
+    "rationale": "Advanced to a cheap test. It has a plausible small-money model, backed by case studies of 1 in 10 free users paying, and a concrete $0 way to find whether demand is left unserved.",
+    "actor": "director",
+    "attractiveness": 61,
+    "evidenceStrength": 26,
+    "provenance": "real"
+  },
+  {
+    "id": "dec-20261116-wp-orphaned-demand",
+    "at": "2026-11-16T14:29:25.872Z",
+    "subjectType": "experiment",
+    "subjectId": "exp-wp-orphaned-demand",
+    "action": "advance",
+    "fromStatus": "proposed",
+    "toStatus": "approved",
+    "rationale": "Approved under the standing rule for automatable experiments. Thresholds and the manual-check procedure pre-registered before any directory data was collected; three probe requests beforehand only confirmed the API and its fields (see the procedure). Rules unit-tested on synthetic data.",
+    "actor": "research director (automatable: public data only, no contact, $0)",
+    "provenance": "real"
   }
 ]

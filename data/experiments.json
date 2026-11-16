@@ -476,5 +476,46 @@
     },
     "createdInRun": "run-20261103-agent-supply-chain-1",
     "provenance": "real"
+  },
+  {
+    "id": "exp-wp-orphaned-demand",
+    "ideaId": "idea-wp-maintained-replacement-plugin",
+    "assumptionIds": [
+      "a1",
+      "a2"
+    ],
+    "title": "Is there unserved demand left behind by abandoned WordPress plugins?",
+    "hypothesis": "Among the 10,000 most popular WordPress.org plugins, at least 10 are orphaned (no update for 24 months, ≥ 10,000 active installs) yet still downloaded ≥ 300 times in the last 30 days. Of the 10 most-downloaded of those, at least 3 have no maintained alternative that does the same job.",
+    "uncertainty": "Whether abandoned plugins leave real gaps or are already served by maintained alternatives (assumptions a1 and a2). Willingness to pay (a3) is not tested here.",
+    "procedure": [
+      "Pre-registered 2026-11-16 before any directory data was collected; three probe requests were made beforehand, to confirm the API works and which fields exist: an 'invoice' search (1 result), the download stats of one closed plugin (exec-php), and the field list of the first 'popular' page. No orphan was identified from them.",
+      "Population: WordPress.org 'popular' browse order, pages 1–40 (250 per page).",
+      "Orphaned: last_updated before 2024-11-16 and active_installs ≥ 10,000.",
+      "Live: ≥ 300 downloads in the last 30 days, from the public download-stats API.",
+      "Tag rule (automated): a maintained alternative shares ≥ 2 tags, was updated since 2025-11-16 and has ≥ 50% of the orphan's installs.",
+      "Manual check: for the 10 most-downloaded live orphans, a research session searches the directory for a maintained plugin that does the same job, and judges each unserved or served, naming the alternative."
+    ],
+    "successCriteria": [
+      "At least 10 live orphans exist, and at least 3 of the 10 most-downloaded are judged unserved"
+    ],
+    "failureCriteria": [
+      "Fewer than 10 live orphans (too little demand left behind)",
+      "Fewer than 2 of the 10 most-downloaded are unserved (demand is already served)"
+    ],
+    "estimatedTime": "< 1 hour of automated scanning plus a manual check of 10 plugins",
+    "estimatedCostUsd": 0,
+    "resources": [
+      "WordPress.org plugin API",
+      "WordPress.org download-stats API"
+    ],
+    "expectedLearning": "Whether abandoned plugins leave any gap worth filling, and which niches, before any building or market sizing.",
+    "nextSteps": {
+      "ifSuccess": "Profile the top unserved niches (paid competitors, pricing, support complaints) and pick one for a replacement prototype.",
+      "ifFailure": "Park the idea: abandoned-plugin demand is already served."
+    },
+    "executionMode": "automatable",
+    "status": "approved",
+    "createdInRun": "run-20261116-agent-wp-orphaned-1",
+    "provenance": "real"
   }
 ]

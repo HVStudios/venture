@@ -57,6 +57,7 @@ jobs:
             exp-combined-signal-discrimination) npx tsx src/experiments/combined-signals.ts ;;
             exp-npm-metadata-breaks) npx tsx src/experiments/npm-metadata-breaks.ts ;;
             exp-npm-structural-breaks) npx tsx src/experiments/npm-structural-breaks.ts ;;
+            exp-wp-orphaned-demand) npx tsx src/experiments/wp-orphaned-demand.ts ;;
             *) echo "unknown experiment $EXPERIMENT"; exit 1 ;;
           esac
       - name: Keep raw results as a workflow artifact (survives a failed push)

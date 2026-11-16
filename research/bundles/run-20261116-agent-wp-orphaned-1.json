@@ -1,0 +1,759 @@
+{
+  "run": {
+    "id": "run-20261116-agent-wp-orphaned-1",
+    "themeId": "theme-wp-orphaned-plugin-demand",
+    "mode": "agent-session",
+    "provider": "claude-code-session",
+    "startedAt": "2026-11-16T14:05:00Z",
+    "completedAt": "2026-11-16T14:28:56Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "Web searches on abandoned plugins, plugin-business revenue and directory staleness"
+      },
+      {
+        "name": "research",
+        "status": "ok",
+        "notes": "Read 6 of 8 source pages; checked that the WordPress.org plugin and download-stats APIs work"
+      },
+      {
+        "name": "invent",
+        "status": "ok",
+        "notes": "One idea: maintained freemium replacements"
+      },
+      {
+        "name": "critique",
+        "status": "ok",
+        "notes": "4 objections, 9 criteria scored"
+      },
+      {
+        "name": "experiment",
+        "status": "ok",
+        "notes": "Pre-registered exp-wp-orphaned-demand"
+      },
+      {
+        "name": "persist",
+        "status": "ok",
+        "notes": "New area brief; release-breaks area paused at the owner's request"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 8,
+      "sourcesCited": 6,
+      "problemsFound": 1,
+      "ideasGenerated": 1,
+      "ideasAdvanced": 1,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 1
+    },
+    "queries": [
+      "abandoned WordPress plugin many active installs opportunity premium version revenue",
+      "small WordPress plugin business monthly revenue indie developer freemium 2025",
+      "wordpress.org plugin closed \"no longer available\" users looking for alternative support forum",
+      "percentage of WordPress plugins not updated in two years statistics directory"
+    ],
+    "errors": [
+      "wordfence.com returned a bot challenge (HTTP 202, empty) and freemius.com refused (HTTP 403); neither is cited."
+    ],
+    "limitations": [
+      "Revenue benchmarks are self-reported case studies (2016–2024), not a market survey.",
+      "Only one candidate idea was generated; the area was chosen by the director, not by the owner from alternatives."
+    ],
+    "usage": {
+      "note": "Interactive session. No API charges."
+    },
+    "limits": {},
+    "provenance": "real"
+  },
+  "themes": [
+    {
+      "id": "theme-wp-orphaned-plugin-demand",
+      "name": "Unserved demand left by abandoned WordPress plugins",
+      "description": "Popular WordPress plugins that nobody maintains but sites still install, and whether a maintained freemium replacement could earn a small recurring income.",
+      "mode": "focused",
+      "keywords": [
+        "abandoned wordpress plugin",
+        "plugin not updated",
+        "alternative to plugin"
+      ],
+      "status": "active",
+      "createdAt": "2026-11-16",
+      "notes": "Opened after the owner asked for areas with a small but real money story: not a big business, but something that could earn some revenue.",
+      "provenance": "real"
+    },
+    {
+      "id": "theme-npm-release-breaking-changes",
+      "name": "Accidental breaking changes in JavaScript/TypeScript library releases",
+      "description": "Library releases labelled minor or patch that nonetheless break downstream code, and whether a small open-source tool could catch them before publishing.",
+      "mode": "focused",
+      "keywords": [
+        "breaking change minor release",
+        "semver violation",
+        "breaking change patch release"
+      ],
+      "status": "paused",
+      "createdAt": "2026-11-04",
+      "notes": "Chosen by the owner from three VENTURE-proposed candidates, with an explicit practical-value bar: ideas should be buildable, open-sourceable tools. Paused 2026-11-16: desk research concluded; the owner put the upstream proposal to publint on hold for later.",
+      "provenance": "real"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-wptavern-half-not-updated",
+      "url": "https://wptavern.com/nearly-half-of-the-wordpress-plugins-in-the-directory-are-not-updated-after-two-years",
+      "title": "Nearly Half of the WordPress Plugins in the Directory Are Not Updated After Two Years",
+      "publisher": "WP Tavern (Jeff Chandler)",
+      "retrievedAt": "2026-11-16T14:28:56Z",
+      "publishedAt": "2015-11-20",
+      "sourceType": "news",
+      "originId": "origin-wptavern-2015-plugin-updates",
+      "excerpt": "According to the data, about 22K plugins have been updated in the last 24 months representing a little more than half the directory. This means that approximately half of the plugins in the directory are displaying a notice that the plugin hasn’t been updated in two years. … Sorting plugins by number of updates might help although there might be some plugins that are still working fine after two years without updates.",
+      "limitations": "From 2015, so the directory has changed since then. The figure comes from a third-party analysis. The last quote is a reader comment.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-techcrunch-essential-plugin-backdoor",
+      "url": "https://techcrunch.com/2026/04/14/someone-planted-backdoors-in-dozens-of-wordpress-plugins-used-in-thousands-of-websites/",
+      "title": "Someone planted backdoors in dozens of WordPress plug-ins used in thousands of websites",
+      "publisher": "TechCrunch (Zack Whittaker)",
+      "retrievedAt": "2026-11-16T14:28:56Z",
+      "publishedAt": "2026-04-14",
+      "sourceType": "news",
+      "originId": "origin-essential-plugin-backdoor-2026",
+      "excerpt": "The backdoor was discovered after a new corporate owner bought these plug-ins. … But Ginder warned that WordPress users are not notified of any plug-ins’ change in ownership, exposing users to potential takeover attacks by their new owners.",
+      "limitations": "A single incident, reported from one researcher's findings.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-wporg-defunct-plugin-alternative",
+      "url": "https://wordpress.org/support/?p=3343304",
+      "title": "Alternative for this defunct plugin",
+      "publisher": "WordPress.org support forums",
+      "retrievedAt": "2026-11-16T14:28:56Z",
+      "publishedAt": "2013-01-08",
+      "sourceType": "forum",
+      "originId": "origin-wporg-defunct-thread",
+      "excerpt": "Is this plugin defuncted at this point? If so, is there a viable alternative?",
+      "limitations": "One short thread from 2013 (date from the page metadata). Anecdotal.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-cozmoslabs-pms-revenue",
+      "url": "https://www.cozmoslabs.com/lessons-learned-launching-free-membership-plugin/",
+      "title": "From 0 to $4000+/month with a new WordPress plugin",
+      "publisher": "Cozmoslabs",
+      "retrievedAt": "2026-11-16T14:28:56Z",
+      "publishedAt": "2016-09-27",
+      "sourceType": "blog",
+      "originId": "origin-cozmoslabs-pms",
+      "excerpt": "The first month after launch bought in a little over 900$. … The free version has reached 40K downloads, with 4000+ active installs. … Switching from a paid add-ons model to a paid versioning one, increased our monthly revenue by 30%.",
+      "limitations": "A vendor's self-reported figures from 2016. A success story, so survivorship bias applies.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-leow-carrd-plugins",
+      "url": "https://jasonleow.substack.com/p/the-good-the-bad-and-the-old",
+      "title": "The good, the bad & the old",
+      "publisher": "Jason Leow (newsletter)",
+      "retrievedAt": "2026-11-16T14:28:56Z",
+      "publishedAt": "2023-07-08",
+      "sourceType": "blog",
+      "originId": "origin-leow-carrd",
+      "excerpt": "Some good news – it’s been 4 months since I first crossed the $1,000 monthly revenue milestone. … Plugins continue to sell, but not at a volume that can help me reach my goal of $5k/m soon.",
+      "limitations": "About plugins for the Carrd site builder, not WordPress. Self-reported figures.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    },
+    {
+      "id": "src-flippa-wpgetapi-sale",
+      "url": "https://flippa.com/blog/wordpress-plugin-sells-for-six-figures-on-flippa/",
+      "title": "WordPress Plugin Gem Nets Six Figures in Flippa Sale",
+      "publisher": "Flippa",
+      "retrievedAt": "2026-11-16T14:28:56Z",
+      "publishedAt": "2024-06-14",
+      "sourceType": "blog",
+      "originId": "origin-flippa-wpgetapi",
+      "excerpt": "By the time of sale, the plugin had around 6,000 active installs, with about 500 to 600 active paid users generating thousands in monthly recurring revenue.",
+      "limitations": "A marketplace's promotional case study. Exact revenue not stated.",
+      "verification": {
+        "status": "unchecked"
+      },
+      "provenance": "real"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-wp-01",
+      "claim": "In 2015 about half of WordPress.org directory plugins had not been updated in two years.",
+      "sourceId": "src-wptavern-half-not-updated",
+      "quote": "This means that approximately half of the plugins in the directory are displaying a notice that the plugin hasn’t been updated in two years.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-sites-depend-on-abandoned-plugins"
+      ],
+      "ideaIds": [],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "2015 data; the experiment re-measures this for popular plugins."
+    },
+    {
+      "id": "ev-wp-02",
+      "claim": "Some stale plugins keep working fine, so 'not updated' doesn't always mean users need a replacement.",
+      "sourceId": "src-wptavern-half-not-updated",
+      "quote": "Sorting plugins by number of updates might help although there might be some plugins that are still working fine after two years without updates.",
+      "stance": "contradicts",
+      "epistemic": "inference",
+      "problemIds": [
+        "prob-sites-depend-on-abandoned-plugins"
+      ],
+      "ideaIds": [
+        "idea-wp-maintained-replacement-plugin"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "A reader comment."
+    },
+    {
+      "id": "ev-wp-03",
+      "claim": "Site owners whose plugin went defunct look for a maintained alternative.",
+      "sourceId": "src-wporg-defunct-plugin-alternative",
+      "quote": "If so, is there a viable alternative?",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-sites-depend-on-abandoned-plugins"
+      ],
+      "ideaIds": [
+        "idea-wp-maintained-replacement-plugin"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "One anecdotal thread."
+    },
+    {
+      "id": "ev-wp-04",
+      "claim": "Buying established plugins and changing their code has been used to attack sites, and users aren't told when ownership changes. Taking over abandoned plugins carries trust and security risk; building a fresh replacement avoids it.",
+      "sourceId": "src-techcrunch-essential-plugin-backdoor",
+      "quote": "But Ginder warned that WordPress users are not notified of any plug-ins’ change in ownership, exposing users to potential takeover attacks by their new owners.",
+      "stance": "context",
+      "epistemic": "fact",
+      "problemIds": [
+        "prob-sites-depend-on-abandoned-plugins"
+      ],
+      "ideaIds": [
+        "idea-wp-maintained-replacement-plugin"
+      ],
+      "competitorIds": [],
+      "provenance": "real"
+    },
+    {
+      "id": "ev-wp-05",
+      "claim": "A new freemium WordPress plugin earned about $900 in its first month, with 4,000+ active installs of the free version at the time of the report (2016).",
+      "sourceId": "src-cozmoslabs-pms-revenue",
+      "quote": "The free version has reached 40K downloads, with 4000+ active installs.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-wp-maintained-replacement-plugin"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Self-reported success story; survivorship bias."
+    },
+    {
+      "id": "ev-wp-06",
+      "claim": "A free WordPress plugin with about 6,000 active installs had 500 to 600 paying users (roughly 1 in 10) when sold.",
+      "sourceId": "src-flippa-wpgetapi-sale",
+      "quote": "By the time of sale, the plugin had around 6,000 active installs, with about 500 to 600 active paid users generating thousands in monthly recurring revenue.",
+      "stance": "supports",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-wp-maintained-replacement-plugin"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Promotional case study."
+    },
+    {
+      "id": "ev-wp-07",
+      "claim": "Small platform plugin businesses can plateau around $1,000 a month: niche demand caps sales.",
+      "sourceId": "src-leow-carrd-plugins",
+      "quote": "Plugins continue to sell, but not at a volume that can help me reach my goal of $5k/m soon.",
+      "stance": "contradicts",
+      "epistemic": "fact",
+      "problemIds": [],
+      "ideaIds": [
+        "idea-wp-maintained-replacement-plugin"
+      ],
+      "competitorIds": [],
+      "provenance": "real",
+      "context": "Carrd plugins, not WordPress."
+    }
+  ],
+  "problems": [
+    {
+      "id": "prob-sites-depend-on-abandoned-plugins",
+      "title": "Sites keep depending on WordPress plugins nobody maintains",
+      "statement": "A large share of WordPress.org plugins stop receiving updates, yet sites keep running them, and some are still installed fresh every day. Owners face security risk and breakage on WordPress or PHP upgrades, and when a plugin goes defunct they go looking for an alternative that may not exist.",
+      "themeIds": [
+        "theme-wp-orphaned-plugin-demand"
+      ],
+      "affectedUsers": "Small-business site owners, freelancers and agencies running WordPress sites",
+      "severityNote": "Moderate: security exposure and breakage on upgrades, plus the cost of finding and migrating to a replacement.",
+      "frequencyNote": "About half of directory plugins were stale for two years in 2015. The current rate among popular plugins is being measured.",
+      "status": "investigating",
+      "discoveredInRun": "run-20261116-agent-wp-orphaned-1",
+      "firstSeen": "2026-11-16T14:28:56Z",
+      "lastUpdated": "2026-11-16T14:28:56Z",
+      "provenance": "real"
+    }
+  ],
+  "competitors": [
+    {
+      "id": "comp-wp-maintained-alternatives",
+      "name": "Switching to an existing maintained plugin",
+      "kind": "workaround",
+      "description": "For most jobs, the directory already has maintained plugins. A site owner can migrate to one, at the cost of reconfiguring and possibly losing data.",
+      "strengths": [
+        "Free and already available in many niches"
+      ],
+      "weaknesses": [
+        "Migration effort, with no settings import",
+        "May not exist for niche jobs (being measured)"
+      ],
+      "sourceIds": [],
+      "provenance": "real"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "idea-wp-maintained-replacement-plugin",
+      "title": "Maintained freemium replacements for abandoned WordPress plugins",
+      "summary": "Find popular WordPress plugins that nobody maintains but people still install, with no maintained alternative. Build a fresh, maintained replacement with a one-click import of the old plugin's settings. Distribute it free on WordPress.org and sell a small Pro tier.",
+      "problemIds": [
+        "prob-sites-depend-on-abandoned-plugins"
+      ],
+      "themeIds": [
+        "theme-wp-orphaned-plugin-demand"
+      ],
+      "targetUsers": "Site owners and agencies still running, or newly installing, an abandoned plugin",
+      "solution": "A new plugin written from scratch (not a takeover of the old code) that does the abandoned plugin's job on current WordPress and PHP. It imports the old plugin's settings and data, and is free on WordPress.org with a Pro upgrade for advanced features or support.",
+      "competitorIds": [
+        "comp-wp-maintained-alternatives"
+      ],
+      "differentiation": "Targets demand that is already proven by daily installs but left unserved, instead of guessing at a market. The settings import removes the main reason people stay on a dead plugin.",
+      "feasibility": "Medium. The directory API shows where the demand is. A replacement for one plugin is a small PHP project, but listing it on WordPress.org and taking payments needs the owner's accounts.",
+      "assumptions": [
+        {
+          "id": "a1",
+          "text": "Among the 10,000 most popular plugins, at least 10 abandoned plugins with ≥ 10,000 installs are still downloaded ≥ 300 times a month",
+          "criticality": "high",
+          "status": "untested",
+          "evidenceIds": []
+        },
+        {
+          "id": "a2",
+          "text": "At least 3 of the 10 most-downloaded such plugins have no maintained alternative that does the same job",
+          "criticality": "high",
+          "status": "untested",
+          "evidenceIds": []
+        },
+        {
+          "id": "a3",
+          "text": "Users of abandoned plugins will switch to and pay for a maintained replacement (about 1 in 10 free users paying, as in the case studies)",
+          "criticality": "high",
+          "status": "untested",
+          "evidenceIds": []
+        }
+      ],
+      "risks": [
+        "Abandoned plugins may mostly run on neglected sites whose owners never pay",
+        "Downloads may come from automated tools or site migrations, not fresh choices",
+        "A maintainer could resume work on the original plugin",
+        "WordPress.org review rules and support load"
+      ],
+      "nextSteps": [
+        "Run exp-wp-orphaned-demand",
+        "If unserved demand exists, check the top niches for paid competitors and pricing before building anything"
+      ],
+      "objections": [
+        {
+          "id": "obj-1",
+          "text": "Many stale plugins still work fine, so their users feel no pain and won't switch.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-wp-02"
+          ],
+          "response": "The experiment counts only plugins still being installed, and the manual check looks for real gaps. Willingness to switch and pay stays untested (a3).",
+          "status": "open"
+        },
+        {
+          "id": "obj-2",
+          "text": "Small plugin businesses often plateau around $1,000 a month.",
+          "severity": "minor",
+          "evidenceIds": [
+            "ev-wp-07"
+          ],
+          "response": "That's in line with the goal here: a small income, not a big business.",
+          "status": "accepted"
+        },
+        {
+          "id": "obj-3",
+          "text": "Revenue figures come from old, self-reported success stories.",
+          "severity": "major",
+          "evidenceIds": [
+            "ev-wp-05",
+            "ev-wp-06"
+          ],
+          "response": "Used only as rough benchmarks. Real willingness to pay can only be measured with a live listing, which needs the owner's approval.",
+          "status": "open"
+        },
+        {
+          "id": "obj-4",
+          "text": "Taking over an abandoned plugin is a known attack route, and users may distrust anything presented as its successor.",
+          "severity": "minor",
+          "evidenceIds": [
+            "ev-wp-04"
+          ],
+          "response": "Build a new plugin under its own name instead of taking over or buying old code.",
+          "status": "accepted"
+        }
+      ],
+      "scores": {
+        "criteria": {
+          "severity": {
+            "score": 3,
+            "rationale": "Security risk and upgrade breakage, though many stale plugins keep working."
+          },
+          "frequency": {
+            "score": 4,
+            "rationale": "About half of directory plugins were stale in 2015; being re-measured."
+          },
+          "userValue": {
+            "score": 3,
+            "rationale": "High for affected sites, but only if no alternative exists."
+          },
+          "competitiveGap": {
+            "score": 3,
+            "rationale": "Unknown per niche: the experiment measures it."
+          },
+          "differentiation": {
+            "score": 2,
+            "rationale": "Easy to copy once a niche is visible."
+          },
+          "feasibility": {
+            "score": 4,
+            "rationale": "A small PHP plugin per niche."
+          },
+          "costComplexity": {
+            "score": 4,
+            "rationale": "Low build cost, but ongoing support."
+          },
+          "userAccess": {
+            "score": 4,
+            "rationale": "The WordPress.org directory is the distribution channel."
+          },
+          "validationCost": {
+            "score": 5,
+            "rationale": "Demand can be measured for $0 from the directory API."
+          }
+        },
+        "assessedAt": "2026-11-16T14:28:56Z",
+        "assessedBy": "critic (claude-code-session)"
+      },
+      "status": "advanced",
+      "statusRationale": "Advanced to a cheap test. It has a plausible small-money model, backed by case studies of 1 in 10 free users paying, and a concrete $0 way to find whether demand is left unserved.",
+      "relatedIdeaIds": [],
+      "epistemic": "hypothesis",
+      "practical": {
+        "adopters": "Owners and agencies of WordPress sites that depend on an abandoned plugin",
+        "distribution": "open-core",
+        "smallestUsefulVersion": "One replacement plugin for the single most promising unserved niche, with import of the old plugin's settings and a small Pro tier.",
+        "buildableByVenture": true,
+        "buildNote": "VENTURE can find the niches and write and test the plugin code. Publishing on WordPress.org and selling the Pro tier need the owner's accounts and approval.",
+        "monetization": "Freemium: free on WordPress.org, Pro at roughly $29–79 a year. Case studies suggest hundreds to a few thousand dollars a month if a niche has real unserved demand."
+      },
+      "createdInRun": "run-20261116-agent-wp-orphaned-1",
+      "createdAt": "2026-11-16T14:28:56Z",
+      "updatedAt": "2026-11-16T14:28:56Z",
+      "provenance": "real"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "exp-wp-orphaned-demand",
+      "ideaId": "idea-wp-maintained-replacement-plugin",
+      "assumptionIds": [
+        "a1",
+        "a2"
+      ],
+      "title": "Is there unserved demand left behind by abandoned WordPress plugins?",
+      "hypothesis": "Among the 10,000 most popular WordPress.org plugins, at least 10 are orphaned (no update for 24 months, ≥ 10,000 active installs) yet still downloaded ≥ 300 times in the last 30 days. Of the 10 most-downloaded of those, at least 3 have no maintained alternative that does the same job.",
+      "uncertainty": "Whether abandoned plugins leave real gaps or are already served by maintained alternatives (assumptions a1 and a2). Willingness to pay (a3) is not tested here.",
+      "procedure": [
+        "Pre-registered 2026-11-16 before any directory data was collected; three probe requests were made beforehand, to confirm the API works and which fields exist: an 'invoice' search (1 result), the download stats of one closed plugin (exec-php), and the field list of the first 'popular' page. No orphan was identified from them.",
+        "Population: WordPress.org 'popular' browse order, pages 1–40 (250 per page).",
+        "Orphaned: last_updated before 2024-11-16 and active_installs ≥ 10,000.",
+        "Live: ≥ 300 downloads in the last 30 days, from the public download-stats API.",
+        "Tag rule (automated): a maintained alternative shares ≥ 2 tags, was updated since 2025-11-16 and has ≥ 50% of the orphan's installs.",
+        "Manual check: for the 10 most-downloaded live orphans, a research session searches the directory for a maintained plugin that does the same job, and judges each unserved or served, naming the alternative."
+      ],
+      "successCriteria": [
+        "At least 10 live orphans exist, and at least 3 of the 10 most-downloaded are judged unserved"
+      ],
+      "failureCriteria": [
+        "Fewer than 10 live orphans (too little demand left behind)",
+        "Fewer than 2 of the 10 most-downloaded are unserved (demand is already served)"
+      ],
+      "estimatedTime": "< 1 hour of automated scanning plus a manual check of 10 plugins",
+      "estimatedCostUsd": 0,
+      "resources": [
+        "WordPress.org plugin API",
+        "WordPress.org download-stats API"
+      ],
+      "expectedLearning": "Whether abandoned plugins leave any gap worth filling, and which niches, before any building or market sizing.",
+      "nextSteps": {
+        "ifSuccess": "Profile the top unserved niches (paid competitors, pricing, support complaints) and pick one for a replacement prototype.",
+        "ifFailure": "Park the idea: abandoned-plugin demand is already served."
+      },
+      "executionMode": "automatable",
+      "status": "proposed",
+      "createdInRun": "run-20261116-agent-wp-orphaned-1",
+      "provenance": "real"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "dec-20261116-pause-npm-release-breaking-changes",
+      "at": "2026-11-16T14:28:56Z",
+      "runId": "run-20261116-agent-wp-orphaned-1",
+      "subjectType": "theme",
+      "subjectId": "theme-npm-release-breaking-changes",
+      "action": "park",
+      "fromStatus": "active",
+      "toStatus": "paused",
+      "rationale": "Paused at the owner's request: the desk research is concluded, and the upstream proposal to publint is on hold for later. The owner asked to focus on areas with a small money story.",
+      "actor": "owner (via research director)",
+      "provenance": "real"
+    },
+    {
+      "id": "dec-20261116-wp-maintained-replacement-plugin",
+      "at": "2026-11-16T14:28:56Z",
+      "runId": "run-20261116-agent-wp-orphaned-1",
+      "subjectType": "idea",
+      "subjectId": "idea-wp-maintained-replacement-plugin",
+      "action": "create",
+      "toStatus": "advanced",
+      "rationale": "Advanced to a cheap test. It has a plausible small-money model, backed by case studies of 1 in 10 free users paying, and a concrete $0 way to find whether demand is left unserved.",
+      "actor": "director",
+      "provenance": "real"
+    }
+  ],
+  "briefs": [
+    {
+      "id": "brief-wp-orphaned-plugin-demand",
+      "themeId": "theme-wp-orphaned-plugin-demand",
+      "researchQuestion": "Thousands of WordPress sites still run, and keep installing, plugins that nobody maintains anymore. Is there demand left unserved, where a small, maintained replacement plugin could earn a modest recurring income?",
+      "whyItMatters": "Abandoned plugins leave site owners exposed to security problems and breakage, and many go looking for a replacement. The WordPress.org directory gives free distribution, and the freemium model (free plugin, paid Pro tier) is a proven way for very small developers to earn some money.",
+      "subQuestions": [
+        "How many popular plugins are abandoned but still being installed?",
+        "For those, does a maintained alternative already exist?",
+        "In the gaps, do people pay for comparable plugins, and how much?",
+        "Could VENTURE build a credible replacement for one niche?"
+      ],
+      "findings": [
+        {
+          "id": "f1",
+          "statement": "Abandonment is common: in 2015 about half of directory plugins hadn't been updated in two years. Owners of defunct plugins look for alternatives, but some stale plugins keep working fine.",
+          "strength": "Weak to moderate. Old data and anecdotes; the current rate is being measured.",
+          "evidenceIds": [
+            "ev-wp-01",
+            "ev-wp-02",
+            "ev-wp-03"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f2",
+          "statement": "Small freemium plugins do make money. Case studies report about $900 in a new plugin's first month (4,000+ free installs), and about 1 in 10 free users paying (500–600 of 6,000). Others plateau around $1,000 a month.",
+          "strength": "Weak. Self-reported, mostly old success stories; useful only as rough benchmarks.",
+          "evidenceIds": [
+            "ev-wp-05",
+            "ev-wp-06",
+            "ev-wp-07"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f3",
+          "statement": "Taking over or buying an abandoned plugin is risky and distrusted: buying plugins has been used to plant backdoors, and users aren't told when ownership changes. A replacement should be a new plugin under its own name.",
+          "strength": "Moderate. A documented 2026 incident.",
+          "evidenceIds": [
+            "ev-wp-04"
+          ],
+          "epistemic": "inference"
+        }
+      ],
+      "uncertainties": [
+        "Whether abandoned plugins still being installed actually lack a maintained alternative (being measured).",
+        "Whether users of abandoned plugins pay for anything: many may be neglected sites.",
+        "Revenue benchmarks are old and self-reported."
+      ],
+      "nextSteps": [
+        {
+          "text": "Scan the 10,000 most popular plugins for abandoned ones still being installed, then check the top 10 by hand for maintained alternatives (pre-registered).",
+          "kind": "experiment",
+          "experimentId": "exp-wp-orphaned-demand"
+        },
+        {
+          "text": "If gaps exist, profile the top niches (paid competitors, pricing, support complaints) before building anything.",
+          "kind": "research"
+        }
+      ],
+      "updatedAt": "2026-11-16T14:28:56Z",
+      "updatedInRun": "run-20261116-agent-wp-orphaned-1",
+      "author": "research director (Claude Code session)",
+      "provenance": "real"
+    },
+    {
+      "id": "brief-npm-release-breaking-changes",
+      "themeId": "theme-npm-release-breaking-changes",
+      "researchQuestion": "Libraries regularly ship 'minor' or 'patch' updates that break the code of everyone using them, even though those updates are installed automatically on the promise of being safe. Could a small open-source tool catch these breaks before a release is published?",
+      "whyItMatters": "Every JavaScript project depends on dozens to hundreds of packages and trusts version numbers to signal risk. When a minor release breaks that trust, users lose time pinning versions and debugging, and maintainers lose credibility. Rust has a widely adopted tool for this; JavaScript has no established equivalent.",
+      "subQuestions": [
+        "How often do popular npm packages ship breaking changes in minor or patch releases?",
+        "What kinds of breaks are they: type changes, behaviour changes, or metadata changes?",
+        "What do existing and emerging tools catch, and what do they miss?",
+        "Is there a small, buildable tool that catches a meaningful share with little noise?"
+      ],
+      "findings": [
+        {
+          "id": "f1",
+          "statement": "Breaking minor and patch releases cost users real time. Reports describe whole codebases breaking after a React minor update, release pipelines broken for a weekend, and maintainers forced to pin versions. Microsoft built API Extractor partly because users 'keep reporting that their code won't compile after a supposedly minor update'.",
+          "strength": "Moderate. Several independent reports plus Microsoft's own stated motivation. Individual cases, not a measured rate.",
+          "evidenceIds": [
+            "ev-sv-02",
+            "ev-sv-03",
+            "ev-sv-04",
+            "ev-sv-06"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f2",
+          "statement": "The tool model works elsewhere: Rust's cargo-semver-checks (about 1,700 stars, with a GitHub Action) checks releases for semver violations, though it documents breaks it can't catch.",
+          "strength": "Strong as evidence that a tool exists and is adopted in Rust. It doesn't show JS maintainers would adopt one.",
+          "evidenceIds": [
+            "ev-sv-07",
+            "ev-sv-08"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f3",
+          "statement": "The TypeScript type-surface checker niche is filling up: Clerk's break-check (company-backed), ts-semver-checks and semver-check all appeared in 2026, alongside Microsoft's API Extractor.",
+          "strength": "Strong for existence. All are very new, with little adoption yet.",
+          "evidenceIds": [
+            "ev-sv-09",
+            "ev-sv-10"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f4",
+          "statement": "Type checkers miss many real breaks. None of the four complaints examined was a type change: they were behaviour changes (React, floating-ui, node-abort-controller) and a metadata change (polished raised its required Node version in a minor release).",
+          "strength": "Weak to moderate. A small sample, but it points to a clear gap: the install and import contract in package metadata.",
+          "evidenceIds": [
+            "ev-sv-02",
+            "ev-sv-05",
+            "ev-sv-11"
+          ],
+          "epistemic": "inference"
+        },
+        {
+          "id": "f5",
+          "statement": "Metadata-level contract breaks are common: by the linter's rules, 20% of 400 popular npm packages shipped at least one in a minor or patch release over two years. But as specified the rules are too noisy: only 8 of 20 audited flags were genuine breaks. Most of the rest were debatable engine-range changes dropping end-of-life Node versions.",
+          "strength": "Moderate. A pre-registered measurement plus a hand audit of 20 flags against criteria fixed beforehand (one reviewer).",
+          "evidenceIds": [
+            "ev-sv-12",
+            "ev-sv-13"
+          ],
+          "epistemic": "fact"
+        },
+        {
+          "id": "f6",
+          "statement": "The structural rules are the useful core. Removed export paths, entry fields and CLI commands, and tightened peers, were genuine in 7 of 9 audited cases, but they fire for only about 10% of popular packages over two years. Many flags come from a few fast-moving projects (@tanstack, better-auth, @typescript-eslint).",
+          "strength": "Weak to moderate. Exploratory, post hoc, small n.",
+          "evidenceIds": [
+            "ev-sv-14"
+          ],
+          "epistemic": "inference"
+        },
+        {
+          "id": "f7",
+          "statement": "On 400 fresh packages, the broad structural rule set was only partly precise: 13 of 20 audited flags were genuine (65%), and 5 of those were genuine only because a new exports map blocks deep imports of undocumented files. Removal rules were the exception: export paths removed, CLI commands removed and raised peer minimums were genuine in all 13 audited cases across both samples, and one break was confirmed by the maintainers' own deprecation notice. Those rules fire for about 1 in 20 popular packages over two years.",
+          "strength": "Moderate for the broad set (a pre-registered replication on fresh packages). Weak to moderate for the removal rules: consistent across two samples, but chosen after the fact and only 13 cases.",
+          "evidenceIds": [
+            "ev-sv-16",
+            "ev-sv-17",
+            "ev-sv-18",
+            "ev-sv-19"
+          ],
+          "epistemic": "inference"
+        }
+      ],
+      "uncertainties": [
+        "Whether maintainers treat blocked deep imports of undocumented files as breaking (the audit criteria didn't settle it).",
+        "Whether maintainers consider deliberate engine bumps in minor releases acceptable.",
+        "Whether publint's maintainers would want a release-comparison feature.",
+        "The four complaints were chosen by GitHub search ranking, not sampled randomly."
+      ],
+      "conclusion": {
+        "belief": "Accidental breaking releases are real and measurable: maintainers sometimes deprecate a minor release because it 'accidentally includes breaking changes'. A metadata check can catch a narrow slice reliably: removed export paths, removed CLI commands and raised peer minimums, about 1 in 20 popular packages over two years. Broader rules are too noisy or hinge on judgement calls. The practical outcome is a small open-source feature for an existing linter such as publint, not a product. The research question is answered as far as desk research can take it.",
+        "confidence": "medium",
+        "confidenceReason": "Two pre-registered measurements on independent samples of 400 packages, each with an audit of 20 flags. Not high: one reviewer, and the removal-rule precision comes from 13 cases chosen after the fact.",
+        "unknowns": [
+          "Whether publint's maintainers would want the feature",
+          "How often flagged breaks actually hurt users (issues filed after release)"
+        ],
+        "continueInvestigation": false,
+        "continueReason": "More desk research is unlikely to change the picture. The remaining question, whether maintainers want this, needs contact with people, which needs the owner's authorization."
+      },
+      "nextSteps": [
+        {
+          "text": "On hold (owner, 2026-11-16): whether VENTURE may propose a removal-rules 'compare with last release' check to the publint maintainers. Contacting people needs authorization.",
+          "kind": "owner-action",
+          "issue": 10
+        },
+        {
+          "text": "If approved, prototype the check and run it against the 40 audited flags before proposing it.",
+          "kind": "experiment"
+        }
+      ],
+      "updatedAt": "2026-11-16T14:28:56Z",
+      "updatedInRun": "run-20261116-agent-wp-orphaned-1",
+      "author": "research director (Claude Code session)",
+      "provenance": "real"
+    }
+  ]
+}

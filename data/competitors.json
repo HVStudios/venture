@@ -297,6 +297,21 @@
     "provenance": "real"
   },
   {
+    "id": "comp-wp-maintained-alternatives",
+    "name": "Switching to an existing maintained plugin",
+    "kind": "workaround",
+    "description": "For most jobs, the directory already has maintained plugins. A site owner can migrate to one, at the cost of reconfiguring and possibly losing data.",
+    "strengths": [
+      "Free and already available in many niches"
+    ],
+    "weaknesses": [
+      "Migration effort, with no settings import",
+      "May not exist for niche jobs (being measured)"
+    ],
+    "sourceIds": [],
+    "provenance": "real"
+  },
+  {
     "id": "comp-written-ai-policies",
     "name": "Written AI contribution policies + canned responses",
     "kind": "workaround",

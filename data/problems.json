@@ -80,6 +80,22 @@
     "provenance": "real"
   },
   {
+    "id": "prob-sites-depend-on-abandoned-plugins",
+    "title": "Sites keep depending on WordPress plugins nobody maintains",
+    "statement": "A large share of WordPress.org plugins stop receiving updates, yet sites keep running them, and some are still installed fresh every day. Owners face security risk and breakage on WordPress or PHP upgrades, and when a plugin goes defunct they go looking for an alternative that may not exist.",
+    "themeIds": [
+      "theme-wp-orphaned-plugin-demand"
+    ],
+    "affectedUsers": "Small-business site owners, freelancers and agencies running WordPress sites",
+    "severityNote": "Moderate: security exposure and breakage on upgrades, plus the cost of finding and migrating to a replacement.",
+    "frequencyNote": "About half of directory plugins were stale for two years in 2015. The current rate among popular plugins is being measured.",
+    "status": "investigating",
+    "discoveredInRun": "run-20261116-agent-wp-orphaned-1",
+    "firstSeen": "2026-11-16T14:28:56Z",
+    "lastUpdated": "2026-11-16T14:28:56Z",
+    "provenance": "real"
+  },
+  {
     "id": "prob-submission-effort-no-longer-signals-trust",
     "title": "Submission effort no longer signals contributor trustworthiness",
     "statement": "Open source used to treat the effort of submitting a change as a signal of a potential long-term contributor. AI tools make plausible-looking submissions nearly free, so maintainers lose that cheap filter and are moving to explicit trust mechanisms that risk excluding newcomers.",
