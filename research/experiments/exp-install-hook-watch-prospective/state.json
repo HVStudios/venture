@@ -38,11 +38,11 @@
     "string.prototype.trimstart": "1.0.8",
     "get-symbol-description": "1.1.0",
     "call-bind": "1.0.9",
-    "@inquirer/type": "4.3.0",
+    "@inquirer/type": "4.3.1",
     "arraybuffer.prototype.slice": "1.0.4",
-    "@inquirer/core": "12.1.0",
+    "@inquirer/core": "12.1.1",
     "typescript-eslint": "8.73.0",
-    "@inquirer/figures": "2.1.0",
+    "@inquirer/figures": "2.1.1",
     "object.groupby": "1.0.3",
     "array.prototype.tosorted": "1.1.4",
     "string.prototype.trimend": "1.0.10",
@@ -57,32 +57,32 @@
     "style-to-js": "2.0.2",
     "oxc-parser": "0.159.0",
     "is-arguments": "1.2.0",
-    "@inquirer/select": "5.3.0",
-    "inquirer": "14.3.0",
-    "@inquirer/expand": "5.2.0",
+    "@inquirer/select": "5.3.1",
+    "inquirer": "14.3.1",
+    "@inquirer/expand": "5.2.1",
     "@xmldom/xmldom": "0.9.12",
-    "@inquirer/external-editor": "3.1.0",
-    "@inquirer/ansi": "2.1.0",
+    "@inquirer/external-editor": "3.1.1",
+    "@inquirer/ansi": "2.1.1",
     "es-iterator-helpers": "1.4.0",
     "uglify-js": "3.19.3",
-    "@inquirer/confirm": "6.4.0",
+    "@inquirer/confirm": "6.4.1",
     "iterator.prototype": "1.1.5",
-    "@inquirer/prompts": "8.8.0",
-    "@inquirer/checkbox": "5.3.0",
+    "@inquirer/prompts": "8.8.1",
+    "@inquirer/checkbox": "5.3.1",
     "@supabase/storage-js": "2.119.2",
     "enquirer": "2.4.1",
-    "@inquirer/password": "5.3.0",
+    "@inquirer/password": "5.3.1",
     "ast-types-flow": "0.0.8",
     "@typescript/typescript-linux-x64": "7.0.2",
     "@oxc-parser/binding-linux-x64-musl": "0.159.0",
     "@webassemblyjs/wasm-parser": "1.14.1",
-    "@inquirer/search": "4.4.0",
+    "@inquirer/search": "4.4.1",
     "estree-util-is-identifier-name": "3.0.0",
-    "@inquirer/rawlist": "5.4.0",
+    "@inquirer/rawlist": "5.4.1",
     "@webassemblyjs/ast": "1.14.1",
-    "@inquirer/number": "4.3.0",
+    "@inquirer/number": "4.3.1",
     "regenerate": "1.5.0",
-    "@inquirer/input": "5.2.0",
+    "@inquirer/input": "5.2.1",
     "embla-carousel-reactive-utils": "8.6.0",
     "environment": "1.1.0",
     "@supabase/realtime-js": "2.119.2",
@@ -90,7 +90,7 @@
     "embla-carousel-react": "8.6.0",
     "cluster-key-slot": "1.1.2",
     "oxlint": "1.94.0",
-    "@inquirer/editor": "5.4.0",
+    "@inquirer/editor": "5.5.0",
     "embla-carousel": "8.6.0",
     "@oxlint/binding-linux-x64-gnu": "1.94.0",
     "is-reference": "3.0.3",
@@ -191,7 +191,7 @@
     "babylon": "6.18.0",
     "js2xmlparser": "5.0.0",
     "@appium/schema": "2.0.0",
-    "html-minifier": "5.4.0",
+    "html-minifier": "5.4.1",
     "js-string-escape": "1.0.1",
     "cloudevents": "10.0.0",
     "acorn-node": "2.0.1",
@@ -215,7 +215,7 @@
     "blueimp-md5": "2.19.0",
     "@lingui/message-utils": "6.12.0",
     "jks-js": "1.1.7",
-    "cron-schedule": "7.0.0",
+    "cron-schedule": "8.0.1",
     "has-symbol-support-x": "2.1.2",
     "@oxc-minify/binding-linux-x64-gnu": "0.159.0",
     "@inversifyjs/common": "2.0.2",
@@ -299,7 +299,7 @@
     "code-block-writer": "13.0.3",
     "react-hook-form": "7.92.0",
     "@bufbuild/protobuf": "2.17.0",
-    "unbash": "6.0.4",
+    "unbash": "6.0.5",
     "sucrase": "3.35.1",
     "@tanstack/react-store": "0.11.2",
     "jest": "30.5.2",
@@ -3593,6 +3593,190 @@
       "newDependency": false,
       "newInstallScript": false,
       "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/type",
+      "from": "4.3.0",
+      "to": "4.3.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/core",
+      "from": "12.1.0",
+      "to": "12.1.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": true,
+      "newInstallScript": false,
+      "addedDependencies": [
+        "fast-string-width"
+      ]
+    },
+    {
+      "pkg": "@inquirer/figures",
+      "from": "2.1.0",
+      "to": "2.1.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/select",
+      "from": "5.3.0",
+      "to": "5.3.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "inquirer",
+      "from": "14.3.0",
+      "to": "14.3.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/expand",
+      "from": "5.2.0",
+      "to": "5.2.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/external-editor",
+      "from": "3.1.0",
+      "to": "3.1.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/ansi",
+      "from": "2.1.0",
+      "to": "2.1.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/confirm",
+      "from": "6.4.0",
+      "to": "6.4.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/prompts",
+      "from": "8.8.0",
+      "to": "8.8.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/checkbox",
+      "from": "5.3.0",
+      "to": "5.3.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/password",
+      "from": "5.3.0",
+      "to": "5.3.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/search",
+      "from": "4.4.0",
+      "to": "4.4.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/rawlist",
+      "from": "5.4.0",
+      "to": "5.4.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/number",
+      "from": "4.3.0",
+      "to": "4.3.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/input",
+      "from": "5.2.0",
+      "to": "5.2.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@inquirer/editor",
+      "from": "5.4.0",
+      "to": "5.5.0",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "html-minifier",
+      "from": "5.4.0",
+      "to": "5.4.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": true,
+      "newInstallScript": false,
+      "addedDependencies": [
+        "acorn"
+      ]
+    },
+    {
+      "pkg": "cron-schedule",
+      "from": "7.0.0",
+      "to": "8.0.1",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "unbash",
+      "from": "6.0.4",
+      "to": "6.0.5",
+      "seenAt": "2026-11-22T14:53:04.633Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
     }
   ],
   "checks": [
@@ -3684,6 +3868,11 @@
     {
       "at": "2026-11-21T14:55:37.691Z",
       "newReleases": 9,
+      "failures": 0
+    },
+    {
+      "at": "2026-11-22T14:53:04.633Z",
+      "newReleases": 20,
       "failures": 0
     }
   ]
