@@ -2620,5 +2620,143 @@
       "perQuery": 8
     },
     "provenance": "real"
+  },
+  {
+    "id": "run-20261123-1557-scout-exploratory-de",
+    "themeId": "theme-exploratory-developer-friction",
+    "mode": "collector",
+    "provider": "none (deterministic collectors)",
+    "startedAt": "2026-11-23T15:57:35.600Z",
+    "completedAt": "2026-11-23T15:57:42.332Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "hackernews: 32 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "github-issues: 32 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "stackoverflow: 32 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "arxiv: 15 signal(s)"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "notes": "55 off-topic signal(s) filtered out"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 111,
+      "sourcesCited": 0,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "flaky tests",
+      "slow CI",
+      "wish there was a tool",
+      "code review bottleneck"
+    ],
+    "errors": [],
+    "limitations": [
+      "Collector runs gather raw signals only; no analysis, ideas or claims are produced."
+    ],
+    "usage": {
+      "modelCalls": 0,
+      "estimatedCostUsd": 0,
+      "actualCostUsd": 0
+    },
+    "limits": {
+      "perQuery": 8
+    },
+    "provenance": "real"
+  },
+  {
+    "id": "run-20261123-1557-scout-oss-supply-cha",
+    "themeId": "theme-oss-supply-chain-small-maintainers",
+    "mode": "collector",
+    "provider": "none (deterministic collectors)",
+    "startedAt": "2026-11-23T15:57:35.600Z",
+    "completedAt": "2026-11-23T15:57:48.254Z",
+    "status": "completed",
+    "stages": [
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "hackernews: 29 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "github-issues: 32 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "stackoverflow: 24 signal(s)"
+      },
+      {
+        "name": "scout",
+        "status": "ok",
+        "notes": "arxiv: 11 signal(s)"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "notes": "29 off-topic signal(s) filtered out"
+      },
+      {
+        "name": "persist",
+        "status": "ok"
+      }
+    ],
+    "counts": {
+      "sourcesExamined": 96,
+      "sourcesCited": 0,
+      "problemsFound": 0,
+      "ideasGenerated": 0,
+      "ideasAdvanced": 0,
+      "ideasRejected": 0,
+      "ideasParked": 0,
+      "experimentsProposed": 0
+    },
+    "queries": [
+      "maintainer account takeover",
+      "npm supply chain attack",
+      "trusted publishing",
+      "malicious package"
+    ],
+    "errors": [],
+    "limitations": [
+      "Collector runs gather raw signals only; no analysis, ideas or claims are produced."
+    ],
+    "usage": {
+      "modelCalls": 0,
+      "estimatedCostUsd": 0,
+      "actualCostUsd": 0
+    },
+    "limits": {
+      "perQuery": 8
+    },
+    "provenance": "real"
   }
 ]
