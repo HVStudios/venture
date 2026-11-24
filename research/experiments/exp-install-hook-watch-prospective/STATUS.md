@@ -1,7 +1,7 @@
 # Interim status (not a verdict): exp-install-hook-watch-prospective
 
-Watching 400 popular npm packages from 2026-11-04 to 2026-12-02; 20 daily check(s) so far.
+Watching 400 popular npm packages from 2026-11-04 to 2026-12-02; 21 daily check(s) so far.
 
-- New releases observed: 421. Releases that would have triggered an alert (new install script or new dependency): 9 (2.1%, 95% CI 1.1%–4.0%); of which new install scripts: 0.
+- New releases observed: 434. Releases that would have triggered an alert (new install script or new dependency): 9 (2.1%, 95% CI 1.1%–3.9%); of which new install scripts: 0.
 
 Caveat: when several versions were published between two daily checks, only the latest is compared with the previous one seen.
