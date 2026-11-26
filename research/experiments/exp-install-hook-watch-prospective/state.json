@@ -233,7 +233,7 @@
     "gradle-to-js": "3.0.2",
     "reserved": "0.1.2",
     "@azure/monitor-opentelemetry-exporter": "1.0.0-beta.32",
-    "e2b": "2.64.0",
+    "e2b": "2.66.0",
     "@oxc-transform/binding-linux-x64-musl": "0.160.0",
     "imask": "7.6.1",
     "@oxc-parser/binding-android-arm-eabi": "0.160.0",
@@ -260,7 +260,7 @@
     "type-fest": "6.0.3",
     "@typescript-eslint/scope-manager": "8.74.0",
     "@typescript-eslint/utils": "8.74.0",
-    "tldts": "7.6.0",
+    "tldts": "7.6.1",
     "@typescript-eslint/type-utils": "8.74.0",
     "@typescript-eslint/tsconfig-utils": "8.74.0",
     "@typescript-eslint/project-service": "8.74.0",
@@ -277,7 +277,7 @@
     "@typescript-eslint/eslint-plugin": "8.74.0",
     "@jest/core": "30.5.2",
     "ts-interface-checker": "1.0.2",
-    "effect": "4.1.5",
+    "effect": "4.1.6",
     "@adobe/css-tools": "5.0.0",
     "expect-type": "1.4.0",
     "@babel/preset-typescript": "8.0.7",
@@ -341,7 +341,7 @@
     "@tanstack/router-core": "1.171.39",
     "utility-types": "3.11.0",
     "openapi-typescript": "7.13.0",
-    "ox": "1.8.21",
+    "ox": "1.9.0",
     "@tanstack/react-router": "1.170.46",
     "ts-loader": "9.6.2",
     "@tanstack/start-client-core": "1.170.39",
@@ -375,21 +375,21 @@
     "@xmldom/is-dom-node": "1.0.1",
     "@simplewebauthn/server": "14.1.0",
     "node-rsa": "2.0.0",
-    "@scalar/openapi-upgrader": "0.5.2",
+    "@scalar/openapi-upgrader": "0.5.3",
     "@react-spring/types": "10.1.2",
     "ts-toolbelt": "9.6.0",
     "@azure/keyvault-common": "2.1.1",
-    "viem": "2.58.6",
+    "viem": "2.58.7",
     "ts-pattern": "5.9.2",
     "cosmiconfig-typescript-loader": "6.3.0",
     "node-html-parser": "9.0.7",
     "@react-spring/animated": "10.1.2",
-    "@scalar/types": "0.32.1",
+    "@scalar/types": "0.33.0",
     "polished": "4.3.1",
     "@swc/core-linux-arm64-gnu": "1.16.22",
     "fp-ts": "2.16.11",
     "@graphql-tools/executor": "4.1.9",
-    "heap-js": "2.7.3",
+    "heap-js": "3.0.0",
     "@tanstack/start-plugin-core": "1.172.0",
     "@tanstack/react-start": "1.169.7",
     "chat": "4.45.0",
@@ -4389,6 +4389,78 @@
       "newDependency": false,
       "newInstallScript": false,
       "addedDependencies": []
+    },
+    {
+      "pkg": "e2b",
+      "from": "2.64.0",
+      "to": "2.66.0",
+      "seenAt": "2026-11-26T17:17:28.277Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "tldts",
+      "from": "7.6.0",
+      "to": "7.6.1",
+      "seenAt": "2026-11-26T17:17:28.277Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "effect",
+      "from": "4.1.5",
+      "to": "4.1.6",
+      "seenAt": "2026-11-26T17:17:28.277Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "ox",
+      "from": "1.8.21",
+      "to": "1.9.0",
+      "seenAt": "2026-11-26T17:17:28.277Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@scalar/openapi-upgrader",
+      "from": "0.5.2",
+      "to": "0.5.3",
+      "seenAt": "2026-11-26T17:17:28.277Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "viem",
+      "from": "2.58.6",
+      "to": "2.58.7",
+      "seenAt": "2026-11-26T17:17:28.277Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@scalar/types",
+      "from": "0.32.1",
+      "to": "0.33.0",
+      "seenAt": "2026-11-26T17:17:28.277Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "heap-js",
+      "from": "2.7.3",
+      "to": "3.0.0",
+      "seenAt": "2026-11-26T17:17:28.277Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
     }
   ],
   "checks": [
@@ -4500,6 +4572,11 @@
     {
       "at": "2026-11-25T17:37:12.417Z",
       "newReleases": 6,
+      "failures": 0
+    },
+    {
+      "at": "2026-11-26T17:17:28.277Z",
+      "newReleases": 8,
       "failures": 0
     }
   ]
