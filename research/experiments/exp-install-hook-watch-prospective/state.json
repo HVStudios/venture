@@ -27,7 +27,7 @@
     "define-data-property": "1.1.4",
     "which-boxed-primitive": "1.1.1",
     "set-function-length": "1.2.2",
-    "eslint": "10.15.0",
+    "eslint": "10.16.0",
     "is-data-view": "1.0.2",
     "@eslint/js": "10.0.1",
     "data-view-byte-offset": "1.0.1",
@@ -96,7 +96,7 @@
     "is-reference": "3.0.3",
     "@jsonjoy.com/codegen": "18.30.0",
     "redis-errors": "1.2.0",
-    "@speed-highlight/core": "2.1.0",
+    "@speed-highlight/core": "2.2.3",
     "oxfmt": "0.80.0",
     "html-minifier-terser": "7.2.0",
     "knip": "6.48.0",
@@ -186,7 +186,7 @@
     "is-expression": "4.0.0",
     "@hey-api/codegen-core": "0.9.1",
     "pdfmake": "0.3.15",
-    "@appium/support": "8.0.1",
+    "@appium/support": "8.0.2",
     "@webassemblyjs/wast-parser": "1.14.1",
     "babylon": "6.18.0",
     "js2xmlparser": "5.0.0",
@@ -202,7 +202,7 @@
     "@oxlint/binding-linux-arm64-musl": "1.95.0",
     "karma": "6.4.4",
     "gifwrap": "0.10.1",
-    "@appium/types": "2.0.0",
+    "@appium/types": "3.0.0",
     "mark.js": "8.11.1",
     "material-colors": "1.2.6",
     "identifier-regex": "1.1.0",
@@ -260,7 +260,7 @@
     "type-fest": "6.0.3",
     "@typescript-eslint/scope-manager": "8.74.0",
     "@typescript-eslint/utils": "8.74.0",
-    "tldts": "7.6.1",
+    "tldts": "7.6.2",
     "@typescript-eslint/type-utils": "8.74.0",
     "@typescript-eslint/tsconfig-utils": "8.74.0",
     "@typescript-eslint/project-service": "8.74.0",
@@ -277,7 +277,7 @@
     "@typescript-eslint/eslint-plugin": "8.74.0",
     "@jest/core": "30.5.2",
     "ts-interface-checker": "1.0.2",
-    "effect": "4.1.6",
+    "effect": "4.1.7",
     "@adobe/css-tools": "5.0.0",
     "expect-type": "1.4.0",
     "@babel/preset-typescript": "8.0.7",
@@ -318,7 +318,7 @@
     "@better-auth/mongo-adapter": "1.7.28",
     "ts-morph": "28.0.0",
     "@tanstack/virtual-file-routes": "1.162.0",
-    "wrangler": "4.168.0",
+    "wrangler": "4.169.0",
     "@tanstack/router-plugin": "1.169.0",
     "basic-ftp": "6.2.6",
     "@tanstack/store": "0.11.3",
@@ -371,15 +371,15 @@
     "remeda": "2.62.4",
     "@asteasolutions/zod-to-openapi": "9.1.0",
     "@better-auth/telemetry": "1.7.28",
-    "@microsoft/api-extractor": "7.60.1",
+    "@microsoft/api-extractor": "7.60.2",
     "@xmldom/is-dom-node": "1.0.1",
     "@simplewebauthn/server": "14.1.0",
-    "node-rsa": "2.0.0",
+    "node-rsa": "2.1.0",
     "@scalar/openapi-upgrader": "0.5.3",
     "@react-spring/types": "10.1.2",
     "ts-toolbelt": "9.6.0",
     "@azure/keyvault-common": "2.1.1",
-    "viem": "2.58.7",
+    "viem": "2.58.8",
     "ts-pattern": "5.9.2",
     "cosmiconfig-typescript-loader": "6.3.0",
     "node-html-parser": "9.0.7",
@@ -4461,6 +4461,96 @@
       "newDependency": false,
       "newInstallScript": false,
       "addedDependencies": []
+    },
+    {
+      "pkg": "eslint",
+      "from": "10.15.0",
+      "to": "10.16.0",
+      "seenAt": "2026-11-27T16:58:02.826Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@speed-highlight/core",
+      "from": "2.1.0",
+      "to": "2.2.3",
+      "seenAt": "2026-11-27T16:58:02.826Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@appium/support",
+      "from": "8.0.1",
+      "to": "8.0.2",
+      "seenAt": "2026-11-27T16:58:02.826Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@appium/types",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "seenAt": "2026-11-27T16:58:02.826Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "tldts",
+      "from": "7.6.1",
+      "to": "7.6.2",
+      "seenAt": "2026-11-27T16:58:02.826Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "effect",
+      "from": "4.1.6",
+      "to": "4.1.7",
+      "seenAt": "2026-11-27T16:58:02.826Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "wrangler",
+      "from": "4.168.0",
+      "to": "4.169.0",
+      "seenAt": "2026-11-27T16:58:02.826Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "@microsoft/api-extractor",
+      "from": "7.60.1",
+      "to": "7.60.2",
+      "seenAt": "2026-11-27T16:58:02.826Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "node-rsa",
+      "from": "2.0.0",
+      "to": "2.1.0",
+      "seenAt": "2026-11-27T16:58:02.826Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
+    },
+    {
+      "pkg": "viem",
+      "from": "2.58.7",
+      "to": "2.58.8",
+      "seenAt": "2026-11-27T16:58:02.826Z",
+      "newDependency": false,
+      "newInstallScript": false,
+      "addedDependencies": []
     }
   ],
   "checks": [
@@ -4577,6 +4667,11 @@
     {
       "at": "2026-11-26T17:17:28.277Z",
       "newReleases": 8,
+      "failures": 0
+    },
+    {
+      "at": "2026-11-27T16:58:02.826Z",
+      "newReleases": 10,
       "failures": 0
     }
   ]
